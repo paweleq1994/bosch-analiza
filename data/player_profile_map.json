@@ -1,0 +1,1798 @@
+{
+  "1969": {
+    "player_id": 1969,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wawiernia-tomasz/",
+    "public": true,
+    "resolved_name": "Wawiernia Tomasz",
+    "source": "direct_id"
+  },
+  "1644": {
+    "player_id": 1644,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wilczynski-jakub/",
+    "public": true,
+    "resolved_name": "Wilczyński Jakub (GK)",
+    "source": "direct_id"
+  },
+  "1953": {
+    "player_id": 1953,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/dzieduszow-krzysztof/",
+    "public": true,
+    "resolved_name": "Dzieduszow Krzysztof",
+    "source": "direct_id"
+  },
+  "1950": {
+    "player_id": 1950,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/broniewicz-filip/",
+    "public": true,
+    "resolved_name": "Broniewicz Filip",
+    "source": "direct_id"
+  },
+  "1948": {
+    "player_id": 1948,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/brejnak-piotr/",
+    "public": true,
+    "resolved_name": "Brejnak Piotr",
+    "source": "direct_id"
+  },
+  "1959": {
+    "player_id": 1959,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/maslowski-grzegorz/",
+    "public": true,
+    "resolved_name": "Masłowski Grzegorz (GK)",
+    "source": "direct_id"
+  },
+  "2089": {
+    "player_id": 2089,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rafal-kulesza/",
+    "public": true,
+    "resolved_name": "Kulesza Rafał",
+    "source": "direct_id"
+  },
+  "2092": {
+    "player_id": 2092,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/marcin-pawluczuk/",
+    "public": true,
+    "resolved_name": "Pawluczuk Marcin",
+    "source": "direct_id"
+  },
+  "1970": {
+    "player_id": 1970,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+    "public": true,
+    "resolved_name": "Wnuszyński Karol",
+    "source": "direct_id"
+  },
+  "2071": {
+    "player_id": 2071,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/jodkowski-marek/",
+    "public": true,
+    "resolved_name": "Jodkowski Marek (GK)",
+    "source": "direct_id"
+  },
+  "2031": {
+    "player_id": 2031,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/marguzewicz-mariusz/",
+    "public": true,
+    "resolved_name": "Margużewicz Mariusz",
+    "source": "direct_id"
+  },
+  "1960": {
+    "player_id": 1960,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+    "public": true,
+    "resolved_name": "Moskal Paweł",
+    "source": "direct_id"
+  },
+  "1951": {
+    "player_id": 1951,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/ceckowski-kamil/",
+    "public": true,
+    "resolved_name": "Ceckowski Kamil",
+    "source": "direct_id"
+  },
+  "2070": {
+    "player_id": 2070,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krzysztof-dolecki/",
+    "public": true,
+    "resolved_name": "Dolecki Krzysztof",
+    "source": "direct_id"
+  },
+  "2099": {
+    "player_id": 2099,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krzysztof-szacilowski/",
+    "public": true,
+    "resolved_name": "Szaciłowski Krzysztof",
+    "source": "direct_id"
+  },
+  "2123": {
+    "player_id": 2123,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/ryszkowski-piotr/",
+    "public": true,
+    "resolved_name": "Ryszkowski Piotr",
+    "source": "direct_id"
+  },
+  "2131": {
+    "player_id": 2131,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/marcin-chwojko/",
+    "public": true,
+    "resolved_name": "Chwojko Marcin",
+    "source": "direct_id"
+  },
+  "2204": {
+    "player_id": 2204,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+    "public": true,
+    "resolved_name": "Daniluk Dawid",
+    "source": "direct_id"
+  },
+  "3763": {
+    "player_id": 3763,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/chroscicki-cezary/",
+    "public": true,
+    "resolved_name": "Chrościcki Cezary",
+    "source": "direct_id"
+  },
+  "4430": {
+    "player_id": 4430,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gardocki-michal/",
+    "public": true,
+    "resolved_name": "Gardocki Michał",
+    "source": "direct_id"
+  },
+  "2100": {
+    "player_id": 2100,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/marcin-szczepanik/",
+    "public": true,
+    "resolved_name": "Szczepanik Marcin",
+    "source": "direct_id"
+  },
+  "2103": {
+    "player_id": 2103,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/bartosz-walkuski/",
+    "public": true,
+    "resolved_name": "Wałkuski Bartosz",
+    "source": "direct_id"
+  },
+  "3768": {
+    "player_id": 3768,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/niewinski-kamil/",
+    "public": true,
+    "resolved_name": "Niewiński Kamil",
+    "source": "direct_id"
+  },
+  "4434": {
+    "player_id": 4434,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/koszycki-mateusz/",
+    "public": true,
+    "resolved_name": "Koszycki Mateusz",
+    "source": "direct_id"
+  },
+  "2076": {
+    "player_id": 2076,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Filipczuk Krystian",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "1956": {
+    "player_id": 1956,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Komosiński Paweł",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "4545": {
+    "player_id": 4545,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kaszuba-maciej/",
+    "public": true,
+    "resolved_name": "Kaszuba Maciej",
+    "source": "direct_id"
+  },
+  "4452": {
+    "player_id": 4452,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/poltorak-wojciech/",
+    "public": true,
+    "resolved_name": "Półtorak Wojciech",
+    "source": "direct_id"
+  },
+  "4569": {
+    "player_id": 4569,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/boguski-krzysztof/",
+    "public": true,
+    "resolved_name": "Boguski Krzysztof",
+    "source": "direct_id"
+  },
+  "3809": {
+    "player_id": 3809,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Szmurło Bartłomiej",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "4577": {
+    "player_id": 4577,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+    "public": true,
+    "resolved_name": "Kuźma Piotr",
+    "source": "direct_id"
+  },
+  "4439": {
+    "player_id": 4439,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wielanowski-przemyslaw/",
+    "public": true,
+    "resolved_name": "Wielanowski Przemysław",
+    "source": "direct_id"
+  },
+  "4469": {
+    "player_id": 4469,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/tylicki-krzysztof/",
+    "public": true,
+    "resolved_name": "Tylicki Krzysztof (GK)",
+    "source": "direct_id"
+  },
+  "4504": {
+    "player_id": 4504,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/fedchyk-andrii/",
+    "public": true,
+    "resolved_name": "Fedchyk Andrii",
+    "source": "direct_id"
+  },
+  "4633": {
+    "player_id": 4633,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gulc-dawid/",
+    "public": true,
+    "resolved_name": "Gulc Dawid",
+    "source": "direct_id"
+  },
+  "3814": {
+    "player_id": 3814,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Car Adrian",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "2094": {
+    "player_id": 2094,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Ryszkowski Mateusz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "4742": {
+    "player_id": 4742,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/sosnowski-arkadiusz/",
+    "public": true,
+    "resolved_name": "Sosnowski Arkadiusz",
+    "source": "direct_id"
+  },
+  "3800": {
+    "player_id": 3800,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Zieniewicz Dawid",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "4760": {
+    "player_id": 4760,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gimier-arkadiusz/",
+    "public": true,
+    "resolved_name": "Gimier Arkadiusz",
+    "source": "direct_id"
+  },
+  "4761": {
+    "player_id": 4761,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/jurgielewicz-filip/",
+    "public": true,
+    "resolved_name": "Jurgielewicz Filip",
+    "source": "direct_id"
+  },
+  "4765": {
+    "player_id": 4765,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/meger-seweryn/",
+    "public": true,
+    "resolved_name": "Meger Seweryn (GK)",
+    "source": "direct_id"
+  },
+  "4764": {
+    "player_id": 4764,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kotynski-dominik/",
+    "public": true,
+    "resolved_name": "Kotyński Dominik",
+    "source": "direct_id"
+  },
+  "4767": {
+    "player_id": 4767,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/panasiuk-krzysztof/",
+    "public": true,
+    "resolved_name": "Panasiuk Krzysztof",
+    "source": "direct_id"
+  },
+  "4768": {
+    "player_id": 4768,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/puchajda-adam/",
+    "public": true,
+    "resolved_name": "Puchajda Adam",
+    "source": "direct_id"
+  },
+  "4766": {
+    "player_id": 4766,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/musko-piotr-2/",
+    "public": true,
+    "resolved_name": "Muśko Piotr",
+    "source": "direct_id"
+  },
+  "4702": {
+    "player_id": 4702,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Banicki Kamil",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "5387": {
+    "player_id": 5387,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kaniewski-bartosz/",
+    "public": true,
+    "resolved_name": "Kaniewski Bartosz",
+    "source": "direct_id"
+  },
+  "5389": {
+    "player_id": 5389,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wasilewski-wojciech/",
+    "public": true,
+    "resolved_name": "Wasilewski Wojciech",
+    "source": "direct_id"
+  },
+  "5388": {
+    "player_id": 5388,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wasilewski-mariusz-2/",
+    "public": true,
+    "resolved_name": "Wasilewski Mariusz",
+    "source": "direct_id"
+  },
+  "4705": {
+    "player_id": 4705,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kossakowski Adrian",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "4759": {
+    "player_id": 4759,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Brodowski Wojciech",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "5399": {
+    "player_id": 5399,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/strzechocki-marek/",
+    "public": true,
+    "resolved_name": "Strzechocki Marek",
+    "source": "direct_id"
+  },
+  "6024": {
+    "player_id": 6024,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krajewski-dawid/",
+    "public": true,
+    "resolved_name": "Krajewski Dawid",
+    "source": "direct_id"
+  },
+  "6019": {
+    "player_id": 6019,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wilczko-pawel/",
+    "public": true,
+    "resolved_name": "Wilczko Paweł",
+    "source": "direct_id"
+  },
+  "5992": {
+    "player_id": 5992,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/koronkiewicz-maciej/",
+    "public": true,
+    "resolved_name": "Koronkiewicz Maciej",
+    "source": "direct_id"
+  },
+  "5962": {
+    "player_id": 5962,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/lech-ignacy/",
+    "public": true,
+    "resolved_name": "Lech Ignacy",
+    "source": "direct_id"
+  },
+  "4762": {
+    "player_id": 4762,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kalinowski Łukasz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "5373": {
+    "player_id": 5373,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Brzeziński Damian",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "6025": {
+    "player_id": 6025,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/michalowski-euzebiusz/",
+    "public": true,
+    "resolved_name": "Michałowski Euzebiusz",
+    "source": "direct_id"
+  },
+  "6101": {
+    "player_id": 6101,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kuzmych-ivan/",
+    "public": true,
+    "resolved_name": "Kuzmych Ivan",
+    "source": "direct_id"
+  },
+  "6039": {
+    "player_id": 6039,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/hajduczenia-marcin/",
+    "public": true,
+    "resolved_name": "Hajduczenia Marcin",
+    "source": "direct_id"
+  },
+  "6460": {
+    "player_id": 6460,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/raczkowski-jakub/",
+    "public": true,
+    "resolved_name": "Raczkowski Jakub",
+    "source": "direct_id"
+  },
+  "6117": {
+    "player_id": 6117,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/vovchyk-maksym/",
+    "public": true,
+    "resolved_name": "Vovchyk Maksym",
+    "source": "direct_id"
+  },
+  "5376": {
+    "player_id": 5376,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Korzunowicz Krzysztof",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "6718": {
+    "player_id": 6718,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kazimirov-dmytro/",
+    "public": true,
+    "resolved_name": "Kazimirov Dmytro",
+    "source": "direct_id"
+  },
+  "5396": {
+    "player_id": 5396,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kościuk Artur",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "6742": {
+    "player_id": 6742,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/steckiewicz-michal/",
+    "public": true,
+    "resolved_name": "Steckiewicz Michał",
+    "source": "direct_id"
+  },
+  "6743": {
+    "player_id": 6743,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/milkamanowicz-tomasz/",
+    "public": true,
+    "resolved_name": "Milkamanowicz Tomasz",
+    "source": "direct_id"
+  },
+  "6747": {
+    "player_id": 6747,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/piszczatowski-lukasz/",
+    "public": true,
+    "resolved_name": "Piszczatowski Łukasz",
+    "source": "direct_id"
+  },
+  "6758": {
+    "player_id": 6758,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/borowicki-maciej/",
+    "public": true,
+    "resolved_name": "Borowicki Maciej",
+    "source": "direct_id"
+  },
+  "7207": {
+    "player_id": 7207,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/nurzynski-jakub/",
+    "public": true,
+    "resolved_name": "Nurzyński Jakub",
+    "source": "direct_id"
+  },
+  "5990": {
+    "player_id": 5990,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Ilenda Konrad",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7220": {
+    "player_id": 7220,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gil-sebastian-krzysztof/",
+    "public": true,
+    "resolved_name": "Gil Sebastian Krzysztof (GK)",
+    "source": "direct_id"
+  },
+  "7212": {
+    "player_id": 7212,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/peza-szymon/",
+    "public": true,
+    "resolved_name": "Pęza Szymon",
+    "source": "direct_id"
+  },
+  "7221": {
+    "player_id": 7221,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kryszczynski-jaroslaw/",
+    "public": true,
+    "resolved_name": "Kryszczyński Jarosław",
+    "source": "direct_id"
+  },
+  "7269": {
+    "player_id": 7269,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/",
+    "public": true,
+    "resolved_name": "Dołżyk Michał",
+    "source": "direct_id"
+  },
+  "7272": {
+    "player_id": 7272,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+    "public": true,
+    "resolved_name": "Jurkowicz Rafał",
+    "source": "direct_id"
+  },
+  "7276": {
+    "player_id": 7276,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+    "public": true,
+    "resolved_name": "Karolczuk Patryk",
+    "source": "direct_id"
+  },
+  "6744": {
+    "player_id": 6744,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Ostaszewski Krzysztof",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "6745": {
+    "player_id": 6745,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kondracki Sebastian",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7277": {
+    "player_id": 7277,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+    "public": true,
+    "resolved_name": "Klepacki Przemysław",
+    "source": "direct_id"
+  },
+  "7210": {
+    "player_id": 7210,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Strączkowski Mateusz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7211": {
+    "player_id": 7211,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Banicki Marcin",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7209": {
+    "player_id": 7209,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Łuczak Cezary",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7280": {
+    "player_id": 7280,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/",
+    "public": true,
+    "resolved_name": "Malinowski Piotr",
+    "source": "direct_id"
+  },
+  "6759": {
+    "player_id": 6759,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Dąbrowski Tomasz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "7266": {
+    "player_id": 7266,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Bazyluk Jakub",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7270": {
+    "player_id": 7270,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Gołąbeski Piotr",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7283": {
+    "player_id": 7283,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+    "public": true,
+    "resolved_name": "Nowicki Patryk",
+    "source": "direct_id"
+  },
+  "7289": {
+    "player_id": 7289,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/grabarczyk-kacper/",
+    "public": true,
+    "resolved_name": "Grabarczyk Kacper (GK)",
+    "source": "direct_id"
+  },
+  "7271": {
+    "player_id": 7271,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Gorbacewicz Emil",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7284": {
+    "player_id": 7284,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+    "public": true,
+    "resolved_name": "Rutkowski Mateusz (GK)",
+    "source": "direct_id"
+  },
+  "7290": {
+    "player_id": 7290,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kaminski-jakub/",
+    "public": true,
+    "resolved_name": "Kamiński Jakub",
+    "source": "direct_id"
+  },
+  "7275": {
+    "player_id": 7275,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Jurkowicz Mateusz",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7296": {
+    "player_id": 7296,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/otapowicz-piotr/",
+    "public": true,
+    "resolved_name": "Otapowicz Piotr",
+    "source": "direct_id"
+  },
+  "7295": {
+    "player_id": 7295,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/mozdzynski-maciej/",
+    "public": true,
+    "resolved_name": "Móżdżyński Maciej",
+    "source": "direct_id"
+  },
+  "7293": {
+    "player_id": 7293,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/lubowicki-sylwester/",
+    "public": true,
+    "resolved_name": "Lubowicki Sylwester",
+    "source": "direct_id"
+  },
+  "7320": {
+    "player_id": 7320,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/yarmolich-anatoli/",
+    "public": true,
+    "resolved_name": "Yarmolich Anatoli",
+    "source": "direct_id"
+  },
+  "7278": {
+    "player_id": 7278,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kossakowski Maciej",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7282": {
+    "player_id": 7282,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Markowski Damian",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "7328": {
+    "player_id": 7328,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/volokhovskyi-anatolii/",
+    "public": true,
+    "resolved_name": "Volokhovskyi Anatolii",
+    "source": "direct_id"
+  },
+  "8491": {
+    "player_id": 8491,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/twardowski-marcin/",
+    "public": true,
+    "resolved_name": "Twardowski Marcin",
+    "source": "direct_id"
+  },
+  "7350": {
+    "player_id": 7350,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/grzybowski-stanislaw/",
+    "public": true,
+    "resolved_name": "Grzybowski Stanisław",
+    "source": "direct_id"
+  },
+  "8493": {
+    "player_id": 8493,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/bogdan-kamil/",
+    "public": true,
+    "resolved_name": "Bogdan Kamil",
+    "source": "direct_id"
+  },
+  "8499": {
+    "player_id": 8499,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-sylwester/",
+    "public": true,
+    "resolved_name": "Kowalczuk Sylwester",
+    "source": "direct_id"
+  },
+  "8502": {
+    "player_id": 8502,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/stryjecki-artur/",
+    "public": true,
+    "resolved_name": "Stryjecki Artur",
+    "source": "direct_id"
+  },
+  "8506": {
+    "player_id": 8506,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pasternak-ivan/",
+    "public": true,
+    "resolved_name": "Pasternak Ivan (GK)",
+    "source": "direct_id"
+  },
+  "8571": {
+    "player_id": 8571,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/parfieniuk-piotr/",
+    "public": true,
+    "resolved_name": "Parfieniuk Piotr",
+    "source": "direct_id"
+  },
+  "8568": {
+    "player_id": 8568,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/oscilowski-marcin/",
+    "public": true,
+    "resolved_name": "Ościłowski Marcin",
+    "source": "direct_id"
+  },
+  "8576": {
+    "player_id": 8576,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rafalowski-pawel/",
+    "public": true,
+    "resolved_name": "Rafałowski Paweł",
+    "source": "direct_id"
+  },
+  "7285": {
+    "player_id": 7285,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Sołowiej Tomasz",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "8580": {
+    "player_id": 8580,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zaniewski-dawid/",
+    "public": true,
+    "resolved_name": "Zaniewski Dawid",
+    "source": "direct_id"
+  },
+  "7286": {
+    "player_id": 7286,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Uściłowski Krzysztof",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "8616": {
+    "player_id": 8616,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kusaczuk-krzysztof/",
+    "public": true,
+    "resolved_name": "Kusaczuk Krzysztof",
+    "source": "direct_id"
+  },
+  "8625": {
+    "player_id": 8625,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/sakowski-damian/",
+    "public": true,
+    "resolved_name": "Sakowski Damian",
+    "source": "direct_id"
+  },
+  "8624": {
+    "player_id": 8624,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pacewicz-pawel/",
+    "public": true,
+    "resolved_name": "Pacewicz Paweł",
+    "source": "direct_id"
+  },
+  "8630": {
+    "player_id": 8630,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/giczan-wiktor/",
+    "public": true,
+    "resolved_name": "Giczan Wiktor",
+    "source": "direct_id"
+  },
+  "8635": {
+    "player_id": 8635,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krasowski-jakub/",
+    "public": true,
+    "resolved_name": "Krasowski Jakub",
+    "source": "direct_id"
+  },
+  "8640": {
+    "player_id": 8640,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rybinski-filip/",
+    "public": true,
+    "resolved_name": "Rybiński Filip",
+    "source": "direct_id"
+  },
+  "8636": {
+    "player_id": 8636,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krzyzanowski-dawid/",
+    "public": true,
+    "resolved_name": "Krzyżanowski Dawid",
+    "source": "direct_id"
+  },
+  "8637": {
+    "player_id": 8637,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/maslowski-jakub/",
+    "public": true,
+    "resolved_name": "Masłowski Jakub",
+    "source": "direct_id"
+  },
+  "8638": {
+    "player_id": 8638,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pacholek-jakub/",
+    "public": true,
+    "resolved_name": "Pacholek Jakub",
+    "source": "direct_id"
+  },
+  "8645": {
+    "player_id": 8645,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/terebun-lukasz/",
+    "public": true,
+    "resolved_name": "Terebun Łukasz",
+    "source": "direct_id"
+  },
+  "8654": {
+    "player_id": 8654,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+    "public": true,
+    "resolved_name": "Bączek Szymon",
+    "source": "direct_id"
+  },
+  "7944": {
+    "player_id": 7944,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kucharski Szymon",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "8497": {
+    "player_id": 8497,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Horoszko Przemysław",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "8644": {
+    "player_id": 8644,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/szwagierek-dawid/",
+    "public": true,
+    "resolved_name": "Szwagierek Dawid",
+    "source": "direct_id"
+  },
+  "8656": {
+    "player_id": 8656,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/",
+    "public": true,
+    "resolved_name": "Muczyński Karol",
+    "source": "direct_id"
+  },
+  "8914": {
+    "player_id": 8914,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/",
+    "public": true,
+    "resolved_name": "Kadłubowski Krzysztof",
+    "source": "direct_id"
+  },
+  "8929": {
+    "player_id": 8929,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kovalov-oleksii/",
+    "public": true,
+    "resolved_name": "Kovalov Oleksii",
+    "source": "direct_id"
+  },
+  "8617": {
+    "player_id": 8617,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Suchocki Cezary",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "8917": {
+    "player_id": 8917,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/olizarowicz-karol/",
+    "public": true,
+    "resolved_name": "Olizarowicz Karol",
+    "source": "direct_id"
+  },
+  "8938": {
+    "player_id": 8938,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/weremczuk-rafal/",
+    "public": true,
+    "resolved_name": "Weremczuk Rafał",
+    "source": "direct_id"
+  },
+  "8945": {
+    "player_id": 8945,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/murzyn-marcel/",
+    "public": true,
+    "resolved_name": "Murzyn Marcel",
+    "source": "direct_id"
+  },
+  "8980": {
+    "player_id": 8980,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/stypulkowski-janusz/",
+    "public": true,
+    "resolved_name": "Stypułkowski Janusz",
+    "source": "direct_id"
+  },
+  "9267": {
+    "player_id": 9267,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/",
+    "public": true,
+    "resolved_name": "Kowalczuk Karol",
+    "source": "direct_id"
+  },
+  "8655": {
+    "player_id": 8655,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kuźma Gabriel",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "9268": {
+    "player_id": 9268,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/niebrzydowski-mateusz/",
+    "public": true,
+    "resolved_name": "Niebrzydowski Mateusz",
+    "source": "direct_id"
+  },
+  "9269": {
+    "player_id": 9269,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/maliszewski-bartosz/",
+    "public": true,
+    "resolved_name": "Maliszewski Bartosz (GK)",
+    "source": "direct_id"
+  },
+  "9281": {
+    "player_id": 9281,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kazberuk-daniel/",
+    "public": true,
+    "resolved_name": "Kazberuk Daniel (GK)",
+    "source": "direct_id"
+  },
+  "8939": {
+    "player_id": 8939,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Roszczenko Jakub",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "9308": {
+    "player_id": 9308,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/panasewicz-aleksander/",
+    "public": true,
+    "resolved_name": "Panasewicz Aleksander",
+    "source": "direct_id"
+  },
+  "9283": {
+    "player_id": 9283,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zolnik-stanislaw/",
+    "public": true,
+    "resolved_name": "Zolnik Stanisław",
+    "source": "direct_id"
+  },
+  "9322": {
+    "player_id": 9322,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/radzikowski-rafal/",
+    "public": true,
+    "resolved_name": "Radzikowski Rafał",
+    "source": "direct_id"
+  },
+  "8916": {
+    "player_id": 8916,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Wądołowski Sebastian",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "8940": {
+    "player_id": 8940,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Oszczapiński Bartłomiej",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "8981": {
+    "player_id": 8981,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Świder Paweł",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "8959": {
+    "player_id": 8959,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Niegowski Norbert",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "9371": {
+    "player_id": 9371,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/nazarko-marcin/",
+    "public": true,
+    "resolved_name": "Nazarko Marcin",
+    "source": "direct_id"
+  },
+  "8941": {
+    "player_id": 8941,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Gajewski Mateusz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "9373": {
+    "player_id": 9373,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/oswiecinski-damian/",
+    "public": true,
+    "resolved_name": "Oświeciński Damian",
+    "source": "direct_id"
+  },
+  "9400": {
+    "player_id": 9400,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/",
+    "public": true,
+    "resolved_name": "Hyżyk Szymon",
+    "source": "direct_id"
+  },
+  "9846": {
+    "player_id": 9846,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gimier-arkadiusz-2/",
+    "public": true,
+    "resolved_name": "Gimier Arkadiusz (GK)",
+    "source": "direct_id"
+  },
+  "9896": {
+    "player_id": 9896,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/niebrzydowski-sebastian/",
+    "public": true,
+    "resolved_name": "Niebrzydowski Sebastian",
+    "source": "direct_id"
+  },
+  "9270": {
+    "player_id": 9270,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Wierciszewski Oskar (GK)",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10323": {
+    "player_id": 10323,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/chylinski-grzegorz/",
+    "public": true,
+    "resolved_name": "Chyliński Grzegorz",
+    "source": "direct_id"
+  },
+  "10344": {
+    "player_id": 10344,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/han-bartosz/",
+    "public": true,
+    "resolved_name": "Han Bartosz",
+    "source": "direct_id"
+  },
+  "9356": {
+    "player_id": 9356,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Ivin Yauheni",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10345": {
+    "player_id": 10345,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/olizarowicz-gabriel/",
+    "public": true,
+    "resolved_name": "Olizarowicz Gabriel",
+    "source": "direct_id"
+  },
+  "10346": {
+    "player_id": 10346,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/andrzejewski-kamil/",
+    "public": true,
+    "resolved_name": "Andrzejewski Kamil",
+    "source": "direct_id"
+  },
+  "9364": {
+    "player_id": 9364,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Aleksiejuk Maciej",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10347": {
+    "player_id": 10347,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-maciej/",
+    "public": true,
+    "resolved_name": "Klepacki Maciej (GK)",
+    "source": "direct_id"
+  },
+  "10373": {
+    "player_id": 10373,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/orpik-kacper/",
+    "public": true,
+    "resolved_name": "Orpik Kacper",
+    "source": "direct_id"
+  },
+  "9898": {
+    "player_id": 9898,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Stryjecki Kamil",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "9897": {
+    "player_id": 9897,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Słoma Ernest",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10377": {
+    "player_id": 10377,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/mieczkowski-kacper-ii/",
+    "public": true,
+    "resolved_name": "Mieczkowski Kacper II",
+    "source": "direct_id"
+  },
+  "10379": {
+    "player_id": 10379,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/socik-lukasz/",
+    "public": true,
+    "resolved_name": "Socik Łukasz",
+    "source": "direct_id"
+  },
+  "10376": {
+    "player_id": 10376,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wszeborowski-konrad/",
+    "public": true,
+    "resolved_name": "Wszeborowski Konrad",
+    "source": "direct_id"
+  },
+  "10378": {
+    "player_id": 10378,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/bietkal-michal/",
+    "public": true,
+    "resolved_name": "Bietkał Michał",
+    "source": "direct_id"
+  },
+  "10322": {
+    "player_id": 10322,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kadłubowski Łukasz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10392": {
+    "player_id": 10392,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/bogusz-michal/",
+    "public": true,
+    "resolved_name": "Bogusz Michał (GK)",
+    "source": "direct_id"
+  },
+  "10321": {
+    "player_id": 10321,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Ciborowski Julian",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "10409": {
+    "player_id": 10409,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zaniewski-mateusz/",
+    "public": true,
+    "resolved_name": "Zaniewski Mateusz",
+    "source": "direct_id"
+  },
+  "10381": {
+    "player_id": 10381,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/tynkiewicz-jakub/",
+    "public": true,
+    "resolved_name": "Tynkiewicz Jakub",
+    "source": "direct_id"
+  },
+  "10411": {
+    "player_id": 10411,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/baran-daniel/",
+    "public": true,
+    "resolved_name": "Baran Daniel",
+    "source": "direct_id"
+  },
+  "10413": {
+    "player_id": 10413,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/chmielewski-lukasz/",
+    "public": true,
+    "resolved_name": "Chmielewski Łukasz",
+    "source": "direct_id"
+  },
+  "10374": {
+    "player_id": 10374,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Bielawski Jakub",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10414": {
+    "player_id": 10414,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/davydzenka-ihar/",
+    "public": true,
+    "resolved_name": "Davydzenka Ihar",
+    "source": "direct_id"
+  },
+  "10375": {
+    "player_id": 10375,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Rojek Mateusz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10416": {
+    "player_id": 10416,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/hardzeichyk-aliaksandr/",
+    "public": true,
+    "resolved_name": "Hardzeichyk Aliaksandr",
+    "source": "direct_id"
+  },
+  "10415": {
+    "player_id": 10415,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/florczyk-pawel/",
+    "public": true,
+    "resolved_name": "Florczyk Paweł",
+    "source": "direct_id"
+  },
+  "10419": {
+    "player_id": 10419,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kowalko-konrad/",
+    "public": true,
+    "resolved_name": "Kowalko Konrad",
+    "source": "direct_id"
+  },
+  "10423": {
+    "player_id": 10423,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/lapinski-artur/",
+    "public": true,
+    "resolved_name": "Łapiński Artur (GK)",
+    "source": "direct_id"
+  },
+  "10420": {
+    "player_id": 10420,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/baginski-adrian/",
+    "public": true,
+    "resolved_name": "Bagiński Adrian",
+    "source": "direct_id"
+  },
+  "10424": {
+    "player_id": 10424,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/monicz-andrzej/",
+    "public": true,
+    "resolved_name": "Monicz Andrzej",
+    "source": "direct_id"
+  },
+  "10426": {
+    "player_id": 10426,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pruszynski-grzegorz/",
+    "public": true,
+    "resolved_name": "Pruszyński Grzegorz",
+    "source": "direct_id"
+  },
+  "10430": {
+    "player_id": 10430,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/szleszynski-tomasz/",
+    "public": true,
+    "resolved_name": "Szleszyński Tomasz",
+    "source": "direct_id"
+  },
+  "10427": {
+    "player_id": 10427,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/sienicki-miroslaw/",
+    "public": true,
+    "resolved_name": "Sienicki Mirosław",
+    "source": "direct_id"
+  },
+  "10431": {
+    "player_id": 10431,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wieslaw-marcin/",
+    "public": true,
+    "resolved_name": "Więsław Marcin",
+    "source": "direct_id"
+  },
+  "10410": {
+    "player_id": 10410,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Lewczuk Andrzej",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10518": {
+    "player_id": 10518,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-sylwester-2/",
+    "public": true,
+    "resolved_name": "Kowalczuk Sylwester (GK)",
+    "source": "direct_id"
+  },
+  "10582": {
+    "player_id": 10582,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/maliszewski-bartosz-2/",
+    "public": true,
+    "resolved_name": "Maliszewski Bartosz",
+    "source": "direct_id"
+  },
+  "10608": {
+    "player_id": 10608,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/lupa-marek/",
+    "public": true,
+    "resolved_name": "Lupa Marek",
+    "source": "direct_id"
+  },
+  "10622": {
+    "player_id": 10622,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gulc-jakub/",
+    "public": true,
+    "resolved_name": "Gulc Jakub",
+    "source": "direct_id"
+  },
+  "10630": {
+    "player_id": 10630,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/dojlida-filip/",
+    "public": true,
+    "resolved_name": "Dojlida Filip",
+    "source": "direct_id"
+  },
+  "10624": {
+    "player_id": 10624,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/strilets-mykola/",
+    "public": true,
+    "resolved_name": "Strilets Mykola",
+    "source": "direct_id"
+  },
+  "10418": {
+    "player_id": 10418,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Kłymuś Jarosław",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "10640": {
+    "player_id": 10640,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zdanowicz-jakub/",
+    "public": true,
+    "resolved_name": "Zdanowicz Jakub",
+    "source": "direct_id"
+  },
+  "10639": {
+    "player_id": 10639,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-rafal/",
+    "public": true,
+    "resolved_name": "Muczyński Rafał",
+    "source": "direct_id"
+  },
+  "10655": {
+    "player_id": 10655,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/mowel-patryk/",
+    "public": true,
+    "resolved_name": "Mowel Patryk",
+    "source": "direct_id"
+  },
+  "10823": {
+    "player_id": 10823,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/nobert-konrad/",
+    "public": true,
+    "resolved_name": "Nobert Konrad",
+    "source": "direct_id"
+  },
+  "10836": {
+    "player_id": 10836,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/",
+    "public": true,
+    "resolved_name": "Karpiński Hubert",
+    "source": "direct_id"
+  },
+  "11542": {
+    "player_id": 11542,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/guziejko-dawid/",
+    "public": true,
+    "resolved_name": "Guziejko Dawid",
+    "source": "direct_id"
+  },
+  "10922": {
+    "player_id": 10922,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/seliwanow-michal/",
+    "public": true,
+    "resolved_name": "Seliwanów Michał",
+    "source": "direct_id"
+  },
+  "11545": {
+    "player_id": 11545,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zinovchik-maksim/",
+    "public": true,
+    "resolved_name": "Zinovchik Maksim",
+    "source": "direct_id"
+  },
+  "10604": {
+    "player_id": 10604,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Śmiłowski Michał",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "11546": {
+    "player_id": 11546,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/waszkiewicz-marek/",
+    "public": true,
+    "resolved_name": "Waszkiewicz Marek",
+    "source": "direct_id"
+  },
+  "11547": {
+    "player_id": 11547,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/trofimiuk-krzysztof/",
+    "public": true,
+    "resolved_name": "Trofimiuk Krzysztof (GK)",
+    "source": "direct_id"
+  },
+  "10610": {
+    "player_id": 10610,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Lupa Dawid",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "11853": {
+    "player_id": 11853,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/dolzynski-igor/",
+    "public": true,
+    "resolved_name": "Dołżyński Igor",
+    "source": "direct_id"
+  },
+  "10609": {
+    "player_id": 10609,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Lupa Maciej",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "11548": {
+    "player_id": 11548,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/niegowski-adrian/",
+    "public": true,
+    "resolved_name": "Niegowski Adrian",
+    "source": "direct_id"
+  },
+  "10637": {
+    "player_id": 10637,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Dąbrowski Radosław",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "11855": {
+    "player_id": 11855,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krajewski-szymon/",
+    "public": true,
+    "resolved_name": "Krajewski Szymon",
+    "source": "direct_id"
+  },
+  "11857": {
+    "player_id": 11857,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/piotrowski-kacper/",
+    "public": true,
+    "resolved_name": "Piotrowski Kacper",
+    "source": "direct_id"
+  },
+  "11858": {
+    "player_id": 11858,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/tarnowski-krzysztof/",
+    "public": true,
+    "resolved_name": "Tarnowski Krzysztof (GK)",
+    "source": "direct_id"
+  },
+  "11910": {
+    "player_id": 11910,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/sienko-damian/",
+    "public": true,
+    "resolved_name": "Sieńko Damian",
+    "source": "direct_id"
+  },
+  "11914": {
+    "player_id": 11914,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wysocki-dawid/",
+    "public": true,
+    "resolved_name": "Wysocki Dawid",
+    "source": "direct_id"
+  },
+  "11912": {
+    "player_id": 11912,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pietroczuk-marek/",
+    "public": true,
+    "resolved_name": "Pietroczuk Marek",
+    "source": "direct_id"
+  },
+  "11924": {
+    "player_id": 11924,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/tworkowski-filip/",
+    "public": true,
+    "resolved_name": "Tworkowski Filip",
+    "source": "direct_id"
+  },
+  "11956": {
+    "player_id": 11956,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rogalski-mateusz/",
+    "public": true,
+    "resolved_name": "Rogalski Mateusz",
+    "source": "direct_id"
+  },
+  "10919": {
+    "player_id": 10919,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Nowicki Marcel",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "12242": {
+    "player_id": 12242,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/mackiewicz-karol/",
+    "public": true,
+    "resolved_name": "Mackiewicz Karol",
+    "source": "direct_id"
+  },
+  "12241": {
+    "player_id": 12241,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/nowik-adam/",
+    "public": true,
+    "resolved_name": "Nowik Adam",
+    "source": "direct_id"
+  },
+  "12245": {
+    "player_id": 12245,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/czeremcha-przemyslaw/",
+    "public": true,
+    "resolved_name": "Czeremcha Przemysław",
+    "source": "direct_id"
+  },
+  "12287": {
+    "player_id": 12287,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/",
+    "public": true,
+    "resolved_name": "Mironiuk Zbigniew",
+    "source": "direct_id"
+  },
+  "12246": {
+    "player_id": 12246,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/bieliavskyj-sergii/",
+    "public": true,
+    "resolved_name": "Bieliavskyj Sergii",
+    "source": "direct_id"
+  },
+  "12290": {
+    "player_id": 12290,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/plochocki-maciej/",
+    "public": true,
+    "resolved_name": "Płochocki Maciej",
+    "source": "direct_id"
+  },
+  "11860": {
+    "player_id": 11860,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Walo Bartek",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "12425": {
+    "player_id": 12425,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-jakub/",
+    "public": true,
+    "resolved_name": "Karolczuk Jakub",
+    "source": "direct_id"
+  },
+  "11911": {
+    "player_id": 11911,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Charyło Jakub",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "11859": {
+    "player_id": 11859,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Toczyłowski Jakub",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "12703": {
+    "player_id": 12703,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/ostrzygalo-franciszek/",
+    "public": true,
+    "resolved_name": "Ostrzygało Franciszek",
+    "source": "direct_id"
+  },
+  "12725": {
+    "player_id": 12725,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/dzienis-robert/",
+    "public": true,
+    "resolved_name": "Dzienis Robert",
+    "source": "direct_id"
+  },
+  "12727": {
+    "player_id": 12727,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gryko-artur/",
+    "public": true,
+    "resolved_name": "Gryko Artur",
+    "source": "direct_id"
+  },
+  "12726": {
+    "player_id": 12726,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/gasowski-jakub/",
+    "public": true,
+    "resolved_name": "Gąsowski Jakub",
+    "source": "direct_id"
+  },
+  "12729": {
+    "player_id": 12729,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/konert-mateusz/",
+    "public": true,
+    "resolved_name": "Konert Mateusz (GK)",
+    "source": "direct_id"
+  },
+  "12731": {
+    "player_id": 12731,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/malaszewski-marcin/",
+    "public": true,
+    "resolved_name": "Małaszewski Marcin",
+    "source": "direct_id"
+  },
+  "12730": {
+    "player_id": 12730,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/krysiewicz-daniel/",
+    "public": true,
+    "resolved_name": "Krysiewicz Daniel",
+    "source": "direct_id"
+  },
+  "12286": {
+    "player_id": 12286,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Pietruczuk Paweł",
+    "source": "direct_id",
+    "error": "HTTPError"
+  },
+  "12734": {
+    "player_id": 12734,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/recko-norbert/",
+    "public": true,
+    "resolved_name": "Rećko Norbert",
+    "source": "direct_id"
+  },
+  "13010": {
+    "player_id": 13010,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zak-pawel/",
+    "public": true,
+    "resolved_name": "Żak Paweł (GK)",
+    "source": "direct_id"
+  },
+  "13025": {
+    "player_id": 13025,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/pawlowski-karol/",
+    "public": true,
+    "resolved_name": "Pawłowski Karol (GK)",
+    "source": "direct_id"
+  },
+  "13027": {
+    "player_id": 13027,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/ostaszewski-dawid/",
+    "public": true,
+    "resolved_name": "Ostaszewski Dawid",
+    "source": "direct_id"
+  },
+  "13060": {
+    "player_id": 13060,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz-2/",
+    "public": true,
+    "resolved_name": "Rutkowski Mateusz",
+    "source": "direct_id"
+  },
+  "12728": {
+    "player_id": 12728,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Jackowski Krzysztof (GK)",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  },
+  "12733": {
+    "player_id": 12733,
+    "profile_url": "",
+    "public": false,
+    "resolved_name": "Petelski Tomasz",
+    "source": "event_page_hidden",
+    "error": "HTTPError"
+  }
+}

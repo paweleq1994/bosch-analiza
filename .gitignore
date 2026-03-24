@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+data/profile_cache/
+data/promotion_cache/
+data/promotion_tables_raw/

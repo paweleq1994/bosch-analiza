@@ -1,0 +1,634 @@
+{
+  "teams": {
+    "by_id": {
+      "6984": {
+        "id": 6984,
+        "name": "FC Progress Białystok",
+        "link": "https://podlaskaliga.pl/druzyna/fc-progress-bialystok/"
+      },
+      "4643": {
+        "id": 4643,
+        "name": "ZPS Biaform SA",
+        "link": "https://podlaskaliga.pl/druzyna/biaform/"
+      },
+      "4644": {
+        "id": 4644,
+        "name": "CF Bojary",
+        "link": "https://podlaskaliga.pl/druzyna/cf-bojary/"
+      },
+      "5921": {
+        "id": 5921,
+        "name": "Poler-Art Team",
+        "link": "https://podlaskaliga.pl/druzyna/poler-art-team/"
+      },
+      "5920": {
+        "id": 5920,
+        "name": "Mają Rozmach",
+        "link": "https://podlaskaliga.pl/druzyna/maja-rozmach/"
+      },
+      "6981": {
+        "id": 6981,
+        "name": "INTaF",
+        "link": "https://podlaskaliga.pl/druzyna/intaf/"
+      },
+      "1575": {
+        "id": 1575,
+        "name": "Poltank",
+        "link": "https://podlaskaliga.pl/druzyna/lxt-poltank/"
+      },
+      "4387": {
+        "id": 4387,
+        "name": "Rainter",
+        "link": "https://podlaskaliga.pl/druzyna/rainter/"
+      },
+      "6988": {
+        "id": 6988,
+        "name": "VESTA",
+        "link": "https://podlaskaliga.pl/druzyna/vesta/"
+      },
+      "4641": {
+        "id": 4641,
+        "name": "CEDC Polmos Białystok",
+        "link": "https://podlaskaliga.pl/druzyna/cedc-polmos-bialystok/"
+      },
+      "6989": {
+        "id": 6989,
+        "name": "WIARA PIASTA II",
+        "link": "https://podlaskaliga.pl/druzyna/wiara-piasta-ii/"
+      },
+      "1570": {
+        "id": 1570,
+        "name": "Ramis",
+        "link": "https://podlaskaliga.pl/druzyna/ramis/"
+      },
+      "6959": {
+        "id": 6959,
+        "name": "Fc Bajaga",
+        "link": "https://podlaskaliga.pl/druzyna/fc-bajaga/"
+      },
+      "8196": {
+        "id": 8196,
+        "name": "OSMAR",
+        "link": "https://podlaskaliga.pl/druzyna/osmar/"
+      },
+      "8194": {
+        "id": 8194,
+        "name": "FC GRUBASSY",
+        "link": "https://podlaskaliga.pl/druzyna/fc-grubassy/"
+      },
+      "1568": {
+        "id": 1568,
+        "name": "FC DrTusz",
+        "link": "https://podlaskaliga.pl/druzyna/fc-drtusz/"
+      },
+      "1567": {
+        "id": 1567,
+        "name": "Konceptbud",
+        "link": "https://podlaskaliga.pl/druzyna/konceptbud/"
+      },
+      "8195": {
+        "id": 8195,
+        "name": "Waleczne Orły",
+        "link": "https://podlaskaliga.pl/druzyna/waleczne-orly/"
+      },
+      "8193": {
+        "id": 8193,
+        "name": "Unibep Bielsk Podlaski",
+        "link": "https://podlaskaliga.pl/druzyna/unibep-bielsk-podlaski/"
+      },
+      "1566": {
+        "id": 1566,
+        "name": "Multicco Group",
+        "link": "https://podlaskaliga.pl/druzyna/multicco/"
+      },
+      "1564": {
+        "id": 1564,
+        "name": "Hurtownia Krokus",
+        "link": "https://podlaskaliga.pl/druzyna/hurtownia-krokus/"
+      },
+      "4389": {
+        "id": 4389,
+        "name": "PTH Maltrans Znienacka",
+        "link": "https://podlaskaliga.pl/druzyna/pth-maltrans/"
+      },
+      "1565": {
+        "id": 1565,
+        "name": "Adampol Glovis",
+        "link": "https://podlaskaliga.pl/druzyna/adampol-glovis/"
+      },
+      "1573": {
+        "id": 1573,
+        "name": "M-Fire",
+        "link": "https://podlaskaliga.pl/druzyna/m-fire/"
+      },
+      "1582": {
+        "id": 1582,
+        "name": "TiM",
+        "link": "https://podlaskaliga.pl/druzyna/tim-aquapomp/"
+      },
+      "1580": {
+        "id": 1580,
+        "name": "Top Auto",
+        "link": "https://podlaskaliga.pl/druzyna/top-auto/"
+      },
+      "4642": {
+        "id": 4642,
+        "name": "Santos",
+        "link": "https://podlaskaliga.pl/druzyna/santos/"
+      },
+      "1574": {
+        "id": 1574,
+        "name": "Aptel",
+        "link": "https://podlaskaliga.pl/druzyna/aptel-bialystok/"
+      },
+      "1576": {
+        "id": 1576,
+        "name": "4Technology",
+        "link": "https://podlaskaliga.pl/druzyna/4technology/"
+      },
+      "10056": {
+        "id": 10056,
+        "name": "Hanbud",
+        "link": "https://podlaskaliga.pl/druzyna/hanbud/"
+      },
+      "9218": {
+        "id": 9218,
+        "name": "GTS Nowa Wygoda",
+        "link": "https://podlaskaliga.pl/druzyna/gts-nowa-wygoda/"
+      },
+      "10769": {
+        "id": 10769,
+        "name": "OST Sport",
+        "link": "https://podlaskaliga.pl/druzyna/ost-sport/"
+      },
+      "10768": {
+        "id": 10768,
+        "name": "Zachodnia Kingdom",
+        "link": "https://podlaskaliga.pl/druzyna/zachodnia-kingdom/"
+      },
+      "4382": {
+        "id": 4382,
+        "name": "Auto Team",
+        "link": "https://podlaskaliga.pl/druzyna/auto-team/"
+      },
+      "10770": {
+        "id": 10770,
+        "name": "Zimne Dranie",
+        "link": "https://podlaskaliga.pl/druzyna/zimne-dranie/"
+      },
+      "11753": {
+        "id": 11753,
+        "name": "Żubry Bema",
+        "link": "https://podlaskaliga.pl/druzyna/zubry-bema/"
+      },
+      "11756": {
+        "id": 11756,
+        "name": "ZPS Biaform SA",
+        "link": "https://podlaskaliga.pl/druzyna/zps-biaform-sa/"
+      },
+      "11754": {
+        "id": 11754,
+        "name": "Juan Pablo Białystok",
+        "link": "https://podlaskaliga.pl/druzyna/juan-pablo-bialystok/"
+      },
+      "12343": {
+        "id": 12343,
+        "name": "Prostal",
+        "link": "https://podlaskaliga.pl/druzyna/prostal/"
+      },
+      "12342": {
+        "id": 12342,
+        "name": "Biuro Serwis-Kopiarki Białystok",
+        "link": "https://podlaskaliga.pl/druzyna/biuro-serwis-kopiarki-bialystok/"
+      },
+      "6951": {
+        "id": 6951,
+        "name": "Bosch Service Tech-Car",
+        "link": "https://podlaskaliga.pl/druzyna/bosch-service-tech-car/"
+      },
+      "1577": {
+        "id": 1577,
+        "name": "Rajkom Choroszcz",
+        "link": "https://podlaskaliga.pl/druzyna/rajkom-choroszcz/"
+      },
+      "4383": {
+        "id": 4383,
+        "name": "Cooltura Taxi",
+        "link": "https://podlaskaliga.pl/druzyna/cooltura-taxi/"
+      },
+      "1581": {
+        "id": 1581,
+        "name": "Margo Adrenalina",
+        "link": "https://podlaskaliga.pl/druzyna/margo-adrenalina/"
+      },
+      "0": {
+        "id": 0,
+        "name": "Drużyna",
+        "link": ""
+      },
+      "1572": {
+        "id": 1572,
+        "name": "Znienacka",
+        "link": "https://podlaskaliga.pl/druzyna/znienacka/"
+      },
+      "4388": {
+        "id": 4388,
+        "name": "Koledzy z boiska",
+        "link": "https://podlaskaliga.pl/druzyna/koledzy-z-boiska/"
+      },
+      "4386": {
+        "id": 4386,
+        "name": "FC Kentucky",
+        "link": "https://podlaskaliga.pl/druzyna/fc-kentucky/"
+      },
+      "5918": {
+        "id": 5918,
+        "name": "FC Mońki",
+        "link": "https://podlaskaliga.pl/druzyna/fc-monki/"
+      },
+      "1579": {
+        "id": 1579,
+        "name": "FC Pyskaci",
+        "link": "https://podlaskaliga.pl/druzyna/fc-pyskaci/"
+      },
+      "9219": {
+        "id": 9219,
+        "name": "Promil",
+        "link": "https://podlaskaliga.pl/druzyna/promil/"
+      }
+    },
+    "by_name": {
+      "fc progress białystok": "6984",
+      "progress": "6984",
+      "progress bialystok": "6984",
+      "zps biaform sa": "11756",
+      "gks grabowka": "4643",
+      "zps biaform": "11756",
+      "cf bojary": "4644",
+      "poler-art team": "5921",
+      "poler art team": "5921",
+      "maja rozmach": "5920",
+      "intaf": "6981",
+      "poltank": "1575",
+      "rainter": "4387",
+      "eskular": "4387",
+      "escular": "4387",
+      "vesta": "6988",
+      "cedc polmos białystok": "4641",
+      "cedc polmos": "4641",
+      "cedc polmos bialystok": "4641",
+      "polmos": "4641",
+      "wiara piasta ii": "6989",
+      "wiara piasta": "6989",
+      "wiara piasta il": "6989",
+      "ramis": "1570",
+      "fc bajaga": "6959",
+      "bajaga": "6959",
+      "osmar": "8196",
+      "fc grubassy": "8194",
+      "grubassy": "8194",
+      "fc drtusz": "1568",
+      "drtusz": "1568",
+      "konceptbud": "1567",
+      "koncept bud": "1567",
+      "waleczne orły": "8195",
+      "waleczne orly": "8195",
+      "unibep bielsk podlaski": "8193",
+      "unibep s.a.": "8193",
+      "unibep": "8193",
+      "multicco group": "1566",
+      "ist trade": "1566",
+      "hurtownia krokus": "1564",
+      "krokus": "1564",
+      "pth maltrans znienacka": "4389",
+      "pth maltrans": "4389",
+      "adampol glovis": "1565",
+      "m-fire": "1573",
+      "m fire": "1573",
+      "tim": "1582",
+      "top auto": "1580",
+      "santos": "4642",
+      "ntos": "4642",
+      "aptel": "1574",
+      "soccer auto wygoda": "1574",
+      "4technology": "1576",
+      "hanbud": "10056",
+      "gts nowa wygoda": "9218",
+      "ost sport": "10769",
+      "zachodnia kingdom": "10768",
+      "auto team": "4382",
+      "zimne dranie": "10770",
+      "zubry bema": "11753",
+      "juan pablo białystok": "11754",
+      "juan pablo": "11754",
+      "juan pablo bialystok": "11754",
+      "paka": "1566",
+      "prostal": "12343",
+      "biuro serwis-kopiarki białystok": "12342",
+      "biuro serwis-kopiarki": "12342",
+      "biuro serwis kopiarki": "12342",
+      "biuro serwis kopiarki bialystok": "12342",
+      "bosch service tech-car": "6951",
+      "rajkom choroszcz": "1577",
+      "cooltura taxi": "4383",
+      "margo adrenalina": "1581",
+      "druzyna": "0",
+      "znienacka": "1572",
+      "koledzy z boiska": "4388",
+      "fc kentucky": "4386",
+      "fc monki": "5918",
+      "fc pyskaci": "1579",
+      "promil": "9219"
+    }
+  },
+  "tables": {
+    "by_id": {
+      "8153": {
+        "id": 8153,
+        "title": "Fair Play II edycja",
+        "link": "https://podlaskaliga.pl/tabela/fair-play-ii-edycja/",
+        "seasons": [
+          118,
+          119,
+          120
+        ]
+      },
+      "6990": {
+        "id": 6990,
+        "title": "II LIGA – Hala 2022",
+        "link": "https://podlaskaliga.pl/tabela/2-liga-hala-2022/",
+        "seasons": [
+          120
+        ]
+      },
+      "6961": {
+        "id": 6961,
+        "title": "I LIGA – Hala 2022",
+        "link": "https://podlaskaliga.pl/tabela/1-liga-hala-2022/",
+        "seasons": [
+          120
+        ]
+      },
+      "5922": {
+        "id": 5922,
+        "title": "Generalka II edycji PLP",
+        "link": "https://podlaskaliga.pl/tabela/generalka-ii-edycji-plp/",
+        "seasons": [
+          118,
+          119,
+          120
+        ]
+      },
+      "8205": {
+        "id": 8205,
+        "title": "Generalka III edycja PLP",
+        "link": "https://podlaskaliga.pl/tabela/generalka-iii-edycja-plp/",
+        "seasons": [
+          125,
+          126,
+          127
+        ]
+      },
+      "8199": {
+        "id": 8199,
+        "title": "Fair Play III edycja",
+        "link": "https://podlaskaliga.pl/tabela/fair-play-iii-edycja/",
+        "seasons": [
+          125,
+          126,
+          127
+        ]
+      },
+      "8198": {
+        "id": 8198,
+        "title": "II LIGA – Orlik 2023",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-orlik-2023/",
+        "seasons": [
+          125
+        ]
+      },
+      "8191": {
+        "id": 8191,
+        "title": "I LIGA – Orlik 2023",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-orlik-2023/",
+        "seasons": [
+          125
+        ]
+      },
+      "9432": {
+        "id": 9432,
+        "title": "II LIGA – Hala 23/24",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-hala-23-24/",
+        "seasons": [
+          126
+        ]
+      },
+      "9431": {
+        "id": 9431,
+        "title": "I LIGA – Hala 23/24",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-hala-23-24/",
+        "seasons": [
+          126
+        ]
+      },
+      "10069": {
+        "id": 10069,
+        "title": "Fair Play IV edycja",
+        "link": "https://podlaskaliga.pl/tabela/fair-play-iv-edycja/",
+        "seasons": [
+          139,
+          140,
+          141
+        ]
+      },
+      "10068": {
+        "id": 10068,
+        "title": "Generalka IV edycja PLP",
+        "link": "https://podlaskaliga.pl/tabela/generalka-iv-edycja-plp/",
+        "seasons": [
+          139,
+          140,
+          141
+        ]
+      },
+      "10061": {
+        "id": 10061,
+        "title": "II Liga – Orlik’24",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-orlik24/",
+        "seasons": [
+          139
+        ]
+      },
+      "10060": {
+        "id": 10060,
+        "title": "I Liga – Orlik’24",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-orlik24/",
+        "seasons": [
+          139
+        ]
+      },
+      "10780": {
+        "id": 10780,
+        "title": "II LIGA – Hala’24/25",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-hala24-25/",
+        "seasons": [
+          141
+        ]
+      },
+      "10779": {
+        "id": 10779,
+        "title": "I LIGA – Hala’24/25",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-hala24-25/",
+        "seasons": [
+          141
+        ]
+      },
+      "11986": {
+        "id": 11986,
+        "title": "Fair Play V edycja",
+        "link": "https://podlaskaliga.pl/tabela/fair-play-v-edycja/",
+        "seasons": [
+          144,
+          145,
+          146
+        ]
+      },
+      "11984": {
+        "id": 11984,
+        "title": "Generalka V edycja PLP",
+        "link": "https://podlaskaliga.pl/tabela/generalka-v-edycja-plp/",
+        "seasons": [
+          144,
+          145,
+          146
+        ]
+      },
+      "11758": {
+        "id": 11758,
+        "title": "II LIGA – Orlik’25",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-orlik25/",
+        "seasons": [
+          144
+        ]
+      },
+      "11757": {
+        "id": 11757,
+        "title": "I LIGA – Orlik’25",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-orlik25/",
+        "seasons": [
+          144
+        ]
+      },
+      "12388": {
+        "id": 12388,
+        "title": "II LIGA – Hala’25/26",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-hala25-26/",
+        "seasons": [
+          146
+        ]
+      },
+      "12387": {
+        "id": 12387,
+        "title": "I LIGA – Hala’25/26",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-hala25-26/",
+        "seasons": [
+          146
+        ]
+      },
+      "4672": {
+        "id": 4672,
+        "title": "I liga – Hala 2021",
+        "link": "https://podlaskaliga.pl/tabela/i-liga-hala-2021/",
+        "seasons": [
+          108
+        ]
+      },
+      "4673": {
+        "id": 4673,
+        "title": "II liga – Hala 2021",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga-hala-2021/",
+        "seasons": [
+          108
+        ]
+      },
+      "5494": {
+        "id": 5494,
+        "title": "II Liga Hala 2021 Grupa Mistrzowska",
+        "link": "https://podlaskaliga.pl/tabela/2-liga-hala21-grupa-mistrzowska/",
+        "seasons": [
+          116
+        ]
+      },
+      "5497": {
+        "id": 5497,
+        "title": "I Liga Hala 2021 Grupa Spadkowa",
+        "link": "https://podlaskaliga.pl/tabela/1-liga-hala21-grupa-spadkowa/",
+        "seasons": [
+          116
+        ]
+      },
+      "5916": {
+        "id": 5916,
+        "title": "I LIGA",
+        "link": "https://podlaskaliga.pl/tabela/i-liga/",
+        "seasons": [
+          118
+        ]
+      },
+      "5917": {
+        "id": 5917,
+        "title": "II LIGA",
+        "link": "https://podlaskaliga.pl/tabela/ii-liga/",
+        "seasons": [
+          118
+        ]
+      }
+    },
+    "by_season_title": {
+      "118|fair play ii edycja": "8153",
+      "119|fair play ii edycja": "8153",
+      "120|fair play ii edycja": "8153",
+      "120|ii liga – hala 2022": "6990",
+      "120|i liga – hala 2022": "6961",
+      "118|generalka ii edycji plp": "5922",
+      "119|generalka ii edycji plp": "5922",
+      "120|generalka ii edycji plp": "5922",
+      "125|generalka iii edycja plp": "8205",
+      "126|generalka iii edycja plp": "8205",
+      "127|generalka iii edycja plp": "8205",
+      "125|fair play iii edycja": "8199",
+      "126|fair play iii edycja": "8199",
+      "127|fair play iii edycja": "8199",
+      "125|ii liga – orlik 2023": "8198",
+      "125|i liga – orlik 2023": "8191",
+      "126|ii liga – hala 23/24": "9432",
+      "126|i liga – hala 23/24": "9431",
+      "139|fair play iv edycja": "10069",
+      "140|fair play iv edycja": "10069",
+      "141|fair play iv edycja": "10069",
+      "139|generalka iv edycja plp": "10068",
+      "140|generalka iv edycja plp": "10068",
+      "141|generalka iv edycja plp": "10068",
+      "139|ii liga – orlik’24": "10061",
+      "139|i liga – orlik’24": "10060",
+      "141|ii liga – hala’24/25": "10780",
+      "141|i liga – hala’24/25": "10779",
+      "144|fair play v edycja": "11986",
+      "145|fair play v edycja": "11986",
+      "146|fair play v edycja": "11986",
+      "144|generalka v edycja plp": "11984",
+      "145|generalka v edycja plp": "11984",
+      "146|generalka v edycja plp": "11984",
+      "144|ii liga – orlik’25": "11758",
+      "144|i liga – orlik’25": "11757",
+      "146|ii liga – hala’25/26": "12388",
+      "146|i liga – hala’25/26": "12387",
+      "108|i liga – hala 2021": "4672",
+      "108|ii liga – hala 2021": "4673",
+      "116|ii liga hala 2021 grupa mistrzowska": "5494",
+      "116|i liga hala 2021 grupa spadkowa": "5497",
+      "118|i liga": "5916",
+      "118|ii liga": "5917"
+    }
+  }
+}

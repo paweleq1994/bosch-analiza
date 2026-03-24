@@ -11,8 +11,12 @@ cd bosch-analiza
 ## Struktura repo
 
 - `src/build_site.py` - generator strony
+- `src/fetch_promoted_teams.py` - generator benchmarku drużyn awansujących do I ligi
+- `src/fetch_player_profiles.py` - generator mapy publicznych profili zawodników
 - `data/bosch_service_tech_car_data_v3.json` - główna baza raportowa
 - `data/bosch_service_tech_car_video_library_v3.json` - baza materiałów wideo
+- `data/promoted_teams_analysis.json` - obszerna baza drużyn awansujących do I ligi
+- `data/player_profile_map.json` - mapa linków do profili zawodników
 - `docs/index.html` - gotowa strona pod GitHub Pages
 
 ## Jak przebudować stronę
@@ -22,6 +26,24 @@ python src/build_site.py
 ```
 
 Po przebudowie aktualna wersja strony zapisuje się do `docs/index.html`.
+
+## Jak odświeżyć benchmark awansu
+
+```powershell
+python src/fetch_promoted_teams.py
+python src/build_site.py
+```
+
+Pierwsza komenda pobiera i aktualizuje dane o drużynach, które awansowały do I ligi. Druga przebudowuje gotową stronę.
+
+## Jak odświeżyć linki do profili zawodników
+
+```powershell
+python src/fetch_player_profiles.py
+python src/build_site.py
+```
+
+Pierwsza komenda aktualizuje mapę publicznych profili zawodników na `podlaskaliga.pl`, a druga przebudowuje gotową stronę.
 
 ## GitHub Pages
 
@@ -34,4 +56,5 @@ Po przebudowie aktualna wersja strony zapisuje się do `docs/index.html`.
 
 - aktualizacja danych w `data/`
 - poprawki szablonu i logiki w `src/build_site.py`
+- rozwój benchmarku awansu w `src/fetch_promoted_teams.py`
 - publikacja gotowej wersji przez `docs/index.html`
