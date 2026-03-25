@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT_PATH = ROOT / "data" / "bosch_service_tech_car_data_v3.json"
 VIDEO_PATH = ROOT / "data" / "bosch_service_tech_car_video_library_v3.json"
 PROMO_PATH = ROOT / "data" / "promoted_teams_analysis.json"
+ORLIK2026_PATH = ROOT / "data" / "orlik_2026_opponents.json"
 PROFILE_PATH = ROOT / "data" / "player_profile_map.json"
 REFERENCE_PATH = ROOT / "data" / "reference_map.json"
 OUT_PATH = ROOT / "docs" / "index.html"
@@ -107,7 +108,7 @@ def search_team_rows(name: str) -> list[dict]:
     return []
 
 
-def build_reference_map(report: dict, video: dict, promo: dict) -> dict:
+def build_reference_map(report: dict, video: dict, promo: dict, orlik2026: dict) -> dict:
     reference = {"teams": {"by_id": {}, "by_name": {}}, "tables": {"by_id": {}, "by_season_title": {}}}
     team_ids: set[int] = {6951}
     season_ids: set[int] = set()
@@ -197,6 +198,27 @@ def build_reference_map(report: dict, video: dict, promo: dict) -> dict:
         if str(row.get("team_id", "")).isdigit():
             team_ids.add(int(row["team_id"]))
         add_team_name(row.get("team_name"))
+
+    for row in orlik2026.get("excluded_promoted", []) + orlik2026.get("bottom_two_watch", []):
+        if str(row.get("team_id", "")).isdigit():
+            team_ids.add(int(row["team_id"]))
+            add_team_reference(reference, row["team_id"], row.get("name"))
+        add_team_name(row.get("name"))
+
+    for row in orlik2026.get("opponents", []):
+        if str(row.get("team_id", "")).isdigit():
+            team_ids.add(int(row["team_id"]))
+            add_team_reference(reference, row["team_id"], row.get("team_name"), row.get("team_link"))
+        add_team_name(row.get("team_name"))
+        bosch_match = row.get("bosch_hall_match") or {}
+        if str(bosch_match.get("opponent_id", "")).isdigit():
+            team_ids.add(int(bosch_match["opponent_id"]))
+
+    source = orlik2026.get("source") or {}
+    if str(source.get("hall_table_id", "")).isdigit():
+        table_ids.add(int(source["hall_table_id"]))
+    if str(source.get("orlik_2025_table_id", "")).isdigit():
+        table_ids.add(int(source["orlik_2025_table_id"]))
 
     fetched_table_ids: set[int] = set()
     for season_id in sorted(season_ids):
@@ -350,8 +372,17 @@ TEMPLATE = """<!DOCTYPE html>
     th,td{padding:10px 10px;text-align:left;vertical-align:top;border-bottom:1px solid #eef3f8;overflow-wrap:break-word}tbody tr:nth-child(even) td{background:#fbfdff}tbody tr:hover td{background:#f4f9ff}
     td a{white-space:nowrap;display:inline-block}
     td[data-label="ID"],td[data-label="Link"]{white-space:nowrap;min-width:76px}
+    td[data-label="Orlik 2025"],td[data-label="Bosch na hali"],td[data-label="Bosch na orliku"]{min-width:168px}
+    td[data-label="Najkrótszy plan"]{min-width:260px}
     th button{all:unset;cursor:pointer;font-weight:800;display:inline-flex;align-items:center;gap:6px}.sort{display:inline-flex;width:12px;justify-content:center;color:var(--muted)}
     .status{display:inline-flex;justify-self:start;width:fit-content;max-width:100%;padding:4px 9px;border-radius:999px;font-size:.78rem;font-weight:800}.obecny{background:#dcfce7;color:#166534}.arch{background:#fff7ed;color:#9a3412}.win{background:#dcfce7;color:#166534}.draw{background:#eff6ff;color:#1d4ed8}.loss{background:#fef2f2;color:#991b1b}
+    .cell-stack{display:grid;gap:4px;min-width:0}
+    .cell-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .cell-k{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800}
+    .cell-note{font-size:.84rem;color:var(--muted);line-height:1.4;overflow-wrap:anywhere}
+    .delta-up{color:#0f766e;font-weight:700}
+    .delta-down{color:#9a3412;font-weight:700}
+    .tag-sep{opacity:.55}
     .chart h3{margin:0 0 12px;font-size:1rem}.chart svg{display:block;width:100%;height:auto}
     .metric-bars{display:grid;gap:12px}
     .metric-bar{display:grid;gap:6px}
@@ -371,10 +402,23 @@ TEMPLATE = """<!DOCTYPE html>
     .reco-card{background:linear-gradient(180deg,#fff 0%,#f9fbfe 100%);border:1px solid var(--line);border-radius:18px;padding:16px}
     .reco-card h3{margin:0 0 8px;font-size:1rem}
     .reco-card p{margin:8px 0 0;color:var(--muted);overflow-wrap:anywhere}
+    .analysis-stack{display:grid;gap:12px}
+    .analysis-row{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .analysis-row strong{display:block;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#18406b}
+    .analysis-row p{margin:.45rem 0 0;color:var(--muted);overflow-wrap:anywhere}
+    .scout-card{background:linear-gradient(180deg,#fff 0%,#f9fbfe 100%);border:1px solid var(--line);border-radius:18px;padding:16px}
+    .scout-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .scout-head h3{margin:0;font-size:1.1rem}
+    .scout-sub{margin-top:8px;color:var(--muted);font-size:.95rem}
+    .scout-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px}
+    .scout-block{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .scout-block h4{margin:0;font-size:.92rem}
+    .scout-block ul{margin:8px 0 0;padding-left:18px}
+    .scout-block li{margin-top:6px;color:var(--muted);overflow-wrap:anywhere}
     .foot{margin-top:12px;color:var(--muted);font-size:.9rem}
     @media (max-width:1480px){.split,.split-wide{grid-template-columns:1fr}}
     @media (max-width:1280px){.cards{grid-template-columns:repeat(3,1fr)}.season-grid{grid-template-columns:repeat(2,1fr)}.player-grid{grid-template-columns:repeat(3,1fr)}.chart-grid,.dense-2,.dense-3,.reco-grid,.promotion-grid{grid-template-columns:1fr}.hero-stats{grid-template-columns:repeat(2,1fr)}.toolbar-grid,.promo-toolbar{grid-template-columns:1fr 1fr}}
-    @media (max-width:900px){.shell{width:100%!important;padding:0!important}.hero,.section{margin-left:10px;margin-right:10px}.hero{margin-top:calc(var(--mobile-toolbar-h) + 22px);padding:24px 20px 20px}.toolbar-sentinel{display:none}.toolbar-fly{display:none!important}.toolbar{position:fixed;top:10px;left:10px;right:10px;z-index:120;margin:0;padding:0;background:transparent;border:none;border-radius:0;box-shadow:none;backdrop-filter:none}.toolbar-mobile{display:block;position:relative;z-index:3;padding:10px 12px;background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 34px rgba(19,34,56,.12)}.toolbar.open .toolbar-mobile{box-shadow:0 16px 36px rgba(19,34,56,.16)}.toolbar-mobile-copy{max-width:calc(100% - 62px)}.toolbar-mobile-bar{min-height:52px}.toolbar-summary{padding-top:4px;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.toolbar-toggle{width:48px;min-width:48px;min-height:48px;border-radius:16px;box-shadow:0 8px 20px rgba(19,34,56,.08)}.toolbar-backdrop{display:block;position:fixed;inset:0;z-index:1;background:rgba(11,19,36,.38);opacity:0;pointer-events:none;transition:opacity .18s ease}.toolbar.open .toolbar-backdrop{opacity:1;pointer-events:auto}.toolbar-panel{display:block;position:fixed;z-index:2;top:calc(var(--mobile-toolbar-h) + 18px);left:10px;right:10px;bottom:10px;width:auto;padding:16px 14px 20px;background:rgba(255,255,255,.985);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 48px rgba(19,34,56,.18);overflow:auto;transform:translateY(14px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}.toolbar.open .toolbar-panel{transform:translateY(0);opacity:1;pointer-events:auto}.toolbar-panel-head{display:block;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eef3f8}.toolbar-close{display:none}.toolbar-grid{grid-template-columns:1fr}.toolbar-panel .nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.toolbar-panel .nav a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;border-radius:14px;text-align:center;white-space:normal;overflow-wrap:anywhere}.head,.body{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr 1fr}.season-grid,.player-grid{grid-template-columns:1fr}.tag,.status{width:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.25}.sub,.range-help,.toolbar-panel-title,.toolbar-summary,.chapter-note,.reco-card{overflow-wrap:anywhere}}
+    @media (max-width:900px){.shell{width:100%!important;padding:0!important}.hero,.section{margin-left:10px;margin-right:10px}.hero{margin-top:calc(var(--mobile-toolbar-h) + 22px);padding:24px 20px 20px}.toolbar-sentinel{display:none}.toolbar-fly{display:none!important}.toolbar{position:fixed;top:10px;left:10px;right:10px;z-index:120;margin:0;padding:0;background:transparent;border:none;border-radius:0;box-shadow:none;backdrop-filter:none}.toolbar-mobile{display:block;position:relative;z-index:3;padding:10px 12px;background:rgba(255,255,255,.97);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 34px rgba(19,34,56,.12)}.toolbar.open .toolbar-mobile{box-shadow:0 16px 36px rgba(19,34,56,.16)}.toolbar-mobile-copy{max-width:calc(100% - 62px)}.toolbar-mobile-bar{min-height:52px}.toolbar-summary{padding-top:4px;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.toolbar-toggle{width:48px;min-width:48px;min-height:48px;border-radius:16px;box-shadow:0 8px 20px rgba(19,34,56,.08)}.toolbar-backdrop{display:block;position:fixed;inset:0;z-index:1;background:rgba(11,19,36,.38);opacity:0;pointer-events:none;transition:opacity .18s ease}.toolbar.open .toolbar-backdrop{opacity:1;pointer-events:auto}.toolbar-panel{display:block;position:fixed;z-index:2;top:calc(var(--mobile-toolbar-h) + 18px);left:10px;right:10px;bottom:10px;width:auto;padding:16px 14px 20px;background:rgba(255,255,255,.985);border:1px solid var(--line);border-radius:22px;box-shadow:0 20px 48px rgba(19,34,56,.18);overflow:auto;transform:translateY(14px);opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}.toolbar.open .toolbar-panel{transform:translateY(0);opacity:1;pointer-events:auto}.toolbar-panel-head{display:block;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid #eef3f8}.toolbar-close{display:none}.toolbar-grid{grid-template-columns:1fr}.toolbar-panel .nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.toolbar-panel .nav a{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;border-radius:14px;text-align:center;white-space:normal;overflow-wrap:anywhere}.head,.body{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr 1fr}.season-grid,.player-grid,.scout-grid{grid-template-columns:1fr}.tag,.status{width:auto;max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.25}.sub,.range-help,.toolbar-panel-title,.toolbar-summary,.chapter-note,.reco-card,.scout-card{overflow-wrap:anywhere}}
     @media (max-width:720px){.cards{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr 1fr}.table-wrap{overflow:auto;-webkit-overflow-scrolling:touch}.table-wrap table{min-width:720px}.table-wrap.scroller{max-height:min(60vh,520px);overflow:auto;-webkit-overflow-scrolling:touch}}
   </style>
 </head>
@@ -468,6 +512,7 @@ TEMPLATE = """<!DOCTYPE html>
           <a href="#matches">Mecze</a>
           <a href="#opponents">Rywalizacja</a>
           <a href="#promotions">Wzorce awansu</a>
+          <a href="#orlik2026">Scouting Orlik 2026</a>
           <a href="#video">Wideo</a>
           <a href="#recommendations">Rekomendacje</a>
         </nav>
@@ -698,6 +743,32 @@ TEMPLATE = """<!DOCTYPE html>
         <div class="chapter-note" id="promotions-note"></div>
       </div>
     </section>
+    <section class="section" id="orlik2026">
+      <div class="head"><h2>Scouting Orlik 2026</h2><p>Prognoza przyszłej stawki Bosch na podstawie obecnej hali II ligi i ostatniego sezonu orlikowego. To rozdział praktyczny: kto może być najgroźniejszy, gdzie Bosch powinien szukać przewagi i które mecze trzeba potraktować jak obowiązek punktowy.</p></div>
+      <div class="body">
+        <div class="cards" id="orlik2026-summary-cards"></div>
+        <div class="dense-grid dense-2" style="margin-top:16px">
+          <div class="table-card">
+            <div class="table-top"><h3>Założenia scenariusza Bosch</h3><div class="meta">Przyjęte do tej analizy przyszłościowej</div></div>
+            <div id="orlik2026-assumptions"></div>
+          </div>
+          <div class="table-card">
+            <div class="table-top"><h3>Globalny plan na lato</h3><div class="meta">Jak Bosch może wykorzystać szerszą kadrę</div></div>
+            <div id="orlik2026-tips"></div>
+          </div>
+        </div>
+        <div class="table-card" style="margin-top:16px">
+          <div class="table-top"><h3>Mapa rywali Orlika 2026</h3><div class="meta">Prognozowana stawka po wyjęciu dwóch drużyn awansujących do I ligi</div></div>
+          <div id="orlik2026-table"></div>
+        </div>
+        <div class="chart-grid" style="margin-top:16px">
+          <div class="chart"><h3>Poziom zagrożenia rywali</h3><div id="orlik2026-threat-chart"></div></div>
+          <div class="chart"><h3>PPG rywali na Orliku 2025</h3><div class="meta">ostatni znany poziom punktowy na otwartym boisku; dopisek pokazuje różnicę względem obecnej hali</div><div id="orlik2026-shift-chart"></div></div>
+        </div>
+        <div class="promotion-grid" id="orlik2026-cards" style="margin-top:16px"></div>
+        <div class="chapter-note" id="orlik2026-note"></div>
+      </div>
+    </section>
 
     <section class="section" id="video">
       <div class="head"><h2>Wideo</h2><p>Biblioteka publicznych nagrań Bosch: pokrycie sezonów, rekomendowane materiały i pełna lista sparowanych meczów.</p></div>
@@ -729,12 +800,14 @@ TEMPLATE = """<!DOCTYPE html>
   <script id="report-data" type="application/json">__REPORT_JSON__</script>
   <script id="video-data" type="application/json">__VIDEO_JSON__</script>
   <script id="promotion-data" type="application/json">__PROMO_JSON__</script>
+  <script id="orlik2026-data" type="application/json">__ORLIK2026_JSON__</script>
   <script id="profile-data" type="application/json">__PROFILE_JSON__</script>
   <script id="reference-data" type="application/json">__REFERENCE_JSON__</script>
   <script>
     const REPORT=JSON.parse(document.getElementById('report-data').textContent);
     const VIDEO=JSON.parse(document.getElementById('video-data').textContent);
     const PROMO=JSON.parse(document.getElementById('promotion-data').textContent);
+    const ORLIK2026=JSON.parse(document.getElementById('orlik2026-data').textContent);
     const PROFILE=JSON.parse(document.getElementById('profile-data').textContent);
     const REFERENCE=JSON.parse(document.getElementById('reference-data').textContent);
     const LEGEND=[["KPI","kluczowy wskaźnik efektywności"],["PPG","punkty na mecz"],["Pkt","punkty"],["Poz.","pozycja danej drużyny w konkretnej tabeli"],["Miejsce awansu","pozycja tej konkretnej drużyny w tabeli II ligi sezonu awansowego"],["M","mecze"],["W / R / P","wygrane / remisy / porażki"],["RB","różnica bramek"],["CS","clean sheets, czyli czyste konta"],["G","gole"],["A","asysty"],["G+A","gole plus asysty"],["G+A/M","gole plus asysty na mecz"],["MVP","piłkarz meczu"],["Top6","liczba oznaczeń top6 w publicznej bazie ligi"],["ŻK / CZK","żółte kartki / czerwone kartki"],["HT","wynik do przerwy"],["API ligi","techniczny interfejs i baza danych strony ligi"],["1. gol Bosch %","odsetek meczów, w których Bosch zdobył pierwszą bramkę"],["PPG po 1:0","średnia punktów po strzeleniu pierwszego gola"],["PPG po 0:1","średnia punktów po stracie pierwszego gola"],["Top half / Bottom half","górna i dolna połowa tabeli"],["Pkt/mecz stykowy","średnia liczba punktów zdobywanych w meczach stykowych"]];
@@ -744,10 +817,12 @@ TEMPLATE = """<!DOCTYPE html>
     LEGEND.push(['Atak rank','miejsce w lidze pod względem liczby goli strzelonych']);
     LEGEND.push(['Obrona rank','miejsce w lidze pod względem najmniejszej liczby goli straconych']);
     LEGEND.push(['Ślad po awansie','pierwszy późniejszy wpis zespołu w I lidze widoczny w bazie']);
+    LEGEND.push(['Poziom zagrożenia','syntetyczna ocena trudności rywala w prognozie Orlika 2026']);
     TERMS['Nad 3.']='Przewaga punktowa nad pierwszym miejscem, które nie dawało awansu. To prosty miernik, jak bezpieczny był awans.';
     TERMS['Atak rank']='Miejsce drużyny w lidze pod względem liczby strzelonych goli. 1 oznacza najlepszy atak w tej tabeli.';
     TERMS['Obrona rank']='Miejsce drużyny pod względem najmniejszej liczby straconych goli. 1 oznacza najszczelniejszą obronę.';
     TERMS['Ślad po awansie']='Pierwszy późniejszy wpis tej drużyny w tabeli I ligi, jaki udało się znaleźć w publicznej bazie.';
+    TERMS['Poziom zagrożenia']='Autorska ocena trudności rywala w prognozie Orlika 2026. Łączy aktualne miejsce i PPG z hali, ślad z Orlika 2025, formę, liderów oraz to, jak Bosch wyglądał z tym zespołem na hali.';
     TERMS['Wzorzec awansu']='Profil liczbowy drużyny, która naprawdę awansowała, więc punkt odniesienia dla Bosch.';
     TERMS['Historia ligowa']='Wszystkie wpisy tej drużyny w tabelach ligowych znalezione w publicznej bazie strony ligi.';
     CONCEPTS.push(['Nad 3.','Przewaga nad pierwszym miejscem bez awansu.','Pokazuje, czy zespół wszedł wyżej komfortowo, czy na styku.']);
@@ -1130,6 +1205,118 @@ TEMPLATE = """<!DOCTYPE html>
       const spread=row.top3_goal_share<=52?'szeroko rozłożona produkcja goli':row.top3_goal_share>=65?'mocno skupiona produkcja w top3':'średnio skupiona produkcja';
       return `${attack}, ${defense}, ${buffer}, ${spread}.`;
     }
+    const isOrlikSeasonLabel=label=>norm(label).includes('orlik');
+    function latestBoschOrlikMatch(teamId,teamName){
+      return [...VIDEO.match_rows]
+        .filter(row=>isOrlikSeasonLabel(row.season)&&((teamId!=null&&String(row.opponent_id??'')===String(teamId))||norm(row.display_opponent||row.opponent)===norm(teamName)))
+        .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))[0]||null;
+    }
+    const orlik2026RowsActive=()=>(ORLIK2026.opponents||[]).map(row=>({...row,bosch_orlik_match:latestBoschOrlikMatch(row.team_id,row.team_name)}));
+    const orlik2026RowsVisible=()=>orlik2026RowsActive().filter(passQuery);
+    const orlik2026ThreatClass=level=>{const value=norm(level);if(value.includes('wysok')) return 'red';if(value.includes('sred')||value.includes('śred')) return 'orange';return 'teal'};
+    function orlik2026Leader(row,index=0,source='hall'){
+      const list=source==='orlik'?(row.orlik_2025_top_players||[]):(row.top_players||[]);
+      return list[index]||null;
+    }
+    function orlik2026LeaderInline(player){
+      return player?`${playerLinkFromRow(player)} <span class="tag-sep">•</span> <span>${player.points} G+A</span>`:'brak lidera w publicznej bazie';
+    }
+    function orlik2026LeaderLine(row,source='hall'){
+      return orlik2026LeaderInline(orlik2026Leader(row,0,source));
+    }
+    function orlik2026LeaderList(row,source='hall',limit=3){
+      const list=(source==='orlik'?(row.orlik_2025_top_players||[]):(row.top_players||[])).slice(0,limit);
+      return list.length?list.map(player=>`<li>${playerLinkFromRow(player)} — ${player.goals} G, ${player.assists} A, ${player.points} G+A</li>`).join(''):'<li>brak publicznych danych indywidualnych</li>';
+    }
+    function orlik2026DeltaText(diff){
+      if(diff==null||!Number.isFinite(diff)) return '';
+      if(Math.abs(diff)<0.01) return 'poziom bardzo zbliżony do obecnej hali';
+      if(diff>0) return `o ${prettyNum(diff,2)} pkt/mecz lepiej niż na obecnej hali`;
+      return `o ${prettyNum(Math.abs(diff),2)} pkt/mecz słabiej niż na obecnej hali`;
+    }
+    function orlik2026TableCell(row){
+      if(!row.orlik_2025) return '<div class="cell-stack"><div class="cell-note">brak wpisu tego zespołu w Orliku 2025</div></div>';
+      const diff=safeNum(row.orlik_2025.ppg,0)-safeNum(row.hall.ppg,0);
+      const leader=orlik2026Leader(row,0,'orlik');
+      return `<div class="cell-stack"><div class="cell-line">${rankTag(row.orlik_2025.pos)}<span class="cell-note">${prettyNum(row.orlik_2025.ppg)} pkt/mecz na Orliku 2025</span></div><div class="cell-note ${diff>=0?'delta-up':'delta-down'}">${orlik2026DeltaText(diff)}</div>${leader?`<div class="cell-note">lider orlika: ${playerLinkFromRow(leader)} — ${leader.points} G+A</div>`:''}</div>`;
+    }
+    function orlik2026MatchCell(match,label){
+      if(!match) return '<div class="cell-stack"><div class="cell-note">brak wcześniejszego meczu Bosch</div></div>';
+      return `<div class="cell-stack"><div class="cell-line">${scoreBadgeFor(match.gf,match.ga,`${match.gf}:${match.ga}`)}<span class="cell-note">${formatDate(match.date)}</span></div><div class="cell-note"><a href="${match.event_link||match.link}" target="_blank" rel="noreferrer">${label}</a></div></div>`;
+    }
+    function orlik2026HallCell(row){
+      return orlik2026MatchCell(row.bosch_hall_match,'ostatni mecz hali Bosch');
+    }
+    function cleanInline(html){
+      return String(html).replace(/<[^>]+>/g,' ').replace(/\\s+/g,' ').trim();
+    }
+    function orlik2026OrlikSummary(row){
+      if(!row.orlik_2025) return 'Brak widocznego wpisu tego rywala w Orliku 2025, więc latem trzeba go czytać bardziej przez obecną halę niż przez gotowy wzorzec gry na większej przestrzeni.';
+      const diff=safeNum(row.orlik_2025.ppg,0)-safeNum(row.hall.ppg,0);
+      const leader=orlik2026Leader(row,0,'orlik');
+      const base=row.orlik_2025.pos<=5?`Na Orliku 2025 ${row.team_name} było realnie konkurencyjne: ${row.orlik_2025.pos}. miejsce i ${prettyNum(row.orlik_2025.ppg)} pkt/mecz.`:row.orlik_2025.pos<=10?`Na Orliku 2025 ${row.team_name} siedziało w środku stawki: ${row.orlik_2025.pos}. miejsce i ${prettyNum(row.orlik_2025.ppg)} pkt/mecz.`:`Na Orliku 2025 ${row.team_name} nie weszło wysoko: ${row.orlik_2025.pos}. miejsce i ${prettyNum(row.orlik_2025.ppg)} pkt/mecz.`;
+      const trend=`To było ${orlik2026DeltaText(diff)}.`;
+      const leaderText=leader?`Głównym liderem tamtego orlika był ${cleanInline(orlik2026LeaderInline(leader))}.`:'';
+      return [base,trend,leaderText].filter(Boolean).join(' ');
+    }
+    function orlik2026ShiftRows(){
+      return orlik2026RowsActive()
+        .filter(row=>row.orlik_2025&&row.orlik_2025.ppg!=null)
+        .map(row=>({
+          ...row,
+          orlik_ppg:safeNum(row.orlik_2025.ppg,0),
+          shift:Number((safeNum(row.orlik_2025.ppg,0)-safeNum(row.hall.ppg,0)).toFixed(2)),
+          shift_note:orlik2026DeltaText(safeNum(row.orlik_2025.ppg,0)-safeNum(row.hall.ppg,0)),
+          label:`${row.team_name} (${row.orlik_2025.pos}. miejsce Orlik 2025)`,
+        }));
+    }
+    function renderAnalysisList(targetId,rows){
+      const el=document.getElementById(targetId);
+      if(!el) return;
+      el.innerHTML=`<div class="analysis-stack">${rows.map((row,index)=>`<div class="analysis-row"><strong>${esc(row.title||`Punkt ${index+1}`)}</strong><p>${row.detail}</p></div>`).join('')}</div>`;
+    }
+    function renderOrlik2026Summary(){
+      const el=document.getElementById('orlik2026-summary-cards');
+      if(!el) return;
+      const rows=orlik2026RowsVisible();
+      if(!rows.length){el.innerHTML='<div class="empty">Brak rywali Orlika 2026 dla aktywnego wyszukiwania.</div>';return}
+      const avgHallPpg=rows.reduce((acc,row)=>acc+safeNum(row.hall.ppg,0),0)/rows.length;
+      const topThreat=rows[0];
+      const mustWin=rows.filter(row=>safeNum(row.hall.pos,99)>=12).length;
+      const bottomTwo=rows.filter(row=>safeNum(row.hall.pos,99)>=15);
+      const bestOrlik=[...rows].filter(row=>row.orlik_2025&&row.orlik_2025.ppg!=null).sort((a,b)=>safeNum(b.orlik_2025.ppg,0)-safeNum(a.orlik_2025.ppg,0))[0];
+      const cards=[
+        ['Rywali w stawce',rows.length,'przewidywana liczba przeciwników Bosch po wyjęciu dwóch ekip awansujących do I ligi'],
+        ['Najwyższe zagrożenie',topThreat?teamLink(topThreat.team_id,topThreat.team_name):'-',topThreat?`${prettyNum(topThreat.hall.ppg)} PPG na hali | poziom ${topThreat.threat_level}`:'-'],
+        ['Średnie PPG hali',prettyNum(avgHallPpg),'średni poziom punktowy prognozowanej stawki Orlika 2026'],
+        ['Mecze obowiązkowe',mustWin,'rywale z końca hali, z którymi Bosch powinien celować w pełną pulę'],
+        ['Najmocniejszy ślad z Orlika 2025',bestOrlik?teamLink(bestOrlik.team_id,bestOrlik.team_name):'-',bestOrlik?`${prettyNum(bestOrlik.orlik_2025.ppg)} PPG w ostatnim sezonie orlikowym`:'brak porównania'],
+        ['Dolny alarm',bottomTwo.length?bottomTwo.map(row=>teamLink(row.team_id,row.team_name)).join(', '):'brak','dwa ostatnie zespoły hali trzeba potraktować serio, ale bez zostawiania im życia przez chaos']
+      ];
+      el.innerHTML=cards.map(([k,v,sb])=>`<div class="card"><div class="label">${esc(k)}</div><div class="value">${v}</div><div class="sub">${sb}</div></div>`).join('');
+    }
+    function renderOrlik2026Lists(){
+      renderAnalysisList('orlik2026-assumptions',(ORLIK2026.bosch_scenario?.assumptions||[]).map((detail,index)=>({title:`Założenie ${index+1}`,detail:esc(detail)})));
+      renderAnalysisList('orlik2026-tips',(ORLIK2026.bosch_scenario?.global_tips||[]).map((detail,index)=>({title:`Tip ${index+1}`,detail:esc(detail)})));
+    }
+    function renderOrlik2026Cards(){
+      const el=document.getElementById('orlik2026-cards');
+      if(!el) return;
+      const rows=orlik2026RowsVisible();
+      if(!rows.length){el.innerHTML='<div class="empty">Brak profili rywali dla aktywnego wyszukiwania.</div>';return}
+      el.innerHTML=rows.map(row=>{
+        const hallLine=`hala: ${row.hall.pos}. miejsce | ${row.hall.points} pkt | ${row.hall.gf}:${row.hall.ga} | ${prettyNum(row.hall.ppg)} PPG`;
+        const orlikLine=row.orlik_2025?`orlik 2025: ${row.orlik_2025.pos}. miejsce | ${row.orlik_2025.points} pkt | ${prettyNum(row.orlik_2025.ppg)} PPG`:'brak wpisu w Orliku 2025';
+        const boschOrlik=row.bosch_orlik_match;
+        const extraTags=[
+          `<span class="tag ${orlik2026ThreatClass(row.threat_level)}">${tip('Poziom zagrożenia','Poziom zagrożenia')}<span class="tag-value">${esc(row.threat_level)}</span></span>`,
+          `<span class="tag blue"><span>Hala</span><span class="tag-value">${row.hall.pos}.</span></span>`,
+          `<span class="tag teal"><span>Orlik 2025</span><span class="tag-value">${row.orlik_2025?`${row.orlik_2025.pos}.`:'-'}</span></span>`,
+          row.hall.pos>=15?'<span class="tag orange"><span>Dolny alarm</span><span class="tag-value">must win bez chaosu</span></span>':'',
+        ].filter(Boolean).join('');
+        return `<article class="scout-card"><div class="scout-head"><div><div class="label">${teamLink(row.team_id,row.team_name)}</div><h3>${esc(row.team_name)}</h3><div class="scout-sub">${hallLine}<br>${orlikLine}</div></div><div class="tags">${extraTags}</div></div><div class="tags"><span class="tag blue"><span>Lider hali</span><span class="tag-value">${orlik2026LeaderLine(row,'hall')}</span></span><span class="tag teal"><span>Lider orlika</span><span class="tag-value">${orlik2026LeaderLine(row,'orlik')}</span></span><span class="tag orange"><span>Top3 goli hali</span><span class="tag-value">${prettyNum(row.top3_goal_share,1)}%</span></span></div><p>${row.scouting.summary}</p><p><strong>Ślad z Orlika 2025:</strong> ${orlik2026OrlikSummary(row)}</p><div class="scout-grid"><div class="scout-block"><h4>Mocne strony</h4><ul>${row.scouting.strengths.map(item=>`<li>${item}</li>`).join('')}</ul></div><div class="scout-block"><h4>Gdzie szukać okazji</h4><ul>${row.scouting.opportunities.length?row.scouting.opportunities.map(item=>`<li>${item}</li>`).join(''):'<li>szukać przewagi przez cierpliwe rozciąganie bloku i egzekwowanie jakości w szerokości</li>'}</ul></div><div class="scout-block"><h4>Plan Bosch</h4><ul>${row.scouting.bosch_plan.map(item=>`<li>${item}</li>`).join('')}</ul></div><div class="scout-block"><h4>Na kogo uważać</h4><ul>${row.scouting.watchouts.map(item=>`<li>${item}</li>`).join('')}</ul></div></div><div class="scout-grid"><div class="scout-block"><h4>Słabsze punkty rywala</h4><ul>${row.scouting.weaknesses.length?row.scouting.weaknesses.map(item=>`<li>${item}</li>`).join(''):'<li>brak wyraźnej dziury w danych publicznych</li>'}</ul></div><div class="scout-block"><h4>Liderzy hali 25/26</h4><ul>${orlik2026LeaderList(row,'hall')}</ul></div><div class="scout-block"><h4>Liderzy Orlika 2025</h4><ul>${orlik2026LeaderList(row,'orlik')}</ul></div><div class="scout-block"><h4>Bosch vs ten rywal</h4><ul><li>${cleanInline(orlik2026HallCell(row))}</li><li>${boschOrlik?cleanInline(orlik2026MatchCell(boschOrlik,'ostatni mecz orlika Bosch')):'brak wcześniejszego meczu Bosch z tym rywalem na orliku w widocznej bazie'}</li></ul></div></div></article>`;
+      }).join('');
+    }
     function renderPromotionSummary(){
       const el=document.getElementById('promotion-summary-cards');
       if(!el)return;
@@ -1200,7 +1387,7 @@ TEMPLATE = """<!DOCTYPE html>
     function summary(){const el=document.getElementById('summary-cards');const s=seasonRow();const agg=activeAggregate();let rows=[]; if(s){const st=stateMap.get(String(s.sid))||{},cl=closeMap.get(String(s.sid))||{},ct=contMap.get(String(s.sid))||{},cn=concMap.get(String(s.sid))||{},vd=videoMap.get(String(s.sid))||{};rows=[['Sezon',s.season,s.table_title],['Pozycja',s.pos,`${s.points} pkt`],['Bilans',`${s.wins}-${s.draws}-${s.losses}`,`${s.gf}:${s.ga}`],['PPG',s.ppg,'punkty na mecz'],['1. gol Bosch',`${st.first_goal_share??0}%`,`${st.first_for??0}/${st.matches??s.matches} meczów`],['Mecze stykowe',cl.close_ppg??'-',`${cl.close_matches??0} meczów`],['Ciągłość',ct.continuity!=null?`${ct.continuity}%`:'-',`${ct.roster??'-'} zawodników`],['Top3 goli',`${cn.top3_goal_share??0}%`,`${cn.scorers??0} strzelców`],['Wideo',`${vd.coverage_pct??0}%`,`${vd.matches_with_video??0}/${vd.matches_total??s.matches} meczów`]]} else {rows=[['Zakres',activeRangeLabel(),`${agg.seasonRows.length} sezonów w podsumowaniu zbiorczym`],['Bilans zbiorczy',`${agg.team.wins}-${agg.team.draws}-${agg.team.losses}`,`${agg.team.gf}:${agg.team.ga}`],['Punkty łącznie',agg.team.points,`${agg.team.matches} meczów`],['PPG zbiorcze',prettyNum(agg.team.ppg),`target: ${prettyNum(agg.benchmark.second_ppg??safeNum(REPORT.scorecard_rows[0][2],0))}`],['1. gol Bosch',`${prettyNum(agg.state.first_goal_share,1)}%`,`${agg.state.first_for}/${agg.team.matches} meczów`],['Mecze stykowe',prettyNum(agg.close.close_ppg),`${agg.close.close_matches} meczów`],['Ciągłość',agg.continuity.continuity!=null?`${prettyNum(agg.continuity.continuity,1)}%`:'-',`${agg.continuity.roster} wpisów kadrowych`],['Top3 goli',`${prettyNum(agg.concentration.top3_goal_share,1)}%`,`${agg.concentration.scorers} wpisów strzeleckich`],['Wideo',`${prettyNum(agg.video.coverage_pct,1)}%`,`${agg.video.matches_with_video}/${agg.video.matches_total} meczów`]]} el.innerHTML=rows.map(([k,v,sb])=>`<div class="card"><div class="label">${esc(k)}</div><div class="value">${esc(v)}</div><div class="sub">${esc(sb)}</div></div>`).join('')}
     function seasonCards(){const el=document.getElementById('season-cards');const activeIds=selectedSeasonIds();el.innerHTML=REPORT.season_rows.filter(passQuery).map(r=>{const st=stateMap.get(String(r.sid))||{},vd=videoMap.get(String(r.sid))||{};return `<article class="season-card ${activeIds.has(String(r.sid))?'active':''}" data-season="${r.sid}"><div class="label">${esc(r.table_title)}</div><div class="value">${esc(r.season)}</div><div class="sub">Pozycja ${r.pos} | ${r.points} pkt | ${r.gf}:${r.ga}</div><div class="tags"><span class="tag blue">PPG ${r.ppg}</span><span class="tag teal">1. gol ${st.first_goal_share??0}%</span><span class="tag orange">Wideo ${vd.coverage_pct??0}%</span></div></article>`}).join('')||'<div class="empty">Brak sezonów dla aktywnego wyszukiwania.</div>';el.querySelectorAll('.season-card').forEach(card=>card.addEventListener('click',()=>{toggleSetValue(state.seasons,String(card.dataset.season));sync();refresh();window.scrollTo({top:0,behavior:'smooth'})}))}
     function bars(id,rows,labelKey,valKey,color,suffix=''){const el=document.getElementById(id), data=rows.filter(passSeason).filter(passQuery); if(!data.length){el.innerHTML='<div class="empty">Brak danych.</div>';return} const mobile=mobileCharts(),w=560,h=mobile?280:240,left=18,right=18,bottom=mobile?102:70,top=14,gap=mobile?10:12,bw=(w-left-right-gap*(data.length-1))/data.length,max=Math.max(...data.map(r=>safeNum(r[valKey],0)),1); el.innerHTML=`<svg viewBox="0 0 ${w} ${h}"><line x1="${left}" y1="${h-bottom}" x2="${w-right}" y2="${h-bottom}" stroke="#d5dee8"></line>${data.map((r,i)=>{const v=safeNum(r[valKey],0),bh=(v/max)*(h-top-bottom),x=left+i*(bw+gap),y=h-bottom-bh; return `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="8" fill="${color}"></rect><text x="${x+bw/2}" y="${y-6}" text-anchor="middle" font-size="11" fill="#425466">${v}${suffix}</text>${svgLabel(x+bw/2,h-(mobile?46:44),r[labelKey],{maxChars:mobile?10:14,lineHeight:mobile?11:12,fontSize:mobile?10:11})}`}).join('')}</svg>`}
-    function barList(id,rows,labelKey,valKey,color,opts={}){const el=document.getElementById(id),data=rows.filter(passSeason).filter(passQuery);if(!el)return;if(!data.length){el.innerHTML='<div class="empty">Brak danych.</div>';return}const max=Math.max(...data.map(r=>safeNum(r[valKey],0)),1),decimals=opts.decimals??2,suffix=opts.suffix??'',subKey=opts.subLabelKey;el.innerHTML=`<div class="metric-bars">${data.map(r=>{const value=safeNum(r[valKey],0),width=Math.max(4,(value/max)*100),sub=subKey&&r[subKey]?`<span class="metric-bar-sub">${esc(r[subKey])}</span>`:'';return `<div class="metric-bar"><div class="metric-bar-label">${esc(r[labelKey])}${sub}</div><div class="metric-bar-main"><div class="metric-bar-track"><div class="metric-bar-fill" style="width:${width}%;background:${color}"></div></div><div class="metric-bar-value">${esc(`${prettyNum(value,decimals)}${suffix}`)}</div></div></div>`}).join('')}</div>`}
+    function barList(id,rows,labelKey,valKey,color,opts={}){const el=document.getElementById(id),data=rows.filter(r=>opts.season===false||passSeason(r)).filter(r=>opts.query===false||passQuery(r));if(!el)return;if(!data.length){el.innerHTML='<div class="empty">Brak danych.</div>';return}const max=Math.max(...data.map(r=>safeNum(r[valKey],0)),1),decimals=opts.decimals??2,suffix=opts.suffix??'',subKey=opts.subLabelKey;el.innerHTML=`<div class="metric-bars">${data.map(r=>{const value=safeNum(r[valKey],0),width=Math.max(4,(value/max)*100),sub=subKey&&r[subKey]?`<span class="metric-bar-sub">${esc(r[subKey])}</span>`:'';return `<div class="metric-bar"><div class="metric-bar-label">${esc(r[labelKey])}${sub}</div><div class="metric-bar-main"><div class="metric-bar-track"><div class="metric-bar-fill" style="width:${width}%;background:${color}"></div></div><div class="metric-bar-value">${esc(`${prettyNum(value,decimals)}${suffix}`)}</div></div></div>`}).join('')}</div>`}
     function currentPlayers(){const el=document.getElementById('current-player-cards'); el.innerHTML=REPORT.current_players.filter(passQuery).slice(0,6).map(r=>`<article class="player-card"><div class="label">Bieżący sezon</div><div class="value">${playerLinkFromRow(r)}</div><div class="tags"><span class="tag blue">${r.apps} meczów</span><span class="tag teal">${r.points} G+A</span><span class="tag orange">${r.motm} MVP</span></div><div class="sub">Gole ${r.goals} | Asysty ${r.assists} | ŻK ${r.yellow} | CZK ${r.red}</div></article>`).join('')}
     function outcomeClass(forGoals,againstGoals){const gf=num(forGoals),ga=num(againstGoals);if(gf===null||ga===null)return'draw';return gf>ga?'win':gf<ga?'loss':'draw'}
     function scoreBadgeFor(forGoals,againstGoals,label){const gf=num(forGoals),ga=num(againstGoals);if(gf===null||ga===null)return esc(label??`${forGoals}:${againstGoals}`);return `<span class="status ${outcomeClass(gf,ga)}">${esc(label??`${gf}:${ga}`)}</span>`}
@@ -1228,6 +1415,11 @@ TEMPLATE = """<!DOCTYPE html>
       const promoTightMargins=promoRows.filter(r=>safeNum(r.gap_to_third,0)<=2).length;
       const promoSafeMargins=promoRows.filter(r=>safeNum(r.gap_to_third,0)>=4).length;
       const promoBestPpg=[...promoRows].sort((a,b)=>safeNum(b.ppg,0)-safeNum(a.ppg,0))[0];
+      const futureRows=orlik2026RowsVisible();
+      const futureHigh=futureRows.filter(row=>row.threat_level==='wysokie');
+      const futureMustWin=futureRows.filter(row=>safeNum(row.hall.pos,99)>=12);
+      const futureRise=orlik2026ShiftRows().filter(row=>row.shift>0.15).sort((a,b)=>b.shift-a.shift).slice(0,3);
+      const futureBestOrlik=[...futureRows].filter(row=>row.orlik_2025&&row.orlik_2025.ppg!=null).sort((a,b)=>safeNum(b.orlik_2025.ppg,0)-safeNum(a.orlik_2025.ppg,0))[0];
       const note=lines=>`<strong>Wniosek Rozdziału</strong>${lines.map(line=>`<p>${line}</p>`).join('')}`;
       const set=(id,html)=>{const el=document.getElementById(id);if(el)el.innerHTML=html};
       set('overview-note',note([`Aktywny zakres obejmuje ${agg.team.matches} meczów ligowych Bosch w układzie: ${activeRangeLabel()}.`,`W tym zakresie po własnym otwarciu Bosch robi ${prettyNum(agg.state.ppg_when_scoring_first)} ${tip('PPG','PPG')}, a po stracie pierwszej bramki ${prettyNum(agg.state.ppg_when_conceding_first)}.`]));
@@ -1245,6 +1437,14 @@ TEMPLATE = """<!DOCTYPE html>
         promo?`Ofensywnie promowane drużyny też rzadko były skrajnie jednowymiarowe: top3 strzelców dawało średnio ${prettyNum(promo.avg_top3_goal_share,1)}% wszystkich goli. To bliżej modelu szerokiej produkcji niż wejścia opartego wyłącznie na jednym liderze.`:'',
         promo?`Na tle tego benchmarku Bosch w aktywnym zakresie jest ${agg.team.ppg>=promo.avg_ppg?`o ${prettyNum(agg.team.ppg-promo.avg_ppg)} ${tip('PPG','PPG')} powyżej`: `o ${prettyNum(promo.avg_ppg-agg.team.ppg)} ${tip('PPG','PPG')} poniżej`} średniej awansu, ${agg.team.gapg<=promo.avg_ga_pg?`traci o ${prettyNum(promo.avg_ga_pg-agg.team.gapg)} gola mniej na mecz`: `traci o ${prettyNum(agg.team.gapg-promo.avg_ga_pg)} gola więcej na mecz`} i ${agg.close.close_ppg>=promo.avg_close_ppg?`zdobywa średnio o ${prettyNum(agg.close.close_ppg-promo.avg_close_ppg)} ${tip('Pkt/mecz stykowy','Pkt/mecz stykowy')} więcej`: `zdobywa średnio o ${prettyNum(promo.avg_close_ppg-agg.close.close_ppg)} ${tip('Pkt/mecz stykowy','Pkt/mecz stykowy')} mniej`} w meczach stykowych.`:'',
         promoBestPpg?`Najwyższy punktowy sufit w tej próbce dał ${teamLink(promoBestPpg.team_id,promoBestPpg.team_name)} (${seasonTableLink(promoBestPpg.sid,promoBestPpg.season,promoBestPpg.table_title)}) z ${prettyNum(promoBestPpg.ppg)} ${tip('PPG','PPG')}, ale równie ważne jest to, że nawet słabsze awanse zwykle miały czytelny punkt odniesienia: nie można tracić zbyt dużo i trzeba utrzymywać kontakt z top2 przez cały sezon.`:''
+      ].filter(Boolean)));
+      set('orlik2026-note',note([
+        `Prognoza Orlika 2026 zostawia Bosch z ${futureRows.length} rywalami po wyjęciu ${ORLIK2026.excluded_promoted.map(row=>teamLink(row.team_id,row.name)).join(' i ')}. To daje szeroką stawkę, ale z czytelnym podziałem na mecze obowiązkowe, pułapki środka i kilka spotkań naprawdę topowych.`,
+        futureHigh.length?`Najmocniejszy blok tworzą dziś ${futureHigh.map(row=>teamLink(row.team_id,row.team_name)).join(', ')}. To rywale, przeciw którym Bosch nie powinien iść w otwarty mecz bez asekuracji, tylko kontrolować tempo, pilnować rest defense i lepiej zarządzać stratą po własnym ataku.`:'W danych nie ma dziś szerokiego bloku rywali z najwyższym poziomem zagrożenia.',
+        futureRise.length?`Największe ryzyko letniego niedoszacowania mają ${futureRise.map(row=>`${teamLink(row.team_id,row.team_name)} (${row.shift_note})`).join(', ')}, bo ostatni ślad z Orlika 2025 był u nich lepszy niż obecna hala. To ważne: sama tabela hali nie mówi jeszcze całej prawdy o tym, jak ci rywale mogą wyglądać na większej przestrzeni.`:'Ślad z Orlika 2025 nie pokazuje dziś dużej grupy rywali, którzy wyraźnie rosną po wyjściu na otwarte boisko.',
+        futureMustWin.length?`Blok meczów obowiązkowych tworzą przede wszystkim ${futureMustWin.map(row=>teamLink(row.team_id,row.team_name)).join(', ')}. Tu Bosch powinien iść po pełną pulę, ale pod warunkiem szybkiego objęcia kontroli: nie przedłużać remisów, nie dawać przeciwnikowi rosnąć w chaosie i zamykać wynik szybciej niż na hali.`:'Nie widać tu dużego bloku rywali z końca stawki, których można potraktować jako łatwe mecze.',
+        `Przy założeniu powrotu Mateusza Jurkowicza po wakacjach i wejścia trzech nowych jakościowych zawodników Bosch powinien być lepiej przygotowany do dwóch trybów gry: wysokiego, agresywnego pressingu na dół tabeli oraz bardziej cierpliwego, kontrolnego meczu na zespoły z topu. Największy zysk nie musi wcale przyjść z samego wzrostu jakości piłkarskiej, tylko z lepszego dopasowania planu do klasy rywala.`,
+        futureBestOrlik?`Jeśli Bosch ma realnie myśleć o mocnym Orliku 2026, punkt odniesienia jest prosty: trzeba wejść co najmniej na poziom rywali takich jak ${teamLink(futureBestOrlik.team_id,futureBestOrlik.team_name)}, którzy już na ostatnim orliku dawali ${prettyNum(futureBestOrlik.orlik_2025.ppg)} ${tip('PPG','PPG')}. To nie oznacza, że każdy mecz ma wyglądać widowiskowo; ważniejsze jest to, by dolny blok brać seryjnie, a z górnym regularnie zbierać punkty zamiast pojedynczych zrywów.`:''
       ].filter(Boolean)));
       set('video-note',note([`Dla zakresu ${activeRangeLabel()} pokrycie wideo wynosi ${prettyNum(agg.video.coverage_pct,1)}% i obejmuje ${agg.video.matches_with_video} z ${agg.video.matches_total} meczów.`,`To pozwala porównywać nie tylko jeden sezon, ale też całe pakiety typu same hale albo pełny rok.`]));
       set('recommendations-note',note([`Rekomendacje na dole nadal są planem działania pod awans, ale filtry pozwalają teraz sprawdzić, które problemy wracają w różnych blokach sezonów.`,`Dzięki temu można oddzielić problem strukturalny od jednorazowego gorszego sezonu.`]));
@@ -1281,6 +1481,7 @@ TEMPLATE = """<!DOCTYPE html>
       table('promotion-player-table',[{key:'season',label:'Sezon',render:r=>seasonTableLink(r.sid,r.season,(PROMO.promotions.find(x=>x.sid===r.sid&&x.team_id===r.team_id)?.table_title)||r.season)},{key:'team_name',label:'Drużyna',render:r=>teamLink(r.team_id,r.team_name)},{key:'name',label:'Zawodnik',render:r=>playerLinkFromRow(r)},{key:'apps',label:'M'},{key:'goals',label:'G'},{key:'assists',label:'A'},{key:'points',label:'G+A'},{key:'points_per_match',label:'G+A/M',render:r=>prettyNum(r.points_per_match)},{key:'motm',label:'MVP'}],()=>promotionPlayerRowsActive(),{defaultSort:'points',scroller:true});
       table('promotion-history-table',[{key:'promotion_team',label:'Drużyna awansująca',render:r=>teamLink(r.team_id,r.promotion_team)},{key:'promotion_season',label:'Sezon awansu',render:r=>seasonTableLink(r.sid,r.promotion_season,(PROMO.promotions.find(x=>x.sid===r.sid&&x.team_id===r.team_id)?.table_title)||r.promotion_season)},{key:'table_title',label:'Tabela historyczna',render:r=>tableLinkById(r.table_id,r.table_title)},{key:'pos',label:'Poz. w tej tabeli',labelHtml:tip('Poz. w tej tabeli','Poz. w tej tabeli'),render:r=>rankTag(r.pos)},{key:'points',label:'Pkt'},{key:'ppg',label:'PPG',render:r=>prettyNum(r.ppg)},{key:'goals',label:'Gole',render:r=>`${r.gf}:${r.ga}`},{key:'post_flag',label:'Ślad po awansie',labelHtml:tip('Ślad po awansie','Ślad po awansie'),render:r=>r.post_flag?'<span class="tag teal">pierwszy ślad</span>':'-'}],()=>promotionHistoryRowsActive(),{season:false,defaultSort:'season_id',defaultDir:'asc',scroller:true});
       table('promotion-match-table',[{key:'season',label:'Sezon',render:r=>seasonTableLink(r.sid,r.season,(PROMO.promotions.find(x=>x.sid===r.sid&&x.team_id===r.team_id)?.table_title)||r.season)},{key:'team_name',label:'Drużyna',render:r=>teamLink(r.team_id,r.team_name)},{key:'date',label:'Data',render:r=>formatDate(r.date),sort:r=>r.date},{key:'match',label:'Mecz',render:r=>matchLink(r)},{key:'score',label:'Wynik',render:r=>scoreBadgeFor(r.gf,r.ga,`${r.gf}:${r.ga}`)},{key:'result',label:'Rezultat',render:r=>resultBadge(r),sort:r=>r.margin},{key:'halftime',label:'HT',render:r=>halftimeScoreBadge(r.ht_for,r.ht_against)},{key:'event_link',label:'Link',render:r=>eventLink(r.event_link)}],()=>promotionMatchRowsActive(),{defaultSort:'date',defaultDir:'desc',scroller:true});
+      table('orlik2026-table',[{key:'team_name',label:'Drużyna',render:r=>teamLink(r.team_id,r.team_name)},{key:'hall_pos',label:'Hala 25/26',render:r=>rankTag(r.hall.pos),sort:r=>r.hall.pos},{key:'hall_ppg',label:'PPG hala',render:r=>prettyNum(r.hall.ppg),sort:r=>r.hall.ppg},{key:'orlik_2025',label:'Orlik 2025',render:r=>orlik2026TableCell(r),sort:r=>r.orlik_2025?r.orlik_2025.ppg:-1},{key:'bosch_hall_match',label:'Bosch na hali',render:r=>orlik2026HallCell(r),sort:r=>r.bosch_hall_match?r.bosch_hall_match.margin:-99},{key:'bosch_orlik_match',label:'Bosch na orliku',render:r=>orlik2026MatchCell(r.bosch_orlik_match,'ostatni mecz orlika Bosch'),sort:r=>r.bosch_orlik_match?(r.bosch_orlik_match.gf-r.bosch_orlik_match.ga):-99},{key:'leader',label:'Lider hali',render:r=>orlik2026LeaderLine(r,'hall'),sort:r=>orlik2026Leader(r,0,'hall')?.points??-1},{key:'close_ppg',label:'Pkt/mecz stykowy',labelHtml:tip('Pkt/mecz stykowy','Pkt/mecz stykowy'),render:r=>prettyNum(r.hall.close_ppg),sort:r=>r.hall.close_ppg},{key:'threat_level',label:'Poziom zagrożenia',labelHtml:tip('Poziom zagrożenia','Poziom zagrożenia'),render:r=>`<span class="tag ${orlik2026ThreatClass(r.threat_level)}">${esc(r.threat_level)}</span>`,sort:r=>r.threat_score},{key:'plan',label:'Najkrótszy plan',render:r=>esc((r.scouting.bosch_plan||[])[0]||r.scouting.summary)}],()=>orlik2026RowsActive(),{season:false,video:false,defaultSort:'threat_level',scroller:true});
       table('video-season-table',[{key:'season',label:'Sezon',render:r=>seasonTableLink(r.sid,r.season,seasonMetaMap.get(String(r.sid))?.table_title||r.season)},{key:'matches_total',label:'Mecze'},{key:'matches_with_video',label:'Z materiałem'},{key:'coverage_pct',label:'Pokrycie %'},{key:'minutes',label:'Minuty'},{key:'full_matches',label:'Pełne 2 połowy'}],()=>VIDEO.season_rows,{defaultSort:'sid',defaultDir:'asc'});
       table('recommended-table',[{key:'reason',label:'Powód'},{key:'season',label:'Sezon',render:r=>seasonTableLink(r.sid,r.season,seasonMetaMap.get(String(r.sid))?.table_title||r.season)},{key:'date',label:'Data'},{key:'display_opponent',label:'Rywal',render:r=>teamLink(r.opponent_id,r.display_opponent||r.opponent)},{key:'score',label:'Wynik',render:r=>scoreBadgeFor(r.gf,r.ga,`${r.gf}:${r.ga}`)},{key:'watch',label:'Linki',render:r=>[eventLink(r.event_link),...(r.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer">${esc(l.segment)}</a>`)].join('<br>')}],()=>VIDEO.recommended_rows.map(x=>({...x.match,reason:x.reason})),{defaultSort:'date'});
       table('matched-table',[{key:'date',label:'Data'},{key:'season',label:'Sezon',render:r=>seasonTableLink(r.sid,r.season,seasonMetaMap.get(String(r.sid))?.table_title||r.season)},{key:'display_opponent',label:'Rywal',render:r=>teamLink(r.opponent_id,r.display_opponent||r.opponent)},{key:'score',label:'Wynik',render:r=>scoreBadgeFor(r.gf,r.ga,`${r.gf}:${r.ga}`)},{key:'coverage_type',label:'Pokrycie'},{key:'duration_minutes',label:'Minuty'},{key:'watch',label:'Linki',render:r=>[eventLink(r.event_link),...(r.links||[]).map(l=>`<a href="${l.url}" target="_blank" rel="noreferrer">${esc(l.segment)} | ${esc(l.channel_handle)}</a>`)].join('<br>')}],()=>VIDEO.matched_rows,{defaultSort:'date'});
@@ -1289,7 +1490,7 @@ TEMPLATE = """<!DOCTYPE html>
       table('unmatched-table',[{key:'channel_name',label:'Kanał'},{key:'title',label:'Tytuł'},{key:'publish_date',label:'Data',render:r=>formatDate(r.publish_date),sort:r=>r.publish_date},{key:'duration_text',label:'Długość'},{key:'view_count',label:'Wyświetlenia'},{key:'url',label:'Link',render:r=>`<a href="${r.url}" target="_blank" rel="noreferrer">otwórz</a>`}],()=>VIDEO.unmatched_rows,{season:false,defaultSort:'publish_date',defaultDir:'desc',scroller:true});
     }
     function meta(){document.getElementById('season-meta').textContent=`Aktywny zakres: ${activeRangeLabel()}`}
-    function refresh(){summary();seasonCards();currentPlayers();renderRecommendations();renderPromotionSummary();renderPromotionCards();hero();bars('points-chart',REPORT.season_rows,'season','points','#1d4ed8');bars('ppg-chart',REPORT.season_rows,'season','ppg','#0f766e');bars('first-goal-chart',REPORT.state_rows,'season','first_goal_share','#0f766e','%');bars('video-chart',VIDEO.season_rows,'season','coverage_pct','#ea580c','%');barList('promotion-ppg-chart',promotionRowsActive(),'team_name','ppg','#1d4ed8',{subLabelKey:'season',decimals:2});barList('promotion-gap-chart',promotionRowsActive(),'team_name','gap_to_third','#0f766e',{subLabelKey:'season',decimals:0});barList('promotion-defense-chart',promotionRowsActive().map(r=>({...r,ga_pg:Number((r.ga/Math.max(1,r.matches)).toFixed(2))})),'team_name','ga_pg','#ea580c',{subLabelKey:'season',decimals:2});barList('promotion-close-chart',promotionRowsActive(),'team_name','close_ppg','#0f766e',{subLabelKey:'season',decimals:2});distribution('timing-all-chart',REPORT.goal_timing_all,'#1d4ed8');distribution('timing-current-chart',REPORT.goal_timing_current,'#0f766e');comparisonChart();surfaceChart();renderNotes();meta();renderers.forEach(fn=>fn())}
+    function refresh(){summary();seasonCards();currentPlayers();renderRecommendations();renderPromotionSummary();renderPromotionCards();renderOrlik2026Summary();renderOrlik2026Lists();renderOrlik2026Cards();hero();bars('points-chart',REPORT.season_rows,'season','points','#1d4ed8');bars('ppg-chart',REPORT.season_rows,'season','ppg','#0f766e');bars('first-goal-chart',REPORT.state_rows,'season','first_goal_share','#0f766e','%');bars('video-chart',VIDEO.season_rows,'season','coverage_pct','#ea580c','%');barList('promotion-ppg-chart',promotionRowsActive(),'team_name','ppg','#1d4ed8',{subLabelKey:'season',decimals:2});barList('promotion-gap-chart',promotionRowsActive(),'team_name','gap_to_third','#0f766e',{subLabelKey:'season',decimals:0});barList('promotion-defense-chart',promotionRowsActive().map(r=>({...r,ga_pg:Number((r.ga/Math.max(1,r.matches)).toFixed(2))})),'team_name','ga_pg','#ea580c',{subLabelKey:'season',decimals:2});barList('promotion-close-chart',promotionRowsActive(),'team_name','close_ppg','#0f766e',{subLabelKey:'season',decimals:2});barList('orlik2026-threat-chart',orlik2026RowsVisible().map(r=>({...r,threat_sub:`hala ${r.hall.pos}. | ${prettyNum(r.hall.ppg)} PPG`})),'team_name','threat_score','#1d4ed8',{season:false,subLabelKey:'threat_sub',decimals:2});barList('orlik2026-shift-chart',orlik2026ShiftRows().sort((a,b)=>safeNum(b.orlik_ppg,0)-safeNum(a.orlik_ppg,0)),'team_name','orlik_ppg','#0f766e',{season:false,subLabelKey:'shift_note',decimals:2});distribution('timing-all-chart',REPORT.goal_timing_all,'#1d4ed8');distribution('timing-current-chart',REPORT.goal_timing_current,'#0f766e');comparisonChart();surfaceChart();renderNotes();meta();renderers.forEach(fn=>fn())}
     hero();bindControls();initTooltips();initToolbar();initResponsiveCharts();register();sync();refresh();
   </script>
 </body>
@@ -1301,12 +1502,14 @@ def build_site() -> Path:
     report = json.loads(REPORT_PATH.read_text(encoding="utf-8"))
     video = json.loads(VIDEO_PATH.read_text(encoding="utf-8"))
     promo = json.loads(PROMO_PATH.read_text(encoding="utf-8"))
+    orlik2026 = json.loads(ORLIK2026_PATH.read_text(encoding="utf-8"))
     profiles = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
-    reference = build_reference_map(report, video, promo)
+    reference = build_reference_map(report, video, promo, orlik2026)
     REFERENCE_PATH.write_text(json.dumps(reference, ensure_ascii=False, indent=2), encoding="utf-8")
     html = TEMPLATE.replace("__REPORT_JSON__", json.dumps(report, ensure_ascii=False).replace("</", "<\\/"))
     html = html.replace("__VIDEO_JSON__", json.dumps(video, ensure_ascii=False).replace("</", "<\\/"))
     html = html.replace("__PROMO_JSON__", json.dumps(promo, ensure_ascii=False).replace("</", "<\\/"))
+    html = html.replace("__ORLIK2026_JSON__", json.dumps(orlik2026, ensure_ascii=False).replace("</", "<\\/"))
     html = html.replace("__PROFILE_JSON__", json.dumps(profiles, ensure_ascii=False).replace("</", "<\\/"))
     html = html.replace("__REFERENCE_JSON__", json.dumps(reference, ensure_ascii=False).replace("</", "<\\/"))
     OUT_PATH.write_text(html, encoding="utf-8")
