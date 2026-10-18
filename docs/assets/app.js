@@ -84,6 +84,14 @@ function seasonStatisticsSource(record){
         return "Potwierdzony udział, brak statystyk";
     }
 
+    if(record?.origin==="plp_match_minimum"){
+        return "Oficjalny protokół PLP — potwierdzone minimum";
+    }
+
+    if(record?.origin==="plp_public_season"){
+        return "PLP — oficjalny profil sezonowy";
+    }
+
     if(record?.origin==="PLP public all-career table"){
         return "Tabela kariery PLP";
     }
@@ -101,7 +109,7 @@ function playerDetail(id){
     const seasonRows=(player.season_history||[]).map(record=>[
         e(record.name),
         e(record.apps??"—"),
-        e(record.goals??"—"),
+        record.origin==="plp_match_minimum"&&Number.isInteger(record.goals)?"≥ "+e(record.goals):e(record.goals??"—"),
         e(record.assists??"—"),
         Number.isInteger(record.goals)&&Number.isInteger(record.assists)?e(record.goals+record.assists):"—",
         e(seasonStatisticsSource(record))
@@ -141,7 +149,7 @@ function playerDetail(id){
     ):"";
 
     return headline(player.name,player.status||"Zawodnik Bosch Service Tech-Car")+
-        metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["MVP Boscha",player.motm??"—"]])+
+        metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
         (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
@@ -202,14 +210,33 @@ function records(){
             .slice(0,10);
         return section(heading,ranked.length?table(["#","Zawodnik","Wynik","Źródło"],ranked.map((row,index)=>[
             e(index+1),playerLink(row.player),fmt(row.value,precision),
-            e(row.player.bosch_totals?"Sezony PLP":"Archiwum niepełne")
+            e(row.player.stats_minimum?"Potwierdzone minimum — protokół PLP":row.player.bosch_totals?"Sezony PLP":"Archiwum niepełne")
         ])):empty("Brak statystyk dostępnych dla tej kategorii."));
     }).join("");
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);
     const offensive=matches.slice().sort((a,b)=>b.gf-a.gf).slice(0,10);
     const goalCoverage=DB.analysis?.player_goal_coverage||[];
-    const missing=goalCoverage.reduce((sum,row)=>sum+(row.unattributed_goals||0),0);
-    const audit=section("Kontrola kompletności strzelców",'<div class="notice">Różnica między golami drużyny a golami przypisanymi w dostępnych rekordach: '+e(missing)+'. Mogą to być nieopisani strzelcy, gole samobójcze lub brakujące protokoły — bez weryfikacji nie przypisujemy ich nikomu.</div>'+table(["Sezon","Gole drużyny","Przypisane","Niewyjaśnione"],goalCoverage.map(row=>[e(row.season),e(row.team_goals),e(row.attributed_goals),e(row.unattributed_goals)])));
+    const totalUnexplained=goalCoverage.reduce((total,entry)=>total+(entry.unattributed_goals||0),0);
+    const totalAdministrative=goalCoverage.reduce((total,entry)=>total+(entry.administrative_goals||0),0);
+    const administrativeLinks=goalCoverage.flatMap(entry=>(entry.administrative_events||[]).map(event=>
+        '<a href="'+e(event.source_url)+'" target="_blank" rel="noopener noreferrer">'+e(entry.season)+' — '+e(event.opponent)+' ('+e(event.goals)+' gol administracyjny)</a>'
+    ));
+    const auditDetails='<div class="notice">Gole drużyny rozliczamy jako gole przypisane zawodnikom + gole wynikające z decyzji administracyjnych + różnicę wymagającą dalszej weryfikacji. '+
+        'Potwierdzonych bramek administracyjnych: <strong>'+e(totalAdministrative)+'</strong>. '+
+        'Pozostała różnica: <strong>'+e(totalUnexplained)+'</strong>. '+
+        'Pozostałe gole mogą wynikać z samobójów, brakujących protokołów lub pominiętych zawodników; bez dowodu nie przypisujemy ich konkretnym osobom.</div>';
+    const auditedRows=goalCoverage.map(entry=>[
+        e(entry.season),
+        e(entry.team_goals),
+        e(entry.attributed_goals),
+        e(entry.administrative_goals||0),
+        e(entry.unattributed_goals)
+    ]);
+    const audit=section("Kontrola kompletności strzelców",
+        auditDetails+
+        table(["Sezon","Bramki drużyny","Gole zawodników","Administracyjne","Do wyjaśnienia"],auditedRows)+
+        (administrativeLinks.length?'<p class="small">Źródła korekt: '+administrativeLinks.join(" • ")+'</p>':"")
+    );
     const seasonal=section("Rekordy sezonowe",table(["Sezon","Miejsce","Punkty","PPG","Bramki","Gole/mecz","Stracone/mecz"],seasons.slice().sort((a,b)=>b.points-a.points).map(seasonRow=>[seasonLink(seasonRow),e(seasonRow.position??"—"),e(seasonRow.points),ppg(seasonRow),e(seasonRow.gf+":"+seasonRow.ga),fmt(seasonRow.gf/seasonRow.matches),fmt(seasonRow.ga/seasonRow.matches)])));
     return headline("Rekordy Boscha","Strzelcy, asysty, kanadyjka, kartki, MVP, występy, skuteczność, mecze i sezony — z kontrolą jakości źródeł.")+
         sourceNote+
