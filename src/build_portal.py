@@ -351,6 +351,9 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum"}:
+                verified_stats["origin"] = stats["origin"]
+
             if canonical_id == SEASON_2026:
                 verified_stats = latest_orlik(player.get("recap2026"), verified_stats)
                 player["orlik2026"] = verified_stats
@@ -420,6 +423,11 @@ def main() -> None:
 
         if player.get("stats_minimum") and not calculated:
             player["stats_source"] = "Protokół PLP — potwierdzone minimum, niepełne dane sezonu"
+        elif any(
+            stats.get("origin") == "plp_public_season"
+            for stats in verified_seasons.values()
+        ):
+            player["stats_source"] = "PLP — publiczny profil i statystyki sezonowe"
 
     archive_rows = archived_bosch_seasons(
         promotions,
