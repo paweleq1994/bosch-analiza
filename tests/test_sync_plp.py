@@ -52,6 +52,13 @@ class SynchronizationTests(unittest.TestCase):
         self.assertEqual(new["season_rows"][0]["id"], "orlik-2026")
         self.assertEqual(new["matches"][0]["id"], "orlik26-1")
 
+    def test_canonical_season_wins_over_old_plp_alias(self):
+        known = [
+            {"id": "orlik-2026", "name": "Orlik 2026"},
+            {"id": "148", "plp_id": "148", "name": "2. LIGA – Orlik’26"},
+        ]
+        self.assertEqual(sync.season_id_for(148, "2. LIGA – Orlik’26", known), "orlik-2026")
+
     def test_repeat_is_idempotent(self):
         args=({"seasons":[234]},lambda _:table(1,1,0,0,2,1,3),lambda _:[match(901,"2026-04-19",2,1)])
         first,_,_=sync.synchronize(*args,{},KNOWN,LEGACY,{})
