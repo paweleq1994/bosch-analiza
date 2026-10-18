@@ -61,6 +61,7 @@ def main() -> None:
     scouting = load("orlik_2026_opponents.json")
     videos_extra = load("video_updates.json", {"videos": [], "manual_bindings": {}})
     league_extra = load("league_updates.json", {"matches": []})
+    player_seasons_extra = load("player_season_updates.json", {})
 
     seasons = [
         {
@@ -258,6 +259,21 @@ def main() -> None:
                 "url": video.get("url", ""), "segment": video.get("segment", ""),
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),
             })
+
+    # Official player-season statistics are grouped by SportsPress league and
+    # season. Restrict to Bosch in the source importer, then remap 148 to
+    # the established public Orlik 2026 ID.
+    for player in historic_players:
+        details = player_seasons_extra.get(str(player["id"])) or {}
+        for season_id, stats in details.items():
+            canonical_id = SEASON_2026 if season_id == "148" else str(season_id)
+            player.setdefault("season_stats", {})[canonical_id] = {
+                key:stats.get(key) for key in ("apps","goals","assists","motm","yellow","red")
+            }
+            if canonical_id == SEASON_2026:
+                player["orlik2026"] = player["season_stats"][canonical_id]
+            elif canonical_id == "146":
+                player["hala2526"] = player["season_stats"][canonical_id]
 
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
