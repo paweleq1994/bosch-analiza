@@ -42,6 +42,8 @@ jobs:
         run: node tests/frontend_all_tables_sort.cjs
       - name: Check every archived player season in the frontend
         run: node tests/frontend_archived_player_seasons.cjs
+      - name: Verify sourced scorer reconciliation and walkover UI
+        run: node tests/frontend_goal_reconciliation.cjs
       - name: Check required portal paths
         run: |
           test -s docs/index.html
