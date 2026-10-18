@@ -37,7 +37,7 @@ def person_key(value: str) -> str:
 
 def match_row(row: dict) -> dict:
     return {
-        "id": str(row.get("event_id") or row.get("id") or ""),
+        "id": str(row.get("id") or row.get("event_id") or ""),
         "sid": str(row.get("sid") or ""),
         "season": row.get("season") or "",
         "date": str(row.get("date") or "")[:10],
