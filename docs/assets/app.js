@@ -24,6 +24,74 @@ const matchLink=m=>href("match/"+encodeURIComponent(m.id),m.opponent);
 const winner=m=>'<strong class="'+resultClass(m)+'">'+e(m.gf+":"+m.ga)+'</strong>';
 function matchList(matches,limit=0){const list=matches.slice().sort((a,b)=>b.date.localeCompare(a.date));return list.slice(0,limit||list.length).map(m=>'<div class="list-row"><div><div class="small">'+e(m.date)+' • '+href("season/"+encodeURIComponent(m.sid),m.season)+'</div>'+matchLink(m)+'</div>'+winner(m)+'</div>').join("")||empty("Brak spotkań w wybranym zakresie.")}
 function barChart(rows,key,label){const max=Math.max(1,...rows.map(x=>Number(x[key])||0));return '<div class="card bar-chart">'+rows.map(s=>'<div class="bar-row"><span>'+e(s.name)+'</span><div class="bar-track"><span style="width:'+Math.max(0,Math.min(100,(Number(s[key])||0)/max*100))+'%"></span></div><b>'+e(label?label(s):fmt(s[key]))+'</b></div>').join("")+'</div>';}
+function goalMinutes(scorer){
+    if(scorer.minute_uncertain){
+        return "Minuta nieczytelna w PLP";
+    }
+
+    return scorer.minutes.length?scorer.minutes.map(minute=>e(minute)+"′").join(", "):"—";
+}
+
+function goalScorerLinks(match,maximum=0){
+    const scorers=match.goal_protocol?.scorers||[];
+    const chosen=maximum?scorers.slice(0,maximum):scorers;
+    const labels=chosen.map(scorer=>href("player/"+encodeURIComponent(scorer.player_id),scorer.name)+(scorer.goals>1?" ×"+e(scorer.goals):""));
+
+    if(scorers.length>chosen.length){
+        labels.push("+"+(scorers.length-chosen.length));
+    }
+
+    return labels.join(" · ")||(match.goal_protocol?.own_goals?"Gol samobójczy rywala":"Brak goli zawodników");
+}
+
+function goalMatchTable(match){
+    const protocol=match.goal_protocol;
+
+    if(!protocol){
+        return empty("Brak dostępnego protokołu.");
+    }
+
+    const rows=protocol.scorers.map(scorer=>[
+        href("player/"+encodeURIComponent(scorer.player_id),scorer.name),
+        e(scorer.goals),
+        goalMinutes(scorer),
+        '<a target="_blank" rel="noopener noreferrer" href="'+e(protocol.source_url)+'">Protokół PLP ↗</a>'
+    ]);
+    const own=protocol.own_goals?'<div class="notice">Gole samobójcze rywali: <strong>'+e(protocol.own_goals)+'</strong>.</div>':"";
+    const administrative=protocol.administrative_goals?'<div class="notice">Gole przyznane administracyjnie: <strong>'+e(protocol.administrative_goals)+'</strong>. Nie są dopisywane zawodnikom.</div>':"";
+    const minutes=protocol.minute_uncertainties?'<div class="notice">Jedno oznaczenie gola PLP nie ma czytelnej minuty. Nazwisko strzelca pozostaje potwierdzone.</div>':"";
+
+    return (rows.length?table(["Zawodnik","Gole","Minuty","Źródło"],rows):empty("Brak indywidualnych goli Boscha."))+own+administrative+minutes;
+}
+
+function goalMatchRows(matches){
+    return matches.map(match=>{
+        const protocol=match.goal_protocol||{scorers:[],own_goals:0,administrative_goals:0};
+
+        return [
+            e(match.date),
+            matchLink(match),
+            winner(match),
+            e(match.season),
+            goalScorerLinks(match),
+            e(protocol.own_goals||0),
+            e(protocol.administrative_goals||0),
+            '<a href="'+e(match.event_link)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
+        ];
+    });
+}
+
+function goalsArchive(){
+    const coverage=DB.analysis?.player_goal_coverage||[];
+    const sum=field=>coverage.reduce((total,record)=>total+(record[field]||0),0);
+
+    return headline("Gole i protokoły PLP","113 historycznych meczów ze strzelcami, minutami i oficjalnymi źródłami.")+
+        metrics([["Mecze",DB.matches.length],["Gole drużyny",sum("team_goals")],["Gole zawodników",sum("attributed_goals")],["Samobóje rywali",sum("opponent_own_goals")],["Administracyjne",sum("administrative_goals")]])+
+        '<div class="notice">Każdy mecz posiada oryginalny link PLP. Jedna minuta gola w spotkaniu z VESTA jest nieczytelna w źródle.</div>'+
+        filterInput("Data, rywal, zawodnik lub wynik…")+
+        '<div id="filtered-goals"></div>';
+}
+
 function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.filter(p=>p.orlik2026).sort((a,b)=>(b.orlik2026.goals+b.orlik2026.assists)-(a.orlik2026.goals+a.orlik2026.assists)).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy Orlika 2026",'<div class="card">'+leaders.map(p=>'<div class="list-row">'+playerLink(p)+'<strong>'+e(p.orlik2026.goals+p.orlik2026.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz pełną analizę Orlika 2026"],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
 function seasons(){return headline("Sezony","Wszystkie rozgrywki Boscha i porównanie ich wyników.")+metrics([["Sezonów",DB.seasons.length],["Łącznie spotkań",DB.seasons.reduce((n,s)=>n+s.matches,0)],["Najwięcej punktów",Math.max(...DB.seasons.map(s=>s.points))]])+section("Historia sezonów",cards(DB.seasons.slice().reverse().map(s=>'<span class="eyebrow">'+(normalized(s.name).includes("hala")?"HALA":"ORLIK")+'</span><h3>'+seasonLink(s)+'</h3><div class="row"><span>'+e(s.position)+'. miejsce</span><strong>'+e(s.points)+' pkt</strong></div><p>'+e(s.wins+"W "+s.draws+"R "+s.losses+"P • "+s.gf+":"+s.ga+" • "+ppg(s)+" PPG")+'</p>')))+section("Porównanie punktów",barChart(DB.seasons,"points",s=>String(s.points)));}
 function seasonPage(id){
