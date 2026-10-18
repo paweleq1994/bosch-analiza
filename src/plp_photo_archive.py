@@ -58,7 +58,7 @@ def download(photo,folder):
     if not target.exists():target.write_bytes(payload)
     photo["local"]="media/"+filename
 
-def sync(previous, player_ids,fetch=get, downloader=download):
+def sync(previous, player_ids,fetch=get, downloader=download, discovered=None):
     subjects={ (s["kind"],str(s["id"])):s for s in previous.get("subjects",[]) }
     errors=[]
     for kind,ident in [("teams","6951")]+[("players",str(p)) for p in player_ids if str(p).isdigit()]:
@@ -75,13 +75,41 @@ def sync(previous, player_ids,fetch=get, downloader=download):
             subjects[key]={"kind":kind,"id":ident,"photos":list(old.values())}
         except Exception as exc:
             errors.append(f"{kind}/{ident}: {type(exc).__name__}: {exc}")
-    return {"subjects":list(subjects.values()),"notes":"Public PLP media attached to team and player profiles; deleted, detached or replaced historic files may not be available."},errors
+    eligible_ids = {str(player_id) for player_id in player_ids if str(player_id).isdigit()}
+    for entry in (discovered or {}).get("matches", []):
+        player_id = str(entry.get("player_id") or "")
+        photo = dict(entry.get("photo") or {})
+        media_id = str(photo.get("id") or "")
+
+        if player_id not in eligible_ids or not media_id.isdigit() or not valid(photo.get("url")):
+            continue
+
+        subject = subjects.setdefault(
+            ("players", player_id),
+            {"kind": "players", "id": player_id, "photos": []},
+        )
+
+        if any(str(existing.get("id")) == media_id for existing in subject["photos"]):
+            continue
+
+        photo["origin"] = "public_archive_exact_metadata"
+        photo["evidence"] = str(entry.get("evidence") or "")
+
+        try:
+            downloader(photo, ROOT / "docs/media")
+            subject["photos"].append(photo)
+        except Exception as error:
+            errors.append(f"Detached media {player_id}/{media_id}: {type(error).__name__}: {error}")
+
+    return {"subjects":list(subjects.values()),"notes":"Public PLP media attached to team/player profiles and uniquely matched detached WordPress media. Caption-only mentions are not treated as confirmed portraits."},errors
 
 def main():
     previous=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {"subjects":[]}
     portal=json.loads((ROOT/"docs/assets/data.json").read_text(encoding="utf-8"))
     players=[p["id"] for p in portal["players"] if str(p["id"]).isdigit()]
-    result,errors=sync(previous,players)
+    discovery_path=ROOT/"data/media_discovery.json"
+    discovered=json.loads(discovery_path.read_text(encoding="utf-8")) if discovery_path.exists() else {}
+    result,errors=sync(previous,players,discovered=discovered)
     if errors:
         print("PLP photo warnings:",len(errors),file=sys.stderr)
         for err in errors[:8]:print(err,file=sys.stderr)
