@@ -113,9 +113,9 @@
       "origin": "plp_sync"
     },
     {
-      "id": "148",
+      "id": "orlik-2026",
       "plp_id": "148",
-      "name": "2. LIGA – Orlik’26",
+      "name": "Orlik 2026",
       "position": 2,
       "points": 35,
       "matches": 15,
@@ -2264,11 +2264,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13289",
+      "id": "orlik26-1",
       "event_id": "13289",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-04-19",
       "opponent_id": 1566,
       "opponent": "IST Trade",
@@ -2281,11 +2281,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13292",
+      "id": "orlik26-2",
       "event_id": "13292",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-04-25",
       "opponent_id": 11753,
       "opponent": "Żubry Bema",
@@ -2298,11 +2298,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13306",
+      "id": "orlik26-3",
       "event_id": "13306",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-05-10",
       "opponent_id": 10768,
       "opponent": "Zachodnia Kingdom",
@@ -2315,11 +2315,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13309",
+      "id": "orlik26-4",
       "event_id": "13309",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-05-16",
       "opponent_id": 13116,
       "opponent": "Zachodzący Mistrzowie",
@@ -2332,11 +2332,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13321",
+      "id": "orlik26-5",
       "event_id": "13321",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-05-24",
       "opponent_id": 10769,
       "opponent": "OST Sport",
@@ -2349,11 +2349,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13331",
+      "id": "orlik26-6",
       "event_id": "13331",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-05-30",
       "opponent_id": 10770,
       "opponent": "Zimne Dranie",
@@ -2366,11 +2366,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13336",
+      "id": "orlik26-7",
       "event_id": "13336",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-06-13",
       "opponent_id": 12342,
       "opponent": "Biuro Serwis-Kopiarki",
@@ -2383,11 +2383,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13346",
+      "id": "orlik26-8",
       "event_id": "13346",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-06-21",
       "opponent_id": 4382,
       "opponent": "Auto Team",
@@ -2400,11 +2400,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13494",
+      "id": "orlik26-9",
       "event_id": "13494",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-09-05",
       "opponent_id": 13115,
       "opponent": "Ludki Białystok",
@@ -2417,11 +2417,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13553",
+      "id": "orlik26-10",
       "event_id": "13553",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-09-13",
       "opponent_id": 8195,
       "opponent": "Waleczne Orły",
@@ -2434,11 +2434,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13566",
+      "id": "orlik26-11",
       "event_id": "13566",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-09-19",
       "opponent_id": 5920,
       "opponent": "Mają Rozmach",
@@ -2451,11 +2451,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13572",
+      "id": "orlik26-12",
       "event_id": "13572",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-09-27",
       "opponent_id": 8196,
       "opponent": "OSMAR",
@@ -2468,11 +2468,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13576",
+      "id": "orlik26-13",
       "event_id": "13576",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-10-03",
       "opponent_id": 8193,
       "opponent": "UNIBEP S.A.",
@@ -2485,11 +2485,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13586",
+      "id": "orlik26-14",
       "event_id": "13586",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-10-11",
       "opponent_id": 6984,
       "opponent": "FC Progress Białystok",
@@ -2502,11 +2502,11 @@
       "player_stats_complete": false
     },
     {
-      "id": "13593",
+      "id": "orlik26-15",
       "event_id": "13593",
-      "sid": "148",
+      "sid": "orlik-2026",
       "plp_season_id": "148",
-      "season": "2. LIGA – Orlik’26",
+      "season": "Orlik 2026",
       "date": "2026-10-17",
       "opponent_id": 11754,
       "opponent": "Juan Pablo Białystok",

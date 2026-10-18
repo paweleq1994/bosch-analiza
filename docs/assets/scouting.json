@@ -660,17 +660,11 @@
       ],
       "player_stats_verified": false,
       "h2h": {
-        "games": 2,
+        "games": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 2,
+        "losses": 1,
         "matches": [
-          {
-            "date": "2026-06-13",
-            "gf": 1,
-            "ga": 3,
-            "id": "13336"
-          },
           {
             "date": "2026-06-13",
             "gf": 1,
@@ -1317,10 +1311,10 @@
       ],
       "player_stats_verified": false,
       "h2h": {
-        "games": 5,
+        "games": 4,
         "wins": 0,
         "draws": 0,
-        "losses": 5,
+        "losses": 4,
         "matches": [
           {
             "date": "2025-02-16",
@@ -1339,12 +1333,6 @@
             "gf": 1,
             "ga": 5,
             "id": "12631"
-          },
-          {
-            "date": "2026-05-30",
-            "gf": 0,
-            "ga": 1,
-            "id": "13331"
           },
           {
             "date": "2026-05-30",
