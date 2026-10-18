@@ -58,10 +58,15 @@ function goalMatchTable(match){
         '<a target="_blank" rel="noopener noreferrer" href="'+e(protocol.source_url)+'">Protokół PLP ↗</a>'
     ]);
     const own=protocol.own_goals?'<div class="notice">Gole samobójcze rywali: <strong>'+e(protocol.own_goals)+'</strong>.</div>':"";
+    const ownConceded=protocol.own_goals_conceded_scorers?.length
+        ? '<div class="notice">Samobóje zawodników Boscha na korzyść rywali: '+
+            protocol.own_goals_conceded_scorers.map(item=>href("player/"+encodeURIComponent(item.player_id),item.name)).join(", ")+
+            '</div>'
+        : "";
     const administrative=protocol.administrative_goals?'<div class="notice">Gole przyznane administracyjnie: <strong>'+e(protocol.administrative_goals)+'</strong>. Nie są dopisywane zawodnikom.</div>':"";
     const minutes=protocol.minute_uncertainties?'<div class="notice">Jedno oznaczenie gola PLP nie ma czytelnej minuty. Nazwisko strzelca pozostaje potwierdzone.</div>':"";
 
-    return (rows.length?table(["Zawodnik","Gole","Minuty","Źródło"],rows):empty("Brak indywidualnych goli Boscha."))+own+administrative+minutes;
+    return (rows.length?table(["Zawodnik","Gole","Minuty","Źródło"],rows):empty("Brak indywidualnych goli Boscha."))+own+ownConceded+administrative+minutes;
 }
 
 function goalMatchRows(matches){
@@ -75,6 +80,7 @@ function goalMatchRows(matches){
             e(match.season),
             goalScorerLinks(match),
             e(protocol.own_goals||0),
+            e(protocol.own_goals_conceded||0),
             e(protocol.administrative_goals||0),
             '<a href="'+e(match.event_link)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
         ];
@@ -86,7 +92,7 @@ function goalsArchive(){
     const sum=field=>coverage.reduce((total,record)=>total+(record[field]||0),0);
 
     return headline("Gole i protokoły PLP","113 historycznych meczów ze strzelcami, minutami i oficjalnymi źródłami.")+
-        metrics([["Mecze",DB.matches.length],["Gole drużyny",sum("team_goals")],["Gole zawodników",sum("attributed_goals")],["Samobóje rywali",sum("opponent_own_goals")],["Administracyjne",sum("administrative_goals")]])+
+        metrics([["Mecze",DB.matches.length],["Gole drużyny",sum("team_goals")],["Gole zawodników",sum("attributed_goals")],["Samobóje rywali",sum("opponent_own_goals")],["Samobóje Boscha",DB.analysis?.match_protocol_audit?.total_own_goals_conceded||0],["Administracyjne",sum("administrative_goals")]])+
         '<div class="notice">Każdy mecz posiada oryginalny link PLP. Jedna minuta gola w spotkaniu z VESTA jest nieczytelna w źródle.</div>'+
         filterInput("Data, rywal, zawodnik lub wynik…")+
         '<div id="filtered-goals"></div>';
@@ -130,7 +136,7 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
-        section("Gole i protokoły wszystkich meczów",table(["Data","Mecz","Wynik","Sezon","Strzelcy","Samobóje rywali","Administracyjne","PLP"],goalMatchRows(matches)))+
+        section("Gole i protokoły wszystkich meczów",table(["Data","Mecz","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(matches)))+
         section("Porównanie z innymi sezonami",barChart(DB.seasons.map(row=>({...row,ppg:row.matches?row.points/row.matches:0})),"ppg",row=>fmt(row.ppg)))+
         (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Gole indywidualne zweryfikowano we wszystkich 15 oryginalnych protokołach tego sezonu.</div>':"");
 }
@@ -146,7 +152,7 @@ function matchDetail(id){
     const media=match.videos||[];
 
     return headline(match.opponent,match.date+" • "+match.season)+
-        metrics([["Wynik Boscha",match.gf+":"+match.ga],["Rezultat",result(match)],["Gole zawodników",protocol.player_goals??"—"],["Samobóje rywali",protocol.own_goals??"—"],["Administracyjne",protocol.administrative_goals??"—"],["Nagrania",media.length]])+
+        metrics([["Wynik Boscha",match.gf+":"+match.ga],["Rezultat",result(match)],["Gole zawodników",protocol.player_goals??"—"],["Samobóje rywali",protocol.own_goals??"—"],["Samobóje Boscha",protocol.own_goals_conceded??"—"],["Administracyjne",protocol.administrative_goals??"—"],["Nagrania",media.length]])+
         '<p>'+href("season/"+encodeURIComponent(match.sid),"← Powrót do sezonu")+' · '+href("goals","Wszystkie protokoły →")+'</p>'+
         section("Bramki, strzelcy i minuty",goalMatchTable(match))+
         section("Dane meczu",'<div class="card"><p>'+e(match.match||"Bosch Service Tech-Car — "+match.opponent)+'</p><p>Źródło: <a href="'+e(match.event_link)+'" target="_blank" rel="noopener noreferrer">Oficjalny protokół PLP ↗</a></p></div>')+
@@ -501,7 +507,7 @@ function setupList(id, items, renderer, searcher = JSON.stringify, seasonMatcher
 function route(){if(!DB)return;const pieces=decodeURIComponent(location.hash.slice(2)||"").split("/");const name=pieces[0]||"",id=pieces.slice(1).join("/");const routes={"":home,seasons,matches:matchesPage,goals:goalsArchive,players,opponents,analysis,videos,records};const pages={season:()=>seasonPage(id),match:()=>matchDetail(id),player:()=>playerDetail(id),opponent:()=>opponentDetail(id)};$("app").innerHTML=pages[name]?pages[name]():routes[name]?routes[name]():empty("Nie znaleziono strony.");document.querySelectorAll(".nav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#/"+name||name==="season"&&a.getAttribute("href")==="#/seasons"||name==="player"&&a.getAttribute("href")==="#/players"||name==="match"&&a.getAttribute("href")==="#/matches"||name==="opponent"&&a.getAttribute("href")==="#/opponents"));if(name==="goals")setupList(
     "filtered-goals",
     DB.matches,
-    items=>table(["Data","Rywal","Wynik","Sezon","Strzelcy","Samobóje rywali","Administracyjne","PLP"],goalMatchRows(items.slice().sort((a,b)=>b.date.localeCompare(a.date)))),
+    items=>table(["Data","Rywal","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(items.slice().sort((a,b)=>b.date.localeCompare(a.date)))),
     match=>[match.opponent,match.date,match.season,match.gf+":"+match.ga,...(match.goal_protocol?.scorers||[]).map(scorer=>scorer.name)].join(" "),
     (match,selectedSeasonId)=>same(match.sid,selectedSeasonId)
 );
