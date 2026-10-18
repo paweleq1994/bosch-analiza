@@ -34,6 +34,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1564",
         "name": "Hurtownia Krokus",
         "position": 1,
         "matches": 15,
@@ -46,24 +47,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1564",
         "name": "Hurtownia Krokus",
         "position": 3,
-        "matches": 14,
+        "matches": 15,
         "wins": 12,
         "draws": 0,
-        "losses": 2,
-        "gf": 60,
-        "ga": 16,
+        "losses": 3,
+        "gf": 63,
+        "ga": 20,
         "points": 36,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 89.7,
+      "strength": 88.1,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1564",
+      "season_match_details": [
+        {
+          "event_id": "12549",
+          "date": "2026-03-22",
+          "opponent_id": "1573",
+          "title": "M-Fire vs Hurtownia Krokus",
+          "gf": 8,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-hurtownia-krokus-6/"
+        },
+        {
+          "event_id": "12541",
+          "date": "2026-03-14",
+          "opponent_id": "1574",
+          "title": "Hurtownia Krokus vs Soccer Auto Wygoda",
+          "gf": 9,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12530",
+          "date": "2026-03-08",
+          "opponent_id": "8194",
+          "title": "Hurtownia Krokus vs FC GRUBASSY",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-grubassy-2/"
+        },
+        {
+          "event_id": "12519",
+          "date": "2026-02-28",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs Hurtownia Krokus",
+          "gf": 9,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hurtownia-krokus/"
+        },
+        {
+          "event_id": "12513",
+          "date": "2026-02-22",
+          "opponent_id": "1580",
+          "title": "Hurtownia Krokus vs Top Auto",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-top-auto-4/"
+        },
+        {
+          "event_id": "12510",
+          "date": "2026-02-14",
+          "opponent_id": "10056",
+          "title": "Hanbud vs Hurtownia Krokus",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
+        },
+        {
+          "event_id": "12495",
+          "date": "2026-02-01",
+          "opponent_id": "6988",
+          "title": "Hurtownia Krokus vs VESTA",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-vesta-2/"
+        },
+        {
+          "event_id": "12488",
+          "date": "2026-01-24",
+          "opponent_id": "1576",
+          "title": "4Technology vs Hurtownia Krokus",
+          "gf": 7,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hurtownia-krokus-5/"
+        },
+        {
+          "event_id": "12481",
+          "date": "2026-01-18",
+          "opponent_id": "6981",
+          "title": "Hurtownia Krokus vs INTaF",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-intaf-2/"
+        },
+        {
+          "event_id": "12471",
+          "date": "2026-01-10",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs Hurtownia Krokus",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hurtownia-krokus-3/"
+        },
+        {
+          "event_id": "12463",
+          "date": "2025-12-21",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Hurtownia Krokus",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
+        },
+        {
+          "event_id": "12459",
+          "date": "2025-12-13",
+          "opponent_id": "4641",
+          "title": "Hurtownia Krokus vs CEDC Polmos Białystok",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-cedc-polmos-bialystok-2/"
+        },
+        {
+          "event_id": "12444",
+          "date": "2025-11-29",
+          "opponent_id": "6959",
+          "title": "Hurtownia Krokus vs Fc Bajaga",
+          "gf": 6,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12440",
+          "date": "2025-11-23",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs Hurtownia Krokus",
+          "gf": 7,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-hurtownia-krokus-4/"
+        },
+        {
+          "event_id": "12430",
+          "date": "2025-11-15",
+          "opponent_id": "1568",
+          "title": "Hurtownia Krokus vs FC DrTusz",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-drtusz-5/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 1,
@@ -106,6 +244,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1565",
         "name": "Adampol Glovis",
         "position": 4,
         "matches": 15,
@@ -118,6 +257,7 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1565",
         "name": "Adampol Glovis",
         "position": 1,
         "matches": 15,
@@ -134,8 +274,144 @@
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1565",
+      "season_match_details": [
+        {
+          "event_id": "12550",
+          "date": "2026-03-22",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs Adampol Glovis",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12543",
+          "date": "2026-03-14",
+          "opponent_id": "6981",
+          "title": "Adampol Glovis vs INTaF",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-intaf-4/"
+        },
+        {
+          "event_id": "12532",
+          "date": "2026-03-08",
+          "opponent_id": "6988",
+          "title": "Adampol Glovis vs VESTA",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-vesta/"
+        },
+        {
+          "event_id": "12527",
+          "date": "2026-02-28",
+          "opponent_id": "1576",
+          "title": "4Technology vs Adampol Glovis",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-adampol-glovis-5/"
+        },
+        {
+          "event_id": "12512",
+          "date": "2026-02-22",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs Adampol Glovis",
+          "gf": 8,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-adampol-glovis-4/"
+        },
+        {
+          "event_id": "12505",
+          "date": "2026-02-14",
+          "opponent_id": "1573",
+          "title": "Adampol Glovis vs M-Fire",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-m-fire-6/"
+        },
+        {
+          "event_id": "12499",
+          "date": "2026-02-01",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Adampol Glovis",
+          "gf": 6,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12494",
+          "date": "2026-01-24",
+          "opponent_id": "10056",
+          "title": "Adampol Glovis vs Hanbud",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12482",
+          "date": "2026-01-18",
+          "opponent_id": "6959",
+          "title": "Fc Bajaga vs Adampol Glovis",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12478",
+          "date": "2026-01-11",
+          "opponent_id": "11753",
+          "title": "Adampol Glovis vs Żubry Bema",
+          "gf": 11,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12471",
+          "date": "2026-01-10",
+          "opponent_id": "1564",
+          "title": "Adampol Glovis vs Hurtownia Krokus",
+          "gf": 1,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hurtownia-krokus-3/"
+        },
+        {
+          "event_id": "12465",
+          "date": "2025-12-21",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs Adampol Glovis",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-adampol-glovis-2/"
+        },
+        {
+          "event_id": "12450",
+          "date": "2025-11-29",
+          "opponent_id": "1580",
+          "title": "Top Auto vs Adampol Glovis",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-adampol-glovis-3/"
+        },
+        {
+          "event_id": "12443",
+          "date": "2025-11-23",
+          "opponent_id": "1568",
+          "title": "FC DrTusz vs Adampol Glovis",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-adampol-glovis-4/"
+        },
+        {
+          "event_id": "12426",
+          "date": "2025-11-15",
+          "opponent_id": "8194",
+          "title": "Adampol Glovis vs FC GRUBASSY",
+          "gf": 6,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-fc-grubassy/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 1,
@@ -179,6 +455,7 @@
       "origin": "promoted_II",
       "hall": null,
       "orlik": {
+        "team_id": "12342",
         "name": "Biuro Serwis-Kopiarki",
         "position": 1,
         "matches": 15,
@@ -243,8 +520,144 @@
           "source_season": "Hala 2025/26"
         }
       ],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "12342",
+      "season_match_details": [
+        {
+          "event_id": "12675",
+          "date": "2026-03-21",
+          "opponent_id": "4643",
+          "title": "GKS Grabówka vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 6,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12673",
+          "date": "2026-03-15",
+          "opponent_id": "10770",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12660",
+          "date": "2026-03-07",
+          "opponent_id": "6951",
+          "title": "Bosch Service Tech-Car vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12649",
+          "date": "2026-03-01",
+          "opponent_id": "11756",
+          "title": "Biuro Serwis-Kopiarki Białystok vs ZPS Biaform SA",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zps-biaform-sa/"
+        },
+        {
+          "event_id": "12642",
+          "date": "2026-02-21",
+          "opponent_id": "10768",
+          "title": "Zachodnia Kingdom vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 7,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12634",
+          "date": "2026-02-15",
+          "opponent_id": "6989",
+          "title": "Biuro Serwis-Kopiarki Białystok vs WIARA PIASTA II",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12629",
+          "date": "2026-01-31",
+          "opponent_id": "12343",
+          "title": "Prostal vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12618",
+          "date": "2026-01-25",
+          "opponent_id": "4382",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Auto Team",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-auto-team/"
+        },
+        {
+          "event_id": "12613",
+          "date": "2026-01-17",
+          "opponent_id": "1566",
+          "title": "IST Trade vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12603",
+          "date": "2026-01-11",
+          "opponent_id": "8196",
+          "title": "Biuro Serwis-Kopiarki Białystok vs OSMAR",
+          "gf": 3,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-osmar/"
+        },
+        {
+          "event_id": "12591",
+          "date": "2025-12-20",
+          "opponent_id": "6984",
+          "title": "FC Progress Białystok vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12586",
+          "date": "2025-12-14",
+          "opponent_id": "8195",
+          "title": "Waleczne Orły vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 0,
+          "ga": 8,
+          "url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12578",
+          "date": "2025-11-30",
+          "opponent_id": "11754",
+          "title": "Juan Pablo Białystok vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12563",
+          "date": "2025-11-22",
+          "opponent_id": "10769",
+          "title": "Biuro Serwis-Kopiarki Białystok vs OST Sport",
+          "gf": 3,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-ost-sport/"
+        },
+        {
+          "event_id": "12556",
+          "date": "2025-11-16",
+          "opponent_id": "8193",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Unibep Bielsk Podlaski",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-unibep-bielsk-podlaski/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 2,
@@ -293,6 +706,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1576",
         "name": "4Technology",
         "position": 6,
         "matches": 15,
@@ -305,24 +719,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1576",
         "name": "4Technology",
         "position": 2,
-        "matches": 14,
-        "wins": 12,
+        "matches": 15,
+        "wins": 13,
         "draws": 1,
         "losses": 1,
-        "gf": 82,
-        "ga": 31,
-        "points": 37,
+        "gf": 86,
+        "ga": 34,
+        "points": 40,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 69.7,
+      "strength": 69.8,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1576",
+      "season_match_details": [
+        {
+          "event_id": "12551",
+          "date": "2026-03-22",
+          "opponent_id": "6988",
+          "title": "VESTA vs 4Technology",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-4technology/"
+        },
+        {
+          "event_id": "12539",
+          "date": "2026-03-14",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs 4Technology",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-4technology/"
+        },
+        {
+          "event_id": "12529",
+          "date": "2026-03-08",
+          "opponent_id": "6981",
+          "title": "INTaF vs 4Technology",
+          "gf": 2,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-4technology-3/"
+        },
+        {
+          "event_id": "12527",
+          "date": "2026-02-28",
+          "opponent_id": "1565",
+          "title": "4Technology vs Adampol Glovis",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-adampol-glovis-5/"
+        },
+        {
+          "event_id": "12515",
+          "date": "2026-02-22",
+          "opponent_id": "1568",
+          "title": "FC DrTusz vs 4Technology",
+          "gf": 7,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-4technology-3/"
+        },
+        {
+          "event_id": "12504",
+          "date": "2026-02-14",
+          "opponent_id": "8194",
+          "title": "4Technology vs FC GRUBASSY",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-fc-grubassy-2/"
+        },
+        {
+          "event_id": "12502",
+          "date": "2026-02-01",
+          "opponent_id": "6959",
+          "title": "Fc Bajaga vs 4Technology",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-4technology-3/"
+        },
+        {
+          "event_id": "12488",
+          "date": "2026-01-24",
+          "opponent_id": "1564",
+          "title": "4Technology vs Hurtownia Krokus",
+          "gf": 1,
+          "ga": 7,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hurtownia-krokus-5/"
+        },
+        {
+          "event_id": "12486",
+          "date": "2026-01-18",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs 4Technology",
+          "gf": 0,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-4technology/"
+        },
+        {
+          "event_id": "12476",
+          "date": "2026-01-10",
+          "opponent_id": "1573",
+          "title": "4Technology vs M-Fire",
+          "gf": 7,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-m-fire-6/"
+        },
+        {
+          "event_id": "12462",
+          "date": "2025-12-21",
+          "opponent_id": "1580",
+          "title": "Top Auto vs 4Technology",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-4technology-5/"
+        },
+        {
+          "event_id": "12461",
+          "date": "2025-12-13",
+          "opponent_id": "5920",
+          "title": "4Technology vs Mają Rozmach",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-maja-rozmach-4/"
+        },
+        {
+          "event_id": "12447",
+          "date": "2025-11-29",
+          "opponent_id": "11753",
+          "title": "4Technology vs Żubry Bema",
+          "gf": 5,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12436",
+          "date": "2025-11-23",
+          "opponent_id": "10056",
+          "title": "4Technology vs Hanbud",
+          "gf": 6,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hanbud-2/"
+        },
+        {
+          "event_id": "12433",
+          "date": "2025-11-15",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs 4Technology",
+          "gf": 2,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-4technology/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 1,
@@ -358,6 +909,202 @@
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
+      "id": "prostal",
+      "name": "PROSTAL",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": null,
+      "orlik": {
+        "team_id": "12343",
+        "name": "PROSTAL",
+        "position": 6,
+        "matches": 15,
+        "wins": 9,
+        "draws": 2,
+        "losses": 4,
+        "gf": 56,
+        "ga": 36,
+        "points": 29,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 65.2,
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [],
+      "plp_team_id": "12343",
+      "season_match_details": [
+        {
+          "event_id": "12678",
+          "date": "2026-03-21",
+          "opponent_id": "11754",
+          "title": "Prostal vs Juan Pablo Białystok",
+          "gf": 6,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-juan-pablo-bialystok/"
+        },
+        {
+          "event_id": "12667",
+          "date": "2026-03-15",
+          "opponent_id": "4382",
+          "title": "Auto Team vs Prostal",
+          "gf": 5,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/auto-team-vs-prostal/"
+        },
+        {
+          "event_id": "12665",
+          "date": "2026-03-07",
+          "opponent_id": "1566",
+          "title": "Prostal vs IST Trade",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-ist-trade/"
+        },
+        {
+          "event_id": "12655",
+          "date": "2026-03-01",
+          "opponent_id": "8196",
+          "title": "OSMAR vs Prostal",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/osmar-vs-prostal/"
+        },
+        {
+          "event_id": "12647",
+          "date": "2026-02-21",
+          "opponent_id": "8193",
+          "title": "Prostal vs Unibep Bielsk Podlaski",
+          "gf": 8,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-unibep-bielsk-podlaski/"
+        },
+        {
+          "event_id": "12638",
+          "date": "2026-02-15",
+          "opponent_id": "8195",
+          "title": "Waleczne Orły vs Prostal",
+          "gf": 8,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-prostal/"
+        },
+        {
+          "event_id": "12629",
+          "date": "2026-01-31",
+          "opponent_id": "12342",
+          "title": "Prostal vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 1,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12621",
+          "date": "2026-01-25",
+          "opponent_id": "10769",
+          "title": "OST Sport vs Prostal",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-prostal/"
+        },
+        {
+          "event_id": "12611",
+          "date": "2026-01-17",
+          "opponent_id": "6984",
+          "title": "Prostal vs FC Progress Białystok",
+          "gf": 6,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-fc-progress-bialystok/"
+        },
+        {
+          "event_id": "12606",
+          "date": "2026-01-11",
+          "opponent_id": "4643",
+          "title": "GKS Grabówka vs Prostal",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-prostal/"
+        },
+        {
+          "event_id": "12592",
+          "date": "2025-12-20",
+          "opponent_id": "6989",
+          "title": "Prostal vs WIARA PIASTA II",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12581",
+          "date": "2025-12-14",
+          "opponent_id": "6951",
+          "title": "Bosch Service Tech-Car vs Prostal",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-prostal/"
+        },
+        {
+          "event_id": "12575",
+          "date": "2025-11-30",
+          "opponent_id": "11756",
+          "title": "Prostal vs ZPS Biaform SA",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zps-biaform-sa/"
+        },
+        {
+          "event_id": "12567",
+          "date": "2025-11-22",
+          "opponent_id": "10768",
+          "title": "Zachodnia Kingdom vs Prostal",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-prostal/"
+        },
+        {
+          "event_id": "12557",
+          "date": "2025-11-16",
+          "opponent_id": "10770",
+          "title": "Prostal vs Zimne Dranie",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zimne-dranie/"
+        }
+      ],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "matches": [
+          {
+            "date": "2025-12-14",
+            "gf": 2,
+            "ga": 2,
+            "id": "12581"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
       "id": "zimne-dranie",
       "name": "Zimne Dranie",
       "status": "candidate",
@@ -365,8 +1112,9 @@
       "origin": "promoted_II",
       "hall": null,
       "orlik": {
+        "team_id": "10770",
         "name": "Zimne Dranie",
-        "position": 2,
+        "position": 3,
         "matches": 15,
         "wins": 11,
         "draws": 1,
@@ -429,8 +1177,144 @@
           "source_season": "Hala 2025/26"
         }
       ],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "10770",
+      "season_match_details": [
+        {
+          "event_id": "12680",
+          "date": "2026-03-21",
+          "opponent_id": "8195",
+          "title": "Zimne Dranie vs Waleczne Orły",
+          "gf": 0,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-waleczne-orly-2/"
+        },
+        {
+          "event_id": "12673",
+          "date": "2026-03-15",
+          "opponent_id": "12342",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12658",
+          "date": "2026-03-07",
+          "opponent_id": "10769",
+          "title": "Zimne Dranie vs OST Sport",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-ost-sport-2/"
+        },
+        {
+          "event_id": "12650",
+          "date": "2026-03-01",
+          "opponent_id": "6984",
+          "title": "FC Progress Białystok vs Zimne Dranie",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12643",
+          "date": "2026-02-21",
+          "opponent_id": "4643",
+          "title": "Zimne Dranie vs GKS Grabówka",
+          "gf": 12,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-gks-grabowka/"
+        },
+        {
+          "event_id": "12632",
+          "date": "2026-02-15",
+          "opponent_id": "11754",
+          "title": "Juan Pablo Białystok vs Zimne Dranie",
+          "gf": 6,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12631",
+          "date": "2026-01-31",
+          "opponent_id": "6951",
+          "title": "Bosch Service Tech-Car vs Zimne Dranie",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/"
+        },
+        {
+          "event_id": "12619",
+          "date": "2026-01-25",
+          "opponent_id": "11756",
+          "title": "Zimne Dranie vs ZPS Biaform SA",
+          "gf": 0,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-zps-biaform-sa-3/"
+        },
+        {
+          "event_id": "12610",
+          "date": "2026-01-17",
+          "opponent_id": "10768",
+          "title": "Zachodnia Kingdom vs Zimne Dranie",
+          "gf": 11,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-zimne-dranie-2/"
+        },
+        {
+          "event_id": "12605",
+          "date": "2026-01-11",
+          "opponent_id": "6989",
+          "title": "Zimne Dranie vs WIARA PIASTA II",
+          "gf": 4,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-wiara-piasta-ii-2/"
+        },
+        {
+          "event_id": "12594",
+          "date": "2025-12-20",
+          "opponent_id": "8193",
+          "title": "Zimne Dranie vs Unibep Bielsk Podlaski",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-unibep-bielsk-podlaski-2/"
+        },
+        {
+          "event_id": "12582",
+          "date": "2025-12-14",
+          "opponent_id": "4382",
+          "title": "Zimne Dranie vs Auto Team",
+          "gf": 2,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-auto-team/"
+        },
+        {
+          "event_id": "12576",
+          "date": "2025-11-30",
+          "opponent_id": "1566",
+          "title": "IST Trade vs Zimne Dranie",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12570",
+          "date": "2025-11-22",
+          "opponent_id": "8196",
+          "title": "Zimne Dranie vs OSMAR",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-osmar-2/"
+        },
+        {
+          "event_id": "12557",
+          "date": "2025-11-16",
+          "opponent_id": "12343",
+          "title": "Prostal vs Zimne Dranie",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zimne-dranie/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 5,
@@ -490,71 +1374,13 @@
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
-      "id": "prostal",
-      "name": "PROSTAL",
-      "status": "candidate",
-      "division": "projected_1_hala_2026_27",
-      "origin": "retained_I",
-      "hall": null,
-      "orlik": {
-        "name": "PROSTAL",
-        "position": 6,
-        "matches": 14,
-        "wins": 8,
-        "draws": 2,
-        "losses": 4,
-        "gf": 49,
-        "ga": 35,
-        "points": 26,
-        "tier": 1
-      },
-      "historic_hall": null,
-      "strength": 61.5,
-      "data_coverage": 0.3,
-      "confidence": "niska",
-      "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
-      "player_stats_verified": false,
-      "h2h": {
-        "games": 1,
-        "wins": 0,
-        "draws": 1,
-        "losses": 0,
-        "matches": [
-          {
-            "date": "2025-12-14",
-            "gf": 2,
-            "ga": 2,
-            "id": "12581"
-          }
-        ]
-      },
-      "statistical_watchouts": [
-        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje."
-      ],
-      "plan_a": [
-        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
-        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
-        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
-      ],
-      "plan_b": [
-        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
-        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
-        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
-      ],
-      "scouting_status": "statistical_only",
-      "observations": [],
-      "videos": [],
-      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
-    },
-    {
       "id": "soccer-auto-wygoda",
       "name": "Soccer Auto Wygoda",
       "status": "candidate",
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1574",
         "name": "Soccer Auto Wygoda",
         "position": 5,
         "matches": 15,
@@ -567,6 +1393,7 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1574",
         "name": "Soccer Auto Wygoda",
         "position": 4,
         "matches": 15,
@@ -583,8 +1410,144 @@
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1574",
+      "season_match_details": [
+        {
+          "event_id": "12550",
+          "date": "2026-03-22",
+          "opponent_id": "1565",
+          "title": "Soccer Auto Wygoda vs Adampol Glovis",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12541",
+          "date": "2026-03-14",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs Soccer Auto Wygoda",
+          "gf": 1,
+          "ga": 9,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12531",
+          "date": "2026-03-08",
+          "opponent_id": "10056",
+          "title": "Soccer Auto Wygoda vs Hanbud",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-hanbud/"
+        },
+        {
+          "event_id": "12521",
+          "date": "2026-02-28",
+          "opponent_id": "6959",
+          "title": "Fc Bajaga vs Soccer Auto Wygoda",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12518",
+          "date": "2026-02-22",
+          "opponent_id": "4389",
+          "title": "Soccer Auto Wygoda vs PTH Maltrans",
+          "gf": 6,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12509",
+          "date": "2026-02-14",
+          "opponent_id": "5920",
+          "title": "Soccer Auto Wygoda vs Mają Rozmach",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-maja-rozmach/"
+        },
+        {
+          "event_id": "12496",
+          "date": "2026-02-01",
+          "opponent_id": "1573",
+          "title": "M-Fire vs Soccer Auto Wygoda",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12489",
+          "date": "2026-01-24",
+          "opponent_id": "1580",
+          "title": "Soccer Auto Wygoda vs Top Auto",
+          "gf": 4,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-top-auto/"
+        },
+        {
+          "event_id": "12484",
+          "date": "2026-01-18",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs Soccer Auto Wygoda",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12470",
+          "date": "2026-01-10",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs Soccer Auto Wygoda",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12467",
+          "date": "2025-12-21",
+          "opponent_id": "1568",
+          "title": "FC DrTusz vs Soccer Auto Wygoda",
+          "gf": 2,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12455",
+          "date": "2025-12-13",
+          "opponent_id": "6981",
+          "title": "INTaF vs Soccer Auto Wygoda",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12451",
+          "date": "2025-11-29",
+          "opponent_id": "6988",
+          "title": "Soccer Auto Wygoda vs VESTA",
+          "gf": 2,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-vesta/"
+        },
+        {
+          "event_id": "12439",
+          "date": "2025-11-23",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs Soccer Auto Wygoda",
+          "gf": 9,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12433",
+          "date": "2025-11-15",
+          "opponent_id": "1576",
+          "title": "Soccer Auto Wygoda vs 4Technology",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-4technology/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 0,
@@ -618,6 +1581,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "6959",
         "name": "Fc Bajaga",
         "position": 3,
         "matches": 15,
@@ -630,24 +1594,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "6959",
         "name": "Fc Bajaga",
         "position": 7,
-        "matches": 14,
-        "wins": 5,
+        "matches": 15,
+        "wins": 6,
         "draws": 3,
         "losses": 6,
-        "gf": 31,
-        "ga": 38,
-        "points": 18,
+        "gf": 34,
+        "ga": 40,
+        "points": 21,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 56.8,
+      "strength": 57.9,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "6959",
+      "season_match_details": [
+        {
+          "event_id": "12547",
+          "date": "2026-03-22",
+          "opponent_id": "1580",
+          "title": "Top Auto vs Fc Bajaga",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12538",
+          "date": "2026-03-14",
+          "opponent_id": "5920",
+          "title": "Fc Bajaga vs Mają Rozmach",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-maja-rozmach-4/"
+        },
+        {
+          "event_id": "12534",
+          "date": "2026-03-08",
+          "opponent_id": "11753",
+          "title": "Fc Bajaga vs Żubry Bema",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12521",
+          "date": "2026-02-28",
+          "opponent_id": "1574",
+          "title": "Fc Bajaga vs Soccer Auto Wygoda",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12514",
+          "date": "2026-02-22",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs Fc Bajaga",
+          "gf": 5,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12503",
+          "date": "2026-02-14",
+          "opponent_id": "1568",
+          "title": "FC DrTusz vs Fc Bajaga",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12502",
+          "date": "2026-02-01",
+          "opponent_id": "1576",
+          "title": "Fc Bajaga vs 4Technology",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-4technology-3/"
+        },
+        {
+          "event_id": "12487",
+          "date": "2026-01-24",
+          "opponent_id": "6981",
+          "title": "INTaF vs Fc Bajaga",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-fc-bajaga-3/"
+        },
+        {
+          "event_id": "12482",
+          "date": "2026-01-18",
+          "opponent_id": "1565",
+          "title": "Fc Bajaga vs Adampol Glovis",
+          "gf": 2,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12474",
+          "date": "2026-01-10",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Fc Bajaga",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12468",
+          "date": "2025-12-21",
+          "opponent_id": "10056",
+          "title": "Hanbud vs Fc Bajaga",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12460",
+          "date": "2025-12-13",
+          "opponent_id": "1573",
+          "title": "Fc Bajaga vs M-Fire",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-m-fire/"
+        },
+        {
+          "event_id": "12444",
+          "date": "2025-11-29",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs Fc Bajaga",
+          "gf": 0,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12438",
+          "date": "2025-11-23",
+          "opponent_id": "6988",
+          "title": "VESTA vs Fc Bajaga",
+          "gf": 2,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12427",
+          "date": "2025-11-15",
+          "opponent_id": "4641",
+          "title": "Fc Bajaga vs CEDC Polmos Białystok",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-cedc-polmos-bialystok/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 2,
@@ -694,6 +1795,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "4389",
         "name": "PTH Maltrans",
         "position": 7,
         "matches": 15,
@@ -706,24 +1808,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "4389",
         "name": "PTH Maltrans",
         "position": 9,
-        "matches": 14,
+        "matches": 15,
         "wins": 5,
         "draws": 2,
-        "losses": 7,
-        "gf": 34,
-        "ga": 44,
+        "losses": 8,
+        "gf": 35,
+        "ga": 51,
         "points": 17,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 52.6,
+      "strength": 51.2,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "4389",
+      "season_match_details": [
+        {
+          "event_id": "12548",
+          "date": "2026-03-22",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs PTH Maltrans",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12539",
+          "date": "2026-03-14",
+          "opponent_id": "1576",
+          "title": "PTH Maltrans vs 4Technology",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-4technology/"
+        },
+        {
+          "event_id": "12528",
+          "date": "2026-03-08",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs PTH Maltrans",
+          "gf": 6,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12522",
+          "date": "2026-02-28",
+          "opponent_id": "6988",
+          "title": "PTH Maltrans vs VESTA",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-vesta/"
+        },
+        {
+          "event_id": "12518",
+          "date": "2026-02-22",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs PTH Maltrans",
+          "gf": 2,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12508",
+          "date": "2026-02-14",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs PTH Maltrans",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12499",
+          "date": "2026-02-01",
+          "opponent_id": "1565",
+          "title": "PTH Maltrans vs Adampol Glovis",
+          "gf": 1,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12490",
+          "date": "2026-01-24",
+          "opponent_id": "1568",
+          "title": "PTH Maltrans vs FC DrTusz",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-drtusz/"
+        },
+        {
+          "event_id": "12479",
+          "date": "2026-01-18",
+          "opponent_id": "10056",
+          "title": "Hanbud vs PTH Maltrans",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12474",
+          "date": "2026-01-10",
+          "opponent_id": "6959",
+          "title": "PTH Maltrans vs Fc Bajaga",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12463",
+          "date": "2025-12-21",
+          "opponent_id": "1564",
+          "title": "PTH Maltrans vs Hurtownia Krokus",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
+        },
+        {
+          "event_id": "12457",
+          "date": "2025-12-13",
+          "opponent_id": "8194",
+          "title": "PTH Maltrans vs FC GRUBASSY",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12449",
+          "date": "2025-11-29",
+          "opponent_id": "1573",
+          "title": "M-Fire vs PTH Maltrans",
+          "gf": 7,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12441",
+          "date": "2025-11-23",
+          "opponent_id": "6981",
+          "title": "INTaF vs PTH Maltrans",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12435",
+          "date": "2025-11-15",
+          "opponent_id": "1580",
+          "title": "PTH Maltrans vs Top Auto",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-top-auto/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 0,
@@ -757,6 +1996,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "6988",
         "name": "VESTA",
         "position": 12,
         "matches": 15,
@@ -769,24 +2009,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "6988",
         "name": "VESTA",
         "position": 5,
-        "matches": 14,
-        "wins": 8,
+        "matches": 15,
+        "wins": 9,
         "draws": 2,
         "losses": 4,
-        "gf": 38,
-        "ga": 24,
-        "points": 26,
+        "gf": 43,
+        "ga": 28,
+        "points": 29,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 44.5,
+      "strength": 45.1,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "6988",
+      "season_match_details": [
+        {
+          "event_id": "12551",
+          "date": "2026-03-22",
+          "opponent_id": "1576",
+          "title": "VESTA vs 4Technology",
+          "gf": 4,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-4technology/"
+        },
+        {
+          "event_id": "12542",
+          "date": "2026-03-14",
+          "opponent_id": "10056",
+          "title": "VESTA vs Hanbud",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-hanbud/"
+        },
+        {
+          "event_id": "12532",
+          "date": "2026-03-08",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs VESTA",
+          "gf": 4,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-vesta/"
+        },
+        {
+          "event_id": "12522",
+          "date": "2026-02-28",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs VESTA",
+          "gf": 0,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-vesta/"
+        },
+        {
+          "event_id": "12517",
+          "date": "2026-02-22",
+          "opponent_id": "6981",
+          "title": "VESTA vs INTaF",
+          "gf": 2,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-intaf/"
+        },
+        {
+          "event_id": "12506",
+          "date": "2026-02-14",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs VESTA",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-vesta/"
+        },
+        {
+          "event_id": "12495",
+          "date": "2026-02-01",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs VESTA",
+          "gf": 1,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-vesta-2/"
+        },
+        {
+          "event_id": "12493",
+          "date": "2026-01-24",
+          "opponent_id": "4641",
+          "title": "VESTA vs CEDC Polmos Białystok",
+          "gf": 11,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-cedc-polmos-bialystok-4/"
+        },
+        {
+          "event_id": "12483",
+          "date": "2026-01-18",
+          "opponent_id": "1573",
+          "title": "M-Fire vs VESTA",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-vesta/"
+        },
+        {
+          "event_id": "12472",
+          "date": "2026-01-10",
+          "opponent_id": "1580",
+          "title": "VESTA vs Top Auto",
+          "gf": 0,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-top-auto/"
+        },
+        {
+          "event_id": "12469",
+          "date": "2025-12-21",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs VESTA",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-vesta-2/"
+        },
+        {
+          "event_id": "12458",
+          "date": "2025-12-13",
+          "opponent_id": "1568",
+          "title": "VESTA vs FC DrTusz",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-drtusz-3/"
+        },
+        {
+          "event_id": "12451",
+          "date": "2025-11-29",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs VESTA",
+          "gf": 0,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-vesta/"
+        },
+        {
+          "event_id": "12438",
+          "date": "2025-11-23",
+          "opponent_id": "6959",
+          "title": "VESTA vs Fc Bajaga",
+          "gf": 0,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12432",
+          "date": "2025-11-15",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs VESTA",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-vesta/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 5,
@@ -851,6 +2228,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "10056",
         "name": "Hanbud",
         "position": 8,
         "matches": 15,
@@ -863,24 +2241,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "10056",
         "name": "Hanbud",
-        "position": 12,
-        "matches": 14,
-        "wins": 3,
+        "position": 11,
+        "matches": 15,
+        "wins": 4,
         "draws": 3,
         "losses": 8,
-        "gf": 32,
-        "ga": 42,
-        "points": 12,
+        "gf": 37,
+        "ga": 44,
+        "points": 15,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 42.0,
+      "strength": 43.6,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "10056",
+      "season_match_details": [
+        {
+          "event_id": "12545",
+          "date": "2026-03-22",
+          "opponent_id": "8194",
+          "title": "Hanbud vs FC GRUBASSY",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12542",
+          "date": "2026-03-14",
+          "opponent_id": "6988",
+          "title": "VESTA vs Hanbud",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-hanbud/"
+        },
+        {
+          "event_id": "12531",
+          "date": "2026-03-08",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs Hanbud",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-hanbud/"
+        },
+        {
+          "event_id": "12525",
+          "date": "2026-02-28",
+          "opponent_id": "5920",
+          "title": "Hanbud vs Mają Rozmach",
+          "gf": 2,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-maja-rozmach-3/"
+        },
+        {
+          "event_id": "12516",
+          "date": "2026-02-22",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs Hanbud",
+          "gf": 7,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hanbud/"
+        },
+        {
+          "event_id": "12510",
+          "date": "2026-02-14",
+          "opponent_id": "1564",
+          "title": "Hanbud vs Hurtownia Krokus",
+          "gf": 0,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
+        },
+        {
+          "event_id": "12498",
+          "date": "2026-02-01",
+          "opponent_id": "6981",
+          "title": "Hanbud vs INTaF",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-intaf-2/"
+        },
+        {
+          "event_id": "12494",
+          "date": "2026-01-24",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs Hanbud",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12479",
+          "date": "2026-01-18",
+          "opponent_id": "4389",
+          "title": "Hanbud vs PTH Maltrans",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12475",
+          "date": "2026-01-10",
+          "opponent_id": "1568",
+          "title": "Hanbud vs FC DrTusz",
+          "gf": 1,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-drtusz-2/"
+        },
+        {
+          "event_id": "12468",
+          "date": "2025-12-21",
+          "opponent_id": "6959",
+          "title": "Hanbud vs Fc Bajaga",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12456",
+          "date": "2025-12-13",
+          "opponent_id": "1580",
+          "title": "Top Auto vs Hanbud",
+          "gf": 2,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12453",
+          "date": "2025-11-29",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs Hanbud",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-hanbud-2/"
+        },
+        {
+          "event_id": "12436",
+          "date": "2025-11-23",
+          "opponent_id": "1576",
+          "title": "4Technology vs Hanbud",
+          "gf": 3,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hanbud-2/"
+        },
+        {
+          "event_id": "12428",
+          "date": "2025-11-15",
+          "opponent_id": "1573",
+          "title": "Hanbud vs M-Fire",
+          "gf": 9,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-m-fire/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 1,
@@ -921,6 +2436,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1580",
         "name": "Top Auto",
         "position": 9,
         "matches": 15,
@@ -933,24 +2449,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1580",
         "name": "Top Auto",
         "position": 8,
-        "matches": 14,
+        "matches": 15,
         "wins": 6,
         "draws": 0,
-        "losses": 8,
+        "losses": 9,
         "gf": 31,
-        "ga": 26,
+        "ga": 30,
         "points": 18,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 41.6,
+      "strength": 40.3,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1580",
+      "season_match_details": [
+        {
+          "event_id": "12547",
+          "date": "2026-03-22",
+          "opponent_id": "6959",
+          "title": "Top Auto vs Fc Bajaga",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12537",
+          "date": "2026-03-14",
+          "opponent_id": "1568",
+          "title": "Top Auto vs FC DrTusz",
+          "gf": 1,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-drtusz-5/"
+        },
+        {
+          "event_id": "12533",
+          "date": "2026-03-08",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs Top Auto",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-top-auto-2/"
+        },
+        {
+          "event_id": "12523",
+          "date": "2026-02-28",
+          "opponent_id": "1573",
+          "title": "Top Auto vs M-Fire",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-m-fire-5/"
+        },
+        {
+          "event_id": "12513",
+          "date": "2026-02-22",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs Top Auto",
+          "gf": 1,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-top-auto-4/"
+        },
+        {
+          "event_id": "12507",
+          "date": "2026-02-14",
+          "opponent_id": "6981",
+          "title": "INTaF vs Top Auto",
+          "gf": 1,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-top-auto-2/"
+        },
+        {
+          "event_id": "12500",
+          "date": "2026-02-01",
+          "opponent_id": "11753",
+          "title": "Top Auto vs Żubry Bema",
+          "gf": 1,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12489",
+          "date": "2026-01-24",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs Top Auto",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-top-auto/"
+        },
+        {
+          "event_id": "12480",
+          "date": "2026-01-18",
+          "opponent_id": "5920",
+          "title": "Top Auto vs Mają Rozmach",
+          "gf": 0,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-maja-rozmach-2/"
+        },
+        {
+          "event_id": "12472",
+          "date": "2026-01-10",
+          "opponent_id": "6988",
+          "title": "VESTA vs Top Auto",
+          "gf": 2,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-top-auto/"
+        },
+        {
+          "event_id": "12462",
+          "date": "2025-12-21",
+          "opponent_id": "1576",
+          "title": "Top Auto vs 4Technology",
+          "gf": 1,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-4technology-5/"
+        },
+        {
+          "event_id": "12456",
+          "date": "2025-12-13",
+          "opponent_id": "10056",
+          "title": "Top Auto vs Hanbud",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12450",
+          "date": "2025-11-29",
+          "opponent_id": "1565",
+          "title": "Top Auto vs Adampol Glovis",
+          "gf": 2,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-adampol-glovis-3/"
+        },
+        {
+          "event_id": "12442",
+          "date": "2025-11-23",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs Top Auto",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-top-auto/"
+        },
+        {
+          "event_id": "12435",
+          "date": "2025-11-15",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Top Auto",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-top-auto/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 1,
@@ -991,6 +2644,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "8194",
         "name": "FC GRUBASSY",
         "position": 10,
         "matches": 15,
@@ -1003,24 +2657,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "8194",
         "name": "FC GRUBASSY",
         "position": 10,
-        "matches": 14,
+        "matches": 15,
         "wins": 5,
         "draws": 0,
-        "losses": 9,
-        "gf": 51,
-        "ga": 62,
+        "losses": 10,
+        "gf": 52,
+        "ga": 64,
         "points": 15,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 36.5,
+      "strength": 35.9,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "8194",
+      "season_match_details": [
+        {
+          "event_id": "12545",
+          "date": "2026-03-22",
+          "opponent_id": "10056",
+          "title": "Hanbud vs FC GRUBASSY",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12540",
+          "date": "2026-03-14",
+          "opponent_id": "1573",
+          "title": "FC GRUBASSY vs M-Fire",
+          "gf": 6,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-m-fire/"
+        },
+        {
+          "event_id": "12530",
+          "date": "2026-03-08",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs FC GRUBASSY",
+          "gf": 0,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-grubassy-2/"
+        },
+        {
+          "event_id": "12526",
+          "date": "2026-02-28",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs FC GRUBASSY",
+          "gf": 6,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-fc-grubassy-3/"
+        },
+        {
+          "event_id": "12514",
+          "date": "2026-02-22",
+          "opponent_id": "6959",
+          "title": "FC GRUBASSY vs Fc Bajaga",
+          "gf": 3,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12504",
+          "date": "2026-02-14",
+          "opponent_id": "1576",
+          "title": "4Technology vs FC GRUBASSY",
+          "gf": 2,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-fc-grubassy-2/"
+        },
+        {
+          "event_id": "12501",
+          "date": "2026-02-01",
+          "opponent_id": "1568",
+          "title": "FC GRUBASSY vs FC DrTusz",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-drtusz/"
+        },
+        {
+          "event_id": "12491",
+          "date": "2026-01-24",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs FC GRUBASSY",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12484",
+          "date": "2026-01-18",
+          "opponent_id": "1574",
+          "title": "FC GRUBASSY vs Soccer Auto Wygoda",
+          "gf": 1,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12473",
+          "date": "2026-01-10",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs FC GRUBASSY",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12469",
+          "date": "2025-12-21",
+          "opponent_id": "6988",
+          "title": "FC GRUBASSY vs VESTA",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-vesta-2/"
+        },
+        {
+          "event_id": "12457",
+          "date": "2025-12-13",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs FC GRUBASSY",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12445",
+          "date": "2025-11-29",
+          "opponent_id": "6981",
+          "title": "FC GRUBASSY vs INTaF",
+          "gf": 2,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-intaf/"
+        },
+        {
+          "event_id": "12442",
+          "date": "2025-11-23",
+          "opponent_id": "1580",
+          "title": "FC GRUBASSY vs Top Auto",
+          "gf": 2,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-top-auto/"
+        },
+        {
+          "event_id": "12426",
+          "date": "2025-11-15",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs FC GRUBASSY",
+          "gf": 4,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-fc-grubassy/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 4,
@@ -1079,6 +2870,7 @@
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
+        "team_id": "1568",
         "name": "FC DrTusz",
         "position": 13,
         "matches": 15,
@@ -1091,24 +2883,161 @@
         "tier": 1
       },
       "orlik": {
+        "team_id": "1568",
         "name": "FC DrTusz",
-        "position": 11,
-        "matches": 14,
+        "position": 12,
+        "matches": 15,
         "wins": 4,
         "draws": 2,
-        "losses": 8,
-        "gf": 34,
-        "ga": 58,
+        "losses": 9,
+        "gf": 36,
+        "ga": 63,
         "points": 14,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 27.5,
+      "strength": 26.8,
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "1568",
+      "season_match_details": [
+        {
+          "event_id": "12546",
+          "date": "2026-03-22",
+          "opponent_id": "4641",
+          "title": "FC DrTusz vs CEDC Polmos Białystok",
+          "gf": 0,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-cedc-polmos-bialystok-3/"
+        },
+        {
+          "event_id": "12537",
+          "date": "2026-03-14",
+          "opponent_id": "1580",
+          "title": "Top Auto vs FC DrTusz",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-drtusz-5/"
+        },
+        {
+          "event_id": "12535",
+          "date": "2026-03-08",
+          "opponent_id": "1573",
+          "title": "M-Fire vs FC DrTusz",
+          "gf": 0,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-fc-drtusz-4/"
+        },
+        {
+          "event_id": "12524",
+          "date": "2026-02-28",
+          "opponent_id": "6981",
+          "title": "INTaF vs FC DrTusz",
+          "gf": 1,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-fc-drtusz-3/"
+        },
+        {
+          "event_id": "12515",
+          "date": "2026-02-22",
+          "opponent_id": "1576",
+          "title": "FC DrTusz vs 4Technology",
+          "gf": 2,
+          "ga": 7,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-4technology-3/"
+        },
+        {
+          "event_id": "12503",
+          "date": "2026-02-14",
+          "opponent_id": "6959",
+          "title": "FC DrTusz vs Fc Bajaga",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12501",
+          "date": "2026-02-01",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs FC DrTusz",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-drtusz/"
+        },
+        {
+          "event_id": "12490",
+          "date": "2026-01-24",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs FC DrTusz",
+          "gf": 0,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-drtusz/"
+        },
+        {
+          "event_id": "12485",
+          "date": "2026-01-18",
+          "opponent_id": "11753",
+          "title": "FC DrTusz vs Żubry Bema",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12475",
+          "date": "2026-01-10",
+          "opponent_id": "10056",
+          "title": "Hanbud vs FC DrTusz",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-drtusz-2/"
+        },
+        {
+          "event_id": "12467",
+          "date": "2025-12-21",
+          "opponent_id": "1574",
+          "title": "FC DrTusz vs Soccer Auto Wygoda",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12458",
+          "date": "2025-12-13",
+          "opponent_id": "6988",
+          "title": "VESTA vs FC DrTusz",
+          "gf": 2,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-drtusz-3/"
+        },
+        {
+          "event_id": "12452",
+          "date": "2025-11-29",
+          "opponent_id": "5920",
+          "title": "FC DrTusz vs Mają Rozmach",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-maja-rozmach-4/"
+        },
+        {
+          "event_id": "12443",
+          "date": "2025-11-23",
+          "opponent_id": "1565",
+          "title": "FC DrTusz vs Adampol Glovis",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-adampol-glovis-4/"
+        },
+        {
+          "event_id": "12430",
+          "date": "2025-11-15",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs FC DrTusz",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-drtusz-5/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 2,
@@ -1156,24 +3085,161 @@
       "origin": "retained_I",
       "hall": null,
       "orlik": {
+        "team_id": "6989",
         "name": "WIARA PIASTA II",
         "position": 13,
-        "matches": 14,
+        "matches": 15,
         "wins": 4,
         "draws": 0,
-        "losses": 10,
-        "gf": 36,
-        "ga": 72,
+        "losses": 11,
+        "gf": 40,
+        "ga": 77,
         "points": 12,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 23.4,
+      "strength": 22.7,
       "data_coverage": 0.3,
       "confidence": "niska",
       "players": [],
-      "plp_team_id": null,
-      "season_match_details": [],
+      "plp_team_id": "6989",
+      "season_match_details": [
+        {
+          "event_id": "12676",
+          "date": "2026-03-21",
+          "opponent_id": "4382",
+          "title": "WIARA PIASTA II vs Auto Team",
+          "gf": 6,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-auto-team/"
+        },
+        {
+          "event_id": "12666",
+          "date": "2026-03-15",
+          "opponent_id": "1566",
+          "title": "IST Trade vs WIARA PIASTA II",
+          "gf": 0,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12657",
+          "date": "2026-03-07",
+          "opponent_id": "8196",
+          "title": "WIARA PIASTA II vs OSMAR",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-osmar-3/"
+        },
+        {
+          "event_id": "12651",
+          "date": "2026-03-01",
+          "opponent_id": "8193",
+          "title": "Unibep Bielsk Podlaski vs WIARA PIASTA II",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-wiara-piasta-ii-3/"
+        },
+        {
+          "event_id": "12641",
+          "date": "2026-02-21",
+          "opponent_id": "8195",
+          "title": "WIARA PIASTA II vs Waleczne Orły",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-waleczne-orly-3/"
+        },
+        {
+          "event_id": "12634",
+          "date": "2026-02-15",
+          "opponent_id": "12342",
+          "title": "Biuro Serwis-Kopiarki Białystok vs WIARA PIASTA II",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12628",
+          "date": "2026-01-31",
+          "opponent_id": "10769",
+          "title": "WIARA PIASTA II vs OST Sport",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-ost-sport-2/"
+        },
+        {
+          "event_id": "12622",
+          "date": "2026-01-25",
+          "opponent_id": "6984",
+          "title": "FC Progress Białystok vs WIARA PIASTA II",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-wiara-piasta-ii-5/"
+        },
+        {
+          "event_id": "12607",
+          "date": "2026-01-17",
+          "opponent_id": "4643",
+          "title": "WIARA PIASTA II vs GKS Grabówka",
+          "gf": 6,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-gks-grabowka/"
+        },
+        {
+          "event_id": "12605",
+          "date": "2026-01-11",
+          "opponent_id": "10770",
+          "title": "Zimne Dranie vs WIARA PIASTA II",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-wiara-piasta-ii-2/"
+        },
+        {
+          "event_id": "12592",
+          "date": "2025-12-20",
+          "opponent_id": "12343",
+          "title": "Prostal vs WIARA PIASTA II",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12584",
+          "date": "2025-12-14",
+          "opponent_id": "11756",
+          "title": "ZPS Biaform SA vs WIARA PIASTA II",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-wiara-piasta-ii-3/"
+        },
+        {
+          "event_id": "12572",
+          "date": "2025-11-30",
+          "opponent_id": "10768",
+          "title": "WIARA PIASTA II vs Zachodnia Kingdom",
+          "gf": 1,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-zachodnia-kingdom-2/"
+        },
+        {
+          "event_id": "12569",
+          "date": "2025-11-22",
+          "opponent_id": "11754",
+          "title": "WIARA PIASTA II vs Juan Pablo Białystok",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-juan-pablo-bialystok-2/"
+        },
+        {
+          "event_id": "12562",
+          "date": "2025-11-16",
+          "opponent_id": "6951",
+          "title": "WIARA PIASTA II vs Bosch Service Tech-Car",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-4/"
+        }
+      ],
       "player_stats_verified": false,
       "h2h": {
         "games": 6,
