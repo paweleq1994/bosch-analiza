@@ -45,7 +45,7 @@ class DuplicateGoalkeeperTests(unittest.TestCase):
         season = self.database["analysis"]["player_goal_coverage"]
         hala = next(record for record in season if record["sid"] == "146")
         self.assertEqual(hala["attributed_goals"], 31)
-        self.assertEqual(hala["unattributed_goals"], 1)
+        self.assertEqual(hala["unattributed_goals"], 0)
 
     def test_identity_guard_does_not_merge_other_people(self):
         primary = {"id": "7284", "name": "Rutkowski Mateusz (GK)", "season_stats": {}}
