@@ -5,6 +5,8 @@ import re
 import unicodedata
 from pathlib import Path
 
+from scouting_strength import team_strength, evidence as score_evidence
+
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"data"
 OUT=ROOT/"docs"/"assets"/"scouting.json"
@@ -19,21 +21,103 @@ def match_row(rows,name):
 def metric(row,field):
     return round(row[field]/row["matches"],3) if row and row.get("matches") and row.get(field) is not None else None
 
-def regularize(value, tier):
-    return max(0,min(100,value * (0.83 if tier==2 else 1)))
+def score(hall, orlik, old=None):
+    return team_strength(hall, orlik)
 
-def score(hall,orlik,old=None):
-    parts=[]
-    for row,weight in ((hall,.5),(orlik,.3),(old,.2)):
-        if not row or not row.get("matches"): continue
-        ppg=metric(row,"points")/3
-        gd=metric(row,"gf")-metric(row,"ga")
-        attack=metric(row,"gf")
-        defense=metric(row,"ga")
-        value=100*(.55*ppg+.2*max(0,min(1,(gd+2)/5))+.15*max(0,min(1,attack/5))+.1*max(0,min(1,1-defense/5)))
-        parts.append((regularize(value,row.get("tier",1)),weight))
-    if not parts: return None
-    return round(sum(v*w for v,w in parts)/sum(w for _,w in parts),1)
+
+def historical_players(team_name, team_id, old_profile, details_rows, promotion_rows, profile_map, overrides, refreshed):
+    candidates = []
+    seasons = {
+        "Orlik 2026": 2026.6,
+        "Hala 2025/26": 2026.2,
+        "Hala 2025/2026": 2026.2,
+        "Orlik 2025": 2025.6,
+        "Hala 2024/2025": 2025.2,
+        "Orlik 2024": 2024.6,
+        "Orlik 2023": 2023.6,
+    }
+
+    def add(row, fallback_season, provenance):
+        name = str(row.get("name") or "").strip()
+        player_id = str(row.get("id") or row.get("player_id") or "")
+        profile = profile_map.get(player_id) or {}
+
+        if name.startswith("Zawodnik #"):
+            name = str(profile.get("resolved_name") or "").strip()
+
+        if not name or name.startswith("Zawodnik #"):
+            return
+
+        goals = row.get("goals")
+        assists = row.get("assists")
+        season = str(row.get("source_season") or row.get("season") or fallback_season)
+        if not isinstance(goals, int) or not isinstance(assists, int):
+            return
+
+        candidates.append({
+            "id": player_id if player_id.isdigit() else None,
+            "name": name,
+            "apps": row.get("apps"),
+            "goals": goals,
+            "assists": assists,
+            "motm": row.get("motm") if row.get("motm") is not None else row.get("mvp"),
+            "source_season": season,
+            "source_label": row.get("source_label") or provenance,
+            "source_url": row.get("source_url") or row.get("profile_url") or profile.get("profile_url") or "",
+            "season_rank": seasons.get(season, 2020.0),
+        })
+
+    for row in refreshed.get(str(team_id), []):
+        add(row, "Orlik 2026", "Oficjalne statystyki SportsPress")
+
+    for row in overrides.get(team_name, []):
+        add(row, "Orlik 2026", "Oficjalny profil PLP")
+
+    for snapshot in details_rows:
+        if not snapshot.get("player_stats_complete"):
+            continue
+
+        division = snapshot.get("division")
+        season = {
+            "orlik_2026_h1": "Orlik 2026",
+            "orlik_2026_h2": "Orlik 2026",
+            "hala_2025_26_h1": "Hala 2025/26",
+            "hala_2025_26_h2": "Hala 2025/26",
+        }.get(division, division)
+
+        for row in snapshot.get("players") or []:
+            add(row, season, "PLP — oficjalne protokoły")
+
+    for row in promotion_rows:
+        if str(row.get("team_id")) == str(team_id):
+            add(row, row.get("season"), "Archiwum PLP — poprzednie sezony")
+
+    for row in old_profile.get("top_players") or []:
+        add(row, "Hala 2025/26", "Historyczny raport PLP")
+
+    for row in old_profile.get("orlik_2025_top_players") or []:
+        add(row, "Orlik 2025", "Historyczny raport PLP")
+
+    identified = {}
+
+    for row in candidates:
+        key = str(row.get("id") or "") or norm(row["name"])
+        previous = identified.get(key)
+        if previous is None or (
+            row["season_rank"], row["goals"] + row["assists"]
+        ) > (
+            previous["season_rank"], previous["goals"] + previous["assists"]
+        ):
+            identified[key] = row
+
+    top = sorted(identified.values(), key=lambda row: (
+        -row["season_rank"],
+        -(row["goals"] + row["assists"]),
+        row["name"],
+    ))
+
+    return [{key: value for key, value in row.items() if key != "season_rank"} for row in top[:8]]
+
 
 def benchmark(row):
     if not row: return []
@@ -86,12 +170,17 @@ def main():
     candidates=list(dict((norm(name),name) for name in candidates).values())
     details_path=DATA/"scouting_details.json"
     details=json.loads(details_path.read_text(encoding="utf-8")) if details_path.exists() else {"teams":{}}
+    player_map=json.loads((DATA/"player_profile_map.json").read_text(encoding="utf-8"))
+    promotion_archive=json.loads((DATA/"promoted_teams_analysis.json").read_text(encoding="utf-8"))
+    overrides=json.loads((DATA/"scouting_player_overrides.json").read_text(encoding="utf-8"))
+    refreshed_path=DATA/"scouting_player_updates.json"
+    refreshed=json.loads(refreshed_path.read_text(encoding="utf-8")) if refreshed_path.exists() else {}
     teams=[]
     for name in candidates:
         indoor=match_row(hall,name)
         outdoor=match_row(orlik,name) or match_row(lower,name)
         older=(old.get(norm(name)) or {}).get("hall")
-        old_data=({"name":name, "tier":2, "matches":older.get("matches"),"gf":older.get("gf"),"ga":older.get("ga"),"points":older.get("points")} if older else None)
+        old_data=({"name":name, "tier":2, "position":older.get("pos"),"matches":older.get("matches"),"gf":older.get("gf"),"ga":older.get("ga"),"points":older.get("points")} if older else None)
         # Never use duplicated same-season hall rows as "older" history.
         rating=score(indoor,outdoor,None)
         risk_basis=indoor or outdoor
@@ -118,15 +207,14 @@ def main():
         team_id=next((str(r.get("team_id")) for r in (hall+orlik+lower) if norm(r["name"])==norm(name) and r.get("team_id")),None)
         detailed=[v for v in details.get("teams",{}).values() if team_id and str(v["team_id"])==team_id]
         preferred=next((v for v in detailed if v["division"]=="hala_2026_27_h1"),None) or next((v for v in detailed if v["division"]=="hala_2025_26_h1"),None) or (detailed[0] if detailed else None)
-        team_players=preferred.get("players") if preferred and preferred.get("player_stats_complete") else None
-        player_rows=[{"name":f"Zawodnik #{p['id']}","id":p["id"],"apps":p["apps"],"goals":p["goals"],"assists":p["assists"],"source_season":preferred["division"]} for p in sorted(team_players,key=lambda p:-(p["goals"]+p["assists"]))] if team_players else []
+        player_rows=historical_players(name,team_id,profile,detailed,promotion_archive.get("player_rows",[]),player_map,overrides,refreshed)
         teams.append({
             "id":norm(name).replace(" ","-"),"name":name,
             "status":"confirmed_from_table" if current_hall else "candidate", "division":"verified_1_hala_2026_27" if current_hall else "projected_1_hala_2026_27",
             "origin":"promoted_II" if match_row(lower,name) else "retained_I",
             "hall":indoor,"orlik":outdoor,"historic_hall":old_data,
-            "strength":rating,"data_coverage":round(coverage,2),"confidence":confidence,
-            "players":player_rows or [{"name":p["name"],"id":p.get("player_id"),"apps":p.get("apps"),"goals":p.get("goals"),"assists":p.get("assists"),"source_season":"Hala 2025/26"} for p in stars[:7]],
+            "strength":rating,"strength_details":score_evidence(indoor,outdoor),"data_coverage":round(coverage,2),"confidence":confidence,
+            "players":player_rows,
             "plp_team_id":team_id,
             "season_match_details":preferred.get("matches",[]) if preferred else [],
             "player_stats_verified":bool(team_players),
@@ -141,7 +229,7 @@ def main():
         })
     teams.sort(key=lambda row: (-(row["strength"] or 0),row["name"]))
     metadata={**seed["meta"],"forecast_not_confirmed":not bool(current_hall),"snapshot_type":"live_hala_table" if current_hall else "projected_from_orlik"}
-    result={"meta":metadata,"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.5,"orlik_2026":.3,"older_hall":.2},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"50/30/20 reweighted among available seasons; do not replace missing data with zero","new_season_weight":"min(0.65, matches / (matches + 8))","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
+    result={"meta":metadata,"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.35,"orlik_2026":.65,"older_hall":0},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"65% Orlik 2026, 35% Hala 2025/26; explicit I/II league calibration, sample adjustment, and neutral prior when missing","new_season_weight":"0.65 verified Orlik 2026","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+"\n"
     if not OUT.exists() or OUT.read_text(encoding="utf-8")!=rendered:OUT.write_text(rendered,encoding="utf-8")
