@@ -115,7 +115,94 @@
       }
     }
   ],
-  "candidates": [],
-  "searches": 17,
-  "last_scan_date": "2026-10-18"
+  "candidates": [
+    {
+      "player_id": "2204",
+      "media_id": "2259",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/Znienacka.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Znienacka"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "2410",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/001_znienacka.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Znienacka"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "3569",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/Znienacka-1.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Znienacka"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "3681",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/06/znienacka_mfire.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Znienacka"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "4391",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/10/PTH-Maltrans.png",
+      "evidence": "historical_team_archive",
+      "team": "PTH Maltrans"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "5139",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/10/PTH-Maltrans.jpg",
+      "evidence": "historical_team_archive",
+      "team": "PTH Maltrans"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "5855",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2022/04/znienacka_www.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Znienacka"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "7533",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/10/PTH-Maltrans-1.jpg",
+      "evidence": "historical_team_archive",
+      "team": "PTH Maltrans"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "12849",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/10/PTH-Maltrans-2.jpg",
+      "evidence": "historical_team_archive",
+      "team": "PTH Maltrans"
+    },
+    {
+      "player_id": "2204",
+      "media_id": "12859",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2025/03/Zubry-Bema.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Żubry Bema"
+    },
+    {
+      "player_id": "6764",
+      "media_id": "2253",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/Adampol-Glovis.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Adampol Glovis"
+    },
+    {
+      "player_id": "6764",
+      "media_id": "12828",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/Adampol-Glovis-1.jpg",
+      "evidence": "historical_team_archive",
+      "team": "Adampol Glovis"
+    }
+  ],
+  "searches": 34,
+  "last_scan_date": "2026-10-18",
+  "club_scan_version": 2,
+  "historical_clubs_scanned": 4
 }

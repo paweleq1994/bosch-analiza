@@ -1,1 +1,330 @@
-{}
+{
+  "6951": [
+    {
+      "id": "12286",
+      "name": "Pietruczuk Paweł",
+      "apps": 1,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/"
+    }
+  ],
+  "1566": [
+    {
+      "id": "2166",
+      "name": "Masłowski Michał (GK)",
+      "apps": 10,
+      "goals": 0,
+      "assists": 1,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/maslowski-michal/"
+    }
+  ],
+  "10770": [
+    {
+      "id": "10913",
+      "name": "Stachurski Jakub",
+      "apps": 2,
+      "goals": 0,
+      "assists": 1,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/stachurski-jakub/"
+    }
+  ],
+  "10769": [
+    {
+      "id": "12292",
+      "name": "Dobrowolski Gabriel",
+      "apps": 1,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/dobrowolski-gabriel/"
+    },
+    {
+      "id": "10881",
+      "name": "Doroszkiewicz Norbert",
+      "apps": 1,
+      "goals": 0,
+      "assists": 1,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/doroszkiewicz-norbert/"
+    }
+  ],
+  "8193": [
+    {
+      "id": "12697",
+      "name": "Jabłoński Krystian",
+      "apps": 2,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/jablonski-krystian/"
+    }
+  ],
+  "10768": [
+    {
+      "id": "10873",
+      "name": "Kopczuk Dominik",
+      "apps": 3,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/kopczuk-dominik/"
+    }
+  ],
+  "5920": [
+    {
+      "id": "3788",
+      "name": "Szarejko Michał",
+      "apps": 14,
+      "goals": 2,
+      "assists": 4,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/szarejko-michal/"
+    }
+  ],
+  "11754": [
+    {
+      "id": "11929",
+      "name": "Malyshka Valery",
+      "apps": 5,
+      "goals": 0,
+      "assists": 2,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/malyshka-valery/"
+    },
+    {
+      "id": "12307",
+      "name": "Wasilewski Mateusz",
+      "apps": 3,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/wasilewski-mateusz/"
+    },
+    {
+      "id": "11920",
+      "name": "Korycki Michał",
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/korycki-michal/"
+    },
+    {
+      "id": "13014",
+      "name": "Rodriguez Darwin",
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/rodriguez-darwin/"
+    }
+  ],
+  "1564": [
+    {
+      "id": "1651",
+      "name": "Dawidowski Karol",
+      "apps": 2,
+      "goals": 0,
+      "assists": 2,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/dawidowski-karol/"
+    },
+    {
+      "id": "10824",
+      "name": "Józwowicz Adam",
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/jozwowicz-adam/"
+    },
+    {
+      "id": "3788",
+      "name": "Szarejko Michał",
+      "apps": 3,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/szarejko-michal/"
+    }
+  ],
+  "1574": [
+    {
+      "id": "2231",
+      "name": "Mordasewicz Sebastian (GK)",
+      "apps": 9,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2026",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian/"
+    },
+    {
+      "id": "3788",
+      "name": "Szarejko Michał",
+      "apps": 3,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2026",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/szarejko-michal/"
+    }
+  ],
+  "12343": [
+    {
+      "id": "8959",
+      "name": "Niegowski Norbert",
+      "apps": 6,
+      "goals": 4,
+      "assists": 3,
+      "motm": 1,
+      "source_season": "Orlik 2026",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/niegowski-norbert/"
+    },
+    {
+      "id": "5376",
+      "name": "Korzunowicz Krzysztof",
+      "apps": 2,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/korzunowicz-krzysztof/"
+    },
+    {
+      "id": "12728",
+      "name": "Jackowski Krzysztof (GK)",
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/jackowski-krzysztof/"
+    }
+  ],
+  "4389": [
+    {
+      "id": "2231",
+      "name": "Mordasewicz Sebastian (GK)",
+      "apps": 6,
+      "goals": 0,
+      "assists": 2,
+      "motm": 1,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian/"
+    },
+    {
+      "id": "9847",
+      "name": "Mordasewicz Sebastian",
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian-2/"
+    }
+  ],
+  "8194": [
+    {
+      "id": "11542",
+      "name": "Guziejko Dawid",
+      "apps": 4,
+      "goals": 3,
+      "assists": 5,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/guziejko-dawid/"
+    },
+    {
+      "id": "2166",
+      "name": "Masłowski Michał (GK)",
+      "apps": 7,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2026",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/maslowski-michal/"
+    }
+  ],
+  "6981": [
+    {
+      "id": "11816",
+      "name": "Piatrou Andrei",
+      "apps": 6,
+      "goals": 1,
+      "assists": 2,
+      "motm": 1,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/piatrou-andrei/"
+    },
+    {
+      "id": "11543",
+      "name": "Bahdzevich Siarhei",
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Orlik 2025",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/bahdzevich-siarhei/"
+    }
+  ],
+  "1573": [
+    {
+      "id": "11820",
+      "name": "Załuska Markus",
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "source_season": "Hala 2025/26",
+      "source_label": "SportsPress: potwierdzony sezon i klub",
+      "source_url": "https://podlaskaliga.pl/zawodnik/zaluska-markus/"
+    }
+  ],
+  "_checked_on": "2026-10-18"
+}

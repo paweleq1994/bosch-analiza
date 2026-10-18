@@ -28,216 +28,6 @@
   },
   "teams": [
     {
-      "id": "hurtownia-krokus",
-      "name": "Hurtownia Krokus",
-      "status": "candidate",
-      "division": "projected_1_hala_2026_27",
-      "origin": "retained_I",
-      "hall": {
-        "team_id": "1564",
-        "name": "Hurtownia Krokus",
-        "position": 1,
-        "matches": 15,
-        "wins": 13,
-        "draws": 0,
-        "losses": 2,
-        "gf": 75,
-        "ga": 13,
-        "points": 39,
-        "tier": 1
-      },
-      "orlik": {
-        "team_id": "1564",
-        "name": "Hurtownia Krokus",
-        "position": 3,
-        "matches": 15,
-        "wins": 12,
-        "draws": 0,
-        "losses": 3,
-        "gf": 63,
-        "ga": 20,
-        "points": 36,
-        "tier": 1
-      },
-      "historic_hall": null,
-      "strength": 88.1,
-      "data_coverage": 0.8,
-      "confidence": "średnia",
-      "players": [],
-      "plp_team_id": "1564",
-      "season_match_details": [
-        {
-          "event_id": "12549",
-          "date": "2026-03-22",
-          "opponent_id": "1573",
-          "title": "M-Fire vs Hurtownia Krokus",
-          "gf": 8,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-hurtownia-krokus-6/"
-        },
-        {
-          "event_id": "12541",
-          "date": "2026-03-14",
-          "opponent_id": "1574",
-          "title": "Hurtownia Krokus vs Soccer Auto Wygoda",
-          "gf": 9,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-soccer-auto-wygoda/"
-        },
-        {
-          "event_id": "12530",
-          "date": "2026-03-08",
-          "opponent_id": "8194",
-          "title": "Hurtownia Krokus vs FC GRUBASSY",
-          "gf": 4,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-grubassy-2/"
-        },
-        {
-          "event_id": "12519",
-          "date": "2026-02-28",
-          "opponent_id": "11753",
-          "title": "Żubry Bema vs Hurtownia Krokus",
-          "gf": 9,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hurtownia-krokus/"
-        },
-        {
-          "event_id": "12513",
-          "date": "2026-02-22",
-          "opponent_id": "1580",
-          "title": "Hurtownia Krokus vs Top Auto",
-          "gf": 4,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-top-auto-4/"
-        },
-        {
-          "event_id": "12510",
-          "date": "2026-02-14",
-          "opponent_id": "10056",
-          "title": "Hanbud vs Hurtownia Krokus",
-          "gf": 4,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
-        },
-        {
-          "event_id": "12495",
-          "date": "2026-02-01",
-          "opponent_id": "6988",
-          "title": "Hurtownia Krokus vs VESTA",
-          "gf": 4,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-vesta-2/"
-        },
-        {
-          "event_id": "12488",
-          "date": "2026-01-24",
-          "opponent_id": "1576",
-          "title": "4Technology vs Hurtownia Krokus",
-          "gf": 7,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hurtownia-krokus-5/"
-        },
-        {
-          "event_id": "12481",
-          "date": "2026-01-18",
-          "opponent_id": "6981",
-          "title": "Hurtownia Krokus vs INTaF",
-          "gf": 1,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-intaf-2/"
-        },
-        {
-          "event_id": "12471",
-          "date": "2026-01-10",
-          "opponent_id": "1565",
-          "title": "Adampol Glovis vs Hurtownia Krokus",
-          "gf": 3,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hurtownia-krokus-3/"
-        },
-        {
-          "event_id": "12463",
-          "date": "2025-12-21",
-          "opponent_id": "4389",
-          "title": "PTH Maltrans vs Hurtownia Krokus",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
-        },
-        {
-          "event_id": "12459",
-          "date": "2025-12-13",
-          "opponent_id": "4641",
-          "title": "Hurtownia Krokus vs CEDC Polmos Białystok",
-          "gf": 4,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-cedc-polmos-bialystok-2/"
-        },
-        {
-          "event_id": "12444",
-          "date": "2025-11-29",
-          "opponent_id": "6959",
-          "title": "Hurtownia Krokus vs Fc Bajaga",
-          "gf": 6,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
-        },
-        {
-          "event_id": "12440",
-          "date": "2025-11-23",
-          "opponent_id": "5920",
-          "title": "Mają Rozmach vs Hurtownia Krokus",
-          "gf": 7,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-hurtownia-krokus-4/"
-        },
-        {
-          "event_id": "12430",
-          "date": "2025-11-15",
-          "opponent_id": "1568",
-          "title": "Hurtownia Krokus vs FC DrTusz",
-          "gf": 3,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-drtusz-5/"
-        }
-      ],
-      "player_stats_verified": false,
-      "h2h": {
-        "games": 1,
-        "wins": 0,
-        "draws": 0,
-        "losses": 1,
-        "matches": [
-          {
-            "date": "2023-11-26",
-            "gf": 0,
-            "ga": 5,
-            "id": "9480"
-          }
-        ]
-      },
-      "statistical_watchouts": [
-        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
-        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
-        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
-      ],
-      "plan_a": [
-        "Wysoka skuteczność ataku rywala: utrzymać asekurację po stracie, ograniczać otwarte wymiany i nie przesądzać sposobu pressingu bez nagrań.",
-        "Rywal ma niski wskaźnik straconych goli: cierpliwe budowanie akcji, zmiana strony i przygotowane stałe fragmenty.",
-        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
-      ],
-      "plan_b": [
-        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
-        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
-        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
-      ],
-      "scouting_status": "statistical_only",
-      "observations": [],
-      "videos": [],
-      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
-    },
-    {
       "id": "adampol-glovis",
       "name": "Adampol Glovis",
       "status": "candidate",
@@ -270,7 +60,13 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 84.3,
+      "strength": 86.5,
+      "strength_details": {
+        "orlik": 89.7,
+        "hala": 80.6,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
@@ -448,217 +244,221 @@
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
-      "id": "biuro-serwis-kopiarki",
-      "name": "Biuro Serwis-Kopiarki",
+      "id": "hurtownia-krokus",
+      "name": "Hurtownia Krokus",
       "status": "candidate",
       "division": "projected_1_hala_2026_27",
-      "origin": "promoted_II",
-      "hall": null,
-      "orlik": {
-        "team_id": "12342",
-        "name": "Biuro Serwis-Kopiarki",
+      "origin": "retained_I",
+      "hall": {
+        "team_id": "1564",
+        "name": "Hurtownia Krokus",
         "position": 1,
+        "matches": 15,
+        "wins": 13,
+        "draws": 0,
+        "losses": 2,
+        "gf": 75,
+        "ga": 13,
+        "points": 39,
+        "tier": 1
+      },
+      "orlik": {
+        "team_id": "1564",
+        "name": "Hurtownia Krokus",
+        "position": 3,
         "matches": 15,
         "wins": 12,
         "draws": 0,
         "losses": 3,
-        "gf": 73,
-        "ga": 21,
+        "gf": 63,
+        "ga": 20,
         "points": 36,
-        "tier": 2
+        "tier": 1
       },
-      "historic_hall": {
-        "name": "Biuro Serwis-Kopiarki",
-        "tier": 2,
-        "matches": 15,
-        "gf": 44,
-        "ga": 46,
-        "points": 23
+      "historic_hall": null,
+      "strength": 85.2,
+      "strength_details": {
+        "orlik": 83.4,
+        "hala": 88.4,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
       },
-      "strength": 71.2,
-      "data_coverage": 0.3,
-      "confidence": "niska",
+      "data_coverage": 0.8,
+      "confidence": "średnia",
       "players": [
         {
-          "name": "Mosiej Łukasz",
-          "id": 4448,
-          "apps": 15,
-          "goals": 30,
-          "assists": 8,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Smirnov Yaroslav",
-          "id": 13022,
-          "apps": 8,
-          "goals": 1,
-          "assists": 9,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Kosiński Tomasz",
-          "id": 12757,
-          "apps": 4,
-          "goals": 2,
-          "assists": 4,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Boratyński Łukasz",
-          "id": 12749,
-          "apps": 11,
-          "goals": 1,
-          "assists": 2,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Żukowski Łukasz",
-          "id": 13024,
+          "id": "1651",
+          "name": "Dawidowski Karol",
           "apps": 2,
-          "goals": 2,
+          "goals": 0,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/dawidowski-karol/"
+        },
+        {
+          "id": "10824",
+          "name": "Józwowicz Adam",
+          "apps": 1,
+          "goals": 0,
           "assists": 0,
-          "source_season": "Hala 2025/26"
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/jozwowicz-adam/"
+        },
+        {
+          "id": "3788",
+          "name": "Szarejko Michał",
+          "apps": 3,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/szarejko-michal/"
         }
       ],
-      "plp_team_id": "12342",
+      "plp_team_id": "1564",
       "season_match_details": [
         {
-          "event_id": "12675",
-          "date": "2026-03-21",
-          "opponent_id": "4643",
-          "title": "GKS Grabówka vs Biuro Serwis-Kopiarki Białystok",
-          "gf": 6,
-          "ga": 5,
-          "url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-biuro-serwis-kopiarki-bialystok/"
-        },
-        {
-          "event_id": "12673",
-          "date": "2026-03-15",
-          "opponent_id": "10770",
-          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
-          "gf": 1,
+          "event_id": "12549",
+          "date": "2026-03-22",
+          "opponent_id": "1573",
+          "title": "M-Fire vs Hurtownia Krokus",
+          "gf": 8,
           "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-hurtownia-krokus-6/"
         },
         {
-          "event_id": "12660",
-          "date": "2026-03-07",
-          "opponent_id": "6951",
-          "title": "Bosch Service Tech-Car vs Biuro Serwis-Kopiarki Białystok",
+          "event_id": "12541",
+          "date": "2026-03-14",
+          "opponent_id": "1574",
+          "title": "Hurtownia Krokus vs Soccer Auto Wygoda",
+          "gf": 9,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12530",
+          "date": "2026-03-08",
+          "opponent_id": "8194",
+          "title": "Hurtownia Krokus vs FC GRUBASSY",
           "gf": 4,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/"
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-grubassy-2/"
         },
         {
-          "event_id": "12649",
-          "date": "2026-03-01",
-          "opponent_id": "11756",
-          "title": "Biuro Serwis-Kopiarki Białystok vs ZPS Biaform SA",
-          "gf": 3,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zps-biaform-sa/"
+          "event_id": "12519",
+          "date": "2026-02-28",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs Hurtownia Krokus",
+          "gf": 9,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hurtownia-krokus/"
         },
         {
-          "event_id": "12642",
-          "date": "2026-02-21",
-          "opponent_id": "10768",
-          "title": "Zachodnia Kingdom vs Biuro Serwis-Kopiarki Białystok",
+          "event_id": "12513",
+          "date": "2026-02-22",
+          "opponent_id": "1580",
+          "title": "Hurtownia Krokus vs Top Auto",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-top-auto-4/"
+        },
+        {
+          "event_id": "12510",
+          "date": "2026-02-14",
+          "opponent_id": "10056",
+          "title": "Hanbud vs Hurtownia Krokus",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
+        },
+        {
+          "event_id": "12495",
+          "date": "2026-02-01",
+          "opponent_id": "6988",
+          "title": "Hurtownia Krokus vs VESTA",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-vesta-2/"
+        },
+        {
+          "event_id": "12488",
+          "date": "2026-01-24",
+          "opponent_id": "1576",
+          "title": "4Technology vs Hurtownia Krokus",
           "gf": 7,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-biuro-serwis-kopiarki-bialystok/"
-        },
-        {
-          "event_id": "12634",
-          "date": "2026-02-15",
-          "opponent_id": "6989",
-          "title": "Biuro Serwis-Kopiarki Białystok vs WIARA PIASTA II",
-          "gf": 0,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-wiara-piasta-ii/"
-        },
-        {
-          "event_id": "12629",
-          "date": "2026-01-31",
-          "opponent_id": "12343",
-          "title": "Prostal vs Biuro Serwis-Kopiarki Białystok",
-          "gf": 3,
           "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-biuro-serwis-kopiarki-bialystok/"
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hurtownia-krokus-5/"
         },
         {
-          "event_id": "12618",
-          "date": "2026-01-25",
-          "opponent_id": "4382",
-          "title": "Biuro Serwis-Kopiarki Białystok vs Auto Team",
-          "gf": 2,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-auto-team/"
-        },
-        {
-          "event_id": "12613",
-          "date": "2026-01-17",
-          "opponent_id": "1566",
-          "title": "IST Trade vs Biuro Serwis-Kopiarki Białystok",
+          "event_id": "12481",
+          "date": "2026-01-18",
+          "opponent_id": "6981",
+          "title": "Hurtownia Krokus vs INTaF",
           "gf": 1,
           "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-biuro-serwis-kopiarki-bialystok/"
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-intaf-2/"
         },
         {
-          "event_id": "12603",
-          "date": "2026-01-11",
-          "opponent_id": "8196",
-          "title": "Biuro Serwis-Kopiarki Białystok vs OSMAR",
+          "event_id": "12471",
+          "date": "2026-01-10",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs Hurtownia Krokus",
           "gf": 3,
-          "ga": 5,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-osmar/"
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hurtownia-krokus-3/"
         },
         {
-          "event_id": "12591",
-          "date": "2025-12-20",
-          "opponent_id": "6984",
-          "title": "FC Progress Białystok vs Biuro Serwis-Kopiarki Białystok",
-          "gf": 3,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
+          "event_id": "12463",
+          "date": "2025-12-21",
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Hurtownia Krokus",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
         },
         {
-          "event_id": "12586",
-          "date": "2025-12-14",
-          "opponent_id": "8195",
-          "title": "Waleczne Orły vs Biuro Serwis-Kopiarki Białystok",
-          "gf": 0,
-          "ga": 8,
-          "url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-biuro-serwis-kopiarki-bialystok/"
-        },
-        {
-          "event_id": "12578",
-          "date": "2025-11-30",
-          "opponent_id": "11754",
-          "title": "Juan Pablo Białystok vs Biuro Serwis-Kopiarki Białystok",
-          "gf": 4,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
-        },
-        {
-          "event_id": "12563",
-          "date": "2025-11-22",
-          "opponent_id": "10769",
-          "title": "Biuro Serwis-Kopiarki Białystok vs OST Sport",
-          "gf": 3,
-          "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-ost-sport/"
-        },
-        {
-          "event_id": "12556",
-          "date": "2025-11-16",
-          "opponent_id": "8193",
-          "title": "Biuro Serwis-Kopiarki Białystok vs Unibep Bielsk Podlaski",
+          "event_id": "12459",
+          "date": "2025-12-13",
+          "opponent_id": "4641",
+          "title": "Hurtownia Krokus vs CEDC Polmos Białystok",
           "gf": 4,
           "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-unibep-bielsk-podlaski/"
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-cedc-polmos-bialystok-2/"
+        },
+        {
+          "event_id": "12444",
+          "date": "2025-11-29",
+          "opponent_id": "6959",
+          "title": "Hurtownia Krokus vs Fc Bajaga",
+          "gf": 6,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12440",
+          "date": "2025-11-23",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs Hurtownia Krokus",
+          "gf": 7,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-hurtownia-krokus-4/"
+        },
+        {
+          "event_id": "12430",
+          "date": "2025-11-15",
+          "opponent_id": "1568",
+          "title": "Hurtownia Krokus vs FC DrTusz",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-drtusz-5/"
         }
       ],
-      "player_stats_verified": false,
+      "player_stats_verified": true,
       "h2h": {
         "games": 1,
         "wins": 0,
@@ -666,10 +466,10 @@
         "losses": 1,
         "matches": [
           {
-            "date": "2026-06-13",
-            "gf": 1,
-            "ga": 3,
-            "id": "orlik26-7"
+            "date": "2023-11-26",
+            "gf": 0,
+            "ga": 5,
+            "id": "9480"
           }
         ]
       },
@@ -690,24 +490,7 @@
       ],
       "scouting_status": "statistical_only",
       "observations": [],
-      "videos": [
-        {
-          "id": "KIEpFAUcK30",
-          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | II POŁOWA",
-          "url": "https://www.youtube.com/watch?v=KIEpFAUcK30",
-          "date": "2026-06-13",
-          "match_id": "orlik26-7",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "y3zlu5H0HE0",
-          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | I POŁOWA",
-          "url": "https://www.youtube.com/watch?v=y3zlu5H0HE0",
-          "date": "2026-06-13",
-          "match_id": "orlik26-7",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        }
-      ],
+      "videos": [],
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
@@ -743,10 +526,28 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 69.8,
+      "strength": 80.4,
+      "strength_details": {
+        "orlik": 86.9,
+        "hala": 68.4,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
-      "players": [],
+      "players": [
+        {
+          "id": null,
+          "name": "Dudko Jakub",
+          "apps": 12,
+          "goals": 35,
+          "assists": 10,
+          "motm": 5,
+          "source_season": "Orlik 2026",
+          "source_label": "Oficjalny profil PLP; Orlik 2026",
+          "source_url": "https://podlaskaliga.pl/zawodnik/dudko-jakub/"
+        }
+      ],
       "plp_team_id": "1576",
       "season_match_details": [
         {
@@ -940,10 +741,105 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 65.2,
+      "strength": 71.7,
+      "strength_details": {
+        "orlik": 72.8,
+        "hala": null,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.3,
       "confidence": "niska",
-      "players": [],
+      "players": [
+        {
+          "id": "8959",
+          "name": "Niegowski Norbert",
+          "apps": 6,
+          "goals": 4,
+          "assists": 3,
+          "motm": 1,
+          "source_season": "Orlik 2026",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/niegowski-norbert/"
+        },
+        {
+          "id": "12242",
+          "name": "Mackiewicz Karol",
+          "apps": 14,
+          "goals": 29,
+          "assists": 9,
+          "motm": 9,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/mackiewicz-karol/"
+        },
+        {
+          "id": "12727",
+          "name": "Gryko Artur",
+          "apps": 13,
+          "goals": 15,
+          "assists": 3,
+          "motm": 2,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/gryko-artur/"
+        },
+        {
+          "id": "10823",
+          "name": "Nobert Konrad",
+          "apps": 12,
+          "goals": 3,
+          "assists": 9,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/nobert-konrad/"
+        },
+        {
+          "id": "12726",
+          "name": "Gąsowski Jakub",
+          "apps": 14,
+          "goals": 2,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/gasowski-jakub/"
+        },
+        {
+          "id": "12730",
+          "name": "Krysiewicz Daniel",
+          "apps": 12,
+          "goals": 1,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/krysiewicz-daniel/"
+        },
+        {
+          "id": "13025",
+          "name": "Pawłowski Karol (GK)",
+          "apps": 9,
+          "goals": 1,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/pawlowski-karol/"
+        },
+        {
+          "id": "12725",
+          "name": "Dzienis Robert",
+          "apps": 8,
+          "goals": 4,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/dzienis-robert/"
+        }
+      ],
       "plp_team_id": "12343",
       "season_match_details": [
         {
@@ -1082,7 +978,7 @@
           "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zimne-dranie/"
         }
       ],
-      "player_stats_verified": false,
+      "player_stats_verified": true,
       "h2h": {
         "games": 1,
         "wins": 0,
@@ -1113,302 +1009,6 @@
       "scouting_status": "statistical_only",
       "observations": [],
       "videos": [],
-      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
-    },
-    {
-      "id": "zimne-dranie",
-      "name": "Zimne Dranie",
-      "status": "candidate",
-      "division": "projected_1_hala_2026_27",
-      "origin": "promoted_II",
-      "hall": null,
-      "orlik": {
-        "team_id": "10770",
-        "name": "Zimne Dranie",
-        "position": 3,
-        "matches": 15,
-        "wins": 11,
-        "draws": 1,
-        "losses": 3,
-        "gf": 50,
-        "ga": 21,
-        "points": 34,
-        "tier": 2
-      },
-      "historic_hall": {
-        "name": "Zimne Dranie",
-        "tier": 2,
-        "matches": 15,
-        "gf": 62,
-        "ga": 37,
-        "points": 26
-      },
-      "strength": 61.8,
-      "data_coverage": 0.3,
-      "confidence": "niska",
-      "players": [
-        {
-          "name": "Stachurski Łukasz",
-          "id": 10911,
-          "apps": 15,
-          "goals": 10,
-          "assists": 14,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Oświeciński Maciej",
-          "id": 10909,
-          "apps": 15,
-          "goals": 13,
-          "assists": 6,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Pawluczuk Przemysław",
-          "id": 10910,
-          "apps": 14,
-          "goals": 12,
-          "assists": 2,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Roszkowski Michał",
-          "id": 11902,
-          "apps": 14,
-          "goals": 5,
-          "assists": 3,
-          "source_season": "Hala 2025/26"
-        },
-        {
-          "name": "Stachurski Kacper",
-          "id": 10915,
-          "apps": 12,
-          "goals": 6,
-          "assists": 1,
-          "source_season": "Hala 2025/26"
-        }
-      ],
-      "plp_team_id": "10770",
-      "season_match_details": [
-        {
-          "event_id": "12680",
-          "date": "2026-03-21",
-          "opponent_id": "8195",
-          "title": "Zimne Dranie vs Waleczne Orły",
-          "gf": 0,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-waleczne-orly-2/"
-        },
-        {
-          "event_id": "12673",
-          "date": "2026-03-15",
-          "opponent_id": "12342",
-          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
-          "gf": 1,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
-        },
-        {
-          "event_id": "12658",
-          "date": "2026-03-07",
-          "opponent_id": "10769",
-          "title": "Zimne Dranie vs OST Sport",
-          "gf": 3,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-ost-sport-2/"
-        },
-        {
-          "event_id": "12650",
-          "date": "2026-03-01",
-          "opponent_id": "6984",
-          "title": "FC Progress Białystok vs Zimne Dranie",
-          "gf": 4,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-zimne-dranie/"
-        },
-        {
-          "event_id": "12643",
-          "date": "2026-02-21",
-          "opponent_id": "4643",
-          "title": "Zimne Dranie vs GKS Grabówka",
-          "gf": 12,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-gks-grabowka/"
-        },
-        {
-          "event_id": "12632",
-          "date": "2026-02-15",
-          "opponent_id": "11754",
-          "title": "Juan Pablo Białystok vs Zimne Dranie",
-          "gf": 6,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-zimne-dranie/"
-        },
-        {
-          "event_id": "12631",
-          "date": "2026-01-31",
-          "opponent_id": "6951",
-          "title": "Bosch Service Tech-Car vs Zimne Dranie",
-          "gf": 5,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/"
-        },
-        {
-          "event_id": "12619",
-          "date": "2026-01-25",
-          "opponent_id": "11756",
-          "title": "Zimne Dranie vs ZPS Biaform SA",
-          "gf": 0,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-zps-biaform-sa-3/"
-        },
-        {
-          "event_id": "12610",
-          "date": "2026-01-17",
-          "opponent_id": "10768",
-          "title": "Zachodnia Kingdom vs Zimne Dranie",
-          "gf": 11,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-zimne-dranie-2/"
-        },
-        {
-          "event_id": "12605",
-          "date": "2026-01-11",
-          "opponent_id": "6989",
-          "title": "Zimne Dranie vs WIARA PIASTA II",
-          "gf": 4,
-          "ga": 5,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-wiara-piasta-ii-2/"
-        },
-        {
-          "event_id": "12594",
-          "date": "2025-12-20",
-          "opponent_id": "8193",
-          "title": "Zimne Dranie vs Unibep Bielsk Podlaski",
-          "gf": 4,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-unibep-bielsk-podlaski-2/"
-        },
-        {
-          "event_id": "12582",
-          "date": "2025-12-14",
-          "opponent_id": "4382",
-          "title": "Zimne Dranie vs Auto Team",
-          "gf": 2,
-          "ga": 5,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-auto-team/"
-        },
-        {
-          "event_id": "12576",
-          "date": "2025-11-30",
-          "opponent_id": "1566",
-          "title": "IST Trade vs Zimne Dranie",
-          "gf": 5,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-zimne-dranie/"
-        },
-        {
-          "event_id": "12570",
-          "date": "2025-11-22",
-          "opponent_id": "8196",
-          "title": "Zimne Dranie vs OSMAR",
-          "gf": 3,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-osmar-2/"
-        },
-        {
-          "event_id": "12557",
-          "date": "2025-11-16",
-          "opponent_id": "12343",
-          "title": "Prostal vs Zimne Dranie",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zimne-dranie/"
-        }
-      ],
-      "player_stats_verified": false,
-      "h2h": {
-        "games": 4,
-        "wins": 0,
-        "draws": 0,
-        "losses": 4,
-        "matches": [
-          {
-            "date": "2025-02-16",
-            "gf": 1,
-            "ga": 3,
-            "id": "11389"
-          },
-          {
-            "date": "2025-09-14",
-            "gf": 2,
-            "ga": 4,
-            "id": "12132"
-          },
-          {
-            "date": "2026-01-31",
-            "gf": 1,
-            "ga": 5,
-            "id": "12631"
-          },
-          {
-            "date": "2026-05-30",
-            "gf": 0,
-            "ga": 1,
-            "id": "orlik26-6"
-          }
-        ]
-      },
-      "statistical_watchouts": [
-        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
-        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
-      ],
-      "plan_a": [
-        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
-        "Rywal ma niski wskaźnik straconych goli: cierpliwe budowanie akcji, zmiana strony i przygotowane stałe fragmenty.",
-        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
-      ],
-      "plan_b": [
-        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
-        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
-        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
-      ],
-      "scouting_status": "statistical_only",
-      "observations": [],
-      "videos": [
-        {
-          "id": "rUIfShSXf34",
-          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | II połowa",
-          "url": "https://www.youtube.com/watch?v=rUIfShSXf34",
-          "date": "2025-02-16",
-          "match_id": "11389",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "Dx9vHHy-P84",
-          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | I połowa",
-          "url": "https://www.youtube.com/watch?v=Dx9vHHy-P84",
-          "date": "2025-02-16",
-          "match_id": "11389",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "J-ZpQOlLw54",
-          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | I POŁOWA",
-          "url": "https://www.youtube.com/watch?v=J-ZpQOlLw54",
-          "date": "2026-05-30",
-          "match_id": "orlik26-6",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "kOiaVJJrVh0",
-          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | II POŁOWA",
-          "url": "https://www.youtube.com/watch?v=kOiaVJJrVh0",
-          "date": "2026-05-30",
-          "match_id": "orlik26-6",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        }
-      ],
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
@@ -1444,10 +1044,39 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 61.4,
+      "strength": 71.2,
+      "strength_details": {
+        "orlik": 71.1,
+        "hala": 71.3,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
-      "players": [],
+      "players": [
+        {
+          "id": "2231",
+          "name": "Mordasewicz Sebastian (GK)",
+          "apps": 9,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Orlik 2026",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian/"
+        },
+        {
+          "id": "3788",
+          "name": "Szarejko Michał",
+          "apps": 3,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Orlik 2026",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/szarejko-michal/"
+        }
+      ],
       "plp_team_id": "1574",
       "season_match_details": [
         {
@@ -1586,455 +1215,7 @@
           "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-4technology/"
         }
       ],
-      "player_stats_verified": false,
-      "h2h": {
-        "games": 0,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "matches": []
-      },
-      "statistical_watchouts": [
-        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
-      ],
-      "plan_a": [
-        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
-        "Z piłką: testować zmianę strony i wejścia trzeciego zawodnika, obserwując reakcję rywala.",
-        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
-      ],
-      "plan_b": [
-        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
-        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
-        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
-      ],
-      "scouting_status": "statistical_only",
-      "observations": [],
-      "videos": [],
-      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
-    },
-    {
-      "id": "fc-bajaga",
-      "name": "Fc Bajaga",
-      "status": "candidate",
-      "division": "projected_1_hala_2026_27",
-      "origin": "retained_I",
-      "hall": {
-        "team_id": "6959",
-        "name": "Fc Bajaga",
-        "position": 3,
-        "matches": 15,
-        "wins": 10,
-        "draws": 3,
-        "losses": 2,
-        "gf": 44,
-        "ga": 31,
-        "points": 33,
-        "tier": 1
-      },
-      "orlik": {
-        "team_id": "6959",
-        "name": "Fc Bajaga",
-        "position": 7,
-        "matches": 15,
-        "wins": 6,
-        "draws": 3,
-        "losses": 6,
-        "gf": 34,
-        "ga": 40,
-        "points": 21,
-        "tier": 1
-      },
-      "historic_hall": null,
-      "strength": 57.9,
-      "data_coverage": 0.8,
-      "confidence": "średnia",
-      "players": [],
-      "plp_team_id": "6959",
-      "season_match_details": [
-        {
-          "event_id": "12547",
-          "date": "2026-03-22",
-          "opponent_id": "1580",
-          "title": "Top Auto vs Fc Bajaga",
-          "gf": 2,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12538",
-          "date": "2026-03-14",
-          "opponent_id": "5920",
-          "title": "Fc Bajaga vs Mają Rozmach",
-          "gf": 5,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-maja-rozmach-4/"
-        },
-        {
-          "event_id": "12534",
-          "date": "2026-03-08",
-          "opponent_id": "11753",
-          "title": "Fc Bajaga vs Żubry Bema",
-          "gf": 4,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-zubry-bema/"
-        },
-        {
-          "event_id": "12521",
-          "date": "2026-02-28",
-          "opponent_id": "1574",
-          "title": "Fc Bajaga vs Soccer Auto Wygoda",
-          "gf": 3,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-soccer-auto-wygoda/"
-        },
-        {
-          "event_id": "12514",
-          "date": "2026-02-22",
-          "opponent_id": "8194",
-          "title": "FC GRUBASSY vs Fc Bajaga",
-          "gf": 5,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-bajaga-2/"
-        },
-        {
-          "event_id": "12503",
-          "date": "2026-02-14",
-          "opponent_id": "1568",
-          "title": "FC DrTusz vs Fc Bajaga",
-          "gf": 1,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12502",
-          "date": "2026-02-01",
-          "opponent_id": "1576",
-          "title": "Fc Bajaga vs 4Technology",
-          "gf": 4,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-4technology-3/"
-        },
-        {
-          "event_id": "12487",
-          "date": "2026-01-24",
-          "opponent_id": "6981",
-          "title": "INTaF vs Fc Bajaga",
-          "gf": 3,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-fc-bajaga-3/"
-        },
-        {
-          "event_id": "12482",
-          "date": "2026-01-18",
-          "opponent_id": "1565",
-          "title": "Fc Bajaga vs Adampol Glovis",
-          "gf": 2,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-adampol-glovis/"
-        },
-        {
-          "event_id": "12474",
-          "date": "2026-01-10",
-          "opponent_id": "4389",
-          "title": "PTH Maltrans vs Fc Bajaga",
-          "gf": 3,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12468",
-          "date": "2025-12-21",
-          "opponent_id": "10056",
-          "title": "Hanbud vs Fc Bajaga",
-          "gf": 3,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12460",
-          "date": "2025-12-13",
-          "opponent_id": "1573",
-          "title": "Fc Bajaga vs M-Fire",
-          "gf": 5,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-m-fire/"
-        },
-        {
-          "event_id": "12444",
-          "date": "2025-11-29",
-          "opponent_id": "1564",
-          "title": "Hurtownia Krokus vs Fc Bajaga",
-          "gf": 0,
-          "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
-        },
-        {
-          "event_id": "12438",
-          "date": "2025-11-23",
-          "opponent_id": "6988",
-          "title": "VESTA vs Fc Bajaga",
-          "gf": 2,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12427",
-          "date": "2025-11-15",
-          "opponent_id": "4641",
-          "title": "Fc Bajaga vs CEDC Polmos Białystok",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-cedc-polmos-bialystok/"
-        }
-      ],
-      "player_stats_verified": false,
-      "h2h": {
-        "games": 2,
-        "wins": 2,
-        "draws": 0,
-        "losses": 0,
-        "matches": [
-          {
-            "date": "2023-03-19",
-            "gf": 4,
-            "ga": 3,
-            "id": "7875"
-          },
-          {
-            "date": "2023-10-01",
-            "gf": 5,
-            "ga": 1,
-            "id": "8452"
-          }
-        ]
-      },
-      "statistical_watchouts": [
-        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
-      ],
-      "plan_a": [
-        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
-        "Z piłką: testować zmianę strony i wejścia trzeciego zawodnika, obserwując reakcję rywala.",
-        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
-      ],
-      "plan_b": [
-        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
-        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
-        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
-      ],
-      "scouting_status": "statistical_only",
-      "observations": [],
-      "videos": [
-        {
-          "id": "gSjI9uOEdec",
-          "title": "Boschowcy vs Bajaga 4:3 - II potowa",
-          "url": "https://www.youtube.com/watch?v=gSjI9uOEdec",
-          "date": "2023-03-19",
-          "match_id": "7875",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "FETkIdBKLrE",
-          "title": "Boschowcy vs Bajaga 3:2 - I połowa",
-          "url": "https://www.youtube.com/watch?v=FETkIdBKLrE",
-          "date": "2023-03-19",
-          "match_id": "7875",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "xWO9MLKJMXg",
-          "title": "Bosch Service Tech Car - Bajaga - II połowa (5:1)",
-          "url": "https://www.youtube.com/watch?v=xWO9MLKJMXg",
-          "date": "2023-10-01",
-          "match_id": "8452",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "CxOVXkWO5po",
-          "title": "Bosch Tech Car Service - Bajaga - I połowa (2:1)",
-          "url": "https://www.youtube.com/watch?v=CxOVXkWO5po",
-          "date": "2023-10-01",
-          "match_id": "8452",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        }
-      ],
-      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
-    },
-    {
-      "id": "pth-maltrans",
-      "name": "PTH Maltrans",
-      "status": "candidate",
-      "division": "projected_1_hala_2026_27",
-      "origin": "retained_I",
-      "hall": {
-        "team_id": "4389",
-        "name": "PTH Maltrans",
-        "position": 7,
-        "matches": 15,
-        "wins": 8,
-        "draws": 2,
-        "losses": 5,
-        "gf": 49,
-        "ga": 29,
-        "points": 26,
-        "tier": 1
-      },
-      "orlik": {
-        "team_id": "4389",
-        "name": "PTH Maltrans",
-        "position": 9,
-        "matches": 15,
-        "wins": 5,
-        "draws": 2,
-        "losses": 8,
-        "gf": 35,
-        "ga": 51,
-        "points": 17,
-        "tier": 1
-      },
-      "historic_hall": null,
-      "strength": 51.2,
-      "data_coverage": 0.8,
-      "confidence": "średnia",
-      "players": [],
-      "plp_team_id": "4389",
-      "season_match_details": [
-        {
-          "event_id": "12548",
-          "date": "2026-03-22",
-          "opponent_id": "11753",
-          "title": "Żubry Bema vs PTH Maltrans",
-          "gf": 5,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12539",
-          "date": "2026-03-14",
-          "opponent_id": "1576",
-          "title": "PTH Maltrans vs 4Technology",
-          "gf": 1,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-4technology/"
-        },
-        {
-          "event_id": "12528",
-          "date": "2026-03-08",
-          "opponent_id": "5920",
-          "title": "Mają Rozmach vs PTH Maltrans",
-          "gf": 6,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12522",
-          "date": "2026-02-28",
-          "opponent_id": "6988",
-          "title": "PTH Maltrans vs VESTA",
-          "gf": 5,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-vesta/"
-        },
-        {
-          "event_id": "12518",
-          "date": "2026-02-22",
-          "opponent_id": "1574",
-          "title": "Soccer Auto Wygoda vs PTH Maltrans",
-          "gf": 2,
-          "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12508",
-          "date": "2026-02-14",
-          "opponent_id": "4641",
-          "title": "CEDC Polmos Białystok vs PTH Maltrans",
-          "gf": 4,
-          "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12499",
-          "date": "2026-02-01",
-          "opponent_id": "1565",
-          "title": "PTH Maltrans vs Adampol Glovis",
-          "gf": 1,
-          "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-adampol-glovis/"
-        },
-        {
-          "event_id": "12490",
-          "date": "2026-01-24",
-          "opponent_id": "1568",
-          "title": "PTH Maltrans vs FC DrTusz",
-          "gf": 4,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-drtusz/"
-        },
-        {
-          "event_id": "12479",
-          "date": "2026-01-18",
-          "opponent_id": "10056",
-          "title": "Hanbud vs PTH Maltrans",
-          "gf": 2,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12474",
-          "date": "2026-01-10",
-          "opponent_id": "6959",
-          "title": "PTH Maltrans vs Fc Bajaga",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
-        },
-        {
-          "event_id": "12463",
-          "date": "2025-12-21",
-          "opponent_id": "1564",
-          "title": "PTH Maltrans vs Hurtownia Krokus",
-          "gf": 3,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
-        },
-        {
-          "event_id": "12457",
-          "date": "2025-12-13",
-          "opponent_id": "8194",
-          "title": "PTH Maltrans vs FC GRUBASSY",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-grubassy/"
-        },
-        {
-          "event_id": "12449",
-          "date": "2025-11-29",
-          "opponent_id": "1573",
-          "title": "M-Fire vs PTH Maltrans",
-          "gf": 7,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12441",
-          "date": "2025-11-23",
-          "opponent_id": "6981",
-          "title": "INTaF vs PTH Maltrans",
-          "gf": 2,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12435",
-          "date": "2025-11-15",
-          "opponent_id": "1580",
-          "title": "PTH Maltrans vs Top Auto",
-          "gf": 3,
-          "ga": 0,
-          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-top-auto/"
-        }
-      ],
-      "player_stats_verified": false,
+      "player_stats_verified": true,
       "h2h": {
         "games": 0,
         "wins": 0,
@@ -2093,10 +1274,105 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 45.1,
+      "strength": 65.2,
+      "strength_details": {
+        "orlik": 71.8,
+        "hala": 52.7,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
-      "players": [],
+      "players": [
+        {
+          "id": "6117",
+          "name": "Vovchyk Maksym",
+          "apps": 13,
+          "goals": 13,
+          "assists": 6,
+          "motm": 2,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/vovchyk-maksym/"
+        },
+        {
+          "id": "6718",
+          "name": "Kazimirov Dmytro",
+          "apps": 12,
+          "goals": 10,
+          "assists": 6,
+          "motm": 2,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/kazimirov-dmytro/"
+        },
+        {
+          "id": "4633",
+          "name": "Gulc Dawid",
+          "apps": 12,
+          "goals": 3,
+          "assists": 6,
+          "motm": 1,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/gulc-dawid/"
+        },
+        {
+          "id": "10622",
+          "name": "Gulc Jakub",
+          "apps": 9,
+          "goals": 7,
+          "assists": 2,
+          "motm": 2,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/gulc-jakub/"
+        },
+        {
+          "id": "4545",
+          "name": "Kaszuba Maciej",
+          "apps": 4,
+          "goals": 3,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/kaszuba-maciej/"
+        },
+        {
+          "id": "4504",
+          "name": "Fedchyk Andrii",
+          "apps": 13,
+          "goals": 0,
+          "assists": 5,
+          "motm": 0,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/fedchyk-andrii/"
+        },
+        {
+          "id": "7320",
+          "name": "Yarmolich Anatoli",
+          "apps": 6,
+          "goals": 2,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/yarmolich-anatoli/"
+        },
+        {
+          "id": "11545",
+          "name": "Zinovchik Maksim",
+          "apps": 4,
+          "goals": 2,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Hala 2024/2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/zinovchik-maksim/"
+        }
+      ],
       "plp_team_id": "6988",
       "season_match_details": [
         {
@@ -2318,178 +1594,489 @@
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
-      "id": "hanbud",
-      "name": "Hanbud",
+      "id": "fc-bajaga",
+      "name": "Fc Bajaga",
       "status": "candidate",
       "division": "projected_1_hala_2026_27",
       "origin": "retained_I",
       "hall": {
-        "team_id": "10056",
-        "name": "Hanbud",
-        "position": 8,
+        "team_id": "6959",
+        "name": "Fc Bajaga",
+        "position": 3,
         "matches": 15,
-        "wins": 7,
-        "draws": 2,
-        "losses": 6,
+        "wins": 10,
+        "draws": 3,
+        "losses": 2,
         "gf": 44,
-        "ga": 46,
-        "points": 23,
+        "ga": 31,
+        "points": 33,
         "tier": 1
       },
       "orlik": {
-        "team_id": "10056",
-        "name": "Hanbud",
-        "position": 11,
+        "team_id": "6959",
+        "name": "Fc Bajaga",
+        "position": 7,
         "matches": 15,
-        "wins": 4,
+        "wins": 6,
         "draws": 3,
-        "losses": 8,
-        "gf": 37,
-        "ga": 44,
-        "points": 15,
+        "losses": 6,
+        "gf": 34,
+        "ga": 40,
+        "points": 21,
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 43.6,
+      "strength": 64.8,
+      "strength_details": {
+        "orlik": 59.4,
+        "hala": 74.7,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
-      "plp_team_id": "10056",
+      "plp_team_id": "6959",
       "season_match_details": [
         {
-          "event_id": "12545",
+          "event_id": "12547",
           "date": "2026-03-22",
-          "opponent_id": "8194",
-          "title": "Hanbud vs FC GRUBASSY",
-          "gf": 4,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-grubassy/"
-        },
-        {
-          "event_id": "12542",
-          "date": "2026-03-14",
-          "opponent_id": "6988",
-          "title": "VESTA vs Hanbud",
-          "gf": 3,
+          "opponent_id": "1580",
+          "title": "Top Auto vs Fc Bajaga",
+          "gf": 2,
           "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-hanbud/"
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-fc-bajaga/"
         },
         {
-          "event_id": "12531",
+          "event_id": "12538",
+          "date": "2026-03-14",
+          "opponent_id": "5920",
+          "title": "Fc Bajaga vs Mają Rozmach",
+          "gf": 5,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-maja-rozmach-4/"
+        },
+        {
+          "event_id": "12534",
           "date": "2026-03-08",
+          "opponent_id": "11753",
+          "title": "Fc Bajaga vs Żubry Bema",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-zubry-bema/"
+        },
+        {
+          "event_id": "12521",
+          "date": "2026-02-28",
           "opponent_id": "1574",
-          "title": "Soccer Auto Wygoda vs Hanbud",
+          "title": "Fc Bajaga vs Soccer Auto Wygoda",
+          "gf": 3,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-soccer-auto-wygoda/"
+        },
+        {
+          "event_id": "12514",
+          "date": "2026-02-22",
+          "opponent_id": "8194",
+          "title": "FC GRUBASSY vs Fc Bajaga",
+          "gf": 5,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12503",
+          "date": "2026-02-14",
+          "opponent_id": "1568",
+          "title": "FC DrTusz vs Fc Bajaga",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12502",
+          "date": "2026-02-01",
+          "opponent_id": "1576",
+          "title": "Fc Bajaga vs 4Technology",
           "gf": 4,
           "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-hanbud/"
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-4technology-3/"
         },
         {
-          "event_id": "12525",
-          "date": "2026-02-28",
-          "opponent_id": "5920",
-          "title": "Hanbud vs Mają Rozmach",
+          "event_id": "12487",
+          "date": "2026-01-24",
+          "opponent_id": "6981",
+          "title": "INTaF vs Fc Bajaga",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-fc-bajaga-3/"
+        },
+        {
+          "event_id": "12482",
+          "date": "2026-01-18",
+          "opponent_id": "1565",
+          "title": "Fc Bajaga vs Adampol Glovis",
           "gf": 2,
           "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-maja-rozmach-3/"
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-adampol-glovis/"
         },
         {
-          "event_id": "12516",
-          "date": "2026-02-22",
-          "opponent_id": "11753",
-          "title": "Żubry Bema vs Hanbud",
-          "gf": 7,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hanbud/"
-        },
-        {
-          "event_id": "12510",
-          "date": "2026-02-14",
-          "opponent_id": "1564",
-          "title": "Hanbud vs Hurtownia Krokus",
-          "gf": 0,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
-        },
-        {
-          "event_id": "12498",
-          "date": "2026-02-01",
-          "opponent_id": "6981",
-          "title": "Hanbud vs INTaF",
-          "gf": 4,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-intaf-2/"
-        },
-        {
-          "event_id": "12494",
-          "date": "2026-01-24",
-          "opponent_id": "1565",
-          "title": "Adampol Glovis vs Hanbud",
-          "gf": 0,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hanbud-3/"
-        },
-        {
-          "event_id": "12479",
-          "date": "2026-01-18",
-          "opponent_id": "4389",
-          "title": "Hanbud vs PTH Maltrans",
-          "gf": 2,
-          "ga": 2,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
-        },
-        {
-          "event_id": "12475",
+          "event_id": "12474",
           "date": "2026-01-10",
-          "opponent_id": "1568",
-          "title": "Hanbud vs FC DrTusz",
-          "gf": 1,
-          "ga": 3,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-drtusz-2/"
+          "opponent_id": "4389",
+          "title": "PTH Maltrans vs Fc Bajaga",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
         },
         {
           "event_id": "12468",
           "date": "2025-12-21",
-          "opponent_id": "6959",
+          "opponent_id": "10056",
           "title": "Hanbud vs Fc Bajaga",
-          "gf": 2,
-          "ga": 3,
+          "gf": 3,
+          "ga": 2,
           "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-bajaga/"
         },
         {
-          "event_id": "12456",
+          "event_id": "12460",
           "date": "2025-12-13",
-          "opponent_id": "1580",
-          "title": "Top Auto vs Hanbud",
-          "gf": 2,
-          "ga": 4,
-          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-hanbud-3/"
+          "opponent_id": "1573",
+          "title": "Fc Bajaga vs M-Fire",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-m-fire/"
         },
         {
-          "event_id": "12453",
+          "event_id": "12444",
           "date": "2025-11-29",
+          "opponent_id": "1564",
+          "title": "Hurtownia Krokus vs Fc Bajaga",
+          "gf": 0,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-fc-bajaga-2/"
+        },
+        {
+          "event_id": "12438",
+          "date": "2025-11-23",
+          "opponent_id": "6988",
+          "title": "VESTA vs Fc Bajaga",
+          "gf": 2,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12427",
+          "date": "2025-11-15",
           "opponent_id": "4641",
-          "title": "CEDC Polmos Białystok vs Hanbud",
+          "title": "Fc Bajaga vs CEDC Polmos Białystok",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-cedc-polmos-bialystok/"
+        }
+      ],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 2,
+        "wins": 2,
+        "draws": 0,
+        "losses": 0,
+        "matches": [
+          {
+            "date": "2023-03-19",
+            "gf": 4,
+            "ga": 3,
+            "id": "7875"
+          },
+          {
+            "date": "2023-10-01",
+            "gf": 5,
+            "ga": 1,
+            "id": "8452"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
+        "Z piłką: testować zmianę strony i wejścia trzeciego zawodnika, obserwując reakcję rywala.",
+        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
+      ],
+      "plan_b": [
+        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
+        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
+        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [
+        {
+          "id": "gSjI9uOEdec",
+          "title": "Boschowcy vs Bajaga 4:3 - II potowa",
+          "url": "https://www.youtube.com/watch?v=gSjI9uOEdec",
+          "date": "2023-03-19",
+          "match_id": "7875",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "FETkIdBKLrE",
+          "title": "Boschowcy vs Bajaga 3:2 - I połowa",
+          "url": "https://www.youtube.com/watch?v=FETkIdBKLrE",
+          "date": "2023-03-19",
+          "match_id": "7875",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "xWO9MLKJMXg",
+          "title": "Bosch Service Tech Car - Bajaga - II połowa (5:1)",
+          "url": "https://www.youtube.com/watch?v=xWO9MLKJMXg",
+          "date": "2023-10-01",
+          "match_id": "8452",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "CxOVXkWO5po",
+          "title": "Bosch Tech Car Service - Bajaga - I połowa (2:1)",
+          "url": "https://www.youtube.com/watch?v=CxOVXkWO5po",
+          "date": "2023-10-01",
+          "match_id": "8452",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "biuro-serwis-kopiarki",
+      "name": "Biuro Serwis-Kopiarki",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "promoted_II",
+      "hall": null,
+      "orlik": {
+        "team_id": "12342",
+        "name": "Biuro Serwis-Kopiarki",
+        "position": 1,
+        "matches": 15,
+        "wins": 12,
+        "draws": 0,
+        "losses": 3,
+        "gf": 73,
+        "ga": 21,
+        "points": 36,
+        "tier": 2
+      },
+      "historic_hall": {
+        "name": "Biuro Serwis-Kopiarki",
+        "tier": 2,
+        "position": 7,
+        "matches": 15,
+        "gf": 44,
+        "ga": 46,
+        "points": 23
+      },
+      "strength": 60.2,
+      "strength_details": {
+        "orlik": 62.5,
+        "hala": null,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [
+        {
+          "id": "4448",
+          "name": "Mosiej Łukasz",
+          "apps": 15,
+          "goals": 30,
+          "assists": 8,
+          "motm": 8,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/mosiej-lukasz/"
+        },
+        {
+          "id": "13022",
+          "name": "Smirnov Yaroslav",
+          "apps": 8,
+          "goals": 1,
+          "assists": 9,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/smirnov-yaroslav/"
+        },
+        {
+          "id": "12757",
+          "name": "Kosiński Tomasz",
+          "apps": 4,
+          "goals": 2,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/kosinski-tomasz/"
+        },
+        {
+          "id": "12749",
+          "name": "Boratyński Łukasz",
+          "apps": 11,
+          "goals": 1,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/boratynski-lukasz/"
+        },
+        {
+          "id": "13024",
+          "name": "Żukowski Łukasz",
+          "apps": 2,
+          "goals": 2,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/zukowski-lukasz/"
+        }
+      ],
+      "plp_team_id": "12342",
+      "season_match_details": [
+        {
+          "event_id": "12675",
+          "date": "2026-03-21",
+          "opponent_id": "4643",
+          "title": "GKS Grabówka vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 6,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12673",
+          "date": "2026-03-15",
+          "opponent_id": "10770",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
           "gf": 1,
           "ga": 1,
-          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-hanbud-2/"
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
         },
         {
-          "event_id": "12436",
-          "date": "2025-11-23",
-          "opponent_id": "1576",
-          "title": "4Technology vs Hanbud",
+          "event_id": "12660",
+          "date": "2026-03-07",
+          "opponent_id": "6951",
+          "title": "Bosch Service Tech-Car vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12649",
+          "date": "2026-03-01",
+          "opponent_id": "11756",
+          "title": "Biuro Serwis-Kopiarki Białystok vs ZPS Biaform SA",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zps-biaform-sa/"
+        },
+        {
+          "event_id": "12642",
+          "date": "2026-02-21",
+          "opponent_id": "10768",
+          "title": "Zachodnia Kingdom vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 7,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12634",
+          "date": "2026-02-15",
+          "opponent_id": "6989",
+          "title": "Biuro Serwis-Kopiarki Białystok vs WIARA PIASTA II",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-wiara-piasta-ii/"
+        },
+        {
+          "event_id": "12629",
+          "date": "2026-01-31",
+          "opponent_id": "12343",
+          "title": "Prostal vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12618",
+          "date": "2026-01-25",
+          "opponent_id": "4382",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Auto Team",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-auto-team/"
+        },
+        {
+          "event_id": "12613",
+          "date": "2026-01-17",
+          "opponent_id": "1566",
+          "title": "IST Trade vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 1,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12603",
+          "date": "2026-01-11",
+          "opponent_id": "8196",
+          "title": "Biuro Serwis-Kopiarki Białystok vs OSMAR",
+          "gf": 3,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-osmar/"
+        },
+        {
+          "event_id": "12591",
+          "date": "2025-12-20",
+          "opponent_id": "6984",
+          "title": "FC Progress Białystok vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12586",
+          "date": "2025-12-14",
+          "opponent_id": "8195",
+          "title": "Waleczne Orły vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 0,
+          "ga": 8,
+          "url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12578",
+          "date": "2025-11-30",
+          "opponent_id": "11754",
+          "title": "Juan Pablo Białystok vs Biuro Serwis-Kopiarki Białystok",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-biuro-serwis-kopiarki-bialystok/"
+        },
+        {
+          "event_id": "12563",
+          "date": "2025-11-22",
+          "opponent_id": "10769",
+          "title": "Biuro Serwis-Kopiarki Białystok vs OST Sport",
           "gf": 3,
           "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hanbud-2/"
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-ost-sport/"
         },
         {
-          "event_id": "12428",
-          "date": "2025-11-15",
-          "opponent_id": "1573",
-          "title": "Hanbud vs M-Fire",
-          "gf": 9,
-          "ga": 6,
-          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-m-fire/"
+          "event_id": "12556",
+          "date": "2025-11-16",
+          "opponent_id": "8193",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Unibep Bielsk Podlaski",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-unibep-bielsk-podlaski/"
         }
       ],
       "player_stats_verified": false,
@@ -2500,19 +2087,268 @@
         "losses": 1,
         "matches": [
           {
-            "date": "2024-06-08",
-            "gf": 0,
-            "ga": 2,
-            "id": "10142"
+            "date": "2026-06-13",
+            "gf": 1,
+            "ga": 3,
+            "id": "orlik26-7"
           }
         ]
       },
       "statistical_watchouts": [
-        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "Wysoka skuteczność ataku rywala: utrzymać asekurację po stracie, ograniczać otwarte wymiany i nie przesądzać sposobu pressingu bez nagrań.",
+        "Rywal ma niski wskaźnik straconych goli: cierpliwe budowanie akcji, zmiana strony i przygotowane stałe fragmenty.",
+        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
+      ],
+      "plan_b": [
+        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
+        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
+        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [
+        {
+          "id": "KIEpFAUcK30",
+          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | II POŁOWA",
+          "url": "https://www.youtube.com/watch?v=KIEpFAUcK30",
+          "date": "2026-06-13",
+          "match_id": "orlik26-7",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "y3zlu5H0HE0",
+          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | I POŁOWA",
+          "url": "https://www.youtube.com/watch?v=y3zlu5H0HE0",
+          "date": "2026-06-13",
+          "match_id": "orlik26-7",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "pth-maltrans",
+      "name": "PTH Maltrans",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "team_id": "4389",
+        "name": "PTH Maltrans",
+        "position": 7,
+        "matches": 15,
+        "wins": 8,
+        "draws": 2,
+        "losses": 5,
+        "gf": 49,
+        "ga": 29,
+        "points": 26,
+        "tier": 1
+      },
+      "orlik": {
+        "team_id": "4389",
+        "name": "PTH Maltrans",
+        "position": 9,
+        "matches": 15,
+        "wins": 5,
+        "draws": 2,
+        "losses": 8,
+        "gf": 35,
+        "ga": 51,
+        "points": 17,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 59.1,
+      "strength_details": {
+        "orlik": 53.0,
+        "hala": 70.5,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [
+        {
+          "id": "2231",
+          "name": "Mordasewicz Sebastian (GK)",
+          "apps": 6,
+          "goals": 0,
+          "assists": 2,
+          "motm": 1,
+          "source_season": "Hala 2025/26",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian/"
+        },
+        {
+          "id": "9847",
+          "name": "Mordasewicz Sebastian",
+          "apps": 1,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian-2/"
+        }
+      ],
+      "plp_team_id": "4389",
+      "season_match_details": [
+        {
+          "event_id": "12548",
+          "date": "2026-03-22",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs PTH Maltrans",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12539",
+          "date": "2026-03-14",
+          "opponent_id": "1576",
+          "title": "PTH Maltrans vs 4Technology",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-4technology/"
+        },
+        {
+          "event_id": "12528",
+          "date": "2026-03-08",
+          "opponent_id": "5920",
+          "title": "Mają Rozmach vs PTH Maltrans",
+          "gf": 6,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12522",
+          "date": "2026-02-28",
+          "opponent_id": "6988",
+          "title": "PTH Maltrans vs VESTA",
+          "gf": 5,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-vesta/"
+        },
+        {
+          "event_id": "12518",
+          "date": "2026-02-22",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs PTH Maltrans",
+          "gf": 2,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12508",
+          "date": "2026-02-14",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs PTH Maltrans",
+          "gf": 4,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12499",
+          "date": "2026-02-01",
+          "opponent_id": "1565",
+          "title": "PTH Maltrans vs Adampol Glovis",
+          "gf": 1,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-adampol-glovis/"
+        },
+        {
+          "event_id": "12490",
+          "date": "2026-01-24",
+          "opponent_id": "1568",
+          "title": "PTH Maltrans vs FC DrTusz",
+          "gf": 4,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-drtusz/"
+        },
+        {
+          "event_id": "12479",
+          "date": "2026-01-18",
+          "opponent_id": "10056",
+          "title": "Hanbud vs PTH Maltrans",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12474",
+          "date": "2026-01-10",
+          "opponent_id": "6959",
+          "title": "PTH Maltrans vs Fc Bajaga",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12463",
+          "date": "2025-12-21",
+          "opponent_id": "1564",
+          "title": "PTH Maltrans vs Hurtownia Krokus",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-hurtownia-krokus/"
+        },
+        {
+          "event_id": "12457",
+          "date": "2025-12-13",
+          "opponent_id": "8194",
+          "title": "PTH Maltrans vs FC GRUBASSY",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12449",
+          "date": "2025-11-29",
+          "opponent_id": "1573",
+          "title": "M-Fire vs PTH Maltrans",
+          "gf": 7,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12441",
+          "date": "2025-11-23",
+          "opponent_id": "6981",
+          "title": "INTaF vs PTH Maltrans",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12435",
+          "date": "2025-11-15",
+          "opponent_id": "1580",
+          "title": "PTH Maltrans vs Top Auto",
+          "gf": 3,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-vs-top-auto/"
+        }
+      ],
+      "player_stats_verified": true,
+      "h2h": {
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "matches": []
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
       ],
       "plan_a": [
         "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
-        "Wysoka średnia traconych bramek: testować szybkie przejścia i ruch bez piłki; dopiero mecz wykaże, czy obrona reaguje z opóźnieniem.",
+        "Z piłką: testować zmianę strony i wejścia trzeciego zawodnika, obserwując reakcję rywala.",
         "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
       ],
       "plan_b": [
@@ -2558,7 +2394,13 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 40.3,
+      "strength": 58.2,
+      "strength_details": {
+        "orlik": 59.4,
+        "hala": 56.1,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
       "players": [],
@@ -2734,6 +2576,660 @@
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
+      "id": "hanbud",
+      "name": "Hanbud",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "team_id": "10056",
+        "name": "Hanbud",
+        "position": 8,
+        "matches": 15,
+        "wins": 7,
+        "draws": 2,
+        "losses": 6,
+        "gf": 44,
+        "ga": 46,
+        "points": 23,
+        "tier": 1
+      },
+      "orlik": {
+        "team_id": "10056",
+        "name": "Hanbud",
+        "position": 11,
+        "matches": 15,
+        "wins": 4,
+        "draws": 3,
+        "losses": 8,
+        "gf": 37,
+        "ga": 44,
+        "points": 15,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 56.3,
+      "strength_details": {
+        "orlik": 53.5,
+        "hala": 61.5,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [
+        {
+          "id": "10424",
+          "name": "Monicz Andrzej",
+          "apps": 14,
+          "goals": 13,
+          "assists": 15,
+          "motm": 6,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/monicz-andrzej/"
+        },
+        {
+          "id": "10415",
+          "name": "Florczyk Paweł",
+          "apps": 6,
+          "goals": 8,
+          "assists": 5,
+          "motm": 2,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/florczyk-pawel/"
+        },
+        {
+          "id": "3768",
+          "name": "Niewiński Kamil",
+          "apps": 5,
+          "goals": 9,
+          "assists": 3,
+          "motm": 2,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/niewinski-kamil/"
+        },
+        {
+          "id": "10420",
+          "name": "Bagiński Adrian",
+          "apps": 14,
+          "goals": 3,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/baginski-adrian/"
+        },
+        {
+          "id": "10426",
+          "name": "Pruszyński Grzegorz",
+          "apps": 14,
+          "goals": 5,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/pruszynski-grzegorz/"
+        },
+        {
+          "id": "10416",
+          "name": "Hardzeichyk Aliaksandr",
+          "apps": 12,
+          "goals": 4,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/hardzeichyk-aliaksandr/"
+        },
+        {
+          "id": "10431",
+          "name": "Więsław Marcin",
+          "apps": 14,
+          "goals": 5,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/wieslaw-marcin/"
+        },
+        {
+          "id": "5962",
+          "name": "Lech Ignacy",
+          "apps": 4,
+          "goals": 1,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Orlik 2024",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/lech-ignacy/"
+        }
+      ],
+      "plp_team_id": "10056",
+      "season_match_details": [
+        {
+          "event_id": "12545",
+          "date": "2026-03-22",
+          "opponent_id": "8194",
+          "title": "Hanbud vs FC GRUBASSY",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-grubassy/"
+        },
+        {
+          "event_id": "12542",
+          "date": "2026-03-14",
+          "opponent_id": "6988",
+          "title": "VESTA vs Hanbud",
+          "gf": 3,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-hanbud/"
+        },
+        {
+          "event_id": "12531",
+          "date": "2026-03-08",
+          "opponent_id": "1574",
+          "title": "Soccer Auto Wygoda vs Hanbud",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/soccer-auto-wygoda-vs-hanbud/"
+        },
+        {
+          "event_id": "12525",
+          "date": "2026-02-28",
+          "opponent_id": "5920",
+          "title": "Hanbud vs Mają Rozmach",
+          "gf": 2,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-maja-rozmach-3/"
+        },
+        {
+          "event_id": "12516",
+          "date": "2026-02-22",
+          "opponent_id": "11753",
+          "title": "Żubry Bema vs Hanbud",
+          "gf": 7,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-hanbud/"
+        },
+        {
+          "event_id": "12510",
+          "date": "2026-02-14",
+          "opponent_id": "1564",
+          "title": "Hanbud vs Hurtownia Krokus",
+          "gf": 0,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-hurtownia-krokus-2/"
+        },
+        {
+          "event_id": "12498",
+          "date": "2026-02-01",
+          "opponent_id": "6981",
+          "title": "Hanbud vs INTaF",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-intaf-2/"
+        },
+        {
+          "event_id": "12494",
+          "date": "2026-01-24",
+          "opponent_id": "1565",
+          "title": "Adampol Glovis vs Hanbud",
+          "gf": 0,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12479",
+          "date": "2026-01-18",
+          "opponent_id": "4389",
+          "title": "Hanbud vs PTH Maltrans",
+          "gf": 2,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-pth-maltrans/"
+        },
+        {
+          "event_id": "12475",
+          "date": "2026-01-10",
+          "opponent_id": "1568",
+          "title": "Hanbud vs FC DrTusz",
+          "gf": 1,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-drtusz-2/"
+        },
+        {
+          "event_id": "12468",
+          "date": "2025-12-21",
+          "opponent_id": "6959",
+          "title": "Hanbud vs Fc Bajaga",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-fc-bajaga/"
+        },
+        {
+          "event_id": "12456",
+          "date": "2025-12-13",
+          "opponent_id": "1580",
+          "title": "Top Auto vs Hanbud",
+          "gf": 2,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-hanbud-3/"
+        },
+        {
+          "event_id": "12453",
+          "date": "2025-11-29",
+          "opponent_id": "4641",
+          "title": "CEDC Polmos Białystok vs Hanbud",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-hanbud-2/"
+        },
+        {
+          "event_id": "12436",
+          "date": "2025-11-23",
+          "opponent_id": "1576",
+          "title": "4Technology vs Hanbud",
+          "gf": 3,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-hanbud-2/"
+        },
+        {
+          "event_id": "12428",
+          "date": "2025-11-15",
+          "opponent_id": "1573",
+          "title": "Hanbud vs M-Fire",
+          "gf": 9,
+          "ga": 6,
+          "url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-m-fire/"
+        }
+      ],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2024-06-08",
+            "gf": 0,
+            "ga": 2,
+            "id": "10142"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
+        "Wysoka średnia traconych bramek: testować szybkie przejścia i ruch bez piłki; dopiero mecz wykaże, czy obrona reaguje z opóźnieniem.",
+        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
+      ],
+      "plan_b": [
+        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
+        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
+        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "zimne-dranie",
+      "name": "Zimne Dranie",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "promoted_II",
+      "hall": null,
+      "orlik": {
+        "team_id": "10770",
+        "name": "Zimne Dranie",
+        "position": 3,
+        "matches": 15,
+        "wins": 11,
+        "draws": 1,
+        "losses": 3,
+        "gf": 50,
+        "ga": 21,
+        "points": 34,
+        "tier": 2
+      },
+      "historic_hall": {
+        "name": "Zimne Dranie",
+        "tier": 2,
+        "position": 5,
+        "matches": 15,
+        "gf": 62,
+        "ga": 37,
+        "points": 26
+      },
+      "strength": 54.7,
+      "strength_details": {
+        "orlik": 56.5,
+        "hala": null,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [
+        {
+          "id": "10911",
+          "name": "Stachurski Łukasz",
+          "apps": 15,
+          "goals": 10,
+          "assists": 14,
+          "motm": 4,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/stachurski-lukasz/"
+        },
+        {
+          "id": "10909",
+          "name": "Oświeciński Maciej",
+          "apps": 15,
+          "goals": 13,
+          "assists": 6,
+          "motm": 2,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/oswiecinski-maciej/"
+        },
+        {
+          "id": "10910",
+          "name": "Pawluczuk Przemysław",
+          "apps": 14,
+          "goals": 12,
+          "assists": 2,
+          "motm": 2,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/pawluczuk-przemyslaw/"
+        },
+        {
+          "id": "11902",
+          "name": "Roszkowski Michał",
+          "apps": 14,
+          "goals": 5,
+          "assists": 3,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/roszkowski-michal/"
+        },
+        {
+          "id": "10915",
+          "name": "Stachurski Kacper",
+          "apps": 12,
+          "goals": 6,
+          "assists": 1,
+          "motm": 0,
+          "source_season": "Hala 2025/26",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/stachurski-kacper/"
+        },
+        {
+          "id": "10905",
+          "name": "Konopko Bartłomiej",
+          "apps": 13,
+          "goals": 8,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Orlik 2025",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/konopko-bartlomiej/"
+        },
+        {
+          "id": "11903",
+          "name": "Biełaga Krystian",
+          "apps": 13,
+          "goals": 4,
+          "assists": 1,
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "Historyczny raport PLP",
+          "source_url": "https://podlaskaliga.pl/zawodnik/bielaga-krystian/"
+        },
+        {
+          "id": "10913",
+          "name": "Stachurski Jakub",
+          "apps": 2,
+          "goals": 0,
+          "assists": 1,
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/stachurski-jakub/"
+        }
+      ],
+      "plp_team_id": "10770",
+      "season_match_details": [
+        {
+          "event_id": "12680",
+          "date": "2026-03-21",
+          "opponent_id": "8195",
+          "title": "Zimne Dranie vs Waleczne Orły",
+          "gf": 0,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-waleczne-orly-2/"
+        },
+        {
+          "event_id": "12673",
+          "date": "2026-03-15",
+          "opponent_id": "12342",
+          "title": "Biuro Serwis-Kopiarki Białystok vs Zimne Dranie",
+          "gf": 1,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12658",
+          "date": "2026-03-07",
+          "opponent_id": "10769",
+          "title": "Zimne Dranie vs OST Sport",
+          "gf": 3,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-ost-sport-2/"
+        },
+        {
+          "event_id": "12650",
+          "date": "2026-03-01",
+          "opponent_id": "6984",
+          "title": "FC Progress Białystok vs Zimne Dranie",
+          "gf": 4,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12643",
+          "date": "2026-02-21",
+          "opponent_id": "4643",
+          "title": "Zimne Dranie vs GKS Grabówka",
+          "gf": 12,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-gks-grabowka/"
+        },
+        {
+          "event_id": "12632",
+          "date": "2026-02-15",
+          "opponent_id": "11754",
+          "title": "Juan Pablo Białystok vs Zimne Dranie",
+          "gf": 6,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12631",
+          "date": "2026-01-31",
+          "opponent_id": "6951",
+          "title": "Bosch Service Tech-Car vs Zimne Dranie",
+          "gf": 5,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/"
+        },
+        {
+          "event_id": "12619",
+          "date": "2026-01-25",
+          "opponent_id": "11756",
+          "title": "Zimne Dranie vs ZPS Biaform SA",
+          "gf": 0,
+          "ga": 0,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-zps-biaform-sa-3/"
+        },
+        {
+          "event_id": "12610",
+          "date": "2026-01-17",
+          "opponent_id": "10768",
+          "title": "Zachodnia Kingdom vs Zimne Dranie",
+          "gf": 11,
+          "ga": 4,
+          "url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-zimne-dranie-2/"
+        },
+        {
+          "event_id": "12605",
+          "date": "2026-01-11",
+          "opponent_id": "6989",
+          "title": "Zimne Dranie vs WIARA PIASTA II",
+          "gf": 4,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-wiara-piasta-ii-2/"
+        },
+        {
+          "event_id": "12594",
+          "date": "2025-12-20",
+          "opponent_id": "8193",
+          "title": "Zimne Dranie vs Unibep Bielsk Podlaski",
+          "gf": 4,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-unibep-bielsk-podlaski-2/"
+        },
+        {
+          "event_id": "12582",
+          "date": "2025-12-14",
+          "opponent_id": "4382",
+          "title": "Zimne Dranie vs Auto Team",
+          "gf": 2,
+          "ga": 5,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-auto-team/"
+        },
+        {
+          "event_id": "12576",
+          "date": "2025-11-30",
+          "opponent_id": "1566",
+          "title": "IST Trade vs Zimne Dranie",
+          "gf": 5,
+          "ga": 2,
+          "url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-zimne-dranie/"
+        },
+        {
+          "event_id": "12570",
+          "date": "2025-11-22",
+          "opponent_id": "8196",
+          "title": "Zimne Dranie vs OSMAR",
+          "gf": 3,
+          "ga": 1,
+          "url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-osmar-2/"
+        },
+        {
+          "event_id": "12557",
+          "date": "2025-11-16",
+          "opponent_id": "12343",
+          "title": "Prostal vs Zimne Dranie",
+          "gf": 2,
+          "ga": 3,
+          "url": "https://podlaskaliga.pl/wydarzenie/prostal-vs-zimne-dranie/"
+        }
+      ],
+      "player_stats_verified": true,
+      "h2h": {
+        "games": 4,
+        "wins": 0,
+        "draws": 0,
+        "losses": 4,
+        "matches": [
+          {
+            "date": "2025-02-16",
+            "gf": 1,
+            "ga": 3,
+            "id": "11389"
+          },
+          {
+            "date": "2025-09-14",
+            "gf": 2,
+            "ga": 4,
+            "id": "12132"
+          },
+          {
+            "date": "2026-01-31",
+            "gf": 1,
+            "ga": 5,
+            "id": "12631"
+          },
+          {
+            "date": "2026-05-30",
+            "gf": 0,
+            "ga": 1,
+            "id": "orlik26-6"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach.",
+        "Rywal ma niski wskaźnik straconych goli: cierpliwe budowanie akcji, zmiana strony i przygotowane stałe fragmenty.",
+        "Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."
+      ],
+      "plan_b": [
+        "Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
+        "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
+        "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [
+        {
+          "id": "rUIfShSXf34",
+          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | II połowa",
+          "url": "https://www.youtube.com/watch?v=rUIfShSXf34",
+          "date": "2025-02-16",
+          "match_id": "11389",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "Dx9vHHy-P84",
+          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | I połowa",
+          "url": "https://www.youtube.com/watch?v=Dx9vHHy-P84",
+          "date": "2025-02-16",
+          "match_id": "11389",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "J-ZpQOlLw54",
+          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | I POŁOWA",
+          "url": "https://www.youtube.com/watch?v=J-ZpQOlLw54",
+          "date": "2026-05-30",
+          "match_id": "orlik26-6",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "kOiaVJJrVh0",
+          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | II POŁOWA",
+          "url": "https://www.youtube.com/watch?v=kOiaVJJrVh0",
+          "date": "2026-05-30",
+          "match_id": "orlik26-6",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
       "id": "fc-grubassy",
       "name": "FC GRUBASSY",
       "status": "candidate",
@@ -2766,10 +3262,105 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 35.9,
+      "strength": 53.1,
+      "strength_details": {
+        "orlik": 52.8,
+        "hala": 53.7,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
-      "players": [],
+      "players": [
+        {
+          "id": "2166",
+          "name": "Masłowski Michał (GK)",
+          "apps": 7,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "source_season": "Orlik 2026",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/maslowski-michal/"
+        },
+        {
+          "id": "9283",
+          "name": "Zolnik Stanisław",
+          "apps": 11,
+          "goals": 16,
+          "assists": 5,
+          "motm": 2,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/zolnik-stanislaw/"
+        },
+        {
+          "id": "10373",
+          "name": "Orpik Kacper",
+          "apps": 9,
+          "goals": 6,
+          "assists": 13,
+          "motm": 3,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/orpik-kacper/"
+        },
+        {
+          "id": "11912",
+          "name": "Pietroczuk Marek",
+          "apps": 12,
+          "goals": 10,
+          "assists": 6,
+          "motm": 1,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/pietroczuk-marek/"
+        },
+        {
+          "id": "11910",
+          "name": "Sieńko Damian",
+          "apps": 9,
+          "goals": 4,
+          "assists": 5,
+          "motm": 1,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/sienko-damian/"
+        },
+        {
+          "id": "10630",
+          "name": "Dojlida Filip",
+          "apps": 9,
+          "goals": 4,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/dojlida-filip/"
+        },
+        {
+          "id": "11542",
+          "name": "Guziejko Dawid",
+          "apps": 4,
+          "goals": 3,
+          "assists": 5,
+          "motm": 0,
+          "source_season": "Orlik 2025",
+          "source_label": "SportsPress: potwierdzony sezon i klub",
+          "source_url": "https://podlaskaliga.pl/zawodnik/guziejko-dawid/"
+        },
+        {
+          "id": "8635",
+          "name": "Krasowski Jakub",
+          "apps": 11,
+          "goals": 7,
+          "assists": 1,
+          "motm": 1,
+          "source_season": "Orlik 2025",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/krasowski-jakub/"
+        }
+      ],
       "plp_team_id": "8194",
       "season_match_details": [
         {
@@ -2908,7 +3499,7 @@
           "url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-fc-grubassy/"
         }
       ],
-      "player_stats_verified": false,
+      "player_stats_verified": true,
       "h2h": {
         "games": 4,
         "wins": 2,
@@ -3025,10 +3616,105 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 26.8,
+      "strength": 47.3,
+      "strength_details": {
+        "orlik": 47.1,
+        "hala": 47.8,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.8,
       "confidence": "średnia",
-      "players": [],
+      "players": [
+        {
+          "id": "7212",
+          "name": "Pęza Szymon",
+          "apps": 10,
+          "goals": 11,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/peza-szymon/"
+        },
+        {
+          "id": "1951",
+          "name": "Ceckowski Kamil",
+          "apps": 13,
+          "goals": 4,
+          "assists": 5,
+          "motm": 1,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/ceckowski-kamil/"
+        },
+        {
+          "id": "6019",
+          "name": "Wilczko Paweł",
+          "apps": 12,
+          "goals": 3,
+          "assists": 6,
+          "motm": 1,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/wilczko-pawel/"
+        },
+        {
+          "id": "7211",
+          "name": "Banicki Marcin",
+          "apps": 6,
+          "goals": 7,
+          "assists": 1,
+          "motm": 3,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": ""
+        },
+        {
+          "id": "8938",
+          "name": "Weremczuk Rafał",
+          "apps": 3,
+          "goals": 3,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/weremczuk-rafal/"
+        },
+        {
+          "id": "1953",
+          "name": "Dzieduszow Krzysztof",
+          "apps": 7,
+          "goals": 4,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/dzieduszow-krzysztof/"
+        },
+        {
+          "id": "8939",
+          "name": "Roszczenko Jakub",
+          "apps": 3,
+          "goals": 5,
+          "assists": 1,
+          "motm": 1,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": ""
+        },
+        {
+          "id": "1969",
+          "name": "Wawiernia Tomasz",
+          "apps": 10,
+          "goals": 1,
+          "assists": 5,
+          "motm": 0,
+          "source_season": "Orlik 2023",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/wawiernia-tomasz/"
+        }
+      ],
       "plp_team_id": "1568",
       "season_match_details": [
         {
@@ -3227,10 +3913,105 @@
         "tier": 1
       },
       "historic_hall": null,
-      "strength": 22.7,
+      "strength": 45.7,
+      "strength_details": {
+        "orlik": 43.8,
+        "hala": null,
+        "model": "division_adjusted_2026_v2",
+        "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
+      },
       "data_coverage": 0.3,
       "confidence": "niska",
-      "players": [],
+      "players": [
+        {
+          "id": "4545",
+          "name": "Kaszuba Maciej",
+          "apps": 14,
+          "goals": 5,
+          "assists": 8,
+          "motm": 2,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/kaszuba-maciej/"
+        },
+        {
+          "id": "8917",
+          "name": "Olizarowicz Karol",
+          "apps": 11,
+          "goals": 6,
+          "assists": 6,
+          "motm": 4,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/olizarowicz-karol/"
+        },
+        {
+          "id": "8491",
+          "name": "Twardowski Marcin",
+          "apps": 10,
+          "goals": 8,
+          "assists": 3,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/twardowski-marcin/"
+        },
+        {
+          "id": "12246",
+          "name": "Bieliavskyj Sergii",
+          "apps": 10,
+          "goals": 5,
+          "assists": 4,
+          "motm": 1,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/bieliavskyj-sergii/"
+        },
+        {
+          "id": "12245",
+          "name": "Czeremcha Przemysław",
+          "apps": 9,
+          "goals": 6,
+          "assists": 2,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/czeremcha-przemyslaw/"
+        },
+        {
+          "id": "11914",
+          "name": "Wysocki Dawid",
+          "apps": 6,
+          "goals": 6,
+          "assists": 2,
+          "motm": 1,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/wysocki-dawid/"
+        },
+        {
+          "id": "11924",
+          "name": "Tworkowski Filip",
+          "apps": 11,
+          "goals": 3,
+          "assists": 3,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/tworkowski-filip/"
+        },
+        {
+          "id": "7350",
+          "name": "Grzybowski Stanisław",
+          "apps": 8,
+          "goals": 1,
+          "assists": 4,
+          "motm": 0,
+          "source_season": "Hala 2025/2026",
+          "source_label": "Archiwum PLP — poprzednie sezony",
+          "source_url": "https://podlaskaliga.pl/zawodnik/grzybowski-stanislaw/"
+        }
+      ],
       "plp_team_id": "6989",
       "season_match_details": [
         {
@@ -3527,9 +4308,9 @@
       "ga": 39
     },
     "strength_weights": {
-      "hala_2025_26": 0.5,
-      "orlik_2026": 0.3,
-      "older_hall": 0.2
+      "hala_2025_26": 0.35,
+      "orlik_2026": 0.65,
+      "older_hall": 0
     },
     "note": "Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."
   },
@@ -3545,8 +4326,8 @@
   "videos": [],
   "reviews": [],
   "rules": {
-    "weights": "50/30/20 reweighted among available seasons; do not replace missing data with zero",
-    "new_season_weight": "min(0.65, matches / (matches + 8))",
+    "weights": "65% Orlik 2026, 35% Hala 2025/26; explicit I/II league calibration, sample adjustment, and neutral prior when missing",
+    "new_season_weight": "0.65 verified Orlik 2026",
     "tactical_evidence": "A timestamped source is required for any assertion about playing style"
   }
 }
