@@ -24,4 +24,10 @@ for season in seasons:
     assert season["points"] == wins * 3 + draws, f"Incorrect points for {season['name']}"
     assert season["gf"] == sum(row["gf"] for row in entries), f"Incorrect goals for {season['name']}"
     assert season["ga"] == sum(row["ga"] for row in entries), f"Incorrect conceded goals for {season['name']}"
+# Backfilled official Orlik 2026 YouTube coverage: last fixture has no recording yet.
+orlik = [row for row in matches if row["sid"] == "orlik-2026"]
+assert len(orlik) == 15, "Expected complete Orlik 2026 season"
+linked = {row["id"] for row in orlik if row.get("videos")}
+assert len(linked) >= 14, f"Missing archived Orlik 2026 YouTube footage: {len(linked)}/15"
+assert all(row.get("videos") for row in orlik if row["id"] != "orlik26-15"), "Missing 2026 fixture recording"
 print(f"Valid: {len(seasons)} seasons, {len(matches)} games, {len(DATA['videos'])} videos")
