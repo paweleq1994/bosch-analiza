@@ -10,6 +10,7 @@ import re
 import unicodedata
 
 from player_identity import legacy_player_id, match_public_profile, person_key
+from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -63,6 +64,7 @@ def main() -> None:
     player_seasons_extra = load("player_season_updates.json", {})
     player_career_extra = load("player_career_updates.json", {})
     stat_corrections = load("player_stat_corrections.json", {})
+    goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
 
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
@@ -306,6 +308,9 @@ def main() -> None:
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),
             })
 
+    validate_goal_evidence(goal_evidence, seasons, matches)
+    add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
+
     def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
         if not recap_stats:
             return dict(official_stats or {})
@@ -413,6 +418,9 @@ def main() -> None:
             else "Niepełne archiwum — historyczne dane"
         )
 
+        if player.get("stats_minimum") and not calculated:
+            player["stats_source"] = "Protokół PLP — potwierdzone minimum, niepełne dane sezonu"
+
     archive_rows = archived_bosch_seasons(
         promotions,
         {str(player["id"]) for player in historic_players},
@@ -466,6 +474,7 @@ def main() -> None:
         player.pop("recap2026", None)
 
     goal_coverage = []
+    administrative_adjustments = administrative_goals_by_season(goal_evidence)
 
     for season in seasons:
         if season.get("gf") is None:
@@ -488,10 +497,15 @@ def main() -> None:
             known_player_goals.append(stats)
 
         assigned_goals = sum(stats["goals"] for stats in known_player_goals)
+        administrative = administrative_adjustments.get(season_id) or {}
+        administrative_goals = administrative.get("goals", 0)
+        unexplained = season["gf"] - assigned_goals - administrative_goals
 
-        if assigned_goals > season["gf"]:
+        if unexplained < 0:
             raise ValueError(
-                f"Assigned goals exceed team goals for {season['name']}: {assigned_goals} > {season['gf']}"
+                f"Attribution exceeds Bosch team goals for {season['name']}: "
+                f"{assigned_goals} player goals + {administrative_goals} administrative "
+                f"> {season['gf']} team goals"
             )
 
         goal_coverage.append({
@@ -499,9 +513,11 @@ def main() -> None:
             "season": season["name"],
             "team_goals": season["gf"],
             "attributed_goals": assigned_goals,
-            "unattributed_goals": season["gf"] - assigned_goals,
+            "administrative_goals": administrative_goals,
+            "administrative_events": administrative.get("events", []),
+            "unattributed_goals": unexplained,
             "players_with_verified_stats": len(known_player_goals),
-            "source": "PLP SportsPress, archived PLP standings and Bosch historical season highlights; remaining goals may include own goals and incomplete reports",
+            "source": "PLP player season statistics, verified match reports and official administrative corrections",
         })
 
     # One source of truth for repeated historical leaderboard rows.
