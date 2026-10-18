@@ -1,136 +1,102 @@
 #!/usr/bin/env python3
-"""Synchronize public YouTube Atom feeds and match new videos conservatively."""
-from __future__ import annotations
+"""Collect full public YouTube channel archives and link Bosch match videos.
 
-from datetime import datetime, timezone
+Uses yt-dlp's metadata-only flat playlist, no video downloads or paid API.
+Keeps prior verified links when YouTube fails.
+"""
+from __future__ import annotations
 from html import unescape
 from pathlib import Path
-from urllib.request import Request, urlopen
-from urllib.parse import quote
 import json
 import re
+import subprocess
 import sys
 import unicodedata
-import xml.etree.ElementTree as ET
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCES = ROOT / "data" / "video_channels.json"
-OVERRIDES = ROOT / "data" / "video_updates.json"
-SITE = ROOT / "docs" / "assets" / "data.json"
-AGENT = "BoschKnowledgeBase/1.0 (+https://github.com/paweleq1994/bosch-analiza)"
-ATOM = {"atom": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
-VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+ROOT=Path(__file__).resolve().parents[1]
+SOURCES=ROOT/"data/video_channels.json"
+OVERRIDES=ROOT/"data/video_updates.json"
+SITE=ROOT/"docs/assets/data.json"
+VIDEO_ID=re.compile(r"^[A-Za-z0-9_-]{11}$")
+SCORE=re.compile(r"(?<!\d)(\d{1,2})\s*[:-]\s*(\d{1,2})(?!\d)")
 
+def norm(value):
+    txt=unicodedata.normalize("NFD",unescape(str(value or "")).lower())
+    return re.sub(r"[^a-z0-9]+"," ","".join(c for c in txt if unicodedata.category(c)!="Mn")).strip()
 
-def normalize(value: str) -> str:
-    value = unicodedata.normalize("NFD", str(value or ""))
-    value = "".join(char for char in value if unicodedata.category(char) != "Mn")
-    return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+def score_in(title,match):
+    pairs={(int(a),int(b)) for a,b in SCORE.findall(title)}
+    return (match["gf"],match["ga"]) in pairs or (match["ga"],match["gf"]) in pairs
 
+def opponent_in(title, opponent):
+    t=norm(title);o=norm(opponent)
+    # Ignore corporate/legal suffixes and generic locale terms for name variants.
+    variants={o}
+    variants.add(re.sub(r"\b(bialystok|s a|sp z o o)\b","",o).strip())
+    if o=="biuro serwis kopiarki":variants.add("biuro serwis kopiarki")
+    if o=="unibep s a":variants.add("unibep")
+    return any(len(v)>=5 and re.search(r"(?<!\w)"+re.escape(v)+r"(?!\w)",t) for v in variants)
 
-def load(path: Path, default: dict) -> dict:
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+def match_video(video,matches):
+    title=video["title"]
+    if "bosch" not in norm(title):return None
+    candidates=[m for m in matches if score_in(title,m) and opponent_in(title,m["opponent"])]
+    return str(candidates[0]["id"]) if len(candidates)==1 else None
 
+def list_channel(source):
+    handle=source["handle"].lstrip("@")
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+",handle):raise ValueError("invalid handle")
+    url=f"https://www.youtube.com/@{handle}/videos"
+    command=["yt-dlp","--flat-playlist","--playlist-end","300","--dump-single-json",
+             "--no-warnings","--socket-timeout","12",url]
+    run=subprocess.run(command,capture_output=True,text=True,timeout=120)
+    if run.returncode:raise RuntimeError(run.stderr.strip()[-500:] or "yt-dlp unavailable")
+    entries=json.loads(run.stdout).get("entries") or []
+    return [{"id":str(v.get("id") or ""),"title":v.get("title") or "",
+             "url":"https://www.youtube.com/watch?v="+str(v.get("id") or ""),
+             "date":v.get("upload_date") or "","channel":source["name"],"segment":("II połowa" if re.search(r"\b(ii|2)\s+po",norm(v.get("title"))) else "I połowa" if re.search(r"\b(i|1)\s+po",norm(v.get("title"))) else ""),
+             "match_id":None,"status":"needs_review"} for v in entries if VIDEO_ID.fullmatch(str(v.get("id") or ""))]
 
-def resolve_channel_id(source: dict) -> str:
-    channel_id = source.get("channel_id", "")
-    if re.fullmatch(r"UC[A-Za-z0-9_-]{22}", channel_id):
-        return channel_id
-    handle = source.get("handle", "").lstrip("@")
-    if not handle or not re.fullmatch(r"[A-Za-z0-9_.-]+", handle):
-        raise ValueError("Missing channel ID or valid handle")
-    request = Request(f"https://www.youtube.com/@{quote(handle)}", headers={"User-Agent": AGENT})
-    with urlopen(request, timeout=30) as response:
-        html = response.read(600000).decode("utf-8", errors="replace")
-    matches = re.findall(r'"(?:externalId|channelId)"\s*:\s*"(UC[A-Za-z0-9_-]{22})"', html)
-    if not matches:
-        matches = re.findall(r'https://www\.youtube\.com/channel/(UC[A-Za-z0-9_-]{22})', html)
-    if not matches:
-        raise RuntimeError(f"Could not resolve YouTube channel @{handle}")
-    return matches[0]
-
-
-def fetch(channel_id: str) -> list[dict]:
-    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
-    request = Request(url, headers={"User-Agent": AGENT})
-    with urlopen(request, timeout=30) as response:
-        root = ET.fromstring(response.read())
-    items = []
-    for entry in root.findall("atom:entry", ATOM):
-        video_id = entry.findtext("yt:videoId", default="", namespaces=ATOM)
-        if not VIDEO_ID.fullmatch(video_id):
+def sync(sources,previous,site,archives):
+    existing={v["id"]:v for v in previous.get("videos",[]) if v.get("id")}
+    archived={v["id"] for v in site.get("videos",[]) if v.get("id")}
+    matches=site.get("matches") or []
+    orlik=[m for m in matches if m["sid"]=="orlik-2026"]
+    total_new=0; warnings=[]
+    for source in sources:
+        try:videos=archives(source)
+        except Exception as exc:
+            warnings.append(f"{source['name']}: {type(exc).__name__}: {exc}")
             continue
-        items.append({
-            "id": video_id,
-            "title": unescape(entry.findtext("atom:title", default="", namespaces=ATOM)),
-            "url": f"https://www.youtube.com/watch?v={video_id}",
-            "date": entry.findtext("atom:published", default="", namespaces=ATOM)[:10],
-            "channel": entry.findtext("atom:author/atom:name", default="", namespaces=ATOM),
-            "segment": "",
-            "match_id": None,
-            "status": "unmatched",
-        })
-    return items
+        # Newest Marta videos form a contiguous season block; older files belong
+        # to the already indexed historical 2025 archive.
+        boundary=next((i for i,v in enumerate(videos) if v["id"] in archived),len(videos))
+        for index,v in enumerate(videos):
+            if v["id"] in archived:continue
+            if v["id"] in existing:continue
+            target=match_video(v,orlik) if source.get("handle")=="martawnuszynska9993" and index<boundary else None
+            if target:
+                v["match_id"]=target;v["status"]="matched_auto"
+            existing[v["id"]]=v
+            total_new+=1
+    # Re-evaluate previously unmatched video entries against Orlik 2026 safely.
+    for v in existing.values():
+        if v["status"]=="needs_review" and v.get("channel")=="Marta Wnuszynska":
+            candidate=match_video(v,orlik)
+            if candidate:
+                v["match_id"]=candidate;v["status"]="matched_auto"
+    return {"videos":sorted(existing.values(),key=lambda v:(v.get("date") or "",v["id"])),
+            "manual_bindings":previous.get("manual_bindings",{})},total_new,warnings
 
+def main():
+    sources=json.loads(SOURCES.read_text(encoding="utf-8")).get("channels",[])
+    previous=json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {"videos":[]}
+    site=json.loads(SITE.read_text(encoding="utf-8"))
+    updated,count,warnings=sync(sources,previous,site,list_channel)
+    for warning in warnings:print("Video source warning:",warning,file=sys.stderr)
+    out=json.dumps(updated,ensure_ascii=False,indent=2)+"\n"
+    if not OVERRIDES.exists() or out!=OVERRIDES.read_text(encoding="utf-8"):OVERRIDES.write_text(out,encoding="utf-8")
+    matches={v["match_id"] for v in updated["videos"] if v.get("status")=="matched_auto" and v.get("match_id","").startswith("orlik26-")}
+    print(f"Video scan: {count} discovered, {len(matches)}/15 Orlik 2026 games matched, {len(warnings)} warnings")
 
-def match_video(video: dict, matches: list[dict]) -> str | None:
-    title = normalize(video["title"])
-    if not any(name in title for name in ("bosch", "tech car", "techcar")):
-        return None
-    possible = []
-    for match in matches:
-        rival = normalize(match["opponent"])
-        if len(rival) < 5 or rival not in title:
-            continue
-        score = f"{match['gf']}:{match['ga']}"
-        reverse_score = f"{match['ga']}:{match['gf']}"
-        has_score = bool(re.search(r"\b" + re.escape(score) + r"\b", video["title"]))
-        has_reverse_score = bool(re.search(r"\b" + re.escape(reverse_score) + r"\b", video["title"]))
-        if has_score or has_reverse_score:
-            possible.append(match["id"])
-    return possible[0] if len(possible) == 1 else None
-
-
-def main() -> None:
-    config = load(SOURCES, {"channels": []})
-    updates = load(OVERRIDES, {"videos": [], "manual_bindings": {}})
-    site = load(SITE, {"matches": []})
-    matches = site.get("matches") or []
-    existing = {video["id"]: video for video in updates.get("videos", [])}
-    historic = {video.get("id") for video in site.get("videos", [])}
-    errors = []
-    detected = 0
-    for source in config.get("channels", []):
-        try:
-            channel_id = resolve_channel_id(source)
-            items = fetch(channel_id)
-        except Exception as error:
-            errors.append(f"{source.get('name') or source.get('handle') or 'channel'}: {type(error).__name__} {error}")
-            continue
-        for video in items:
-            if video["id"] in existing or video["id"] in historic:
-                continue
-            associated_match = match_video(video, matches)
-            if associated_match:
-                video["match_id"] = associated_match
-                video["status"] = "matched_auto"
-            else:
-                video["status"] = "needs_review"
-            existing[video["id"]] = video
-            detected += 1
-    if errors:
-        print("Feed errors:", "; ".join(errors), file=sys.stderr)
-    if errors and not config.get("channels"):
-        raise RuntimeError("Video channels are not configured")
-    updated = {
-        "videos": sorted(existing.values(), key=lambda row: (row.get("date") or "", row["id"])),
-        "manual_bindings": updates.get("manual_bindings", {}),
-    }
-    rendered = json.dumps(updated, ensure_ascii=False, indent=2) + "\n"
-    if not OVERRIDES.exists() or rendered != OVERRIDES.read_text(encoding="utf-8"):
-        OVERRIDES.write_text(rendered, encoding="utf-8")
-    print(f"Video scan: {detected} new videos, {len(errors)} source warnings")
-
-
-if __name__ == "__main__":
-    main()
+if __name__=="__main__":main()
