@@ -39,7 +39,7 @@ def integer(value: object) -> int | None:
 
 
 def request(url: str):
-    with urlopen(Request(url, headers={"User-Agent": USER_AGENT}), timeout=22) as response:
+    with urlopen(Request(url, headers={"User-Agent": USER_AGENT}), timeout=12) as response:
         return json.load(response)
 
 
@@ -49,19 +49,26 @@ def read_team_players(team: dict, fetch=request) -> list[dict]:
     season_priorities = {"148": 4, "146": 3, "144": 2, "141": 1}
     records = {}
 
-    url = BASE + "/players?" + urlencode({"teams": team_id, "per_page": 100, "page": 1})
+    url = BASE + "/players?" + urlencode({"teams": team_id, "per_page": 25, "page": 1})
     payload = fetch(url)
 
     if not isinstance(payload, list):
         raise ValueError("Unexpected PLP team roster response")
 
-    for player in payload[:40]:
+    fallback_lookups = 0
+
+    for player in payload[:25]:
         if not isinstance(player, dict) or not str(player.get("id") or "").isdigit():
             continue
 
         profile = player
 
         if not isinstance(player.get("statistics"), dict):
+            if fallback_lookups >= 5:
+                continue
+
+            fallback_lookups += 1
+
             try:
                 profile = fetch(BASE + "/players/" + str(player["id"]))
             except Exception:
@@ -133,7 +140,7 @@ def refresh(table_data: dict, previous: dict, fetch=request, today: str | None =
     warnings = []
     updated = {key: value for key, value in previous.items() if key != "_checked_on"}
 
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    with ThreadPoolExecutor(max_workers=8) as executor:
         futures = {
             executor.submit(read_team_players, team, fetch): team_id
             for team_id, team in teams.items()
