@@ -77,7 +77,7 @@ def parse_table(table):
     standings = []
     for team_id, raw in contents.items():
         if not isinstance(raw, dict):
-            continue
+            return None
         fields = {
             field: as_integer(raw.get(api_key))
             for field, api_key in (
@@ -87,14 +87,16 @@ def parse_table(table):
             )
         }
         team_name = normalize(raw.get("name"))
-        if not team_name or team_name == "druzyna" or any(value is None for value in fields.values()):
+        if str(team_id) == "0" or team_name == "druzyna" or fields["position"] == 0:
             continue
+        if not team_name or any(value is None for value in fields.values()):
+            return None
         if fields["matches"] != fields["wins"] + fields["draws"] + fields["losses"]:
-            continue
+            return None
         if fields["points"] != fields["wins"] * 3 + fields["draws"]:
-            continue
+            return None
         if fields["position"] < 1:
-            continue
+            return None
         standings.append({
             "team_id": str(team_id), "name": unescape(re.sub(r"<[^>]*>", "", str(raw["name"]))).strip(),
             **fields, "tier": 2 if division == "h2" else 1
