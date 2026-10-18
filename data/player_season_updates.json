@@ -1492,5 +1492,53 @@
       "name": "Orlik 2026",
       "origin": "PLP SportsPress"
     }
+  },
+  "2204": {
+    "148": {
+      "apps": 12,
+      "goals": 16,
+      "assists": 6,
+      "motm": 3,
+      "yellow": 2,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "6764": {
+    "148": {
+      "apps": 5,
+      "goals": 5,
+      "assists": 1,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "13196": {
+    "148": {
+      "apps": 6,
+      "goals": 3,
+      "assists": 2,
+      "motm": 0,
+      "yellow": 1,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "13197": {
+    "148": {
+      "apps": 10,
+      "goals": 7,
+      "assists": 3,
+      "motm": 1,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
   }
 }

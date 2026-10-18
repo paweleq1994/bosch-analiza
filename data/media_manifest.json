@@ -426,6 +426,26 @@
           "local": "media/035afe04f8a6c8bb20247937.jpg"
         }
       ]
+    },
+    {
+      "kind": "players",
+      "id": "2204",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "13197",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "6764",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "13196",
+      "photos": []
     }
   ],
   "notes": "Public PLP media attached to team and player profiles; deleted, detached or replaced historic files may not be available."

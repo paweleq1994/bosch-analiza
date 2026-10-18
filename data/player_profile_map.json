@@ -1794,5 +1794,26 @@
     "resolved_name": "Petelski Tomasz",
     "source": "event_page_hidden",
     "error": "HTTPError"
+  },
+  "13197": {
+    "player_id": 13197,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/",
+    "public": true,
+    "resolved_name": "Szparło Filip",
+    "source": "verified_current_roster"
+  },
+  "6764": {
+    "player_id": 6764,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/",
+    "public": true,
+    "resolved_name": "Malesiński Adam",
+    "source": "verified_current_roster"
+  },
+  "13196": {
+    "player_id": 13196,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/",
+    "public": true,
+    "resolved_name": "Rogon Damian",
+    "source": "verified_current_roster"
   }
 }
