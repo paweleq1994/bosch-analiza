@@ -24,6 +24,19 @@ assert "new-dawid-daniluk" in daniluk[0].get("aliases", []), "Preserve old Danil
 assert daniluk[0]["orlik2026"]["goals"] == 16, "Missing verified Daniluk recap goals"
 
 for player in players:
+    for field in ("apps", "goals", "assists", "motm"):
+        confirmed = sum(
+            record[field]
+            for record in player.get("season_history", [])
+            if type(record.get(field)) is int
+        )
+        unassigned = (player.get("season_coverage") or {}).get("unassigned", {}).get(field)
+
+        if type(player.get(field)) is int:
+            assert type(unassigned) is int and confirmed + unassigned == player[field], (
+                f"Inconsistent {field} history for {player['name']}"
+            )
+
     player_season_ids = [str(entry["sid"]) for entry in player.get("season_history", [])]
     assert len(player_season_ids) == len(set(player_season_ids)), f"Repeated Bosch season for {player['name']}"
 

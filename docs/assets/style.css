@@ -4,3 +4,6 @@
 .table-sort-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
 .table-sort-indicator{font-size:1.05em;opacity:.75;min-width:1em;text-align:center}
 th[aria-sort="ascending"] .table-sort-indicator,th[aria-sort="descending"] .table-sort-indicator{opacity:1;color:var(--accent)}
+
+.table tfoot td{background:var(--panel2);font-weight:700;border-top:2px solid var(--border)}
+.table tfoot td:last-child{font-weight:500;font-size:.84rem;color:var(--muted)}

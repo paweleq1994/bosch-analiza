@@ -14,7 +14,7 @@ const normalized=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u03
 const headline=(name,description)=>'<div class="hero"><span class="eyebrow">Bosch Service Tech-Car</span><h1>'+e(name)+'</h1><p class="lead">'+e(description)+'</p></div>';
 const metrics=items=>'<div class="metric-grid">'+items.map(([label,value])=>'<div class="metric"><small>'+e(label)+'</small><b>'+e(value)+'</b></div>').join("")+'</div>';
 const section=(title,content)=>'<section><h2>'+e(title)+'</h2>'+content+'</section>';
-const table=(heads,rows)=>'<div class="table-card"><table class="table"><thead><tr>'+heads.map(x=>'<th>'+e(x)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(cols=>'<tr>'+cols.map(cell=>'<td>'+cell+'</td>').join("")+'</tr>').join("")+'</tbody></table></div>';
+const table=(heads,rows,footer=null)=>'<div class="table-card"><table class="table"><thead><tr>'+heads.map(heading=>'<th>'+e(heading)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(columns=>'<tr>'+columns.map(cell=>'<td>'+cell+'</td>').join("")+'</tr>').join("")+'</tbody>'+(footer?'<tfoot><tr>'+footer.map(cell=>'<td>'+cell+'</td>').join("")+'</tr></tfoot>':"")+'</table></div>';
 const cards=rows=>'<div class="grid">'+rows.map(row=>'<div class="card">'+row+'</div>').join("")+'</div>';
 const empty=message=>'<div class="notice">'+e(message)+'</div>';
 const filterInput=(placeholder="Szukaj…")=>'<div class="filters"><input id="local-filter" placeholder="'+e(placeholder)+'" aria-label="Filtruj wyniki"><select id="season-filter"><option value="">Wszystkie sezony</option>'+DB.seasons.slice().reverse().map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select></div>';
@@ -37,19 +37,26 @@ function seasonPage(id){
     const leaders=DB.players.map(player=>({
         player,
         stats:player.season_stats?.[selectedSeason.id] || (selectedSeason.id==="orlik-2026"?player.orlik2026:null) || (selectedSeason.id==="146"?player.hala2526:null)
-    })).filter(entry=>entry.stats && Number(entry.stats.apps)>0)
+    })).filter(entry=>entry.stats&&(
+        Number(entry.stats.apps)>0||
+        (entry.stats.apps==null&&(
+            (Number.isInteger(entry.stats.goals)&&entry.stats.goals>0)||
+            (Number.isInteger(entry.stats.assists)&&entry.stats.assists>0)
+        ))
+    ))
         .sort((first,second)=>{
             const firstPoints=Number(first.stats.goals||0)+Number(first.stats.assists||0);
             const secondPoints=Number(second.stats.goals||0)+Number(second.stats.assists||0);
 
             return secondPoints-firstPoints || Number(second.stats.goals||0)-Number(first.stats.goals||0) || first.player.name.localeCompare(second.player.name,"pl");
         });
-    const leadersTable=leaders.length?table(["Zawodnik","M","G","A","G+A"],leaders.map(({player,stats})=>[
+    const leadersTable=leaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],leaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
         e(stats.goals??"—"),
         e(stats.assists??"—"),
-        Number.isFinite(stats.goals)&&Number.isFinite(stats.assists)?e(stats.goals+stats.assists):"—"
+        Number.isInteger(stats.goals)&&Number.isInteger(stats.assists)?e(stats.goals+stats.assists):"—",
+        e(seasonStatisticsSource(stats))
     ])):empty("Brak potwierdzonych statystyk indywidualnych dla tego sezonu.");
     return headline(selectedSeason.name,"Sezon Bosch Service Tech-Car • "+e(selectedSeason.table||"Podlaska Liga Piłkarska"))+
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
@@ -64,7 +71,85 @@ function players(){
     const sorting = '<div class="filters"><label>Sortowanie <select id="player-sort" aria-label="Sortuj zawodników"><option value="name">Alfabetycznie A–Z</option><option value="name-desc">Alfabetycznie Z–A</option><option value="apps">Najwięcej występów</option><option value="goals">Najwięcej goli</option><option value="assists">Najwięcej asyst</option><option value="points">Kanadyjka G+A</option><option value="motm">Najwięcej MVP</option><option value="yellow">Żółte kartki</option><option value="red">Czerwone kartki</option></select></label><label>Pokaż <select id="player-stat-filter" aria-label="Filtruj osiągnięcia"><option value="all">Wszyscy z sezonu</option><option value="scored">Z golem</option><option value="assisted">Z asystą</option><option value="motm">Z MVP</option><option value="yellow">Z żółtą kartką</option><option value="red">Z czerwoną kartką</option><option value="verified">Potwierdzone występy</option></select></label></div>';
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
-function playerDetail(id){const p=DB.players.find(x=>same(x.id,id)||((x.aliases||[]).some(alias=>same(alias,id))));if(!p)return empty("Nie znaleziono zawodnika.");const rows=(p.season_history||[]).map(h=>[e(h.name),e(h.apps??"—"),e(h.goals??"—"),e(h.assists??"—"),h.goals==null||h.assists==null?"—":e(h.goals+h.assists)]);const list=rows.length?table(["Sezon","M","G","A","G+A"],rows):empty("Brak danych sezonowych.");const careerRows=(p.career_totals?.season_rows||[]).map(record=>[e(record.name),e(record.team),e(record.apps??"—"),e(record.goals??"—"),e(record.assists??"—")]);const photos=(DB.media?.subjects||[]).find(x=>x.kind==="players"&&x.id===p.id);const gallery=photos?.photos?.length?section("Zdjęcia PLP",'<div class="grid">'+photos.photos.map(x=>'<a target="_blank" rel="noopener noreferrer" href="'+e(x.url)+'"><img loading="lazy" style="width:100%;max-height:230px;object-fit:contain" src="'+e(x.local?x.local:x.url)+'" alt="'+e(x.alt||p.name)+'"></a>').join("")+'</div>'):"";return headline(p.name,p.status||"Zawodnik Bosch Service Tech-Car")+metrics([["Mecze Boscha",p.apps??(p.orlik2026?.apps!=null?"≥ "+p.orlik2026.apps:"—")],["Gole Boscha",p.goals??(p.orlik2026?.goals!=null?"≥ "+p.orlik2026.goals:"—")],["Asysty Boscha",p.assists??(p.orlik2026?.assists!=null?"≥ "+p.orlik2026.assists:"—")],["MVP Boscha",p.motm??"—"]])+(p.career_totals?section("Cała kariera w PLP",metrics([["Mecze",p.career_totals.apps??"—"],["Gole",p.career_totals.goals??"—"],["Asysty",p.career_totals.assists??"—"],["MVP",p.career_totals.motm??"—"]])):"")+section("Sezony w Bosch Service Tech-Car",list)+(careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+'<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu, a nie pełny bilans kariery. Bilans Boscha obejmuje wszystkie dostępne sezony i Superpuchary, łącznie z Orlikiem 2026. Sumy całej kariery obejmują również inne kluby i mogą pochodzić ze starszego zestawienia PLP.</div>'+gallery+(p.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(p.peak)+'</div>'):"")+(p.profile_url?'<p><a href="'+e(p.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");}
+function seasonStatisticsSource(record){
+    if(record?.origin==="plp_archived_season"){
+        return "Tabela PLP — archiwum";
+    }
+
+    if(record?.origin==="archived_peak"){
+        return "Archiwum Boscha — najlepszy sezon";
+    }
+
+    if(record?.origin==="participation_only"){
+        return "Potwierdzony udział, brak statystyk";
+    }
+
+    if(record?.origin==="PLP public all-career table"){
+        return "Tabela kariery PLP";
+    }
+
+    return "PLP — statystyki sezonowe";
+}
+
+function playerDetail(id){
+    const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
+
+    if(!player){
+        return empty("Nie znaleziono zawodnika.");
+    }
+
+    const seasonRows=(player.season_history||[]).map(record=>[
+        e(record.name),
+        e(record.apps??"—"),
+        e(record.goals??"—"),
+        e(record.assists??"—"),
+        Number.isInteger(record.goals)&&Number.isInteger(record.assists)?e(record.goals+record.assists):"—",
+        e(seasonStatisticsSource(record))
+    ]);
+    const summaryRow=[
+        '<strong>Łącznie Bosch</strong>',
+        '<strong>'+e(player.apps??"—")+'</strong>',
+        '<strong>'+e(player.goals??"—")+'</strong>',
+        '<strong>'+e(player.assists??"—")+'</strong>',
+        '<strong>'+(Number.isInteger(player.goals)&&Number.isInteger(player.assists)?e(player.goals+player.assists):"—")+'</strong>',
+        e(player.bosch_totals?"PLP — pełny bilans":"Archiwalny bilans Bosch")
+    ];
+    const seasonTable=seasonRows.length
+        ? table(["Sezon","M","G","A","G+A","Źródło"],seasonRows,summaryRow)
+        : empty("Brak szczegółowych danych sezonowych.");
+    const unassigned=player.season_coverage?.unassigned||{};
+    const remainingTotals=[
+        ["meczów",unassigned.apps],
+        ["goli",unassigned.goals],
+        ["asyst",unassigned.assists]
+    ].filter(([,value])=>Number.isInteger(value)&&value>0);
+    const remainingNote=remainingTotals.length
+        ? '<div class="notice">Niepełny podział na sezony: '+remainingTotals.map(([label,value])=>e(value)+" "+e(label)).join(", ")+'. Wiersz „Łącznie Bosch” pochodzi z historycznego bilansu zawodnika i nie jest sumą wyświetlonych sezonów. Nie przypisujemy brakujących statystyk do sezonów bez potwierdzenia.</div>'
+        : "";
+    const careerRows=(player.career_totals?.season_rows||[]).map(record=>[
+        e(record.name),
+        e(record.team),
+        e(record.apps??"—"),
+        e(record.goals??"—"),
+        e(record.assists??"—")
+    ]);
+    const photos=(DB.media?.subjects||[]).find(subject=>subject.kind==="players"&&subject.id===player.id);
+    const gallery=photos?.photos?.length?section("Zdjęcia PLP",
+        '<div class="grid">'+photos.photos.map(photo=>
+            '<a target="_blank" rel="noopener noreferrer" href="'+e(photo.url)+'"><img loading="lazy" style="width:100%;max-height:230px;object-fit:contain" src="'+e(photo.local||photo.url)+'" alt="'+e(photo.alt||player.name)+'"></a>'
+        ).join("")+'</div>'
+    ):"";
+
+    return headline(player.name,player.status||"Zawodnik Bosch Service Tech-Car")+
+        metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["MVP Boscha",player.motm??"—"]])+
+        (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
+        section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
+        (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
+        '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
+        gallery+
+        (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
+        (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
+}
 function opponents(){const map=new Map();for(const m of DB.matches){const key=normalized(m.opponent);if(!map.has(key))map.set(key,{name:m.opponent,matches:[],key});map.get(key).matches.push(m);}DB.opponents=[...map.values()].sort((a,b)=>a.name.localeCompare(b.name,"pl"));return headline("Rywale","Bezpośrednie pojedynki z każdą drużyną.")+'<div class="filters"><input id="local-filter" placeholder="Znajdź rywala…"></div><div id="filtered-opponents"></div>';}
 function opponentDetail(id){const ms=DB.matches.filter(m=>normalized(m.opponent)===id);if(!ms.length)return empty("Nie znaleziono rywala.");const wins=ms.filter(m=>m.gf>m.ga).length,draws=ms.filter(m=>m.gf===m.ga).length;return headline(ms[0].opponent,"Historia spotkań z Bosch Service Tech-Car")+metrics([["Mecze",ms.length],["Wygrane",wins],["Remisy",draws],["Porażki",ms.length-wins-draws]])+section("Wszystkie pojedynki",'<div class="card">'+matchList(ms)+'</div>');}
 function videos(){
