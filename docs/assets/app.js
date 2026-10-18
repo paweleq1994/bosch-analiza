@@ -26,7 +26,38 @@ function matchList(matches,limit=0){const list=matches.slice().sort((a,b)=>b.dat
 function barChart(rows,key,label){const max=Math.max(1,...rows.map(x=>Number(x[key])||0));return '<div class="card bar-chart">'+rows.map(s=>'<div class="bar-row"><span>'+e(s.name)+'</span><div class="bar-track"><span style="width:'+Math.max(0,Math.min(100,(Number(s[key])||0)/max*100))+'%"></span></div><b>'+e(label?label(s):fmt(s[key]))+'</b></div>').join("")+'</div>';}
 function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.filter(p=>p.orlik2026).sort((a,b)=>(b.orlik2026.goals+b.orlik2026.assists)-(a.orlik2026.goals+a.orlik2026.assists)).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy Orlika 2026",'<div class="card">'+leaders.map(p=>'<div class="list-row">'+playerLink(p)+'<strong>'+e(p.orlik2026.goals+p.orlik2026.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz pełną analizę Orlika 2026"],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
 function seasons(){return headline("Sezony","Wszystkie rozgrywki Boscha i porównanie ich wyników.")+metrics([["Sezonów",DB.seasons.length],["Łącznie spotkań",DB.seasons.reduce((n,s)=>n+s.matches,0)],["Najwięcej punktów",Math.max(...DB.seasons.map(s=>s.points))]])+section("Historia sezonów",cards(DB.seasons.slice().reverse().map(s=>'<span class="eyebrow">'+(normalized(s.name).includes("hala")?"HALA":"ORLIK")+'</span><h3>'+seasonLink(s)+'</h3><div class="row"><span>'+e(s.position)+'. miejsce</span><strong>'+e(s.points)+' pkt</strong></div><p>'+e(s.wins+"W "+s.draws+"R "+s.losses+"P • "+s.gf+":"+s.ga+" • "+ppg(s)+" PPG")+'</p>')))+section("Porównanie punktów",barChart(DB.seasons,"points",s=>String(s.points)));}
-function seasonPage(id){const s=season(id);if(!s)return empty("Nie znaleziono sezonu.");const games=DB.matches.filter(m=>same(m.sid,s.id));const leaders=s.id==="orlik-2026"?DB.players.filter(p=>p.orlik2026).sort((a,b)=>b.orlik2026.goals-a.orlik2026.goals):s.name==="Hala 2025/2026"?DB.players.filter(p=>p.hala2526).sort((a,b)=>b.hala2526.goals-a.hala2526.goals):[];return headline(s.name,"Sezon Bosch Service Tech-Car • "+e(s.table||"Podlaska Liga Piłkarska"))+metrics([["Pozycja",s.position+"."],["Punkty",s.points],["Bilans",s.wins+"-"+s.draws+"-"+s.losses],["Bramki",s.gf+":"+s.ga],["PPG",ppg(s)],["Czyste konta",s.clean_sheets??"—"]])+section("Przebieg sezonu",'<div class="card">'+matchList(games)+'</div>')+section("Liderzy sezonu",leaders.length?table(["Zawodnik","M","G","A"],leaders.map(p=>{const x=s.id==="orlik-2026"?p.orlik2026:p.hala2526;return[playerLink(p),fmt(x.apps,0),fmt(x.goals,0),fmt(x.assists,0)]})):empty("Pełne rankingi sezonowe nie są dostępne w zachowanym źródle. Nie rekonstruujemy ich z sum całej kariery."))+section("Porównanie z innymi sezonami",barChart(DB.seasons.map(x=>({...x,ppg:x.matches?x.points/x.matches:0})),"ppg",x=>fmt(x.ppg)))+(s.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Statystyki graczy pokazują zweryfikowanych liderów, nie pełną kadrę.</div>':"");}
+function seasonPage(id){
+    const selectedSeason=season(id);
+
+    if(!selectedSeason){
+        return empty("Nie znaleziono sezonu.");
+    }
+
+    const matches=DB.matches.filter(match=>same(match.sid,selectedSeason.id));
+    const leaders=DB.players.map(player=>({
+        player,
+        stats:player.season_stats?.[selectedSeason.id] || (selectedSeason.id==="orlik-2026"?player.orlik2026:null) || (selectedSeason.id==="146"?player.hala2526:null)
+    })).filter(entry=>entry.stats && Number(entry.stats.apps)>0)
+        .sort((first,second)=>{
+            const firstPoints=Number(first.stats.goals||0)+Number(first.stats.assists||0);
+            const secondPoints=Number(second.stats.goals||0)+Number(second.stats.assists||0);
+
+            return secondPoints-firstPoints || Number(second.stats.goals||0)-Number(first.stats.goals||0) || first.player.name.localeCompare(second.player.name,"pl");
+        });
+    const leadersTable=leaders.length?table(["Zawodnik","M","G","A","G+A"],leaders.map(({player,stats})=>[
+        playerLink(player),
+        e(stats.apps??"—"),
+        e(stats.goals??"—"),
+        e(stats.assists??"—"),
+        Number.isFinite(stats.goals)&&Number.isFinite(stats.assists)?e(stats.goals+stats.assists):"—"
+    ])):empty("Brak potwierdzonych statystyk indywidualnych dla tego sezonu.");
+    return headline(selectedSeason.name,"Sezon Bosch Service Tech-Car • "+e(selectedSeason.table||"Podlaska Liga Piłkarska"))+
+        metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
+        section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
+        section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        section("Porównanie z innymi sezonami",barChart(DB.seasons.map(row=>({...row,ppg:row.matches?row.points/row.matches:0})),"ppg",row=>fmt(row.ppg)))+
+        (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Statystyki indywidualne pochodzą z dostępnych danych PLP; nie są pełnym potwierdzeniem wszystkich strzelców.</div>':"");
+}
 function matchesPage(){return headline("Mecze","Wyniki, protokoły, pojedyncze spotkania i powiązane filmy.")+filterInput("Rywal, wynik lub data")+'<div id="filtered-matches"></div>';}
 function matchDetail(id){const m=DB.matches.find(x=>same(x.id,id));if(!m)return empty("Nie znaleziono meczu.");const media=m.videos||[];return headline(m.opponent,m.date+" • "+m.season)+metrics([["Wynik Bosch",m.gf+":"+m.ga],["Rezultat",result(m)],["Do przerwy",m.halftime||"Brak danych"],["Nagrania",media.length]])+'<p>'+href("season/"+encodeURIComponent(m.sid),"← Powrót do sezonu")+'</p>'+section("Dane meczu",'<div class="card"><p>'+e(m.match||"Bosch Service Tech-Car — "+m.opponent)+'</p><p>Źródło: '+(m.event_link?'<a target="_blank" rel="noopener noreferrer" href="'+e(m.event_link)+'">Podlaska Liga Piłkarska ↗</a>':"Archiwum kompendium")+'</p></div>')+section("Nagrania",media.length?cards(media.map(v=>'<div class="video-thumb">▶</div><h3>'+e(v.segment||v.title||"Nagranie")+'</h3><a href="'+e(v.url||"https://www.youtube.com/watch?v="+v.video_id)+'" target="_blank" rel="noopener noreferrer">Oglądaj na YouTube ↗</a>')):empty("Brak przypisanego nagrania. Jeśli pojawi się na monitorowanym kanale, synchronizacja spróbuje je dopasować."));}
 function players(){
