@@ -33,6 +33,8 @@ jobs:
         run: |
           node --check docs/assets/app.js
           node --check docs/assets/scouting.js
+      - name: Verify player season filtering
+        run: node tests/frontend_player_filter.cjs
       - name: Check required portal paths
         run: |
           test -s docs/index.html
