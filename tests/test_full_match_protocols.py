@@ -28,6 +28,7 @@ class FullPLPMatchProtocolTests(unittest.TestCase):
         self.assertEqual(sum(row["opponent_own_goals"] for row in self.seasons.values()), 3)
         self.assertEqual(sum(row["administrative_goals"] for row in self.seasons.values()), 1)
         self.assertEqual(sum(row["unattributed_goals"] for row in self.seasons.values()), 0)
+        self.assertEqual(self.database["analysis"]["match_protocol_audit"]["total_own_goals_conceded"], 6)
 
         for match in self.matches.values():
             with self.subTest(match=match["id"]):
@@ -103,6 +104,14 @@ class FullPLPMatchProtocolTests(unittest.TestCase):
         self.assertEqual(self.players["7282"]["season_stats"]["120"]["goals"], 1)
         self.assertEqual(self.players["7285"]["season_stats"]["139"]["goals"], 2)
         self.assertEqual(self.players["7285"]["season_coverage"]["unassigned"]["goals"], 0)
+
+    def test_separate_six_bosch_own_goals_without_inflating_offensive_stats(self):
+        self.assertEqual(self.players["1960"]["own_goals_conceded"], 4)
+        self.assertEqual(self.players["1970"]["own_goals_conceded"], 1)
+        self.assertEqual(self.players["7277"]["own_goals_conceded"], 1)
+        self.assertEqual(self.matches["7839"]["goal_protocol"]["own_goals_conceded"], 1)
+        self.assertEqual(self.matches["7839"]["goal_protocol"]["own_goals_conceded_scorers"][0]["player_id"], "1960")
+        self.assertEqual(sum(player["own_goals_conceded"] for player in self.players.values()), 6)
 
     def test_no_duplicate_player_scorers_in_any_match(self):
         for match in self.matches.values():
