@@ -60,7 +60,7 @@ class GoalAttributionTests(unittest.TestCase):
         )
         self.assertEqual(
             (coverage["144"]["attributed_goals"], coverage["144"]["unattributed_goals"]),
-            (35, 1),
+            (36, 0),
         )
         self.assertEqual(
             (
@@ -68,15 +68,16 @@ class GoalAttributionTests(unittest.TestCase):
                 coverage["146"]["administrative_goals"],
                 coverage["146"]["unattributed_goals"],
             ),
-            (31, 1, 1),
+            (31, 1, 0),
         )
-        self.assertEqual(sum(row["unattributed_goals"] for row in coverage.values()), 7)
+        self.assertEqual(sum(row["unattributed_goals"] for row in coverage.values()), 0)
+        self.assertEqual(sum(row["opponent_own_goals"] for row in coverage.values()), 3)
         self.assertEqual(sum(row["administrative_goals"] for row in coverage.values()), 1)
 
         for row in coverage.values():
             self.assertEqual(
                 row["team_goals"],
-                row["attributed_goals"] + row["administrative_goals"] + row["unattributed_goals"],
+                row["attributed_goals"] + row["opponent_own_goals"] + row["administrative_goals"] + row["unattributed_goals"],
                 row["season"],
             )
 
@@ -139,13 +140,13 @@ class GoalAttributionTests(unittest.TestCase):
                 {"12286": {"resolved_name": "Pietruczuk Paweł"}},
             )
 
-    def test_historical_goals_remain_unassigned_without_independent_evidence(self):
+    def test_historical_goals_are_reconciled_with_independent_protocols(self):
         coverage = {str(row["sid"]): row for row in self.portal["analysis"]["player_goal_coverage"]}
-        self.assertEqual(coverage["120"]["unattributed_goals"], 2)
-        self.assertEqual(coverage["125"]["unattributed_goals"], 1)
-        self.assertEqual(coverage["139"]["unattributed_goals"], 2)
-        self.assertEqual(coverage["144"]["unattributed_goals"], 1)
-        self.assertEqual(coverage["146"]["unattributed_goals"], 1)
+        self.assertEqual(coverage["120"]["unattributed_goals"], 0)
+        self.assertEqual(coverage["125"]["unattributed_goals"], 0)
+        self.assertEqual(coverage["139"]["unattributed_goals"], 0)
+        self.assertEqual(coverage["144"]["unattributed_goals"], 0)
+        self.assertEqual(coverage["146"]["unattributed_goals"], 0)
 
 
 if __name__ == "__main__":
