@@ -1,22 +1,6 @@
 {
   "season_rows": [
     {
-      "id": "148",
-      "plp_id": "148",
-      "name": "2. LIGA – Orlik’26",
-      "position": 2,
-      "points": 35,
-      "matches": 15,
-      "wins": 11,
-      "draws": 2,
-      "losses": 2,
-      "gf": 59,
-      "ga": 17,
-      "clean_sheets": 6,
-      "table": "2. LIGA – Orlik’26",
-      "origin": "plp_sync"
-    },
-    {
       "id": "120",
       "plp_id": "120",
       "name": "Hala 2022",
@@ -126,6 +110,22 @@
       "ga": 34,
       "clean_sheets": 3,
       "table": "II LIGA – Orlik’25",
+      "origin": "plp_sync"
+    },
+    {
+      "id": "148",
+      "plp_id": "148",
+      "name": "2. LIGA – Orlik’26",
+      "position": 2,
+      "points": 35,
+      "matches": 15,
+      "wins": 11,
+      "draws": 2,
+      "losses": 2,
+      "gf": 59,
+      "ga": 17,
+      "clean_sheets": 6,
+      "table": "2. LIGA – Orlik’26",
       "origin": "plp_sync"
     }
   ],
