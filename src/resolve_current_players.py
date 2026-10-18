@@ -9,6 +9,7 @@ from urllib.request import Request, urlopen
 import json
 import re
 import sys
+import unicodedata
 
 from player_identity import has_bosch_season, match_public_profile, person_key
 
@@ -64,7 +65,9 @@ def verified_profile(player_id: object, expected_name: str, fetch=fetch_json) ->
 
 
 def candidate_slugs(name: str) -> list[str]:
-    tokens = re.sub(r"[^a-z0-9 ]", "", name.lower().replace("ł", "l")).split()
+    text = unicodedata.normalize("NFD", name.lower().replace("ł", "l"))
+    ascii_name = "".join(character for character in text if unicodedata.category(character) != "Mn")
+    tokens = re.sub(r"[^a-z0-9 ]", "", ascii_name).split()
     return ["-".join(reversed(tokens))] if len(tokens) == 2 else []
 
 
@@ -108,7 +111,8 @@ def find_profile(name: str, fetch=fetch_json, fetch_page=fetch_html) -> tuple[st
                 if person_key(html_title) != person_key(name):
                     continue
 
-                player_ids = set(POST_ID_PATTERN.findall(html))
+                shortlink = re.search(r'<link[^>]+rel=["\\\']shortlink["\\\'][^>]+href=["\\\'][^"\\\']*[?&]p=(\\d+)', html, re.I)
+                player_ids = {shortlink.group(1)} if shortlink else set(POST_ID_PATTERN.findall(html))
                 if len(player_ids) != 1:
                     continue
 
