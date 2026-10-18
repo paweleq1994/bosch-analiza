@@ -130,6 +130,7 @@ class PlayerIdentityTests(unittest.TestCase):
         build_portal.main()
         data = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="utf-8"))
         updates = json.loads((ROOT / "data" / "player_season_updates.json").read_text(encoding="utf-8"))
+        corrections = json.loads((ROOT / "data" / "player_stat_corrections.json").read_text(encoding="utf-8"))
 
         for player in data["players"]:
             expected = {
@@ -137,12 +138,31 @@ class PlayerIdentityTests(unittest.TestCase):
                 for season_id, stats in updates.get(str(player["id"]), {}).items()
                 if str(season_id) in {"119", "127", "140", "145"} and (stats.get("apps") or 0) > 0
             }
+            expected.update(
+                str(season_id)
+                for season_id, stats in (corrections.get(str(player["id"])) or {}).get("seasons", {}).items()
+                if str(season_id) in {"119", "127", "140", "145"} and (stats.get("apps") or 0) > 0
+            )
             observed = {
                 str(record["sid"])
                 for record in player.get("season_history", [])
                 if str(record["sid"]) in {"119", "127", "140", "145"}
             }
             self.assertEqual(observed, expected, player["name"])
+
+
+    def test_jurkowicz_all_career_plp_supercups_are_reconciled(self):
+        build_portal.main()
+        database = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="utf-8"))
+        player = next(person for person in database["players"] if person["id"] == "7275")
+        self.assertEqual((player["apps"], player["goals"], player["assists"]), (69, 30, 20))
+        self.assertEqual(
+            (player["career_totals"]["apps"], player["career_totals"]["goals"]),
+            (69, 30),
+        )
+        supercups = {str(row["sid"]): row for row in player["season_history"] if str(row["sid"]) in {"127", "140"}}
+        self.assertEqual(supercups["127"]["goals"], 1)
+        self.assertEqual(supercups["140"]["apps"], 1)
 
 
 if __name__ == "__main__":
