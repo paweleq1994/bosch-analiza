@@ -25,12 +25,14 @@ assert.ok(archive.includes("113 historycznych meczów"));
 assert.ok(archive.includes("293"));
 assert.ok(archive.includes("289"));
 assert.ok(archive.includes("Samobóje rywali"));
+assert.ok(archive.includes("Samobóje Boscha"));
+assert.ok(archive.includes("6"));
 assert.ok(archive.includes('id="filtered-goals"'));
 
 const goalRows = render("goalMatchRows(DB.matches)");
 assert.equal(goalRows.length, 113);
-assert.ok(goalRows.every(row => row.length === 8));
-assert.ok(goalRows.every(row => row[7].includes("podlaskaliga.pl")));
+assert.ok(goalRows.every(row => row.length === 9));
+assert.ok(goalRows.every(row => row[8].includes("podlaskaliga.pl")));
 
 const rutkowski = database.players.find(player => player.id === "7284");
 assert.ok(rutkowski);
@@ -56,6 +58,9 @@ assert.ok(oldGoalMinutes.includes("Oficjalny protokół PLP"));
 const ownGoalMatch = render('matchDetail("7788")');
 assert.ok(ownGoalMatch.includes("Samobóje rywali"));
 assert.ok(ownGoalMatch.includes("Gole samobójcze rywali"));
+const selfGoalMatch = render('matchDetail("7839")');
+assert.ok(selfGoalMatch.includes("Samobóje zawodników Boscha"));
+assert.ok(selfGoalMatch.includes("Moskal Paweł"));
 
 const scoredMatch = render('matchDetail("7851")');
 assert.ok(scoredMatch.includes("Markowski Damian"));
