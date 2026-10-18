@@ -15,6 +15,7 @@ PORTAL_PATH = ROOT / "docs" / "assets" / "data.json"
 SUMMARY_PATH = ROOT / "data" / "match_protocol_audit_summary.json"
 FINDINGS_PATH = ROOT / "data" / "match_protocol_audit_findings.json"
 INDEX_PATH = ROOT / "data" / "match_protocol_audit_index.json"
+ADMIN_PATH = ROOT / "data" / "goal_evidence.json"
 
 
 def key(value: object) -> str:
@@ -74,8 +75,9 @@ def match_summary(record: dict) -> dict:
     }
 
 
-def summarize(source: dict, portal: dict) -> dict:
+def summarize(source: dict, portal: dict, administrative_evidence: dict) -> dict:
     fixtures = [match_summary(row) for row in source["matches"]]
+    administrative_by_id = {str(row["event_id"]): row for row in administrative_evidence.get("administrative_adjustments", [])}
     database_players = defaultdict(list)
 
     for player in portal["players"]:
@@ -112,6 +114,10 @@ def summarize(source: dict, portal: dict) -> dict:
         roster_goals = match["protocol_player_goals"]
         opponent_own_goals = match["opponent_own_goals"] or 0
 
+        administrative = administrative_by_id.get(str(match["id"])) or {}
+        administrative_goals = administrative.get("difference", 0)
+        match["administrative_goals"] = administrative_goals
+
         if on_field_goals is None or roster_goals is None:
             unusual_games.append({
                 "match": match["id"],
@@ -123,8 +129,8 @@ def summarize(source: dict, portal: dict) -> dict:
             })
         elif (
             match["unreadable_goal_markers"]
-            or on_field_goals != roster_goals + opponent_own_goals
-            or match["official_team_goals"] != on_field_goals
+            or on_field_goals != roster_goals
+            or match["official_team_goals"] != on_field_goals + opponent_own_goals + administrative_goals
         ):
             unusual_games.append({
                 "match": match["id"],
@@ -136,6 +142,7 @@ def summarize(source: dict, portal: dict) -> dict:
                 "player_goals": roster_goals,
                 "own_goals_by_opponent": opponent_own_goals,
                 "on_field_goals": on_field_goals,
+                "administrative_goals": administrative_goals,
                 "unreadable_goal_markers": match["unreadable_goal_markers"],
                 "issue": "goals_disagree_with_match_statistics",
             })
@@ -152,6 +159,7 @@ def summarize(source: dict, portal: dict) -> dict:
         field_goals = sum(match["protocol_on_field_goals"] or 0 for match in matches)
         verified_count = sum(match["protocol_on_field_goals"] is not None for match in matches)
         roster_count = sum(match["protocol_player_goals"] is not None for match in matches)
+        administrative_goals = sum(match.get("administrative_goals", 0) for match in matches)
 
         season_summaries.append({
             "sid": season_id,
@@ -163,7 +171,8 @@ def summarize(source: dict, portal: dict) -> dict:
             "player_goals_in_match_protocols": roster_sum,
             "opponent_own_goals_in_protocols": opposing_own_goals,
             "on_field_goals_in_protocols": field_goals,
-            "sum_protocol_goals_vs_official": roster_sum + opposing_own_goals - season["gf"],
+            "administrative_goals_in_protocols": administrative_goals,
+            "sum_protocol_goals_vs_official": roster_sum + opposing_own_goals + administrative_goals - season["gf"],
         })
 
         for player_name, observed in observations.items():
@@ -211,7 +220,8 @@ def summarize(source: dict, portal: dict) -> dict:
 def main() -> None:
     source = json.loads(RAW_PATH.read_text(encoding="utf-8"))
     database = json.loads(PORTAL_PATH.read_text(encoding="utf-8"))
-    report = summarize(source, database)
+    administrative_evidence = json.loads(ADMIN_PATH.read_text(encoding="utf-8"))
+    report = summarize(source, database, administrative_evidence)
     SUMMARY_PATH.write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
