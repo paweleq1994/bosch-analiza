@@ -28,6 +28,7 @@ def total_fields(rows):
 def career_from_profile(profile, parse_number):
     """Merge duplicated league sections by (season, team); preserve transfers."""
     unique = {}
+    descriptions = {}
     teams = set()
     for by_season in (profile.get("statistics") or {}).values():
         if not isinstance(by_season, dict):
@@ -52,25 +53,50 @@ def career_from_profile(profile, parse_number):
                 "yellow": parse_number(entry.get("yellowcards")),
                 "red": parse_number(entry.get("redcards")),
             }
+            label = " ".join(
+                unescape(re.sub(r"<[^>]+>", " ", raw_team)).split()
+            ) or team
+
             previous = unique.get(key)
             if previous is not None and previous != stats:
                 if previous["apps"] == 0 and apps > 0:
                     unique[key] = stats
+                    descriptions[key] = {"name": str(entry.get("name") or sid), "team": label}
                 elif apps == 0 and previous["apps"] > 0:
                     continue
                 else:
                     raise ValueError(f"Contradictory PLP career entry for season {sid} and team {team}")
             else:
                 unique[key] = stats
+                descriptions[key] = {"name": str(entry.get("name") or sid), "team": label}
 
             teams.add(team)
     if not unique:
         return None
+    history = [
+        {
+            "sid": season_id,
+            "name": descriptions[(season_id, team)]["name"],
+            "team": descriptions[(season_id, team)]["team"],
+            **stats,
+        }
+        for (season_id, team), stats in sorted(
+            unique.items(),
+            key=lambda row: (
+                int(row[0][0]) if str(row[0][0]).isdigit() else -1,
+                str(row[0][0]),
+                row[0][1],
+            ),
+            reverse=True,
+        )
+    ]
+
     return {
         **total_fields(unique.values()),
         "source": "PLP SportsPress",
         "seasons": len({key[0] for key in unique}),
         "teams": len(teams),
+        "season_rows": history,
     }
 
 
