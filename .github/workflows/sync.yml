@@ -11,6 +11,8 @@ on:
       - 'src/sync_scouting.py'
       - 'src/sync_scouting_details.py'
       - 'src/build_portal.py'
+      - 'src/plp_photo_archive.py'
+      - 'src/dedupe_portal.py'
       - 'src/build_scouting.py'
   schedule:
     - cron: "17 * * * *"
@@ -39,6 +41,10 @@ jobs:
         run: python src/sync_videos.py
       - name: Rebuild portal data
         run: python src/build_portal.py
+      - name: Refresh historical PLP photo archive
+        run: python src/plp_photo_archive.py
+      - name: Rebuild portal including media manifest
+        run: python src/build_portal.py
       - name: Refresh rival PLP tables
         run: python src/sync_scouting.py
       - name: Sync opponent match and player stats
@@ -60,7 +66,7 @@ jobs:
           if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json docs/assets/data.json docs/assets/scouting.json
+            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json docs/assets/data.json docs/assets/scouting.json data/media_manifest.json docs/media data/media_manifest.json docs/media
             git commit -m "chore: sync Bosch video and portal data"
             git push
           fi
