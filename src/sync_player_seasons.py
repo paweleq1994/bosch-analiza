@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 import json,re,sys
 from player_totals import career_from_profile
+from player_identity import match_public_profile
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"player_season_updates.json"
 PORTAL=ROOT/"docs/assets/data.json"
@@ -64,7 +65,14 @@ def refresh_careers(ids, current, fetch=request):
 def main():
     old=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     portal=json.loads(PORTAL.read_text(encoding="utf-8"))
-    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()},key=int)
+    profiles=json.loads((ROOT/"data"/"player_profile_map.json").read_text(encoding="utf-8"))
+    recap=json.loads((ROOT/"data"/"orlik_2026_recap.json").read_text(encoding="utf-8"))
+    current_ids={
+        match[0]
+        for row in recap.get("player_leaders",[])
+        if (match:=match_public_profile(str(row.get("name") or ""),profiles)) is not None
+    }
+    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids,key=int)
     results,warnings=refresh(ids,old)
     careers_file=ROOT/"data"/"player_career_updates.json"
     previous_careers=json.loads(careers_file.read_text(encoding="utf-8")) if careers_file.exists() else {}
