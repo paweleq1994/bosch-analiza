@@ -40,6 +40,8 @@ jobs:
         run: node tests/frontend_records_sort.cjs
       - name: Verify every table is sortable and season leaders are correct
         run: node tests/frontend_all_tables_sort.cjs
+      - name: Check every archived player season in the frontend
+        run: node tests/frontend_archived_player_seasons.cjs
       - name: Check required portal paths
         run: |
           test -s docs/index.html
