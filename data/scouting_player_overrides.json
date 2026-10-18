@@ -1,0 +1,26 @@
+{
+  "4Technology": [
+    {
+      "name": "Dudko Jakub",
+      "id": null,
+      "apps": 12,
+      "goals": 35,
+      "assists": 10,
+      "motm": 5,
+      "source_season": "Orlik 2026",
+      "source_url": "https://podlaskaliga.pl/zawodnik/dudko-jakub/",
+      "source_label": "Oficjalny profil PLP; Orlik 2026"
+    },
+    {
+      "name": "Dudko Jakub",
+      "id": null,
+      "apps": 14,
+      "goals": 13,
+      "assists": 15,
+      "motm": 4,
+      "source_season": "Hala 2025/26",
+      "source_url": "https://podlaskaliga.pl/zawodnik/dudko-jakub/",
+      "source_label": "Oficjalny profil PLP; Hala 2025/26"
+    }
+  ]
+}
