@@ -51,12 +51,23 @@ def main():
     hall=seed["tables"]["hala_2025_26_h1"]
     orlik=seed["tables"]["orlik_2026_h1"]
     lower=seed["tables"]["orlik_2026_h2"]
+    updates_path=DATA/"scouting_updates.json"
+    updates=json.loads(updates_path.read_text(encoding="utf-8")) if updates_path.exists() else {"tables":{}}
+    verified=updates.get("tables") or {}
+    hall=verified.get("hala_2025_26_h1") or hall
+    orlik=verified.get("orlik_2026_h1") or orlik
+    lower=verified.get("orlik_2026_h2") or lower
     old={norm(t["team_name"]):t for t in historical["opponents"]}
     # Three bottom teams are excluded by the user's promotion/relegation assumption;
     # a future official participant list overrides these projections.
     dropped={norm(r["name"]) for r in orlik[-3:]}
     candidates=[r["name"] for r in orlik if norm(r["name"]) not in dropped]
-    candidates+=["Biuro Serwis-Kopiarki","Zimne Dranie"]
+    candidates += [r["name"] for r in lower[:3] if norm(r["name"])!=norm("Bosch Service Tech-Car")]
+    # If a verified current Hala I table is found, it becomes authoritative.
+    current_hall=verified.get("hala_2026_27_h1")
+    if current_hall:
+        candidates=[r["name"] for r in current_hall if norm(r["name"])!=norm("Bosch Service Tech-Car")]
+    candidates=list(dict((norm(name),name) for name in candidates).values())
     teams=[]
     for name in candidates:
         indoor=match_row(hall,name)
@@ -76,7 +87,7 @@ def main():
         threats=benchmark(risk_basis)
         teams.append({
             "id":norm(name).replace(" ","-"),"name":name,
-            "status":"candidate", "division":"projected_1_hala_2026_27",
+            "status":"confirmed_from_table" if current_hall else "candidate", "division":"verified_1_hala_2026_27" if current_hall else "projected_1_hala_2026_27",
             "origin":"promoted_II" if match_row(lower,name) else "retained_I",
             "hall":indoor,"orlik":outdoor,"historic_hall":old_data,
             "strength":rating,"data_coverage":round(coverage,2),"confidence":confidence,
@@ -91,7 +102,8 @@ def main():
             "warning":"Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
         })
     teams.sort(key=lambda row: (-(row["strength"] or 0),row["name"]))
-    result={"meta":seed["meta"],"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.5,"orlik_2026":.3,"older_hall":.2},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"50/30/20 reweighted among available seasons; do not replace missing data with zero","new_season_weight":"min(0.65, matches / (matches + 8))","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
+    metadata={**seed["meta"],"forecast_not_confirmed":not bool(current_hall),"snapshot_type":"live_hala_table" if current_hall else "projected_from_orlik"}
+    result={"meta":metadata,"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.5,"orlik_2026":.3,"older_hall":.2},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"50/30/20 reweighted among available seasons; do not replace missing data with zero","new_season_weight":"min(0.65, matches / (matches + 8))","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+"\n"
     if not OUT.exists() or OUT.read_text(encoding="utf-8")!=rendered:OUT.write_text(rendered,encoding="utf-8")
