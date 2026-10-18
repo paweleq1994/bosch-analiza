@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - '.github/workflows/sync.yml'
+      - 'src/sync_videos.py'
+      - 'src/sync_plp.py'
+      - 'src/sync_scouting.py'
+      - 'src/sync_scouting_details.py'
+      - 'src/build_portal.py'
+      - 'src/build_scouting.py'
   schedule:
     - cron: "17 * * * *"
 permissions:
