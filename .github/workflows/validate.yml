@@ -24,6 +24,9 @@ jobs:
         run: python src/build_scouting.py
       - name: Validate scouting reports
         run: python src/validate_scouting.py
+      - name: Probe public PLP photo endpoints
+        run: |
+          python -c "import sys;sys.path.insert(0,'src');from plp_photo_archive import identify;print('PLP player 1960 photos:',len(identify('players','1960')));print('PLP team 6951 photos:',len(identify('teams','6951')))"
       - name: Check Python syntax
         run: python -m compileall -q src
       - name: Check JavaScript syntax
