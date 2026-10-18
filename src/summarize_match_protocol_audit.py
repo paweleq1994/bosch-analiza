@@ -217,11 +217,11 @@ def main() -> None:
         encoding="utf-8",
     )
     FINDINGS_PATH.write_text(
-        json.dumps({key: value for key, value in report.items() if key != "matches"}, ensure_ascii=False, indent=2) + "\\n",
+        json.dumps({key: value for key, value in report.items() if key != "matches"}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     INDEX_PATH.write_text(
-        json.dumps({"matches": report["matches"]}, ensure_ascii=False, indent=2) + "\\n",
+        json.dumps({"matches": report["matches"]}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     print("SCORER_AUDIT_SUMMARY", json.dumps(report["season_summaries"], ensure_ascii=False))
