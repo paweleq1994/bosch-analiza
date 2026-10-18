@@ -19,14 +19,17 @@ EVIDENCE = [
 
 
 def scorer_details(match: dict) -> str:
-    if not match["scorers"]:
-        return "—"
-
     parts = []
 
     for scorer in match["scorers"]:
         minute_label = ", ".join(str(minute) + "′" for minute in scorer.get("goal_minutes") or [])
-        details = " (" + minute_label + ")" if minute_label else " (" + str(scorer["goals"]) + " gol)"
+
+        if scorer.get("goals", 0) > 0:
+            details = " (" + minute_label + ")" if minute_label else " (" + str(scorer["goals"]) + " gol)"
+        elif scorer.get("own_goals", 0) > 0:
+            details = " (samobój przeciw Boschowi)"
+        else:
+            continue
 
         if scorer.get("profile_url"):
             name = "[" + scorer["name"] + "](" + scorer["profile_url"] + ")"
@@ -35,7 +38,13 @@ def scorer_details(match: dict) -> str:
 
         parts.append(name + details)
 
-    return "; ".join(parts)
+    for row in match.get("unreadable_goal_marker_players") or []:
+        name = row["name"]
+        if row.get("profile_url"):
+            name = "[" + name + "](" + row["profile_url"] + ")"
+        parts.append(name + " (ikona Gol; brak minuty)")
+
+    return "; ".join(parts) if parts else "—"
 
 
 def render(source: dict, findings: dict) -> str:
@@ -72,7 +81,8 @@ def render(source: dict, findings: dict) -> str:
         "## Kontrola jakości danych",
         "",
         f"- Otworzone strony: **{sum(game['page_status'] == 'ok' for game in games)}/{len(games)}**.",
-        f"- Mecze z golami Boscha: **{findings['total_matches_with_scorers']}**; reszta ma 0 goli zdobytych przez zawodników Boscha.",
+        f"- Mecze z czytelnymi strzelcami Boscha: **{findings['total_matches_with_scorers']}**.",
+        "- Pozostałe: 13 spotkań bez goli Boscha, 1 gol samobójczy rywala jako jedyna bramka Boscha i 1 oznaczenie gola bez minuty (Klepacki–VESTA).",
         "- Każdy mecz ma źródło prowadzące bezpośrednio do protokołu PLP.",
         "- Jeden dodatkowy przypadek poza siedmioma różnicami: [Bosch–VESTA 18.02.2024](" +
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/" +
@@ -89,8 +99,8 @@ def render(source: dict, findings: dict) -> str:
         lines.extend([
             "### " + season["name"] + f" ({len(matches)} meczów)",
             "",
-            "| Data | Przeciwnik | Wynik Boscha | Strzelcy i minuty | Samobóje rywali | Korekty administracyjne | Kontrola | PLP |",
-            "|---|---|---:|---|---:|---:|---|---|",
+            "| Data | Przeciwnik | Wynik Boscha | Strzelcy i minuty | Samobóje rywali | Samobóje Boscha | Korekty administracyjne | Kontrola | PLP |",
+            "|---|---|---:|---|---:|---:|---:|---|---|",
         ])
 
         for game in matches:
@@ -107,6 +117,7 @@ def render(source: dict, findings: dict) -> str:
                 game["score"],
                 scorer_details(game).replace("|", " / "),
                 str(opponent_own_goals),
+                str(game.get("bosch_own_goals") or 0),
                 str(administrative_goals),
                 note,
                 "[Protokół](" + game["event_url"] + ")",
