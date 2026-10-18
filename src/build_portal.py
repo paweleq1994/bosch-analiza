@@ -596,8 +596,7 @@ def main() -> None:
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
             "player_goal_coverage": goal_coverage,
-            "match_protocol_audit": protocol_enrichment,
-            "match_protocol_audit": match_protocol_summary,
+            "match_protocol_audit": {**match_protocol_summary, **protocol_enrichment},
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
