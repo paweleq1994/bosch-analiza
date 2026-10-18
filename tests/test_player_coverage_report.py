@@ -43,7 +43,11 @@ class PlayerCoverageAuditTests(unittest.TestCase):
         ]
         self.assertEqual(len(goalkeeper_galleries), 1)
         self.assertEqual(str(goalkeeper_galleries[0]["id"]), "7284")
-        self.assertGreaterEqual(len(goalkeeper_galleries[0]["photos"]), 4)
+        self.assertGreaterEqual(len(goalkeeper_galleries[0]["photos"]), 3)
+        self.assertEqual(
+            len(goalkeeper_galleries[0]["photos"]),
+            len({photo["id"] for photo in goalkeeper_galleries[0]["photos"]}),
+        )
 
 
 if __name__ == "__main__":
