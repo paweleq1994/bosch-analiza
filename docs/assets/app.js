@@ -362,33 +362,53 @@ function records(){
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);
     const offensive=matches.slice().sort((a,b)=>b.gf-a.gf).slice(0,10);
     const goalCoverage=DB.analysis?.player_goal_coverage||[];
-    const totalUnexplained=goalCoverage.reduce((total,entry)=>total+(entry.unattributed_goals||0),0);
-    const totalAdministrative=goalCoverage.reduce((total,entry)=>total+(entry.administrative_goals||0),0);
-    const administrativeLinks=goalCoverage.flatMap(entry=>(entry.administrative_events||[]).map(event=>
-        '<a href="'+e(event.source_url)+'" target="_blank" rel="noopener noreferrer">'+e(entry.season)+' — '+e(event.opponent)+' ('+e(event.goals)+' gol administracyjny)</a>'
-    ));
-    const auditDetails='<div class="notice">Gole drużyny rozliczamy jako gole przypisane zawodnikom + gole wynikające z decyzji administracyjnych + różnicę wymagającą dalszej weryfikacji. '+
-        'Potwierdzonych bramek administracyjnych: <strong>'+e(totalAdministrative)+'</strong>. '+
-        'Pozostała różnica: <strong>'+e(totalUnexplained)+'</strong>. '+
-        'Pozostałe gole mogą wynikać z samobójów, brakujących protokołów lub pominiętych zawodników; bez dowodu nie przypisujemy ich konkretnym osobom.</div>';
-    const auditedRows=goalCoverage.map(entry=>[
-        e(entry.season),
-        e(entry.team_goals),
-        e(entry.attributed_goals),
-        e(entry.administrative_goals||0),
-        e(entry.unattributed_goals)
-    ]);
+    const totalGoals=goalCoverage.reduce((sum,row)=>sum+row.team_goals,0);
+    const playerGoals=goalCoverage.reduce((sum,row)=>sum+row.attributed_goals,0);
+    const ownGoals=goalCoverage.reduce((sum,row)=>sum+(row.opponent_own_goals||0),0);
+    const awardedGoals=goalCoverage.reduce((sum,row)=>sum+row.administrative_goals,0);
+    const unexplained=goalCoverage.reduce((sum,row)=>sum+row.unattributed_goals,0);
     const audit=section("Kontrola kompletności strzelców",
-        auditDetails+
-        table(["Sezon","Bramki drużyny","Gole zawodników","Administracyjne","Do wyjaśnienia"],auditedRows)+
-        (administrativeLinks.length?'<p class="small">Źródła korekt: '+administrativeLinks.join(" • ")+'</p>':"")
+        metrics([["Gole drużyny",totalGoals],["Gole zawodników",playerGoals],["Samobóje rywali",ownGoals],["Administracyjne",awardedGoals],["Do wyjaśnienia",unexplained]])+
+        '<div class="notice">Rozliczenie 113 meczów: <strong>'+e(totalGoals)+' = '+e(playerGoals)+' goli zawodników + '+e(ownGoals)+' samobóje rywali + '+e(awardedGoals)+' administracyjny</strong>. '+
+        'Pozostała różnica: <strong>'+e(unexplained)+'</strong>. Gole z protokołów są potwierdzone, ale asysty i kartki mogą mieć nadal niepełne archiwa.</div>'+
+        table(["Sezon","Bramki drużyny","Gole zawodników","Samobóje rywali","Administracyjne","Do wyjaśnienia"],goalCoverage.map(row=>[
+            e(row.season),e(row.team_goals),e(row.attributed_goals),e(row.opponent_own_goals||0),e(row.administrative_goals),e(row.unattributed_goals)
+        ]))+
+        '<p>'+href("goals","Zobacz wszystkie 113 meczów i oryginalne protokoły →")+'</p>'
+    );
+    const allScorerGames=matches.flatMap(match=>(match.goal_protocol?.scorers||[]).map(scorer=>({...scorer,match})));
+    const biggestPerformances=allScorerGames.slice().sort((a,b)=>b.goals-a.goals||a.match.date.localeCompare(b.match.date)).slice(0,15);
+    const matchRecords=section("Najwięcej goli jednego zawodnika w meczu",
+        table(["Strzelec","Gole","Rywal","Data","Minuty"],biggestPerformances.map(row=>[
+            href("player/"+encodeURIComponent(row.player_id),row.name),e(row.goals),matchLink(row.match),e(row.match.date),goalMinutes(row)
+        ]))
+    );
+    const fastestGoalRows=allScorerGames.flatMap(row=>row.minutes.map(minute=>({
+        minute:Number(String(minute).split("+")[0]),original:minute,player_id:row.player_id,name:row.name,match:row.match
+    }))).filter(row=>Number.isFinite(row.minute)).sort((a,b)=>a.minute-b.minute||a.match.date.localeCompare(b.match.date)).slice(0,12);
+    const fastestGoals=section("Najszybsze gole Boscha",
+        table(["Minuta","Strzelec","Rywal","Sezon"],fastestGoalRows.map(row=>[
+            e(row.original+"′"),href("player/"+encodeURIComponent(row.player_id),row.name),matchLink(row.match),e(row.match.season)
+        ]))
+    );
+    const ownGoalRecords=section("Samobóje rywali",
+        table(["Data","Rywal","Samobóje","Oficjalne źródło"],matches.filter(match=>match.goal_protocol?.own_goals).map(match=>[
+            e(match.date),matchLink(match),e(match.goal_protocol.own_goals),
+            '<a href="'+e(match.goal_protocol.source_url)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
+        ]))
+    );
+    const administrativeRecords=section("Korekty administracyjne wyników",
+        table(["Data","Rywal","Bramki administracyjne","Oficjalne źródło"],matches.filter(match=>match.goal_protocol?.administrative_goals).map(match=>[
+            e(match.date),matchLink(match),e(match.goal_protocol.administrative_goals),
+            '<a href="'+e(match.goal_protocol.source_url)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
+        ]))
     );
     const seasonal=section("Rekordy sezonowe",table(["Sezon","Miejsce","Punkty","PPG","Bramki","Gole/mecz","Stracone/mecz"],seasons.slice().sort((a,b)=>b.points-a.points).map(seasonRow=>[seasonLink(seasonRow),e(seasonRow.position??"—"),e(seasonRow.points),ppg(seasonRow),e(seasonRow.gf+":"+seasonRow.ga),fmt(seasonRow.gf/seasonRow.matches),fmt(seasonRow.ga/seasonRow.matches)])));
     return headline("Rekordy Boscha","Strzelcy, asysty, kanadyjka, kartki, MVP, występy, skuteczność, mecze i sezony — z kontrolą jakości źródeł.")+
         sourceNote+
         section("Najwyższe zwycięstwa",table(["Data","Rywal","Wynik","Sezon"],scoreWins.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
         section("Najwięcej goli Boscha w meczu",table(["Data","Rywal","Wynik","Sezon"],offensive.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
-        seasonal+boards+audit;
+        seasonal+boards+matchRecords+fastestGoals+ownGoalRecords+administrativeRecords+audit;
 }
 function playerRankingStats(player,selectedSeasonId){
     const record=selectedSeasonId?playerSeasonRecord(player,selectedSeasonId):player;
