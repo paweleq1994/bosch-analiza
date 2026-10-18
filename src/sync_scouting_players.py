@@ -34,7 +34,7 @@ def normalized(value: object) -> str:
 
 
 def integer(value: object) -> int | None:
-    text = str(value or "").strip()
+    text = str(value).strip() if value is not None else ""
     return int(text) if re.fullmatch(r"\d+", text) else None
 
 
@@ -55,7 +55,7 @@ def read_team_players(team: dict, fetch=request) -> list[dict]:
     if not isinstance(payload, list):
         raise ValueError("Unexpected PLP team roster response")
 
-    for player in payload:
+    for player in payload[:40]:
         if not isinstance(player, dict) or not str(player.get("id") or "").isdigit():
             continue
 
