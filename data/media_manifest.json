@@ -448,5 +448,5 @@
       "photos": []
     }
   ],
-  "notes": "Public PLP media attached to team and player profiles; deleted, detached or replaced historic files may not be available."
+  "notes": "Public PLP media attached to team/player profiles and uniquely matched detached WordPress media. Caption-only mentions are not treated as confirmed portraits."
 }

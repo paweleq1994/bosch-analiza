@@ -1,10 +1,121 @@
 {
-  "next_page": 1,
-  "complete": false,
-  "scanned_pages": 0,
-  "scanned_media": 0,
-  "matches": [],
+  "next_page": 2,
+  "complete": true,
+  "scanned_pages": 1,
+  "scanned_media": 91,
+  "matches": [
+    {
+      "player_id": "12287",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12929",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1995/07/Mironiuk.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:24:28",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "1960",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12930",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1994/09/Moskal.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:24:51",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "1970",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12925",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1999/04/Wnuszynski.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:22:28",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "4577",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12933",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1974/06/Kuzma.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:26:13",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "7276",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "7578",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1994/03/Karolczuk-Patryk.jpg",
+        "alt": "",
+        "published": "2022-11-29T18:25:46",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "7277",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12928",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1995/09/Klepacki.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:23:58",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "7283",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12932",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1994/01/Nowicki.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:25:48",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "7284",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12927",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1998/01/Rutkowski.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:23:27",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "8914",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12926",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1998/06/Kadlubowski.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:23:03",
+        "featured": false
+      }
+    },
+    {
+      "player_id": "9400",
+      "evidence": "wordpress_parent",
+      "photo": {
+        "id": "12931",
+        "url": "https://podlaskaliga.pl/wp-content/uploads/1994/08/Hyzyk.jpg",
+        "alt": "",
+        "published": "2025-12-30T12:25:23",
+        "featured": false
+      }
+    }
+  ],
   "candidates": [],
-  "searches": 0,
-  "last_scan_date": ""
+  "searches": 17,
+  "last_scan_date": "2026-10-18"
 }
