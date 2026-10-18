@@ -12,6 +12,8 @@ import unicodedata
 from player_identity import legacy_player_id, match_public_profile, person_key
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
+from merge_plp_identities import merge_confirmed_players
+from protocol_goals import enrich_from_protocols
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -65,6 +67,8 @@ def main() -> None:
     player_career_extra = load("player_career_updates.json", {})
     stat_corrections = load("player_stat_corrections.json", {})
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
+    match_protocol_index = load("match_protocol_audit_index.json")
+    player_identity_merges = load("player_identity_merges.json", {"groups": []})
 
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
@@ -310,6 +314,12 @@ def main() -> None:
 
     validate_goal_evidence(goal_evidence, seasons, matches)
     add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
+    merged_aliases = merge_confirmed_players(
+        historic_players,
+        player_seasons_extra,
+        player_career_extra,
+        player_identity_merges.get("groups") or [],
+    )
 
     def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
         if not recap_stats:
@@ -447,6 +457,14 @@ def main() -> None:
         ):
             player["stats_source"] = "Historyczne zestawienia PLP i Bosch, niepełny podział sezonów"
 
+    protocol_audit = enrich_from_protocols(
+        matches,
+        historic_players,
+        profiles,
+        match_protocol_index,
+        merged_aliases,
+    )
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -489,43 +507,50 @@ def main() -> None:
             continue
 
         season_id = str(season["id"])
-        known_player_goals = []
-
-        for player in historic_players:
-            stats = player.get("season_stats", {}).get(season_id) or {}
-            goals = stats.get("goals")
-            apps = stats.get("apps")
-
-            if type(goals) is not int:
-                continue
-
-            if type(apps) is int and apps <= 0:
-                continue
-
-            known_player_goals.append(stats)
-
-        assigned_goals = sum(stats["goals"] for stats in known_player_goals)
+        verified_protocol = protocol_audit["seasons"].get(season_id) or {}
+        player_goals = verified_protocol.get("player_goals", 0)
+        own_goals = verified_protocol.get("opponent_own_goals", 0)
         administrative = administrative_adjustments.get(season_id) or {}
         administrative_goals = administrative.get("goals", 0)
-        unexplained = season["gf"] - assigned_goals - administrative_goals
 
-        if unexplained < 0:
+        if administrative_goals != verified_protocol.get("administrative_goals", 0):
+            raise ValueError(f"PLP administrative protocol mismatch in season {season_id}")
+
+        season_player_sum = sum(
+            stats["goals"]
+            for player in historic_players
+            for stats in [player.get("season_stats", {}).get(season_id) or {}]
+            if type(stats.get("goals")) is int and (type(stats.get("apps")) is not int or stats["apps"] > 0)
+        )
+
+        if season_player_sum != player_goals:
             raise ValueError(
-                f"Attribution exceeds Bosch team goals for {season['name']}: "
-                f"{assigned_goals} player goals + {administrative_goals} administrative "
-                f"> {season['gf']} team goals"
+                f"Match protocols and season scorers disagree for {season['name']}: "
+                f"{season_player_sum} != {player_goals}"
+            )
+
+        unexplained = season["gf"] - player_goals - own_goals - administrative_goals
+
+        if unexplained != 0:
+            raise ValueError(
+                f"Unresolved PLP goals in {season['name']}: "
+                f"{season['gf']} != {player_goals}+{own_goals}+{administrative_goals}"
             )
 
         goal_coverage.append({
             "sid": season_id,
             "season": season["name"],
             "team_goals": season["gf"],
-            "attributed_goals": assigned_goals,
+            "attributed_goals": player_goals,
+            "opponent_own_goals": own_goals,
             "administrative_goals": administrative_goals,
             "administrative_events": administrative.get("events", []),
             "unattributed_goals": unexplained,
-            "players_with_verified_stats": len(known_player_goals),
-            "source": "PLP player season statistics, verified match reports and official administrative corrections",
+            "players_with_verified_stats": sum(
+                type((player.get("season_stats", {}).get(season_id) or {}).get("goals")) is int
+                for player in historic_players
+            ),
+            "source": "All 113 PLP match protocols, icon annotations, opponent own goals and official administrative decisions",
         })
 
     # One source of truth for repeated historical leaderboard rows.
@@ -558,6 +583,7 @@ def main() -> None:
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
             "player_goal_coverage": goal_coverage,
+            "match_protocol_audit": protocol_audit,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
