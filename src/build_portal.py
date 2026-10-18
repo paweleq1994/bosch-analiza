@@ -13,6 +13,7 @@ from player_identity import legacy_player_id, match_public_profile, person_key
 from merge_player_identities import merge_player_identities
 from integrate_match_protocols import integrate_match_protocols
 from protocol_goals import enrich_from_protocols
+from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
@@ -497,6 +498,7 @@ def main() -> None:
                 history.append({"sid":str(sid),"name":stat.get("name") or ("Superpuchar "+str(sid)),
                     "apps":stat.get("apps"),"goals":stat.get("goals"),
                     "assists":stat.get("assists"),"motm":stat.get("motm"),
+                    "yellow":stat.get("yellow"),"red":stat.get("red"),
                     "origin":stat.get("origin") or "plp_season"})
         for season in seasons:
             sid = str(season["id"])
@@ -505,6 +507,7 @@ def main() -> None:
                 history.append({"sid": sid, "name": season["name"],
                                 "apps": stat.get("apps"), "goals": stat.get("goals"),
                                 "assists": stat.get("assists"), "motm": stat.get("motm"),
+                                "yellow": stat.get("yellow"), "red": stat.get("red"),
                                 "origin": stat.get("origin") or (
                                     "plp_season" if any(
                                         type(stat.get(field)) is int
@@ -614,7 +617,10 @@ def main() -> None:
             "github": "https://github.com/paweleq1994/bosch-analiza",
         },
     }
-    output["media"] = load("media_manifest.json", {"subjects": []})
+    output["media"] = canonicalize_player_media(
+        load("media_manifest.json", {"subjects": []}),
+        goalkeeper_aliases,
+    )
     output, duplicate_warnings = dedupe(output)
     if duplicate_warnings:
         print("Deduplication audit:", "; ".join(duplicate_warnings))

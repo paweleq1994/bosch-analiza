@@ -211,6 +211,9 @@ function playerDetail(id){
         record.origin==="plp_match_minimum"&&Number.isInteger(record.goals)?"≥ "+e(record.goals):e(record.goals??"—"),
         e(record.assists??"—"),
         Number.isInteger(record.goals)&&Number.isInteger(record.assists)?e(record.goals+record.assists):"—",
+        e(record.motm??"—"),
+        e(record.yellow??"—"),
+        e(record.red??"—"),
         e(seasonStatisticsSource(record))
     ]);
     const summaryRow=[
@@ -219,10 +222,13 @@ function playerDetail(id){
         '<strong>'+e(player.goals??"—")+'</strong>',
         '<strong>'+e(player.assists??"—")+'</strong>',
         '<strong>'+(Number.isInteger(player.goals)&&Number.isInteger(player.assists)?e(player.goals+player.assists):"—")+'</strong>',
+        e(player.motm??"—"),
+        e(player.yellow??"—"),
+        e(player.red??"—"),
         e(player.bosch_totals?"PLP — pełny bilans":"Archiwalny bilans Bosch")
     ];
     const seasonTable=seasonRows.length
-        ? table(["Sezon","M","G","A","G+A","Źródło"],seasonRows,summaryRow)
+        ? table(["Sezon","M","G","A","G+A","MVP","ŻK","CK","Źródło"],seasonRows,summaryRow)
         : empty("Brak szczegółowych danych sezonowych.");
     const unassigned=player.season_coverage?.unassigned||{};
     const remainingTotals=[

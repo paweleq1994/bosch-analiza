@@ -210,6 +210,10 @@ def add_verified_players(
             "origin": row["source_type"],
         }
 
+        if row["minimum"]:
+            player["stats_minimum"] = True
+            player["goal_evidence_source"] = row["source_url"]
+
         if previous:
             for field in GOAL_FIELDS:
                 verified_value = previous.get(field)

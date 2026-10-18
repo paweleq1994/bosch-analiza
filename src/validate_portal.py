@@ -30,7 +30,7 @@ known_scorers = {
 assert all(known_scorers.values()), "Official PLP scorers are missing from the Bosch roster"
 assert known_scorers["wojciuk"]["goals"] >= 2, "Missing Wojciuk official goals"
 assert known_scorers["pietruczuk"]["goals"] >= 1, "Missing Pietruczuk match goal"
-assert known_scorers["pietruczuk"]["stats_minimum"], "Partial match evidence is not a full season total"
+assert known_scorers["pietruczuk"].get("stats_minimum") is True, "Partial match evidence is not a full season total"
 
 attribution = DATA["analysis"]["player_goal_coverage"]
 for record in attribution:
@@ -75,7 +75,13 @@ assert len([row for row in seasons if row["id"] == "orlik-2026"]) == 1, "Orlik 2
 assert not any(str(row["id"]) == "148" for row in seasons), "PLP 148 duplicates Orlik 2026"
 assert not any(str(row["sid"]) == "148" for row in matches), "Orlik 2026 match alias must not appear"
 assert len(matches) == len({(row["sid"], row["date"], row["opponent"]) for row in matches}), "Duplicate fixtures"
-assert len(matches) >= 113, "Unexpected loss of historical matches"
+assert len(matches) == 113, "Unexpected change in the 113 audited historical matches"
+assert all(match.get("goal_protocol", {}).get("verified") for match in matches), "Published snapshot must contain all verified goal protocols"
+assert len([player for player in players if str(player["id"]) == "7284"]) == 1, "Canonical goalkeeper missing"
+assert not any(str(player["id"]) == "13060" for player in players), "Duplicate goalkeeper reappeared"
+assert sum(row["unattributed_goals"] for row in attribution) == 0, "Known match goals may not be lost during publication"
+assert sum(row["attributed_goals"] for row in attribution) == 289, "Unexpected player goal attribution drift"
+assert DATA["analysis"]["match_protocol_audit"]["total_own_goals_conceded"] == 6, "Unverified Bosch own goals"
 assert len({(row["id"], row["sid"]) for row in matches}) == len(matches), "Duplicate match identity"
 assert len({row["id"] for row in DATA["videos"]}) == len(DATA["videos"]), "Duplicate video ID"
 for season in seasons:
