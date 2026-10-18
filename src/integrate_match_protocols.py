@@ -155,6 +155,8 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
             "orlik2026": None,
             "hala2526": None,
             "stats_minimum": True,
+            "bosch_totals": None,
+            "career_totals": None,
             "season_stats": {"144": {"apps": None, "goals": 1, "assists": None, "origin": "plp_match_protocols"}},
             "stats_source": "Oficjalny protokół PLP — potwierdzone minimum",
         }
