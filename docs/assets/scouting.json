@@ -690,7 +690,24 @@
       ],
       "scouting_status": "statistical_only",
       "observations": [],
-      "videos": [],
+      "videos": [
+        {
+          "id": "KIEpFAUcK30",
+          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | II POŁOWA",
+          "url": "https://www.youtube.com/watch?v=KIEpFAUcK30",
+          "date": "2026-06-13",
+          "match_id": "orlik26-7",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "y3zlu5H0HE0",
+          "title": "BIURO SERWIS-KOPIARKI 3:1 BOSCH SERVICE TECH-CAR | I POŁOWA",
+          "url": "https://www.youtube.com/watch?v=y3zlu5H0HE0",
+          "date": "2026-06-13",
+          "match_id": "orlik26-7",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
@@ -1373,6 +1390,22 @@
           "url": "https://www.youtube.com/watch?v=Dx9vHHy-P84",
           "date": "2025-02-16",
           "match_id": "11389",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "J-ZpQOlLw54",
+          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | I POŁOWA",
+          "url": "https://www.youtube.com/watch?v=J-ZpQOlLw54",
+          "date": "2026-05-30",
+          "match_id": "orlik26-6",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "kOiaVJJrVh0",
+          "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | II POŁOWA",
+          "url": "https://www.youtube.com/watch?v=kOiaVJJrVh0",
+          "date": "2026-05-30",
+          "match_id": "orlik26-6",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
