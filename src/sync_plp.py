@@ -109,7 +109,7 @@ def main():
     valid_ids = {row["id"] for row in new_seasons}
     updated = {
         "season_rows": sorted({row["id"]: row for row in (existing.get("season_rows") or []) + new_seasons}.values(), key=lambda row: row["id"]),
-        "matches": sorted({str(row["event_id"]): row for row in (existing.get("matches") or [] if str(row["sid"]) not in valid_ids) + new_matches}.values(), key=lambda row: (row["date"], row["event_id"])),
+        "matches": sorted({str(row["event_id"]): row for row in [row for row in (existing.get("matches") or []) if str(row["sid"]) not in valid_ids] + new_matches}.values(), key=lambda row: (row["date"], row["event_id"])),
     }
     rendered = json.dumps(updated, ensure_ascii=False, indent=2) + "\n"
     if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
