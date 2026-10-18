@@ -56,7 +56,7 @@ def edition(label):
     return None
 
 def level(title, slug):
-    normalized = normalize(slug) + " " + normalize(title)
+    normalized = normalize(slug).replace("-", " ") + " " + normalize(title)
     if re.search(r"\b(ii|2)\s+liga\b", normalized):
         return "h2"
     if re.search(r"\b(i|1)\s+liga\b", normalized):
@@ -114,7 +114,7 @@ def collect(teams_response, request_tables, last):
     seasons = teams_response.get("seasons") or []
     numeric = sorted({i for value in seasons if (i := as_integer(value)) is not None and i >= 146}, reverse=True)
     # Bosch's known Hala'25/26 season ID is 146. New seasons use later IDs.
-    for sid in numeric[:8]:
+    for sid in numeric[:12]:
         try:
             tables = request_tables(sid)
             if not isinstance(tables, list):
