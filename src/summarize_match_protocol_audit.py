@@ -212,7 +212,7 @@ def summarize(source: dict, portal: dict, administrative_evidence: dict) -> dict
         "source_audit_created_at": source["created_at"],
         "matches_checked": len(fixtures),
         "all_pages_fetched": all(row["page_status"] == "ok" for row in fixtures),
-        "total_matches_with_scorers": sum(match["scorers"] != [] for match in fixtures),
+        "total_matches_with_scorers": sum(any(scorer["goals"] > 0 for scorer in match["scorers"]) for match in fixtures),
         "season_summaries": season_summaries,
         "unusual_matches": unusual_games,
         "scorer_discrepancies": sorted(
