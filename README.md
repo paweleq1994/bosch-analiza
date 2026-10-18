@@ -58,3 +58,10 @@ Pierwsza komenda aktualizuje mapę publicznych profili zawodników na `podlaskal
 - poprawki szablonu i logiki w `src/build_site.py`
 - rozwój benchmarku awansu w `src/fetch_promoted_teams.py`
 - publikacja gotowej wersji przez `docs/index.html`
+
+## Orlik 2026 — zakończony sezon
+
+- [Podsumowanie Orlik 2026](https://paweleq1994.github.io/bosch-analiza/orlik-2026.html) — wyniki, tabela, liderzy i porównanie z historycznym kompendium.
+- `data/orlik_2026_recap.json` — dane źródłowe raportu, 15 meczów i wybrane statystyki.
+
+Dotychczasowy scouting z marca 2026 pozostaje archiwalną prognozą. Nowy raport jest osobnym rozdziałem uzupełniającym; nie aktualizuje jeszcze wszystkich zagregowanych statystyk starego generatora.
