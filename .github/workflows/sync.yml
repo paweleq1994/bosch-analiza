@@ -11,6 +11,8 @@ on:
       - 'src/sync_scouting.py'
       - 'src/sync_scouting_details.py'
       - 'src/build_portal.py'
+      - 'src/goal_reconciliation.py'
+      - 'data/goal_evidence.json'
       - 'src/plp_photo_archive.py'
       - 'src/plp_media_discovery.py'
       - 'src/sync_player_seasons.py'
