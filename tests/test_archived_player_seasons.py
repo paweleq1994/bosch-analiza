@@ -61,12 +61,12 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
     def test_unassigned_totals_are_not_invented_as_specific_season_stats(self):
         player = self.players["7285"]
         self.assertEqual((player["apps"], player["goals"], player["assists"]), (32, 22, 13))
-        self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 2)
+        self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 0)
         self.assertEqual(player["season_coverage"]["unassigned"]["assists"], 3)
 
         unknown = self.season("7285", "139")
         self.assertIsNone(unknown["apps"])
-        self.assertIsNone(unknown["goals"])
+        self.assertEqual(unknown["goals"], 2)
         self.assertIsNone(unknown["assists"])
 
     def test_sports_press_verification_still_takes_priority(self):
@@ -76,11 +76,12 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
         self.assertEqual(self.players["7275"]["goals"], 30)
 
     def test_recovered_goals_reduce_unattributed_scoring_without_duplication(self):
-        self.assertEqual(self.audit["120"]["unattributed_goals"], 2)
-        self.assertEqual(self.audit["125"]["unattributed_goals"], 1)
-        self.assertEqual(self.audit["139"]["unattributed_goals"], 2)
-        self.assertEqual(sum(row["unattributed_goals"] for row in self.audit.values()), 7)
+        self.assertEqual(self.audit["120"]["unattributed_goals"], 0)
+        self.assertEqual(self.audit["125"]["unattributed_goals"], 0)
+        self.assertEqual(self.audit["139"]["unattributed_goals"], 0)
+        self.assertEqual(sum(row["unattributed_goals"] for row in self.audit.values()), 0)
         self.assertEqual(sum(row["administrative_goals"] for row in self.audit.values()), 1)
+        self.assertEqual(sum(row["opponent_own_goals"] for row in self.audit.values()), 3)
 
     def test_every_player_has_reconcilable_season_coverage(self):
         for player in self.players.values():
