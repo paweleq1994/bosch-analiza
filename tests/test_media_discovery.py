@@ -100,6 +100,37 @@ class MediaDiscoveryTests(unittest.TestCase):
         self.assertEqual(repeated, result)
         self.assertFalse(warnings)
 
+    def test_previous_team_photos_are_candidates_not_identified_portraits(self):
+        players = [{
+            "id": "2204",
+            "name": "Dawid Daniluk",
+            "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+            "has_photos": False,
+            "previous_teams": ["Znienacka", "Żubry Bema", "PTH Maltrans"],
+        }]
+        team_photo = self.media("Znienacka-group-2022.jpg", media_id=3000)
+        team_photo["title"] = {"rendered": "Znienacka 2022"}
+
+        def fetch(resource, parameters=None):
+            if parameters.get("search") == "Znienacka":
+                return [team_photo]
+            return []
+
+        output, warnings = scan_media(
+            players,
+            {},
+            fetch=fetch,
+            max_pages=0,
+            current_day="2026-10-18",
+        )
+
+        self.assertFalse(warnings)
+        self.assertEqual(output["matches"], [])
+        self.assertEqual(len(output["candidates"]), 1)
+        self.assertEqual(output["candidates"][0]["player_id"], "2204")
+        self.assertEqual(output["candidates"][0]["team"], "Znienacka")
+        self.assertEqual(output["candidates"][0]["evidence"], "historical_team_archive")
+
     def test_archiver_attaches_only_confirmed_discovery(self):
         def fetch(path, params=None):
             if path == "sportspress/v2/players/2204":

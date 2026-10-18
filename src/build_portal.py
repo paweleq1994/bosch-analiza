@@ -392,6 +392,32 @@ def main() -> None:
         player["season_history"] = history
         player.pop("recap2026", None)
 
+    goal_coverage = []
+
+    for season in seasons:
+        if season.get("gf") is None:
+            continue
+
+        plp_season_id = "148" if str(season["id"]) == SEASON_2026 else str(season["id"])
+        verified_rows = [
+            player_seasons[plp_season_id]
+            for player_seasons in player_seasons_extra.values()
+            if plp_season_id in player_seasons
+            and isinstance(player_seasons[plp_season_id].get("goals"), int)
+            and (player_seasons[plp_season_id].get("apps") or 0) > 0
+        ]
+        assigned_goals = sum(row["goals"] for row in verified_rows)
+
+        goal_coverage.append({
+            "sid": str(season["id"]),
+            "season": season["name"],
+            "team_goals": season["gf"],
+            "attributed_goals": assigned_goals,
+            "unattributed_goals": max(0, season["gf"] - assigned_goals),
+            "players_with_verified_stats": len(verified_rows),
+            "source": "PLP SportsPress; difference may include own goals and unavailable player entries",
+        })
+
     # One source of truth for repeated historical leaderboard rows.
     deduped_promotions = {}
     for row in promotions.get("promotions", []):
@@ -421,6 +447,7 @@ def main() -> None:
             "tier_split_peak": report.get("tier_split_peak", []),
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
+            "player_goal_coverage": goal_coverage,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
