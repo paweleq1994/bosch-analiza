@@ -130,8 +130,9 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        section("Gole i protokoły wszystkich meczów",table(["Data","Mecz","Wynik","Sezon","Strzelcy","Samobóje rywali","Administracyjne","PLP"],goalMatchRows(matches)))+
         section("Porównanie z innymi sezonami",barChart(DB.seasons.map(row=>({...row,ppg:row.matches?row.points/row.matches:0})),"ppg",row=>fmt(row.ppg)))+
-        (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Statystyki indywidualne pochodzą z dostępnych danych PLP; nie są pełnym potwierdzeniem wszystkich strzelców.</div>':"");
+        (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Gole indywidualne zweryfikowano we wszystkich 15 oryginalnych protokołach tego sezonu.</div>':"");
 }
 function matchesPage(){return headline("Mecze","Wyniki, protokoły, pojedyncze spotkania i powiązane filmy.")+filterInput("Rywal, wynik lub data")+'<div id="filtered-matches"></div>';}
 function matchDetail(id){
@@ -166,6 +167,14 @@ function seasonStatisticsSource(record){
 
     if(record?.origin==="participation_only"){
         return "Potwierdzony udział, brak statystyk";
+    }
+
+    if(record?.origin==="plp_match_protocols"){
+        return "Oficjalny protokół PLP — strzelcy i minuty";
+    }
+
+    if(record?.origin==="plp_confirmed_identity_merge"){
+        return "PLP — połączone historyczne profile tej samej osoby";
     }
 
     if(record?.origin==="plp_match_minimum"){
@@ -225,6 +234,28 @@ function playerDetail(id){
         e(record.goals??"—"),
         e(record.assists??"—")
     ]);
+    const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
+        e(entry.date),
+        href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+        e(entry.score),
+        e(entry.goals),
+        entry.minute_uncertain?"Minuta nieczytelna w PLP":entry.minutes.map(minute=>e(minute)+"′").join(", "),
+        '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">Protokół ↗</a>'
+    ]);
+    const scoredMatchSection=section(
+        "Gole mecz po meczu — oficjalne protokoły",
+        matchesWithGoals.length
+            ? table(["Data","Rywal","Wynik","Gole","Minuty","PLP"],matchesWithGoals)
+            : empty("Brak indywidualnych goli w przeanalizowanych meczach ligowych.")
+    );
+    const combinedProfileLinks=(player.alternate_profile_urls||[]).map(url=>
+        '<a target="_blank" rel="noopener noreferrer" href="'+e(url)+'">'+e(url)+'</a>'
+    );
+    const profileMergeNote=combinedProfileLinks.length
+        ? section("Historyczne profile PLP tej samej osoby",
+            '<div class="notice">Dwa źródłowe profile PLP zostały scalone, a poprzednie adresy działają jako aliasy. '+combinedProfileLinks.join(" • ")+'</div>'
+        )
+        : "";
     const photos=(DB.media?.subjects||[]).find(subject=>subject.kind==="players"&&subject.id===player.id);
     const gallery=photos?.photos?.length?section("Zdjęcia PLP",
         '<div class="grid">'+photos.photos.map(photo=>
@@ -236,6 +267,8 @@ function playerDetail(id){
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
+        scoredMatchSection+
+        profileMergeNote+
         (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
         gallery+
