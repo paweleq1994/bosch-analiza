@@ -61,6 +61,28 @@ def main() -> None:
     league_extra = load("league_updates.json", {"matches": []})
     player_seasons_extra = load("player_season_updates.json", {})
     player_career_extra = load("player_career_updates.json", {})
+    stat_corrections = load("player_stat_corrections.json", {})
+
+    for player_id, correction in stat_corrections.items():
+        url = str(correction.get("source_url") or "")
+
+        if not url.startswith("https://podlaskaliga.pl/zawodnik/"):
+            raise ValueError(f"Unverified player correction source: {player_id}")
+
+        player_seasons = player_seasons_extra.setdefault(str(player_id), {})
+
+        for season_id, correction_stats in (correction.get("seasons") or {}).items():
+            previous = player_seasons.get(str(season_id)) or {}
+
+            if any(
+                isinstance(previous.get(field), int)
+                and previous[field] > correction_stats.get(field, previous[field])
+                for field in ("apps", "goals", "assists")
+            ):
+                continue
+
+            player_seasons[str(season_id)] = {**previous, **correction_stats}
+
 
     seasons = [
         {
@@ -357,8 +379,32 @@ def main() -> None:
         else:
             player["bosch_totals"] = None
 
-        player["career_totals"] = player_career_extra.get(str(player["id"]))
-        player["stats_source"] = (
+        profile_id = str(player["id"])
+        career = player_career_extra.get(profile_id)
+        correction = stat_corrections.get(profile_id)
+
+        if correction and career and career.get("teams") == 1:
+            career = {**career}
+            season_rows = [dict(record) for record in career.get("season_rows", [])]
+
+            for season_id, correction_stats in correction["seasons"].items():
+                match = next(
+                    (record for record in season_rows if str(record["sid"]) == str(season_id)),
+                    None,
+                )
+
+                if match is not None:
+                    match.update(correction_stats)
+
+            for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                if all(isinstance(record.get(field), int) for record in season_rows):
+                    career[field] = sum(record[field] for record in season_rows)
+
+            career["season_rows"] = season_rows
+            career["source"] = "PLP SportsPress i publiczna tabela całej kariery"
+
+        player["career_totals"] = career
+        player["stats_source"] = "PLP SportsPress i tabela całej kariery" if correction else (
             "PLP SportsPress i aktualny raport Orlik 2026"
             if recap_stats and verified_seasons
             else "PLP SportsPress"
