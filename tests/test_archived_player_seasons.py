@@ -66,7 +66,7 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
 
         unknown = self.season("7285", "139")
         self.assertIsNone(unknown["apps"])
-        self.assertIsNone(unknown["goals"])
+        self.assertEqual(unknown["goals"], 2)
         self.assertIsNone(unknown["assists"])
 
     def test_sports_press_verification_still_takes_priority(self):
