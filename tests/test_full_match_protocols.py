@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 import build_portal
-from merge_plp_identities import merge_confirmed_players
 from protocol_goals import enrich_from_protocols
 
 
