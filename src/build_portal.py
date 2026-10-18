@@ -291,13 +291,17 @@ def main() -> None:
             return dict(recap_stats)
 
         fields = ("apps", "goals", "assists")
-        if any(
-            isinstance(recap_stats.get(field), int)
-            and (
-                not isinstance(official_stats.get(field), int)
-                or recap_stats[field] > official_stats[field]
-            )
+        known_comparisons = [
+            (recap_stats.get(field), official_stats.get(field))
             for field in fields
+            if isinstance(recap_stats.get(field), int)
+        ]
+        if known_comparisons and all(
+            not isinstance(official_value, int) or recap_value >= official_value
+            for recap_value, official_value in known_comparisons
+        ) and any(
+            not isinstance(official_value, int) or recap_value > official_value
+            for recap_value, official_value in known_comparisons
         ):
             return {
                 **official_stats,
