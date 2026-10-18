@@ -22,8 +22,8 @@ const recordsPage = render("records()");
 assert.ok(recordsPage.includes("Administracyjne"));
 assert.ok(recordsPage.includes("Do wyjaśnienia"));
 assert.ok(recordsPage.includes("https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/"));
-assert.ok(recordsPage.includes("Pozostała różnica: <strong>7</strong>"));
-assert.ok(recordsPage.includes("Potwierdzonych bramek administracyjnych: <strong>1</strong>"));
+assert.ok(recordsPage.includes("Bramki nieprzypisane: <strong>0</strong>"));
+assert.ok(recordsPage.includes("Bramki administracyjne: <strong>1</strong>"));
 
 const pietruczuk = database.players.find(player => player.name.toLowerCase().includes("pietruczuk"));
 assert.ok(pietruczuk, "Pietruczuk must be visible as a Bosch scorer");
