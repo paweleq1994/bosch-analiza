@@ -7,6 +7,29 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="utf-8"))
 seasons = DATA["seasons"]
 matches = DATA["matches"]
+players = DATA["players"]
+player_ids = [str(player["id"]) for player in players]
+assert len(player_ids) == len(set(player_ids)), "Duplicate PLP player identifiers"
+
+alias_ids = [str(alias) for player in players for alias in player.get("aliases", [])]
+assert len(alias_ids) == len(set(alias_ids)), "Duplicate player aliases"
+assert not any(alias in player_ids for alias in alias_ids), "Player alias collides with active ID"
+
+daniluk = [player for player in players if player["name"] == "Dawid Daniluk"]
+assert len(daniluk) == 1 and daniluk[0]["id"] == "2204", "Daniluk must resolve to PLP player 2204"
+assert "new-dawid-daniluk" in daniluk[0].get("aliases", []), "Preserve old Daniluk profile link"
+assert daniluk[0]["orlik2026"]["goals"] == 16, "Missing verified Daniluk recap goals"
+
+for player in players:
+    player_season_ids = [str(entry["sid"]) for entry in player.get("season_history", [])]
+    assert len(player_season_ids) == len(set(player_season_ids)), f"Repeated Bosch season for {player['name']}"
+
+    career = player.get("career_totals") or {}
+    career_seasons = [
+        (str(entry["sid"]), str(entry["team"]))
+        for entry in career.get("season_rows", [])
+    ]
+    assert len(career_seasons) == len(set(career_seasons)), f"Repeated PLP career season for {player['name']}"
 assert len(seasons) >= 8, "Expected eight historical seasons"
 assert len([row for row in seasons if row["id"] == "orlik-2026"]) == 1, "Orlik 2026 must appear once"
 assert not any(str(row["id"]) == "148" for row in seasons), "PLP 148 duplicates Orlik 2026"

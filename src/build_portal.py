@@ -9,6 +9,8 @@ import json
 import re
 import unicodedata
 
+from player_identity import legacy_player_id, match_public_profile, person_key
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUTPUT = ROOT / "docs" / "assets" / "data.json"
@@ -29,10 +31,6 @@ def normalized(value: str) -> str:
     value = unicodedata.normalize("NFD", value)
     value = "".join(char for char in value if unicodedata.category(char) != "Mn")
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
-
-
-def person_key(value: str) -> str:
-    return " ".join(sorted(token for token in normalized(value).split() if token not in {"gk", "bramkarz"}))
 
 
 def match_row(row: dict) -> dict:
@@ -178,22 +176,46 @@ def main() -> None:
                 "assists": row.get("assists", 0), "motm": row.get("motm", 0),
             }
     for row in recap.get("player_leaders", []):
-        item = player_by_name.get(person_key(row.get("name", "")))
+        player_name = str(row.get("name") or "")
+        item = player_by_name.get(person_key(player_name))
+        legacy_id = legacy_player_id(player_name)
+
         if item is None:
-            item = {
-                "id": "new-" + normalized(row["name"]).replace(" ", "-"),
-                "name": row["name"], "profile_url": "", "status": "Orlik 2026",
-                "apps": None, "goals": None, "assists": None, "motm": None,
-                "yellow": None, "red": None, "peak": "", "seasons_label": "",
-                "hala2526": None, "orlik2026": None,
-            }
-            historic_players.append(item)
-            player_by_name[person_key(row["name"])] = item
-        item["orlik2026"] = {
-            "apps": row.get("appearances", 0),
-            "goals": row.get("goals", 0),
-            "assists": row.get("assists", 0),
+            resolved_profile = match_public_profile(player_name, profiles)
+            profile_id, profile = resolved_profile if resolved_profile else (legacy_id, {})
+            item = next((player for player in historic_players if player["id"] == profile_id), None)
+
+            if item is None:
+                item = {
+                    "id": profile_id,
+                    "name": player_name,
+                    "profile_url": profile.get("profile_url") or "",
+                    "status": "Orlik 2026",
+                    "apps": None,
+                    "goals": None,
+                    "assists": None,
+                    "motm": None,
+                    "yellow": None,
+                    "red": None,
+                    "peak": "",
+                    "seasons_label": "",
+                    "hala2526": None,
+                    "orlik2026": None,
+                }
+                historic_players.append(item)
+
+            player_by_name[person_key(player_name)] = item
+
+        aliases = item.setdefault("aliases", [])
+        if legacy_id != item["id"] and legacy_id not in aliases:
+            aliases.append(legacy_id)
+
+        item["recap2026"] = {
+            "apps": row.get("appearances"),
+            "goals": row.get("goals"),
+            "assists": row.get("assists"),
         }
+        item["orlik2026"] = dict(item["recap2026"])
 
     for stat in league_extra.get("player_seasons", []):
         player_id, season_id = str(stat.get("id") or ""), str(stat.get("sid") or "")
@@ -261,39 +283,93 @@ def main() -> None:
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),
             })
 
-    # Official player-season statistics are grouped by SportsPress league and
-    # season. Restrict to Bosch in the source importer, then remap 148 to
-    # the established public Orlik 2026 ID.
+    def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
+        if not recap_stats:
+            return dict(official_stats or {})
+
+        if not official_stats:
+            return dict(recap_stats)
+
+        fields = ("apps", "goals", "assists")
+        known_comparisons = [
+            (recap_stats.get(field), official_stats.get(field))
+            for field in fields
+            if isinstance(recap_stats.get(field), int)
+        ]
+        if known_comparisons and all(
+            not isinstance(official_value, int) or recap_value >= official_value
+            for recap_value, official_value in known_comparisons
+        ) and any(
+            not isinstance(official_value, int) or recap_value > official_value
+            for recap_value, official_value in known_comparisons
+        ):
+            return {
+                **official_stats,
+                **recap_stats,
+                "motm": None,
+                "yellow": None,
+                "red": None,
+            }
+
+        return dict(official_stats)
+
     for player in historic_players:
         details = player_seasons_extra.get(str(player["id"])) or {}
+
         for season_id, stats in details.items():
             canonical_id = SEASON_2026 if season_id == "148" else str(season_id)
-            player.setdefault("season_stats", {})[canonical_id] = {
-                key:stats.get(key) for key in ("apps","goals","assists","motm","yellow","red")
+            verified_stats = {
+                key: stats.get(key)
+                for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
-            if canonical_id == SEASON_2026:
-                player["orlik2026"] = player["season_stats"][canonical_id]
-            elif canonical_id == "146":
-                player["hala2526"] = player["season_stats"][canonical_id]
 
-    # Rebuild headline stats from the same verified seasons as the season table.
-    # Supercups are included; PLP career across all clubs remains separate.
+            if canonical_id == SEASON_2026:
+                verified_stats = latest_orlik(player.get("recap2026"), verified_stats)
+                player["orlik2026"] = verified_stats
+            elif canonical_id == "146":
+                player["hala2526"] = verified_stats
+
+            player.setdefault("season_stats", {})[canonical_id] = verified_stats
+
     from player_totals import bosch_totals
+
     for player in historic_players:
         details = player_seasons_extra.get(str(player["id"])) or {}
-        calculated = bosch_totals(details)
+        verified_seasons = {
+            SEASON_2026 if str(season_id) == "148" else str(season_id): dict(stats)
+            for season_id, stats in details.items()
+        }
+        recap_stats = player.get("recap2026")
+
+        if recap_stats and verified_seasons:
+            verified_seasons[SEASON_2026] = latest_orlik(
+                recap_stats,
+                verified_seasons.get(SEASON_2026),
+            )
+
+        calculated = bosch_totals(verified_seasons)
+
         if calculated:
             player["bosch_totals"] = calculated
+
             for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
                 player[field] = calculated[field]
         else:
             player["bosch_totals"] = None
+
         player["career_totals"] = player_career_extra.get(str(player["id"]))
-        player["stats_source"] = "PLP SportsPress" if calculated else "Niepełne archiwum — historyczne dane"
+        player["stats_source"] = (
+            "PLP SportsPress i aktualny raport Orlik 2026"
+            if recap_stats and verified_seasons
+            else "PLP SportsPress"
+            if calculated
+            else "Niepełne archiwum — historyczne dane"
+        )
 
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
+        details = player_seasons_extra.get(str(player["id"])) or {}
         season_names = [part.strip() for part in (player.get("seasons_label") or "").split(",") if part.strip()]
         season_stats = player.setdefault("season_stats", {})
         if player.get("hala2526"):
@@ -314,6 +390,7 @@ def main() -> None:
                                 "apps": stat.get("apps"), "goals": stat.get("goals"),
                                 "assists": stat.get("assists"), "motm": stat.get("motm")})
         player["season_history"] = history
+        player.pop("recap2026", None)
 
     # One source of truth for repeated historical leaderboard rows.
     deduped_promotions = {}

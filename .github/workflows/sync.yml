@@ -13,6 +13,9 @@ on:
       - 'src/build_portal.py'
       - 'src/plp_photo_archive.py'
       - 'src/sync_player_seasons.py'
+      - 'src/resolve_current_players.py'
+      - 'src/player_identity.py'
+      - 'src/player_totals.py'
       - 'src/dedupe_portal.py'
       - 'src/build_scouting.py'
   schedule:
@@ -40,6 +43,8 @@ jobs:
         run: python src/sync_plp.py
       - name: Scan known public YouTube channels
         run: python src/sync_videos.py
+      - name: Resolve public player profiles for current leaders
+        run: python src/resolve_current_players.py
       - name: Refresh historical player season statistics
         run: python src/sync_player_seasons.py
       - name: Rebuild portal data
@@ -66,10 +71,10 @@ jobs:
           path: docs
       - name: Commit verified data changes
         run: |
-          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json; then
+          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/media_manifest.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json docs/assets/data.json docs/assets/scouting.json data/media_manifest.json data/player_season_updates.json data/player_career_updates.json docs/media data/media_manifest.json data/player_season_updates.json data/player_career_updates.json docs/media
+            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/media_manifest.json docs/assets/data.json docs/assets/scouting.json docs/media
             git commit -m "chore: sync Bosch video and portal data"
             git push
           fi
