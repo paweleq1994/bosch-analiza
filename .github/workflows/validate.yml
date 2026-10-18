@@ -44,6 +44,8 @@ jobs:
         run: node tests/frontend_archived_player_seasons.cjs
       - name: Verify sourced scorer reconciliation and walkover UI
         run: node tests/frontend_goal_reconciliation.cjs
+      - name: Verify all 113 PLP match protocols across portal views
+        run: node tests/frontend_full_match_protocols.cjs
       - name: Check required portal paths
         run: |
           test -s docs/index.html
