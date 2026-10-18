@@ -10,6 +10,7 @@ import re
 import unicodedata
 
 from player_identity import legacy_player_id, match_public_profile, person_key
+from merge_player_identities import merge_player_identities
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
@@ -428,6 +429,11 @@ def main() -> None:
             for stats in verified_seasons.values()
         ):
             player["stats_source"] = "PLP — publiczny profil i statystyki sezonowe"
+
+    historic_players = merge_player_identities(
+        historic_players,
+        load("player_identity_merges.json", {}),
+    )
 
     archive_rows = archived_bosch_seasons(
         promotions,
