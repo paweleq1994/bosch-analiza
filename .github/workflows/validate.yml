@@ -20,6 +20,10 @@ jobs:
         run: python src/build_portal.py
       - name: Validate generated snapshot
         run: python src/validate_portal.py
+      - name: Audit incomplete player coverage
+        run: python src/audit_player_coverage.py
+      - name: Validate audit report
+        run: python -m unittest tests/test_player_coverage_report.py -v
       - name: Rebuild scouting from versioned sources
         run: python src/build_scouting.py
       - name: Validate scouting reports
