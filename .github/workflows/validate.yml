@@ -33,10 +33,13 @@ jobs:
         run: |
           node --check docs/assets/app.js
           node --check docs/assets/scouting.js
+          node --check docs/assets/table-sort.js
       - name: Verify player season filtering
         run: node tests/frontend_player_filter.cjs
       - name: Verify advanced sort and Bosch records
         run: node tests/frontend_records_sort.cjs
+      - name: Verify every table is sortable and season leaders are correct
+        run: node tests/frontend_all_tables_sort.cjs
       - name: Check required portal paths
         run: |
           test -s docs/index.html
