@@ -38,7 +38,8 @@ assert.ok(golabeski.includes("Łącznie Bosch"));
 
 const sołowiej = evaluate('playerDetail("7285")');
 assert.ok(sołowiej.includes("Tabela PLP — archiwum"));
-assert.ok(sołowiej.includes("2 goli, 3 asyst"));
+assert.ok(sołowiej.includes("3 asyst"));
+assert.ok(!sołowiej.includes("2 goli, 3 asyst"));
 
 const historic2024 = evaluate('seasonPage("139")');
 assert.ok(historic2024.includes("Gołąbeski Piotr"), "Known 2024 goals must appear even when appearances are unavailable");
