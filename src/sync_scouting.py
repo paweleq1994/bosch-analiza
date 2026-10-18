@@ -153,6 +153,13 @@ def main():
         team = request(f"teams/{BOSCH_ID}")
         if not isinstance(team, dict):
             raise ValueError("Invalid team payload")
+        try:
+            listed = request("seasons", {"per_page": 100})
+            if isinstance(listed, list):
+                all_ids = [row.get("id") for row in listed if isinstance(row, dict) and edition(row.get("slug") or row.get("name") or row.get("title"))]
+                team = {**team, "seasons": list(team.get("seasons") or []) + all_ids}
+        except Exception as error:
+            print(f"Season directory unavailable; using Bosch seasons: {error}", file=sys.stderr)
         updated, warnings = collect(
             team, lambda sid: request("tables", {"seasons": sid, "per_page": 100}), previous
         )
