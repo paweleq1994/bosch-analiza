@@ -1815,5 +1815,12 @@
     "public": true,
     "resolved_name": "Rogon Damian",
     "source": "verified_current_roster"
+  },
+  "13198": {
+    "player_id": 13198,
+    "profile_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/",
+    "public": true,
+    "resolved_name": "Wojciuk Piotr",
+    "source": "verified_current_roster"
   }
 }

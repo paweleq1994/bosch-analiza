@@ -2371,5 +2371,29 @@
         "red": 0
       }
     ]
+  },
+  "13198": {
+    "apps": 5,
+    "goals": 2,
+    "assists": 2,
+    "motm": 0,
+    "yellow": 0,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 1,
+    "teams": 1,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 5,
+        "goals": 2,
+        "assists": 2,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
   }
 }
