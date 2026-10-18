@@ -1,0 +1,44 @@
+name: Audit all Bosch PLP match protocols
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - audit/all-113-bosch-match-protocols
+    paths:
+      - 'src/audit_plp_match_protocols.py'
+      - '.github/workflows/audit-plp-protocols.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bosch-plp-protocol-audit
+  cancel-in-progress: true
+
+jobs:
+  match_audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/all-113-bosch-match-protocols
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install HTML parser
+        run: python -m pip install beautifulsoup4
+      - name: Audit all 113 match URLs and the PLP season API
+        run: python -u src/audit_plp_match_protocols.py
+      - name: Verify report includes every fixture link
+        run: |
+          python -c 'import json;from pathlib import Path;result=json.loads(Path("data/match_protocol_audit.json").read_text());assert len(result["matches"])==113;assert len({row["event_url"] for row in result["matches"]})==113;print("MATCH_REPORT_COMPLETE",result["fetched_total_pages"],"fetched pages")'
+      - name: Persist cited match-by-match audit on research branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/match_protocol_audit.json
+          git commit -m "audit: collect original Bosch match protocols [skip ci]"
+          git push origin HEAD:audit/all-113-bosch-match-protocols
