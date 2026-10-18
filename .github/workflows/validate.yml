@@ -22,13 +22,19 @@ jobs:
         run: python src/build_portal.py
       - name: Validate generated snapshot
         run: python src/validate_portal.py
+      - name: Validate scouting reports
+        run: python src/validate_scouting.py
       - name: Check Python syntax
         run: python -m compileall -q src
       - name: Check JavaScript syntax
-        run: node --check docs/assets/app.js
+        run: |
+          node --check docs/assets/app.js
+          node --check docs/assets/scouting.js
       - name: Check required portal paths
         run: |
           test -s docs/index.html
           test -s docs/archive.html
           test -s docs/assets/style.css
           test -s docs/assets/data.json
+          test -s docs/scouting.html
+          test -s docs/assets/scouting.json
