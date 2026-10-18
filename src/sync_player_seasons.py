@@ -72,7 +72,13 @@ def main():
         for row in recap.get("player_leaders",[])
         if (match:=match_public_profile(str(row.get("name") or ""),profiles)) is not None
     }
-    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids,key=int)
+    goal_evidence=json.loads((ROOT/"data"/"goal_evidence.json").read_text(encoding="utf-8"))
+    verified_goal_ids={
+        match[0]
+        for row in goal_evidence.get("players",[])
+        if (match:=match_public_profile(str(row.get("name") or ""),profiles)) is not None
+    }
+    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids|verified_goal_ids,key=int)
     results,warnings=refresh(ids,old)
     careers_file=ROOT/"data"/"player_career_updates.json"
     previous_careers=json.loads(careers_file.read_text(encoding="utf-8")) if careers_file.exists() else {}
