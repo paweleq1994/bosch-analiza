@@ -97,7 +97,11 @@ def main() -> None:
             "table": "II Liga – Orlik 2026",
             "origin": "official_recap",
         })
-    # The SportsPress season 148 is the same edition as the archived Orlik 2026.\n    # Prefer the stable public ID and keep official scores and links.\n    for incoming_season in league_extra.get("season_rows", []):\n        if str(incoming_season.get("plp_id") or incoming_season.get("id")) == "148":\n            incoming_season = {**incoming_season, "id": SEASON_2026, "name": "Orlik 2026"}
+    # The SportsPress season 148 is the same edition as the archived Orlik 2026.
+    # Prefer the stable public ID and keep official scores and links.
+    for incoming_season in league_extra.get("season_rows", []):
+        if str(incoming_season.get("plp_id") or incoming_season.get("id")) == "148":
+            incoming_season = {**incoming_season, "id": SEASON_2026, "name": "Orlik 2026"}
         index = next((i for i, item in enumerate(seasons) if str(item["id"]) == str(incoming_season["id"])), None)
         if index is None:
             seasons.append(incoming_season)
@@ -123,6 +127,12 @@ def main() -> None:
     match_positions = {item["id"]: index for index, item in enumerate(matches)}
     for row in league_extra.get("matches", []):
         clean = match_row(row)
+        if str(row.get("plp_season_id") or row.get("sid")) == "148":
+            counterpart = next((m for m in matches if m["sid"] == SEASON_2026 and m["date"] == clean["date"] and normalized(m["opponent"]) == normalized(clean["opponent"])), None)
+            if counterpart is not None:
+                clean["id"] = counterpart["id"]
+            clean["sid"] = SEASON_2026
+            clean["season"] = "Orlik 2026"
         if not clean["id"]:
             continue
         index = match_positions.get(clean["id"])
