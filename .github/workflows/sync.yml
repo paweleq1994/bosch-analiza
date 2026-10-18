@@ -69,7 +69,7 @@ jobs:
           if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json docs/assets/data.json docs/assets/scouting.json data/media_manifest.json data/player_season_updates.json docs/media data/media_manifest.json data/player_season_updates.json docs/media
+            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json docs/assets/data.json docs/assets/scouting.json data/media_manifest.json data/player_season_updates.json data/player_career_updates.json docs/media data/media_manifest.json data/player_season_updates.json data/player_career_updates.json docs/media
             git commit -m "chore: sync Bosch video and portal data"
             git push
           fi
