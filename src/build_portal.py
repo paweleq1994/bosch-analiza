@@ -69,6 +69,7 @@ def main() -> None:
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
     match_protocol_index = load("match_protocol_audit_index.json")
     player_identity_merges = load("player_identity_merges.json", {"groups": []})
+    own_goal_evidence = load("bosch_own_goal_evidence.json", {"events": []})
 
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
@@ -463,6 +464,7 @@ def main() -> None:
         profiles,
         match_protocol_index,
         merged_aliases,
+        own_goal_evidence,
     )
 
     # Explicitly expose historical participation even when detailed PLP totals
