@@ -157,7 +157,7 @@ def main() -> None:
     existing = json.loads(PROFILES.read_text(encoding="utf-8"))
     recap = json.loads(RECAP.read_text(encoding="utf-8"))
     profiles, warnings = resolve(existing, recap.get("player_leaders", []))
-    rendered = json.dumps(profiles, ensure_ascii=False, indent=2) + "\\n"
+    rendered = json.dumps(profiles, ensure_ascii=False, indent=2) + "\n"
 
     if PROFILES.read_text(encoding="utf-8") != rendered:
         PROFILES.write_text(rendered, encoding="utf-8")
