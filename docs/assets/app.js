@@ -66,7 +66,53 @@ function seasonPage(id){
         (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Statystyki indywidualne pochodzą z dostępnych danych PLP; nie są pełnym potwierdzeniem wszystkich strzelców.</div>':"");
 }
 function matchesPage(){return headline("Mecze","Wyniki, protokoły, pojedyncze spotkania i powiązane filmy.")+filterInput("Rywal, wynik lub data")+'<div id="filtered-matches"></div>';}
-function matchDetail(id){const m=DB.matches.find(x=>same(x.id,id));if(!m)return empty("Nie znaleziono meczu.");const media=m.videos||[];return headline(m.opponent,m.date+" • "+m.season)+metrics([["Wynik Bosch",m.gf+":"+m.ga],["Rezultat",result(m)],["Do przerwy",m.halftime||"Brak danych"],["Nagrania",media.length]])+'<p>'+href("season/"+encodeURIComponent(m.sid),"← Powrót do sezonu")+'</p>'+section("Dane meczu",'<div class="card"><p>'+e(m.match||"Bosch Service Tech-Car — "+m.opponent)+'</p><p>Źródło: '+(m.event_link?'<a target="_blank" rel="noopener noreferrer" href="'+e(m.event_link)+'">Podlaska Liga Piłkarska ↗</a>':"Archiwum kompendium")+'</p></div>')+section("Nagrania",media.length?cards(media.map(v=>'<div class="video-thumb">▶</div><h3>'+e(v.segment||v.title||"Nagranie")+'</h3><a href="'+e(v.url||"https://www.youtube.com/watch?v="+v.video_id)+'" target="_blank" rel="noopener noreferrer">Oglądaj na YouTube ↗</a>')):empty("Brak przypisanego nagrania. Jeśli pojawi się na monitorowanym kanale, synchronizacja spróbuje je dopasować."));}
+function matchGoalSummary(match){
+    const protocol=match.protocol;
+
+    if(!protocol){
+        return empty("Brak zweryfikowanego protokołu meczu.");
+    }
+
+    const scorerRows=(protocol.scorers||[]).map(scorer=>[
+        scorer.player_id?href("player/"+encodeURIComponent(scorer.player_id),scorer.name):e(scorer.name),
+        e(scorer.goals),
+        e((scorer.minutes||[]).map(minute=>minute+"′").join(", ")||"—")
+    ]);
+    const rows=scorerRows.length?table(["Strzelec","Gole","Minuty"],scorerRows):empty("Brak goli zdobytych przez zawodników Boscha.");
+    const notes=[];
+
+    if(protocol.opponent_own_goals){
+        notes.push("Gole samobójcze rywali: "+protocol.opponent_own_goals);
+    }
+
+    if(protocol.administrative_goals){
+        notes.push("Bramki przyznane administracyjnie: "+protocol.administrative_goals);
+    }
+
+    if(!protocol.complete){
+        notes.push("Nieczytelne oznaczenie gola w protokole PLP — wymaga ręcznej weryfikacji.");
+    }
+
+    return rows+
+        (notes.length?'<div class="notice">'+notes.map(e).join(" • ")+'</div>':"")+
+        '<p><a href="'+e(protocol.source_url)+'" target="_blank" rel="noopener noreferrer">Oryginalny protokół PLP ↗</a></p>';
+}
+function matchDetail(id){
+    const match=DB.matches.find(entry=>same(entry.id,id));
+
+    if(!match){
+        return empty("Nie znaleziono meczu.");
+    }
+
+    const media=match.videos||[];
+
+    return headline(match.opponent,match.date+" • "+match.season)+
+        metrics([["Wynik Bosch",match.gf+":"+match.ga],["Rezultat",result(match)],["Do przerwy",match.halftime||"Brak danych"],["Nagrania",media.length]])+
+        '<p>'+href("season/"+encodeURIComponent(match.sid),"← Powrót do sezonu")+'</p>'+
+        section("Strzelcy i minuty — protokół PLP",matchGoalSummary(match))+
+        section("Dane meczu",'<div class="card"><p>'+e(match.match||"Bosch Service Tech-Car — "+match.opponent)+'</p><p>Źródło: '+(match.event_link?'<a target="_blank" rel="noopener noreferrer" href="'+e(match.event_link)+'">Podlaska Liga Piłkarska ↗</a>':"Archiwum kompendium")+'</p></div>')+
+        section("Nagrania",media.length?cards(media.map(video=>'<div class="video-thumb">▶</div><h3>'+e(video.segment||video.title||"Nagranie")+'</h3><a href="'+e(video.url||"https://www.youtube.com/watch?v="+video.video_id)+'" target="_blank" rel="noopener noreferrer">Oglądaj na YouTube ↗</a>')):empty("Brak przypisanego nagrania."));
+}
 function players(){
     const sorting = '<div class="filters"><label>Sortowanie <select id="player-sort" aria-label="Sortuj zawodników"><option value="name">Alfabetycznie A–Z</option><option value="name-desc">Alfabetycznie Z–A</option><option value="apps">Najwięcej występów</option><option value="goals">Najwięcej goli</option><option value="assists">Najwięcej asyst</option><option value="points">Kanadyjka G+A</option><option value="motm">Najwięcej MVP</option><option value="yellow">Żółte kartki</option><option value="red">Czerwone kartki</option></select></label><label>Pokaż <select id="player-stat-filter" aria-label="Filtruj osiągnięcia"><option value="all">Wszyscy z sezonu</option><option value="scored">Z golem</option><option value="assisted">Z asystą</option><option value="motm">Z MVP</option><option value="yellow">Z żółtą kartką</option><option value="red">Z czerwoną kartką</option><option value="verified">Potwierdzone występy</option></select></label></div>';
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
@@ -141,6 +187,17 @@ function playerDetail(id){
         e(record.goals??"—"),
         e(record.assists??"—")
     ]);
+    const protocolGoals=player.protocol_goals||[];
+    const protocolHistory=protocolGoals.length?section("Gole z protokołów PLP",table(
+        ["Data","Rywal","Gole","Minuty","Protokół"],
+        protocolGoals.map(entry=>[
+            e(entry.date),
+            href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+            e(entry.goals),
+            e((entry.minutes||[]).map(minute=>minute+"′").join(", ")),
+            '<a href="'+e(entry.source_url)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
+        ])
+    )):"";
     const photos=(DB.media?.subjects||[]).find(subject=>subject.kind==="players"&&subject.id===player.id);
     const gallery=photos?.photos?.length?section("Zdjęcia PLP",
         '<div class="grid">'+photos.photos.map(photo=>
@@ -154,6 +211,7 @@ function playerDetail(id){
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
         (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
+        protocolHistory+
         gallery+
         (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
         (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
@@ -216,33 +274,38 @@ function records(){
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);
     const offensive=matches.slice().sort((a,b)=>b.gf-a.gf).slice(0,10);
     const goalCoverage=DB.analysis?.player_goal_coverage||[];
-    const totalUnexplained=goalCoverage.reduce((total,entry)=>total+(entry.unattributed_goals||0),0);
-    const totalAdministrative=goalCoverage.reduce((total,entry)=>total+(entry.administrative_goals||0),0);
-    const administrativeLinks=goalCoverage.flatMap(entry=>(entry.administrative_events||[]).map(event=>
-        '<a href="'+e(event.source_url)+'" target="_blank" rel="noopener noreferrer">'+e(entry.season)+' — '+e(event.opponent)+' ('+e(event.goals)+' gol administracyjny)</a>'
-    ));
-    const auditDetails='<div class="notice">Gole drużyny rozliczamy jako gole przypisane zawodnikom + gole wynikające z decyzji administracyjnych + różnicę wymagającą dalszej weryfikacji. '+
-        'Potwierdzonych bramek administracyjnych: <strong>'+e(totalAdministrative)+'</strong>. '+
-        'Pozostała różnica: <strong>'+e(totalUnexplained)+'</strong>. '+
-        'Pozostałe gole mogą wynikać z samobójów, brakujących protokołów lub pominiętych zawodników; bez dowodu nie przypisujemy ich konkretnym osobom.</div>';
-    const auditedRows=goalCoverage.map(entry=>[
-        e(entry.season),
-        e(entry.team_goals),
-        e(entry.attributed_goals),
-        e(entry.administrative_goals||0),
-        e(entry.unattributed_goals)
+    const totalUnexplained=goalCoverage.reduce((sum,row)=>sum+(row.unattributed_goals||0),0);
+    const totalAdministrative=goalCoverage.reduce((sum,row)=>sum+(row.administrative_goals||0),0);
+    const totalOwnGoals=goalCoverage.reduce((sum,row)=>sum+(row.opponent_own_goals||0),0);
+    const auditedRows=goalCoverage.map(row=>[
+        e(row.season),e(row.team_goals),e(row.attributed_goals),
+        e(row.opponent_own_goals||0),e(row.administrative_goals||0),e(row.unattributed_goals)
     ]);
-    const audit=section("Kontrola kompletności strzelców",
-        auditDetails+
-        table(["Sezon","Bramki drużyny","Gole zawodników","Administracyjne","Do wyjaśnienia"],auditedRows)+
-        (administrativeLinks.length?'<p class="small">Źródła korekt: '+administrativeLinks.join(" • ")+'</p>':"")
-    );
+    const auditDetails='<div class="notice">Zweryfikowano protokoły wszystkich '+e(DB.analysis?.match_protocol_audit?.audited_matches||0)+' meczów. '+
+        'Samobóje rywali: <strong>'+e(totalOwnGoals)+'</strong>. '+
+        'Bramki administracyjne: <strong>'+e(totalAdministrative)+'</strong>. '+
+        'Bramki nieprzypisane: <strong>'+e(totalUnexplained)+'</strong>. '+
+        'W meczu VESTA 18.02.2024 pozostał nieczytelny znacznik gola; protokół nie pozwala bezspornie ustalić jego minuty.</div>';
+    const audit=section("Kontrola kompletności strzelców",auditDetails+
+        table(["Sezon","Bramki drużyny","Gole zawodników","Samobóje rywali","Administracyjne","Do wyjaśnienia"],auditedRows)+
+        '<p>'+href("matches","Otwórz wszystkie 113 protokołów meczowych →")+'</p>');
+    const goalEvents=matches.flatMap(match=>(match.protocol?.scorers||[]).map(scorer=>({
+        ...scorer,date:match.date,opponent:match.opponent,match_id:match.id
+    })));
+    const matchRecords=section("Najwięcej goli w pojedynczym meczu — protokoły PLP",
+        table(["Data","Zawodnik","Rywal","Gole","Minuty"],
+            goalEvents.slice().sort((first,second)=>second.goals-first.goals||second.date.localeCompare(first.date)).slice(0,20).map(entry=>[
+                e(entry.date),entry.player_id?href("player/"+encodeURIComponent(entry.player_id),entry.name):e(entry.name),
+                href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+                e(entry.goals),e((entry.minutes||[]).map(minute=>minute+"′").join(", "))
+            ])
+        ));
     const seasonal=section("Rekordy sezonowe",table(["Sezon","Miejsce","Punkty","PPG","Bramki","Gole/mecz","Stracone/mecz"],seasons.slice().sort((a,b)=>b.points-a.points).map(seasonRow=>[seasonLink(seasonRow),e(seasonRow.position??"—"),e(seasonRow.points),ppg(seasonRow),e(seasonRow.gf+":"+seasonRow.ga),fmt(seasonRow.gf/seasonRow.matches),fmt(seasonRow.ga/seasonRow.matches)])));
     return headline("Rekordy Boscha","Strzelcy, asysty, kanadyjka, kartki, MVP, występy, skuteczność, mecze i sezony — z kontrolą jakości źródeł.")+
         sourceNote+
         section("Najwyższe zwycięstwa",table(["Data","Rywal","Wynik","Sezon"],scoreWins.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
         section("Najwięcej goli Boscha w meczu",table(["Data","Rywal","Wynik","Sezon"],offensive.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
-        seasonal+boards+audit;
+        seasonal+boards+matchRecords+audit;
 }
 function playerRankingStats(player,selectedSeasonId){
     const record=selectedSeasonId?playerSeasonRecord(player,selectedSeasonId):player;
