@@ -254,6 +254,16 @@ function playerDetail(id){
             ? table(["Data","Rywal","Wynik","Gole","Minuty","PLP"],matchesWithGoals)
             : empty("Brak indywidualnych goli w przeanalizowanych meczach ligowych.")
     );
+    const ownGoals=player.own_goal_matches||[];
+    const ownGoalHistory=ownGoals.length?section("Samobóje w barwach Boscha",
+        '<div class="notice">Gole samobójcze liczą się rywalowi, nie zawodnikowi Boscha.</div>'+
+        table(["Data","Przeciwnik","Samobóje","Protokół"],ownGoals.map(entry=>[
+            e(entry.date),
+            href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+            e(entry.goals),
+            '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">PLP ↗</a>'
+        ]))
+    ):"";
     const combinedProfileLinks=(player.alternate_profile_urls||[]).map(url=>
         '<a target="_blank" rel="noopener noreferrer" href="'+e(url)+'">'+e(url)+'</a>'
     );
@@ -270,10 +280,11 @@ function playerDetail(id){
     ):"";
 
     return headline(player.name,player.status||"Zawodnik Bosch Service Tech-Car")+
-        metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["MVP Boscha",player.motm??"—"]])+
+        metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
         scoredMatchSection+
+        ownGoalHistory+
         profileMergeNote+
         (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
@@ -403,6 +414,15 @@ function records(){
             '<a href="'+e(match.goal_protocol.source_url)+'" target="_blank" rel="noopener noreferrer">PLP ↗</a>'
         ]))
     );
+    const ownGoalPlayers=players.filter(player=>(player.own_goals_conceded||0)>0)
+        .sort((first,second)=>second.own_goals_conceded-first.own_goals_conceded);
+    const ownConcededRecords=section("Samobóje zawodników Boscha — dla przeciwników",
+        table(["Zawodnik","Samobóje","Potwierdzone protokoły"],ownGoalPlayers.map(player=>[
+            playerLink(player),
+            e(player.own_goals_conceded),
+            (player.own_goal_matches||[]).map(entry=>href("match/"+encodeURIComponent(entry.match_id),entry.opponent)).join(", ")
+        ]))
+    );
     const administrativeRecords=section("Korekty administracyjne wyników",
         table(["Data","Rywal","Bramki administracyjne","Oficjalne źródło"],matches.filter(match=>match.goal_protocol?.administrative_goals).map(match=>[
             e(match.date),matchLink(match),e(match.goal_protocol.administrative_goals),
@@ -414,7 +434,7 @@ function records(){
         sourceNote+
         section("Najwyższe zwycięstwa",table(["Data","Rywal","Wynik","Sezon"],scoreWins.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
         section("Najwięcej goli Boscha w meczu",table(["Data","Rywal","Wynik","Sezon"],offensive.map(match=>[e(match.date),matchLink(match),winner(match),e(match.season)])))+
-        seasonal+boards+matchRecords+fastestGoals+ownGoalRecords+administrativeRecords+audit;
+        seasonal+boards+matchRecords+fastestGoals+ownGoalRecords+ownConcededRecords+administrativeRecords+audit;
 }
 function playerRankingStats(player,selectedSeasonId){
     const record=selectedSeasonId?playerSeasonRecord(player,selectedSeasonId):player;
