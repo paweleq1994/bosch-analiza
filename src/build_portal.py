@@ -285,6 +285,7 @@ def main() -> None:
         if key not in deduped_promotions:
             deduped_promotions[key] = row
 
+    from dedupe_portal import dedupe
     output = {
         "meta": {
             "title": "Bosch Service Tech-Car",
@@ -323,6 +324,10 @@ def main() -> None:
             "github": "https://github.com/paweleq1994/bosch-analiza",
         },
     }
+    output["media"] = load("media_manifest.json", {"subjects": []})
+    output, duplicate_warnings = dedupe(output)
+    if duplicate_warnings:
+        print("Deduplication audit:", "; ".join(duplicate_warnings))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     rendered = json.dumps(output, ensure_ascii=False, separators=(",", ":")) + "\n"
     if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
