@@ -163,6 +163,8 @@ def scan_media(
         "candidates": list(previous.get("candidates") or []),
         "searches": int(previous.get("searches") or 0),
         "last_scan_date": previous.get("last_scan_date") or "",
+        "club_scan_version": int(previous.get("club_scan_version") or 0),
+        "historical_clubs_scanned": int(previous.get("historical_clubs_scanned") or 0),
     }
     warnings: list[str] = []
     previous_matches = {
@@ -202,7 +204,7 @@ def scan_media(
 
         return new_count
 
-    if state["last_scan_date"] == current_day:
+    if state["last_scan_date"] == current_day and state["club_scan_version"] >= 2:
         return state, warnings
 
     unattached_players = [
@@ -228,6 +230,73 @@ def scan_media(
             collect(rows)
         except Exception as error:
             warnings.append(f"Media search {surname}: {type(error).__name__}: {error}")
+
+    club_players: dict[str, list[str]] = {}
+    club_names: dict[str, str] = {}
+
+    for player in unattached_players:
+        for club in player.get("previous_teams") or []:
+            club_name = str(club or "").strip()
+            club_key = normalize(club_name)
+
+            if not club_key or "bosch service tech car" in club_key:
+                continue
+
+            club_players.setdefault(club_key, []).append(str(player["id"]))
+            club_names[club_key] = club_name
+
+    for club_key in sorted(club_players):
+        try:
+            rows = fetch("wp/v2/media", {
+                "search": club_names[club_key],
+                "per_page": 100,
+                "page": 1,
+                "_fields": MEDIA_FIELDS,
+            })
+            state["historical_clubs_scanned"] += 1
+
+            if not isinstance(rows, list):
+                continue
+
+            collect(rows)
+
+            for media in rows:
+                if not isinstance(media, dict):
+                    continue
+
+                media_id = str(media.get("id") or "")
+                media_url = str(media.get("source_url") or "")
+
+                if not media_id.isdigit() or not valid(media_url):
+                    continue
+
+                if not str(media.get("mime_type") or "").startswith("image/"):
+                    continue
+
+                metadata = " ".join((
+                    Path(unquote(urlsplit(media_url).path)).stem,
+                    str(media.get("slug") or ""),
+                    rendered(media.get("title")),
+                    rendered(media.get("caption")),
+                    rendered(media.get("description")),
+                    str(media.get("alt_text") or ""),
+                ))
+
+                if club_key not in normalize(metadata):
+                    continue
+
+                for player_id in club_players[club_key]:
+                    previous_candidates[(player_id, media_id)] = {
+                        "player_id": player_id,
+                        "media_id": media_id,
+                        "url": media_url,
+                        "evidence": "historical_team_archive",
+                        "team": club_names[club_key],
+                    }
+        except Exception as error:
+            warnings.append(f"Previous club media {club_names[club_key]}: {type(error).__name__}: {error}")
+
+    state["club_scan_version"] = 2
 
     if not state["complete"]:
         for page in range(state["next_page"], state["next_page"] + max_pages):
@@ -287,7 +356,17 @@ def main() -> None:
         if subject.get("kind") == "players" and subject.get("photos")
     }
     players = [
-        {"id": str(player["id"]), "name": player["name"], "profile_url": player.get("profile_url") or "", "has_photos": str(player["id"]) in available}
+        {
+            "id": str(player["id"]),
+            "name": player["name"],
+            "profile_url": player.get("profile_url") or "",
+            "has_photos": str(player["id"]) in available,
+            "previous_teams": sorted({
+                str(row.get("team") or "").strip()
+                for row in (player.get("career_totals") or {}).get("season_rows") or []
+                if row.get("team") and normalize(row["team"]) != normalize("Bosch Service Tech-Car")
+            }),
+        }
         for player in database.get("players", [])
         if str(player.get("id") or "").isdigit()
     ]
@@ -303,6 +382,7 @@ def main() -> None:
         result["scanned_pages"], "archive pages;",
         result["scanned_media"], "archive media;",
         result["searches"], "name searches;",
+        result["historical_clubs_scanned"], "historical clubs searched;",
         len(result["matches"]), "verified metadata matches;",
         len(result["candidates"]), "unverified candidates;",
         "complete:", result["complete"],
