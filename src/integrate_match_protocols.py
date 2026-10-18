@@ -57,14 +57,15 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
             goals = int(scorer.get("goals") or 0)
             minutes = scorer.get("goal_minutes") or []
 
-            if goals <= 0 or len(minutes) != goals:
-                raise ValueError(f"Scorer evidence lacks verified minutes: {identifier} / {name}")
+            if goals <= 0 or len(minutes) > goals:
+                raise ValueError(f"Inconsistent scorer evidence: {identifier} / {name}")
 
             event = {
                 "name": name,
                 "player_id": resolved["id"] if resolved else None,
                 "goals": goals,
                 "minutes": minutes,
+                "minutes_complete": len(minutes) == goals,
                 "profile_url": scorer.get("profile_url") or "",
             }
             confirmed_scorers.append(event)
