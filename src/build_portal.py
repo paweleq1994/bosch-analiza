@@ -12,6 +12,7 @@ import unicodedata
 from player_identity import legacy_player_id, match_public_profile, person_key
 from merge_player_identities import merge_player_identities
 from integrate_match_protocols import integrate_match_protocols
+from protocol_goals import enrich_from_protocols
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
@@ -67,6 +68,8 @@ def main() -> None:
     player_career_extra = load("player_career_updates.json", {})
     stat_corrections = load("player_stat_corrections.json", {})
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
+    own_goal_evidence = load("bosch_own_goal_evidence.json", {"events": []})
+    match_protocol_index = load("match_protocol_audit_index.json", {})
 
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
@@ -457,7 +460,25 @@ def main() -> None:
     match_protocol_summary = integrate_match_protocols(
         historic_players,
         matches,
-        load("match_protocol_audit_index.json", {}),
+        match_protocol_index,
+    )
+    goalkeeper_aliases = {
+        str(duplicate): str(canonical)
+        for canonical, configuration in load("player_identity_merges.json", {}).items()
+        for duplicate in configuration.get("duplicate_ids") or []
+    }
+
+    for player in historic_players:
+        if player.get("merged_source_profiles"):
+            player["alternate_profile_urls"] = list(player["merged_source_profiles"])
+
+    protocol_enrichment = enrich_from_protocols(
+        matches,
+        historic_players,
+        profiles,
+        match_protocol_index,
+        goalkeeper_aliases,
+        own_goal_evidence,
     )
 
     # Explicitly expose historical participation even when detailed PLP totals
@@ -502,49 +523,47 @@ def main() -> None:
             continue
 
         season_id = str(season["id"])
-        known_player_goals = []
+        recorded = protocol_enrichment["seasons"].get(season_id) or {}
+        individual_goals = recorded.get("player_goals", 0)
+        opponent_own_goals = recorded.get("opponent_own_goals", 0)
+        administrative_goals = recorded.get("administrative_goals", 0)
+        official_corrections = administrative_adjustments.get(season_id) or {}
 
-        for player in historic_players:
-            stats = player.get("season_stats", {}).get(season_id) or {}
-            goals = stats.get("goals")
-            apps = stats.get("apps")
+        if administrative_goals != official_corrections.get("goals", 0):
+            raise ValueError(f"Administrative goal evidence does not match in {season_id}")
 
-            if type(goals) is not int:
-                continue
-
-            if type(apps) is int and apps <= 0:
-                continue
-
-            known_player_goals.append(stats)
-
-        assigned_goals = sum(stats["goals"] for stats in known_player_goals)
-        administrative = administrative_adjustments.get(season_id) or {}
-        administrative_goals = administrative.get("goals", 0)
-        opponent_own_goals = sum(
-            match["protocol"]["opponent_own_goals"]
-            for match in matches if str(match["sid"]) == season_id
+        summed_player_goals = sum(
+            stats["goals"]
+            for player in historic_players
+            for stats in [player.get("season_stats", {}).get(season_id) or {}]
+            if type(stats.get("goals")) is int and (type(stats.get("apps")) is not int or stats["apps"] > 0)
         )
-        unexplained = season["gf"] - assigned_goals - administrative_goals - opponent_own_goals
 
-        if unexplained < 0:
+        if summed_player_goals != individual_goals:
             raise ValueError(
-                f"Attribution exceeds Bosch team goals for {season['name']}: "
-                f"{assigned_goals} player goals + {administrative_goals} administrative + "
-                f"{opponent_own_goals} opponent own goals "
-                f"> {season['gf']} team goals"
+                f"Season/player protocol goal mismatch in {season['name']}: "
+                f"{summed_player_goals} != {individual_goals}"
             )
+
+        difference = season["gf"] - individual_goals - opponent_own_goals - administrative_goals
+
+        if difference != 0:
+            raise ValueError(f"Match reports leave {difference} goals unresolved in {season['name']}")
 
         goal_coverage.append({
             "sid": season_id,
             "season": season["name"],
             "team_goals": season["gf"],
-            "attributed_goals": assigned_goals,
+            "attributed_goals": individual_goals,
             "administrative_goals": administrative_goals,
             "opponent_own_goals": opponent_own_goals,
-            "administrative_events": administrative.get("events", []),
-            "unattributed_goals": unexplained,
-            "players_with_verified_stats": len(known_player_goals),
-            "source": "PLP player season statistics, verified match reports and official administrative corrections",
+            "administrative_events": official_corrections.get("events", []),
+            "unattributed_goals": difference,
+            "players_with_verified_stats": sum(
+                type((player.get("season_stats", {}).get(season_id) or {}).get("goals")) is int
+                for player in historic_players
+            ),
+            "source": "113 PLP direct match reports, scorer minute icons, own goals and administrative decisions",
         })
 
     # One source of truth for repeated historical leaderboard rows.
@@ -577,6 +596,7 @@ def main() -> None:
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
             "player_goal_coverage": goal_coverage,
+            "match_protocol_audit": protocol_enrichment,
             "match_protocol_audit": match_protocol_summary,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
