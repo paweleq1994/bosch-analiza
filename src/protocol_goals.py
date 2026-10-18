@@ -93,6 +93,7 @@ def enrich_from_protocols(
     official_profiles: dict,
     protocol_index: dict,
     aliases: dict[str, str],
+    own_goal_evidence: dict | None = None,
     minimum_matches: int = 113,
 ) -> dict:
     fixture_map = {str(match["id"]): match for match in matches}
@@ -119,6 +120,26 @@ def enrich_from_protocols(
     by_season = defaultdict(lambda: {"player_goals": 0, "opponent_own_goals": 0, "administrative_goals": 0})
     verified_ids = set()
     goals_with_unknown_minute = []
+    own_goal_events = defaultdict(list)
+    known_own_scorers = {str(player["id"]): player for player in players}
+    claimed_own_events = set()
+
+    for event in (own_goal_evidence or {}).get("events") or []:
+        match_id = str(event.get("match_id") or "")
+        player_id = canonical_player_id(event.get("player_id"), aliases)
+
+        if match_id in claimed_own_events or player_id not in known_own_scorers:
+            raise ValueError(f"Invalid or duplicated Bosch own-goal attribution: {match_id}")
+
+        if type(event.get("goals")) is not int or event["goals"] <= 0:
+            raise ValueError(f"Invalid own-goal count in {match_id}")
+
+        claimed_own_events.add(match_id)
+        own_goal_events[match_id].append({
+            "player_id": player_id,
+            "name": known_own_scorers[player_id]["name"],
+            "goals": event["goals"],
+        })
 
     for record in protocol_rows:
         match_id = str(record.get("id") or "")
@@ -201,6 +222,12 @@ def enrich_from_protocols(
         if not all(type(value) is int and value >= 0 for value in (own_goals, administrative_goals)):
             raise ValueError(f"Invalid opponent own-goal or administrative count: {match_id}")
 
+        own_goals_conceded_scorers = own_goal_events.get(match_id) or []
+        recorded_own_goals_conceded = sum(item["goals"] for item in own_goals_conceded_scorers)
+
+        if recorded_own_goals_conceded != int(record.get("bosch_own_goals") or 0):
+            raise ValueError(f"Unverified individual own-goal attribution in {match_id}")
+
         if scored_goals + own_goals + administrative_goals != int(match["gf"]):
             raise ValueError(
                 f"Official score mismatch in {match_id}: "
@@ -214,6 +241,8 @@ def enrich_from_protocols(
             "player_goals": scored_goals,
             "own_goals": own_goals,
             "administrative_goals": administrative_goals,
+            "own_goals_conceded": recorded_own_goals_conceded,
+            "own_goals_conceded_scorers": own_goals_conceded_scorers,
             "unverified_goals": 0,
             "verified": True,
             "minute_uncertainties": unreadable_count,
@@ -250,6 +279,20 @@ def enrich_from_protocols(
             reverse=True,
         )
         player["goal_matches"] = logs
+        own_goal_history = [
+            {
+                "match_id": match["id"],
+                "date": match["date"],
+                "opponent": match["opponent"],
+                "source_url": match["goal_protocol"]["source_url"],
+                "goals": scorer["goals"],
+            }
+            for match in matches
+            for scorer in (match.get("goal_protocol") or {}).get("own_goals_conceded_scorers") or []
+            if scorer["player_id"] == player_id
+        ]
+        player["own_goal_matches"] = sorted(own_goal_history, key=lambda row: row["date"], reverse=True)
+        player["own_goals_conceded"] = sum(row["goals"] for row in own_goal_history)
         player["protocol_goal_total"] = sum(row["goals"] for row in logs)
         season_stats = player.setdefault("season_stats", {})
 
@@ -296,5 +339,10 @@ def enrich_from_protocols(
         "goals_with_unknown_minute": goals_with_unknown_minute,
         "total_protocol_goals": sum(row["player_goals"] for row in by_season.values()),
         "total_own_goals": sum(row["opponent_own_goals"] for row in by_season.values()),
+        "total_own_goals_conceded": sum(
+            scorer["goals"]
+            for match in matches
+            for scorer in (match.get("goal_protocol") or {}).get("own_goals_conceded_scorers") or []
+        ),
         "total_administrative_goals": sum(row["administrative_goals"] for row in by_season.values()),
     }
