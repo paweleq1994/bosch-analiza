@@ -57,6 +57,9 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
             goals = int(scorer.get("goals") or 0)
             minutes = scorer.get("goal_minutes") or []
 
+            if goals == 0 and int(scorer.get("own_goals") or 0) > 0:
+                continue
+
             if goals <= 0 or len(minutes) > goals:
                 raise ValueError(f"Inconsistent scorer evidence: {identifier} / {name}")
 
