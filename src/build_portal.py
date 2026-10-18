@@ -259,6 +259,32 @@ def main() -> None:
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),
             })
 
+    # Explicitly expose historical participation even when detailed PLP totals
+    # were not captured in the original archive.
+    for player in historic_players:
+        season_names = [part.strip() for part in (player.get("seasons_label") or "").split(",") if part.strip()]
+        season_stats = player.setdefault("season_stats", {})
+        if player.get("hala2526"):
+            season_stats["146"] = player["hala2526"]
+        if player.get("orlik2026"):
+            season_stats[SEASON_2026] = player["orlik2026"]
+        history = []
+        for season in seasons:
+            sid = str(season["id"])
+            if season["name"] in season_names or sid in season_stats:
+                stat = season_stats.get(sid) or {}
+                history.append({"sid": sid, "name": season["name"],
+                                "apps": stat.get("apps"), "goals": stat.get("goals"),
+                                "assists": stat.get("assists"), "motm": stat.get("motm")})
+        player["season_history"] = history
+
+    # One source of truth for repeated historical leaderboard rows.
+    deduped_promotions = {}
+    for row in promotions.get("promotions", []):
+        key = (str(row.get("sid") or ""), str(row.get("team_id") or ""))
+        if key not in deduped_promotions:
+            deduped_promotions[key] = row
+
     output = {
         "meta": {
             "title": "Bosch Service Tech-Car",
@@ -280,7 +306,7 @@ def main() -> None:
             "tier_split_peak": report.get("tier_split_peak", []),
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
-            "promotions": promotions.get("promotions", []),
+            "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
                     "name": item.get("team_name"), "team_id": item.get("team_id"),
