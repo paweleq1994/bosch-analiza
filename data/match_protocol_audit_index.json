@@ -1,0 +1,4450 @@
+{
+  "matches": [
+    {
+      "id": "7416",
+      "sid": "120",
+      "date": "2022-11-20",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+      "score": "4:1",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21",
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7420",
+      "sid": "120",
+      "date": "2022-11-27",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7443",
+      "sid": "120",
+      "date": "2023-01-15",
+      "opponent": "CF Bojary",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7734",
+      "sid": "120",
+      "date": "2023-01-22",
+      "opponent": "Poler-Art Team",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+      "score": "3:3",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5",
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7758",
+      "sid": "120",
+      "date": "2023-01-29",
+      "opponent": "Mają Rozmach",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach/",
+      "score": "7:3",
+      "official_team_goals": 7,
+      "page_status": "ok",
+      "protocol_player_goals": 7,
+      "protocol_on_field_goals": 7,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4",
+            "13",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7767",
+      "sid": "120",
+      "date": "2023-02-04",
+      "opponent": "INTaF",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/",
+      "score": "2:1",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Dołżyk Michał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7788",
+      "sid": "120",
+      "date": "2023-02-11",
+      "opponent": "Poltank",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/",
+      "score": "2:6",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 1,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7801",
+      "sid": "120",
+      "date": "2023-02-12",
+      "opponent": "Rainter",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/",
+      "score": "0:0",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7814",
+      "sid": "120",
+      "date": "2023-02-26",
+      "opponent": "VESTA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+      "score": "2:1",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7839",
+      "sid": "120",
+      "date": "2023-03-04",
+      "opponent": "CEDC Polmos Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
+      "score": "5:3",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7851",
+      "sid": "120",
+      "date": "2023-03-05",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
+      "score": "5:2",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Markowski Damian",
+          "player_id": "7282",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7282"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7860",
+      "sid": "120",
+      "date": "2023-03-12",
+      "opponent": "Ramis",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "7875",
+      "sid": "120",
+      "date": "2023-03-19",
+      "opponent": "Fc Bajaga",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/",
+      "score": "4:3",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8232",
+      "sid": "125",
+      "date": "2023-05-06",
+      "opponent": "INTaF",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-intaf/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8255",
+      "sid": "125",
+      "date": "2023-05-14",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/",
+      "score": "3:1",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "11",
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8276",
+      "sid": "125",
+      "date": "2023-05-27",
+      "opponent": "OSMAR",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
+      "score": "2:1",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8289",
+      "sid": "125",
+      "date": "2023-05-28",
+      "opponent": "FC GRUBASSY",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+      "score": "3:3",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8323",
+      "sid": "125",
+      "date": "2023-06-18",
+      "opponent": "FC DrTusz",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/",
+      "score": "3:3",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22",
+            "35",
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8325",
+      "sid": "125",
+      "date": "2023-06-24",
+      "opponent": "Mają Rozmach",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8295",
+      "sid": "125",
+      "date": "2023-07-01",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+      "score": "1:0",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8366",
+      "sid": "125",
+      "date": "2023-09-03",
+      "opponent": "Konceptbud",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/",
+      "score": "1:0",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 1,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8373",
+      "sid": "125",
+      "date": "2023-09-09",
+      "opponent": "CEDC Polmos Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/",
+      "score": "5:1",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5",
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Markowski Damian",
+          "player_id": "7282",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7282"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8437",
+      "sid": "125",
+      "date": "2023-09-17",
+      "opponent": "VESTA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/",
+      "score": "3:1",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8438",
+      "sid": "125",
+      "date": "2023-09-23",
+      "opponent": "Ramis",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ramis/",
+      "score": "3:0",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8452",
+      "sid": "125",
+      "date": "2023-10-01",
+      "opponent": "Fc Bajaga",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-bajaga/",
+      "score": "5:1",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8455",
+      "sid": "125",
+      "date": "2023-10-07",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car/",
+      "score": "5:0",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "27",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8472",
+      "sid": "125",
+      "date": "2023-10-21",
+      "opponent": "Unibep Bielsk Podlaski",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/",
+      "score": "2:1",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "8467",
+      "sid": "125",
+      "date": "2023-10-28",
+      "opponent": "Waleczne Orły",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9448",
+      "sid": "126",
+      "date": "2023-11-18",
+      "opponent": "Multicco Group",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/multicco-group-vs-bosch-service-tech-car/",
+      "score": "3:1",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9480",
+      "sid": "126",
+      "date": "2023-11-26",
+      "opponent": "Hurtownia Krokus",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-hurtownia-krokus/",
+      "score": "0:5",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9486",
+      "sid": "126",
+      "date": "2024-01-13",
+      "opponent": "PTH Maltrans Znienacka",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/",
+      "score": "0:3",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9646",
+      "sid": "126",
+      "date": "2024-01-14",
+      "opponent": "Adampol Glovis",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
+      "score": "0:4",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9657",
+      "sid": "126",
+      "date": "2024-01-21",
+      "opponent": "M-Fire",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-bosch-service-tech-car/",
+      "score": "0:3",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9683",
+      "sid": "126",
+      "date": "2024-01-27",
+      "opponent": "TiM",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-tim/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "19"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9714",
+      "sid": "126",
+      "date": "2024-02-04",
+      "opponent": "Top Auto",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-top-auto/",
+      "score": "0:2",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9721",
+      "sid": "126",
+      "date": "2024-02-10",
+      "opponent": "CF Bojary",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/",
+      "score": "2:4",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9728",
+      "sid": "126",
+      "date": "2024-02-11",
+      "opponent": "Poltank",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/",
+      "score": "1:5",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9755",
+      "sid": "126",
+      "date": "2024-02-18",
+      "opponent": "VESTA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 1,
+      "unreadable_goal_marker_players": [
+        {
+          "name": "Klepacki Przemysław",
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9775",
+      "sid": "126",
+      "date": "2024-02-24",
+      "opponent": "Santos",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-santos/",
+      "score": "4:2",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9800",
+      "sid": "126",
+      "date": "2024-03-03",
+      "opponent": "FC DrTusz",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-drtusz/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9805",
+      "sid": "126",
+      "date": "2024-03-09",
+      "opponent": "Aptel",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "9816",
+      "sid": "126",
+      "date": "2024-03-17",
+      "opponent": "4Technology",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-bosch-service-tech-car/",
+      "score": "0:2",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10093",
+      "sid": "139",
+      "date": "2024-04-20",
+      "opponent": "VESTA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10121",
+      "sid": "139",
+      "date": "2024-04-28",
+      "opponent": "FC GRUBASSY",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+      "score": "2:3",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10122",
+      "sid": "139",
+      "date": "2024-05-11",
+      "opponent": "Eskular",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-eskular/",
+      "score": "6:1",
+      "official_team_goals": 6,
+      "page_status": "ok",
+      "protocol_player_goals": 6,
+      "protocol_on_field_goals": 6,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10132",
+      "sid": "139",
+      "date": "2024-05-19",
+      "opponent": "Ramis",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+      "score": "3:1",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10142",
+      "sid": "139",
+      "date": "2024-06-08",
+      "opponent": "Hanbud",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car/",
+      "score": "0:2",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10145",
+      "sid": "139",
+      "date": "2024-06-16",
+      "opponent": "OSMAR",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
+      "score": "4:3",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10154",
+      "sid": "139",
+      "date": "2024-06-22",
+      "opponent": "CEDC Polmos Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10157",
+      "sid": "139",
+      "date": "2024-06-30",
+      "opponent": "Unibep Bielsk Podlaski",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
+      "score": "6:1",
+      "official_team_goals": 6,
+      "page_status": "ok",
+      "protocol_player_goals": 6,
+      "protocol_on_field_goals": 6,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23",
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10225",
+      "sid": "139",
+      "date": "2024-09-15",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
+      "score": "4:1",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10238",
+      "sid": "139",
+      "date": "2024-09-21",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+      "score": "0:4",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10242",
+      "sid": "139",
+      "date": "2024-09-29",
+      "opponent": "GTS Nowa Wygoda",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/",
+      "score": "4:3",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Gołąbeski Piotr",
+          "player_id": "7270",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7270"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10250",
+      "sid": "139",
+      "date": "2024-10-05",
+      "opponent": "Waleczne Orły",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly-2/",
+      "score": "0:3",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10254",
+      "sid": "139",
+      "date": "2024-10-13",
+      "opponent": "Konceptbud",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
+      "score": "3:6",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10262",
+      "sid": "139",
+      "date": "2024-10-19",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-2/",
+      "score": "5:4",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7",
+            "11",
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Dołżyk Michał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10973",
+      "sid": "141",
+      "date": "2024-11-17",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa-2/",
+      "score": "3:3",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "10990",
+      "sid": "141",
+      "date": "2024-11-23",
+      "opponent": "OSMAR",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/",
+      "score": "1:2",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11017",
+      "sid": "141",
+      "date": "2024-12-01",
+      "opponent": "FC GRUBASSY",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/",
+      "score": "3:2",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11093",
+      "sid": "141",
+      "date": "2024-12-15",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-3/",
+      "score": "0:0",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11095",
+      "sid": "141",
+      "date": "2024-12-21",
+      "opponent": "CEDC Polmos Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/",
+      "score": "2:0",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11317",
+      "sid": "141",
+      "date": "2025-01-19",
+      "opponent": "Eskular",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/eskular-vs-bosch-service-tech-car/",
+      "score": "2:3",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11363",
+      "sid": "141",
+      "date": "2025-01-25",
+      "opponent": "OST Sport",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ost-sport/",
+      "score": "2:2",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11370",
+      "sid": "141",
+      "date": "2025-02-02",
+      "opponent": "Zachodnia Kingdom",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-bosch-service-tech-car/",
+      "score": "9:1",
+      "official_team_goals": 9,
+      "page_status": "ok",
+      "protocol_player_goals": 9,
+      "protocol_on_field_goals": 9,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 5,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "3",
+            "15",
+            "27",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13",
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11383",
+      "sid": "141",
+      "date": "2025-02-08",
+      "opponent": "Auto Team",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-auto-team/",
+      "score": "3:1",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11389",
+      "sid": "141",
+      "date": "2025-02-16",
+      "opponent": "Zimne Dranie",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie/",
+      "score": "1:3",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11397",
+      "sid": "141",
+      "date": "2025-03-01",
+      "opponent": "VESTA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car-2/",
+      "score": "1:3",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11401",
+      "sid": "141",
+      "date": "2025-03-09",
+      "opponent": "Unibep Bielsk Podlaski",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-3/",
+      "score": "4:1",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11412",
+      "sid": "141",
+      "date": "2025-03-15",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-3/",
+      "score": "5:2",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27",
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Rutkowski Mateusz (GK)",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11793",
+      "sid": "144",
+      "date": "2025-04-06",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-4/",
+      "score": "2:4",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "11798",
+      "sid": "144",
+      "date": "2025-04-12",
+      "opponent": "Żubry Bema",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-bosch-service-tech-car/",
+      "score": "1:4",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12011",
+      "sid": "144",
+      "date": "2025-05-10",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-3/",
+      "score": "2:0",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20",
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12026",
+      "sid": "144",
+      "date": "2025-05-24",
+      "opponent": "Zachodnia Kingdom",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zachodnia-kingdom/",
+      "score": "10:2",
+      "official_team_goals": 10,
+      "page_status": "ok",
+      "protocol_player_goals": 10,
+      "protocol_on_field_goals": 10,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6",
+            "20",
+            "31",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7",
+            "19",
+            "33",
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12014",
+      "sid": "144",
+      "date": "2025-05-31",
+      "opponent": "GKS Grabówka",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-bosch-service-tech-car/",
+      "score": "5:0",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8",
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12029",
+      "sid": "144",
+      "date": "2025-06-08",
+      "opponent": "Auto Team",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/auto-team-vs-bosch-service-tech-car/",
+      "score": "2:5",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12041",
+      "sid": "144",
+      "date": "2025-06-14",
+      "opponent": "FC GRUBASSY",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy-2/",
+      "score": "3:2",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12127",
+      "sid": "144",
+      "date": "2025-09-06",
+      "opponent": "Waleczne Orły",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car/",
+      "score": "2:3",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12132",
+      "sid": "144",
+      "date": "2025-09-14",
+      "opponent": "Zimne Dranie",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-2/",
+      "score": "2:4",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12143",
+      "sid": "144",
+      "date": "2025-09-20",
+      "opponent": "OST Sport",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12151",
+      "sid": "144",
+      "date": "2025-09-28",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii-2/",
+      "score": "2:3",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12153",
+      "sid": "144",
+      "date": "2025-10-04",
+      "opponent": "Juan Pablo Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-bosch-service-tech-car/",
+      "score": "2:3",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Pietruczuk Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12165",
+      "sid": "144",
+      "date": "2025-10-12",
+      "opponent": "Paka",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-paka/",
+      "score": "1:0",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kakareko Kamil",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12169",
+      "sid": "144",
+      "date": "2025-10-18",
+      "opponent": "Unibep Bielsk Podlaski",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car-2/",
+      "score": "1:3",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Mironiuk Zbigniew",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12562",
+      "sid": "146",
+      "date": "2025-11-16",
+      "opponent": "WIARA PIASTA II",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-4/",
+      "score": "0:4",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12566",
+      "sid": "146",
+      "date": "2025-11-22",
+      "opponent": "IST Trade",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ist-trade/",
+      "score": "1:5",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12579",
+      "sid": "146",
+      "date": "2025-11-30",
+      "opponent": "Auto Team",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/auto-team-vs-bosch-service-tech-car-2/",
+      "score": "3:2",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12581",
+      "sid": "146",
+      "date": "2025-12-14",
+      "opponent": "Prostal",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-prostal/",
+      "score": "2:2",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12589",
+      "sid": "146",
+      "date": "2025-12-20",
+      "opponent": "OSMAR",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car-2/",
+      "score": "2:5",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12601",
+      "sid": "146",
+      "date": "2026-01-11",
+      "opponent": "Zachodnia Kingdom",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zachodnia-kingdom-2/",
+      "score": "6:1",
+      "official_team_goals": 6,
+      "page_status": "ok",
+      "protocol_player_goals": 6,
+      "protocol_on_field_goals": 6,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12",
+            "15",
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8",
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12614",
+      "sid": "146",
+      "date": "2026-01-17",
+      "opponent": "ZPS Biaform SA",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-4/",
+      "score": "3:2",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12617",
+      "sid": "146",
+      "date": "2026-01-25",
+      "opponent": "Juan Pablo Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok/",
+      "score": "4:2",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 1,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12631",
+      "sid": "146",
+      "date": "2026-01-31",
+      "opponent": "Zimne Dranie",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/",
+      "score": "1:5",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12633",
+      "sid": "146",
+      "date": "2026-02-15",
+      "opponent": "GKS Grabówka",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-bosch-service-tech-car-2/",
+      "score": "3:5",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        },
+        {
+          "name": "Rutkowski Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz-2/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12644",
+      "sid": "146",
+      "date": "2026-02-21",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok-2/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12656",
+      "sid": "146",
+      "date": "2026-03-01",
+      "opponent": "OST Sport",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/",
+      "score": "3:0",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 1
+    },
+    {
+      "id": "12660",
+      "sid": "146",
+      "date": "2026-03-07",
+      "opponent": "Biuro Serwis-Kopiarki Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/",
+      "score": "2:4",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12672",
+      "sid": "146",
+      "date": "2026-03-15",
+      "opponent": "Waleczne Orły",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car-2/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "12679",
+      "sid": "146",
+      "date": "2026-03-21",
+      "opponent": "Unibep Bielsk Podlaski",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-4/",
+      "score": "1:0",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-1",
+      "sid": "orlik-2026",
+      "date": "2026-04-19",
+      "opponent": "IST Trade",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-bosch-service-tech-car/",
+      "score": "1:1",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-2",
+      "sid": "orlik-2026",
+      "date": "2026-04-25",
+      "opponent": "Żubry Bema",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zubry-bema/",
+      "score": "9:0",
+      "official_team_goals": 9,
+      "page_status": "ok",
+      "protocol_player_goals": 9,
+      "protocol_on_field_goals": 9,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 5,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "4",
+            "16",
+            "18",
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "11",
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        },
+        {
+          "name": "Wojciuk Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-3",
+      "sid": "orlik-2026",
+      "date": "2026-05-10",
+      "opponent": "Zachodnia Kingdom",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-bosch-service-tech-car-2/",
+      "score": "11:0",
+      "official_team_goals": 11,
+      "page_status": "ok",
+      "protocol_player_goals": 11,
+      "protocol_on_field_goals": 11,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "17",
+            "28",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27",
+            "35",
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        },
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Wojciuk Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-4",
+      "sid": "orlik-2026",
+      "date": "2026-05-16",
+      "opponent": "Zachodzący Mistrzowie",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zachodzacy-mistrzowie/",
+      "score": "3:3",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 1,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-5",
+      "sid": "orlik-2026",
+      "date": "2026-05-24",
+      "opponent": "OST Sport",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-3/",
+      "score": "3:2",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-6",
+      "sid": "orlik-2026",
+      "date": "2026-05-30",
+      "opponent": "Zimne Dranie",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-4/",
+      "score": "0:1",
+      "official_team_goals": 0,
+      "page_status": "ok",
+      "protocol_player_goals": 0,
+      "protocol_on_field_goals": 0,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-7",
+      "sid": "orlik-2026",
+      "date": "2026-06-13",
+      "opponent": "Biuro Serwis-Kopiarki",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-vs-bosch-service-tech-car/",
+      "score": "1:3",
+      "official_team_goals": 1,
+      "page_status": "ok",
+      "protocol_player_goals": 1,
+      "protocol_on_field_goals": 1,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-8",
+      "sid": "orlik-2026",
+      "date": "2026-06-21",
+      "opponent": "Auto Team",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-auto-team-2/",
+      "score": "2:1",
+      "official_team_goals": 2,
+      "page_status": "ok",
+      "protocol_player_goals": 2,
+      "protocol_on_field_goals": 2,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22",
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-9",
+      "sid": "orlik-2026",
+      "date": "2026-09-05",
+      "opponent": "Ludki Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/ludki-bialystok-vs-bosch-service-tech-car/",
+      "score": "3:0",
+      "official_team_goals": 3,
+      "page_status": "ok",
+      "protocol_player_goals": 3,
+      "protocol_on_field_goals": 3,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "11"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-10",
+      "sid": "orlik-2026",
+      "date": "2026-09-13",
+      "opponent": "Waleczne Orły",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly-3/",
+      "score": "5:2",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "19",
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10",
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-11",
+      "sid": "orlik-2026",
+      "date": "2026-09-19",
+      "opponent": "Mają Rozmach",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car-2/",
+      "score": "4:0",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Bączek Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-12",
+      "sid": "orlik-2026",
+      "date": "2026-09-27",
+      "opponent": "OSMAR",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-3/",
+      "score": "4:0",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16",
+            "27",
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-13",
+      "sid": "orlik-2026",
+      "date": "2026-10-03",
+      "opponent": "UNIBEP S.A.",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/unibep-s-a-vs-bosch-service-tech-car/",
+      "score": "5:0",
+      "official_team_goals": 5,
+      "page_status": "ok",
+      "protocol_player_goals": 5,
+      "protocol_on_field_goals": 5,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "11"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-14",
+      "sid": "orlik-2026",
+      "date": "2026-10-11",
+      "opponent": "FC Progress Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-5/",
+      "score": "4:1",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4",
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        }
+      ],
+      "administrative_goals": 0
+    },
+    {
+      "id": "orlik26-15",
+      "sid": "orlik-2026",
+      "date": "2026-10-17",
+      "opponent": "Juan Pablo Białystok",
+      "event_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/",
+      "score": "4:3",
+      "official_team_goals": 4,
+      "page_status": "ok",
+      "protocol_player_goals": 4,
+      "protocol_on_field_goals": 4,
+      "opponent_own_goals": 0,
+      "bosch_own_goals": 0,
+      "unreadable_goal_markers": 0,
+      "unreadable_goal_marker_players": [],
+      "scorers": [
+        {
+          "name": "Bączek Szymon",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
+    }
+  ]
+}
