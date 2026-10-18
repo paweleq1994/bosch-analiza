@@ -9,6 +9,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from player_identity import has_bosch_season, legacy_player_id, match_public_profile, person_key
 from player_totals import career_from_profile
 import build_portal
+from resolve_current_players import candidate_slugs, find_profile, resolve
 
 
 class PlayerIdentityTests(unittest.TestCase):
@@ -35,6 +36,68 @@ class PlayerIdentityTests(unittest.TestCase):
         self.assertFalse(has_bosch_season({
             "statistics": {"142": {"148": {"team": '<a href="/druzyna/other/">Other</a>'}}}
         }))
+
+    def test_resolves_accented_new_player_from_verified_wordpress_page(self):
+        name = "Adam Malesiński"
+        self.assertEqual(candidate_slugs(name), ["malesinski-adam"])
+        payload = {
+            "id": 999,
+            "title": {"rendered": "Malesiński Adam"},
+            "link": "https://podlaskaliga.pl/zawodnik/malesinski-adam/",
+            "statistics": {
+                "league": {
+                    "148": {
+                        "team": '<a href="/druzyna/bosch-service-tech-car/">Bosch</a>',
+                        "appearances": "0",
+                    }
+                }
+            },
+        }
+
+        def fetch(url):
+            return [] if "players?search=" in url else payload
+
+        def fetch_page(url):
+            self.assertEqual(url, "https://podlaskaliga.pl/zawodnik/malesinski-adam/")
+            return (
+                "<html><title>Malesiński Adam – Podlaska Liga</title>"
+                '<link rel="shortlink" href="https://podlaskaliga.pl/?p=999">'
+                "</html>"
+            )
+
+        resolved = find_profile(name, fetch=fetch, fetch_page=fetch_page)
+        self.assertIsNotNone(resolved)
+        self.assertEqual(resolved[0], "999")
+        self.assertEqual(resolved[1]["source"], "verified_current_roster")
+
+        profiles, warnings = resolve(
+            {},
+            [{"name": name}],
+            find=lambda value: resolved,
+        )
+        self.assertFalse(warnings)
+        self.assertEqual(profiles["999"]["resolved_name"], "Malesiński Adam")
+
+    def test_refuses_unverified_or_ambiguous_public_identity(self):
+        payload = {
+            "id": 456,
+            "title": {"rendered": "Inny Zawodnik"},
+            "link": "https://podlaskaliga.pl/zawodnik/rogon-damian/",
+            "statistics": {
+                "league": {
+                    "148": {
+                        "team": '<a href="/druzyna/bosch-service-tech-car/">Bosch</a>',
+                        "appearances": "5",
+                    }
+                }
+            },
+        }
+        resolved = find_profile(
+            "Damian Rogon",
+            fetch=lambda url: [] if "players?search=" in url else payload,
+            fetch_page=lambda url: '<title>Rogon Damian – Podlaska Liga</title><body class="postid-456">',
+        )
+        self.assertIsNone(resolved)
 
     def test_duplicate_zero_appearance_does_not_hide_real_season(self):
         profile = {"statistics": {
