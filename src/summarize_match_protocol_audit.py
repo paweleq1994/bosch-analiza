@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW_PATH = ROOT / "data" / "match_protocol_audit.json"
 PORTAL_PATH = ROOT / "docs" / "assets" / "data.json"
 SUMMARY_PATH = ROOT / "data" / "match_protocol_audit_summary.json"
+FINDINGS_PATH = ROOT / "data" / "match_protocol_audit_findings.json"
+INDEX_PATH = ROOT / "data" / "match_protocol_audit_index.json"
 
 
 def key(value: object) -> str:
@@ -39,7 +41,10 @@ def match_summary(record: dict) -> dict:
         goals = canonical_goals(player)
         own_goals = player.get("own_goals") or 0
 
-        if goals is None or goals <= 0 and own_goals <= 0:
+        if goals is None:
+            goals = 0
+
+        if goals <= 0 and own_goals <= 0:
             continue
 
         scorers.append({
@@ -209,6 +214,14 @@ def main() -> None:
     report = summarize(source, database)
     SUMMARY_PATH.write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    FINDINGS_PATH.write_text(
+        json.dumps({key: value for key, value in report.items() if key != "matches"}, ensure_ascii=False, indent=2) + "\\n",
+        encoding="utf-8",
+    )
+    INDEX_PATH.write_text(
+        json.dumps({"matches": report["matches"]}, ensure_ascii=False, indent=2) + "\\n",
         encoding="utf-8",
     )
     print("SCORER_AUDIT_SUMMARY", json.dumps(report["season_summaries"], ensure_ascii=False))
