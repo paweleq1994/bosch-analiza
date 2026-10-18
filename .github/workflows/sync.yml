@@ -1,0 +1,35 @@
+name: Bosch data sync
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: bosch-data-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scan known public YouTube channels
+        run: python src/sync_videos.py
+      - name: Rebuild portal data
+        run: python src/build_portal.py
+      - name: Validate generated portal data
+        run: python src/validate_portal.py
+      - name: Commit verified data changes
+        run: |
+          if ! git diff --quiet -- data/video_updates.json docs/assets/data.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/video_updates.json docs/assets/data.json
+            git commit -m "chore: sync Bosch video and portal data"
+            git push
+          fi
