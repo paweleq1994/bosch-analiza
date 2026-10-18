@@ -15,6 +15,13 @@ oddzielnie statystyki samobójów przeciwników i zweryfikowanych wyników admin
 | Hala 2025/26 | 1 | Samobój rywala (1) | [mecz 12617](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok/) |
 | **Razem** | **7** | **4 gole zawodników i 3 samobóje rywali** | |
 
+## Dodatkowe ustalenia o danych zawodników
+
+- W PLP występują dwa profile jednego bramkarza, Mateusza Rutkowskiego: identyfikatory 7284 i 13060. W kompendium połączono je, zachowując oba odnośniki do oryginalnych źródeł.
+- Suma indywidualnych goli zdobytych dla Boscha w tych rozgrywkach wynosi **289**. Pozostałe trzy bramki Boscha to samobóje rywali, a jedna została przyznana administracyjnie.
+- W sześciu meczach protokoły odnotowują gole samobójcze popełnione przez zawodników Boscha. To bramki dla przeciwników, nie gole zdobyte dla Boscha.
+- W meczu z VESTĄ z 18 lutego 2024 r. PLP oznacza gola Przemysława Klepackiego, ale nie przechowuje czytelnej minuty. Gol jest ujęty w statystykach, minuta pozostaje nieznana.
+
 ## Kontrola jakości danych
 
 - Otworzone strony: **113/113**.
@@ -77,7 +84,7 @@ oddzielnie statystyki samobójów przeciwników i zweryfikowanych wyników admin
 | 2024-02-04 | Top Auto | 0:2 | — | 0 | 0 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-top-auto/) |
 | 2024-02-10 | CF Bojary | 2:4 | [Kadłubowski Krzysztof](https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/) (30′); [Klepacki Przemysław](https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/) (14′) | 0 | 0 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/) |
 | 2024-02-11 | Poltank | 1:5 | [Kadłubowski Krzysztof](https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/) (27′) | 0 | 0 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/) |
-| 2024-02-18 | VESTA | 1:1 | [Klepacki Przemysław](https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/) (ikona Gol; brak minuty) | 0 | 0 | 0 | Do weryfikacji | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/) |
+| 2024-02-18 | VESTA | 1:1 | [Klepacki Przemysław](https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/) (ikona Gol; brak minuty) | 0 | 0 | 0 | Gol potwierdzony, minuta nieczytelna | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/) |
 | 2024-02-24 | Santos | 4:2 | [Jurkowicz Mateusz](https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/) (29′); [Kadłubowski Krzysztof](https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/) (8′); [Moskal Paweł](https://podlaskaliga.pl/zawodnik/moskal-pawel/) (25′); [Nowicki Patryk](https://podlaskaliga.pl/zawodnik/nowicki-patryk/) (13′) | 0 | 0 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-santos/) |
 | 2024-03-03 | FC DrTusz | 1:1 | [Muczyński Karol](https://podlaskaliga.pl/zawodnik/muczynski-karol/) (3′) | 0 | 0 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-drtusz/) |
 | 2024-03-09 | Aptel | 1:2 | [Kowalczuk Karol](https://podlaskaliga.pl/zawodnik/kowalczuk-karol/) (23′); [Wnuszyński Karol](https://podlaskaliga.pl/zawodnik/wnuszynski-karol/) (samobój przeciw Boschowi) | 0 | 1 | 0 | OK | [Protokół](https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/) |
