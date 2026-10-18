@@ -288,6 +288,7 @@ function records(){
         'W meczu VESTA 18.02.2024 pozostał nieczytelny znacznik gola; protokół nie pozwala bezspornie ustalić jego minuty.</div>';
     const audit=section("Kontrola kompletności strzelców",auditDetails+
         table(["Sezon","Bramki drużyny","Gole zawodników","Samobóje rywali","Administracyjne","Do wyjaśnienia"],auditedRows)+
+        '<p><a href="https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/" target="_blank" rel="noopener noreferrer">Oficjalna korekta PLP: OST Sport ↗</a></p>'+
         '<p>'+href("matches","Otwórz wszystkie 113 protokołów meczowych →")+'</p>');
     const goalEvents=matches.flatMap(match=>(match.protocol?.scorers||[]).map(scorer=>({
         ...scorer,date:match.date,opponent:match.opponent,match_id:match.id
