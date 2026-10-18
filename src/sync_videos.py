@@ -105,7 +105,7 @@ def main() -> None:
             channel_id = resolve_channel_id(source)
             items = fetch(channel_id)
         except Exception as error:
-            errors.append(f"{source.get('name', channel_id)}: {type(error).__name__} {error}")
+            errors.append(f"{source.get('name') or source.get('handle') or 'channel'}: {type(error).__name__} {error}")
             continue
         for video in items:
             if video["id"] in existing or video["id"] in historic:
