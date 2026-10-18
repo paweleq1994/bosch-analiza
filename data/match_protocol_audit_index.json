@@ -9,12 +9,45 @@
       "score": "4:1",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21",
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7420",
@@ -25,12 +58,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7443",
@@ -41,12 +86,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7734",
@@ -57,12 +114,35 @@
       "score": "3:3",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5",
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7758",
@@ -73,12 +153,66 @@
       "score": "7:3",
       "official_team_goals": 7,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 7,
       "protocol_on_field_goals": 7,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 5,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4",
+            "13",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7767",
@@ -89,12 +223,34 @@
       "score": "2:1",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Dołżyk Michał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7788",
@@ -105,12 +261,24 @@
       "score": "2:6",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 1,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7801",
@@ -126,7 +294,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "7814",
@@ -137,12 +306,34 @@
       "score": "2:1",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7839",
@@ -153,12 +344,63 @@
       "score": "5:3",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 5,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7851",
@@ -169,12 +411,46 @@
       "score": "5:2",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Markowski Damian",
+          "player_id": "7282",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7282"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7860",
@@ -185,12 +461,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "7875",
@@ -201,12 +489,45 @@
       "score": "4:3",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8232",
@@ -217,12 +538,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8255",
@@ -233,12 +566,35 @@
       "score": "3:1",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "11",
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8276",
@@ -249,12 +605,34 @@
       "score": "2:1",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8289",
@@ -265,12 +643,44 @@
       "score": "3:3",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8323",
@@ -281,12 +691,26 @@
       "score": "3:3",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22",
+            "35",
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8325",
@@ -297,12 +721,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8295",
@@ -313,12 +749,24 @@
       "score": "1:0",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8366",
@@ -334,7 +782,8 @@
       "opponent_own_goals": 1,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "8373",
@@ -345,12 +794,55 @@
       "score": "5:1",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5",
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Markowski Damian",
+          "player_id": "7282",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7282"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8437",
@@ -361,12 +853,44 @@
       "score": "3:1",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8438",
@@ -377,12 +901,35 @@
       "score": "3:0",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8452",
@@ -393,12 +940,64 @@
       "score": "5:1",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 5,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8455",
@@ -409,12 +1008,46 @@
       "score": "5:0",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "27",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8472",
@@ -425,12 +1058,34 @@
       "score": "2:1",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "8467",
@@ -441,12 +1096,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9448",
@@ -457,12 +1124,35 @@
       "score": "3:1",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9480",
@@ -478,7 +1168,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "9486",
@@ -494,7 +1185,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "9646",
@@ -510,7 +1202,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "9657",
@@ -525,8 +1218,18 @@
       "protocol_on_field_goals": 0,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9683",
@@ -537,12 +1240,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "19"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9714",
@@ -558,7 +1273,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "9721",
@@ -569,12 +1285,34 @@
       "score": "2:4",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9728",
@@ -585,12 +1323,24 @@
       "score": "1:5",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9755",
@@ -606,7 +1356,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 1,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "9775",
@@ -617,12 +1368,54 @@
       "score": "4:2",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9800",
@@ -633,12 +1426,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9805",
@@ -649,12 +1454,32 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "9816",
@@ -670,7 +1495,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "10093",
@@ -681,12 +1507,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10121",
@@ -697,12 +1535,34 @@
       "score": "2:3",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10122",
@@ -713,12 +1573,65 @@
       "score": "6:1",
       "official_team_goals": 6,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 6,
       "protocol_on_field_goals": 6,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 5,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10132",
@@ -729,12 +1642,35 @@
       "score": "3:1",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10142",
@@ -750,7 +1686,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "10145",
@@ -761,12 +1698,45 @@
       "score": "4:3",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10154",
@@ -777,12 +1747,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10157",
@@ -793,12 +1775,56 @@
       "score": "6:1",
       "official_team_goals": 6,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 6,
       "protocol_on_field_goals": 6,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23",
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10225",
@@ -809,12 +1835,45 @@
       "score": "4:1",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10238",
@@ -830,7 +1889,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "10242",
@@ -841,12 +1901,54 @@
       "score": "4:3",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Gołąbeski Piotr",
+          "player_id": "7270",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7270"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10250",
@@ -862,7 +1964,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "10254",
@@ -873,12 +1976,44 @@
       "score": "3:6",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Sołowiej Tomasz",
+          "player_id": "7285",
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10262",
@@ -889,12 +2024,46 @@
       "score": "5:4",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7",
+            "11",
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Dołżyk Michał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "21"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10973",
@@ -905,12 +2074,44 @@
       "score": "3:3",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "10990",
@@ -921,12 +2122,24 @@
       "score": "1:2",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11017",
@@ -937,12 +2150,44 @@
       "score": "3:2",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11093",
@@ -958,7 +2203,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "11095",
@@ -969,12 +2215,34 @@
       "score": "2:0",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11317",
@@ -985,12 +2253,42 @@
       "score": "2:3",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11363",
@@ -1001,12 +2299,34 @@
       "score": "2:2",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11370",
@@ -1017,12 +2337,59 @@
       "score": "9:1",
       "official_team_goals": 9,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 9,
       "protocol_on_field_goals": 9,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 5,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "3",
+            "15",
+            "27",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13",
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11383",
@@ -1033,12 +2400,44 @@
       "score": "3:1",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11389",
@@ -1049,12 +2448,24 @@
       "score": "1:3",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11397",
@@ -1065,12 +2476,24 @@
       "score": "1:3",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11401",
@@ -1081,12 +2504,54 @@
       "score": "4:1",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11412",
@@ -1097,12 +2562,55 @@
       "score": "5:2",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27",
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Rutkowski Mateusz (GK)",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11793",
@@ -1113,12 +2621,34 @@
       "score": "2:4",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "26"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "11798",
@@ -1129,12 +2659,24 @@
       "score": "1:4",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karpiński Hubert",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12011",
@@ -1145,12 +2687,25 @@
       "score": "2:0",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "20",
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12026",
@@ -1161,12 +2716,60 @@
       "score": "10:2",
       "official_team_goals": 10,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 10,
       "protocol_on_field_goals": 10,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6",
+            "20",
+            "31",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7",
+            "19",
+            "33",
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        },
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12014",
@@ -1177,12 +2780,46 @@
       "score": "5:0",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8",
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12029",
@@ -1193,12 +2830,34 @@
       "score": "2:5",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12041",
@@ -1209,12 +2868,44 @@
       "score": "3:2",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "13"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12127",
@@ -1225,12 +2916,25 @@
       "score": "2:3",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12132",
@@ -1241,12 +2945,34 @@
       "score": "2:4",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Malinowski Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12143",
@@ -1257,12 +2983,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kadłubowski Krzysztof",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12151",
@@ -1273,12 +3011,25 @@
       "score": "2:3",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12153",
@@ -1289,12 +3040,34 @@
       "score": "2:3",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "37"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Pietruczuk Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12165",
@@ -1305,12 +3078,24 @@
       "score": "1:0",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kakareko Kamil",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12169",
@@ -1321,12 +3106,24 @@
       "score": "1:3",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Mironiuk Zbigniew",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "35"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12562",
@@ -1341,8 +3138,18 @@
       "protocol_on_field_goals": 0,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12566",
@@ -1353,12 +3160,24 @@
       "score": "1:5",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12579",
@@ -1369,12 +3188,35 @@
       "score": "3:2",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12581",
@@ -1385,12 +3227,34 @@
       "score": "2:2",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12589",
@@ -1401,12 +3265,34 @@
       "score": "2:5",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Muczyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12601",
@@ -1417,12 +3303,47 @@
       "score": "6:1",
       "official_team_goals": 6,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 6,
       "protocol_on_field_goals": 6,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "12",
+            "15",
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "8",
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12614",
@@ -1433,12 +3354,35 @@
       "score": "3:2",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23",
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Kowalczuk Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12617",
@@ -1449,12 +3393,44 @@
       "score": "4:2",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 1,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "18"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "6"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12631",
@@ -1465,12 +3441,24 @@
       "score": "1:5",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12633",
@@ -1481,12 +3469,44 @@
       "score": "3:5",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        },
+        {
+          "name": "Rutkowski Mateusz",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "17"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz-2/"
+        },
+        {
+          "name": "Wnuszyński Karol",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12644",
@@ -1497,12 +3517,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12656",
@@ -1513,12 +3545,34 @@
       "score": "3:0",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "32"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 1
     },
     {
       "id": "12660",
@@ -1529,12 +3583,34 @@
       "score": "2:4",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12672",
@@ -1545,12 +3621,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "12679",
@@ -1561,12 +3649,24 @@
       "score": "1:0",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-1",
@@ -1577,12 +3677,24 @@
       "score": "1:1",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-2",
@@ -1593,12 +3705,59 @@
       "score": "9:0",
       "official_team_goals": 9,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 9,
       "protocol_on_field_goals": 9,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 5,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3",
+            "4",
+            "16",
+            "18",
+            "28"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "11",
+            "25"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "29"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        },
+        {
+          "name": "Wojciuk Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "5"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-3",
@@ -1609,12 +3768,79 @@
       "score": "11:0",
       "official_team_goals": 11,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 11,
       "protocol_on_field_goals": 11,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 6,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 4,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15",
+            "17",
+            "28",
+            "31"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27",
+            "35",
+            "40"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        },
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Wojciuk Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-4",
@@ -1625,12 +3851,43 @@
       "score": "3:3",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 1,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10",
+            "34"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Jurkowicz Rafał",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/"
+        },
+        {
+          "name": "Moskal Paweł",
+          "player_id": null,
+          "goals": 0,
+          "own_goals": 1,
+          "goal_minutes": [],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-5",
@@ -1641,12 +3898,35 @@
       "score": "3:2",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Kuźma Piotr",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "15"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-6",
@@ -1662,7 +3942,8 @@
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
       "unreadable_goal_markers": 0,
-      "scorers": []
+      "scorers": [],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-7",
@@ -1673,12 +3954,24 @@
       "score": "1:3",
       "official_team_goals": 1,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 1,
       "protocol_on_field_goals": 1,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "1"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-8",
@@ -1689,12 +3982,25 @@
       "score": "2:1",
       "official_team_goals": 2,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 2,
       "protocol_on_field_goals": 2,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 1,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "22",
+            "24"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-9",
@@ -1705,12 +4011,35 @@
       "score": "3:0",
       "official_team_goals": 3,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 3,
       "protocol_on_field_goals": 3,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "11"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Rogon Damian",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/rogon-damian/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-10",
@@ -1721,12 +4050,46 @@
       "score": "5:2",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "19",
+            "23"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "10",
+            "14"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "3"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-11",
@@ -1737,12 +4100,45 @@
       "score": "4:0",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "39"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        },
+        {
+          "name": "Bączek Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "33"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-12",
@@ -1753,12 +4149,36 @@
       "score": "4:0",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 3,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16",
+            "27",
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "30"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-13",
@@ -1769,12 +4189,55 @@
       "score": "5:0",
       "official_team_goals": 5,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 5,
       "protocol_on_field_goals": 5,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 4,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Karolczuk Patryk",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "2",
+            "11"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/"
+        },
+        {
+          "name": "Hyżyk Szymon",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/hyzyk-szymon/"
+        },
+        {
+          "name": "Klepacki Przemysław",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "36"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-14",
@@ -1785,12 +4248,36 @@
       "score": "4:1",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 2,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Daniluk Dawid",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "4",
+            "27"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/"
+        },
+        {
+          "name": "Szparło Filip",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "14",
+            "22"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/szparlo-filip/"
+        }
+      ],
+      "administrative_goals": 0
     },
     {
       "id": "orlik26-15",
@@ -1801,12 +4288,45 @@
       "score": "4:3",
       "official_team_goals": 4,
       "page_status": "ok",
-      "protocol_player_goals": 0,
+      "protocol_player_goals": 4,
       "protocol_on_field_goals": 4,
       "opponent_own_goals": 0,
       "bosch_own_goals": 0,
-      "unreadable_goal_markers": 3,
-      "scorers": []
+      "unreadable_goal_markers": 0,
+      "scorers": [
+        {
+          "name": "Bączek Szymon",
+          "player_id": null,
+          "goals": 2,
+          "own_goals": 0,
+          "goal_minutes": [
+            "9",
+            "38"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/"
+        },
+        {
+          "name": "Malesiński Adam",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "7"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/"
+        },
+        {
+          "name": "Nowicki Patryk",
+          "player_id": null,
+          "goals": 1,
+          "own_goals": 0,
+          "goal_minutes": [
+            "16"
+          ],
+          "profile_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/"
+        }
+      ],
+      "administrative_goals": 0
     }
   ]
 }
