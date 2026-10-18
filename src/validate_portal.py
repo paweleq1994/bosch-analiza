@@ -8,6 +8,9 @@ DATA = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="u
 seasons = DATA["seasons"]
 matches = DATA["matches"]
 players = DATA["players"]
+jurkowicz = next(player for player in players if str(player["id"]) == "7275")
+assert (jurkowicz["apps"], jurkowicz["goals"], jurkowicz["assists"]) == (69, 30, 20), "Incomplete PLP Supercup totals for Jurkowicz"
+assert (jurkowicz["career_totals"]["apps"], jurkowicz["career_totals"]["goals"]) == (69, 30), "Bosch and whole-career PLP totals disagree"
 player_ids = [str(player["id"]) for player in players]
 assert len(player_ids) == len(set(player_ids)), "Duplicate PLP player identifiers"
 

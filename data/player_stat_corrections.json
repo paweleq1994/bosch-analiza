@@ -1,0 +1,28 @@
+{
+  "7275": {
+    "source_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+    "reason": "PLP public all-career table lists 69 apps and 30 goals; SportsPress league-specific rows omit 2023 and 2024 Supercup appearances.",
+    "seasons": {
+      "127": {
+        "apps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "name": "Superpuchar 2023",
+        "origin": "PLP public all-career table"
+      },
+      "140": {
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "name": "Superpuchar 2024",
+        "origin": "PLP public all-career table"
+      }
+    }
+  }
+}
