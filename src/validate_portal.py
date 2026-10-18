@@ -35,12 +35,14 @@ assert known_scorers["pietruczuk"]["stats_minimum"], "Partial match evidence is 
 attribution = DATA["analysis"]["player_goal_coverage"]
 for record in attribution:
     assert record["team_goals"] == (
-        record["attributed_goals"] + record["administrative_goals"] + record["unattributed_goals"]
+        record["attributed_goals"] + record["opponent_own_goals"] + record["administrative_goals"] + record["unattributed_goals"]
     ), f"Unbalanced season goal attribution: {record['season']}"
     assert record["unattributed_goals"] >= 0, f"Negative unexplained goals: {record['season']}"
 
 awarded_goals = sum(record["administrative_goals"] for record in attribution)
-assert awarded_goals >= 1, "The officially awarded OST Sport goal must be accounted for"
+assert awarded_goals == 1, "The officially awarded OST Sport goal must be accounted for"
+assert sum(record["opponent_own_goals"] for record in attribution) == 3, "All three PLP opponent own goals must be accounted for"
+assert all(record["unattributed_goals"] == 0 for record in attribution), "Historical protocol goals are not fully reconciled"
 assert any(
     event["match_id"] == "12656"
     for record in attribution
