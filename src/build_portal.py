@@ -97,7 +97,7 @@ def main() -> None:
             "table": "II Liga – Orlik 2026",
             "origin": "official_recap",
         })
-    for incoming_season in league_extra.get("season_rows", []):
+    # The SportsPress season 148 is the same edition as the archived Orlik 2026.\n    # Prefer the stable public ID and keep official scores and links.\n    for incoming_season in league_extra.get("season_rows", []):\n        if str(incoming_season.get("plp_id") or incoming_season.get("id")) == "148":\n            incoming_season = {**incoming_season, "id": SEASON_2026, "name": "Orlik 2026"}
         index = next((i for i, item in enumerate(seasons) if str(item["id"]) == str(incoming_season["id"])), None)
         if index is None:
             seasons.append(incoming_season)
@@ -199,7 +199,7 @@ def main() -> None:
             historic_players.append(item)
         detail = {key: stat.get(key) for key in ("apps", "goals", "assists", "motm")}
         item.setdefault("season_stats", {})[season_id] = detail
-        if season_id == SEASON_2026:
+        if season_id in (SEASON_2026, "148"):
             item["orlik2026"] = detail
         if season_id == "146":
             item["hala2526"] = detail
