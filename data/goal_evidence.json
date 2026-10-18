@@ -1,0 +1,39 @@
+{
+  "players": [
+    {
+      "name": "Piotr Wojciuk",
+      "season_id": "orlik-2026",
+      "apps": 5,
+      "goals": 2,
+      "assists": 2,
+      "minimum": false,
+      "source_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/",
+      "source_type": "plp_public_season"
+    },
+    {
+      "player_id": "12286",
+      "name": "Paweł Pietruczuk",
+      "season_id": "144",
+      "apps": null,
+      "goals": 1,
+      "assists": null,
+      "minimum": true,
+      "match_event_id": "12153",
+      "source_url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-bosch-service-tech-car/",
+      "source_type": "plp_match_minimum"
+    }
+  ],
+  "administrative_adjustments": [
+    {
+      "event_id": "12656",
+      "season_id": "146",
+      "date": "2026-03-01",
+      "opponent": "OST Sport",
+      "awarded_goals": 3,
+      "on_field_goals": 2,
+      "difference": 1,
+      "reason": "Ineligible opponent player; original on-field result 2:5 was officially changed to 3:0 for Bosch",
+      "source_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/"
+    }
+  ]
+}

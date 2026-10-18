@@ -79,7 +79,8 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
         self.assertEqual(self.audit["120"]["unattributed_goals"], 2)
         self.assertEqual(self.audit["125"]["unattributed_goals"], 1)
         self.assertEqual(self.audit["139"]["unattributed_goals"], 2)
-        self.assertEqual(sum(row["unattributed_goals"] for row in self.audit.values()), 11)
+        self.assertEqual(sum(row["unattributed_goals"] for row in self.audit.values()), 7)
+        self.assertEqual(sum(row["administrative_goals"] for row in self.audit.values()), 1)
 
     def test_every_player_has_reconcilable_season_coverage(self):
         for player in self.players.values():

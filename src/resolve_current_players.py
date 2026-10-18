@@ -156,7 +156,13 @@ def resolve(profiles: dict, leaders: list[dict], find=find_profile) -> tuple[dic
 def main() -> None:
     existing = json.loads(PROFILES.read_text(encoding="utf-8"))
     recap = json.loads(RECAP.read_text(encoding="utf-8"))
-    profiles, warnings = resolve(existing, recap.get("player_leaders", []))
+    goal_evidence = json.loads((ROOT / "data" / "goal_evidence.json").read_text(encoding="utf-8"))
+    extra_scorers = [
+        {"name": entry["name"]}
+        for entry in goal_evidence.get("players", [])
+        if not entry.get("player_id")
+    ]
+    profiles, warnings = resolve(existing, recap.get("player_leaders", []) + extra_scorers)
     rendered = json.dumps(profiles, ensure_ascii=False, indent=2) + "\n"
 
     if PROFILES.read_text(encoding="utf-8") != rendered:

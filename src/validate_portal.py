@@ -23,6 +23,30 @@ assert len(daniluk) == 1 and daniluk[0]["id"] == "2204", "Daniluk must resolve t
 assert "new-dawid-daniluk" in daniluk[0].get("aliases", []), "Preserve old Daniluk profile link"
 assert daniluk[0]["orlik2026"]["goals"] == 16, "Missing verified Daniluk recap goals"
 
+known_scorers = {
+    "wojciuk": next((player for player in players if "wojciuk" in player["name"].lower()), None),
+    "pietruczuk": next((player for player in players if "pietruczuk" in player["name"].lower()), None),
+}
+assert all(known_scorers.values()), "Official PLP scorers are missing from the Bosch roster"
+assert known_scorers["wojciuk"]["goals"] >= 2, "Missing Wojciuk official goals"
+assert known_scorers["pietruczuk"]["goals"] >= 1, "Missing Pietruczuk match goal"
+assert known_scorers["pietruczuk"]["stats_minimum"], "Partial match evidence is not a full season total"
+
+attribution = DATA["analysis"]["player_goal_coverage"]
+for record in attribution:
+    assert record["team_goals"] == (
+        record["attributed_goals"] + record["administrative_goals"] + record["unattributed_goals"]
+    ), f"Unbalanced season goal attribution: {record['season']}"
+    assert record["unattributed_goals"] >= 0, f"Negative unexplained goals: {record['season']}"
+
+awarded_goals = sum(record["administrative_goals"] for record in attribution)
+assert awarded_goals >= 1, "The officially awarded OST Sport goal must be accounted for"
+assert any(
+    event["match_id"] == "12656"
+    for record in attribution
+    for event in record.get("administrative_events", [])
+), "Official walkover evidence is missing"
+
 for player in players:
     for field in ("apps", "goals", "assists", "motm"):
         confirmed = sum(
