@@ -212,7 +212,10 @@ def scan_media(
     ]
 
     for player in unattached_players:
-        surname = player_tokens(player["name"])[-1]
+        profile_url = str(player.get("profile_url") or "")
+        profile_slug = urlsplit(profile_url).path.rstrip("/").split("/")[-1]
+        name_tokens = player_tokens(player["name"])
+        surname = normalize(profile_slug).split()[0] if profile_slug else name_tokens[0]
 
         try:
             rows = fetch("wp/v2/media", {
@@ -284,7 +287,7 @@ def main() -> None:
         if subject.get("kind") == "players" and subject.get("photos")
     }
     players = [
-        {"id": str(player["id"]), "name": player["name"], "has_photos": str(player["id"]) in available}
+        {"id": str(player["id"]), "name": player["name"], "profile_url": player.get("profile_url") or "", "has_photos": str(player["id"]) in available}
         for player in database.get("players", [])
         if str(player.get("id") or "").isdigit()
     ]
