@@ -16,6 +16,17 @@ class DetailTests(unittest.TestCase):
         snap={"season_ids":{"hala_2025_26_h1":"146"},"tables":{"hala_2025_26_h1":[{"name":"Test","team_id":"10","matches":1,"gf":4,"ga":1}]}}
         result,warnings=mod.collect(snap,{"teams":{}},lambda sid,tid:[event()])
         self.assertFalse(result["teams"]);self.assertTrue(warnings)
+    def test_skip_unchanged_verified_snapshot(self):
+        from datetime import date
+        team={"name":"Test","team_id":"10","matches":1,"wins":1,"draws":0,"losses":0,"gf":2,"ga":1,"points":3}
+        cached={"team_id":"10","season_id":"146","division":"hala_2025_26_h1","matches":[{"event_id":"99"}],
+                "players":[],"standing_signature":mod.team_signature(team),"verified_at":date.today().isoformat()}
+        old={"teams":{"hala_2025_26_h1:10":cached}}
+        snap={"season_ids":{"hala_2025_26_h1":"146"},"tables":{"hala_2025_26_h1":[team]}}
+        result,warnings=mod.collect(snap,old,lambda season,team: (_ for _ in ()).throw(AssertionError("unnecessary API request")))
+        self.assertEqual(result,old)
+        self.assertFalse(warnings)
+
     def test_keep_previous(self):
         snap={"season_ids":{"hala_2025_26_h1":"146"},"tables":{"hala_2025_26_h1":[{"name":"Test","team_id":"10","matches":1,"gf":2,"ga":1}]}}
         old={"teams":{"hala_2025_26_h1:10":{"source":"validated previous"}}}
