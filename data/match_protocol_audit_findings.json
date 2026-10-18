@@ -122,6 +122,12 @@
       "on_field_goals": 1,
       "administrative_goals": 0,
       "unreadable_goal_markers": 1,
+      "unreadable_goal_marker_players": [
+        {
+          "name": "Klepacki Przemysław",
+          "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/"
+        }
+      ],
       "issue": "goals_disagree_with_match_statistics"
     }
   ],
