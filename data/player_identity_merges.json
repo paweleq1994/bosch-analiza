@@ -1,16 +1,12 @@
 {
-  "groups": [
-    {
-      "canonical_id": "7284",
-      "duplicate_ids": [
-        "13060"
-      ],
-      "canonical_name": "Rutkowski Mateusz (GK)",
-      "reason": "Confirmed duplicate PLP profile for the same Bosch player",
-      "source_urls": [
-        "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
-        "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz-2/"
-      ]
-    }
-  ]
+  "7284": {
+    "duplicate_ids": [
+      "13060"
+    ],
+    "reason": "PLP duplicated goalkeeper Mateusz Rutkowski into two player profiles. Both represent the same Bosch player.",
+    "source_urls": [
+      "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz-2/"
+    ]
+  }
 }
