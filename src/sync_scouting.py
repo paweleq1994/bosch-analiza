@@ -77,7 +77,7 @@ def parse_table(table):
     standings = []
     for team_id, raw in contents.items():
         if not isinstance(raw, dict):
-            return None
+            continue
         fields = {
             field: as_integer(raw.get(api_key))
             for field, api_key in (
@@ -87,18 +87,20 @@ def parse_table(table):
             )
         }
         team_name = normalize(raw.get("name"))
-        if not team_name or any(value is None for value in fields.values()):
-            return None
+        if not team_name or team_name == "druzyna" or any(value is None for value in fields.values()):
+            continue
         if fields["matches"] != fields["wins"] + fields["draws"] + fields["losses"]:
-            return None
+            continue
         if fields["points"] != fields["wins"] * 3 + fields["draws"]:
-            return None
+            continue
         if fields["position"] < 1:
-            return None
+            continue
         standings.append({
             "team_id": str(team_id), "name": unescape(re.sub(r"<[^>]*>", "", str(raw["name"]))).strip(),
             **fields, "tier": 2 if division == "h2" else 1
         })
+    if len(standings) < 8:
+        return None
     if len({row["team_id"] for row in standings}) != len(standings):
         return None
     if len({row["position"] for row in standings}) != len(standings):
@@ -135,6 +137,8 @@ def collect(teams_response, request_tables, last):
                     warnings.append(f"Conflicting editions for {key}")
                     continue
                 successes[key] = {"season_id": str(sid), "table": rows}
+            if not any(parse_table(table) for table in tables):
+                warnings.append(f"Season {sid}: no matching table; examples: " + ", ".join(str(t.get("slug") or t.get("title"))[:45] for t in tables[:4]))
         except Exception as error:
             warnings.append(f"Season {sid}: {type(error).__name__}: {error}")
     for key, snapshot in successes.items():
