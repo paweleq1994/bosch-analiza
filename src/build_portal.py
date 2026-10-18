@@ -98,8 +98,11 @@ def main() -> None:
             "origin": "official_recap",
         })
     for incoming_season in league_extra.get("season_rows", []):
-        if not any(str(season["id"]) == str(incoming_season["id"]) for season in seasons):
+        index = next((i for i, item in enumerate(seasons) if str(item["id"]) == str(incoming_season["id"])), None)
+        if index is None:
             seasons.append(incoming_season)
+        else:
+            seasons[index] = {**seasons[index], **incoming_season}
     matches = [match_row(row) for row in archive.get("match_rows", [])]
     for idx, row in enumerate(recap.get("matches", []), start=1):
         matches.append({
@@ -117,11 +120,18 @@ def main() -> None:
             "videos": [],
         })
     known_ids = {row["id"] for row in matches}
+    match_positions = {item["id"]: index for index, item in enumerate(matches)}
     for row in league_extra.get("matches", []):
         clean = match_row(row)
-        if clean["id"] and clean["id"] not in known_ids:
+        if not clean["id"]:
+            continue
+        index = match_positions.get(clean["id"])
+        if index is None:
+            match_positions[clean["id"]] = len(matches)
             matches.append(clean)
-            known_ids.add(clean["id"])
+        else:
+            videos = matches[index].get("videos") or clean["videos"]
+            matches[index] = {**matches[index], **clean, "videos": videos}
     matches.sort(key=lambda row: (row["date"], row["id"]))
 
     historic_players = []
@@ -172,6 +182,27 @@ def main() -> None:
             "goals": row.get("goals", 0),
             "assists": row.get("assists", 0),
         }
+
+    for stat in league_extra.get("player_seasons", []):
+        player_id, season_id = str(stat.get("id") or ""), str(stat.get("sid") or "")
+        if not player_id or not season_id:
+            continue
+        item = next((p for p in historic_players if p["id"] == player_id), None)
+        if item is None:
+            item = {
+                "id": player_id, "name": stat.get("name") or f"Zawodnik #{player_id}",
+                "profile_url": (profiles.get(player_id) or {}).get("profile_url") or "",
+                "status": "PLP", "apps": None, "goals": None, "assists": None,
+                "motm": None, "yellow": None, "red": None, "peak": "",
+                "seasons_label": "", "orlik2026": None, "hala2526": None,
+            }
+            historic_players.append(item)
+        detail = {key: stat.get(key) for key in ("apps", "goals", "assists", "motm")}
+        item.setdefault("season_stats", {})[season_id] = detail
+        if season_id == SEASON_2026:
+            item["orlik2026"] = detail
+        if season_id == "146":
+            item["hala2526"] = detail
 
     video_by_id = {}
     for match in matches:
