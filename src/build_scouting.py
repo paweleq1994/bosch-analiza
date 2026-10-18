@@ -44,6 +44,22 @@ def benchmark(row):
     if row["wins"]>=row["matches"]*.7:notes.append("Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony.")
     return notes or ["Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."]
 
+def match_strategy(row):
+    "Evidence-based tactical hypotheses, not claims of observed play."
+    default_defense="Bez piłki: zamknąć środek i zachować asekurację; sposób doskoku skorygować po pierwszych akcjach."
+    default_attack="Z piłką: testować zmianę strony i wejścia trzeciego zawodnika, obserwując reakcję rywala."
+    if row and metric(row,"gf") is not None and metric(row,"gf")>=3.5:
+        default_defense="Wysoka skuteczność ataku rywala: utrzymać asekurację po stracie, ograniczać otwarte wymiany i nie przesądzać sposobu pressingu bez nagrań."
+    if row and metric(row,"ga") is not None and metric(row,"ga")>=2.8:
+        default_attack="Wysoka średnia traconych bramek: testować szybkie przejścia i ruch bez piłki; dopiero mecz wykaże, czy obrona reaguje z opóźnieniem."
+    elif row and metric(row,"ga") is not None and metric(row,"ga")<=1.8:
+        default_attack="Rywal ma niski wskaźnik straconych goli: cierpliwe budowanie akcji, zmiana strony i przygotowane stałe fragmenty."
+    plan_a=[default_defense,default_attack,"Po stracie: bezpieczna asekuracja za akcją i jasny podział zadań defensywnych."]
+    plan_b=["Gdy doskok nie działa: cofnąć pierwszą linię pressingu i ograniczyć odległości między zawodnikami.",
+            "Przy prowadzeniu: kontrolować tempo, utrzymać środek i minimalizować niepotrzebne straty.",
+            "Przy niekorzystnym wyniku: stopniowo zwiększać ryzyko, dobierając wariant gry do regulaminu i składu."]
+    return plan_a,plan_b
+
 def main():
     seed=json.loads((DATA/"scouting_2026_27_seed.json").read_text(encoding="utf-8"))
     historical=json.loads((DATA/"orlik_2026_opponents.json").read_text(encoding="utf-8"))
@@ -87,6 +103,18 @@ def main():
         coverage=(.5 if indoor else 0)+(.3 if outdoor else 0)
         confidence="średnia" if coverage>=.8 else "niska"
         threats=benchmark(risk_basis)
+        plan_a,plan_b=match_strategy(risk_basis)
+        video_rows=[]
+        video_ids=set()
+        for prior_match in h2h:
+            for video in prior_match.get("videos") or []:
+                video_id=video.get("video_id")
+                if not video_id or video_id in video_ids:
+                    continue
+                video_ids.add(video_id)
+                video_rows.append({"id":video_id,"title":video.get("title") or "",
+                    "url":video.get("url") or f"https://www.youtube.com/watch?v={video_id}",
+                    "date":prior_match["date"],"match_id":prior_match["id"],"source":"Archiwum Boscha, niezweryfikowane taktycznie"})
         team_id=next((str(r.get("team_id")) for r in (hall+orlik+lower) if norm(r["name"])==norm(name) and r.get("team_id")),None)
         detailed=[v for v in details.get("teams",{}).values() if team_id and str(v["team_id"])==team_id]
         preferred=next((v for v in detailed if v["division"]=="hala_2026_27_h1"),None) or next((v for v in detailed if v["division"]=="hala_2025_26_h1"),None) or (detailed[0] if detailed else None)
@@ -104,11 +132,11 @@ def main():
             "player_stats_verified":bool(team_players),
             "h2h":{"games":len(h2h),"wins":w,"draws":d,"losses":len(h2h)-w-d,"matches":[{"date":m["date"],"gf":m["gf"],"ga":m["ga"],"id":m["id"]} for m in h2h]},
             "statistical_watchouts":threats,
-            "plan_a":["W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.","W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.","Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."],
-            "plan_b":["Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.","Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.","Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."],
+            "plan_a":plan_a,
+            "plan_b":plan_b,
             "scouting_status":"statistical_only",
             "observations":[],
-            "videos":[],
+            "videos":video_rows,
             "warning":"Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
         })
     teams.sort(key=lambda row: (-(row["strength"] or 0),row["name"]))
