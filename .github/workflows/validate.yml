@@ -1,0 +1,32 @@
+name: Validate Bosch portal
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate published snapshot
+        run: python src/validate_portal.py
+      - name: Rebuild portal
+        run: python src/build_portal.py
+      - name: Validate generated snapshot
+        run: python src/validate_portal.py
+      - name: Check Python syntax
+        run: python -m compileall -q src
+      - name: Check JavaScript syntax
+        run: node --check docs/assets/app.js
+      - name: Check required portal paths
+        run: |
+          test -s docs/index.html
+          test -s docs/archive.html
+          test -s docs/assets/style.css
+          test -s docs/assets/data.json
