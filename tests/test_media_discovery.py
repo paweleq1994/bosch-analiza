@@ -12,7 +12,7 @@ from plp_photo_archive import sync
 class MediaDiscoveryTests(unittest.TestCase):
     def setUp(self):
         self.players = [
-            {"id": "2204", "name": "Dawid Daniluk", "has_photos": False},
+            {"id": "2204", "name": "Dawid Daniluk", "profile_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/", "has_photos": False},
             {"id": "1960", "name": "Moskal Paweł", "has_photos": True},
         ]
 
