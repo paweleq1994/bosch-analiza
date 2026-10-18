@@ -1,0 +1,13 @@
+{
+  "channels": [
+    {
+      "name": "Marta Wnuszynska",
+      "handle": "martawnuszynska9993"
+    },
+    {
+      "name": "Piotr Golabeski",
+      "handle": "piotrgoabeski3337"
+    }
+  ],
+  "note": "Prefer stable channel_id values once verified. Handles are resolved at sync time; any failed source retains previous data."
+}
