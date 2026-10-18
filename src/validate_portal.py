@@ -8,6 +8,10 @@ DATA = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="u
 seasons = DATA["seasons"]
 matches = DATA["matches"]
 assert len(seasons) >= 8, "Expected eight historical seasons"
+assert len([row for row in seasons if row["id"] == "orlik-2026"]) == 1, "Orlik 2026 must appear once"
+assert not any(str(row["id"]) == "148" for row in seasons), "PLP 148 duplicates Orlik 2026"
+assert not any(str(row["sid"]) == "148" for row in matches), "Orlik 2026 match alias must not appear"
+assert len(matches) == len({(row["sid"], row["date"], row["opponent"]) for row in matches}), "Duplicate fixtures"
 assert len(matches) >= 113, "Unexpected loss of historical matches"
 assert len({(row["id"], row["sid"]) for row in matches}) == len(matches), "Duplicate match identity"
 assert len({row["id"] for row in DATA["videos"]}) == len(DATA["videos"]), "Duplicate video ID"

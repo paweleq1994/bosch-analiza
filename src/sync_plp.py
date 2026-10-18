@@ -64,16 +64,17 @@ def season_key(value):
 
 
 def season_id_for(plp_id: int, label: str, known: list[dict]):
-    for item in known:
-        if str(item.get("plp_id") or item.get("id")) == str(plp_id):
-            return str(item["id"])
     key = season_key(label)
     if key:
         matched = [row for row in known if season_key(row["name"]) == key]
-        if len(matched) == 1:
-            return str(matched[0]["id"])
+        if matched:
+            # Prefer the established public URL over a previously imported PLP alias.
+            preferred = next((row for row in matched if row["id"] == "orlik-2026"), None)
+            return str((preferred or matched[0])["id"])
+    for item in known:
+        if str(item.get("plp_id") or item.get("id")) == str(plp_id):
+            return str(item["id"])
     return str(plp_id)
-
 
 def league_table(payload, season_id: int):
     possible = []
