@@ -11,6 +11,7 @@ import unicodedata
 
 from player_identity import legacy_player_id, match_public_profile, person_key
 from merge_player_identities import merge_player_identities
+from integrate_match_protocols import integrate_match_protocols
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
@@ -453,6 +454,12 @@ def main() -> None:
         ):
             player["stats_source"] = "Historyczne zestawienia PLP i Bosch, niepełny podział sezonów"
 
+    match_protocol_summary = integrate_match_protocols(
+        historic_players,
+        matches,
+        load("match_protocol_audit_index.json", {}),
+    )
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -513,12 +520,17 @@ def main() -> None:
         assigned_goals = sum(stats["goals"] for stats in known_player_goals)
         administrative = administrative_adjustments.get(season_id) or {}
         administrative_goals = administrative.get("goals", 0)
-        unexplained = season["gf"] - assigned_goals - administrative_goals
+        opponent_own_goals = sum(
+            match["protocol"]["opponent_own_goals"]
+            for match in matches if str(match["sid"]) == season_id
+        )
+        unexplained = season["gf"] - assigned_goals - administrative_goals - opponent_own_goals
 
         if unexplained < 0:
             raise ValueError(
                 f"Attribution exceeds Bosch team goals for {season['name']}: "
-                f"{assigned_goals} player goals + {administrative_goals} administrative "
+                f"{assigned_goals} player goals + {administrative_goals} administrative + "
+                f"{opponent_own_goals} opponent own goals "
                 f"> {season['gf']} team goals"
             )
 
@@ -528,6 +540,7 @@ def main() -> None:
             "team_goals": season["gf"],
             "attributed_goals": assigned_goals,
             "administrative_goals": administrative_goals,
+            "opponent_own_goals": opponent_own_goals,
             "administrative_events": administrative.get("events", []),
             "unattributed_goals": unexplained,
             "players_with_verified_stats": len(known_player_goals),
@@ -564,6 +577,7 @@ def main() -> None:
             "halftime_all": report.get("halftime_all", []),
             "promotion_summary": promotions.get("summary", {}),
             "player_goal_coverage": goal_coverage,
+            "match_protocol_audit": match_protocol_summary,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
