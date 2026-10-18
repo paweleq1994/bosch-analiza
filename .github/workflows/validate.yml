@@ -36,5 +36,6 @@ jobs:
           test -s docs/archive.html
           test -s docs/assets/style.css
           test -s docs/assets/data.json
+          test -s docs/photos.html
           test -s docs/scouting.html
           test -s docs/assets/scouting.json
