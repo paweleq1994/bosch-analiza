@@ -52,9 +52,17 @@ def career_from_profile(profile, parse_number):
                 "yellow": parse_number(entry.get("yellowcards")),
                 "red": parse_number(entry.get("redcards")),
             }
-            if key in unique and unique[key] != stats:
-                raise ValueError(f"Contradictory PLP career entry for season {sid} and team {team}")
-            unique[key] = stats
+            previous = unique.get(key)
+            if previous is not None and previous != stats:
+                if previous["apps"] == 0 and apps > 0:
+                    unique[key] = stats
+                elif apps == 0 and previous["apps"] > 0:
+                    continue
+                else:
+                    raise ValueError(f"Contradictory PLP career entry for season {sid} and team {team}")
+            else:
+                unique[key] = stats
+
             teams.add(team)
     if not unique:
         return None
