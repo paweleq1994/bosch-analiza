@@ -12,7 +12,7 @@ import unicodedata
 from player_identity import legacy_player_id, match_public_profile, person_key
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
-from merge_plp_identities import merge_confirmed_players
+from merge_player_identities import merge_player_identities
 from protocol_goals import enrich_from_protocols
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,7 +68,7 @@ def main() -> None:
     stat_corrections = load("player_stat_corrections.json", {})
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
     match_protocol_index = load("match_protocol_audit_index.json")
-    player_identity_merges = load("player_identity_merges.json", {"groups": []})
+    player_identity_merges = load("player_identity_merges.json", {})
     own_goal_evidence = load("bosch_own_goal_evidence.json", {"events": []})
 
     for player_id, correction in stat_corrections.items():
@@ -315,12 +315,6 @@ def main() -> None:
 
     validate_goal_evidence(goal_evidence, seasons, matches)
     add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
-    merged_aliases = merge_confirmed_players(
-        historic_players,
-        player_seasons_extra,
-        player_career_extra,
-        player_identity_merges.get("groups") or [],
-    )
 
     def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
         if not recap_stats:
@@ -439,6 +433,17 @@ def main() -> None:
             for stats in verified_seasons.values()
         ):
             player["stats_source"] = "PLP — publiczny profil i statystyki sezonowe"
+
+    historic_players = merge_player_identities(historic_players, player_identity_merges)
+    merged_aliases = {
+        str(duplicate_id): str(primary_id)
+        for primary_id, configuration in player_identity_merges.items()
+        for duplicate_id in configuration.get("duplicate_ids") or []
+    }
+
+    for player in historic_players:
+        if player.get("merged_source_profiles"):
+            player["alternate_profile_urls"] = list(player["merged_source_profiles"])
 
     archive_rows = archived_bosch_seasons(
         promotions,
