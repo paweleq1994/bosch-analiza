@@ -97,7 +97,7 @@ def player_id_from_anchor(anchor) -> str | None:
 
 
 def minutes_from_text(value: object) -> list[str]:
-    return re.findall(r"(?<!\\d)(\\d{1,3}(?:\\+\\d{1,2})?)\\s*['’′]", str(value or ""))
+    return re.findall(r"(?<!\d)(\d{1,3}(?:\+\d{1,2})?)\s*['’′]", str(value or ""))
 
 
 def icon_performance(performance_cell) -> dict:
