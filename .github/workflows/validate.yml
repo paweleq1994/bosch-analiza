@@ -22,6 +22,8 @@ jobs:
         run: python src/build_portal.py
       - name: Validate generated snapshot
         run: python src/validate_portal.py
+      - name: Rebuild scouting from versioned sources
+        run: python src/build_scouting.py
       - name: Validate scouting reports
         run: python src/validate_scouting.py
       - name: Check Python syntax
