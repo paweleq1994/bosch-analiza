@@ -96,6 +96,63 @@ def player_id_from_anchor(anchor) -> str | None:
     return str(player_id) if player_id and str(player_id).isdigit() else None
 
 
+def minutes_from_text(value: object) -> list[str]:
+    return re.findall(r"(?<!\\d)(\\d{1,3}(?:\\+\\d{1,2})?)\\s*['’′]", str(value or ""))
+
+
+def icon_performance(performance_cell) -> dict:
+    goals = 0
+    own_goals = 0
+    assists = 0
+    goal_minutes = []
+    unknown_goal_markers = 0
+
+    if performance_cell is None:
+        return {
+            "goals": 0,
+            "own_goals": 0,
+            "assists": 0,
+            "goal_minutes": [],
+            "unreadable_goal_markers": 0,
+        }
+
+    for icon in performance_cell.select("i[title]"):
+        title = normalize(icon.get("title"))
+        following_text = []
+
+        for sibling in icon.next_siblings:
+            if getattr(sibling, "name", None) in {"br", "i"}:
+                break
+
+            following_text.append(sibling.get_text(" ", strip=True) if hasattr(sibling, "get_text") else str(sibling))
+
+        minutes = minutes_from_text(" ".join(following_text))
+
+        if title == "gol":
+            goals += len(minutes)
+            goal_minutes.extend(minutes)
+
+            if not minutes:
+                unknown_goal_markers += 1
+
+        elif title in {"samoboj", "samobojczy", "samobojcza"}:
+            own_goals += len(minutes)
+
+            if not minutes:
+                unknown_goal_markers += 1
+
+        elif title == "asysta":
+            assists += 1
+
+    return {
+        "goals": goals,
+        "own_goals": own_goals,
+        "assists": assists,
+        "goal_minutes": goal_minutes,
+        "unreadable_goal_markers": unknown_goal_markers,
+    }
+
+
 def interpret_performance(event: dict | None, player_names: dict) -> dict:
     if not isinstance(event, dict):
         return {"available": False, "players": [], "goals": None, "own_goals": None}
@@ -195,6 +252,7 @@ def parse_table_performance(table, index: int) -> dict:
         player_link = name_cell.find("a", href=True)
         goals_cell = row.select_one(".data-goals")
         own_goals_cell = row.select_one(".data-samobje, .data-samoboje")
+        icons = icon_performance(row.select_one(".sp-performance-icons"))
 
         if goals_cell is None and goals_index is not None and goals_index < len(cells):
             goals_cell = cells[goals_index]
@@ -208,8 +266,11 @@ def parse_table_performance(table, index: int) -> dict:
         player_rows.append({
             "name": name,
             "player_id": player_id_from_anchor(player_link),
-            "goals": integer(goals_cell.get_text(" ", strip=True)) if goals_cell else None,
-            "own_goals": integer(own_goals_cell.get_text(" ", strip=True)) if own_goals_cell else None,
+            "goals": integer(goals_cell.get_text(" ", strip=True)) if goals_cell else icons["goals"],
+            "own_goals": integer(own_goals_cell.get_text(" ", strip=True)) if own_goals_cell else icons["own_goals"],
+            "assists": icons["assists"],
+            "goal_minutes": icons["goal_minutes"],
+            "unreadable_goal_markers": icons["unreadable_goal_markers"],
             "profile_url": player_link.get("href") if player_link else None,
             "raw_goals": goals_cell.get_text(" ", strip=True) if goals_cell else "",
             "raw_own_goals": own_goals_cell.get_text(" ", strip=True) if own_goals_cell else "",
@@ -223,7 +284,8 @@ def parse_table_performance(table, index: int) -> dict:
         "is_bosch": normalize(BOSCH_NAME) in normalize(heading),
         "header_fields": column_headers,
         "players": player_rows,
-        "goals": sum(confirmed_goals) if confirmed_goals else None,
+        "goals": sum(confirmed_goals) if confirmed_goals else 0,
+        "unreadable_goal_markers": sum(row["unreadable_goal_markers"] for row in player_rows),
     }
 
 
@@ -258,13 +320,37 @@ def parse_match_html(source: str | None) -> dict:
     if len(confirmed_bosch_tables) == 1:
         result["bosch_goals"] = confirmed_bosch_tables[0]["goals"]
         result["bosch_players"] = confirmed_bosch_tables[0]["players"]
+        result["unreadable_goal_markers"] = confirmed_bosch_tables[0]["unreadable_goal_markers"]
 
-    for table in soup.select(".sp-template-event-statistics table"):
-        for row in table.select("tr"):
-            text_values = [cell.get_text(" ", strip=True) for cell in row.find_all(["td", "th"], recursive=False)]
+    result["statistic_values"] = {}
 
-            if any("samob" in normalize(value) for value in text_values):
-                result["statistic_rows"].append(text_values)
+    for title in soup.select(".sp-template-event-statistics .sp-statistic-label"):
+        name = normalize(title.get_text(" ", strip=True))
+        table = title.find_next("table")
+
+        if not table:
+            continue
+
+        values = [
+            integer(cell.get_text(" ", strip=True))
+            for cell in table.select("td.sp-statistic-value")
+        ]
+
+        if len(values) == 2:
+            result["statistic_values"][name] = values
+
+    first_heading = result["performance_tables"][0]["heading"] if result["performance_tables"] else ""
+    bosch_position = 0 if normalize(BOSCH_NAME) in normalize(first_heading) else 1
+    all_goals = result["statistic_values"].get("gole", [])
+    own_goals = result["statistic_values"].get("samoboje", [])
+
+    if len(all_goals) == 2:
+        result["bosch_on_field_goals"] = all_goals[bosch_position]
+
+    if len(own_goals) == 2:
+        result["own_goals_by_bosch"] = own_goals[bosch_position]
+        result["own_goals_by_opponent"] = own_goals[1 - bosch_position]
+
 
     return result
 
