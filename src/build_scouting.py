@@ -68,6 +68,8 @@ def main():
     if current_hall:
         candidates=[r["name"] for r in current_hall if norm(r["name"])!=norm("Bosch Service Tech-Car")]
     candidates=list(dict((norm(name),name) for name in candidates).values())
+    details_path=DATA/"scouting_details.json"
+    details=json.loads(details_path.read_text(encoding="utf-8")) if details_path.exists() else {"teams":{}}
     teams=[]
     for name in candidates:
         indoor=match_row(hall,name)
@@ -85,13 +87,21 @@ def main():
         coverage=(.5 if indoor else 0)+(.3 if outdoor else 0)
         confidence="średnia" if coverage>=.8 else "niska"
         threats=benchmark(risk_basis)
+        team_id=next((str(r.get("team_id")) for r in (hall+orlik+lower) if norm(r["name"])==norm(name) and r.get("team_id")),None)
+        detailed=[v for v in details.get("teams",{}).values() if team_id and str(v["team_id"])==team_id]
+        preferred=next((v for v in detailed if v["division"]=="hala_2026_27_h1"),None) or next((v for v in detailed if v["division"]=="hala_2025_26_h1"),None) or (detailed[0] if detailed else None)
+        team_players=preferred.get("players") if preferred and preferred.get("player_stats_complete") else None
+        player_rows=[{"name":f"Zawodnik #{p['id']}","id":p["id"],"apps":p["apps"],"goals":p["goals"],"assists":p["assists"],"source_season":preferred["division"]} for p in sorted(team_players,key=lambda p:-(p["goals"]+p["assists"]))] if team_players else []
         teams.append({
             "id":norm(name).replace(" ","-"),"name":name,
             "status":"confirmed_from_table" if current_hall else "candidate", "division":"verified_1_hala_2026_27" if current_hall else "projected_1_hala_2026_27",
             "origin":"promoted_II" if match_row(lower,name) else "retained_I",
             "hall":indoor,"orlik":outdoor,"historic_hall":old_data,
             "strength":rating,"data_coverage":round(coverage,2),"confidence":confidence,
-            "players":[{"name":p["name"],"id":p.get("player_id"),"apps":p.get("apps"),"goals":p.get("goals"),"assists":p.get("assists"),"source_season":"Hala 2025/26"} for p in stars[:7]],
+            "players":player_rows or [{"name":p["name"],"id":p.get("player_id"),"apps":p.get("apps"),"goals":p.get("goals"),"assists":p.get("assists"),"source_season":"Hala 2025/26"} for p in stars[:7]],
+            "plp_team_id":team_id,
+            "season_match_details":preferred.get("matches",[]) if preferred else [],
+            "player_stats_verified":bool(team_players),
             "h2h":{"games":len(h2h),"wins":w,"draws":d,"losses":len(h2h)-w-d,"matches":[{"date":m["date"],"gf":m["gf"],"ga":m["ga"],"id":m["id"]} for m in h2h]},
             "statistical_watchouts":threats,
             "plan_a":["W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.","W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.","Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."],
