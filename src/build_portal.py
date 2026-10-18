@@ -97,6 +97,9 @@ def main() -> None:
             "table": "II Liga – Orlik 2026",
             "origin": "official_recap",
         })
+    for incoming_season in league_extra.get("season_rows", []):
+        if not any(str(season["id"]) == str(incoming_season["id"]) for season in seasons):
+            seasons.append(incoming_season)
     matches = [match_row(row) for row in archive.get("match_rows", [])]
     for idx, row in enumerate(recap.get("matches", []), start=1):
         matches.append({
