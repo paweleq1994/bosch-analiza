@@ -217,7 +217,7 @@ def main():
             "players":player_rows,
             "plp_team_id":team_id,
             "season_match_details":preferred.get("matches",[]) if preferred else [],
-            "player_stats_verified":bool(team_players),
+            "player_stats_verified":bool(refreshed.get(str(team_id))) or any(snapshot.get("player_stats_complete") for snapshot in detailed),
             "h2h":{"games":len(h2h),"wins":w,"draws":d,"losses":len(h2h)-w-d,"matches":[{"date":m["date"],"gf":m["gf"],"ga":m["ga"],"id":m["id"]} for m in h2h]},
             "statistical_watchouts":threats,
             "plan_a":plan_a,
