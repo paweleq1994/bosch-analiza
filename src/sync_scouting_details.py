@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fetch official opponent match logs and season player stats; no guessed events."""
 from collections import defaultdict
+from datetime import date
 from html import unescape
 from pathlib import Path
 import json
@@ -60,6 +61,19 @@ def detail(events,team):
             for k,v in values.items():entry[k]+=v
         if not used:complete=False
     return matches, [{"id":pid,**stat} for pid,stat in people.items()] if complete else [],complete
+def team_signature(team):
+    return {key: team.get(key) for key in ("matches", "wins", "draws", "losses", "gf", "ga", "points")}
+
+def cache_fresh(old, team, today=None):
+    if not old or old.get("standing_signature") != team_signature(team):
+        return False
+    try:
+        checked = date.fromisoformat(old["verified_at"])
+        elapsed = (today or date.today()) - checked
+        return 0 <= elapsed.days < 7
+    except (KeyError, ValueError, TypeError):
+        return False
+
 def collect(snapshot, previous, fetch):
     updated=dict(previous.get("teams") or {})
     warnings=[]
@@ -73,6 +87,9 @@ def collect(snapshot, previous, fetch):
             if not tid:continue
             identity=f"{key}:{tid}"
             try:
+                old=updated.get(identity) or {}
+                if cache_fresh(old,team):
+                    continue
                 matches,players,complete=detail(fetch(season,tid),tid)
                 expected=team.get("matches")
                 # Do not replace previous complete snapshot with incomplete listing.
@@ -82,8 +99,8 @@ def collect(snapshot, previous, fetch):
                 if sum(m["gf"] for m in matches)!=team["gf"] or sum(m["ga"] for m in matches)!=team["ga"]:
                     warnings.append(f"{identity}: goals do not match table")
                     continue
-                old=updated.get(identity) or {}
                 updated[identity]={"team_id":str(tid),"season_id":str(season),"division":key,"matches":matches,
+                    "standing_signature":team_signature(team),"verified_at":date.today().isoformat(),
                     "players":players if complete else old.get("players",[]),
                     "player_stats_complete":complete,"source":"PLP SportsPress"}
             except Exception as error:warnings.append(f"{identity}: {type(error).__name__}: {error}")
