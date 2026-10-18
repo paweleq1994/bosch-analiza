@@ -16,8 +16,6 @@ jobs:
           python-version: "3.12"
       - name: PLP synchronization regression tests
         run: python -m unittest discover -s tests -v
-      - name: Validate published snapshot
-        run: python src/validate_portal.py
       - name: Rebuild portal
         run: python src/build_portal.py
       - name: Validate generated snapshot
