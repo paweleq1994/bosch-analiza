@@ -1,0 +1,494 @@
+{
+  "meta": {
+    "title": "Scouting Hala 2026/27",
+    "snapshot": "2026-10-18",
+    "note": "Projected league membership, NOT an official Hala 2026/27 lineup. Orlik I standings can still change; some teams have 14 and some 15 games.",
+    "promotion_rule_assumed": 3,
+    "forecast_not_confirmed": true,
+    "site_url": "https://podlaskaliga.pl",
+    "source_links": [
+      {
+        "label": "PLP — Hala 2025/26 I liga",
+        "url": "https://podlaskaliga.pl/tabela/i-liga-hala25-26/"
+      },
+      {
+        "label": "PLP — Orlik 2026 I liga",
+        "url": "https://podlaskaliga.pl/tabela/1-liga-orlik26/"
+      },
+      {
+        "label": "PLP — Orlik 2026 II liga",
+        "url": "https://podlaskaliga.pl/druzyna/ludki-bialystok/tabela/"
+      },
+      {
+        "label": "PLP — Hala 2025/26 II liga",
+        "url": "https://podlaskaliga.pl/tabela/ii-liga-hala25-26/"
+      }
+    ]
+  },
+  "tables": {
+    "hala_2025_26_h1": [
+      {
+        "name": "Hurtownia Krokus",
+        "position": 1,
+        "matches": 15,
+        "wins": 13,
+        "draws": 0,
+        "losses": 2,
+        "gf": 75,
+        "ga": 13,
+        "points": 39,
+        "tier": 1
+      },
+      {
+        "name": "INTaF",
+        "position": 2,
+        "matches": 15,
+        "wins": 12,
+        "draws": 1,
+        "losses": 2,
+        "gf": 53,
+        "ga": 30,
+        "points": 37,
+        "tier": 1
+      },
+      {
+        "name": "Fc Bajaga",
+        "position": 3,
+        "matches": 15,
+        "wins": 10,
+        "draws": 3,
+        "losses": 2,
+        "gf": 44,
+        "ga": 31,
+        "points": 33,
+        "tier": 1
+      },
+      {
+        "name": "Adampol Glovis",
+        "position": 4,
+        "matches": 15,
+        "wins": 11,
+        "draws": 0,
+        "losses": 4,
+        "gf": 67,
+        "ga": 27,
+        "points": 33,
+        "tier": 1
+      },
+      {
+        "name": "Soccer Auto Wygoda",
+        "position": 5,
+        "matches": 15,
+        "wins": 9,
+        "draws": 1,
+        "losses": 5,
+        "gf": 51,
+        "ga": 36,
+        "points": 28,
+        "tier": 1
+      },
+      {
+        "name": "4Technology",
+        "position": 6,
+        "matches": 15,
+        "wins": 8,
+        "draws": 3,
+        "losses": 4,
+        "gf": 53,
+        "ga": 44,
+        "points": 27,
+        "tier": 1
+      },
+      {
+        "name": "PTH Maltrans",
+        "position": 7,
+        "matches": 15,
+        "wins": 8,
+        "draws": 2,
+        "losses": 5,
+        "gf": 49,
+        "ga": 29,
+        "points": 26,
+        "tier": 1
+      },
+      {
+        "name": "Hanbud",
+        "position": 8,
+        "matches": 15,
+        "wins": 7,
+        "draws": 2,
+        "losses": 6,
+        "gf": 44,
+        "ga": 46,
+        "points": 23,
+        "tier": 1
+      },
+      {
+        "name": "Top Auto",
+        "position": 9,
+        "matches": 15,
+        "wins": 6,
+        "draws": 1,
+        "losses": 8,
+        "gf": 27,
+        "ga": 37,
+        "points": 19,
+        "tier": 1
+      },
+      {
+        "name": "FC GRUBASSY",
+        "position": 10,
+        "matches": 15,
+        "wins": 5,
+        "draws": 1,
+        "losses": 9,
+        "gf": 43,
+        "ga": 53,
+        "points": 16,
+        "tier": 1
+      },
+      {
+        "name": "M-Fire",
+        "position": 11,
+        "matches": 15,
+        "wins": 4,
+        "draws": 1,
+        "losses": 10,
+        "gf": 33,
+        "ga": 64,
+        "points": 13,
+        "tier": 1
+      },
+      {
+        "name": "VESTA",
+        "position": 12,
+        "matches": 15,
+        "wins": 3,
+        "draws": 3,
+        "losses": 9,
+        "gf": 43,
+        "ga": 45,
+        "points": 12,
+        "tier": 1
+      },
+      {
+        "name": "FC DrTusz",
+        "position": 13,
+        "matches": 15,
+        "wins": 3,
+        "draws": 3,
+        "losses": 9,
+        "gf": 21,
+        "ga": 39,
+        "points": 12,
+        "tier": 1
+      },
+      {
+        "name": "CEDC Polmos Białystok",
+        "position": 14,
+        "matches": 15,
+        "wins": 2,
+        "draws": 4,
+        "losses": 9,
+        "gf": 19,
+        "ga": 57,
+        "points": 10,
+        "tier": 1
+      },
+      {
+        "name": "Mają Rozmach",
+        "position": 15,
+        "matches": 15,
+        "wins": 2,
+        "draws": 3,
+        "losses": 10,
+        "gf": 24,
+        "ga": 53,
+        "points": 9,
+        "tier": 1
+      },
+      {
+        "name": "Żubry Bema",
+        "position": 16,
+        "matches": 15,
+        "wins": 1,
+        "draws": 4,
+        "losses": 10,
+        "gf": 21,
+        "ga": 63,
+        "points": 7,
+        "tier": 1
+      }
+    ],
+    "orlik_2026_h1": [
+      {
+        "name": "Adampol Glovis",
+        "position": 1,
+        "matches": 15,
+        "wins": 14,
+        "draws": 0,
+        "losses": 1,
+        "gf": 71,
+        "ga": 15,
+        "points": 42,
+        "tier": 1
+      },
+      {
+        "name": "4Technology",
+        "position": 2,
+        "matches": 14,
+        "wins": 12,
+        "draws": 1,
+        "losses": 1,
+        "gf": 82,
+        "ga": 31,
+        "points": 37,
+        "tier": 1
+      },
+      {
+        "name": "Hurtownia Krokus",
+        "position": 3,
+        "matches": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "gf": 60,
+        "ga": 16,
+        "points": 36,
+        "tier": 1
+      },
+      {
+        "name": "Soccer Auto Wygoda",
+        "position": 4,
+        "matches": 15,
+        "wins": 10,
+        "draws": 1,
+        "losses": 4,
+        "gf": 35,
+        "ga": 28,
+        "points": 31,
+        "tier": 1
+      },
+      {
+        "name": "VESTA",
+        "position": 5,
+        "matches": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "gf": 38,
+        "ga": 24,
+        "points": 26,
+        "tier": 1
+      },
+      {
+        "name": "PROSTAL",
+        "position": 6,
+        "matches": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "gf": 49,
+        "ga": 35,
+        "points": 26,
+        "tier": 1
+      },
+      {
+        "name": "Fc Bajaga",
+        "position": 7,
+        "matches": 14,
+        "wins": 5,
+        "draws": 3,
+        "losses": 6,
+        "gf": 31,
+        "ga": 38,
+        "points": 18,
+        "tier": 1
+      },
+      {
+        "name": "Top Auto",
+        "position": 8,
+        "matches": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "gf": 31,
+        "ga": 26,
+        "points": 18,
+        "tier": 1
+      },
+      {
+        "name": "PTH Maltrans",
+        "position": 9,
+        "matches": 14,
+        "wins": 5,
+        "draws": 2,
+        "losses": 7,
+        "gf": 34,
+        "ga": 44,
+        "points": 17,
+        "tier": 1
+      },
+      {
+        "name": "FC GRUBASSY",
+        "position": 10,
+        "matches": 14,
+        "wins": 5,
+        "draws": 0,
+        "losses": 9,
+        "gf": 51,
+        "ga": 62,
+        "points": 15,
+        "tier": 1
+      },
+      {
+        "name": "FC DrTusz",
+        "position": 11,
+        "matches": 14,
+        "wins": 4,
+        "draws": 2,
+        "losses": 8,
+        "gf": 34,
+        "ga": 58,
+        "points": 14,
+        "tier": 1
+      },
+      {
+        "name": "Hanbud",
+        "position": 12,
+        "matches": 14,
+        "wins": 3,
+        "draws": 3,
+        "losses": 8,
+        "gf": 32,
+        "ga": 42,
+        "points": 12,
+        "tier": 1
+      },
+      {
+        "name": "WIARA PIASTA II",
+        "position": 13,
+        "matches": 14,
+        "wins": 4,
+        "draws": 0,
+        "losses": 10,
+        "gf": 36,
+        "ga": 72,
+        "points": 12,
+        "tier": 1
+      },
+      {
+        "name": "CEDC Polmos Białystok",
+        "position": 14,
+        "matches": 14,
+        "wins": 2,
+        "draws": 3,
+        "losses": 9,
+        "gf": 24,
+        "ga": 60,
+        "points": 9,
+        "tier": 1
+      },
+      {
+        "name": "INTaF",
+        "position": 15,
+        "matches": 14,
+        "wins": 3,
+        "draws": 0,
+        "losses": 11,
+        "gf": 25,
+        "ga": 45,
+        "points": 9,
+        "tier": 1
+      },
+      {
+        "name": "M-Fire",
+        "position": 16,
+        "matches": 14,
+        "wins": 2,
+        "draws": 1,
+        "losses": 11,
+        "gf": 18,
+        "ga": 55,
+        "points": 7,
+        "tier": 1
+      }
+    ],
+    "orlik_2026_h2": [
+      {
+        "name": "Biuro Serwis-Kopiarki",
+        "position": 1,
+        "matches": 15,
+        "wins": 12,
+        "draws": 0,
+        "losses": 3,
+        "gf": 73,
+        "ga": 21,
+        "points": 36,
+        "tier": 2
+      },
+      {
+        "name": "Zimne Dranie",
+        "position": 2,
+        "matches": 15,
+        "wins": 11,
+        "draws": 1,
+        "losses": 3,
+        "gf": 50,
+        "ga": 21,
+        "points": 34,
+        "tier": 2
+      }
+    ],
+    "bos_ch": {
+      "name": "Bosch Service Tech-Car",
+      "position": 3,
+      "matches": 15,
+      "wins": 11,
+      "draws": 2,
+      "losses": 2,
+      "gf": 59,
+      "ga": 17,
+      "points": 35,
+      "tier": 2
+    },
+    "hala_2025_26_h2": [
+      {
+        "name": "Zimne Dranie",
+        "position": 5,
+        "matches": 15,
+        "wins": 8,
+        "draws": 2,
+        "losses": 5,
+        "gf": 62,
+        "ga": 37,
+        "points": 26,
+        "tier": 2
+      },
+      {
+        "name": "Biuro Serwis-Kopiarki",
+        "position": 7,
+        "matches": null,
+        "wins": null,
+        "draws": null,
+        "losses": null,
+        "gf": null,
+        "ga": null,
+        "points": null,
+        "tier": 2
+      }
+    ]
+  },
+  "videos": [],
+  "tactical_observations": [],
+  "match_reviews": [],
+  "editorial": {
+    "intro": "Przedsezonowy scouting oparty na tabelach PLP i historycznych danych Boscha. Zalecenia taktyczne bez materiału wideo mają status hipotezy do sprawdzenia.",
+    "bos_ch_notes": [
+      "Orlik 2026: 11 zwycięstw, 2 remisy, 2 porażki, 59:17. Mocnym punktem jest defensywa potwierdzona statystykami sezonu.",
+      "Hala 2025/26: 21 pkt, 33:39. Ocenę sposobu gry należy oprzeć na nagraniach, ponieważ same wyniki nie dowodzą stylu pressingu."
+    ],
+    "evidence_warning": "Nie znaleziono publicznie indeksowanych, zweryfikowanych pełnych nagrań aktualnych meczów konkretnych kandydatów. Archiwalne publikacje PLP zawierają materiały wideo (np. 2021), lecz nie stanowią potwierdzenia współczesnego stylu gry.",
+    "video_library_link": "https://podlaskaliga.pl/kategoria/video/mecze-kolejki/"
+  }
+}
