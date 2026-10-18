@@ -1,1 +1,1284 @@
-{"meta":{"title":"Scouting Hala 2026/27","snapshot":"2026-10-18","note":"Projected league membership, NOT an official Hala 2026/27 lineup. Orlik I standings can still change; some teams have 14 and some 15 games.","promotion_rule_assumed":3,"forecast_not_confirmed":true,"site_url":"https://podlaskaliga.pl","source_links":[{"label":"PLP — Hala 2025/26 I liga","url":"https://podlaskaliga.pl/tabela/i-liga-hala25-26/"},{"label":"PLP — Orlik 2026 I liga","url":"https://podlaskaliga.pl/tabela/1-liga-orlik26/"},{"label":"PLP — Orlik 2026 II liga","url":"https://podlaskaliga.pl/druzyna/ludki-bialystok/tabela/"},{"label":"PLP — Hala 2025/26 II liga","url":"https://podlaskaliga.pl/tabela/ii-liga-hala25-26/"}]},"teams":[{"id":"hurtownia-krokus","name":"Hurtownia Krokus","status":"candidate","origin":"retained_I","hall":{"name":"Hurtownia Krokus","position":1,"matches":15,"wins":13,"draws":0,"losses":2,"gf":75,"ga":13,"points":39,"tier":1},"orlik":{"name":"Hurtownia Krokus","position":3,"matches":14,"wins":12,"draws":0,"losses":2,"gf":60,"ga":16,"points":36,"tier":1},"strength":89.7,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"9480","date":"2023-11-26","gf":0,"ga":5}]},"statistical_watchouts":["Dużo zdobywanych bramek na mecz — szczególnie uważać na straty i kontrataki. Konkretne schematy wymagają nagrania.","Solidna defensywa według wyników — zaplanować cierpliwe rozegranie i warianty stałych fragmentów.","Wysoki odsetek zwycięstw — ograniczać ryzyko w przejściu do obrony."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"adampol-glovis","name":"Adampol Glovis","status":"candidate","origin":"retained_I","hall":{"name":"Adampol Glovis","position":4,"matches":15,"wins":11,"draws":0,"losses":4,"gf":67,"ga":27,"points":33,"tier":1},"orlik":{"name":"Adampol Glovis","position":1,"matches":15,"wins":14,"draws":0,"losses":1,"gf":71,"ga":15,"points":42,"tier":1},"strength":84.3,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"9646","date":"2024-01-14","gf":0,"ga":4}]},"statistical_watchouts":["Dużo zdobywanych bramek na mecz — szczególnie uważać na straty i kontrataki. Konkretne schematy wymagają nagrania.","Solidna defensywa według wyników — zaplanować cierpliwe rozegranie i warianty stałych fragmentów.","Wysoki odsetek zwycięstw — ograniczać ryzyko w przejściu do obrony."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"biuro-serwis-kopiarki","name":"Biuro Serwis-Kopiarki","status":"candidate","origin":"promoted_II","orlik":{"name":"Biuro Serwis-Kopiarki","position":1,"matches":15,"wins":12,"draws":0,"losses":3,"gf":73,"ga":21,"points":36,"tier":2},"strength":71.2,"data_coverage":0.3,"confidence":"niska","players":[{"id":4448,"name":"Mosiej Łukasz","apps":15,"goals":30,"assists":8,"source_season":"Hala 2025/26"},{"id":13022,"name":"Smirnov Yaroslav","apps":8,"goals":1,"assists":9,"source_season":"Hala 2025/26"},{"id":12757,"name":"Kosiński Tomasz","apps":4,"goals":2,"assists":4,"source_season":"Hala 2025/26"},{"id":12749,"name":"Boratyński Łukasz","apps":11,"goals":1,"assists":2,"source_season":"Hala 2025/26"},{"id":13024,"name":"Żukowski Łukasz","apps":2,"goals":2,"assists":0,"source_season":"Hala 2025/26"}],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"orlik26-7","date":"2026-06-13","gf":1,"ga":3}]},"statistical_watchouts":["Dużo zdobywanych bramek na mecz — szczególnie uważać na straty i kontrataki. Konkretne schematy wymagają nagrania.","Solidna defensywa według wyników — zaplanować cierpliwe rozegranie i warianty stałych fragmentów.","Wysoki odsetek zwycięstw — ograniczać ryzyko w przejściu do obrony."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"4technology","name":"4Technology","status":"candidate","origin":"retained_I","hall":{"name":"4Technology","position":6,"matches":15,"wins":8,"draws":3,"losses":4,"gf":53,"ga":44,"points":27,"tier":1},"orlik":{"name":"4Technology","position":2,"matches":14,"wins":12,"draws":1,"losses":1,"gf":82,"ga":31,"points":37,"tier":1},"strength":69.7,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"9816","date":"2024-03-17","gf":0,"ga":2}]},"statistical_watchouts":["Dużo zdobywanych bramek na mecz — szczególnie uważać na straty i kontrataki. Konkretne schematy wymagają nagrania.","Wysoka średnia straconych bramek — warto testować szybkie zmiany strony i wbiegnięcia, ale słabości sektorów nie są potwierdzone."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"zimne-dranie","name":"Zimne Dranie","status":"candidate","origin":"promoted_II","orlik":{"name":"Zimne Dranie","position":2,"matches":15,"wins":11,"draws":1,"losses":3,"gf":50,"ga":21,"points":34,"tier":2},"strength":61.8,"data_coverage":0.3,"confidence":"niska","players":[{"id":10911,"name":"Stachurski Łukasz","apps":15,"goals":10,"assists":14,"source_season":"Hala 2025/26"},{"id":10909,"name":"Oświeciński Maciej","apps":15,"goals":13,"assists":6,"source_season":"Hala 2025/26"},{"id":10910,"name":"Pawluczuk Przemysław","apps":14,"goals":12,"assists":2,"source_season":"Hala 2025/26"},{"id":11902,"name":"Roszkowski Michał","apps":14,"goals":5,"assists":3,"source_season":"Hala 2025/26"},{"id":10915,"name":"Stachurski Kacper","apps":12,"goals":6,"assists":1,"source_season":"Hala 2025/26"}],"h2h":{"games":4,"wins":0,"draws":0,"losses":4,"matches":[{"id":"11389","date":"2025-02-16","gf":1,"ga":3},{"id":"12132","date":"2025-09-14","gf":2,"ga":4},{"id":"12631","date":"2026-01-31","gf":1,"ga":5},{"id":"orlik26-6","date":"2026-05-30","gf":0,"ga":1}]},"statistical_watchouts":["Solidna defensywa według wyników — zaplanować cierpliwe rozegranie i warianty stałych fragmentów.","Wysoki odsetek zwycięstw — ograniczać ryzyko w przejściu do obrony."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"prostal","name":"PROSTAL","status":"candidate","origin":"retained_I","orlik":{"name":"PROSTAL","position":6,"matches":14,"wins":8,"draws":2,"losses":4,"gf":49,"ga":35,"points":26,"tier":1},"strength":61.5,"data_coverage":0.3,"confidence":"niska","players":[],"h2h":{"games":1,"wins":0,"draws":1,"losses":0,"matches":[{"id":"12581","date":"2025-12-14","gf":2,"ga":2}]},"statistical_watchouts":["Dużo zdobywanych bramek na mecz — szczególnie uważać na straty i kontrataki. Konkretne schematy wymagają nagrania."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"soccer-auto-wygoda","name":"Soccer Auto Wygoda","status":"candidate","origin":"retained_I","hall":{"name":"Soccer Auto Wygoda","position":5,"matches":15,"wins":9,"draws":1,"losses":5,"gf":51,"ga":36,"points":28,"tier":1},"orlik":{"name":"Soccer Auto Wygoda","position":4,"matches":15,"wins":10,"draws":1,"losses":4,"gf":35,"ga":28,"points":31,"tier":1},"strength":61.4,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":0,"wins":0,"draws":0,"losses":0,"matches":[]},"statistical_watchouts":["Brak jednoznacznego profilu taktycznego w samych liczbach."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"fc-bajaga","name":"Fc Bajaga","status":"candidate","origin":"retained_I","hall":{"name":"Fc Bajaga","position":3,"matches":15,"wins":10,"draws":3,"losses":2,"gf":44,"ga":31,"points":33,"tier":1},"orlik":{"name":"Fc Bajaga","position":7,"matches":14,"wins":5,"draws":3,"losses":6,"gf":31,"ga":38,"points":18,"tier":1},"strength":56.8,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":2,"wins":2,"draws":0,"losses":0,"matches":[{"id":"7875","date":"2023-03-19","gf":4,"ga":3},{"id":"8452","date":"2023-10-01","gf":5,"ga":1}]},"statistical_watchouts":["Brak jednoznacznego profilu taktycznego w samych liczbach."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"pth-maltrans","name":"PTH Maltrans","status":"candidate","origin":"retained_I","hall":{"name":"PTH Maltrans","position":7,"matches":15,"wins":8,"draws":2,"losses":5,"gf":49,"ga":29,"points":26,"tier":1},"orlik":{"name":"PTH Maltrans","position":9,"matches":14,"wins":5,"draws":2,"losses":7,"gf":34,"ga":44,"points":17,"tier":1},"strength":52.6,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":0,"wins":0,"draws":0,"losses":0,"matches":[]},"statistical_watchouts":["Brak jednoznacznego profilu taktycznego w samych liczbach."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"vesta","name":"VESTA","status":"candidate","origin":"retained_I","hall":{"name":"VESTA","position":12,"matches":15,"wins":3,"draws":3,"losses":9,"gf":43,"ga":45,"points":12,"tier":1},"orlik":{"name":"VESTA","position":5,"matches":14,"wins":8,"draws":2,"losses":4,"gf":38,"ga":24,"points":26,"tier":1},"strength":44.5,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":5,"wins":2,"draws":1,"losses":2,"matches":[{"id":"7814","date":"2023-02-26","gf":2,"ga":1},{"id":"8437","date":"2023-09-17","gf":3,"ga":1},{"id":"9755","date":"2024-02-18","gf":1,"ga":1},{"id":"10093","date":"2024-04-20","gf":1,"ga":2},{"id":"11397","date":"2025-03-01","gf":1,"ga":3}]},"statistical_watchouts":["Wysoka średnia straconych bramek — warto testować szybkie zmiany strony i wbiegnięcia, ale słabości sektorów nie są potwierdzone."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"hanbud","name":"Hanbud","status":"candidate","origin":"retained_I","hall":{"name":"Hanbud","position":8,"matches":15,"wins":7,"draws":2,"losses":6,"gf":44,"ga":46,"points":23,"tier":1},"orlik":{"name":"Hanbud","position":12,"matches":14,"wins":3,"draws":3,"losses":8,"gf":32,"ga":42,"points":12,"tier":1},"strength":42,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"10142","date":"2024-06-08","gf":0,"ga":2}]},"statistical_watchouts":["Wysoka średnia straconych bramek — warto testować szybkie zmiany strony i wbiegnięcia, ale słabości sektorów nie są potwierdzone."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"top-auto","name":"Top Auto","status":"candidate","origin":"retained_I","hall":{"name":"Top Auto","position":9,"matches":15,"wins":6,"draws":1,"losses":8,"gf":27,"ga":37,"points":19,"tier":1},"orlik":{"name":"Top Auto","position":8,"matches":14,"wins":6,"draws":0,"losses":8,"gf":31,"ga":26,"points":18,"tier":1},"strength":41.6,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":1,"wins":0,"draws":0,"losses":1,"matches":[{"id":"9714","date":"2024-02-04","gf":0,"ga":2}]},"statistical_watchouts":["Brak jednoznacznego profilu taktycznego w samych liczbach."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"fc-grubassy","name":"FC GRUBASSY","status":"candidate","origin":"retained_I","hall":{"name":"FC GRUBASSY","position":10,"matches":15,"wins":5,"draws":1,"losses":9,"gf":43,"ga":53,"points":16,"tier":1},"orlik":{"name":"FC GRUBASSY","position":10,"matches":14,"wins":5,"draws":0,"losses":9,"gf":51,"ga":62,"points":15,"tier":1},"strength":36.5,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":4,"wins":2,"draws":1,"losses":1,"matches":[{"id":"8289","date":"2023-05-28","gf":3,"ga":3},{"id":"10121","date":"2024-04-28","gf":2,"ga":3},{"id":"11017","date":"2024-12-01","gf":3,"ga":2},{"id":"12041","date":"2025-06-14","gf":3,"ga":2}]},"statistical_watchouts":["Wysoka średnia straconych bramek — warto testować szybkie zmiany strony i wbiegnięcia, ale słabości sektorów nie są potwierdzone."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"fc-drtusz","name":"FC DrTusz","status":"candidate","origin":"retained_I","hall":{"name":"FC DrTusz","position":13,"matches":15,"wins":3,"draws":3,"losses":9,"gf":21,"ga":39,"points":12,"tier":1},"orlik":{"name":"FC DrTusz","position":11,"matches":14,"wins":4,"draws":2,"losses":8,"gf":34,"ga":58,"points":14,"tier":1},"strength":27.5,"data_coverage":0.8,"confidence":"średnia","players":[],"h2h":{"games":2,"wins":0,"draws":2,"losses":0,"matches":[{"id":"8323","date":"2023-06-18","gf":3,"ga":3},{"id":"9800","date":"2024-03-03","gf":1,"ga":1}]},"statistical_watchouts":["Brak jednoznacznego profilu taktycznego w samych liczbach."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."},{"id":"wiara-piasta-ii","name":"WIARA PIASTA II","status":"candidate","origin":"retained_I","orlik":{"name":"WIARA PIASTA II","position":13,"matches":14,"wins":4,"draws":0,"losses":10,"gf":36,"ga":72,"points":12,"tier":1},"strength":23.4,"data_coverage":0.3,"confidence":"niska","players":[],"h2h":{"games":6,"wins":3,"draws":1,"losses":2,"matches":[{"id":"7851","date":"2023-03-05","gf":5,"ga":2},{"id":"8295","date":"2023-07-01","gf":1,"ga":0},{"id":"10225","date":"2024-09-15","gf":4,"ga":1},{"id":"11093","date":"2024-12-15","gf":0,"ga":0},{"id":"12151","date":"2025-09-28","gf":2,"ga":3},{"id":"12562","date":"2025-11-16","gf":0,"ga":4}]},"statistical_watchouts":["Wysoka średnia straconych bramek — warto testować szybkie zmiany strony i wbiegnięcia, ale słabości sektorów nie są potwierdzone."],"plan_a":["Przed meczem ustalić bieżącą kadrę rywala, a bez filmu nie zakładać określonego pressingu.","Sprawdzić reakcję obrony rywala na zmianę strony i ruch trzeciego zawodnika.","Po stracie zachować asekurację, ograniczyć kontry."],"plan_b":["Gdy pressing nie działa: ustawienie bardziej kompaktowe i ograniczenie wymiany akcji.","Przy prowadzeniu: kontrolować tempo; przy stracie: ryzyko zwiększać stopniowo."],"videos":[],"observations":[],"scouting_status":"statistical_only","warning":"Wskazówki to hipotezy ogólne, nie potwierdzone obserwacje stylu gry. Brak zweryfikowanego współczesnego materiału wideo."}],"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":{"name":"Bosch Service Tech-Car","position":3,"matches":15,"wins":11,"draws":2,"losses":2,"gf":59,"ga":17,"points":35,"tier":2},"hala_2025_26":{"matches":15,"points":21,"gf":33,"ga":39},"note":"Statystyki są potwierdzone; role i styl zawodników wymagają analizy wideo."},"editorial":{"intro":"Przedsezonowy scouting oparty na tabelach PLP i historycznych danych Boscha. Zalecenia taktyczne bez materiału wideo mają status hipotezy do sprawdzenia.","bos_ch_notes":["Orlik 2026: 11 zwycięstw, 2 remisy, 2 porażki, 59:17. Mocnym punktem jest defensywa potwierdzona statystykami sezonu.","Hala 2025/26: 21 pkt, 33:39. Ocenę sposobu gry należy oprzeć na nagraniach, ponieważ same wyniki nie dowodzą stylu pressingu."],"evidence_warning":"Nie znaleziono publicznie indeksowanych, zweryfikowanych pełnych nagrań aktualnych meczów konkretnych kandydatów. Archiwalne publikacje PLP zawierają materiały wideo (np. 2021), lecz nie stanowią potwierdzenia współczesnego stylu gry.","video_library_link":"https://podlaskaliga.pl/kategoria/video/mecze-kolejki/"},"rules":{"weights":"50/30/20, brakujące wagi rozdzielane proporcjonalnie","scouting_status":"statystyczny","videos":"Brak zweryfikowanych nagrań przeciwników — bez fikcyjnej analizy taktycznej"},"videos":[],"reviews":[]}
+{
+  "meta": {
+    "title": "Scouting Hala 2026/27",
+    "snapshot": "2026-10-18",
+    "note": "Projected league membership, NOT an official Hala 2026/27 lineup. Orlik I standings can still change; some teams have 14 and some 15 games.",
+    "promotion_rule_assumed": 3,
+    "forecast_not_confirmed": true,
+    "site_url": "https://podlaskaliga.pl",
+    "source_links": [
+      {
+        "label": "PLP — Hala 2025/26 I liga",
+        "url": "https://podlaskaliga.pl/tabela/i-liga-hala25-26/"
+      },
+      {
+        "label": "PLP — Orlik 2026 I liga",
+        "url": "https://podlaskaliga.pl/tabela/1-liga-orlik26/"
+      },
+      {
+        "label": "PLP — Orlik 2026 II liga",
+        "url": "https://podlaskaliga.pl/druzyna/ludki-bialystok/tabela/"
+      },
+      {
+        "label": "PLP — Hala 2025/26 II liga",
+        "url": "https://podlaskaliga.pl/tabela/ii-liga-hala25-26/"
+      }
+    ],
+    "snapshot_type": "projected_from_orlik"
+  },
+  "teams": [
+    {
+      "id": "hurtownia-krokus",
+      "name": "Hurtownia Krokus",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Hurtownia Krokus",
+        "position": 1,
+        "matches": 15,
+        "wins": 13,
+        "draws": 0,
+        "losses": 2,
+        "gf": 75,
+        "ga": 13,
+        "points": 39,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Hurtownia Krokus",
+        "position": 3,
+        "matches": 14,
+        "wins": 12,
+        "draws": 0,
+        "losses": 2,
+        "gf": 60,
+        "ga": 16,
+        "points": 36,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 89.7,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2023-11-26",
+            "gf": 0,
+            "ga": 5,
+            "id": "9480"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "adampol-glovis",
+      "name": "Adampol Glovis",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Adampol Glovis",
+        "position": 4,
+        "matches": 15,
+        "wins": 11,
+        "draws": 0,
+        "losses": 4,
+        "gf": 67,
+        "ga": 27,
+        "points": 33,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Adampol Glovis",
+        "position": 1,
+        "matches": 15,
+        "wins": 14,
+        "draws": 0,
+        "losses": 1,
+        "gf": 71,
+        "ga": 15,
+        "points": 42,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 84.3,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2024-01-14",
+            "gf": 0,
+            "ga": 4,
+            "id": "9646"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "biuro-serwis-kopiarki",
+      "name": "Biuro Serwis-Kopiarki",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "promoted_II",
+      "hall": null,
+      "orlik": {
+        "name": "Biuro Serwis-Kopiarki",
+        "position": 1,
+        "matches": 15,
+        "wins": 12,
+        "draws": 0,
+        "losses": 3,
+        "gf": 73,
+        "ga": 21,
+        "points": 36,
+        "tier": 2
+      },
+      "historic_hall": {
+        "name": "Biuro Serwis-Kopiarki",
+        "tier": 2,
+        "matches": 15,
+        "gf": 44,
+        "ga": 46,
+        "points": 23
+      },
+      "strength": 71.2,
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [
+        {
+          "name": "Mosiej Łukasz",
+          "id": 4448,
+          "apps": 15,
+          "goals": 30,
+          "assists": 8,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Smirnov Yaroslav",
+          "id": 13022,
+          "apps": 8,
+          "goals": 1,
+          "assists": 9,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Kosiński Tomasz",
+          "id": 12757,
+          "apps": 4,
+          "goals": 2,
+          "assists": 4,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Boratyński Łukasz",
+          "id": 12749,
+          "apps": 11,
+          "goals": 1,
+          "assists": 2,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Żukowski Łukasz",
+          "id": 13024,
+          "apps": 2,
+          "goals": 2,
+          "assists": 0,
+          "source_season": "Hala 2025/26"
+        }
+      ],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 2,
+        "wins": 0,
+        "draws": 0,
+        "losses": 2,
+        "matches": [
+          {
+            "date": "2026-06-13",
+            "gf": 1,
+            "ga": 3,
+            "id": "13336"
+          },
+          {
+            "date": "2026-06-13",
+            "gf": 1,
+            "ga": 3,
+            "id": "orlik26-7"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "4technology",
+      "name": "4Technology",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "4Technology",
+        "position": 6,
+        "matches": 15,
+        "wins": 8,
+        "draws": 3,
+        "losses": 4,
+        "gf": 53,
+        "ga": 44,
+        "points": 27,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "4Technology",
+        "position": 2,
+        "matches": 14,
+        "wins": 12,
+        "draws": 1,
+        "losses": 1,
+        "gf": 82,
+        "ga": 31,
+        "points": 37,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 69.7,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2024-03-17",
+            "gf": 0,
+            "ga": 2,
+            "id": "9816"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje.",
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "zimne-dranie",
+      "name": "Zimne Dranie",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "promoted_II",
+      "hall": null,
+      "orlik": {
+        "name": "Zimne Dranie",
+        "position": 2,
+        "matches": 15,
+        "wins": 11,
+        "draws": 1,
+        "losses": 3,
+        "gf": 50,
+        "ga": 21,
+        "points": 34,
+        "tier": 2
+      },
+      "historic_hall": {
+        "name": "Zimne Dranie",
+        "tier": 2,
+        "matches": 15,
+        "gf": 62,
+        "ga": 37,
+        "points": 26
+      },
+      "strength": 61.8,
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [
+        {
+          "name": "Stachurski Łukasz",
+          "id": 10911,
+          "apps": 15,
+          "goals": 10,
+          "assists": 14,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Oświeciński Maciej",
+          "id": 10909,
+          "apps": 15,
+          "goals": 13,
+          "assists": 6,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Pawluczuk Przemysław",
+          "id": 10910,
+          "apps": 14,
+          "goals": 12,
+          "assists": 2,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Roszkowski Michał",
+          "id": 11902,
+          "apps": 14,
+          "goals": 5,
+          "assists": 3,
+          "source_season": "Hala 2025/26"
+        },
+        {
+          "name": "Stachurski Kacper",
+          "id": 10915,
+          "apps": 12,
+          "goals": 6,
+          "assists": 1,
+          "source_season": "Hala 2025/26"
+        }
+      ],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 5,
+        "wins": 0,
+        "draws": 0,
+        "losses": 5,
+        "matches": [
+          {
+            "date": "2025-02-16",
+            "gf": 1,
+            "ga": 3,
+            "id": "11389"
+          },
+          {
+            "date": "2025-09-14",
+            "gf": 2,
+            "ga": 4,
+            "id": "12132"
+          },
+          {
+            "date": "2026-01-31",
+            "gf": 1,
+            "ga": 5,
+            "id": "12631"
+          },
+          {
+            "date": "2026-05-30",
+            "gf": 0,
+            "ga": 1,
+            "id": "13331"
+          },
+          {
+            "date": "2026-05-30",
+            "gf": 0,
+            "ga": 1,
+            "id": "orlik26-6"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Niska średnia straconych bramek — przygotować cierpliwe ataki i kilka wariantów rozegrania.",
+        "Wysoki odsetek zwycięstw — unikać niepotrzebnej wymiany akcji bez zabezpieczenia obrony."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "prostal",
+      "name": "PROSTAL",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": null,
+      "orlik": {
+        "name": "PROSTAL",
+        "position": 6,
+        "matches": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "gf": 49,
+        "ga": 35,
+        "points": 26,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 61.5,
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 1,
+        "losses": 0,
+        "matches": [
+          {
+            "date": "2025-12-14",
+            "gf": 2,
+            "ga": 2,
+            "id": "12581"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Wysoka średnia bramek na mecz — ograniczyć straty w fazie przejścia i sprawdzić na wideo, skąd powstają okazje."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "soccer-auto-wygoda",
+      "name": "Soccer Auto Wygoda",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Soccer Auto Wygoda",
+        "position": 5,
+        "matches": 15,
+        "wins": 9,
+        "draws": 1,
+        "losses": 5,
+        "gf": 51,
+        "ga": 36,
+        "points": 28,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Soccer Auto Wygoda",
+        "position": 4,
+        "matches": 15,
+        "wins": 10,
+        "draws": 1,
+        "losses": 4,
+        "gf": 35,
+        "ga": 28,
+        "points": 31,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 61.4,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "matches": []
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "fc-bajaga",
+      "name": "Fc Bajaga",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Fc Bajaga",
+        "position": 3,
+        "matches": 15,
+        "wins": 10,
+        "draws": 3,
+        "losses": 2,
+        "gf": 44,
+        "ga": 31,
+        "points": 33,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Fc Bajaga",
+        "position": 7,
+        "matches": 14,
+        "wins": 5,
+        "draws": 3,
+        "losses": 6,
+        "gf": 31,
+        "ga": 38,
+        "points": 18,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 56.8,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 2,
+        "wins": 2,
+        "draws": 0,
+        "losses": 0,
+        "matches": [
+          {
+            "date": "2023-03-19",
+            "gf": 4,
+            "ga": 3,
+            "id": "7875"
+          },
+          {
+            "date": "2023-10-01",
+            "gf": 5,
+            "ga": 1,
+            "id": "8452"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "pth-maltrans",
+      "name": "PTH Maltrans",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "PTH Maltrans",
+        "position": 7,
+        "matches": 15,
+        "wins": 8,
+        "draws": 2,
+        "losses": 5,
+        "gf": 49,
+        "ga": 29,
+        "points": 26,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "PTH Maltrans",
+        "position": 9,
+        "matches": 14,
+        "wins": 5,
+        "draws": 2,
+        "losses": 7,
+        "gf": 34,
+        "ga": 44,
+        "points": 17,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 52.6,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 0,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "matches": []
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "vesta",
+      "name": "VESTA",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "VESTA",
+        "position": 12,
+        "matches": 15,
+        "wins": 3,
+        "draws": 3,
+        "losses": 9,
+        "gf": 43,
+        "ga": 45,
+        "points": 12,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "VESTA",
+        "position": 5,
+        "matches": 14,
+        "wins": 8,
+        "draws": 2,
+        "losses": 4,
+        "gf": 38,
+        "ga": 24,
+        "points": 26,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 44.5,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 5,
+        "wins": 2,
+        "draws": 1,
+        "losses": 2,
+        "matches": [
+          {
+            "date": "2023-02-26",
+            "gf": 2,
+            "ga": 1,
+            "id": "7814"
+          },
+          {
+            "date": "2023-09-17",
+            "gf": 3,
+            "ga": 1,
+            "id": "8437"
+          },
+          {
+            "date": "2024-02-18",
+            "gf": 1,
+            "ga": 1,
+            "id": "9755"
+          },
+          {
+            "date": "2024-04-20",
+            "gf": 1,
+            "ga": 2,
+            "id": "10093"
+          },
+          {
+            "date": "2025-03-01",
+            "gf": 1,
+            "ga": 3,
+            "id": "11397"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "hanbud",
+      "name": "Hanbud",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Hanbud",
+        "position": 8,
+        "matches": 15,
+        "wins": 7,
+        "draws": 2,
+        "losses": 6,
+        "gf": 44,
+        "ga": 46,
+        "points": 23,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Hanbud",
+        "position": 12,
+        "matches": 14,
+        "wins": 3,
+        "draws": 3,
+        "losses": 8,
+        "gf": 32,
+        "ga": 42,
+        "points": 12,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 42.0,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2024-06-08",
+            "gf": 0,
+            "ga": 2,
+            "id": "10142"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "top-auto",
+      "name": "Top Auto",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "Top Auto",
+        "position": 9,
+        "matches": 15,
+        "wins": 6,
+        "draws": 1,
+        "losses": 8,
+        "gf": 27,
+        "ga": 37,
+        "points": 19,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "Top Auto",
+        "position": 8,
+        "matches": 14,
+        "wins": 6,
+        "draws": 0,
+        "losses": 8,
+        "gf": 31,
+        "ga": 26,
+        "points": 18,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 41.6,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 1,
+        "wins": 0,
+        "draws": 0,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2024-02-04",
+            "gf": 0,
+            "ga": 2,
+            "id": "9714"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "fc-grubassy",
+      "name": "FC GRUBASSY",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "FC GRUBASSY",
+        "position": 10,
+        "matches": 15,
+        "wins": 5,
+        "draws": 1,
+        "losses": 9,
+        "gf": 43,
+        "ga": 53,
+        "points": 16,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "FC GRUBASSY",
+        "position": 10,
+        "matches": 14,
+        "wins": 5,
+        "draws": 0,
+        "losses": 9,
+        "gf": 51,
+        "ga": 62,
+        "points": 15,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 36.5,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 4,
+        "wins": 2,
+        "draws": 1,
+        "losses": 1,
+        "matches": [
+          {
+            "date": "2023-05-28",
+            "gf": 3,
+            "ga": 3,
+            "id": "8289"
+          },
+          {
+            "date": "2024-04-28",
+            "gf": 2,
+            "ga": 3,
+            "id": "10121"
+          },
+          {
+            "date": "2024-12-01",
+            "gf": 3,
+            "ga": 2,
+            "id": "11017"
+          },
+          {
+            "date": "2025-06-14",
+            "gf": 3,
+            "ga": 2,
+            "id": "12041"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "fc-drtusz",
+      "name": "FC DrTusz",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": {
+        "name": "FC DrTusz",
+        "position": 13,
+        "matches": 15,
+        "wins": 3,
+        "draws": 3,
+        "losses": 9,
+        "gf": 21,
+        "ga": 39,
+        "points": 12,
+        "tier": 1
+      },
+      "orlik": {
+        "name": "FC DrTusz",
+        "position": 11,
+        "matches": 14,
+        "wins": 4,
+        "draws": 2,
+        "losses": 8,
+        "gf": 34,
+        "ga": 58,
+        "points": 14,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 27.5,
+      "data_coverage": 0.8,
+      "confidence": "średnia",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 2,
+        "wins": 0,
+        "draws": 2,
+        "losses": 0,
+        "matches": [
+          {
+            "date": "2023-06-18",
+            "gf": 3,
+            "ga": 3,
+            "id": "8323"
+          },
+          {
+            "date": "2024-03-03",
+            "gf": 1,
+            "ga": 1,
+            "id": "9800"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    },
+    {
+      "id": "wiara-piasta-ii",
+      "name": "WIARA PIASTA II",
+      "status": "candidate",
+      "division": "projected_1_hala_2026_27",
+      "origin": "retained_I",
+      "hall": null,
+      "orlik": {
+        "name": "WIARA PIASTA II",
+        "position": 13,
+        "matches": 14,
+        "wins": 4,
+        "draws": 0,
+        "losses": 10,
+        "gf": 36,
+        "ga": 72,
+        "points": 12,
+        "tier": 1
+      },
+      "historic_hall": null,
+      "strength": 23.4,
+      "data_coverage": 0.3,
+      "confidence": "niska",
+      "players": [],
+      "plp_team_id": null,
+      "season_match_details": [],
+      "player_stats_verified": false,
+      "h2h": {
+        "games": 6,
+        "wins": 3,
+        "draws": 1,
+        "losses": 2,
+        "matches": [
+          {
+            "date": "2023-03-05",
+            "gf": 5,
+            "ga": 2,
+            "id": "7851"
+          },
+          {
+            "date": "2023-07-01",
+            "gf": 1,
+            "ga": 0,
+            "id": "8295"
+          },
+          {
+            "date": "2024-09-15",
+            "gf": 4,
+            "ga": 1,
+            "id": "10225"
+          },
+          {
+            "date": "2024-12-15",
+            "gf": 0,
+            "ga": 0,
+            "id": "11093"
+          },
+          {
+            "date": "2025-09-28",
+            "gf": 2,
+            "ga": 3,
+            "id": "12151"
+          },
+          {
+            "date": "2025-11-16",
+            "gf": 0,
+            "ga": 4,
+            "id": "12562"
+          }
+        ]
+      },
+      "statistical_watchouts": [
+        "Dużo straconych bramek — szukać możliwości ataku, ale dopiero nagrania pokażą, które sektory boiska są słabo zabezpieczone."
+      ],
+      "plan_a": [
+        "W obronie: potwierdzić na wideo role rozgrywających i sposób wyprowadzania piłki; bez potwierdzenia nie przypisywać indywidualnego krycia.",
+        "W ataku: sprawdzić na początku meczu reakcję obrony na zmianę strony i ruch trzeciego zawodnika.",
+        "Po stracie: zachować asekurację i nie dopuścić do łatwej sytuacji liczebnej."
+      ],
+      "plan_b": [
+        "Gdy pressing nie działa: przejść na bardziej kompaktowe ustawienie i ograniczyć otwartą wymianę.",
+        "Przy prowadzeniu: kontrolować tempo i zabezpieczyć środek po stracie.",
+        "Przy stracie: zwiększać ryzyko stopniowo, zgodnie z regulaminem i dostępnymi zawodnikami."
+      ],
+      "scouting_status": "statistical_only",
+      "observations": [],
+      "videos": [],
+      "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
+    }
+  ],
+  "bosch": {
+    "name": "Bosch Service Tech-Car",
+    "orlik_2026": {
+      "name": "Bosch Service Tech-Car",
+      "position": 2,
+      "matches": 15,
+      "wins": 11,
+      "draws": 2,
+      "losses": 2,
+      "gf": 59,
+      "ga": 17,
+      "points": 35,
+      "tier": 2
+    },
+    "hala_2025_26": {
+      "points": 21,
+      "matches": 15,
+      "gf": 33,
+      "ga": 39
+    },
+    "strength_weights": {
+      "hala_2025_26": 0.5,
+      "orlik_2026": 0.3,
+      "older_hall": 0.2
+    },
+    "note": "Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."
+  },
+  "editorial": {
+    "intro": "Przedsezonowy scouting oparty na tabelach PLP i historycznych danych Boscha. Zalecenia taktyczne bez materiału wideo mają status hipotezy do sprawdzenia.",
+    "bos_ch_notes": [
+      "Orlik 2026: 11 zwycięstw, 2 remisy, 2 porażki, 59:17. Mocnym punktem jest defensywa potwierdzona statystykami sezonu.",
+      "Hala 2025/26: 21 pkt, 33:39. Ocenę sposobu gry należy oprzeć na nagraniach, ponieważ same wyniki nie dowodzą stylu pressingu."
+    ],
+    "evidence_warning": "Nie znaleziono publicznie indeksowanych, zweryfikowanych pełnych nagrań aktualnych meczów konkretnych kandydatów. Archiwalne publikacje PLP zawierają materiały wideo (np. 2021), lecz nie stanowią potwierdzenia współczesnego stylu gry.",
+    "video_library_link": "https://podlaskaliga.pl/kategoria/video/mecze-kolejki/"
+  },
+  "videos": [],
+  "reviews": [],
+  "rules": {
+    "weights": "50/30/20 reweighted among available seasons; do not replace missing data with zero",
+    "new_season_weight": "min(0.65, matches / (matches + 8))",
+    "tactical_evidence": "A timestamped source is required for any assertion about playing style"
+  }
+}
