@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
 from urllib.request import Request, urlopen
+from urllib.parse import quote
 import json
 import re
 import sys
@@ -29,6 +30,24 @@ def normalize(value: str) -> str:
 
 def load(path: Path, default: dict) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+
+
+def resolve_channel_id(source: dict) -> str:
+    channel_id = source.get("channel_id", "")
+    if re.fullmatch(r"UC[A-Za-z0-9_-]{22}", channel_id):
+        return channel_id
+    handle = source.get("handle", "").lstrip("@")
+    if not handle or not re.fullmatch(r"[A-Za-z0-9_.-]+", handle):
+        raise ValueError("Missing channel ID or valid handle")
+    request = Request(f"https://www.youtube.com/@{quote(handle)}", headers={"User-Agent": AGENT})
+    with urlopen(request, timeout=30) as response:
+        html = response.read(600000).decode("utf-8", errors="replace")
+    matches = re.findall(r'"(?:externalId|channelId)"\s*:\s*"(UC[A-Za-z0-9_-]{22})"', html)
+    if not matches:
+        matches = re.findall(r'https://www\.youtube\.com/channel/(UC[A-Za-z0-9_-]{22})', html)
+    if not matches:
+        raise RuntimeError(f"Could not resolve YouTube channel @{handle}")
+    return matches[0]
 
 
 def fetch(channel_id: str) -> list[dict]:
@@ -82,11 +101,8 @@ def main() -> None:
     errors = []
     detected = 0
     for source in config.get("channels", []):
-        channel_id = source.get("channel_id", "")
-        if not re.fullmatch(r"UC[A-Za-z0-9_-]{22}", channel_id):
-            errors.append(f"Invalid channel id for {source.get('name', '?')}")
-            continue
         try:
+            channel_id = resolve_channel_id(source)
             items = fetch(channel_id)
         except Exception as error:
             errors.append(f"{source.get('name', channel_id)}: {type(error).__name__} {error}")
