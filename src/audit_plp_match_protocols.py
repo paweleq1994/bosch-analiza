@@ -126,6 +126,9 @@ def interpret_performance(event: dict | None, player_names: dict) -> dict:
             "assists": assists,
             "own_goals": own_goal,
             "raw_fields": sorted(stats),
+            "raw_goals": str(stats.get("goals") or ""),
+            "raw_assists": str(stats.get("assists") or ""),
+            "raw_own_goals": str(stats.get("samobje") or ""),
         })
 
         if own_goal:
@@ -208,6 +211,8 @@ def parse_table_performance(table, index: int) -> dict:
             "goals": integer(goals_cell.get_text(" ", strip=True)) if goals_cell else None,
             "own_goals": integer(own_goals_cell.get_text(" ", strip=True)) if own_goals_cell else None,
             "profile_url": player_link.get("href") if player_link else None,
+            "raw_goals": goals_cell.get_text(" ", strip=True) if goals_cell else "",
+            "raw_own_goals": own_goals_cell.get_text(" ", strip=True) if own_goals_cell else "",
         })
 
     confirmed_goals = [row["goals"] for row in player_rows if row["goals"] is not None]
@@ -311,6 +316,13 @@ def inspect_match(match: dict, events: dict, player_names: dict) -> dict:
     api_event = events.get(season_id, {}).get(event_id)
     api_stats = interpret_performance(api_event, player_names)
     html_stats = parse_match_html(page)
+
+    if str(match.get("id")) in {"7416", "7758", "10145", "12153", "12656"} and page:
+        document = BeautifulSoup(page, "html.parser")
+        tables = document.select(".sp-template-event-performance table")
+        html_stats["debug_table_markup"] = str(tables[0])[:9500] if tables else ""
+        html_stats["debug_statistic_markup"] = str(document.select_one(".sp-template-event-statistics"))[:4500]
+
     official_goals = int(match["gf"])
     accounted_goals = api_stats["goals"]
 
