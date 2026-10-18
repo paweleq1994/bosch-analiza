@@ -18,7 +18,7 @@ PROFILES = ROOT / "data" / "player_profile_map.json"
 RECAP = ROOT / "data" / "orlik_2026_recap.json"
 SPORTSPRESS = "https://podlaskaliga.pl/wp-json/sportspress/v2"
 USER_AGENT = "Bosch-Scouting/1.0"
-POST_ID_PATTERN = re.compile(r'(?:postid-|id=["\\\']post-|[?&]p=)(\\d+)')
+POST_ID_PATTERN = re.compile(r'(?:postid-|id=["\\\']post-|[?&]p=)(\d+)')
 TITLE_PATTERN = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 
 
@@ -107,11 +107,11 @@ def find_profile(name: str, fetch=fetch_json, fetch_page=fetch_html) -> tuple[st
                 if not match:
                     continue
 
-                html_title = re.split(r"\\s+[–-]\\s+Podlaska Liga", unescape(re.sub(r"<[^>]*>", " ", match.group(1))), maxsplit=1)[0]
+                html_title = re.split(r"\s+[–-]\s+Podlaska Liga", unescape(re.sub(r"<[^>]*>", " ", match.group(1))), maxsplit=1)[0]
                 if person_key(html_title) != person_key(name):
                     continue
 
-                shortlink = re.search(r'<link[^>]+rel=["\\\']shortlink["\\\'][^>]+href=["\\\'][^"\\\']*[?&]p=(\\d+)', html, re.I)
+                shortlink = re.search(r'<link[^>]+rel=["\\\']shortlink["\\\'][^>]+href=["\\\'][^"\\\']*[?&]p=(\d+)', html, re.I)
                 player_ids = {shortlink.group(1)} if shortlink else set(POST_ID_PATTERN.findall(html))
                 if len(player_ids) != 1:
                     continue
