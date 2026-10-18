@@ -62,6 +62,7 @@ def main() -> None:
     videos_extra = load("video_updates.json", {"videos": [], "manual_bindings": {}})
     league_extra = load("league_updates.json", {"matches": []})
     player_seasons_extra = load("player_season_updates.json", {})
+    player_career_extra = load("player_career_updates.json", {})
 
     seasons = [
         {
@@ -275,6 +276,21 @@ def main() -> None:
             elif canonical_id == "146":
                 player["hala2526"] = player["season_stats"][canonical_id]
 
+    # Rebuild headline stats from the same verified seasons as the season table.
+    # Supercups are included; PLP career across all clubs remains separate.
+    from player_totals import bosch_totals
+    for player in historic_players:
+        details = player_seasons_extra.get(str(player["id"])) or {}
+        calculated = bosch_totals(details)
+        if calculated:
+            player["bosch_totals"] = calculated
+            for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                player[field] = calculated[field]
+        else:
+            player["bosch_totals"] = None
+        player["career_totals"] = player_career_extra.get(str(player["id"]))
+        player["stats_source"] = "PLP SportsPress" if calculated else "Niepełne archiwum — historyczne dane"
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -285,6 +301,11 @@ def main() -> None:
         if player.get("orlik2026"):
             season_stats[SEASON_2026] = player["orlik2026"]
         history = []
+        for sid, stat in details.items():
+            if str(sid) in ("119","127","140","145") and (stat.get("apps") or 0)>0:
+                history.append({"sid":str(sid),"name":stat.get("name") or ("Superpuchar "+str(sid)),
+                    "apps":stat.get("apps"),"goals":stat.get("goals"),
+                    "assists":stat.get("assists"),"motm":stat.get("motm")})
         for season in seasons:
             sid = str(season["id"])
             if season["name"] in season_names or sid in season_stats:

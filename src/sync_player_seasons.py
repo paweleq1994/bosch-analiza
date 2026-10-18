@@ -7,6 +7,7 @@ team points to the verified Bosch team, avoid 'Suma' (-1) and column headers (0)
 from pathlib import Path
 from urllib.request import Request,urlopen
 import json,re,sys
+from player_totals import career_from_profile
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"player_season_updates.json"
 PORTAL=ROOT/"docs/assets/data.json"
@@ -49,13 +50,29 @@ def refresh(ids,current,fetch=request):
             warnings.append(f"{pid}: {type(error).__name__}: {error}")
     return merged,warnings
 
+def refresh_careers(ids, current, fetch=request):
+    merged=dict(current)
+    warnings=[]
+    for pid in ids:
+        try:
+            record=career_from_profile(fetch(pid), number)
+            if record:merged[str(pid)]=record
+        except Exception as error:
+            warnings.append(f"{pid}: {type(error).__name__}: {error}")
+    return merged,warnings
+
 def main():
     old=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     portal=json.loads(PORTAL.read_text(encoding="utf-8"))
     ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()},key=int)
     results,warnings=refresh(ids,old)
+    careers_file=ROOT/"data"/"player_career_updates.json"
+    previous_careers=json.loads(careers_file.read_text(encoding="utf-8")) if careers_file.exists() else {}
+    careers,career_warnings=refresh_careers(ids,previous_careers)
+    career_rendered=json.dumps(careers,ensure_ascii=False,indent=2)+"\n"
+    if not careers_file.exists() or careers_file.read_text(encoding="utf-8")!=career_rendered:careers_file.write_text(career_rendered,encoding="utf-8")
     rendered=json.dumps(results,ensure_ascii=False,indent=2)+"\n"
     if not OUT.exists() or OUT.read_text(encoding="utf-8")!=rendered:OUT.write_text(rendered,encoding="utf-8")
     for warning in warnings[:8]:print("Player statistics warning:",warning,file=sys.stderr)
-    print("PLP player season coverage:",len(results),"players;",sum(len(v) for v in results.values()),"season records;",len(warnings),"warnings")
+    print("PLP player season coverage:",len(results),"players;",sum(len(v) for v in results.values()),"season records;",len(warnings),"warnings;",len(careers),"career profiles;",len(career_warnings),"career warnings")
 if __name__=="__main__":main()
