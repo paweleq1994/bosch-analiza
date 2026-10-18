@@ -35,7 +35,7 @@ assert known_scorers["pietruczuk"]["stats_minimum"], "Partial match evidence is 
 attribution = DATA["analysis"]["player_goal_coverage"]
 for record in attribution:
     assert record["team_goals"] == (
-        record["attributed_goals"] + record["administrative_goals"] + record["unattributed_goals"]
+        record["attributed_goals"] + record["administrative_goals"] + record["opponent_own_goals"] + record["unattributed_goals"]
     ), f"Unbalanced season goal attribution: {record['season']}"
     assert record["unattributed_goals"] >= 0, f"Negative unexplained goals: {record['season']}"
 
