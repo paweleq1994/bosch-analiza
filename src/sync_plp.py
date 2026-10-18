@@ -40,8 +40,6 @@ def main():
     archive = json.loads(ARCHIVE.read_text(encoding="utf-8"))
     historic_ids = {str(item["id"]) for item in archive.get("seasons", [])}
     existing = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"season_rows": [], "matches": []}
-    known_event_ids = {str(item["id"]) for item in archive.get("matches", []) if not str(item["id"]).startswith("orlik26-")}
-    known_event_ids.update(str(item["event_id"]) for item in existing.get("matches", []) if item.get("event_id"))
     try:
         team = request(f"teams/{BOSCH_ID}")
     except Exception as error:
@@ -99,7 +97,7 @@ def main():
                     "match": title, "gf": number(own), "ga": number(other),
                     "halftime": "", "event_link": event.get("link") or "", "links": [],
                 }
-                if found_entry["date"] and str(event["id"]) not in known_event_ids:
+                if found_entry["date"]:
                     new_matches.append(found_entry)
             all_for_season = [item for item in new_matches if item["sid"] == str(season_id)]
             if len(all_for_season) == standing["matches"] and sum(item["gf"] for item in all_for_season) == standing["gf"] and sum(item["ga"] for item in all_for_season) == standing["ga"]:
@@ -108,9 +106,10 @@ def main():
                 new_matches = [item for item in new_matches if item["sid"] != str(season_id)]
         except Exception as error:
             print(f"PLP season {season_id} skipped: {type(error).__name__} {error}", file=sys.stderr)
+    valid_ids = {row["id"] for row in new_seasons}
     updated = {
         "season_rows": sorted({row["id"]: row for row in (existing.get("season_rows") or []) + new_seasons}.values(), key=lambda row: row["id"]),
-        "matches": sorted({str(row["event_id"]): row for row in (existing.get("matches") or []) + new_matches}.values(), key=lambda row: (row["date"], row["event_id"])),
+        "matches": sorted({str(row["event_id"]): row for row in (existing.get("matches") or [] if str(row["sid"]) not in valid_ids) + new_matches}.values(), key=lambda row: (row["date"], row["event_id"])),
     }
     rendered = json.dumps(updated, ensure_ascii=False, indent=2) + "\n"
     if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
