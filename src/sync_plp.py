@@ -56,8 +56,11 @@ def number(value):
 
 def season_key(value):
     text = norm(value)
-    match = re.search(r"\b(orlik|hala)\s+(20\d{2})(?:\s+(20\d{2}))?\b", text)
-    return (match.group(1), match.group(2), match.group(3) or "") if match else None
+    match = re.search(r"\b(orlik|hala)\s+(20\d{2}|\d{2})(?:\s+(20\d{2}|\d{2}))?\b", text)
+    if not match:
+        return None
+    year = lambda value: ("20" + value) if value and len(value) == 2 else (value or "")
+    return (match.group(1), year(match.group(2)), year(match.group(3)))
 
 
 def season_id_for(plp_id: int, label: str, known: list[dict]):
@@ -242,12 +245,23 @@ def synchronize(team, fetch_tables, fetch_events, existing, known_seasons, legac
             valid.append((standing, events, aggregate_players(events, local_sid)))
         except Exception as error:
             errors.append(f"Season {sid}: {type(error).__name__}: {error}")
-    merged_seasons = {str(row["id"]): row for row in existing.get("season_rows", [])}
+    reidentified = {
+        str(standing["plp_id"]): str(standing["id"])
+        for standing, _, _ in valid
+    }
+    merged_seasons = {
+        str(row["id"]): row for row in existing.get("season_rows", [])
+        if str(row["id"]) == reidentified.get(str(row.get("plp_id") or ""), str(row["id"]))
+    }
     matches_by_season = defaultdict(list)
     for item in existing.get("matches", []):
+        if str(item["sid"]) != reidentified.get(str(item.get("plp_season_id") or ""), str(item["sid"])):
+            continue
         matches_by_season[str(item["sid"])].append(item)
     people_by_season = defaultdict(list)
     for person in existing.get("player_seasons", []):
+        if str(person["sid"]) not in merged_seasons:
+            continue
         people_by_season[str(person["sid"])].append(person)
     for standing, events, people in valid:
         sid = str(standing["id"])

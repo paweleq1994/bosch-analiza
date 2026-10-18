@@ -35,6 +35,23 @@ class SynchronizationTests(unittest.TestCase):
     def test_future_fixture_not_scored(self):
         fixture=match(901,"2099-04-19","","")
         self.assertIsNone(sync.parse_event(fixture,234,"orlik-2026","Orlik 2026",LEGACY,{}))
+    def test_short_season_aliases_preserve_canonical_ids(self):
+        self.assertEqual(sync.season_key("2. LIGA – Orlik’26"), sync.season_key("Orlik 2026"))
+        self.assertEqual(sync.season_key("Hala’25/26"), sync.season_key("Hala 2025/2026"))
+        self.assertEqual(sync.season_id_for(148, "2. LIGA – Orlik’26", KNOWN), "orlik-2026")
+
+    def test_replaces_old_duplicate_plp_season_snapshot(self):
+        old = {
+            "season_rows": [{"id": "148", "plp_id": "148", "name": "2. Liga – Orlik’26"}],
+            "matches": [{"sid": "148", "plp_season_id": "148", "id": "901", "date": "2026-04-19"}],
+            "player_seasons": [],
+        }
+        new, valid, errors = sync.synchronize({"seasons":[148]}, lambda _:table(1,1,0,0,2,1,3), lambda _:[match(901,"2026-04-19",2,1)], old, KNOWN, LEGACY,{})
+        self.assertFalse(errors)
+        self.assertEqual(len(new["season_rows"]), 1)
+        self.assertEqual(new["season_rows"][0]["id"], "orlik-2026")
+        self.assertEqual(new["matches"][0]["id"], "orlik26-1")
+
     def test_repeat_is_idempotent(self):
         args=({"seasons":[234]},lambda _:table(1,1,0,0,2,1,3),lambda _:[match(901,"2026-04-19",2,1)])
         first,_,_=sync.synchronize(*args,{},KNOWN,LEGACY,{})
