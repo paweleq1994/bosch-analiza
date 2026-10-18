@@ -25,7 +25,7 @@ assert.ok(recordsPage.includes("https://podlaskaliga.pl/wydarzenie/ost-sport-vs-
 assert.ok(recordsPage.includes("Pozostała różnica: <strong>0</strong>"));
 assert.ok(recordsPage.includes("293 = 289"));
 assert.ok(recordsPage.includes("Samobóje rywali"));
-assert.ok(recordsPage.includes("113 protokołów"));
+assert.ok(recordsPage.includes("113 meczów"));
 
 const pietruczuk = database.players.find(player => player.name.toLowerCase().includes("pietruczuk"));
 assert.ok(pietruczuk, "Pietruczuk must be visible as a Bosch scorer");
