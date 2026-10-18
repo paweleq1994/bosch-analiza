@@ -22,8 +22,10 @@ const recordsPage = render("records()");
 assert.ok(recordsPage.includes("Administracyjne"));
 assert.ok(recordsPage.includes("Do wyjaśnienia"));
 assert.ok(recordsPage.includes("https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/"));
-assert.ok(recordsPage.includes("Pozostała różnica: <strong>7</strong>"));
-assert.ok(recordsPage.includes("Potwierdzonych bramek administracyjnych: <strong>1</strong>"));
+assert.ok(recordsPage.includes("Pozostała różnica: <strong>0</strong>"));
+assert.ok(recordsPage.includes("293 = 289"));
+assert.ok(recordsPage.includes("Samobóje rywali"));
+assert.ok(recordsPage.includes("113 protokołów"));
 
 const pietruczuk = database.players.find(player => player.name.toLowerCase().includes("pietruczuk"));
 assert.ok(pietruczuk, "Pietruczuk must be visible as a Bosch scorer");
@@ -44,4 +46,4 @@ const season2025 = render('seasonPage("144")');
 assert.ok(season2026.includes("Wojciuk"));
 assert.ok(season2025.includes("Pietruczuk"));
 
-console.log("Verified official scorer additions, minimum-only stats, walkover evidence and seven unresolved goals.");
+console.log("Verified official scorers, missing-minute markers, 113 source links and fully resolved 293 goals.");
