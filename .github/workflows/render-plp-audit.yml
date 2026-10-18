@@ -1,0 +1,37 @@
+name: Render complete Bosch match audit
+
+on:
+  push:
+    branches:
+      - audit/all-113-bosch-match-protocols
+    paths:
+      - 'src/render_match_protocol_report.py'
+      - '.github/workflows/render-plp-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build_audit_report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: audit/all-113-bosch-match-protocols
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Render complete match-by-match report with official links
+        run: python src/render_match_protocol_report.py
+      - name: Assert all Bosch fixtures have source links
+        run: |
+          python -c 'from pathlib import Path;p=Path("reports/bosch-113-match-protocols.md").read_text();assert p.count("[Protokół](")==113;print("VERIFIED_MATCH_LINKS",113)'
+      - name: Commit chronological source-linked audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/bosch-113-match-protocols.md
+          git commit -m "audit: archive all 113 original PLP match links with verified scorers [skip ci]"
+          git push origin HEAD:audit/all-113-bosch-match-protocols
