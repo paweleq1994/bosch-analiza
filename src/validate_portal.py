@@ -21,8 +21,8 @@ assert "new-dawid-daniluk" in daniluk[0].get("aliases", []), "Preserve old Danil
 assert daniluk[0]["orlik2026"]["goals"] == 16, "Missing verified Daniluk recap goals"
 
 for player in players:
-    seasons = [str(entry["sid"]) for entry in player.get("season_history", [])]
-    assert len(seasons) == len(set(seasons)), f"Repeated Bosch season for {player['name']}"
+    player_season_ids = [str(entry["sid"]) for entry in player.get("season_history", [])]
+    assert len(player_season_ids) == len(set(player_season_ids)), f"Repeated Bosch season for {player['name']}"
 
     career = player.get("career_totals") or {}
     career_seasons = [
