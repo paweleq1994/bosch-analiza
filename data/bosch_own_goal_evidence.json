@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "match_id": "7839",
+      "player_id": "1960",
+      "goals": 1
+    },
+    {
+      "match_id": "9657",
+      "player_id": "1960",
+      "goals": 1
+    },
+    {
+      "match_id": "9805",
+      "player_id": "1970",
+      "goals": 1
+    },
+    {
+      "match_id": "11317",
+      "player_id": "1960",
+      "goals": 1
+    },
+    {
+      "match_id": "12562",
+      "player_id": "7277",
+      "goals": 1
+    },
+    {
+      "match_id": "orlik26-4",
+      "player_id": "1960",
+      "goals": 1
+    }
+  ]
+}
