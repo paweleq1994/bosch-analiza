@@ -1,6 +1,11 @@
 name: Bosch data sync
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/sync.yml'
   schedule:
     - cron: "17 * * * *"
 permissions:
