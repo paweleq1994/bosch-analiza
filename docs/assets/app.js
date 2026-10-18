@@ -92,7 +92,7 @@ function goalsArchive(){
         '<div id="filtered-goals"></div>';
 }
 
-function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.filter(p=>p.orlik2026).sort((a,b)=>(b.orlik2026.goals+b.orlik2026.assists)-(a.orlik2026.goals+a.orlik2026.assists)).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy Orlika 2026",'<div class="card">'+leaders.map(p=>'<div class="list-row">'+playerLink(p)+'<strong>'+e(p.orlik2026.goals+p.orlik2026.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz pełną analizę Orlika 2026"],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
+function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.filter(p=>p.orlik2026).sort((a,b)=>(b.orlik2026.goals+b.orlik2026.assists)-(a.orlik2026.goals+a.orlik2026.assists)).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy Orlika 2026",'<div class="card">'+leaders.map(p=>'<div class="list-row">'+playerLink(p)+'<strong>'+e(p.orlik2026.goals+p.orlik2026.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz pełną analizę Orlika 2026"],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Gole i protokoły","goals","113 meczów, strzelcy, minuty oraz samobóje"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
 function seasons(){return headline("Sezony","Wszystkie rozgrywki Boscha i porównanie ich wyników.")+metrics([["Sezonów",DB.seasons.length],["Łącznie spotkań",DB.seasons.reduce((n,s)=>n+s.matches,0)],["Najwięcej punktów",Math.max(...DB.seasons.map(s=>s.points))]])+section("Historia sezonów",cards(DB.seasons.slice().reverse().map(s=>'<span class="eyebrow">'+(normalized(s.name).includes("hala")?"HALA":"ORLIK")+'</span><h3>'+seasonLink(s)+'</h3><div class="row"><span>'+e(s.position)+'. miejsce</span><strong>'+e(s.points)+' pkt</strong></div><p>'+e(s.wins+"W "+s.draws+"R "+s.losses+"P • "+s.gf+":"+s.ga+" • "+ppg(s)+" PPG")+'</p>')))+section("Porównanie punktów",barChart(DB.seasons,"points",s=>String(s.points)));}
 function seasonPage(id){
     const selectedSeason=season(id);
@@ -134,7 +134,23 @@ function seasonPage(id){
         (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Statystyki indywidualne pochodzą z dostępnych danych PLP; nie są pełnym potwierdzeniem wszystkich strzelców.</div>':"");
 }
 function matchesPage(){return headline("Mecze","Wyniki, protokoły, pojedyncze spotkania i powiązane filmy.")+filterInput("Rywal, wynik lub data")+'<div id="filtered-matches"></div>';}
-function matchDetail(id){const m=DB.matches.find(x=>same(x.id,id));if(!m)return empty("Nie znaleziono meczu.");const media=m.videos||[];return headline(m.opponent,m.date+" • "+m.season)+metrics([["Wynik Bosch",m.gf+":"+m.ga],["Rezultat",result(m)],["Do przerwy",m.halftime||"Brak danych"],["Nagrania",media.length]])+'<p>'+href("season/"+encodeURIComponent(m.sid),"← Powrót do sezonu")+'</p>'+section("Dane meczu",'<div class="card"><p>'+e(m.match||"Bosch Service Tech-Car — "+m.opponent)+'</p><p>Źródło: '+(m.event_link?'<a target="_blank" rel="noopener noreferrer" href="'+e(m.event_link)+'">Podlaska Liga Piłkarska ↗</a>':"Archiwum kompendium")+'</p></div>')+section("Nagrania",media.length?cards(media.map(v=>'<div class="video-thumb">▶</div><h3>'+e(v.segment||v.title||"Nagranie")+'</h3><a href="'+e(v.url||"https://www.youtube.com/watch?v="+v.video_id)+'" target="_blank" rel="noopener noreferrer">Oglądaj na YouTube ↗</a>')):empty("Brak przypisanego nagrania. Jeśli pojawi się na monitorowanym kanale, synchronizacja spróbuje je dopasować."));}
+function matchDetail(id){
+    const match=DB.matches.find(record=>same(record.id,id));
+
+    if(!match){
+        return empty("Nie znaleziono meczu.");
+    }
+
+    const protocol=match.goal_protocol||{};
+    const media=match.videos||[];
+
+    return headline(match.opponent,match.date+" • "+match.season)+
+        metrics([["Wynik Boscha",match.gf+":"+match.ga],["Rezultat",result(match)],["Gole zawodników",protocol.player_goals??"—"],["Samobóje rywali",protocol.own_goals??"—"],["Administracyjne",protocol.administrative_goals??"—"],["Nagrania",media.length]])+
+        '<p>'+href("season/"+encodeURIComponent(match.sid),"← Powrót do sezonu")+' · '+href("goals","Wszystkie protokoły →")+'</p>'+
+        section("Bramki, strzelcy i minuty",goalMatchTable(match))+
+        section("Dane meczu",'<div class="card"><p>'+e(match.match||"Bosch Service Tech-Car — "+match.opponent)+'</p><p>Źródło: <a href="'+e(match.event_link)+'" target="_blank" rel="noopener noreferrer">Oficjalny protokół PLP ↗</a></p></div>')+
+        section("Nagrania",media.length?cards(media.map(video=>'<div class="video-thumb">▶</div><h3>'+e(video.segment||video.title||"Nagranie")+'</h3><a href="'+e(video.url||"https://www.youtube.com/watch?v="+video.video_id)+'" target="_blank" rel="noopener noreferrer">Oglądaj na YouTube ↗</a>')):empty("Brak przypisanego nagrania."));
+}
 function players(){
     const sorting = '<div class="filters"><label>Sortowanie <select id="player-sort" aria-label="Sortuj zawodników"><option value="name">Alfabetycznie A–Z</option><option value="name-desc">Alfabetycznie Z–A</option><option value="apps">Najwięcej występów</option><option value="goals">Najwięcej goli</option><option value="assists">Najwięcej asyst</option><option value="points">Kanadyjka G+A</option><option value="motm">Najwięcej MVP</option><option value="yellow">Żółte kartki</option><option value="red">Czerwone kartki</option></select></label><label>Pokaż <select id="player-stat-filter" aria-label="Filtruj osiągnięcia"><option value="all">Wszyscy z sezonu</option><option value="scored">Z golem</option><option value="assisted">Z asystą</option><option value="motm">Z MVP</option><option value="yellow">Z żółtą kartką</option><option value="red">Z czerwoną kartką</option><option value="verified">Potwierdzone występy</option></select></label></div>';
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
@@ -227,7 +243,36 @@ function playerDetail(id){
         (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
 }
 function opponents(){const map=new Map();for(const m of DB.matches){const key=normalized(m.opponent);if(!map.has(key))map.set(key,{name:m.opponent,matches:[],key});map.get(key).matches.push(m);}DB.opponents=[...map.values()].sort((a,b)=>a.name.localeCompare(b.name,"pl"));return headline("Rywale","Bezpośrednie pojedynki z każdą drużyną.")+'<div class="filters"><input id="local-filter" placeholder="Znajdź rywala…"></div><div id="filtered-opponents"></div>';}
-function opponentDetail(id){const ms=DB.matches.filter(m=>normalized(m.opponent)===id);if(!ms.length)return empty("Nie znaleziono rywala.");const wins=ms.filter(m=>m.gf>m.ga).length,draws=ms.filter(m=>m.gf===m.ga).length;return headline(ms[0].opponent,"Historia spotkań z Bosch Service Tech-Car")+metrics([["Mecze",ms.length],["Wygrane",wins],["Remisy",draws],["Porażki",ms.length-wins-draws]])+section("Wszystkie pojedynki",'<div class="card">'+matchList(ms)+'</div>');}
+function opponentDetail(id){
+    const games=DB.matches.filter(match=>normalized(match.opponent)===id);
+
+    if(!games.length){
+        return empty("Nie znaleziono rywala.");
+    }
+
+    const victories=games.filter(match=>match.gf>match.ga).length;
+    const draws=games.filter(match=>match.gf===match.ga).length;
+    const leaders=new Map();
+
+    for(const match of games){
+        for(const scorer of match.goal_protocol?.scorers||[]){
+            const entry=leaders.get(scorer.player_id)||{id:scorer.player_id,name:scorer.name,goals:0};
+            entry.goals+=scorer.goals;
+            leaders.set(scorer.player_id,entry);
+        }
+    }
+
+    const ranked=[...leaders.values()].sort((first,second)=>second.goals-first.goals||first.name.localeCompare(second.name,"pl"));
+    const leaderTable=ranked.length?table(["Strzelec","Gole przeciw rywalowi"],ranked.map(row=>[
+        href("player/"+encodeURIComponent(row.id),row.name),
+        e(row.goals)
+    ])):empty("Brak goli zawodników Boscha przeciwko temu rywalowi.");
+
+    return headline(games[0].opponent,"Historia spotkań z Bosch Service Tech-Car")+
+        metrics([["Mecze",games.length],["Wygrane",victories],["Remisy",draws],["Porażki",games.length-victories-draws],["Bramki Boscha",games.reduce((sum,match)=>sum+match.gf,0)]])+
+        section("Najskuteczniejsi przeciw rywalowi",leaderTable)+
+        section("Wszystkie pojedynki",'<div class="card">'+matchList(games)+'</div>');
+}
 function videos(){
     return headline("Wideo","Archiwum filmów i nagrań przypisanych do meczów.")+
         metrics([["Materiały",DB.videos.length],["Powiązane z meczami",DB.videos.filter(video=>video.match_id).length]])+
