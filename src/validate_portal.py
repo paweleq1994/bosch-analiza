@@ -11,6 +11,27 @@ players = DATA["players"]
 jurkowicz = next(player for player in players if str(player["id"]) == "7275")
 assert (jurkowicz["apps"], jurkowicz["goals"], jurkowicz["assists"]) == (69, 30, 20), "Incomplete PLP Supercup totals for Jurkowicz"
 assert (jurkowicz["career_totals"]["apps"], jurkowicz["career_totals"]["goals"]) == (69, 30), "Bosch and whole-career PLP totals disagree"
+match_protocols = DATA["analysis"]["match_protocol_audit"]
+assert match_protocols["audited_matches"] == 113, "Historical Bosch match source audit is incomplete"
+assert match_protocols["total_protocol_goals"] == 289, "Inconsistent direct PLP player goals"
+assert match_protocols["total_own_goals"] == 3, "Missing opponent own goals"
+assert match_protocols["total_administrative_goals"] == 1, "Missing officially awarded goal"
+assert match_protocols["total_own_goals_conceded"] == 6, "Missing defensive Bosch own goals"
+
+goalkeeper = next((player for player in players if str(player["id"]) == "7284"), None)
+assert goalkeeper is not None, "Canonical goalkeeper profile is missing"
+assert all(str(player["id"]) != "13060" for player in players), "Duplicate goalkeeper profile was not merged"
+assert "13060" in goalkeeper.get("aliases", []), "Historical goalkeeper profile link is not preserved"
+assert (goalkeeper["apps"], goalkeeper["goals"], goalkeeper["assists"]) == (90, 2, 7), "Both PLP goalkeeper careers are not combined"
+assert (goalkeeper["season_stats"]["146"]["apps"], goalkeeper["season_stats"]["146"]["goals"]) == (8, 1), "Hala goalkeeper seasons were not combined"
+
+for match in matches:
+    protocol = match.get("goal_protocol")
+    assert protocol and protocol.get("verified"), f"Missing sourced goal record: {match['id']}"
+    assert protocol["player_goals"] + protocol["own_goals"] + protocol["administrative_goals"] == match["gf"], (
+        f"Scoring audit does not match the official score: {match['id']}"
+    )
+
 player_ids = [str(player["id"]) for player in players]
 assert len(player_ids) == len(set(player_ids)), "Duplicate PLP player identifiers"
 
