@@ -32,7 +32,7 @@ class PlayerCoverageAuditTests(unittest.TestCase):
         self.assertIn("Dawid Daniluk (PLP ID 2204)", report)
         self.assertIn("Sołowiej Tomasz (PLP ID 7285)", report)
         self.assertIn("Pietruczuk Paweł (PLP ID 12286)", report)
-        self.assertIn("zdjęcia drużynowe nie potwierdzają tożsamości osoby".casefold().replace("zdjęcia", "Zdjęcia"), report)
+        self.assertIn("zdjęcia drużynowe nie potwierdzają tożsamości osoby", report)
 
     def test_duplicate_goalkeeper_has_canonical_photo_subject(self):
         subjects = self.database.get("media", {}).get("subjects") or []
