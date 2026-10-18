@@ -10,6 +10,7 @@ import re
 import unicodedata
 
 from player_identity import legacy_player_id, match_public_profile, person_key
+from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -412,6 +413,24 @@ def main() -> None:
             else "Niepełne archiwum — historyczne dane"
         )
 
+    archive_rows = archived_bosch_seasons(
+        promotions,
+        {str(player["id"]) for player in historic_players},
+    )
+
+    for player in historic_players:
+        apply_archived_seasons(
+            player,
+            archive_rows.get(str(player["id"]), {}),
+            seasons,
+        )
+
+        if player["bosch_totals"] is None and any(
+            str(row.get("origin") or "").startswith(("plp_archived", "archived_peak"))
+            for row in player.get("season_stats", {}).values()
+        ):
+            player["stats_source"] = "Historyczne zestawienia PLP i Bosch, niepełny podział sezonów"
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -427,15 +446,23 @@ def main() -> None:
             if str(sid) in ("119","127","140","145") and (stat.get("apps") or 0)>0:
                 history.append({"sid":str(sid),"name":stat.get("name") or ("Superpuchar "+str(sid)),
                     "apps":stat.get("apps"),"goals":stat.get("goals"),
-                    "assists":stat.get("assists"),"motm":stat.get("motm")})
+                    "assists":stat.get("assists"),"motm":stat.get("motm"),
+                    "origin":stat.get("origin") or "plp_season"})
         for season in seasons:
             sid = str(season["id"])
             if season["name"] in season_names or sid in season_stats:
                 stat = season_stats.get(sid) or {}
                 history.append({"sid": sid, "name": season["name"],
                                 "apps": stat.get("apps"), "goals": stat.get("goals"),
-                                "assists": stat.get("assists"), "motm": stat.get("motm")})
+                                "assists": stat.get("assists"), "motm": stat.get("motm"),
+                                "origin": stat.get("origin") or (
+                                    "plp_season" if any(
+                                        type(stat.get(field)) is int
+                                        for field in ("apps", "goals", "assists")
+                                    ) else "participation_only"
+                                )})
         player["season_history"] = history
+        player["season_coverage"] = breakdown_coverage(player)
         player.pop("recap2026", None)
 
     goal_coverage = []
@@ -444,24 +471,37 @@ def main() -> None:
         if season.get("gf") is None:
             continue
 
-        plp_season_id = "148" if str(season["id"]) == SEASON_2026 else str(season["id"])
-        verified_rows = [
-            player_seasons[plp_season_id]
-            for player_seasons in player_seasons_extra.values()
-            if plp_season_id in player_seasons
-            and isinstance(player_seasons[plp_season_id].get("goals"), int)
-            and (player_seasons[plp_season_id].get("apps") or 0) > 0
-        ]
-        assigned_goals = sum(row["goals"] for row in verified_rows)
+        season_id = str(season["id"])
+        known_player_goals = []
+
+        for player in historic_players:
+            stats = player.get("season_stats", {}).get(season_id) or {}
+            goals = stats.get("goals")
+            apps = stats.get("apps")
+
+            if type(goals) is not int:
+                continue
+
+            if type(apps) is int and apps <= 0:
+                continue
+
+            known_player_goals.append(stats)
+
+        assigned_goals = sum(stats["goals"] for stats in known_player_goals)
+
+        if assigned_goals > season["gf"]:
+            raise ValueError(
+                f"Assigned goals exceed team goals for {season['name']}: {assigned_goals} > {season['gf']}"
+            )
 
         goal_coverage.append({
-            "sid": str(season["id"]),
+            "sid": season_id,
             "season": season["name"],
             "team_goals": season["gf"],
             "attributed_goals": assigned_goals,
-            "unattributed_goals": max(0, season["gf"] - assigned_goals),
-            "players_with_verified_stats": len(verified_rows),
-            "source": "PLP SportsPress; difference may include own goals and unavailable player entries",
+            "unattributed_goals": season["gf"] - assigned_goals,
+            "players_with_verified_stats": len(known_player_goals),
+            "source": "PLP SportsPress, archived PLP standings and Bosch historical season highlights; remaining goals may include own goals and incomplete reports",
         })
 
     # One source of truth for repeated historical leaderboard rows.
