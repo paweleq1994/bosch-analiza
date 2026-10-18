@@ -71,6 +71,11 @@ def match_summary(record: dict) -> dict:
         "opponent_own_goals": html.get("own_goals_by_opponent"),
         "bosch_own_goals": html.get("own_goals_by_bosch"),
         "unreadable_goal_markers": html.get("unreadable_goal_markers") or 0,
+        "unreadable_goal_marker_players": [
+            {"name": player["name"], "profile_url": player.get("profile_url") or ""}
+            for player in direct_players
+            if player.get("unreadable_goal_markers")
+        ],
         "scorers": sorted(scorers, key=lambda item: (-item["goals"], item["name"])),
     }
 
@@ -144,6 +149,7 @@ def summarize(source: dict, portal: dict, administrative_evidence: dict) -> dict
                 "on_field_goals": on_field_goals,
                 "administrative_goals": administrative_goals,
                 "unreadable_goal_markers": match["unreadable_goal_markers"],
+                "unreadable_goal_marker_players": match["unreadable_goal_marker_players"],
                 "issue": "goals_disagree_with_match_statistics",
             })
 
