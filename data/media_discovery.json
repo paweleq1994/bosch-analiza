@@ -117,6 +117,13 @@
   ],
   "candidates": [
     {
+      "player_id": "12286",
+      "media_id": "12847",
+      "url": "https://podlaskaliga.pl/wp-content/uploads/2024/11/OST-Sport.jpg",
+      "evidence": "historical_team_archive",
+      "team": "OST Sport"
+    },
+    {
       "player_id": "2204",
       "media_id": "2259",
       "url": "https://podlaskaliga.pl/wp-content/uploads/2021/05/Znienacka.jpg",
@@ -201,8 +208,8 @@
       "team": "Adampol Glovis"
     }
   ],
-  "searches": 34,
-  "last_scan_date": "2026-10-18",
+  "searches": 53,
+  "last_scan_date": "2026-10-19",
   "club_scan_version": 2,
-  "historical_clubs_scanned": 4
+  "historical_clubs_scanned": 9
 }
