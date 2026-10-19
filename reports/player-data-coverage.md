@@ -4,67 +4,93 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Podsumowanie
 
-- Zawodnicy: **33**
+- Zawodnicy: **45**
 - Sezony: **8**
 - Mecze: **113**
 - Oficjalne protokoły bramkowe: **113**
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
-- Zawodnicy ze zdjęciem: **13**, bez zdjęcia: **20**
-- Zawodnicy bez pełnego archiwum kariery PLP: **5**
-- Zawodnicy bez linku do publicznego profilu PLP: **7**
+- Zawodnicy ze zdjęciem: **15**, bez zdjęcia: **30**
+- Zawodnicy bez pełnego archiwum kariery PLP: **17**
+- Zawodnicy bez linku do publicznego profilu PLP: **11**
 
 ## Zakresy brakujących statystyk
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 1 | 4 | 1 |
-| Bramki | 0 | 0 | 5 |
-| Asysty | 1 | 1 | 1 |
-| MVP | 1 | 0 | 1 |
-| Żółte kartki | 1 | 1 | 1 |
-| Czerwone kartki | 1 | 1 | 1 |
+| Występy | 0 | 4 | 0 |
+| Bramki | 0 | 0 | 15 |
+| Asysty | 0 | 1 | 0 |
+| MVP | 0 | 0 | 0 |
+| Żółte kartki | 0 | 1 | 0 |
+| Czerwone kartki | 0 | 1 | 0 |
 
 ## Bez potwierdzonego zdjęcia indywidualnego
 
 - Adam Malesiński (PLP ID 6764)
+- Bazyluk Jakub (PLP ID 7266)
 - Bączek Szymon (PLP ID 8654)
+- Ciborowski Julian (PLP ID 10321)
+- Czudzinowicz Jakub (GK) (PLP ID 11895)
 - Damian Rogon (PLP ID 13196)
 - Dawid Daniluk (PLP ID 2204)
 - Dołżyk Michał (PLP ID 7269)
 - Filip Szparło (PLP ID 13197)
 - Gorbacewicz Emil (PLP ID 7271)
 - Gołąbeski Piotr (PLP ID 7270)
-- Kakareko Kamil (PLP ID new-kakareko-kamil)
+- Grabowski Jakub (GK) (PLP ID 7223)
 - Karolczuk Jakub (PLP ID 12425)
 - Karpiński Hubert (PLP ID 10836)
+- Karpowicz Kamil (PLP ID 13194)
 - Kossakowski Maciej (PLP ID 7278)
 - Kowalczuk Karol (PLP ID 9267)
+- Kuźma Gabriel (PLP ID 8655)
 - Markowski Damian (PLP ID 7282)
 - Muczyński Karol (PLP ID 8656)
 - Pietruczuk Paweł (PLP ID 12286)
 - Płochocki Maciej (PLP ID 12290)
+- Rollauer Patryk (PLP ID 12285)
+- Roszkowski Patryk (PLP ID 10603)
 - Sołowiej Tomasz (PLP ID 7285)
+- Uściłowski Krzysztof (PLP ID 7286)
 - Wojciuk Piotr (PLP ID 13198)
+- Wądołowski Sebastian (PLP ID 8916)
+- Śmiłowski Michał (PLP ID 10604)
 - Żak Paweł (GK) (PLP ID 13010)
 
 ## Bez pełnej historii kariery PLP
 
+- Bayer Emilian (PLP ID 2203)
+- Bazyluk Jakub (PLP ID 7266)
+- Ciborowski Julian (PLP ID 10321)
+- Czudzinowicz Jakub (GK) (PLP ID 11895)
 - Gorbacewicz Emil (PLP ID 7271)
 - Gołąbeski Piotr (PLP ID 7270)
+- Grabowski Jakub (GK) (PLP ID 7223)
+- Karpowicz Kamil (PLP ID 13194)
 - Kossakowski Maciej (PLP ID 7278)
+- Kuźma Gabriel (PLP ID 8655)
 - Markowski Damian (PLP ID 7282)
+- Rollauer Patryk (PLP ID 12285)
+- Roszkowski Patryk (PLP ID 10603)
 - Sołowiej Tomasz (PLP ID 7285)
+- Uściłowski Krzysztof (PLP ID 7286)
+- Wądołowski Sebastian (PLP ID 8916)
+- Śmiłowski Michał (PLP ID 10604)
 
 ## Bez publicznego linku profilu PLP
 
+- Bazyluk Jakub (PLP ID 7266)
+- Ciborowski Julian (PLP ID 10321)
 - Gorbacewicz Emil (PLP ID 7271)
 - Gołąbeski Piotr (PLP ID 7270)
-- Jurkowicz Mateusz (PLP ID 7275)
 - Kossakowski Maciej (PLP ID 7278)
+- Kuźma Gabriel (PLP ID 8655)
 - Markowski Damian (PLP ID 7282)
-- Pietruczuk Paweł (PLP ID 12286)
 - Sołowiej Tomasz (PLP ID 7285)
+- Uściłowski Krzysztof (PLP ID 7286)
+- Wądołowski Sebastian (PLP ID 8916)
+- Śmiłowski Michał (PLP ID 10604)
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
@@ -78,24 +104,25 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Nieznane dane sezonowe
 
+- Bayer Emilian (PLP ID 2203) — Orlik 2026: Bramki
+- Ciborowski Julian (PLP ID 10321) — Orlik 2024: Bramki
+- Czudzinowicz Jakub (GK) (PLP ID 11895) — Orlik 2025: Bramki
 - Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Bramki
 - Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Bramki
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Bramki
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Bramki
-- Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Występy
-- Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Asysty
-- Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: MVP
-- Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Żółte kartki
-- Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Czerwone kartki
+- Grabowski Jakub (GK) (PLP ID 7223) — Hala 2023/2024: Bramki
+- Karpowicz Kamil (PLP ID 13194) — Orlik 2026: Bramki
 - Kossakowski Maciej (PLP ID 7278) — Hala 2022: Bramki
+- Rollauer Patryk (PLP ID 12285) — Orlik 2025: Bramki
+- Roszkowski Patryk (PLP ID 10603) — Orlik 2024: Bramki
+- Roszkowski Patryk (PLP ID 10603) — Hala 2024/2025: Bramki
+- Wądołowski Sebastian (PLP ID 8916) — Orlik 2024: Bramki
+- Śmiłowski Michał (PLP ID 10604) — Orlik 2024: Bramki
 
 ## Nieznane sumy zawodników
 
-- Kakareko Kamil (PLP ID new-kakareko-kamil): Występy
-- Kakareko Kamil (PLP ID new-kakareko-kamil): Asysty
-- Kakareko Kamil (PLP ID new-kakareko-kamil): MVP
-- Kakareko Kamil (PLP ID new-kakareko-kamil): Żółte kartki
-- Kakareko Kamil (PLP ID new-kakareko-kamil): Czerwone kartki
+Brak.
 
 ## Zasady źródłowe
 

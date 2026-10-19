@@ -456,6 +456,89 @@
       "kind": "players",
       "id": "12286",
       "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "10321",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "10603",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "10604",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "11895",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "12285",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "13194",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "1594",
+      "photos": [
+        {
+          "id": "3846",
+          "url": "https://podlaskaliga.pl/wp-content/uploads/1988/07/Kakareko-Kamil.jpg",
+          "alt": "",
+          "published": "2021-08-31T19:08:45",
+          "featured": true,
+          "local": "media/f35dc5840ef46bb4138c6521.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "players",
+      "id": "2203",
+      "photos": [
+        {
+          "id": "3499",
+          "url": "https://podlaskaliga.pl/wp-content/uploads/1995/07/Emilian-Bayer.jpg",
+          "alt": "",
+          "published": "2021-07-09T11:32:11",
+          "featured": false,
+          "local": "media/260d1837e191749cfc503f6f.jpg"
+        }
+      ]
+    },
+    {
+      "kind": "players",
+      "id": "7223",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "7266",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "7286",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "8655",
+      "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "8916",
+      "photos": []
     }
   ],
   "notes": "Public PLP media attached to team/player profiles and uniquely matched detached WordPress media. Caption-only mentions are not treated as confirmed portraits."

@@ -2046,15 +2046,119 @@
       ],
       "source_url": "https://podlaskaliga.pl/zawodnik/wojciuk-piotr/",
       "captured_at": "2026-10-19T07:32:39+00:00"
+    },
+    "new-kakareko-kamil": {
+      "totals": {
+        "apps": 34,
+        "goals": 11,
+        "assists": 5,
+        "motm": 1,
+        "yellow": 2,
+        "red": 0
+      },
+      "season_rows": [
+        {
+          "name": "2021 - Wiosna",
+          "apps": 5,
+          "goals": 5,
+          "assists": 2,
+          "motm": 1,
+          "yellow": 1,
+          "red": 0
+        },
+        {
+          "name": "2021 - Lato",
+          "apps": 4,
+          "goals": 1,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "2021 - Superpuchar",
+          "apps": 3,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "2021-Hala",
+          "apps": 2,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "21/22 - Hala finałowa",
+          "apps": 3,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "Orlik 2022",
+          "apps": 8,
+          "goals": 0,
+          "assists": 2,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "Orlik 2024",
+          "apps": 7,
+          "goals": 4,
+          "assists": 1,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "Orlik 2025",
+          "apps": 2,
+          "goals": 1,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 1,
+          "red": 0
+        },
+        {
+          "name": "Superpuchar 2025",
+          "apps": 0,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        {
+          "name": "Hala 2025/2026",
+          "apps": 0,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        }
+      ],
+      "source_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "captured_at": "2026-10-19T09:36:38+00:00"
     }
   },
   "failures": {
+    "7275": "No public /zawodnik/ profile URL",
+    "7285": "No public /zawodnik/ profile URL",
     "7270": "No public /zawodnik/ profile URL",
     "7271": "No public /zawodnik/ profile URL",
-    "7275": "No public /zawodnik/ profile URL",
-    "7278": "No public /zawodnik/ profile URL",
     "7282": "No public /zawodnik/ profile URL",
-    "7285": "No public /zawodnik/ profile URL",
+    "7278": "No public /zawodnik/ profile URL",
     "12286": "No public /zawodnik/ profile URL"
   }
 }
