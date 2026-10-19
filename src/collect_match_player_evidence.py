@@ -118,11 +118,11 @@ def collect_matches(matches: list[dict], source_index: dict, fetch=get_event) ->
         match_id = str(match["id"])
         evidence = by_id.get(match_id)
 
-        if not evidence or not match.get("event_id"):
-            errors.append(f"{match_id}: no verified fixture/event mapping")
+        if not match.get("event_id") or not official_url(match.get("event_link")):
+            errors.append(f"{match_id}: missing verified fixture/event link")
             continue
 
-        if str(evidence["event_url"]).rstrip("/") != str(match["event_link"]).rstrip("/"):
+        if evidence and str(evidence["event_url"]).rstrip("/") != str(match["event_link"]).rstrip("/"):
             errors.append(f"{match_id}: source URL disagrees with verified archive")
             continue
 
@@ -147,10 +147,11 @@ def main() -> None:
 
     expected = {str(item["id"]) for item in index["matches"]}
     missing = sorted(expected - set(merged))
-    unexpected = sorted(set(merged) - expected)
+    known_fixtures = {str(item["id"]) for item in league["matches"]}
+    unexpected = sorted(set(merged) - (expected | known_fixtures))
 
     if missing or unexpected:
-        raise RuntimeError(f"Incomplete evidence: missing={missing}; extra={unexpected}; errors={errors[:12]}")
+        raise RuntimeError(f"Untrusted evidence: missing historical={missing}; unknown={unexpected}; errors={errors[:12]}")
 
     snapshot = {"matches": [merged[key] for key in sorted(merged)]}
     rendered = json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n"
