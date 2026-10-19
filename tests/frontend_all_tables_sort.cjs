@@ -44,14 +44,19 @@ assert.ok(leaderArea.includes("<th>G+A</th>"));
 const futureDatabase = structuredClone(database);
 futureDatabase.seasons.push({id:"170",name:"Orlik 2027",position:1,points:3,gf:2,ga:1});
 futureDatabase.players.push({id:"future-leader",name:"Nowy Lider",season_stats:{"170":{apps:1,goals:2,assists:1}}});
+futureDatabase.players.push({id:"future-minimum",name:"Niepełny Rekord",season_stats:{"170":{apps:1,goals:100,assists:100,origin:"plp_match_minimum"}}});
 context.database = futureDatabase;
 vm.runInContext("DB = database", context);
 const futureHome = vm.runInContext("home()", context);
 assert.ok(futureHome.includes("Liderzy Orlik 2027"));
 assert.ok(futureHome.includes("Nowy Lider"));
+assert.ok(!futureHome.includes("Niepełny Rekord"));
 assert.ok(!futureHome.includes("Liderzy Orlik 2026"));
 const futureLeaders = vm.runInContext('seasonPage("170")', context);
 assert.ok(futureLeaders.includes("Nowy Lider"));
+const rankedFuture=futureLeaders.split("Liderzy sezonu — kanadyjka (G+A)")[1].split("Zawodnicy z niepełnymi statystykami")[0];
+assert.ok(!rankedFuture.includes("Niepełny Rekord"));
+assert.ok(futureLeaders.includes("Niepełny Rekord"));
 
 for (const filename of ["index.html", "scouting.html", "orlik-2026.html", "archive.html"]) {
     const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");

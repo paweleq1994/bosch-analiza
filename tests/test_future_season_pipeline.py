@@ -2,6 +2,7 @@
 import json
 import sys
 import tempfile
+import runpy
 import unittest
 from copy import deepcopy
 from pathlib import Path
@@ -16,6 +17,10 @@ from sync_new_goal_protocols import extend
 
 
 class FutureSeasonPipelineTests(unittest.TestCase):
+    def validate_portal(self, db):
+        with patch.object(Path, "read_text", return_value=json.dumps(db)):
+            runpy.run_path(str(ROOT / "src/validate_portal.py"))
+
     def setUp(self):
         self.read = build_portal.load
         self.database = json.loads((ROOT / "docs/assets/data.json").read_text(encoding="utf-8"))
@@ -121,6 +126,41 @@ class FutureSeasonPipelineTests(unittest.TestCase):
         self.assertTrue(player["stats_minimum"])
         kakareko = next(p for p in db["players"] if p["id"] == "1594")
         self.assertIn("new-kakareko-kamil", kakareko["aliases"])
+
+    def test_publication_validator_accepts_a_historic_player_in_a_new_season(self):
+        self.event["performance"]["6951"]["7275"] = self.event["performance"]["6951"].pop("1960")
+        league, fixture = self.import_new_season()
+        evidence = self.read("match_player_evidence.json")
+        added, _ = collect_matches([fixture], self.index, fetch=lambda _: self.event)
+        evidence["matches"].extend(added["matches"])
+        index, pending = extend(self.index, [fixture], self.profiles, fetch=lambda _: self.event)
+        self.assertFalse(pending["pending"])
+        db = self.build({"league_updates.json": league, "match_player_evidence.json": evidence,
+                         "match_protocol_audit_index.json": index})
+        self.validate_portal(db)
+
+    def test_publication_validator_accepts_next_match_without_requiring_its_video(self):
+        db = deepcopy(self.database)
+        match = deepcopy(db["matches"][-1])
+        match.update(id="orlik26-16", date="2026-10-24", opponent="Nowy rywal", gf=0, ga=0, videos=[])
+        match.pop("goal_protocol", None)
+        match.pop("protocol", None)
+        db["matches"].append(match)
+        season = next(s for s in db["seasons"] if s["id"] == "orlik-2026")
+        season["matches"] += 1
+        season["points"] += 1
+        season["draws"] += 1
+        coverage = next(r for r in db["analysis"]["player_goal_coverage"] if r["sid"] == "orlik-2026")
+        coverage["pending_match_count"] = 1
+        coverage["pending_match_ids"] = ["orlik26-16"]
+        self.validate_portal(db)
+
+    def test_publication_validator_still_rejects_lost_historical_player_balance(self):
+        db = deepcopy(self.database)
+        player = next(p for p in db["players"] if p["id"] == "7275")
+        player["apps"] = 68
+        with self.assertRaisesRegex(AssertionError, "Historical PLP Supercup"):
+            self.validate_portal(db)
 
     def test_future_unknown_player_is_reported_and_goal_protocol_remains_pending(self):
         self.event["performance"]["6951"]["99999"] = self.event["performance"]["6951"].pop("1960")
