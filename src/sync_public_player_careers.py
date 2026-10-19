@@ -114,11 +114,10 @@ def main():
             continue
         try:
             record = capture(url)
-            players[player_id] = {
-                **record,
-                "source_url": url,
-                "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            }
+            prior_record = players.get(player_id) or {}
+            signature = {**record, "source_url": url}
+            if {k: v for k, v in prior_record.items() if k != "captured_at"} != signature:
+                players[player_id] = {**signature, "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
             print(f"OK {player_id} {player['name']}: {record['totals']}", flush=True)
         except Exception as error:
             failures[player_id] = str(error)
@@ -126,7 +125,9 @@ def main():
         time.sleep(0.35)
 
     snapshot = {"players": players, "failures": failures}
-    OUTPUT.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    rendered = json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n"
+    if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
+        OUTPUT.write_text(rendered, encoding="utf-8")
     print(f"HTML career audit: {len(players)}/{len(db['players'])} profiles, {len(failures)} failures", flush=True)
 
 
