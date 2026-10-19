@@ -246,6 +246,20 @@ function playerDetail(id){
         e(record.goals??"—"),
         e(record.assists??"—")
     ]);
+    const publicCareerRows=(player.career_totals?.public_season_rows||[]).map(record=>[
+        e(record.name),
+        e(record.apps),
+        e(record.goals),
+        e(record.assists),
+        e(record.motm),
+        e(record.yellow),
+        e(record.red)
+    ]);
+    const publicCareerSection=publicCareerRows.length
+        ? section("Oficjalna tabela całej kariery PLP — komplet rozgrywek",
+            '<p>Źródło: <a target="_blank" rel="noopener noreferrer" href="'+e(player.career_totals.source_url)+'">Profil PLP ↗</a>. Obejmuje wszystkie sezony oraz Superpuchary — niezależnie od klubów.</p>'+
+            table(["Rozgrywki","M","G","A","MVP","ŻK","CK"],publicCareerRows))
+        : "";
     const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
         e(entry.date),
         href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
@@ -289,10 +303,11 @@ function playerDetail(id){
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
+        publicCareerSection+
         scoredMatchSection+
         ownGoalHistory+
         profileMergeNote+
-        (careerRows.length?section("Historia kariery w PLP — wszystkie kluby",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
+        (careerRows.length?section("Historia kariery wg zapisów API — może pomijać Superpuchary",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
         gallery+
         (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
