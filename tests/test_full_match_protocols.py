@@ -96,8 +96,9 @@ class FullPLPMatchProtocolTests(unittest.TestCase):
     def test_new_kakareko_profile_and_historical_goals(self):
         kakareko = [player for player in self.players.values() if player["name"] == "Kakareko Kamil"]
         self.assertEqual(len(kakareko), 1)
+        self.assertEqual(kakareko[0]["id"], "1594")
         self.assertEqual(kakareko[0]["goals"], 1)
-        self.assertIsNone(kakareko[0]["apps"])
+        self.assertEqual(kakareko[0]["apps"], 2)
         self.assertTrue(kakareko[0]["stats_minimum"])
         self.assertEqual(kakareko[0]["season_stats"]["144"]["goals"], 1)
         self.assertEqual(self.players["7282"]["season_stats"]["120"]["goals"], 1)
