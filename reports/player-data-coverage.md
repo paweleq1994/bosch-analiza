@@ -11,7 +11,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
 - Zawodnicy ze zdjęciem: **13**, bez zdjęcia: **20**
-- Zawodnicy bez pełnego archiwum kariery PLP: **6**
+- Zawodnicy bez pełnego archiwum kariery PLP: **5**
 - Zawodnicy bez linku do publicznego profilu PLP: **7**
 
 ## Zakresy brakujących statystyk
@@ -52,7 +52,6 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 - Gorbacewicz Emil (PLP ID 7271)
 - Gołąbeski Piotr (PLP ID 7270)
-- Kakareko Kamil (PLP ID new-kakareko-kamil)
 - Kossakowski Maciej (PLP ID 7278)
 - Markowski Damian (PLP ID 7282)
 - Sołowiej Tomasz (PLP ID 7285)
