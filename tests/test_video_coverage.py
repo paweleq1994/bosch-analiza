@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from audit_video_coverage import build_report
-from sync_videos import match_video
+from sync_videos import match_video, validate_fixture_dates
 
 
 class VideoCoverageTests(unittest.TestCase):
@@ -101,6 +101,27 @@ class VideoCoverageTests(unittest.TestCase):
         cup=next(v for v in self.database["videos"] if v["id"]=="Sglay1fT-00")
         self.assertIsNone(cup["match_id"])
         self.assertEqual(cup["review_category"],"outside_league_archive")
+
+    def test_legacy_films_are_reconciled_by_date_venue_and_half_score(self):
+        videos = {v["id"]: v for v in self.database["videos"]}
+        expected = {"bQ3De8L7mnA": "8373", "RkV8q7Vfy4g": "10990", "uby5J-1mtDs": "10990"}
+        for vid, event_id in expected.items():
+            self.assertEqual(videos[vid]["match_id"], event_id)
+            self.assertTrue(videos[vid]["verification_source"])
+        self.assertIsNone(videos["Qc0s7ZjnInM"]["match_id"])
+        self.assertEqual(videos["Qc0s7ZjnInM"]["status"], "rejected")
+        for match in self.database["matches"]:
+            if match["id"] in {"8276", "9721"}:
+                self.assertFalse(match["videos"])
+
+    def test_recordings_cannot_predate_their_fixture_even_when_legacy_or_manual(self):
+        match = [{"id": "1", "date": "2024-02-10"}]
+        validate_fixture_dates([{"id": "ok", "match_id": "1", "date": "2024-02-09"}], match)
+        validate_fixture_dates([{"id": "delayed", "match_id": "1", "date": "2025-02-10"}], match)
+        for status in ("matched_archive", "matched_manual", "matched_auto"):
+            with self.assertRaisesRegex(ValueError, "published before fixture"):
+                validate_fixture_dates([{"id": "wrong", "match_id": "1", "date": "2023-08-26", "status": status}], match)
+        validate_fixture_dates(self.database["videos"], self.database["matches"])
 
 
 if __name__ == "__main__":

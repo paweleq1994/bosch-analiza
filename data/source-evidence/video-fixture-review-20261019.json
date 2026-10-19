@@ -1,0 +1,56 @@
+{
+  "reviewed_at": "2026-10-19",
+  "method": "publication date, title, official fixture and observed venue; no face identification",
+  "corrections": {
+    "bQ3De8L7mnA": {
+      "match_id": "8373",
+      "segment": "I połowa",
+      "review_category": "dated_fixture_and_halftime",
+      "review_reason": "Film opublikowano 10.09.2023; tytuł podaje pierwszą połowę 2:0. Protokół 8373 z 09.09.2023 ma wynik do przerwy 2:0 i końcowy 5:1, zgodny z drugą częścią 2gEuhNJXcgE. Obejrzany kadr pokazuje boisko odkryte. Dawne przypisanie do hali 11095 z 21.12.2024 było sprzeczne z datą publikacji i boiskiem.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=bQ3De8L7mnA",
+        "https://www.youtube.com/watch?v=2gEuhNJXcgE",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/"
+      ],
+      "reviewed_at": "2026-10-19",
+      "review_frame": "reports/evidence/video-cedc-firsthalf-outdoor.png"
+    },
+    "RkV8q7Vfy4g": {
+      "match_id": "10990",
+      "segment": "II połowa",
+      "review_category": "dated_fixture_and_venue",
+      "review_reason": "Publikacja 23.11.2024, tytuł OSMAR 2:1 Bosch i obejrzana hala VI LO odpowiadają protokołowi 10990 z tego samego dnia (venue 109, Bosch 1:2). Dawne przypisanie do 8276 było błędne: tam Bosch wygrał 2:1 na odkrytym boisku 27.05.2023 (venue 67).",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=RkV8q7Vfy4g",
+        "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/"
+      ],
+      "reviewed_at": "2026-10-19",
+      "review_frame": "reports/evidence/video-osmar-20241123-venue.png"
+    },
+    "uby5J-1mtDs": {
+      "match_id": "10990",
+      "segment": "I połowa",
+      "review_category": "dated_fixture_and_venue",
+      "review_reason": "Publikacja 23.11.2024, tytuł OSMAR 2:1 Bosch i obejrzana hala VI LO odpowiadają protokołowi 10990 z tego samego dnia (venue 109, Bosch 1:2). Dawne przypisanie do 8276 było błędne: tam Bosch wygrał 2:1 na odkrytym boisku 27.05.2023 (venue 67).",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=uby5J-1mtDs",
+        "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/"
+      ],
+      "reviewed_at": "2026-10-19",
+      "review_frame": "reports/evidence/video-osmar-firsthalf-venue.png"
+    },
+    "Qc0s7ZjnInM": {
+      "match_id": null,
+      "review_category": "wrong_fixture_date_and_venue",
+      "review_reason": "Film opublikowano 26.08.2023 i obejrzany kadr przedstawia odkryte boisko. Nie może pokazywać meczu 9721 rozegranego później, 10.02.2024 w hali VI LO (venue 109). Wynik 1:1 w tytule nie dowodzi tożsamości z wynikiem do przerwy tego meczu. Usunięto błędne powiązanie; rzeczywisty mecz pozostaje nierozpoznany.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=Qc0s7ZjnInM",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/"
+      ],
+      "reviewed_at": "2026-10-19",
+      "review_frame": "reports/evidence/video-cf-bojary-outdoor.png"
+    }
+  }
+}

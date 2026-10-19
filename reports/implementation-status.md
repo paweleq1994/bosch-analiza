@@ -1,8 +1,8 @@
 # Stan kompendium Bosch — 19.10.2026
 
-PR #63 scalony jako `766d2216a3e571f6133212e2007c66e12d59416a` po zielonym rzeczywistym checku `118172173961` (drugie uruchomienie CI `39283534606`). Produkcyjny JSON po scaleniu potwierdził 46 osób, 113 meczów, 8 fragmentów goli i 55 meczów z nagraniem. Bieżąca rewizja rozwija ten stan: 15 odnośników czasowych, minima 11 karier z całego publicznego archiwum oraz rozliczenie dwóch protokołów bez sezonu. Publikację konkretnego commita potwierdzamy osobno w issue #33 po CI i kontroli portalu oraz XLSX.
+PR #64 scalony jako `0d8598bee3437b89d432ebab1ccbdfba89dff5fe` po zielonym rzeczywistym checku `118186058259` (CI `39289476437`). CI main `39289756507`, publikacja XLSX `39289757043` i Pages `39289756398` zakończone sukcesem. Produkcyjny JSON potwierdził 46 osób, 113 meczów, 15 odnośników, 11 minimów karier, rozliczone pola Gołąbeskiego i 33 występy Sołowieja; pobrany XLSX ma 7 arkuszy i źródło 10050. Bieżąca rewizja koryguje cztery dalsze błędne powiązania filmów. Publikację konkretnego commita potwierdzamy osobno w issue #33 po CI i kontroli portalu oraz XLSX.
 
-199 testów Python i 14 testów frontendowych przeszło lokalnie. Wszystkie 10 generatorów/audytów offline, walidacje, składnia JS, compileall i diff check OK. Nie nazywać projektu ukończonym: 16 punktów wykonanych, 4 częściowe. Status odnosi się do danych i funkcji tej rewizji; nie jest deklaracją odzyskania brakujących źródeł.
+201 testów Python i 14 testów frontendowych przeszło lokalnie. Wszystkie 10 generatorów/audytów offline, walidacje, składnia JS, compileall i diff check OK. Nie nazywać projektu ukończonym: 16 punktów wykonanych, 4 częściowe. Status odnosi się do danych i funkcji tej rewizji; nie jest deklaracją odzyskania brakujących źródeł.
 
 ## Wszystkie 20 punktów
 
@@ -21,8 +21,8 @@ PR #63 scalony jako `766d2216a3e571f6133212e2007c66e12d59416a` po zielonym rzecz
 | 11 | Wdrożone | 113 szczegółowych protokołów ligowych i kontrola przyszłego wzrostu. |
 | 12 | Wdrożone | 988 źródłowych występów, historia i linki do meczów. Dodatkowe protokoły Superpucharu nie powiększają archiwum ligowego. |
 | 13 | Wdrożone | Źródła pól, Bosch osobno od całej PLP. Jeden oficjalny link w całym profilu, odrębne źródła rzeczywistych uzupełnień i meczów. |
-| 14 | Częściowo | 120 filmów, 55/113 meczów z nagraniem, 58 bez, 7 materiałów do identyfikacji. Dwa ogólne tytuły przypisane do 8295 po potwierdzeniu użytkownika. Wszystkie filmy mają datę; odzyskane prawdziwe daty 30 filmów z 2026. Nowy odczyt wcześniejszej listy 59 stron wydarzeń: 59 HTTP200 i zgodnych postid, 0 osadzonych YouTube. Brak osadzenia nie dowodzi braku filmu gdzie indziej. |
-| 15 | Częściowo — przegląd wideo | 10 obejrzanych akcji oraz 5 osobno oznaczonych komentarzy gola z automatycznych napisów oficjalnych transmisji; 153 gole w kolejce, w tym gol meczu 8295. Wszystkie 5 goli Boscha w 7851 ma obejrzane fragmenty. Brak czytelnej akcji nie jest oznaczany jako klatka gola. |
+| 14 | Częściowo | 120 filmów, 53/113 meczów z nagraniem, 60 bez, 7 materiałów do identyfikacji i 4 odrzucone powiązania. Po potwierdzeniu użytkownika dwa filmy przypisano do 8295. Kontrola dat i boisk usunęła fałszywe pokrycie 8276/9721 oraz poprawiła części OSMAR/CEDC. Wszystkie filmy mają datę, w tym 30 z 2026. Odczyt 59 wcześniejszych stron bez filmu: zgodne ID, brak YouTube; to nie dowód braku filmu gdzie indziej. |
+| 15 | Częściowo — przegląd wideo | 10 obejrzanych akcji i 5 oznaczonych komentarzy gola z automatycznych napisów; 149 goli w meczach z filmem w kolejce, w tym 8295. Cztery gole z poprzedniej kolejki wróciły do braków nagrania po odrzuceniu błędnych powiązań, nie zostały zweryfikowane. Wszystkie 5 goli Boscha w 7851 ma obejrzane fragmenty. |
 | 16 | Wdrożone | Sezonowe wykresy z prawidłowymi brakami danych. |
 | 17 | Wdrożone | Porównywarka sezonowa, oznaczenie minimów. |
 | 18 | Wdrożone | Serie, forma, czyste konta, minuty goli. 113 poprawnych HT: I połowa 130:94, II 163:135; brak/sprzeczność HT wyłącza obliczenie. |
@@ -49,7 +49,10 @@ PR #63 scalony jako `766d2216a3e571f6133212e2007c66e12d59416a` po zielonym rzecz
 - Pełny sync po #62 `39275733253` — success; bot `c1cae88`. Prawdziwe daty 30 filmów z 2026, wszystkie 120 rekordów mają datę. Pages `39276461012` — success. Produkcyjny JSON 46/113/120 i 30 dat z 2026 potwierdzony także w przeglądarce.
 - #63: 24 źródłowe protokoły innych klubów, wyjaśnienia różnic, dwa Superpuchary, osiem fragmentów goli, pełna lista zgłoszonych bez występów na stronie sezonu i jeden link w całym profilu. Scalony po rzeczywistym zielonym checku; CI main `39287584259` i publikacja XLSX `39287584217` success. Zapisano zrzut potwierdzenia scalenia.
 - Rewizja public-protocol-recovery: 199 Python + 14 frontend OK. Chroniona baza nadal 113/293/988; znane pola statystyk wszystkich graczy bez nierozliczonych reszt. 11 minimów karier, 15 odnośników, brak nowych zależności.
+- Rewizja video-fixture-audit: 201 Python + 14 frontend OK. OSMAR RkV8q7Vfy4g/uby5J-1mtDs przeniesione z 8276 do 10990; CEDC bQ3De8L7mnA z 11095 do 8373; CF Bojary Qc0s7ZjnInM odpięte od 9721. Pokrycie po usunięciu fałszywych wpisów 53/113. Nowa wspólna kontrola chroni także stare i ręczne powiązania przed publikacją filmu wcześniejszego niż mecz.
 - Użytkownik potwierdził 6vsemMiGuPk i Kh4IuHMwcPQ jako Bosch–Wiara Piasta II 01.07.2023 (8295, 1:0). Powiązania mają kategorię user_confirmed_fixture i jawną notatkę; neutralne etykiety Nagranie 1/2, bez niepotwierdzonej połowy. Pokrycie wzrosło do 55 meczów; zostało 7 nierozpoznanych filmów. Gol 29′ Sołowieja dopisany do kolejki przeglądu, bez odnośnika czasowego.
+
+- Sprawdzenie produkcji wykazało nowy JSON przy zachowanym w przeglądarce starym skrypcie. Adres app.js w index.html otrzymał wersję 20261019-protocols, aby po publikacji wczytać interfejs nowych minimów i komentarzy.
 
 ## Sprawdzone źródła — nie powtarzać całych odczytów bez nowej przesłanki
 
@@ -62,6 +65,7 @@ PR #63 scalony jako `766d2216a3e571f6133212e2007c66e12d59416a` po zielonym rzecz
 - Pełne publiczne API wydarzeń: 2415 różnych ID na 25 stronach, od 15.05.2021 do 18.10.2026. Wyciąg 44 protokołów 11 graczy zapisany w `data/source-evidence/public-career-protocol-review-20261019.json`. Surowe protokoły 10050 i 7882 mają puste seasons/leagues. Dodatkowe artykuły z marca 2024 nie dają jednoznacznego oznaczenia sezonu 10050, więc go nie przypisano.
 - Artykuły i portrety: `data/source-evidence/news-portrait-review-20261019.json`; pełne nazwiska wymagane obok siebie, wyniki zawierające osobno imię i nazwisko odrzucone. Grafiki TOP5/TOP6 z koszulkami nie są portretami Daniluka. Brak wyniku wyszukiwania nie jest dowodem, że zdjęcie nie istnieje.
 - YouTube: dwa kanały prywatnych autorów i oficjalny PLP UCd0p73Dp5Eya7c4tQ8EoLZA. Odczyt pierwotnej listy 59 oficjalnych stron wydarzeń bez filmu: zgodne ID, brak YouTube. Użytkownik następnie potwierdził filmy „1”/„2”, daty 2/3.07.2023, jako Wiarę Piasta II 01.07.2023. Zmniejsza to bieżącą listę braków do 58 spotkań.
+- Późniejszy audyt filmów: `data/source-evidence/video-fixture-review-20261019.json` i 4 kadry boisk. OSMAR 23.11.2024 to hala VI LO (10990, venue 109), nie Orlik 27.05.2023 (8276, venue 67). CF Bojary 26.08.2023 pokazuje boisko odkryte i poprzedza halę 9721 z 10.02.2024. CEDC 10.09.2023 ma HT 2:0 zgodne z 8373 i drugą częścią 5:1, nie późniejszą halą 11095. Po tych korektach bieżąca lista braków to 60 spotkań; poprzednie 58 obejmowało dwa fałszywe przypisania.
 - Akcje z klatkami: 7851 — Mateusz Jurkowicz 3′/7s i 23′/13s, Sołowiej 26′/8s, Markowski 29′/9s; 10145 — Mateusz Jurkowicz 2′/488s, Karolczuk 16′/1265s, Rafał Jurkowicz 17′/1318s; orlik26-1 — Karolczuk 23′/145s, opublikowana wersja ZOOM 200%, ponownie sprawdzona w HD. Są to obejrzane fazy akcji, nie deklaracje dokładnej klatki przecięcia linii.
 - Dodatkowe obejrzane akcje: 10990 Karolczuk 27′ / s3iMR88rCKE 1826s oraz 7851 Sołowiej 24′ / QXRjrPldpi0 14s. Kadry i opis przebiegu zapisane w reports/evidence. Usunięto limit czterech filmów w kolejce przeglądu, który ukrywał ten krótki fragment.
 - Aptel 9805 i Vesta 11397 bez transkrypcji; fragment Aptelu 1490–1515s nie dał pewnego gola. W 10145 gol 39′ przy komentarzu 47:03 jest poza kadrem: odnośnik ma metodę broadcast_commentary_captions i etykietę YouTube — komentarz, nigdy observed_video_frame.
@@ -69,7 +73,7 @@ PR #63 scalony jako `766d2216a3e571f6133212e2007c66e12d59416a` po zielonym rzecz
 
 ## Następne zadania
 
-1. Dokończyć przegląd 153 goli i identyfikację 7 materiałów; szukać nowych dowodów nagrań dla 58 spotkań. Użytkownik otrzymał linki Olimp (2), Koledzy z Boiska, Medgal, Rambo, Krokus i Prestige; klasyfikacja oczekuje na jego informację.
+1. Dokończyć przegląd 149 goli w meczach z filmem i identyfikację 7 materiałów; szukać nowych dowodów nagrań dla 60 spotkań. Użytkownik otrzymał linki Olimp (2), Koledzy z Boiska, Medgal, Rambo, Krokus i Prestige; klasyfikacja oczekuje na jego informację. Odpięty CF Bojary również wymaga ustalenia rzeczywistego spotkania, choć błędne przypisanie do 9721 zostało jednoznacznie odrzucone.
 2. Uzupełniać 11 całych karier i 28 portretów wyłącznie po nowym dowodzie. Minima z 2415 protokołów już odtworzono. Brak danych nie jest zerem, minimum nie jest pełnym bilansem, Bosch nie jest całą PLP.
 3. Kończyć scalanie/publikację wyłącznie po zielonym CI dla faktycznego head. Issue #33 pozostaje otwarte dla punktów 5, 6, 14, 15; protokoły bez oznaczenia sezonu mają jawne ograniczenie źródła.
 
