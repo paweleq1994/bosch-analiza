@@ -519,5 +519,524 @@
       "total_apps_as_of_capture": 5,
       "note": "Confirms two existing indoor seasons; does not establish the season of remaining apps/cards. No later HTTP-200 capture returned through 2026-10-19."
     }
+  },
+  "event_video_embed_review": {
+    "checked_at": "2026-10-19",
+    "checked_matches": 59,
+    "http_200": 59,
+    "verified_post_ids": 59,
+    "video_candidates": 0,
+    "matches": [
+      {
+        "match_id": "7416",
+        "event_id": "7416",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7420",
+        "event_id": "7420",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7443",
+        "event_id": "7443",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7734",
+        "event_id": "7734",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7758",
+        "event_id": "7758",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7767",
+        "event_id": "7767",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7788",
+        "event_id": "7788",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7801",
+        "event_id": "7801",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "7814",
+        "event_id": "7814",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "8289",
+        "event_id": "8289",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "8323",
+        "event_id": "8323",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "8325",
+        "event_id": "8325",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "8295",
+        "event_id": "8295",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "8366",
+        "event_id": "8366",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9448",
+        "event_id": "9448",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/multicco-group-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9480",
+        "event_id": "9480",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-hurtownia-krokus/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9646",
+        "event_id": "9646",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9657",
+        "event_id": "9657",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/m-fire-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9683",
+        "event_id": "9683",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-tim/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9714",
+        "event_id": "9714",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-top-auto/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9728",
+        "event_id": "9728",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9755",
+        "event_id": "9755",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9775",
+        "event_id": "9775",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-santos/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9800",
+        "event_id": "9800",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-drtusz/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "9816",
+        "event_id": "9816",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10093",
+        "event_id": "10093",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10121",
+        "event_id": "10121",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10122",
+        "event_id": "10122",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-eskular/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10132",
+        "event_id": "10132",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10142",
+        "event_id": "10142",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10154",
+        "event_id": "10154",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10157",
+        "event_id": "10157",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10225",
+        "event_id": "10225",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10238",
+        "event_id": "10238",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "10242",
+        "event_id": "10242",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "11370",
+        "event_id": "11370",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12127",
+        "event_id": "12127",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12132",
+        "event_id": "12132",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12143",
+        "event_id": "12143",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12151",
+        "event_id": "12151",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12153",
+        "event_id": "12153",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-bosch-service-tech-car/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12165",
+        "event_id": "12165",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-paka/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12169",
+        "event_id": "12169",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12562",
+        "event_id": "12562",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-4/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12566",
+        "event_id": "12566",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ist-trade/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12579",
+        "event_id": "12579",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/auto-team-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12581",
+        "event_id": "12581",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-prostal/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12589",
+        "event_id": "12589",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12601",
+        "event_id": "12601",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zachodnia-kingdom-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12614",
+        "event_id": "12614",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-4/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12617",
+        "event_id": "12617",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12631",
+        "event_id": "12631",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12633",
+        "event_id": "12633",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/gks-grabowka-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12644",
+        "event_id": "12644",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12656",
+        "event_id": "12656",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12660",
+        "event_id": "12660",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12672",
+        "event_id": "12672",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "12679",
+        "event_id": "12679",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-4/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      },
+      {
+        "match_id": "orlik26-15",
+        "event_id": "13593",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/",
+        "http": 200,
+        "post_id_verified": true,
+        "candidate_video_ids": []
+      }
+    ],
+    "scope": "Only direct YouTube links and embeds in official event pages. No embedded video is not proof that footage does not exist elsewhere."
+  },
+  "additional_supercup_review": {
+    "checked_at": "2026-10-19",
+    "season_ids": [
+      119,
+      127,
+      140,
+      145
+    ],
+    "bosch_events": [
+      7005,
+      9239,
+      9247,
+      10790,
+      12363
+    ],
+    "newly_allocated_fields": {
+      "7270": {
+        "140": {
+          "apps": 1,
+          "red": 1
+        }
+      }
+    },
+    "remaining_unassigned": {
+      "7270": {
+        "apps": 1,
+        "yellow": 1
+      }
+    },
+    "new_player_12288": {
+      "orlik_2025_apps": 0,
+      "supercup_2025_apps": 1,
+      "profile_html_apps": 0,
+      "portrait_candidates": 0
+    },
+    "note": "Public whole-career HTML for 12288 omits the lineup appearance in event 12363. Raw HTML is retained and the separate sourced supplement is explicit."
   }
 }

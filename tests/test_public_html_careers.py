@@ -1,4 +1,7 @@
 import json
+import copy
+import tempfile
+from unittest.mock import patch
 import sys
 import unittest
 from pathlib import Path
@@ -69,6 +72,21 @@ class PublicCareerCompletenessTests(unittest.TestCase):
         self.assertEqual(player["season_coverage"]["unassigned"]["apps"],1)
         self.assertEqual(player["season_coverage"]["unassigned"]["yellow"],1)
         self.assertIsNone(player["career_totals"])
+
+    def test_future_html_cup_update_does_not_double_count_protocol_supplement(self):
+        original=build_portal.load
+        snapshot=copy.deepcopy(self.snapshot)
+        snapshot["players"]["12288"]["season_rows"].append({"name":"2025 - Superpuchar", "apps":1,"goals":0,"assists":0,"motm":0,"yellow":0,"red":0})
+        snapshot["players"]["12288"]["totals"]["apps"]=1
+        def load(name, default=None):
+            return snapshot if name=="player_html_career_snapshot.json" else original(name,default)
+        with tempfile.TemporaryDirectory() as folder:
+            output=Path(folder)/"data.json"
+            with patch.object(build_portal,"load",side_effect=load),patch.object(build_portal,"OUTPUT",output):
+                build_portal.main()
+            player=next(p for p in json.loads(output.read_text("utf-8"))["players"] if p["id"]=="12288")
+            self.assertEqual(player["career_totals"]["apps"],1)
+            self.assertFalse(player["career_totals"].get("source_adjustments"))
 
 if __name__ == "__main__":
     unittest.main()

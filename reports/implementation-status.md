@@ -100,3 +100,15 @@ Gałąź `codex/rosters-video-dates-and-clearer-profiles`, przed publikacją.
 - 7 protokołów ma ŻK=2, CK=0. CK nadal znaczy bezpośrednią czerwoną; osobne second_yellow oraz dismissals (jedno wykluczenie na osobę w meczu), widoczne w protokołach i podsumowaniu profilu. Nie wyliczać wykluczeń z sezonowej sumy ŻK.
 - 190 testów Python i 14 frontendowych przeszło, 10 generatorów i audytów offline OK, nadal 113/293/988, bez utraty historycznych aliasów. Pozostałe pięć obszarów danych nadal otwarte.
 - Auto-review odrzucił lokalną instalację istniejącego yt-dlp jako dodanie zależności. Nie ponawiano; daty może odświeżyć istniejący workflow Actions, gdzie yt-dlp jest już częścią projektu.
+
+## Kontynuacja po #62 — uzupełnienia źródłowe
+
+- PR #62 scalony: main 4731070; CI PR 39275094656 i main 39275575114 success; publikacja 39275575120 i Pages 39275328107 success.
+- Pełny sync 39275733253 success, bot c1cae88: odzyskane rzeczywiste daty 30 filmów z 2026, wszystkie 120 rekordów mają teraz datę publikacji. Lokalna instalacja yt-dlp nie była potrzebna.
+- Cztery wcześniejsze porównania HTML/API (5 pól sezonowych) wyjaśnione pełnymi protokołami: wydarzenia 10748, 11748, 3994, 3992 nie mają przypisanej ligi. Sumy z ligą równe REST, wszystkie wydarzenia równe HTML. Dane 24 występów innych klubów w career_competition_evidence.json; nie dodano ich do Boscha.
+- Gołąbeski 7270: protokół Superpucharu 2024 (10790) potwierdza 1 występ i bezpośrednią czerwoną w 24′. Przypisano istniejące sumy, nadal 13M/4ŻK/1CK. Pozostają tylko 1 występ i 1 żółta bez sezonu. Jego kariera nadal niepełna.
+- Zalewski 12288: Orlik 2025 0M, ale protokół 12363 potwierdza 1M Superpucharu 2025. Publiczne HTML i REST pomijają ten puchar. Portal ma 1M, surowy HTML 0 zachowany i widoczne odrębne uzupełnienie źródłowe. Nowy test chroni przed podwojeniem, jeśli HTML w przyszłości doda puchar pod inną kolejnością słów nazwy.
+- Raport ma teraz 34 różnice, wszystkie wyjaśnione (dodatkowa to udokumentowany przypadek Zalewskiego), 0 konfliktów sezonowych. 46 zawodników, 35 publicznych bilansów (jeden uzupełniony protokołem), 11 niepełnych karier, 18 portretów i 28 braków.
+- Odczyt 59 oficjalnych stron meczów bez nagrania: 59 HTTP200 i 59 zgodnych postid, 0 linków/osadzeń YouTube. Nie dowodzi to braku filmów w innych źródłach. Nowy zawodnik nie ma dostępnego portretu w featured media ani attachment parent.
+- Szósty obejrzany odnośnik: Markowski 7282, mecz 7851, PLP 29′, film jzGjEZBED6I, 9 s; klatka w reports/evidence. 161 goli nadal w kolejce.
+- Filmy „1” i „2” otrzymały daty publikacji 2/3.07.2023. Stroje pasują do możliwego meczu z Wiarą Piasta II, ale brak nazwy rywala w źródle; pytanie identyfikacyjne do użytkownika pozostaje otwarte. Bez automatycznego przypisania.

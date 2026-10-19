@@ -42,6 +42,10 @@ def normalized(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
 
 
+def competition_name_key(value):
+    return tuple(sorted(re.sub(r"(?<=[a-z])(?=\d)", " ", normalized(value)).split()))
+
+
 def match_row(row: dict) -> dict:
     return {
         "id": str(row.get("id") or row.get("event_id") or ""),
@@ -523,9 +527,9 @@ def main() -> None:
             # Some public profiles omit even a directly verified Supercup
             # appearance. Keep their raw HTML rows and explain the supplement.
             if correction and correction.get("scope") == "bosch_supercup_protocol" and career.get("teams") == 1:
-                names = {normalized(row.get("name")) for row in public_career["season_rows"]}
+                names = {competition_name_key(row.get("name")) for row in public_career["season_rows"]}
                 additions = [{"sid": sid, **row} for sid, row in correction["seasons"].items()
-                             if normalized(row.get("name")) not in names]
+                             if competition_name_key(row.get("name")) not in names]
                 if additions:
                     career["source_adjustments"] = additions
                     for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
