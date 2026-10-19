@@ -9,12 +9,16 @@ on:
       - 'src/export_workbook.py'
       - 'src/audit_video_coverage.py'
       - 'src/audit_player_coverage.py'
+      - 'src/audit_stat_sources.py'
+      - 'src/video_goal_evidence.py'
+      - 'tests/test_source_sync_publishing.py'
       - 'src/build_portal.py'
       - 'docs/assets/data.json'
       - 'data/league_updates.json'
       - 'data/match_player_evidence.json'
       - 'data/player_html_career_snapshot.json'
       - 'data/video_updates.json'
+      - 'data/video_goal_evidence.json'
 permissions:
   contents: write
 concurrency:
@@ -44,18 +48,18 @@ jobs:
           python src/audit_player_coverage.py
       - name: Verify downloadable workbook is complete
         run: |
-          python -m unittest tests/test_excel_export.py -v
+          python -m unittest tests/test_excel_export.py tests/test_source_sync_publishing.py -v
           test -s docs/downloads/bosch-kompendium.xlsx
           test -s reports/video-goal-review-queue.md
           test -s reports/video-coverage.md
-          test -s reports/player-source-reconciliation.md reports/video-goal-review-queue.md
+          test -s reports/player-source-reconciliation.md
           test -s reports/player-data-coverage.md
       - name: Publish only validated offline-generated artifacts
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -f docs/downloads/bosch-kompendium.xlsx docs/downloads/bosch-kompendium.source.sha256
-          git add reports/video-coverage.md reports/player-data-coverage.md reports/player-source-reconciliation.md
+          git add reports/video-coverage.md reports/player-data-coverage.md reports/player-source-reconciliation.md reports/video-goal-review-queue.md
           if ! git diff --cached --quiet; then
             git commit -m 'data: publish verified Bosch Excel and source gap reports'
             git fetch origin main
