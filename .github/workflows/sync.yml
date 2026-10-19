@@ -96,6 +96,8 @@ jobs:
         run: python src/build_scouting.py
       - name: Validate scouting reports
         run: python src/validate_scouting.py
+      - name: Publish official career source discrepancy reconciliation
+        run: python src/audit_source_reconciliation.py
       - name: Build complete Excel archive from sourced portal snapshot
         run: python src/export_workbook.py
       - name: Validate generated portal data
