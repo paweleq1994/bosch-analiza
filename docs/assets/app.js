@@ -474,6 +474,17 @@ function playerDetail(id){
         ).join("")+'</div>'
     ):"";
 
+    const teamPhotoCandidates=(DB.analysis?.historical_team_media_candidates||[])
+        .filter(item=>same(item.player_id,player.id));
+    const historicTeamGallery=teamPhotoCandidates.length
+        ?section("Historyczne zdjęcia dawnych drużyn — do weryfikacji",
+            '<div class="notice">To archiwalne fotografie klubów, w których odnotowano zawodnika. Samo powiązanie klubowe NIE potwierdza, że zawodnik znajduje się na zdjęciu. Nie są one liczone jako zdjęcia profilowe.</div>'+
+            table(["Archiwalny klub","Materiał PLP","Weryfikacja"],teamPhotoCandidates.map(item=>[
+                e(item.team),
+                '<a target="_blank" rel="noopener noreferrer" href="'+e(item.url)+'">Otwórz zdjęcie historyczne ↗</a>',
+                "Osoba na zdjęciu niepotwierdzona"
+            ])))
+        :"";
     return headline(player.name,player.status||"Zawodnik Bosch Service Tech-Car")+
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
@@ -488,6 +499,7 @@ function playerDetail(id){
         (careerRows.length?section("Historia kariery wg zapisów API — może pomijać Superpuchary",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
         gallery+
+        historicTeamGallery+
         (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
         (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
 }
