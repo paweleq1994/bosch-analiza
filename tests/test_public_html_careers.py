@@ -62,6 +62,20 @@ class PublicCareerCompletenessTests(unittest.TestCase):
         raw=json.loads((ROOT / "data/source-evidence/event-12363.json").read_text("utf-8"))
         self.assertEqual(raw["performance"]["6951"]["12288"]["status"],"lineup")
 
+    def test_all_eleven_reconstructions_reconcile_without_changing_league_archive(self):
+        recovered = [p for p in self.database["players"] if (p.get("career_totals") or {}).get("reconstructed")]
+        self.assertEqual(len(recovered), 11)
+        self.assertEqual(sum(p["career_totals"]["apps"] for p in recovered), 79)
+        for player in recovered:
+            career = player["career_totals"]
+            for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                self.assertEqual(career[field], player[field])
+                self.assertEqual(career[field], player["season_coverage"]["by_season"][field])
+            self.assertEqual(career["scope_confirmation"]["source_type"], "user_confirmation")
+            self.assertTrue(all(url.startswith("https://podlaskaliga.pl/wydarzenie/") for url in career["source_urls"]))
+        self.assertEqual(len(self.database["matches"]), 113)
+        self.assertEqual(sum(len(m["player_performance"]) for m in self.database["matches"]), 988)
+
     def test_golab_eski_red_is_allocated_without_raising_legacy_totals(self):
         player=next(p for p in self.database["players"] if p["id"]=="7270")
         raw=json.loads((ROOT / "data/source-evidence/event-10790.json").read_text("utf-8"))
@@ -71,7 +85,22 @@ class PublicCareerCompletenessTests(unittest.TestCase):
         self.assertEqual(player["season_coverage"]["unassigned"]["red"],0)
         self.assertEqual(player["season_coverage"]["unassigned"]["apps"],0)
         self.assertEqual(player["season_coverage"]["unassigned"]["yellow"],0)
-        self.assertIsNone(player["career_totals"])
+        self.assertTrue(player["career_totals"]["reconstructed"])
+        self.assertEqual(player["career_totals"]["apps"], 13)
+
+    def test_missing_club_scope_confirmation_preserves_protocol_minima(self):
+        original = build_portal.load
+        def load(name, default=None):
+            return {} if name == "source-evidence/bosch-only-career-scope-20261019.json" else original(name, default)
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "data.json"
+            with patch.object(build_portal, "load", side_effect=load), patch.object(build_portal, "OUTPUT", output):
+                build_portal.main()
+            players = json.loads(output.read_text("utf-8"))["players"]
+            for player in players:
+                if player.get("public_protocol_review"):
+                    self.assertIsNone(player["career_totals"])
+                    self.assertFalse(player["public_protocol_review"]["whole_career_verified"])
 
     def test_future_html_cup_update_does_not_double_count_protocol_supplement(self):
         original=build_portal.load

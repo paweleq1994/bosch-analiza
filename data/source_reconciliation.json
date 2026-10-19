@@ -1,6 +1,7 @@
 {
   "all_players": 46,
   "players_with_public_career": 35,
+  "players_with_reconstructed_career": 11,
   "career_source_differences": [
     {
       "id": "7272",
@@ -2688,142 +2689,7 @@
     "explained_verified_identity_merge": 2
   },
   "season_source_conflicts": [],
-  "missing_full_careers": [
-    {
-      "id": "7285",
-      "name": "Sołowiej Tomasz",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
-        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
-        "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
-        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary/",
-        "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach/",
-        "https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/",
-        "https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "7270",
-      "name": "Gołąbeski Piotr",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
-        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
-        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/"
-      ]
-    },
-    {
-      "id": "7271",
-      "name": "Gorbacewicz Emil",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
-        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
-        "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ramis/"
-      ]
-    },
-    {
-      "id": "7282",
-      "name": "Markowski Damian",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
-        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/"
-      ]
-    },
-    {
-      "id": "7278",
-      "name": "Kossakowski Maciej",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "10321",
-      "name": "Ciborowski Julian",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "10604",
-      "name": "Śmiłowski Michał",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
-      ]
-    },
-    {
-      "id": "7266",
-      "name": "Bazyluk Jakub",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "7286",
-      "name": "Uściłowski Krzysztof",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
-        "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "8655",
-      "name": "Kuźma Gabriel",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "8916",
-      "name": "Wądołowski Sebastian",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/"
-      ]
-    }
-  ],
+  "missing_full_careers": [],
   "verified_goal_matches": 113,
   "unattributed_team_goals": 0
 }

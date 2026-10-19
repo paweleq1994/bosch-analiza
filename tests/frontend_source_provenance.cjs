@@ -27,7 +27,9 @@ assert.equal((moskal.match(/href="https:\/\/podlaskaliga.pl\/zawodnik\/moskal-pa
 
 const privateProfile = vm.runInContext('playerDetail("10321")', scope);
 assert.ok(privateProfile.includes("Pochodzenie każdej statystyki"));
-assert.ok(privateProfile.includes("Brak pełnego publicznego bilansu"));
+assert.ok(privateProfile.includes("Rekonstrukcja z protokołów PLP"));
+assert.ok(privateProfile.includes("zakres klubowy z tego potwierdzenia"));
+assert.ok(!privateProfile.includes("Oficjalny HTML wszystkich rozgrywek"));
 assert.ok(privateProfile.includes("https://podlaskaliga.pl/wydarzenie/"));
 
 const review = vm.runInContext("dataQuality()", scope);
@@ -36,7 +38,7 @@ const archival = vm.runInContext('playerDetail("7271")', scope);
 assert.ok(archival.includes("Superpuchar 2022"));
 assert.ok(archival.includes("Archiwalny profil PLP (Internet Archive)"));
 assert.ok(archival.includes("https://web.archive.org/web/20230607185424id_/"));
-assert.ok(archival.includes("Brak pełnego publicznego bilansu"));
+assert.ok(archival.includes("Kariera odtworzona; publiczny profil niedostępny"));
 
 console.log("Verified Bosch/whole-PLP per-field provenance, private player sources and quality report.");
 

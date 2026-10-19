@@ -14,8 +14,9 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PORTAL = ROOT / "docs/assets/data.json"
 OUTPUT = ROOT / "data/player_html_career_snapshot.json"
-HEADERS = {"apps": 1, "goals": 3, "assists": 4, "motm": 5, "yellow": 8, "red": 9}
-FIELDS = tuple(HEADERS)
+SOURCE_COLUMNS = {"apps": "data-appearances", "goals": "data-goals", "assists": "data-assists",
+                  "motm": "data-pikarzmeczu", "yellow": "data-yellowcards", "red": "data-redcards"}
+FIELDS = tuple(SOURCE_COLUMNS)
 
 class CareerTableParser(HTMLParser):
     def __init__(self) -> None:
@@ -28,6 +29,7 @@ class CareerTableParser(HTMLParser):
         self.rows = []
         self.current_is_career = False
         self.capture_depth = 0
+        self.columns = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
@@ -38,8 +40,10 @@ class CareerTableParser(HTMLParser):
         elif tag == "tr" and self.depth and self.current_is_career:
             self.in_row = True
             self.row = []
+            self.columns = []
         elif tag in ("td", "th") and self.in_row:
             self.cell = []
+            self.columns.append(attributes.get("class", "").split())
 
     def handle_data(self, value):
         if self.cell is not None:
@@ -51,7 +55,7 @@ class CareerTableParser(HTMLParser):
             self.cell = None
         elif tag == "tr" and self.in_row:
             if self.row:
-                self.rows.append({"table": self.table_id, "cells": self.row})
+                self.rows.append({"table": self.table_id, "cells": self.row, "columns": self.columns})
             self.in_row = False
         elif tag == "table" and self.depth:
             self.depth -= 1
@@ -67,27 +71,43 @@ def capture(url: str) -> dict:
     with urlopen(request, timeout=15) as response:
         html = response.read().decode("utf-8", "replace")
 
+    return parse_career_html(html)
+
+
+def parse_career_html(html: str, expected_id: str | None = None) -> dict:
+    """Read semantic SportsPress columns; older archived templates reorder appearances."""
+    if expected_id is not None and str(expected_id) not in set(re.findall(r"\bpostid-(\d+)\b", html)):
+        raise ValueError("Archived player identity mismatch")
     parser = CareerTableParser()
     parser.feed(html)
     grouped = {}
     for entry in parser.rows:
-        grouped.setdefault(entry["table"], []).append(entry["cells"])
+        grouped.setdefault(entry["table"], []).append(entry)
 
     # The final combined table has both a sum and all season rows; never sum
     # the per-league 'Suma' sections, which can overlap or omit supercups.
-    combined = max(grouped.values(), key=lambda rows: (sum(len(row) == 12 for row in rows), len(rows)))
+    if not grouped:
+        raise ValueError("No combined career table")
+    entries = max(grouped.values(), key=lambda rows: (sum(len(row["cells"]) == 12 for row in rows), len(rows)))
+    combined = [row["cells"] for row in entries]
+    columns = next((entry["columns"] for entry in entries
+                    if all(any(source in cell for cell in entry["columns"]) for source in SOURCE_COLUMNS.values())), None)
+    if columns is None:
+        raise ValueError("No semantic career columns")
+    positions = {field: next(i for i, cell in enumerate(columns) if source in cell)
+                 for field, source in SOURCE_COLUMNS.items()}
     final_totals = [row for row in combined if row and row[0].lower() == "suma" and len(row) >= 11]
     if not final_totals:
         raise ValueError("No combined career table")
     last = final_totals[-1]
-    totals = {field: int(last[index]) for field, index in HEADERS.items()}
+    totals = {field: int(last[index]) for field, index in positions.items()}
 
     season_rows = []
     for row in combined:
         if len(row) != 12 or row[0].strip().lower() in {"suma", "sezon"}:
             continue
         try:
-            values = {field: int(row[index]) for field, index in HEADERS.items()}
+            values = {field: int(row[index]) for field, index in positions.items()}
         except (ValueError, IndexError):
             continue
         season_rows.append({"name": row[0], **values})

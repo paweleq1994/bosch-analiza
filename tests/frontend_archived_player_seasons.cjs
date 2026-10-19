@@ -25,7 +25,7 @@ for (const playerId of archivedPlayerIds) {
 
     assert.ok(profile.includes("<tfoot>"), player.name + " is missing the full-total row");
     assert.ok(profile.includes("Łącznie Bosch"), player.name + " has no lifetime totals");
-    assert.ok(profile.includes("Archiwalny bilans Bosch"), player.name + " needs the source label");
+    assert.ok(profile.includes("Rekonstrukcja z protokołów PLP"), player.name + " needs the source label");
 }
 
 const golabeski = evaluate('playerDetail("7270")');
@@ -34,7 +34,7 @@ assert.ok(golabeski.includes("Orlik 2024"));
 assert.ok(golabeski.includes("<td>6</td><td>1</td><td>1</td><td>2</td>"));
 assert.ok(!golabeski.includes("Niepełny podział na sezony:"));
 assert.ok(golabeski.includes("23.03.2024 (PLP bez oznaczenia sezonu)"));
-assert.ok(golabeski.includes("Kariera PLP — minimum z publicznych protokołów"));
+assert.ok(golabeski.includes("Rekonstrukcja kariery — źródłowe protokoły PLP"));
 assert.ok(golabeski.includes("Archiwum Boscha — najlepszy sezon"));
 assert.ok(golabeski.includes("Łącznie Bosch"));
 
