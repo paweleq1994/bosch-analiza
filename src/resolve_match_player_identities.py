@@ -109,7 +109,8 @@ def resolve(evidence: dict, roster: dict, previous: dict, get=fetch) -> dict:
 
     output = dict(previous.get("players") or {})
     unresolved = {}
-    known = set(roster) | set(output)
+    published = {player_id for player_id, item in roster.items() if item.get("public")}
+    known = published | set(output)
 
     for player_id, urls in sorted(by_id.items(), key=lambda item: int(item[0])):
         if player_id in known:
