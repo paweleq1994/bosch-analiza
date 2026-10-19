@@ -52,6 +52,8 @@ PR #64 scalony jako `0d8598bee3437b89d432ebab1ccbdfba89dff5fe` po zielonym rzecz
 - Rewizja video-fixture-audit: 201 Python + 14 frontend OK. OSMAR RkV8q7Vfy4g/uby5J-1mtDs przeniesione z 8276 do 10990; CEDC bQ3De8L7mnA z 11095 do 8373; CF Bojary Qc0s7ZjnInM odpięte od 9721. Pokrycie po usunięciu fałszywych wpisów 53/113. Nowa wspólna kontrola chroni także stare i ręczne powiązania przed publikacją filmu wcześniejszego niż mecz.
 - Użytkownik potwierdził 6vsemMiGuPk i Kh4IuHMwcPQ jako Bosch–Wiara Piasta II 01.07.2023 (8295, 1:0). Powiązania mają kategorię user_confirmed_fixture i jawną notatkę; neutralne etykiety Nagranie 1/2, bez niepotwierdzonej połowy. Pokrycie wzrosło do 55 meczów; zostało 7 nierozpoznanych filmów. Gol 29′ Sołowieja dopisany do kolejki przeglądu, bez odnośnika czasowego.
 
+- Sprawdzenie produkcji wykazało nowy JSON przy zachowanym w przeglądarce starym skrypcie. Adres app.js w index.html otrzymał wersję 20261019-protocols, aby po publikacji wczytać interfejs nowych minimów i komentarzy.
+
 ## Sprawdzone źródła — nie powtarzać całych odczytów bez nowej przesłanki
 
 - PLP 6951: 8 sezonów ligowych i 4 Superpuchary; 113 meczów ligowych. Pierwszych 113 nie zmieniono, przyszłe sezony mogą rozszerzać archiwum.
