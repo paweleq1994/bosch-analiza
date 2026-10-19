@@ -100,15 +100,27 @@ def backfill_seasons(
                 )
 
                 if other_verified + recovered > full_total:
-                    conflicts.append({
+                    if (
+                        field == "apps"
+                        and type(previous) is int
+                        and previous == full_total == 0
+                        and other_verified == 0
+                        and recovered > 0
+                    ):
+                        player["apps"] = recovered
+                        if isinstance(player.get("bosch_totals"), dict):
+                            player["bosch_totals"]["apps"] = recovered
+                        player["stats_minimum"] = True
+                    else:
+                        conflicts.append({
                         "player_id": player_id,
                         "season_id": season_id,
                         "field": field,
                         "stored": None,
                         "match_evidence": recovered,
                         "reason": "larger_than_verified_player_total",
-                    })
-                    continue
+                        })
+                        continue
 
             current[field] = recovered
             if type(previous) is int and previous < recovered:
