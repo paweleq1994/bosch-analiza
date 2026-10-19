@@ -12,6 +12,8 @@ on:
       - 'src/sync_scouting_details.py'
       - 'src/build_portal.py'
       - 'src/protocol_goals.py'
+      - 'src/backfill_match_player_stats.py'
+      - 'data/match_player_evidence.json'
       - 'data/bosch_own_goal_evidence.json'
       - 'src/goal_reconciliation.py'
       - 'data/goal_evidence.json'
