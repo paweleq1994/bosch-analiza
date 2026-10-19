@@ -1,0 +1,41 @@
+name: Audit public PLP sitemaps
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 5 * * 1"
+  push:
+    branches:
+      - main
+      - feat/public-plp-sitemap-source-evidence-audit
+    paths:
+      - 'src/audit_plp_sitemaps.py'
+      - '.github/workflows/plp-sitemap.yml'
+permissions:
+  contents: write
+concurrency:
+  group: plp-source-sitemap-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Walk public XML sitemaps and check archived profiles by WordPress ID
+        run: python src/audit_plp_sitemaps.py
+      - name: Save proven source evidence and published failures
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/plp_source_crawl.json reports/plp-source-crawl.md data/player_profile_map.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: archive public PLP sitemap evidence'
+            git fetch origin "$GITHUB_REF_NAME"
+            git rebase "origin/$GITHUB_REF_NAME"
+            git push
+          fi
