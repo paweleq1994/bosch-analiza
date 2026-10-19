@@ -24,5 +24,68 @@
         "origin": "PLP public all-career table"
       }
     }
+  },
+  "7271": {
+    "source_url": "https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+    "archive_url": "https://web.archive.org/web/20230607185424id_/https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+    "source_player_id": "7271",
+    "partial_archive": true,
+    "reason": "Archived official profile with matching postid; completed Superpuchar 2022 table. Allocate existing Bosch totals to their proven season, without adding the cup twice or treating the old snapshot as a current whole career.",
+    "seasons": {
+      "119": {
+        "name": "Superpuchar 2022",
+        "apps": 1,
+        "goals": 0,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "origin": "plp_archived_public_season",
+        "source_url": "https://web.archive.org/web/20230607185424id_/https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+        "captured_at": "20230607185424"
+      }
+    }
+  },
+  "7278": {
+    "source_url": "https://podlaskaliga.pl/zawodnik/kossakowski-maciej/",
+    "archive_url": "https://web.archive.org/web/20221208203250id_/https://podlaskaliga.pl/zawodnik/kossakowski-maciej/",
+    "source_player_id": "7278",
+    "partial_archive": true,
+    "reason": "Archived official profile with matching postid; completed Superpuchar 2022 table. Allocate existing Bosch totals to their proven season, without adding the cup twice or treating the old snapshot as a current whole career.",
+    "seasons": {
+      "119": {
+        "name": "Superpuchar 2022",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "origin": "plp_archived_public_season",
+        "source_url": "https://web.archive.org/web/20221208203250id_/https://podlaskaliga.pl/zawodnik/kossakowski-maciej/",
+        "captured_at": "20221208203250"
+      }
+    }
+  },
+  "7285": {
+    "source_url": "https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+    "archive_url": "https://web.archive.org/web/20221208191648id_/https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+    "source_player_id": "7285",
+    "partial_archive": true,
+    "reason": "Archived official profile with matching postid; completed Superpuchar 2022 table. Allocate existing Bosch totals to their proven season, without adding the cup twice or treating the old snapshot as a current whole career.",
+    "seasons": {
+      "119": {
+        "name": "Superpuchar 2022",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "origin": "plp_archived_public_season",
+        "source_url": "https://web.archive.org/web/20221208191648id_/https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+        "captured_at": "20221208191648"
+      }
+    }
   }
 }

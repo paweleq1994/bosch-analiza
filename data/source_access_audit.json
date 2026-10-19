@@ -182,6 +182,342 @@
     "scanned_media": 91,
     "name_searches": 53,
     "confirmed_portraits": 15,
-    "missing_portraits": 30
+    "missing_portraits": 30,
+    "archived_portraits_recovered": 3,
+    "current_confirmed_portraits": 18,
+    "current_missing_portraits": 27
+  },
+  "internet_archive": {
+    "checked_at": "2026-10-19T14:13:50.747599+00:00",
+    "cdx_status": 200,
+    "full_url_scan_status": "timeout after 35 seconds; not evidence that no archive exists",
+    "targeted_search_status": 200,
+    "profiles": [
+      {
+        "player_id": "7270",
+        "original_url": "https://podlaskaliga.pl/zawodnik/golabeski-piotr/",
+        "archive_url": "https://web.archive.org/web/20230603121147id_/https://podlaskaliga.pl/zawodnik/golabeski-piotr/",
+        "capture_timestamp": "20230603121147",
+        "http_status": 200,
+        "current_original_http_status": 404,
+        "source_post_id": "7270",
+        "source_excerpt": "data/source-evidence/player-7270-20230603121147.html",
+        "season_rows": [
+          {
+            "name": "Hala2022",
+            "apps": 2,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          },
+          {
+            "name": "Orlik 2023",
+            "apps": 0,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          }
+        ],
+        "totals_as_of_capture": {
+          "name": "Suma",
+          "apps": 2,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "complete_current_career": false
+      },
+      {
+        "player_id": "7271",
+        "original_url": "https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+        "archive_url": "https://web.archive.org/web/20230607185424id_/https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+        "capture_timestamp": "20230607185424",
+        "http_status": 200,
+        "current_original_http_status": 404,
+        "source_post_id": "7271",
+        "source_excerpt": "data/source-evidence/player-7271-20230607185424.html",
+        "season_rows": [
+          {
+            "name": "Hala2022",
+            "apps": 2,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          },
+          {
+            "name": "Orlik 2023",
+            "apps": 1,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          },
+          {
+            "name": "Superpuchar 2022",
+            "apps": 1,
+            "goals": 0,
+            "assists": 1,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          }
+        ],
+        "totals_as_of_capture": {
+          "name": "Suma",
+          "apps": 4,
+          "goals": 0,
+          "assists": 1,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "complete_current_career": false
+      },
+      {
+        "player_id": "7278",
+        "original_url": "https://podlaskaliga.pl/zawodnik/kossakowski-maciej/",
+        "archive_url": "https://web.archive.org/web/20221208203250id_/https://podlaskaliga.pl/zawodnik/kossakowski-maciej/",
+        "capture_timestamp": "20221208203250",
+        "http_status": 200,
+        "current_original_http_status": 404,
+        "source_post_id": "7278",
+        "source_excerpt": "data/source-evidence/player-7278-20221208203250.html",
+        "season_rows": [
+          {
+            "name": "Hala2022",
+            "apps": 0,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          },
+          {
+            "name": "Superpuchar 2022",
+            "apps": 1,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          }
+        ],
+        "totals_as_of_capture": {
+          "name": "Suma",
+          "apps": 1,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "complete_current_career": false
+      },
+      {
+        "player_id": "7285",
+        "original_url": "https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+        "archive_url": "https://web.archive.org/web/20221208191648id_/https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+        "capture_timestamp": "20221208191648",
+        "http_status": 200,
+        "current_original_http_status": 404,
+        "source_post_id": "7285",
+        "source_excerpt": "data/source-evidence/player-7285-20221208191648.html",
+        "season_rows": [
+          {
+            "name": "Hala2022",
+            "apps": 2,
+            "goals": 2,
+            "assists": 1,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          },
+          {
+            "name": "Superpuchar 2022",
+            "apps": 1,
+            "goals": 0,
+            "assists": 0,
+            "motm": 0,
+            "yellow": 0,
+            "red": 0
+          }
+        ],
+        "totals_as_of_capture": {
+          "name": "Suma",
+          "apps": 3,
+          "goals": 2,
+          "assists": 1,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "complete_current_career": false
+      }
+    ],
+    "remaining_season_gaps": "Gołąbeski Piotr 7270: apps 2, yellow 1, red 1; older profile does not identify these fields.",
+    "remaining_portrait_search": {
+      "requested_profiles": 27,
+      "exact_name_url_matches": 15,
+      "limit": 100,
+      "limit_reached": false,
+      "profiles": [
+        {
+          "archive_url": "https://web.archive.org/web/20240909150111id_/https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+          "capture_timestamp": "20240909150111",
+          "http_status": 200,
+          "player_id": "8654",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20211027223143id_/https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "capture_timestamp": "20211027223143",
+          "http_status": 200,
+          "player_id": "2204",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20230209070609id_/https://podlaskaliga.pl/zawodnik/dolzyk-michal/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/dolzyk-michal/",
+          "capture_timestamp": "20230209070609",
+          "http_status": 200,
+          "player_id": "7269",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20230607194252id_/https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+          "capture_timestamp": "20230607194252",
+          "http_status": 200,
+          "player_id": "7223",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20260313225845id_/https://podlaskaliga.pl/zawodnik/karpinski-hubert/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/karpinski-hubert/",
+          "capture_timestamp": "20260313225845",
+          "http_status": 200,
+          "player_id": "10836",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20241015132147id_/https://podlaskaliga.pl/zawodnik/kowalczuk-karol/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/kowalczuk-karol/",
+          "capture_timestamp": "20241015132147",
+          "http_status": 200,
+          "player_id": "9267",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20221208192553id_/https://podlaskaliga.pl/zawodnik/malesinski-adam/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/malesinski-adam/",
+          "capture_timestamp": "20221208192553",
+          "http_status": 200,
+          "player_id": "6764",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20230607191158id_/https://podlaskaliga.pl/zawodnik/markowski-damian/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/markowski-damian/",
+          "capture_timestamp": "20230607191158",
+          "http_status": 200,
+          "player_id": "7282",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20230923170155id_/https://podlaskaliga.pl/zawodnik/muczynski-karol/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/muczynski-karol/",
+          "capture_timestamp": "20230923170155",
+          "http_status": 200,
+          "player_id": "8656",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-370x400.png",
+          "status": "placeholder"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20251113171210id_/https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/",
+          "capture_timestamp": "20251113171210",
+          "http_status": 200,
+          "player_id": "12286",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20251113181951id_/https://podlaskaliga.pl/zawodnik/plochocki-maciej/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/plochocki-maciej/",
+          "capture_timestamp": "20251113181951",
+          "http_status": 200,
+          "player_id": "12290",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20241203153851id_/https://podlaskaliga.pl/zawodnik/roszkowski-patryk/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/roszkowski-patryk/",
+          "capture_timestamp": "20241203153851",
+          "http_status": 200,
+          "player_id": "10603",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20241009070621id_/https://podlaskaliga.pl/zawodnik/smilowski-michal/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/smilowski-michal/",
+          "capture_timestamp": "20241009070621",
+          "http_status": 200,
+          "player_id": "10604",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        },
+        {
+          "archive_url": "https://web.archive.org/web/20241203144739id_/https://podlaskaliga.pl/zawodnik/wadolowski-sebastian/",
+          "original_url": "https://podlaskaliga.pl/zawodnik/wadolowski-sebastian/",
+          "capture_timestamp": "20241203144739",
+          "http_status": 200,
+          "player_id": "8916",
+          "status": "placeholder",
+          "portrait_url": "https://podlaskaliga.pl/wp-content/themes/alchemists/assets/images/player-single-470x580.png",
+          "portrait_element": "team-roster__player-img"
+        }
+      ],
+      "note": "14 newly read copies plus the previously read Kossakowski profile; placeholders are not portraits. No exact-name URL was returned for the other 12 profiles; this is not proof that no archive exists under an alias."
+    },
+    "later_golabeski_check": {
+      "url": "https://web.archive.org/web/20240414083549id_/https://podlaskaliga.pl/zawodnik/golabeski-piotr/",
+      "http_status": 200,
+      "source_post_id": "7270",
+      "season_apps": {
+        "120": 2,
+        "127": 0,
+        "126": 3
+      },
+      "total_apps_as_of_capture": 5,
+      "note": "Confirms two existing indoor seasons; does not establish the season of remaining apps/cards. No later HTTP-200 capture returned through 2026-10-19."
+    }
   }
 }

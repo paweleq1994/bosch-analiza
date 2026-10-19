@@ -1,8 +1,8 @@
 # Stan wdrożenia kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `1ae4571` (merge PR #58). Pełny sync 39264014036 zakończony sukcesem, bez nowych zmian źródeł. PR #56 scalono jako `29694db`; `f864f05` był późniejszym commitem publikatora, nie mergem.
+Ostatni sprawdzony main: `e23c0bc` (bot po merge PR #59 `83600b8`). Pełny sync #59 39265848610: success; CI 39265848600, publikacja 39265848606, Pages 39266277405: success. PR #56 scalono jako `29694db`; `f864f05` był późniejszym commitem publikatora, nie mergem.
 Repozytorium lokalne zaktualizowano przez fast-forward z `94402f0`; przed pracą było czyste.
-Gałąź kontynuacji: `codex/official-video-archive-and-new-own-goals`.
+Gałąź kontynuacji: `codex/final-audit-and-source-access-status` (bieżący PR odzyskuje archiwalne sezony i portrety).
 Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło brak otwartych PR-ów.
 
 ## Audyt przed implementacją
@@ -12,9 +12,9 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 1 | Wdrożone i przetestowane | PR #55, `test_future_season_pipeline.py`: 9/10 sezonów, 114/115 meczów, test liderów Node | Bieżący oficjalny endpoint nie ogłasza nowszego sezonu |
 | 2 | Wdrożony, uzupełniony brak samobójów w bieżącym PR | Nowy sezon z dwoma strzelcami samobójczymi, minutami i źródłami przechodzi do portalu bez zmiany historycznych 113 | Nieznane ID, brak minut lub sprzeczny bilans straconych → pending z przyczyną |
 | 3 | Wdrożone + regresja przyszłych ID | `test_future_season_pipeline.py` | Nieznany ID 99999 trafia do audytu, protokół pending; brak fikcyjnego profilu |
-| 4 | Rozliczone 29/33 porównań źródeł | `source-reconciliation.md`: 26 zakresów Superpucharu, 2 scalone ID, 1 występ potwierdzony protokołem | 4 różnice agregatów (5 pól sezonowych) bez dowodu przyczyny; 7 nieprzypisanych pól u 4 osób pozostaje bez publicznej tabeli |
+| 4 | Rozliczone 29/33 porównań; 4/7 pól historycznych przypisane w bieżącym PR | Internet Archive: Gorbacewicz, Kossakowski, Sołowiej — potwierdzony Superpuchar 2022, ID z postid i nazwane kolumny CSS | 4 różnice agregatów (5 pól sezonowych) nadal niepewne; 3 pola Gołąbeskiego bez potwierdzonego sezonu |
 | 5 | Ograniczenie źródłowe: 34 pełne, 11 niepełnych | `source_access_audit.json`: wszystkie 11 ID REST 401, publiczny post 404; brak w 1187 URL zawodników i all-time 1837 | Bez potwierdzonego archiwum dawnych klubów nie można uznać minimum za całą karierę |
-| 6 | 15 zdjęć, 30 braków | `media_discovery.json`, `test_historic_team_photo_leads.py` | Sprawdzić dostępne metadane WordPress; zdjęcia klubowe pozostają kandydatami |
+| 6 | 18 zdjęć, 27 braków w bieżącym PR | 3 rzeczywiste portrety z archiwalnych profili PLP: postid 7270, 7271, 7285 i element player-info__photo | Kossakowski ma w kopii placeholder, nie dodawać go jako portretu; stare zdjęcia klubowe pozostają kandydatami |
 | 7 | Wdrożone | PR #30, Pages z `docs/` | Zweryfikować rzeczywiste wdrożenie po zmianach |
 | 8 | Wdrożone | PR #37, `frontend_rivals_quality.cjs` | Brak wykazanego defektu |
 | 9 | Wdrożone | ID 1594 i alias w `test_verified_match_identities.py` | Zachować odrębność Gabriela i Piotra Kuźmy |
@@ -37,7 +37,7 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 - 988 występów w protokołach; 0 nierozpoznanych ID w bieżącym backfillu.
 - 34 pełniejsze publiczne kariery PLP, 11 niepełnych; 33 różnice HTML/API/widok i 0 sezonowych sprzeczności.
 - 29 porównań źródeł wyjaśnionych (26 Superpuchary, 2 profile Rutkowskiego, 1 Grabowski/protokół 9486); 4 wymagają dalszej weryfikacji źródła.
-- 15 potwierdzonych zdjęć, 30 braków.
+- 18 potwierdzonych zdjęć, 27 braków (3 nowe z archiwalnych profili PLP).
 - 120 rekordów wideo; **54** mecze z filmem, **59** bez; 9 materiałów do identyfikacji, 3 powiązania odrzucone / poza zakresem ligowym (łącznie 12 bez meczu ligowego).
 - **5** potwierdzonych odnośników do obejrzanej sekundy akcji bramkowej; **162** gole w kolejce. Kolejka uwzględnia już siedem odzyskanych transmisji; wzrost kolejki nie oznacza utraty zweryfikowanych linków.
 
@@ -59,7 +59,7 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 - Użytkownik zalogował zwykłą sesję GitHub; tworzenie i scalanie PR przez UI jest dostępne.
 - Każde z 11 brakujących ID: REST **401**, publiczny adres WordPress z ID **404**. Żadnego z tych ID nie ma w oficjalnej liście all-time 1837. Wyniki z datą i URL zapisane w `data/source_access_audit.json`.
 - 4 pozostałe różnice agregatów: Kuźma Piotr 4577 — występy Orlik 2024 7/6 i Hala 2024/2025 11/10 (CEDC Polmos, nie Bosch); Daniluk 2204 — Lato 2021 2/1; Kakareko 1594 — Lato 2021 mecze 4/3 i gole 1/0. Zachowano HTML jako całą karierę, bez dodawania różnic do Boscha.
-- 7 nieprzypisanych pól historycznych (Gorbacewicz, Gołąbeski, Kossakowski, Sołowiej) nie ma nowych publicznych dowodów sezonu; nie dopasowywać ich przez odejmowanie minimów od agregatu.
+- Początkowe 7 nieprzypisanych pól zmniejszono do 3 po odczycie Internet Archive. Pozostają Gołąbeski 7270: 2 występy, 1 żółta, 1 czerwona kartka bez potwierdzonego sezonu. Kopia z kwietnia 2024 potwierdza dotychczasowe 2+3 występy halowe, nie rozstrzyga reszty. Nie przypisywać przez odejmowanie od agregatu.
 - Automatyczna kontrola odrzuciła odczyt tokenu z menedżera Git do osobnych żądań API; nie ponawiać tego mechanizmu.
 
 ## Następne działanie
@@ -78,6 +78,7 @@ Scalić bieżący PR po CI, sprawdzić pełną synchronizację trzech kanałów,
 - **PR #56 — scalony**, zmiany `d688231` i `12d55c8`, merge `29694db`. Pełny najnowszy odczyt PLP został zachowany, a błędnie obniżone bilanse przywrócone. Przed merge: **166 testów Python i 14 frontendowych OK**. CI main 39260004028, publikacja 39260003518 i Pages 39260036786: success.
 - **PR #57 — scalony**, commit `54323fc`, merge `01b4e20`. CI PR 39261382924, CI main 39261976656, publikacja 39261976694 i Pages 39262007112: success. Przed merge: **169 testów Python, 14 frontendowych OK**.
 - **PR #58 — scalony**, commit `380cc5a`, merge `1ae4571`. CI PR 39263872856, CI main 39264014026, publikacja 39264013991, Pages 39264013114 i pełny sync 39264014036: **success**. Przed merge: **175 testów Python, 14 frontendowych OK**.
+- **PR #59 — scalony**, commit `5266da2`, merge `83600b8`. CI PR 39265594286, CI main 39265848600, publikacja 39265848606, pełny sync 39265848610 i Pages 39266277405 na `e23c0bc`: **success**. Przed merge: **182 testy Python i 14 frontendowych OK**.
 - Synchronizacje 39260003626 i 39261976651 ujawniły konflikt binarnego XLSX podczas rebase z równoległym eksportem. Przyczyną zbędnej regeneracji był różny hash tekstu CRLF na Windows i LF w Actions. Bieżąca poprawka normalizuje tekst i sprawdza również wersję kodu eksportera; nie przebudowuje architektury publikacji.
 
 ## Multimedia — dowody i pozostałe ograniczenia
@@ -108,3 +109,15 @@ Synchronizacja #55 opublikowała commit `ea3c315`, wypełniając historyczne agr
 - Uzupełniono istniejący importer o samobóje z oficjalnego ID, nazwiska, minut i uzgodnionego bilansu straconych; istniejący plik dowodowy jest rozszerzany idempotentnie. Dwie różne osoby mogą strzelić samobója w tym samym meczu. Nieznane ID/brak minut/sprzeczny wynik pozostają pending.
 - **182 testy Python i 14 frontendowych OK**. Oryginalne 113 rekordów niezmienione, 293 gole, 6 samobójów, 988 występów. Status końcowych workflow wymaga sprawdzenia po merge.
 - Dodatkowe 3 obejrzane akcje w transmisji 10145: 488 s (Jurkowicz Mateusz, PLP 2′), 1265 s (Karolczuk, 16′), 1318 s (Jurkowicz Rafał, 17′). Klatki i opis relacji komentarz/wynik/PLP zapisane. Sekundy oznaczają obejrzaną fazę akcji, nie deklarację dokładnej klatki przekroczenia linii. Bramka na 4:3 pozostaje bez linku: komentarz podaje gola około 47:03, ale sprawdzony kadr 47:04 pokazuje drugi koniec boiska. Sama transkrypcja nie wystarcza do metody `observed_video_frame`.
+
+## Internet Archive — odzyskane fakty po #59, praca bieżąca
+
+- CDX dostępny HTTP 200. Pełny odczyt do 5000 URL przekroczył 35 s; nie oznacza to braku archiwum. Zawężone zapytanie o cztery nazwiska zwróciło 6 URL. Odrzucono dwóch imienników po ID.
+- Cztery kopie HTTP 200 mają dokładne postid 7270, 7271, 7278, 7285. Oryginalne slugi obecnie 404. Daty kopii, adresy i surowe fragmenty tabel są w `data/source_access_audit.json` i `data/source-evidence/`.
+- Superpuchar 2022: Gorbacewicz 1 występ + 1 asysta, Kossakowski 1 występ, Sołowiej 1 występ. Uzupełniono istniejące korekty sezonowe, nie zwiększając sum historycznych. Stare, częściowe kopie nie są aktualnym pełnym bilansem kariery.
+- Portrety Gołąbeskiego, Gorbacewicza, Sołowieja pobrano z rzeczywistych URL wskazanych w player-info__photo na profilach o zgodnym ID. Obejrzano wszystkie 3 obrazy. Kossakowski ma placeholder. Data publikacji nie jest zgadywana z daty katalogu uploads/1994.
+- Nowe regresje sprawdzają kolumny źródłowe, brak podwójnego dodania Superpucharu, zachowanie niepełnej kariery i trwałość portretów przy 401. Poprawka obliczania minimów zapobiega traktowaniu starej korekty sezonowej jako nowego sezonu oraz pełnego profilu.
+- Produkcja po #59 sprawdzona HTTP 200: JSON 45/8/113/120, pokrycie 54, 5 znaczników. XLSX 100775 bajtów identyczny z commitem, 7 arkuszy, 46 wierszy Zawodnicy, 114 Mecze, zgodny hash źródła. Trzy publiczne raporty HTTP 200; analiza HT i minima widoczne na stronie. Po bieżącej zmianie trzeba ponowić kontrolę nowych danych.
+- W przeglądarce issue #33 jest otwarte w trybie edycji (nie zapisano nowego tekstu); po merge i CI wymagane zaktualizowanie wszystkich 20 checkboxów i ograniczeń.
+- Dalszy ograniczony przegląd 27 brakujących portretów: CDX zwrócił 15 dokładnych adresów imię+nazwisko, wszystkie odczytano (wliczając Kossakowskiego). W obu szablonach PLP sprawdzone pola portretu zawierają placeholdery. 12 pozostałych bez wyniku dla dokładnych nazw — nie jest to dowód nieistnienia innych aliasów. Wynik w `source_access_audit.json`.
+- **185 testów Python i 14 frontendowych OK** przed PR archiwalnym; trzy nowe regresje: kolumny i ID, brak zmiany sum i fikcyjnej pełnej kariery, zachowanie portretów przy awarii API. Wymagana walidacja i publikacja PR.

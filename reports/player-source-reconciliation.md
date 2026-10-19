@@ -26,13 +26,9 @@ Nieznana liczba i potwierdzone zero nie są tym samym.
 
 | Zawodnik | Pole | Liczba |
 |---|---|---:|
-| Gorbacewicz Emil (ID 7271) | apps | 1 |
-| Gorbacewicz Emil (ID 7271) | assists | 1 |
 | Gołąbeski Piotr (ID 7270) | apps | 2 |
 | Gołąbeski Piotr (ID 7270) | yellow | 1 |
 | Gołąbeski Piotr (ID 7270) | red | 1 |
-| Kossakowski Maciej (ID 7278) | apps | 1 |
-| Sołowiej Tomasz (ID 7285) | apps | 1 |
 
 ## Zasady weryfikacji
 

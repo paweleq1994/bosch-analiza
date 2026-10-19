@@ -10,7 +10,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Oficjalne protokoły bramkowe: **113**
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
-- Zawodnicy ze zdjęciem: **15**, bez zdjęcia: **30**
+- Zawodnicy ze zdjęciem: **18**, bez zdjęcia: **27**
 - Zawodnicy bez pełnego archiwum kariery PLP: **11**
 - Zawodnicy bez linku do publicznego profilu PLP: **11**
 
@@ -18,9 +18,9 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 0 | 4 | 0 |
+| Występy | 0 | 1 | 0 |
 | Bramki | 0 | 0 | 0 |
-| Asysty | 0 | 1 | 0 |
+| Asysty | 0 | 0 | 0 |
 | MVP | 0 | 0 | 0 |
 | Żółte kartki | 0 | 1 | 0 |
 | Czerwone kartki | 0 | 1 | 0 |
@@ -36,8 +36,6 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Dawid Daniluk (PLP ID 2204)
 - Dołżyk Michał (PLP ID 7269)
 - Filip Szparło (PLP ID 13197)
-- Gorbacewicz Emil (PLP ID 7271)
-- Gołąbeski Piotr (PLP ID 7270)
 - Grabowski Jakub (GK) (PLP ID 7223)
 - Karolczuk Jakub (PLP ID 12425)
 - Karpiński Hubert (PLP ID 10836)
@@ -51,7 +49,6 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Płochocki Maciej (PLP ID 12290)
 - Rollauer Patryk (PLP ID 12285)
 - Roszkowski Patryk (PLP ID 10603)
-- Sołowiej Tomasz (PLP ID 7285)
 - Uściłowski Krzysztof (PLP ID 7286)
 - Wojciuk Piotr (PLP ID 13198)
 - Wądołowski Sebastian (PLP ID 8916)
@@ -88,13 +85,9 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
-- Gorbacewicz Emil (PLP ID 7271): Występy — 1
-- Gorbacewicz Emil (PLP ID 7271): Asysty — 1
 - Gołąbeski Piotr (PLP ID 7270): Występy — 2
 - Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
 - Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
-- Kossakowski Maciej (PLP ID 7278): Występy — 1
-- Sołowiej Tomasz (PLP ID 7285): Występy — 1
 
 ## Nieznane dane sezonowe
 
