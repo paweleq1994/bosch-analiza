@@ -710,6 +710,11 @@ def main() -> None:
         if item.get("evidence") == "historical_team_archive"
         and str(item.get("url") or "").startswith("https://podlaskaliga.pl/wp-content/uploads/")
     ]
+    from video_goal_evidence import validate as verified_goal_video_cues
+    output["analysis"]["verified_goal_video_cues"] = verified_goal_video_cues(
+        output,
+        load("video_goal_evidence.json", {"entries": []}),
+    )
     output["media"] = canonicalize_player_media(
         load("media_manifest.json", {"subjects": []}),
         goalkeeper_aliases,
