@@ -44,7 +44,7 @@ permissions:
   contents: write
 concurrency:
   group: bosch-data-sync
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   sync:
     runs-on: ubuntu-latest
