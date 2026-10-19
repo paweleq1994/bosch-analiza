@@ -311,6 +311,17 @@
       "note": "Compare source competitions including Supercup before reconciling"
     },
     {
+      "id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "field": "apps",
+      "html": 19,
+      "rest": 17,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
       "id": "1594",
       "name": "Kakareko Kamil",
       "field": "apps",
@@ -351,17 +362,6 @@
       "rest": 18,
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
-      "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
-    },
-    {
-      "id": "7223",
-      "name": "Grabowski Jakub (GK)",
-      "field": "apps",
-      "html": 19,
-      "rest": 17,
-      "difference": 2,
-      "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
       "type": "official_html_versus_sportspress_api",
       "note": "Compare source competitions including Supercup before reconciling"
     }
@@ -449,25 +449,6 @@
       ]
     },
     {
-      "id": "10321",
-      "name": "Ciborowski Julian",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "10604",
-      "name": "Śmiłowski Michał",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
-      ]
-    },
-    {
       "id": "7266",
       "name": "Bazyluk Jakub",
       "reason": "No public fully enumerated PLP career table",
@@ -492,6 +473,25 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
         "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
         "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "10321",
+      "name": "Ciborowski Julian",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "10604",
+      "name": "Śmiłowski Michał",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
       ]
     },
     {

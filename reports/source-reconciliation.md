@@ -43,11 +43,11 @@ nie automatyczny błąd w statystykach Boscha.
 | Bączek Szymon (ID 8654) | CK | 1 | 0 | +1 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/baczek-szymon/) |
 | Dawid Daniluk (ID 2204) | Mecze | 69 | 66 | +3 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) |
 | Dawid Daniluk (ID 2204) | Asysty | 19 | 18 | +1 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) |
+| Grabowski Jakub (GK) (ID 7223) | Mecze | 19 | 17 | +2 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/grabowski-jakub/) |
 | Kakareko Kamil (ID 1594) | Mecze | 34 | 30 | +4 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
 | Kakareko Kamil (ID 1594) | Gole | 11 | 10 | +1 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
 | Bayer Emilian (ID 2203) | Mecze | 31 | 30 | +1 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/bayer-emilian/) |
 | Bayer Emilian (ID 2203) | Gole | 19 | 18 | +1 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/bayer-emilian/) |
-| Grabowski Jakub (GK) (ID 7223) | Mecze | 19 | 17 | +2 | official_html_versus_sportspress_api | [profil PLP](https://podlaskaliga.pl/zawodnik/grabowski-jakub/) |
 
 ## Protokoły meczowe przekraczające zapisany wynik sezonu
 
@@ -62,11 +62,11 @@ nie automatyczny błąd w statystykach Boscha.
 - **Gorbacewicz Emil (ID 7271)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/), [PLP 2](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/), [PLP 3](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/)
 - **Markowski Damian (ID 7282)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/), [PLP 2](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/), [PLP 3](https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/)
 - **Kossakowski Maciej (ID 7278)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/), [PLP 2](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/), [PLP 3](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/)
-- **Ciborowski Julian (ID 10321)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/), [PLP 2](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/), [PLP 3](https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/)
-- **Śmiłowski Michał (ID 10604)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/)
 - **Bazyluk Jakub (ID 7266)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/)
 - **Uściłowski Krzysztof (ID 7286)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/), [PLP 2](https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/)
 - **Kuźma Gabriel (ID 8655)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/), [PLP 2](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/), [PLP 3](https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/)
+- **Ciborowski Julian (ID 10321)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/), [PLP 2](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/), [PLP 3](https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/)
+- **Śmiłowski Michał (ID 10604)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/)
 - **Wądołowski Sebastian (ID 8916)** — No public fully enumerated PLP career table; źródła z meczów: [PLP 1](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/)
 
 ## Zasady
