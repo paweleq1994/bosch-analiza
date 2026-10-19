@@ -46,7 +46,7 @@ class CareerSourceReconciliationTests(unittest.TestCase):
         self.assertIn("132", content)
         self.assertIn("Kariera", content.replace("kariera", "Kariera"))
         self.assertIn("https://podlaskaliga.pl/", content)
-        self.assertIn("cała kariera PLP", content.lower())
+        self.assertIn("cała kariera plp", content.lower())
 
 
 if __name__ == "__main__":
