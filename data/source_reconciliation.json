@@ -1582,9 +1582,13 @@
           "red": 0,
           "apps": 1,
           "name": "Superpuchar 2025",
-          "origin": "plp_match_minimum",
+          "origin": "plp_cup_protocols",
           "source_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car-2/",
-          "captured_at": "2026-10-19"
+          "captured_at": "2026-10-19",
+          "coverage": {
+            "bosch_matches_in_source_season": 1,
+            "verified_bosch_protocols": 1
+          }
         }
       ]
     }

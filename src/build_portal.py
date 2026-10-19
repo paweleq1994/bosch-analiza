@@ -417,7 +417,7 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols"}:
                 verified_stats["origin"] = stats["origin"]
             for key in ("match_performance_verified", "match_performance_sources", "source_url", "captured_at"):
                 if key in stats:

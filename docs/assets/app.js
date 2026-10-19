@@ -268,6 +268,9 @@ function players(){
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
+    if(record?.origin==="plp_cup_protocols"){
+        return "Oficjalne protokoły Superpucharu PLP";
+    }
     if(record?.origin==="plp_archived_public_season"){
         return "Archiwalny profil PLP (Internet Archive)";
     }
