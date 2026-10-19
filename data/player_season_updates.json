@@ -1564,5 +1564,169 @@
       "name": "Orlik 2025",
       "origin": "PLP SportsPress"
     }
+  },
+  "1594": {
+    "144": {
+      "apps": 2,
+      "goals": 1,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 1,
+      "red": 0,
+      "name": "Orlik 2025",
+      "origin": "PLP SportsPress"
+    },
+    "145": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Superpuchar 2025",
+      "origin": "PLP SportsPress"
+    },
+    "146": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Hala 2025/2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "2203": {
+    "148": {
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "7223": {
+    "126": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Hala 2023/2024",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "10603": {
+    "139": {
+      "apps": 2,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 2,
+      "red": 0,
+      "name": "Orlik 2024",
+      "origin": "PLP SportsPress"
+    },
+    "141": {
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 1,
+      "red": 0,
+      "name": "Hala 2024/2025",
+      "origin": "PLP SportsPress"
+    },
+    "146": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Hala 2025/2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "11895": {
+    "144": {
+      "apps": 4,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2025",
+      "origin": "PLP SportsPress"
+    },
+    "145": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Superpuchar 2025",
+      "origin": "PLP SportsPress"
+    },
+    "146": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Hala 2025/2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "12285": {
+    "144": {
+      "apps": 1,
+      "goals": 0,
+      "assists": 1,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2025",
+      "origin": "PLP SportsPress"
+    },
+    "145": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Superpuchar 2025",
+      "origin": "PLP SportsPress"
+    },
+    "146": {
+      "apps": 0,
+      "goals": 0,
+      "assists": 0,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Hala 2025/2026",
+      "origin": "PLP SportsPress"
+    }
+  },
+  "13194": {
+    "148": {
+      "apps": 3,
+      "goals": 0,
+      "assists": 1,
+      "motm": 0,
+      "yellow": 0,
+      "red": 0,
+      "name": "Orlik 2026",
+      "origin": "PLP SportsPress"
+    }
   }
 }

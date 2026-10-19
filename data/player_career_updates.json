@@ -2441,5 +2441,514 @@
         "red": 0
       }
     ]
+  },
+  "1594": {
+    "apps": 30,
+    "goals": 10,
+    "assists": 5,
+    "motm": 1,
+    "yellow": 2,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 9,
+    "teams": 3,
+    "season_rows": [
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "145",
+        "name": "Superpuchar 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "144",
+        "name": "Orlik 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 1,
+        "red": 0
+      },
+      {
+        "sid": "139",
+        "name": "Orlik 2024",
+        "team": "Ramis",
+        "apps": 7,
+        "goals": 4,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "118",
+        "name": "Orlik 2022",
+        "team": "4Technology",
+        "apps": 8,
+        "goals": 0,
+        "assists": 2,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "116",
+        "name": "21/22 - Hala finałowa",
+        "team": "4Technology",
+        "apps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "108",
+        "name": "2021-Hala",
+        "team": "4Technology",
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "104",
+        "name": "2021 - Lato",
+        "team": "4Technology",
+        "apps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "7",
+        "name": "2021 - Wiosna",
+        "team": "4Technology",
+        "apps": 5,
+        "goals": 5,
+        "assists": 2,
+        "motm": 1,
+        "yellow": 1,
+        "red": 0
+      }
+    ]
+  },
+  "2203": {
+    "apps": 30,
+    "goals": 18,
+    "assists": 9,
+    "motm": 2,
+    "yellow": 1,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 8,
+    "teams": 3,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "139",
+        "name": "Orlik 2024",
+        "team": "PTH Maltrans",
+        "apps": 1,
+        "goals": 0,
+        "assists": 2,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "126",
+        "name": "Hala 2023/2024",
+        "team": "PTH Maltrans",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "118",
+        "name": "Orlik 2022",
+        "team": "Znienacka",
+        "apps": 7,
+        "goals": 7,
+        "assists": 1,
+        "motm": 1,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "116",
+        "name": "21/22 - Hala finałowa",
+        "team": "Znienacka",
+        "apps": 4,
+        "goals": 2,
+        "assists": 2,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "108",
+        "name": "2021-Hala",
+        "team": "Znienacka",
+        "apps": 8,
+        "goals": 1,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "104",
+        "name": "2021 - Lato",
+        "team": "Znienacka",
+        "apps": 2,
+        "goals": 2,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "7",
+        "name": "2021 - Wiosna",
+        "team": "Znienacka",
+        "apps": 6,
+        "goals": 6,
+        "assists": 3,
+        "motm": 1,
+        "yellow": 1,
+        "red": 0
+      }
+    ]
+  },
+  "7223": {
+    "apps": 17,
+    "goals": 0,
+    "assists": 0,
+    "motm": 0,
+    "yellow": 1,
+    "red": 1,
+    "source": "PLP SportsPress",
+    "seasons": 8,
+    "teams": 5,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "CEDC Polmos Białystok",
+        "apps": 6,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "ZPS Biaform SA",
+        "apps": 5,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 1
+      },
+      {
+        "sid": "145",
+        "name": "Superpuchar 2025",
+        "team": "ZPS Biaform SA",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "144",
+        "name": "Orlik 2025",
+        "team": "ZPS Biaform SA",
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "126",
+        "name": "Hala 2023/2024",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "125",
+        "name": "Orlik 2023",
+        "team": "FC Progress Białystok",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "120",
+        "name": "Hala2022",
+        "team": "Eskular",
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 1,
+        "red": 0
+      },
+      {
+        "sid": "119",
+        "name": "Superpuchar 2022",
+        "team": "Eskular",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
+  },
+  "10603": {
+    "apps": 8,
+    "goals": 1,
+    "assists": 1,
+    "motm": 0,
+    "yellow": 4,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 4,
+    "teams": 2,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "Top Auto",
+        "apps": 4,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 1,
+        "red": 0
+      },
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "Top Auto",
+        "apps": 1,
+        "goals": 0,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "141",
+        "name": "Hala 2024/2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 1,
+        "red": 0
+      },
+      {
+        "sid": "139",
+        "name": "Orlik 2024",
+        "team": "Bosch Service Tech-Car",
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 2,
+        "red": 0
+      }
+    ]
+  },
+  "11895": {
+    "apps": 4,
+    "goals": 0,
+    "assists": 0,
+    "motm": 0,
+    "yellow": 0,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 3,
+    "teams": 1,
+    "season_rows": [
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "145",
+        "name": "Superpuchar 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "144",
+        "name": "Orlik 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 4,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
+  },
+  "12285": {
+    "apps": 4,
+    "goals": 2,
+    "assists": 1,
+    "motm": 0,
+    "yellow": 1,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 4,
+    "teams": 2,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "Ludki Białystok",
+        "apps": 3,
+        "goals": 2,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 1,
+        "red": 0
+      },
+      {
+        "sid": "146",
+        "name": "Hala 2025/2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "145",
+        "name": "Superpuchar 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      {
+        "sid": "144",
+        "name": "Orlik 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 1,
+        "goals": 0,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
+  },
+  "13194": {
+    "apps": 3,
+    "goals": 0,
+    "assists": 1,
+    "motm": 0,
+    "yellow": 0,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 1,
+    "teams": 1,
+    "season_rows": [
+      {
+        "sid": "148",
+        "name": "Orlik 2026",
+        "team": "Bosch Service Tech-Car",
+        "apps": 3,
+        "goals": 0,
+        "assists": 1,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
   }
 }

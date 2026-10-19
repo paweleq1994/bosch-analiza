@@ -11,15 +11,15 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
 - Zawodnicy ze zdjęciem: **15**, bez zdjęcia: **30**
-- Zawodnicy bez pełnego archiwum kariery PLP: **17**
+- Zawodnicy bez pełnego archiwum kariery PLP: **11**
 - Zawodnicy bez linku do publicznego profilu PLP: **11**
 
 ## Zakresy brakujących statystyk
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 0 | 4 | 0 |
-| Bramki | 0 | 0 | 15 |
+| Występy | 0 | 5 | 0 |
+| Bramki | 0 | 0 | 8 |
 | Asysty | 0 | 1 | 0 |
 | MVP | 0 | 0 | 0 |
 | Żółte kartki | 0 | 1 | 0 |
@@ -60,19 +60,13 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bez pełnej historii kariery PLP
 
-- Bayer Emilian (PLP ID 2203)
 - Bazyluk Jakub (PLP ID 7266)
 - Ciborowski Julian (PLP ID 10321)
-- Czudzinowicz Jakub (GK) (PLP ID 11895)
 - Gorbacewicz Emil (PLP ID 7271)
 - Gołąbeski Piotr (PLP ID 7270)
-- Grabowski Jakub (GK) (PLP ID 7223)
-- Karpowicz Kamil (PLP ID 13194)
 - Kossakowski Maciej (PLP ID 7278)
 - Kuźma Gabriel (PLP ID 8655)
 - Markowski Damian (PLP ID 7282)
-- Rollauer Patryk (PLP ID 12285)
-- Roszkowski Patryk (PLP ID 10603)
 - Sołowiej Tomasz (PLP ID 7285)
 - Uściłowski Krzysztof (PLP ID 7286)
 - Wądołowski Sebastian (PLP ID 8916)
@@ -99,24 +93,18 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Gołąbeski Piotr (PLP ID 7270): Występy — 2
 - Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
 - Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
+- Grabowski Jakub (GK) (PLP ID 7223): Występy — 1
 - Kossakowski Maciej (PLP ID 7278): Występy — 1
 - Sołowiej Tomasz (PLP ID 7285): Występy — 1
 
 ## Nieznane dane sezonowe
 
-- Bayer Emilian (PLP ID 2203) — Orlik 2026: Bramki
 - Ciborowski Julian (PLP ID 10321) — Orlik 2024: Bramki
-- Czudzinowicz Jakub (GK) (PLP ID 11895) — Orlik 2025: Bramki
 - Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Bramki
 - Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Bramki
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Bramki
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Bramki
-- Grabowski Jakub (GK) (PLP ID 7223) — Hala 2023/2024: Bramki
-- Karpowicz Kamil (PLP ID 13194) — Orlik 2026: Bramki
 - Kossakowski Maciej (PLP ID 7278) — Hala 2022: Bramki
-- Rollauer Patryk (PLP ID 12285) — Orlik 2025: Bramki
-- Roszkowski Patryk (PLP ID 10603) — Orlik 2024: Bramki
-- Roszkowski Patryk (PLP ID 10603) — Hala 2024/2025: Bramki
 - Wądołowski Sebastian (PLP ID 8916) — Orlik 2024: Bramki
 - Śmiłowski Michał (PLP ID 10604) — Orlik 2024: Bramki
 
