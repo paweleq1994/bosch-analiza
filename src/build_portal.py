@@ -75,6 +75,7 @@ def main() -> None:
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
     own_goal_evidence = load("bosch_own_goal_evidence.json", {"events": []})
     match_protocol_index = load("match_protocol_audit_index.json", {})
+    match_performance = load("match_player_evidence.json", {"matches": []})
 
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
@@ -134,9 +135,15 @@ def main() -> None:
         })
     # The SportsPress season 148 is the same edition as the archived Orlik 2026.
     # Prefer the stable public ID and keep official scores and links.
+    archived_season_counts = {str(row["id"]): row["matches"] for row in seasons}
+    growing_season_ids = set()
+    profile_stat_ids = set(player_seasons_extra)
     for incoming_season in league_extra.get("season_rows", []):
         if str(incoming_season.get("plp_id") or incoming_season.get("id")) == "148":
             incoming_season = {**incoming_season, "id": SEASON_2026, "name": "Orlik 2026"}
+        sid = str(incoming_season["id"])
+        if sid not in archived_season_counts or incoming_season["matches"] > archived_season_counts[sid]:
+            growing_season_ids.add(sid)
         index = next((i for i, item in enumerate(seasons) if str(item["id"]) == str(incoming_season["id"])), None)
         if index is None:
             seasons.append(incoming_season)
@@ -158,7 +165,7 @@ def main() -> None:
             "event_link": FIXTURES_URL,
             "videos": [],
         })
-    known_ids = {row["id"] for row in matches}
+    archived_match_ids = {row["id"] for row in matches}
     match_positions = {item["id"]: index for index, item in enumerate(matches)}
     for row in league_extra.get("matches", []):
         clean = match_row(row)
@@ -258,6 +265,11 @@ def main() -> None:
         player_id, season_id = str(stat.get("id") or ""), str(stat.get("sid") or "")
         if not player_id or not season_id:
             continue
+        if season_id not in growing_season_ids:
+            # Existing profile/archive imports and protocol backfills already
+            # reconcile historical seasons, including unassigned totals. A
+            # newly parseable match table must not replace that richer history.
+            continue
         item = next((p for p in historic_players if p["id"] == player_id), None)
         if item is None:
             if not (profiles.get(player_id) or {}).get("resolved_name"):
@@ -332,7 +344,6 @@ def main() -> None:
 
     validate_goal_evidence(goal_evidence, seasons, matches)
     add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
-    match_performance = load("match_player_evidence.json", {"matches": []})
     verified_identities = load("match_player_identities.json", {"players": {}, "unresolved": {}})
     identity_audit = attach_verified_identities(historic_players, verified_identities, match_performance)
 
@@ -392,6 +403,18 @@ def main() -> None:
 
     from player_totals import bosch_totals
 
+    additional_match_totals = {}
+    for match in match_performance.get("matches") or []:
+        if str(match["match_id"]) in archived_match_ids:
+            continue
+        for row in match.get("players") or []:
+            additions = additional_match_totals.setdefault(str(row["player_id"]), {})
+            for field, source_field in (("apps", "appearance"), ("goals", "goals"), ("assists", "assists"),
+                                        ("motm", "motm"), ("yellow", "yellow"), ("red", "red")):
+                value = row.get(source_field)
+                if type(value) is int and value >= 0:
+                    additions[field] = additions.get(field, 0) + value
+
     for player in historic_players:
         details = player_seasons_extra.get(str(player["id"])) or {}
         verified_seasons = {
@@ -407,6 +430,21 @@ def main() -> None:
             )
 
         calculated = bosch_totals(verified_seasons)
+
+        if str(player["id"]) not in profile_stat_ids and verified_seasons:
+            # A new season does not make a previously incomplete Bosch archive
+            # complete. Retain its older documented balance and add only the
+            # disjoint new seasons, leaving unknown source values unknown.
+            for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                additions = [stats.get(field) for sid, stats in verified_seasons.items()
+                             if sid not in archived_season_counts]
+                extra = additional_match_totals.get(str(player["id"]), {}).get(field)
+                if additions and all(type(v) is int for v in additions):
+                    extra = max(extra or 0, sum(additions))
+                if type(player.get(field)) is int and type(extra) is int:
+                    player[field] += extra
+            player["stats_minimum"] = True
+            calculated = None
 
         if calculated:
             player["bosch_totals"] = calculated

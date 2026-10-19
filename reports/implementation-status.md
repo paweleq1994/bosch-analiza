@@ -77,3 +77,7 @@ PR #55 wdrożony. Rozszerzony istniejący audyt rozlicza teraz 33 różnice wed�
 - **PR #55 — scalony**, commit `aaded26`, merge `d2b28ef`.
 - CI PR 39257687591 success; CI main 39258031399 success; publikacja 39258031372 success; Pages 39258030661 success.
 - Synchronizacja po #55: run 39258031384 trwa; wynik wymaga końcowego sprawdzenia.
+
+## Weryfikacja po pełnej synchronizacji PLP
+
+Synchronizacja #55 opublikowała commit `ea3c315`, wypełniając historyczne agregaty meczowe. Pełne testy ujawniły zastępowanie bogatszych starych bilansów tymi agregatami (m.in. Gołąbeski 13→11 występów i utrata aliasu Kakareki). Poprawiono przyczynę: historyczne, nierosnące sezony nadal przechodzą istniejącą ścieżkę archiwum/profili/protokołów; dla graczy bez pełnego archiwum dodawane są tylko nowe, niezależne dane, z zachowaniem statusu minimum. Nowe testy obejmują częściowy bilans oraz dodanie meczu do istniejącego sezonu. Konflikt wygenerowanych raportów rozwiązano przez ponowne przeliczenie z najnowszych źródeł. Przed merge #56 wymagane ponowne pełne CI.
