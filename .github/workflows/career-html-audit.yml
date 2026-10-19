@@ -1,0 +1,33 @@
+name: Collect public PLP player career HTML
+on:
+  push:
+    branches:
+      - feat/complete-source-audit-and-portal-2026
+    paths:
+      - 'src/sync_public_player_careers.py'
+      - '.github/workflows/career-html-audit.yml'
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Capture and cross-check all published PLP player career tables
+        run: python src/sync_public_player_careers.py
+      - name: Commit evidence with linked official profiles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/player_html_career_snapshot.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: archive official public PLP career totals"
+            git fetch origin feat/complete-source-audit-and-portal-2026
+            git rebase origin/feat/complete-source-audit-and-portal-2026
+            git push
+          fi
