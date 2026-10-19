@@ -93,7 +93,7 @@ class VideoCoverageTests(unittest.TestCase):
         for video_id, match_id in expected.items():
             video=next(v for v in self.database["videos"] if v["id"]==video_id)
             match=next(m for m in self.database["matches"] if m["id"]==match_id)
-            self.assertEqual(video["date"],match["date"].replace("-", ""))
+            self.assertEqual(video["date"],match["date"])
             self.assertEqual(video["match_id"],match_id)
             self.assertEqual(video["segment"],"Transmisja meczu")
             self.assertIn(match["event_link"],video["verification_source"])
