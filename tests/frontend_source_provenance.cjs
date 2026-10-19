@@ -23,6 +23,7 @@ assert.ok(moskal.includes("Oficjalny HTML wszystkich rozgrywek"));
 assert.ok(moskal.includes("https://podlaskaliga.pl/zawodnik/moskal-pawel/"));
 assert.ok(moskal.includes("Bosch"));
 assert.ok(moskal.includes("PLP cała kariera"));
+assert.equal((moskal.match(/href="https:\/\/podlaskaliga.pl\/zawodnik\/moskal-pawel\//g)||[]).length,1);
 
 const privateProfile = vm.runInContext('playerDetail("10321")', scope);
 assert.ok(privateProfile.includes("Pochodzenie każdej statystyki"));

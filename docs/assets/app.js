@@ -459,8 +459,8 @@ function playerDetail(id){
         e(record.red)
     ]);
     const publicCareerSection=publicCareerRows.length
-        ? section("Oficjalna tabela całej kariery PLP — komplet rozgrywek",
-            '<p>Źródło: <a target="_blank" rel="noopener noreferrer" href="'+e(player.career_totals.source_url)+'">Profil PLP ↗</a>. Obejmuje wszystkie sezony oraz Superpuchary — niezależnie od klubów.</p>'+
+        ? section("Oficjalna tabela kariery PLP",
+            '<p>Tabela opublikowana w profilu PLP może obejmować także inne kluby. Źródło oraz udokumentowane uzupełnienia znajdują się wyżej.</p>'+
             table(["Rozgrywki","M","G","A","MVP","ŻK","CK bezp."],publicCareerRows))
         : "";
     const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
@@ -487,7 +487,7 @@ function playerDetail(id){
             '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">PLP ↗</a>'
         ]))
     ):"";
-    const combinedProfileLinks=(player.alternate_profile_urls||[]).map(url=>
+    const combinedProfileLinks=(player.alternate_profile_urls||[]).filter(url=>url!==(player.career_totals?.source_url||player.profile_url)).map(url=>
         '<a target="_blank" rel="noopener noreferrer" href="'+e(url)+'">'+e(url)+'</a>'
     );
     const profileMergeNote=combinedProfileLinks.length
@@ -528,8 +528,7 @@ function playerDetail(id){
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
         gallery+
         historicTeamGallery+
-        (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
-        (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
+        (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"");
 }
 function groupOpponentHistory(matches){
     const namesToIds=new Map();
