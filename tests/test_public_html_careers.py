@@ -37,7 +37,7 @@ class PublicCareerCompletenessTests(unittest.TestCase):
                         self.assertEqual(career["html_identity_delta"], 1)
                     else:
                         self.assertEqual(career[stat], source["totals"][stat])
-                    self.assertEqual(sum(r[stat] for r in career["public_season_rows"]), career[stat])
+                    self.assertEqual(sum(r[stat] for r in career["public_season_rows"]), source["totals"][stat])
 
     def test_bosch_specific_stats_are_never_overwritten_by_whole_career(self):
         player = next(p for p in self.database["players"] if str(p["id"]) == "1960")
