@@ -326,6 +326,51 @@ function playerTrendSection(player){
         '<div class="notice">Brak danych nie oznacza 0. Nie sumujemy historycznych wartości minimalnych z pełnym bilansem PLP.</div>'
     );
 }
+function officialSourceLinks(urls,label){
+    const unique=[...new Set(urls.filter(url=>/^https:\/\/podlaskaliga\.pl\//.test(url||"")))];
+    if(!unique.length)return e("Brak publicznego źródła statystycznego");
+    const refs=unique.slice(0,3).map((url,index)=>
+        '<a target="_blank" rel="noopener noreferrer" href="'+e(url)+'">'+e(label)+" "+(index+1)+" ↗</a>"
+    );
+    if(unique.length>3)refs.push(e("+"+(unique.length-3)+" kolejne w historii meczów"));
+    return refs.join(" · ");
+}
+function playerProvenanceSection(player){
+    const matchEvidence=DB.matches
+        .filter(match=>(match.player_performance||[]).some(entry=>same(entry.player_id,player.id)))
+        .map(match=>match.player_performance_source||match.event_link);
+    const goalEvidence=(player.goal_matches||[]).map(item=>item.source_url);
+    const career=player.career_totals||null;
+    const careerUrl=career?.source_url||player.profile_url||"";
+    const identity=player.verified_identity_source?.evidence_urls||[];
+    const boschSource=player.profile_url?[player.profile_url,...matchEvidence]:
+        [...matchEvidence,...identity];
+    const fullHistory=Boolean(player.bosch_totals)&&!player.stats_minimum;
+    const metrics=[
+        ["Występy","apps"],["Gole","goals"],["Asysty","assists"],
+        ["MVP","motm"],["Żółte kartki","yellow"],["Czerwone kartki","red"]
+    ];
+    const rows=metrics.map(([name,field])=>{
+        const boschValue=player[field];
+        const careerValue=career?.[field];
+        const matchUrls=field==="goals"?[...goalEvidence,...matchEvidence]:boschSource;
+        const boschStatus=Number.isInteger(boschValue)
+            ?(fullHistory?"Bilans sezonów PLP":"Źródłowo potwierdzone minimum / archiwum")
+            :"Brak potwierdzonej wartości";
+        const careerStatus=Number.isInteger(careerValue)
+            ?(career?.public_season_rows?.length?"Oficjalny HTML wszystkich rozgrywek":"PLP API")
+            :"Brak pełnego publicznego bilansu";
+        return [
+            e(name),Number.isInteger(boschValue)?e(boschValue):"—",
+            e(boschStatus),officialSourceLinks(matchUrls,"PLP"),
+            Number.isInteger(careerValue)?e(careerValue):"—",
+            e(careerStatus),officialSourceLinks(careerUrl?[careerUrl]:[],"Kariera")
+        ];
+    });
+    return section("Pochodzenie każdej statystyki",
+        '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
+        table(["Miara","Bosch","Pewność danych","Protokoły lub profil Bosch","PLP cała kariera","Źródło kariery","Oficjalny link"],rows));
+}
 function playerDetail(id){
     const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
 
@@ -431,6 +476,7 @@ function playerDetail(id){
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
+        playerProvenanceSection(player)+
         playerTrendSection(player)+
         publicCareerSection+
         playerMatchTimeline(player)+
