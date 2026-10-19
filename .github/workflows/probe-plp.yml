@@ -47,5 +47,7 @@ jobs:
           git add data/match_player_evidence.json
           if ! git diff --cached --quiet; then
             git commit -m "data: persist verified match-level player evidence from all 113 PLP fixtures"
+            git fetch origin feat/rebuild-player-stats-from-113-match-reports
+            git rebase origin/feat/rebuild-player-stats-from-113-match-reports
             git push
           fi
