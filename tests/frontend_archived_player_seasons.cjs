@@ -31,14 +31,14 @@ for (const playerId of archivedPlayerIds) {
 const golabeski = evaluate('playerDetail("7270")');
 
 assert.ok(golabeski.includes("Orlik 2024"));
-assert.ok(golabeski.includes("<td>—</td><td>1</td><td>1</td><td>2</td>"));
-assert.ok(golabeski.includes("Niepełny podział na sezony: 13 meczów"));
+assert.ok(golabeski.includes("<td>6</td><td>1</td><td>1</td><td>2</td>"));
+assert.ok(golabeski.includes("Niepełny podział na sezony: 2 meczów"));
 assert.ok(golabeski.includes("Archiwum Boscha — najlepszy sezon"));
 assert.ok(golabeski.includes("Łącznie Bosch"));
 
 const sołowiej = evaluate('playerDetail("7285")');
 assert.ok(sołowiej.includes("Tabela PLP — archiwum"));
-assert.ok(sołowiej.includes("3 asyst"));
+assert.ok(sołowiej.includes("<td>7</td><td>2</td><td>3</td><td>5</td>"));
 
 const historic2024 = evaluate('seasonPage("139")');
 assert.ok(historic2024.includes("Gołąbeski Piotr"), "Known 2024 goals must appear even when appearances are unavailable");

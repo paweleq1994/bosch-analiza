@@ -29,10 +29,10 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
         self.assertEqual(player["name"], "Gołąbeski Piotr")
         self.assertEqual((player["apps"], player["goals"], player["assists"]), (13, 1, 1))
         self.assertEqual((season["goals"], season["assists"]), (1, 1))
-        self.assertIsNone(season["apps"])
+        self.assertEqual(season["apps"], 6)
         self.assertEqual(season["origin"], "archived_peak")
         self.assertIsNone(self.season("7270", "120")["goals"])
-        self.assertEqual(player["season_coverage"]["unassigned"]["apps"], 13)
+        self.assertEqual(player["season_coverage"]["unassigned"]["apps"], 2)
         self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 0)
 
     def test_recovers_four_full_archive_players_without_rest_access(self):
@@ -55,19 +55,19 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
 
         hala = self.season("7285", "120")
         self.assertEqual((hala["goals"], hala["assists"]), (10, 7))
-        self.assertIsNone(hala["apps"])
+        self.assertEqual(hala["apps"], 13)
         self.assertEqual(hala["origin"], "archived_peak")
 
     def test_unassigned_totals_are_not_invented_as_specific_season_stats(self):
         player = self.players["7285"]
         self.assertEqual((player["apps"], player["goals"], player["assists"]), (32, 22, 13))
         self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 0)
-        self.assertEqual(player["season_coverage"]["unassigned"]["assists"], 3)
+        self.assertEqual(player["season_coverage"]["unassigned"]["assists"], 0)
 
         unknown = self.season("7285", "139")
-        self.assertIsNone(unknown["apps"])
+        self.assertEqual(unknown["apps"], 7)
         self.assertEqual(unknown["goals"], 2)
-        self.assertIsNone(unknown["assists"])
+        self.assertEqual(unknown["assists"], 3)
 
     def test_sports_press_verification_still_takes_priority(self):
         moskal = self.season("1960", "125")

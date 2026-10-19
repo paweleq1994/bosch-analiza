@@ -16,6 +16,8 @@ jobs:
           python-version: "3.12"
       - name: PLP synchronization regression tests
         run: python -m unittest discover -s tests -v
+      - name: Validate player match evidence
+        run: python -m unittest discover -s tests -p 'test_match_player_evidence.py' -v
       - name: Rebuild portal
         run: python src/build_portal.py
       - name: Validate generated snapshot

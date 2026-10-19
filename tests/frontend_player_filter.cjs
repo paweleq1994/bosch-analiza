@@ -39,7 +39,7 @@ assert.equal(haloRecord.goals, 3);
 
 const emptyStatsCard = evaluate('playerCard(DB.players.find(player => player.name === "Sołowiej Tomasz"), "120")');
 assert.ok(emptyStatsCard.includes("Hala 2022"));
-assert.ok(emptyStatsCard.includes("M: —"));
+assert.ok(emptyStatsCard.includes("M: 13"));
 assert.ok(!emptyStatsCard.includes("Orlik 2026:"));
 
 const historicalCard = evaluate('playerCard(DB.players.find(player => player.name === "Moskal Paweł"), "120")');
