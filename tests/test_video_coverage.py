@@ -123,6 +123,23 @@ class VideoCoverageTests(unittest.TestCase):
                 validate_fixture_dates([{"id": "wrong", "match_id": "1", "date": "2023-08-26", "status": status}], match)
         validate_fixture_dates(self.database["videos"], self.database["matches"])
 
+    def test_user_classified_tournaments_cannot_be_matched_to_league_fixtures(self):
+        excluded = {"mRNWenMq9DA", "jYIcEGA7gns", "O3mBzeS-9VY", "PDHzxceI8wU"}
+        probable = {"ip4f5qE7-Cs", "2TgTJHeWd4o", "o4tWJ0ngczs"}
+        for video in self.database["videos"]:
+            if video["id"] not in excluded | probable:
+                continue
+            self.assertIsNone(video["match_id"])
+            self.assertEqual(video["status"], "ignored" if video["id"] in excluded else "needs_review")
+            self.assertTrue(video["verification_source"])
+            candidate = {"id": "future", "date": video["date"], "gf": 1, "ga": 2, "opponent": "Test"}
+            self.assertIsNone(match_video({**video, "title": "Bosch 1:2 Test"}, [candidate]))
+        report = build_report(self.database)
+        pending = report.split("## Nieprzypisane materiały")[1].split("## Filmy poza PLP")[0]
+        self.assertNotIn("Medgal", pending)
+        self.assertIn("Rambo", pending)
+        self.assertIn("nie jest pewne", pending)
+
 
 if __name__ == "__main__":
     unittest.main()

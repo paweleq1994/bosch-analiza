@@ -70,3 +70,10 @@ console.log("Verified alphabetical player sorting, season filters, video chronol
 const mixed=evaluate('sortVideos([{title:"May",date:"20250501"},{title:"June",date:"2025-06-17"},{title:"2026",date:"",match_id:"orlik26-14"}],"newest").map(v=>v.title)');
 assert.deepEqual(Array.from(mixed),["2026","June","May"]);
 assert.ok(evaluate('videoDateLabel({date:"",match_id:"orlik26-14"})').includes("Mecz:"));
+
+const visibleIds=Array.from(evaluate('visibleVideos().map(v=>v.id)'));
+for(const ignored of ["mRNWenMq9DA","jYIcEGA7gns","O3mBzeS-9VY","PDHzxceI8wU"])assert.ok(!visibleIds.includes(ignored));
+for(const pending of ["ip4f5qE7-Cs","2TgTJHeWd4o","o4tWJ0ngczs"]){
+    assert.ok(visibleIds.includes(pending));
+    assert.ok(evaluate(`videoReviewLabel(DB.videos.find(v=>v.id==="${pending}"))`).includes("rozgrywki do potwierdzenia"));
+}

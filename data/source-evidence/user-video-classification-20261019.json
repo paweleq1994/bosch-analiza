@@ -1,0 +1,35 @@
+{
+  "received_at": "2026-10-19",
+  "source": "user_message_in_project_conversation",
+  "user_statement": "rambo krokus i prestige to jakis superpuchar plp chyba byl albo turniej PLP. z kolei olimp koledzy z boiska i medgal to jakis turniej - te nagrania sa do zignorowania. to nie PLP",
+  "confirmed_non_plp_video_ids": [
+    "mRNWenMq9DA",
+    "jYIcEGA7gns",
+    "O3mBzeS-9VY",
+    "PDHzxceI8wU"
+  ],
+  "probable_plp_tournament_video_ids": [
+    "ip4f5qE7-Cs",
+    "2TgTJHeWd4o",
+    "o4tWJ0ngczs"
+  ],
+  "limitation": "Wypowiedź o Superpucharze lub turnieju PLP jest przypuszczeniem. Nie potwierdza konkretnego wydarzenia, sezonu ani daty meczu; nie jest podstawą do przypisania do 113 meczów ligowych.",
+  "official_sources_checked": {
+    "reviewed_at": "2026-10-19",
+    "articles": [
+      {
+        "id": 9423,
+        "url": "https://podlaskaliga.pl/podsumowanie-superpucharu-iii-edycji-plp/"
+      },
+      {
+        "id": 9215,
+        "url": "https://podlaskaliga.pl/ostatnie-ii-ligowe-topki/"
+      }
+    ],
+    "public_bosch_supercup_2023_event_ids": [
+      9239,
+      9247
+    ],
+    "result": "Sprawdzone źródła nie potwierdziły konkretnych wydarzeń z Rambo, Krokusem i Prestige. Nie ustalono edycji ani dat tych trzech meczów."
+  }
+}

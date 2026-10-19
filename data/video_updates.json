@@ -634,6 +634,83 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/"
       ],
       "reviewed_at": "2026-10-19"
+    },
+    "mRNWenMq9DA": {
+      "match_id": null,
+      "status": "ignored",
+      "review_category": "outside_plp",
+      "review_reason": "Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=mRNWenMq9DA"
+      ]
+    },
+    "jYIcEGA7gns": {
+      "match_id": null,
+      "status": "ignored",
+      "review_category": "outside_plp",
+      "review_reason": "Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=jYIcEGA7gns"
+      ]
+    },
+    "O3mBzeS-9VY": {
+      "match_id": null,
+      "status": "ignored",
+      "review_category": "outside_plp",
+      "review_reason": "Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=O3mBzeS-9VY"
+      ]
+    },
+    "PDHzxceI8wU": {
+      "match_id": null,
+      "status": "ignored",
+      "review_category": "outside_plp",
+      "review_reason": "Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=PDHzxceI8wU"
+      ]
+    },
+    "ip4f5qE7-Cs": {
+      "match_id": null,
+      "status": "needs_review",
+      "review_category": "possible_plp_tournament",
+      "review_reason": "Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=ip4f5qE7-Cs"
+      ]
+    },
+    "2TgTJHeWd4o": {
+      "match_id": null,
+      "status": "needs_review",
+      "review_category": "possible_plp_tournament",
+      "review_reason": "Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=2TgTJHeWd4o"
+      ]
+    },
+    "o4tWJ0ngczs": {
+      "match_id": null,
+      "status": "needs_review",
+      "review_category": "possible_plp_tournament",
+      "review_reason": "Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi.",
+      "reviewed_at": "2026-10-19",
+      "verification_source": [
+        "data/source-evidence/user-video-classification-20261019.json",
+        "https://www.youtube.com/watch?v=o4tWJ0ngczs"
+      ]
     }
   }
 }

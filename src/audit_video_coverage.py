@@ -23,7 +23,8 @@ def build_report(database: dict) -> str:
     gaps = [match for match in matches if str(match["id"]) not in mapped_matches]
     unmatched = [video for video in videos if not video.get("match_id")]
     rejected = [video for video in unmatched if video.get("status") == "rejected"]
-    pending = [video for video in unmatched if video.get("status") != "rejected"]
+    ignored = [video for video in unmatched if video.get("status") == "ignored"]
+    pending = [video for video in unmatched if video.get("status") not in {"rejected", "ignored"}]
 
     report = [
         "# Bosch — źródłowy audyt nagrań YouTube",
@@ -39,6 +40,7 @@ def build_report(database: dict) -> str:
         f"- Znane filmy: **{len(videos)}**",
         f"- Filmy bez powiązanego meczu: **{len(unmatched)}**",
         f"- Materiały oczekujące na identyfikację: **{len(pending)}**; odrzucone powiązania / materiały spoza meczów: **{len(rejected)}**",
+        f"- Filmy pomijane poza PLP: **{len(ignored)}**; widoczne w archiwum: **{len(videos) - len(ignored)}**",
         "",
         "## Pokrycie według sezonów",
         "",
@@ -57,8 +59,8 @@ def build_report(database: dict) -> str:
         "",
         "## Nieprzypisane materiały",
         "",
-        "| Film YouTube | Kanał | Kandydat z potwierdzonym wynikiem |",
-        "|---|---|---|",
+        "| Film YouTube | Kanał | Kandydat z potwierdzonym wynikiem | Informacja o rozgrywkach |",
+        "|---|---|---|---|",
     ]
 
     for video in pending:
@@ -73,10 +75,16 @@ def build_report(database: dict) -> str:
         )
         title = str(video["title"]).replace("|", "¦")
         channel = str(video.get("channel") or "").replace("|", "¦")
+        review = str(video.get("review_reason") or "Brak potwierdzenia rozgrywek").replace("|", "¦")
         report.append(
-            f"| [{title}]({video['url']}) | {channel} | {candidate_label} |"
+            f"| [{title}]({video['url']}) | {channel} | {candidate_label} | {review} |"
         )
 
+    report += ["", "## Filmy poza PLP — pomijane w archiwum i dopasowywaniu", "",
+               "| Film | Źródło klasyfikacji | Data przeglądu |", "|---|---|---|"]
+    for video in ignored:
+        reason = str(video.get("review_reason") or "Poza zakresem PLP").replace("|", "¦")
+        report.append(f"| [{video['title'].replace('|', '¦')}]({video['url']}) | {reason} | {video.get('reviewed_at') or '—'} |")
     report += ["", "## Zweryfikowane odrzucenia powiązań", "",
                "| Film | Powód / dowód | Data przeglądu |", "|---|---|---|"]
     for video in rejected:

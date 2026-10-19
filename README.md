@@ -13,8 +13,8 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 | Zawodnicy | 46 kanonicznych profili, 988 występów w protokołach |
 | Cała kariera PLP | 35 publicznych bilansów, 11 niepełnych archiwów z odtworzonym minimum z 2415 publicznych protokołów |
 | Portrety | 18 potwierdzonych, 28 brakujących |
-| Wideo | 120 rekordów; 53 mecze z nagraniem, 60 bez przypisanego filmu |
-| Weryfikacja materiałów | 7 do identyfikacji, 4 odrzucone powiązania / materiały poza archiwum ligowym |
+| Wideo | 120 rekordów źródłowych, 116 widocznych; 53 mecze z nagraniem, 60 bez przypisanego filmu |
+| Weryfikacja materiałów | 3 prawdopodobne nagrania turnieju PLP do identyfikacji, 4 odrzucone powiązania, 4 filmy turnieju poza PLP pomijane |
 | Odnośniki czasowe | 10 obejrzanych akcji i 5 oznaczonych komentarzy gola z oficjalnych napisów; 149 goli w kolejce |
 | Różnice źródeł | 34 porównania, wszystkie wyjaśnione protokołami lub zakresem rozgrywek; 0 sprzeczności sezonowych z protokołami |
 
@@ -85,6 +85,8 @@ Audyt 26 sitemap i 4559 adresów nie odnalazł nowych profili. Wszystkie 11 brak
 Internet Archive udostępnił dawne profile o zgodnych ID. Odzyskano 3 portrety oraz wpisy Superpucharu 2022 Gorbacewicza, Kossakowskiego i Sołowieja. Późniejszy przegląd wszystkich 2415 publicznych protokołów odnalazł brakujący występ i żółtą kartkę Gołąbeskiego w meczu 10050 oraz dodatkowy występ Sołowieja w barażu 7882. Oba wydarzenia nie mają w PLP oznaczenia sezonu: historia pokazuje je osobno, z datą i źródłem. Nie zwiększają archiwum 113 meczów ligowych. Dla 11 niedostępnych profili zapisano minimum z protokołów w `data/source-evidence/public-career-protocol-review-20261019.json`; nie oznacza ono pełnej kariery. Nadal brakuje 28 portretów. Sprawdzone kopie pozostałych profili zawierają placeholdery; dodatkowy przegląd artykułów PLP nie dostarczył nowego portretu z potwierdzoną tożsamością.
 
 Kanały są w `data/video_channels.json`: `@martawnuszynska9993`, `@piotrgoabeski3337` oraz oficjalna PLP `UCd0p73Dp5Eya7c4tQ8EoLZA`. Ostatni kanał jest odczytywany z zakładki transmisji i filtrowany do tytułów Boscha. Siedem odnalezionych transmisji z lat 2023–2025 przypisano po porównaniu dokładnej daty i drużyn z PLP; osobna transmisja Superpucharu nie zwiększa pokrycia 113 meczów ligowych. Workflow odczytuje metadane przez istniejący `yt-dlp`; synchronizacja nie pobiera plików filmów. Ręczne `manual_bindings` w `data/video_updates.json` mają pierwszeństwo. `match_id: null` odrzuca stare powiązanie również w meczu, z zachowaniem `review_reason` i `reviewed_at`.
+
+Użytkownik potwierdził, że dwa filmy z Olimpem oraz nagrania z Kolegami z Boiska i Medgalem pokazują turniej poza PLP. Są pomijane w widoku, kolejce identyfikacji i automatycznym dopasowywaniu, a surowe rekordy pozostają w źródłach. Rambo, Krokus i Prestige zachowano jako prawdopodobny turniej PLP / Superpuchar, z jawną niepewnością i bez przypisania do ligi. Wypowiedź nie ustala konkretnej edycji, daty meczu ani protokołu. Dowód klasyfikacji: `data/source-evidence/user-video-classification-20261019.json`.
 
 Odnośnik czasowy wymaga wpisu w `data/video_goal_evidence.json`: meczu, zawodnika, minuty PLP, filmu, zweryfikowanej sekundy, metody, recenzenta i daty. Opis przeglądu wyjaśnia powiązanie; klatki są w `reports/evidence/`. Dziesięć odnośników wskazuje obejrzaną akcję, a pięć jest wyraźnie oznaczonych jako komentarz gola z automatycznych napisów oficjalnej transmisji. Komentarz nie potwierdza czytelnego obrazu piłki w bramce. Minuta 21 meczu nie oznacza 21:00 filmu. Dalsze 149 goli w meczach z nagraniem wymaga przeglądu. Cztery inne gole utraciły błędnie przypisany film i wróciły do braków nagrań; nie oznacza to ich weryfikacji. Filmy „1” i „2” przypisano do Wiary Piasta II z 01.07.2023 po jednoznacznym potwierdzeniu użytkownika; nie ustala to jeszcze sekundy gola.
 

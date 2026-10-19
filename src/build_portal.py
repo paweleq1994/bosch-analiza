@@ -340,7 +340,10 @@ def main() -> None:
         if video_id in video_by_id:
             video_by_id[video_id]["match_id"] = str(binding.get("match_id") or "") or None
             video_by_id[video_id]["segment"] = binding.get("segment", video_by_id[video_id].get("segment") or "")
-            video_by_id[video_id]["status"] = "matched_manual" if video_by_id[video_id]["match_id"] else "rejected"
+            status = "matched_manual" if video_by_id[video_id]["match_id"] else binding.get("status", "rejected")
+            if status not in {"matched_manual", "rejected", "ignored", "needs_review"}:
+                raise ValueError("Invalid manually reviewed video status")
+            video_by_id[video_id]["status"] = status
             for key in ("review_reason", "reviewed_at", "review_category", "verification_source"):
                 if key in binding:
                     video_by_id[video_id][key] = binding[key]
