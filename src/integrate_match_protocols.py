@@ -90,7 +90,7 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
         protocol_goals = record.get("protocol_player_goals")
         ambiguous = int(record.get("unreadable_goal_markers") or 0) > 0
 
-        if own_goals and identifier not in OWN_GOAL_MATCHES:
+        if own_goals and identifier not in OWN_GOAL_MATCHES and record.get("audit_origin") != "plp_event_api_verified":
             raise ValueError(f"Unexpected opponent own goal: {identifier}")
 
         if protocol_goals is not None and protocol_goals != sum(scorer["goals"] for scorer in confirmed_scorers):

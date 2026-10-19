@@ -35,9 +35,12 @@ assert known_scorers["pietruczuk"].get("stats_minimum") is True, "Partial match 
 attribution = DATA["analysis"]["player_goal_coverage"]
 for record in attribution:
     assert record["team_goals"] == (
-        record["attributed_goals"] + record["administrative_goals"] + record["opponent_own_goals"] + record["unattributed_goals"]
+        record["attributed_goals"] + record["administrative_goals"] + record["opponent_own_goals"] + record["unattributed_goals"] + record.get("pending_match_goals", 0)
     ), f"Unbalanced season goal attribution: {record['season']}"
     assert record["unattributed_goals"] >= 0, f"Negative unexplained goals: {record['season']}"
+    pending = [match for match in matches if str(match["sid"]) == str(record["sid"]) and not (match.get("goal_protocol") or {}).get("verified")]
+    assert record.get("pending_match_count", 0) == len(pending), f"Incorrect pending match count: {record['season']}"
+    assert record.get("pending_match_goals", 0) == sum(match["gf"] for match in pending), f"Incorrect pending goals: {record['season']}"
 
 awarded_goals = sum(record["administrative_goals"] for record in attribution)
 assert awarded_goals >= 1, "The officially awarded OST Sport goal must be accounted for"

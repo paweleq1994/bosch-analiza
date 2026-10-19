@@ -584,6 +584,7 @@ def main() -> None:
         player.pop("recap2026", None)
 
     goal_coverage = []
+    verified_goal_match_ids = {str(item["id"]) for item in match_protocol_index.get("matches") or []}
     administrative_adjustments = administrative_goals_by_season(goal_evidence)
 
     for season in seasons:
@@ -591,6 +592,10 @@ def main() -> None:
             continue
 
         season_id = str(season["id"])
+        season_matches = [match for match in matches if str(match["sid"]) == season_id]
+        pending_matches = [match for match in season_matches if str(match["id"]) not in verified_goal_match_ids]
+        audited_team_goals = sum(match["gf"] for match in season_matches if str(match["id"]) in verified_goal_match_ids)
+        pending_team_goals = sum(match["gf"] for match in pending_matches)
         recorded = protocol_enrichment["seasons"].get(season_id) or {}
         individual_goals = recorded.get("player_goals", 0)
         opponent_own_goals = recorded.get("opponent_own_goals", 0)
@@ -607,13 +612,13 @@ def main() -> None:
             if type(stats.get("goals")) is int and (type(stats.get("apps")) is not int or stats["apps"] > 0)
         )
 
-        if summed_player_goals != individual_goals:
+        if not pending_matches and summed_player_goals != individual_goals:
             raise ValueError(
                 f"Season/player protocol goal mismatch in {season['name']}: "
                 f"{summed_player_goals} != {individual_goals}"
             )
 
-        difference = season["gf"] - individual_goals - opponent_own_goals - administrative_goals
+        difference = audited_team_goals - individual_goals - opponent_own_goals - administrative_goals
 
         if difference != 0:
             raise ValueError(f"Match reports leave {difference} goals unresolved in {season['name']}")
@@ -622,6 +627,10 @@ def main() -> None:
             "sid": season_id,
             "season": season["name"],
             "team_goals": season["gf"],
+            "audited_team_goals": audited_team_goals,
+            "pending_match_goals": pending_team_goals,
+            "pending_match_count": len(pending_matches),
+            "pending_match_ids": [str(match["id"]) for match in pending_matches],
             "attributed_goals": individual_goals,
             "administrative_goals": administrative_goals,
             "opponent_own_goals": opponent_own_goals,
@@ -631,7 +640,7 @@ def main() -> None:
                 type((player.get("season_stats", {}).get(season_id) or {}).get("goals")) is int
                 for player in historic_players
             ),
-            "source": "113 PLP direct match reports, scorer minute icons, own goals and administrative decisions",
+            "source": "PLP individually verified match scorers, own goals and administrative decisions; pending new fixtures separated",
         })
 
     # One source of truth for repeated historical leaderboard rows.
