@@ -249,6 +249,7 @@ function dataQuality(){
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/source-reconciliation.md" target="_blank" rel="noopener noreferrer">Różnice oficjalnych źródeł PLP — zawodnik po zawodniku ↗</a></p>'+
 
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-coverage.md" target="_blank" rel="noopener noreferrer">Audyt znanych nagrań i meczów bez filmu ↗</a></p>'+
+        '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-goal-review-queue.md" target="_blank" rel="noopener noreferrer">Gole wymagające potwierdzenia czasu YouTube ↗</a></p>'+
         '<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/player-source-reconciliation.md">Porównanie statystyk z oficjalnymi protokołami ↗</a></p>';
 }
 function players(){
@@ -373,6 +374,13 @@ function playerProvenanceSection(player){
         '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
         table(["Miara","Bosch","Pewność danych","Protokoły lub profil Bosch","PLP cała kariera","Źródło kariery","Oficjalny link"],rows));
 }
+function verifiedVideoMinuteLink(playerId,matchId,minute){
+    const cues=DB.analysis?.verified_goal_video_cues||[];
+    const found=cues.find(row=>same(row.match_id,matchId)&&
+        same(row.player_id,playerId)&&String(row.minute)===String(minute));
+    if(!found)return e(minute)+"′";
+    return '<a target="_blank" rel="noopener noreferrer" href="'+e(found.url)+'" title="Potwierdzony moment gola wideo">'+e(minute)+"′ ▶ YouTube</a>";
+}
 function playerDetail(id){
     const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
 
@@ -440,7 +448,7 @@ function playerDetail(id){
         href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
         e(entry.score),
         e(entry.goals),
-        entry.minute_uncertain?"Minuta nieczytelna w PLP":entry.minutes.map(minute=>e(minute)+"′").join(", "),
+        entry.minute_uncertain?"Minuta nieczytelna w PLP":entry.minutes.map(minute=>verifiedVideoMinuteLink(player.id,entry.match_id,minute)).join(", "),
         '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">Protokół ↗</a>'
     ]);
     const scoredMatchSection=section(
