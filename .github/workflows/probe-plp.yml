@@ -15,3 +15,23 @@ jobs:
           python-version: "3.12"
       - name: Inspect official PLP events
         run: python src/probe_match_html.py
+      - name: Collect all Bosch player match events
+        run: python src/collect_match_player_evidence.py
+      - name: Summarize full match audit
+        run: | 
+          python - <<'PY'
+          import json
+          from collections import Counter, defaultdict
+          d=json.load(open('data/match_player_evidence.json'))
+          totals=defaultdict(lambda:Counter())
+          seasons=defaultdict(lambda:Counter())
+          for match in d['matches']:
+              for p in match['players']:
+                  for k in ('appearance','goals','assists','motm','yellow','red'):
+                      if p.get(k) is not None:
+                          totals[p['player_id']][k]+=p[k]
+                          seasons[(p['player_id'],match['season_id'])][k]+=p[k]
+          for id in ('7270','7271','7278','7282','7285','12286','7284'):
+              print('PLAYER_AUDIT',id,dict(totals[id]),{s:dict(x) for (p,s),x in seasons.items() if p==id})
+          print('TOTAL_FIXTURES',len(d['matches']),'TOTAL_APPS',sum(x['appearance'] for x in totals.values()),'PLAYER_IDS',len(totals))
+          PY
