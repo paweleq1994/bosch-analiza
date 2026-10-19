@@ -165,7 +165,12 @@ def discover_players(index: dict, players: list[dict], get=fetch) -> dict:
                 "reason": (
                     "Sitemap does not prove numeric player identity"
                     if unique_urls
-                    else "No matching published player in accessible sitemap index"
+                    else "No public sitemap could be downloaded; player existence cannot be ruled out"
+                    if not index.get("pages") and not any(
+                        item.get("http_status") == 200
+                        for item in index.get("sitemaps") or []
+                    )
+                    else "No matching player URL in the accessible sitemap index"
                 ),
             }
 
@@ -179,6 +184,7 @@ def render_report(index: dict, identities: dict) -> str:
         "Wyszukiwanie objęło wskazane niżej mapy XML i ich dostępne podrzędne strony.",
         "Przypisanie profilu wymaga zgodności oficjalnego WordPress post ID z ID PLP.",
         "Podobieństwo nazwiska lub miniatury nie potwierdza tożsamości.",
+        "Kod HTTP 0 oznacza problem połączenia, a nie dowód nieistnienia strony.",
         "",
         f"- Sitemapy sprawdzone: **{len(index['sitemaps'])}**",
         f"- Publiczne adresy z sitemap: **{len(index['pages'])}**",
