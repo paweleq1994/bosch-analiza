@@ -100,6 +100,8 @@ jobs:
         run: python src/export_workbook.py
       - name: Validate generated portal data
         run: python src/validate_portal.py
+      - name: Audit comparisons of every player metric against official PLP evidence
+        run: python src/audit_stat_sources.py
       - name: Audit incomplete player careers, appearances, assists, cards, MVP and photos
         run: python src/audit_player_coverage.py
       - name: Publish every verified generated asset atomically
