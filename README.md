@@ -15,7 +15,7 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 | Portrety | 18 potwierdzonych, 28 brakujących |
 | Wideo | 120 rekordów; 54 mecze z nagraniem, 59 bez przypisanego filmu |
 | Weryfikacja materiałów | 9 do identyfikacji, 3 odrzucone powiązania / materiały poza archiwum ligowym |
-| Odnośniki czasowe | 7 obejrzanych akcji; 160 goli w kolejce po odnalezieniu dalszych transmisji |
+| Odnośniki czasowe | 8 obejrzanych akcji; 159 goli w kolejce po odnalezieniu dalszych transmisji |
 | Różnice źródeł | 34 porównania, wszystkie wyjaśnione protokołami lub zakresem rozgrywek; 0 sprzeczności sezonowych z protokołami |
 
 Aktualne liczby po kolejnych synchronizacjach są w [panelu jakości](https://paweleq1994.github.io/bosch-analiza/#/quality) i raportach. Pierwotne 113 meczów to chroniona baza historyczna; archiwum może rosnąć.

@@ -83,6 +83,18 @@
       "verified_at": "2026-10-19",
       "review_notes": "Obejrzana opublikowana przez autorkę wersja ZOOM 200% drugiej połowy IST Trade–Bosch (19.04.2026, 1:1), zestawiona z wersją szeroką B6I1QigzHAk. Przy 140,19 s widoczny atak Boscha w czarnych koszulkach i jasnych spodenkach przed prawym polem karnym; przy 145,19 s zakończenie strzału: piłka przy siatce prawej bramki i bramkarz na ziemi. Przy 150,19 s zawodnicy wracają w stronę środka. To jedyny gol Boscha w tej połowie, strzelec i PLP 23′ potwierdzone protokołem. Powiązanie przez mecz i kolejność bramek, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanego odtwarzacza, nie z przeliczenia minuty PLP.",
       "review_frame": "reports/evidence/goal-orlik26-1-minute23-frame145.png"
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7285",
+      "minute": "26",
+      "video_id": "o660JNtPcUo",
+      "timestamp_seconds": 8,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzany krótki film pojedynczej akcji opisany wynikiem 2:4, opublikowany 05.03.2023 w tej samej hali VI LO. Przy 6,21 s zawodnik Boscha w bieli kończy strzał przed lewą bramką. Przy 8,19 s piłka jest przy siatce wewnątrz prawego słupka tej bramki, a bramkarz w niebieskim odwraca się do bramki. Czwarty gol Boscha w sekwencji wyniku odpowiada drugiemu trafieniu Tomasza Sołowieja i 26 minucie oficjalnego protokołu (pierwsze 24′). Powiązanie przez mecz i kolejność wyniku, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanej klatki zakończenia akcji, nie z przeliczenia minuty meczu.",
+      "review_frame": "reports/evidence/goal7851-minute26-frame8.png"
     }
   ]
 }
