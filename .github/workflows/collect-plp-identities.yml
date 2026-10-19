@@ -1,0 +1,34 @@
+name: Collect verified PLP event player names
+on:
+  push:
+    branches:
+      - feat/verified-player-identity-discovery-20261019
+    paths:
+      - 'src/resolve_match_player_identities.py'
+      - '.github/workflows/collect-plp-identities.yml'
+permissions:
+  contents: write
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover official PLP player IDs and exact names
+        run: python src/resolve_match_player_identities.py
+      - name: Archive verified source identities
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/match_player_identities.json data/player_profile_map.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: retain source-verified PLP roster identity evidence'
+            git fetch origin feat/verified-player-identity-discovery-20261019
+            git rebase origin/feat/verified-player-identity-discovery-20261019
+            git push
+          fi
