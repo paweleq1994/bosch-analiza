@@ -80,7 +80,7 @@ class FullPLPMatchProtocolTests(unittest.TestCase):
         rutkowski = self.players["7284"]
         self.assertIn("13060", rutkowski["aliases"])
         self.assertEqual((rutkowski["apps"], rutkowski["goals"], rutkowski["assists"]), (90, 2, 7))
-        self.assertEqual((rutkowski["career_totals"]["apps"], rutkowski["career_totals"]["goals"]), (90, 2))
+        self.assertEqual((rutkowski["career_totals"]["apps"], rutkowski["career_totals"]["goals"]), (94, 2))
         self.assertEqual(
             (rutkowski["season_stats"]["146"]["apps"], rutkowski["season_stats"]["146"]["goals"]),
             (8, 1),

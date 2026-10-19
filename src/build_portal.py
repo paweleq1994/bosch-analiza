@@ -68,6 +68,7 @@ def main() -> None:
     league_extra = load("league_updates.json", {"matches": []})
     player_seasons_extra = load("player_season_updates.json", {})
     player_career_extra = load("player_career_updates.json", {})
+    public_html_careers = load("player_html_career_snapshot.json", {"players": {}}).get("players", {})
     stat_corrections = load("player_stat_corrections.json", {})
     goal_evidence = load("goal_evidence.json", {"players": [], "administrative_adjustments": []})
     own_goal_evidence = load("bosch_own_goal_evidence.json", {"events": []})
@@ -419,6 +420,22 @@ def main() -> None:
             career["season_rows"] = season_rows
             career["source"] = "PLP SportsPress i publiczna tabela całej kariery"
 
+        public_career = public_html_careers.get(profile_id)
+        if public_career:
+            source_totals = public_career["totals"]
+            if any(type(source_totals.get(field)) is not int or source_totals[field] < 0 for field in ("apps", "goals", "assists", "motm", "yellow", "red")):
+                raise ValueError(f"Invalid HTML career total: {profile_id}")
+            if any(sum(row[field] for row in public_career["season_rows"]) != source_totals[field] for field in ("apps", "goals", "assists", "motm", "yellow", "red")):
+                raise ValueError(f"HTML career rows do not add up: {profile_id}")
+            career = {
+                **(career or {}),
+                **source_totals,
+                "source": "PLP publiczna tabela kariery HTML",
+                "source_url": public_career["source_url"],
+                "html_captured_at": public_career["captured_at"],
+                "public_season_rows": public_career["season_rows"],
+                "seasons": len(public_career["season_rows"]),
+            }
         player["career_totals"] = career
         player["stats_source"] = "PLP SportsPress i tabela całej kariery" if correction else (
             "PLP SportsPress i aktualny raport Orlik 2026"
@@ -482,6 +499,27 @@ def main() -> None:
         goalkeeper_aliases,
         own_goal_evidence,
     )
+
+    # Protocol-only players can be created after the initial career pass.
+    for player in historic_players:
+        if player.get("career_totals"):
+            continue
+        public_career = public_html_careers.get(str(player["id"]))
+        if public_career:
+            player["career_totals"] = {
+                **public_career["totals"],
+                "source": "PLP publiczna tabela kariery HTML",
+                "source_url": public_career["source_url"],
+                "html_captured_at": public_career["captured_at"],
+                "public_season_rows": public_career["season_rows"],
+                "seasons": len(public_career["season_rows"]),
+            }
+
+    for player in historic_players:
+        public_rows = (player.get("career_totals") or {}).get("public_season_rows") or []
+        if public_rows:
+            career = player["career_totals"]
+            career["html_identity_delta"] = career["apps"] - sum(row["apps"] for row in public_rows)
 
     match_performance = load("match_player_evidence.json", {"matches": []})
     match_backfill = backfill_seasons(historic_players, matches, match_performance)

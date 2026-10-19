@@ -20,6 +20,8 @@ on:
       - 'src/plp_photo_archive.py'
       - 'src/plp_media_discovery.py'
       - 'src/sync_player_seasons.py'
+      - 'src/sync_public_player_careers.py'
+      - 'data/player_html_career_snapshot.json'
       - 'src/resolve_current_players.py'
       - 'src/player_identity.py'
       - 'src/player_totals.py'
@@ -58,6 +60,8 @@ jobs:
         run: python src/resolve_current_players.py
       - name: Refresh historical player season statistics
         run: python src/sync_player_seasons.py
+      - name: Verify public player career HTML independent of API
+        run: python src/sync_public_player_careers.py
       - name: Rebuild portal data
         run: python src/build_portal.py
       - name: Search detached public PLP media archive
@@ -88,10 +92,10 @@ jobs:
           path: docs
       - name: Commit verified data changes
         run: |
-          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
+          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json docs/assets/data.json docs/assets/scouting.json reports/player-data-coverage.md docs/media
+            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json docs/assets/data.json docs/assets/scouting.json reports/player-data-coverage.md docs/media
             git commit -m "chore: sync Bosch video and portal data"
             git push
           fi
