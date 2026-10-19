@@ -1,0 +1,508 @@
+{
+  "all_players": 45,
+  "players_with_public_career": 34,
+  "career_source_differences": [
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "field": "apps",
+      "html": 105,
+      "rest": 101,
+      "difference": 4,
+      "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "field": "goals",
+      "html": 17,
+      "rest": 16,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "field": "apps",
+      "html": 139,
+      "rest": 132,
+      "difference": 7,
+      "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "field": "goals",
+      "html": 31,
+      "rest": 29,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "field": "assists",
+      "html": 41,
+      "rest": 39,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "field": "apps",
+      "html": 93,
+      "rest": 89,
+      "difference": 4,
+      "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "field": "apps",
+      "html": 93,
+      "rest": 94,
+      "difference": -1,
+      "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "type": "displayed_career_disagrees_with_html",
+      "note": "This source difference requires investigation"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "field": "goals",
+      "html": 1,
+      "rest": 2,
+      "difference": -1,
+      "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "type": "displayed_career_disagrees_with_html",
+      "note": "This source difference requires investigation"
+    },
+    {
+      "id": "7277",
+      "name": "Klepacki Przemysław",
+      "field": "apps",
+      "html": 89,
+      "rest": 86,
+      "difference": 3,
+      "url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7277",
+      "name": "Klepacki Przemysław",
+      "field": "assists",
+      "html": 26,
+      "rest": 25,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7275",
+      "name": "Jurkowicz Mateusz",
+      "field": "apps",
+      "html": 69,
+      "rest": 67,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7275",
+      "name": "Jurkowicz Mateusz",
+      "field": "goals",
+      "html": 30,
+      "rest": 29,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7283",
+      "name": "Nowicki Patryk",
+      "field": "apps",
+      "html": 65,
+      "rest": 64,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7283",
+      "name": "Nowicki Patryk",
+      "field": "assists",
+      "html": 17,
+      "rest": 16,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "field": "apps",
+      "html": 76,
+      "rest": 70,
+      "difference": 6,
+      "url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "field": "assists",
+      "html": 8,
+      "rest": 7,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "8914",
+      "name": "Kadłubowski Krzysztof",
+      "field": "apps",
+      "html": 51,
+      "rest": 50,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "field": "apps",
+      "html": 46,
+      "rest": 44,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "field": "goals",
+      "html": 29,
+      "rest": 27,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "field": "assists",
+      "html": 21,
+      "rest": 19,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7280",
+      "name": "Malinowski Piotr",
+      "field": "apps",
+      "html": 39,
+      "rest": 38,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "field": "apps",
+      "html": 67,
+      "rest": 59,
+      "difference": 8,
+      "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "field": "assists",
+      "html": 18,
+      "rest": 16,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "12287",
+      "name": "Mironiuk Zbigniew",
+      "field": "apps",
+      "html": 9,
+      "rest": 8,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "8654",
+      "name": "Bączek Szymon",
+      "field": "apps",
+      "html": 12,
+      "rest": 11,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "8654",
+      "name": "Bączek Szymon",
+      "field": "red",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "field": "apps",
+      "html": 69,
+      "rest": 66,
+      "difference": 3,
+      "url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "field": "assists",
+      "html": 19,
+      "rest": 18,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1594",
+      "name": "Kakareko Kamil",
+      "field": "apps",
+      "html": 34,
+      "rest": 30,
+      "difference": 4,
+      "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "1594",
+      "name": "Kakareko Kamil",
+      "field": "goals",
+      "html": 11,
+      "rest": 10,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "2203",
+      "name": "Bayer Emilian",
+      "field": "apps",
+      "html": 31,
+      "rest": 30,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "2203",
+      "name": "Bayer Emilian",
+      "field": "goals",
+      "html": 19,
+      "rest": 18,
+      "difference": 1,
+      "url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    },
+    {
+      "id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "field": "apps",
+      "html": 19,
+      "rest": 17,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Compare source competitions including Supercup before reconciling"
+    }
+  ],
+  "season_source_conflicts": [],
+  "missing_full_careers": [
+    {
+      "id": "7285",
+      "name": "Sołowiej Tomasz",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
+        "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary/",
+        "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach/",
+        "https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/",
+        "https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "7270",
+      "name": "Gołąbeski Piotr",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
+        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/"
+      ]
+    },
+    {
+      "id": "7271",
+      "name": "Gorbacewicz Emil",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+        "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ramis/"
+      ]
+    },
+    {
+      "id": "7282",
+      "name": "Markowski Damian",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/"
+      ]
+    },
+    {
+      "id": "7278",
+      "name": "Kossakowski Maciej",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "10321",
+      "name": "Ciborowski Julian",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "10604",
+      "name": "Śmiłowski Michał",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
+      ]
+    },
+    {
+      "id": "7266",
+      "name": "Bazyluk Jakub",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "7286",
+      "name": "Uściłowski Krzysztof",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+        "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "8655",
+      "name": "Kuźma Gabriel",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "8916",
+      "name": "Wądołowski Sebastian",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/"
+      ]
+    }
+  ],
+  "verified_goal_matches": 113,
+  "unattributed_team_goals": 0
+}

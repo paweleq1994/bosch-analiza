@@ -18,8 +18,8 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 0 | 5 | 0 |
-| Bramki | 0 | 0 | 8 |
+| Występy | 0 | 4 | 0 |
+| Bramki | 0 | 0 | 0 |
 | Asysty | 0 | 1 | 0 |
 | MVP | 0 | 0 | 0 |
 | Żółte kartki | 0 | 1 | 0 |
@@ -93,20 +93,12 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Gołąbeski Piotr (PLP ID 7270): Występy — 2
 - Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
 - Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
-- Grabowski Jakub (GK) (PLP ID 7223): Występy — 1
 - Kossakowski Maciej (PLP ID 7278): Występy — 1
 - Sołowiej Tomasz (PLP ID 7285): Występy — 1
 
 ## Nieznane dane sezonowe
 
-- Ciborowski Julian (PLP ID 10321) — Orlik 2024: Bramki
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Bramki
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Bramki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Bramki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Bramki
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: Bramki
-- Wądołowski Sebastian (PLP ID 8916) — Orlik 2024: Bramki
-- Śmiłowski Michał (PLP ID 10604) — Orlik 2024: Bramki
+Brak.
 
 ## Nieznane sumy zawodników
 

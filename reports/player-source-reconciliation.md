@@ -6,7 +6,7 @@ Nieznana liczba i potwierdzone zero nie są tym samym.
 
 - Zawodnicy: **45**
 - Mecze: **113**
-- Niespójności wymagające wyjaśnienia: **1**
+- Niespójności wymagające wyjaśnienia: **0**
 - Wartości minimalne bez pola sezonowego: **0**
 - Bez pełnego potwierdzonego bilansu kariery PLP: **11**
 
@@ -14,7 +14,7 @@ Nieznana liczba i potwierdzone zero nie są tym samym.
 
 | Zawodnik | Sezon ID | Pole | W kompendium | Minimum z PLP | Źródło |
 |---|---|---|---:|---:|---|
-| Grabowski Jakub (GK) (ID 7223) | 126 | apps | 0 | ≥ 1 | [protokół](https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/) |
+| Brak wykrytych sprzeczności | — | — | — | — | — |
 
 ## Potwierdzone minimum, ale brak wpisanej wartości sezonowej
 
@@ -31,7 +31,6 @@ Nieznana liczba i potwierdzone zero nie są tym samym.
 | Gołąbeski Piotr (ID 7270) | apps | 2 |
 | Gołąbeski Piotr (ID 7270) | yellow | 1 |
 | Gołąbeski Piotr (ID 7270) | red | 1 |
-| Grabowski Jakub (GK) (ID 7223) | apps | 1 |
 | Kossakowski Maciej (ID 7278) | apps | 1 |
 | Sołowiej Tomasz (ID 7285) | apps | 1 |
 
