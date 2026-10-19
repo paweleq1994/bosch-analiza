@@ -19,6 +19,7 @@ from integrate_verified_match_players import attach_verified_identities, minimum
 from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
+from sync_videos import iso_date
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -343,6 +344,8 @@ def main() -> None:
                 if key in binding:
                     video_by_id[video_id][key] = binding[key]
     original_video_details = {str(v.get("video_id")): v for match in matches for v in match["videos"]}
+    for video in video_by_id.values():
+        video["date"] = iso_date(video.get("date"))
     for match in matches:
         match["videos"] = [v for v in match["videos"]
                            if str((video_by_id.get(str(v.get("video_id"))) or {}).get("match_id") or "") == str(match["id"])]
