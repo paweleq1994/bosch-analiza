@@ -523,6 +523,25 @@ def main() -> None:
 
     match_performance = load("match_player_evidence.json", {"matches": []})
     match_backfill = backfill_seasons(historic_players, matches, match_performance)
+    box_scores = {str(record["match_id"]): record for record in match_performance["matches"]}
+    known_names = {str(player["id"]): player["name"] for player in historic_players}
+    for match in matches:
+        record = box_scores.get(str(match["id"]))
+        if record is None:
+            match["player_performance"] = []
+            match["player_performance_source"] = None
+            continue
+        match["player_performance"] = [
+            {
+                **entry,
+                "name": known_names.get(str(entry["player_id"])) or
+                    (profiles.get(str(entry["player_id"])) or {}).get("resolved_name") or
+                    ("Zawodnik PLP #" + str(entry["player_id"])),
+                "identity_verified": str(entry["player_id"]) in known_names,
+            }
+            for entry in record["players"]
+        ]
+        match["player_performance_source"] = record["source_url"]
 
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
