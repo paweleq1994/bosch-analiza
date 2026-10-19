@@ -1,114 +1,70 @@
-# Stan wdrożenia kompendium Bosch — 19.10.2026
+# Stan kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `6fad4b1` (merge PR #60, po `e23c0bc` — synchronizacji #59).
-185 testów Python i 14 frontendowych OK. Lokalny generator działa offline. Produkcyjny JSON, XLSX, trzy nowe obrazy, źródła sezonów i linki akcji zostały sprawdzone.
-Pełna synchronizacja #60: `39268464180` **success**, 14:23–14:26 UTC — PLP, trzy kanały, profile, media, scouting, eksporty i publikacja.
-Issue #33: **otwarte i zaktualizowane**, 15 wykonanych i 5 częściowych punktów (4, 5, 6, 14, 15). Projekt nadal ma nieukończony zakres danych opisany poniżej; nie nazywać go w 100% ukończonym.
+Ostatni potwierdzony main: `c1cae88` (PR #62 i pełna synchronizacja dat). PR #63 zawiera pozostałe opisane poprawki i siódmy potwierdzony fragment gola. GitHub opóźnia start aktualnych kontroli: starsze przebiegi pokazują Starting job bez kroków, ostatnie czekają w kolejce. Scalenie i publikacja #63 pozostają zależne od zielonego CI dla jego rzeczywistego head.
+
+196 testów Python i 14 testów frontendowych przeszło lokalnie. Wszystkie 10 generatorów/audytów offline, walidacje, składnia JS, compileall i diff check OK. Nie nazywać projektu ukończonym: 15 punktów wykonanych, 5 częściowych.
 
 ## Wszystkie 20 punktów
 
-| Punkt | Stan | Dowód i zakres pozostały |
+| Punkt | Stan | Dowód / zakres pozostały |
 |---|---|---|
-| 1 | Wdrożone | #55, #56, #58: test istniejącego importu → sezon 2027, liga/tabela/ID, 114/115 meczów, liderzy, historia, walidator; bez utraty pierwotnych 113. Źródło nie ogłasza jeszcze kolejnego rzeczywistego sezonu. |
-| 2 | Wdrożone | #36, #55, #59: nowe gole i minuty, samobóje, asysty, kartki, MVP. Dwie różne osoby mogą mieć samobója w tym samym meczu. Brak ID/minut lub sprzeczny wynik → pending z przyczyną. |
-| 3 | Wdrożone | 13 dawnych ID rozwiązanych w #35; regresja nowego 99999 w #55: brak fikcyjnego profilu, jawny audyt i pending. |
-| 4 | Częściowo — dane nadal niepewne | 33 różnice opisane zawodnik/sezon/źródło; 29 wyjaśnionych. #60 przypisał 4 z 7 pól historycznych do Superpucharu. Pozostają 4 porównania agregatów oraz 3 pola Gołąbeskiego bez potwierdzonego sezonu. |
-| 5 | Częściowo — brak aktualnych źródeł | 34 pełniejsze kariery PLP, 11 niepełnych. REST 401, publiczny post 404, brak w sitemapach i all-time. Odnalezione stare kopie to częściowe źródła z datą, nie pełna kariera do dziś. |
-| 6 | Częściowo — 18 portretów, 27 braków | #60: odzyskane zdjęcia Gołąbeskiego, Gorbacewicza, Sołowieja z pola zdjęcia profilu o zgodnym postid. Dalsze kopie mają placeholdery. Bez rozpoznawania osoby ze zdjęcia klubowego. |
-| 7 | Wdrożone | #30; Pages z docs, rzeczywista kontrola produkcji po zmianach. |
-| 8 | Wdrożone | #37: oficjalne team ID, aliasy historyczne, odrębne kluby o tej samej nazwie. |
-| 9 | Wdrożone | Kakareko 1594 i alias new-kakareko-kamil, Rutkowski 7284/13060 scalony; Gabriel i Piotr Kuźma odrębni. |
-| 10 | Wdrożone | #37, #58: pełne rankingi oddzielone od minimów, sezonowe G+A nie klasyfikuje minimów jako pełnych wyników; porównywarka ≥ i brak stopy z minimum. |
-| 11 | Wdrożone | 113 szczegółowych protokołów i regresja wzrostu archiwum; stare protokoły bez zmian. |
-| 12 | Wdrożone | 988 źródłowych występów, historia mecz po meczu i odnośniki PLP. |
-| 13 | Wdrożone | #51, #60: źródła i zakresy pól, bezpośrednie linki do archiwalnych tabel sezonów. |
-| 14 | Częściowo — pozostała identyfikacja | #57 poprawił błędny film Vesty; #59 odzyskał 7 transmisji PLP. 54/113 meczów z nagraniem, 59 bez; 9 materiałów do identyfikacji. Dodatkowy Superpuchar poza pokryciem ligowym. |
-| 15 | Częściowo — pozostały przegląd materiału | 5 obejrzanych sekund akcji i klatki dowodowe; 162 gole w kolejce. Transkrypcja pomaga znaleźć fragment, nie zastępuje obejrzenia. Gola poza kadrem nie oznaczono jako observed_video_frame. |
-| 16 | Wdrożone | #38: trendy sezonowe z prawidłowymi brakami danych. |
-| 17 | Wdrożone | #29, #58: porównywarka, filtry sezonu i minima. |
-| 18 | Wdrożone | #34, #58: forma, serie, czyste konta, minuty goli; 113 poprawnych HT: I połowa 130:94, II 163:135, stany HT/FT. Brak/sprzeczność HT wyłącza obliczenie. |
-| 19 | Wdrożone | #30, #55, #58: dynamiczny najnowszy sezon, regresja następnego sezonu i chronologii hali. |
-| 20 | Wdrożone i sprawdzone na produkcji | #54 i #58: poprawne test -s i staging raportów, XLSX normalizuje LF/CRLF i uwzględnia kod eksportera. CSV, 7 arkuszy XLSX, jakość i lineage działają. |
+| 1 | Wdrożone | #55, #56, #58: nowy sezon 2027 przez istniejący pipeline, ID ligi/tabeli, wzrost do 114/115 meczów bez utraty pierwszych 113. #62: osobne zgłoszenia kadry z zerem, właściwa liga i historia niezależna od aktualnego klubu. |
+| 2 | Wdrożone | Nowe gole, minuty, samobóje, asysty, MVP i kartki; nieznane ID/minuty/sprzeczności trafiają do pending. #62: bezpośrednie czerwone oraz wykluczenia po 2 ŻK są rozdzielone. |
+| 3 | Wdrożone | 13 starych ID odzyskanych; regresja nowego nieznanego ID bez fikcyjnego profilu; bieżący backfill bez nierozpoznanych ID. |
+| 4 | Częściowo | 34 porównania HTML/API/widoku mają dowody wyjaśnienia. Pozostają tylko 1 występ i 1 ŻK Gołąbeskiego bez sezonu. Jego sumy nie zostały zwiększone przy przypisaniu Superpucharu. |
+| 5 | Częściowo — ograniczenie źródeł | 35 publicznych bilansów, w tym Zalewski jawnie uzupełniony niezależnym protokołem; 11 całych karier niepotwierdzonych. REST 401, posty z ID 404, brak aktualnych profili w sitemapach/all-time. Stare kopie nie dają kariery do dziś. |
+| 6 | Częściowo — ograniczenie źródeł | 18 potwierdzonych portretów, 28 braków przy 46 osobach. #60 odzyskał 3 prawdziwe portrety; dalsze kopie mają placeholdery. Nowy odczyt attachment parent dla 11 niedostępnych profili: 0 publicznych mediów. |
+| 7 | Wdrożone | Pages z docs, rzeczywista kontrola produkcji i publikacji. |
+| 8 | Wdrożone | Oficjalne team ID, aliasy nazw, odrębne kluby o tej samej nazwie. |
+| 9 | Wdrożone | Kakareko 1594 z dawnym aliasem; Rutkowski 7284/13060 scalony; dwaj Kuźmowie pozostają odrębni. |
+| 10 | Wdrożone | Pełne rankingi oddzielone od minimów, G+A i stopy nie udają pełnych wyników przy brakach. |
+| 11 | Wdrożone | 113 szczegółowych protokołów ligowych i kontrola przyszłego wzrostu. |
+| 12 | Wdrożone | 988 źródłowych występów, historia i linki do meczów. Dodatkowe protokoły Superpucharu nie powiększają archiwum ligowego. |
+| 13 | Wdrożone | Źródła pól, Bosch osobno od całej PLP. Jeden oficjalny link w całym profilu, odrębne źródła rzeczywistych uzupełnień i meczów. |
+| 14 | Częściowo | 120 filmów, 54/113 mecze z nagraniem, 59 bez, 9 materiałów do identyfikacji. Wszystkie filmy mają datę; odzyskane prawdziwe daty 30 filmów z 2026. Nowy odczyt 59 stron wydarzeń: 59 HTTP200 i zgodnych postid, 0 osadzonych YouTube. Brak osadzenia nie dowodzi braku filmu gdzie indziej. |
+| 15 | Częściowo — przegląd wideo | 7 potwierdzonych fragmentów akcji, kadry i notatki źródłowe; 160 goli nadal wymaga weryfikacji. Brak klatki lub nieczytelny przebieg nie upoważnia do zgadywania sekundy. |
+| 16 | Wdrożone | Sezonowe wykresy z prawidłowymi brakami danych. |
+| 17 | Wdrożone | Porównywarka sezonowa, oznaczenie minimów. |
+| 18 | Wdrożone | Serie, forma, czyste konta, minuty goli. 113 poprawnych HT: I połowa 130:94, II 163:135; brak/sprzeczność HT wyłącza obliczenie. |
+| 19 | Wdrożone | Dynamiczny najnowszy sezon i chronologia hali; test nowego sezonu. |
+| 20 | Wdrożone | XLSX, 7 arkuszy, raporty i panel jakości. CSV usunięty na życzenie użytkownika. Hash danych niezależny od CRLF/LF, cache obejmuje kod eksportera. |
 
-## Aktualne metryki
+## Dane i poprawki użytkownika
 
-- 45 kanonicznych zawodników, 8 sezonów, 113 meczów ligowych i 113 zweryfikowanych protokołów.
-- 293 bramki = 289 zawodników + 3 samobóje rywali + 1 administracyjna. 0 nierozliczonych. 6 samobójów Boscha na korzyść rywali.
-- 988 występów; 0 nierozpoznanych ID w bieżącym backfillu.
-- 34 pełniejsze publiczne kariery PLP, 11 niepełnych; Bosch i cała PLP pozostają osobnymi zakresami.
-- 33 różnice źródeł, 29 wyjaśnionych, 4 nadal niepewne; 0 sprzeczności sezonowych z protokołami.
-- 3 nieprzypisane pola u jednej osoby (wcześniej 7 u czterech): Gołąbeski 7270 — występy 2, żółte 1, czerwone 1.
-- 18 potwierdzonych portretów, 27 braków (wcześniej 15/30).
-- 120 materiałów wideo; 54 mecze z filmem, 59 bez (wcześniej 112 i 48/65; jedno błędne przypisanie cofnięto, następnie odzyskano 7 transmisji).
-- 9 materiałów do identyfikacji, 3 odrzucone powiązania / materiały poza archiwum ligowym. Łącznie 12 bez meczu ligowego.
-- 5 potwierdzonych odnośników do sekund obejrzanych akcji; 162 gole w kolejce. Kolejka wzrosła po odzyskaniu nowych transmisji, nie przez utratę zweryfikowanych linków.
+- 46 kanonicznych osób, 8 sezonów, 113 meczów i protokołów ligowych; 988 występów, 0 nierozpoznanych ID.
+- 293 bramki = 289 zawodników + 3 samobóje rywali + 1 administracyjna; 0 nierozliczonych. 6 samobójów Boscha na korzyść rywali.
+- 35 publicznych bilansów kariery, 11 niepełnych; 18 portretów, 28 braków.
+- 34 porównania źródeł: 26 zakresów Superpucharu, 5 wyjaśnień protokołami i wierszami, 2 scalone ID, 1 niezależny protokół Zalewskiego. 0 sprzeczności sezonowych. Dane innych klubów nie zwiększają Boscha.
+- Gołąbeski 7270: nadal 13M/4ŻK/1CK. Protokół 10790 przypisuje znany występ i czerwoną w 24′ do Superpucharu 2024. Zostały 1M i 1ŻK bez sezonu. Kariera nadal niepełna.
+- Zalewski 12288: Orlik 2025 0M, Superpuchar 2025 1M (protokół 12363). Publiczne HTML i REST mają 0, pomijając puchar. Surowe źródło zachowane, portal pokazuje 1 z jawnym uzupełnieniem. Regresja chroni przed podwojeniem, gdy PLP doda puchar pod inną nazwą.
+- Orlik 2026: pięciu znanych zgłoszonych bez występów — Dołżyk, Mateusz Jurkowicz, Kadłubowski, Karpiński i Żak. Widoczni w filtrze graczy i na stronie sezonu. Nie są dopisywani do protokołów jako grający.
+- Czerwone w PLP to bezpośrednie kartki. W 113 protokołach są 4 takie czerwone i 7 odrębnych wykluczeń po 2 ŻK. Dwie żółte z różnych meczów nie tworzą wykluczenia. Widoki i XLSX rozdzielają te pola.
+- CSV usunięty; oficjalny profil linkowany jednokrotnie; etykiety nawigacji, w tym Zdjęcia PLP, zawijają się bez ucinania. Daty w danych i sortowaniu są ISO, znane filmy otrzymują odświeżone metadane, brak limitu 120 widocznych filmów i 300 pozycji kanału.
 
-## Nowe scalone PR-y i istotne commity
+## PR-y i sprawdzone uruchomienia
 
-| PR | Zakres | Commit / merge |
-|---|---|---|
-| #54 | Kontrole publikacji, staging kolejki i triggery | 07bfa56 / 06d525a |
-| #55 | Nowy sezon przez cały istniejący pipeline, ID, chronologia | aaded26 / d2b28ef |
-| #56 | Sezonowe rozliczenie źródeł, ochrona bogatszych historycznych bilansów po prawdziwym sync | d688231 + 12d55c8 / 29694db |
-| #57 | Cofnięcie błędnej Vesty, ręczne odrzucenia, 2 obejrzane akcje | 54323fc / 01b4e20 |
-| #58 | Przenośny hash/cache XLSX, połowy, minima, walidator przyszłego wzrostu, README | 380cc5a / 1ae4571 |
-| #59 | 7 transmisji PLP, osobny Superpuchar, 3 dalsze obejrzane akcje, przyszłe samobóje | 5266da2 / 83600b8 |
-| #60 | 3 portrety i 4 pola przypisane dzięki Internet Archive; zachowanie niepełności kariery | 409f3ac / 6fad4b1 |
+- #54–#61: publikacja, nowe sezony, ochrona bilansów, źródła, XLSX/połowy/minima, 7 transmisji PLP, 3 portrety i archiwalny Superpuchar; szczegóły w historii Git i wcześniejszych PR.
+- #62: merge `4731070`; kadra z zerem, daty, CSV, źródła, nawigacja i kartki. CI PR `39275094656`, CI main `39275575114`, publikacja `39275575120`, Pages `39275328107` — success.
+- Pełny sync po #62 `39275733253` — success; bot `c1cae88`. Prawdziwe daty 30 filmów z 2026, wszystkie 120 rekordów mają datę. Pages `39276461012` — success. Produkcyjny JSON 46/113/120 i 30 dat z 2026 potwierdzony także w przeglądarce.
+- #63: 24 źródłowe protokoły innych klubów, wyjaśnienia różnic, dwa Superpuchary, szósty fragment gola, pełna lista zgłoszonych bez występów na stronie sezonu i jeden link w całym profilu. 196 Python + 14 frontend OK lokalnie. CI oczekuje na runner; stare nieudane kontrole z formatem dat nie dotyczą poprawionego testu.
+- Siódmy fragment gola jest w tym samym PR z kadrem HD i przechodzi walidator istniejącego mechanizmu.
 
-`f864f05` był commitem publikatora po #56, nie mergem. Synchronizacja `ea3c315` po #55 ujawniła obniżanie starych bilansów przez agregaty meczowe; #56 naprawił przyczynę i zachował pełny odczyt PLP. Synchronizacje po #56/#57 ujawniły konflikt binarnego XLSX; #58 usunął zbędną regenerację spowodowaną LF/CRLF. Pełne synchronizacje #58 i #59 już potwierdziły poprawkę.
+## Sprawdzone źródła — nie powtarzać całych odczytów bez nowej przesłanki
 
-## Testy i produkcja
+- PLP 6951: 8 sezonów ligowych i 4 Superpuchary; 113 meczów ligowych. Pierwszych 113 nie zmieniono, przyszłe sezony mogą rozszerzać archiwum.
+- 26 sitemap, 4559 URL, 1187 URL graczy oraz all-time 1837 osób. Brakujące pełne kariery: 10321, 10604, 7266, 7270, 7271, 7278, 7282, 7285, 7286, 8655, 8916. REST 401 i posty z ID 404.
+- Internet Archive: kopie 7270, 7271, 7278, 7285 potwierdzone po postid. Superpuchar 2022 przypisuje 4 wcześniejsze pola, 3 rzeczywiste portrety odzyskane. Dalsze dokładne kopie mają placeholdery; brak wyniku pełnej nazwy nie dowodzi braku innych aliasów.
+- WordPress: wcześniejszy pełny audyt 91 mediów / 53 nazw; nowy bezpośredni parent dla 11 niedostępnych profili daje 0 mediów. Nowy 12288 również bez featured/parent portretu. Nie identyfikować osoby ze zdjęcia klubowego.
+- Kariery: pełne protokoły sezonów 139 (211 wydarzeń), 141 (197) i 104 (65). Zdarzenia 10748, 11748, 3994, 3992 mają pustą listę leagues; sumy z ligą zgadzają się z REST, wszystkie z HTML. Wyciąg 24 występów w career_competition_evidence.json, bez ingerencji w Bosch.
+- Superpuchary: pięć wydarzeń Boscha w sezonach 119/127/140/145; protokoły 10790 i 12363 zapisane jako JSON źródłowy. Dodatkowy odczyt całych sezonów 120/125/126 nie znalazł kolejnego wpisu Gołąbeskiego poza znanymi protokołami.
+- YouTube: dwa kanały prywatnych autorów i oficjalny PLP UCd0p73Dp5Eya7c4tQ8EoLZA. 59 oficjalnych stron wydarzeń bez filmu: zgodne ID, brak YouTube. Filmy „1”/„2”, daty 2/3.07.2023, mają tylko kandydackie powiązanie z Wiarą Piasta II; pytanie do użytkownika, bez przypisania na podstawie samej daty/strojów.
+- Akcje z klatkami: 7851 — Mateusz Jurkowicz 3′/7s i 23′/13s, Markowski 29′/9s; 10145 — Mateusz Jurkowicz 2′/488s, Karolczuk 16′/1265s, Rafał Jurkowicz 17′/1318s; orlik26-1 — Karolczuk 23′/145s, opublikowana wersja ZOOM 200%, ponownie sprawdzona w HD. Są to obejrzane fazy akcji, nie deklaracje dokładnej klatki przecięcia linii.
+- Aptel 9805 i Vesta 11397 bez transkrypcji; fragment Aptelu 1490–1515s nie dał pewnego gola. W 10145 wygrywający gol 39′ przy komentarzu około 47:03 jest poza kadrem. Nie zamieniać komentarza w observed_video_frame.
 
-- Python 3.12.14, openpyxl 3.1.5: 185 unittest OK; wszystkie 14 testów frontendowych Node OK.
-- Wszystkie 10 generatorów/audytów offline, walidacje portalu/scoutingu, compileall, składnia 3 skryptów JS i diff check OK. Kolejny eksport: XLSX export unchanged.
-- CI PR #60: 39268296739 success; CI main 39268464228 success; publikacja 39268464246 success; Pages 39268463698 success.
-- Pełny sync #60: 39268464180 success. Zapis issue #33 potwierdzony ponownym odczytem publicznego API; 15 checkboxów wykonanych, 5 niewykonanych, stan open.
-- Pełny sync #58: 39264014036 success; pełny sync #59: 39265848610 success, bot e23c0bc (tylko porządek w video_updates), Pages 39266277405 success.
-- Produkcja po #60: JSON 45/8/113/120, 54 mecze z filmem, 18 portretów, 5 znaczników, 3 nieprzypisane pola. Publiczne nowe obrazy HTTP 200 i zgodne bajtowo z repozytorium. Archiwalne sezony i brak pełnej kariery widoczne w portalu.
-- Publiczny XLSX HTTP 200, 100785 bajtów identycznych z commitem, 7 arkuszy, 46 wierszy Zawodnicy i 114 Mecze. SHA256 źródła: 13b9bce30ac25da50bae0468b436d3370623c5dc6b98cd9142d8f4efa3607627.
-- Publiczne raporty w repozytorium HTTP 200. W przeglądarce sprawdzono sortowanie tabeli połów, źródło Superpucharu, galerię i brak błędów JavaScript na kontrolowanych widokach.
+## Następne zadania
 
-## Sprawdzone źródła i ograniczenia — nie powtarzać identycznych odczytów bez powodu
+1. Dokończyć przegląd 160 goli i identyfikację 9 materiałów; szukać nowych dowodów nagrań dla 59 spotkań.
+2. Uzupełniać 11 karier, 28 portretów i dwa pola Gołąbeskiego tylko po nowym dowodzie. Brak danych nie jest zerem, minimum nie jest pełnym bilansem, Bosch nie jest całą PLP.
+3. Kończyć scalanie/publikację wyłącznie po zielonym CI dla faktycznego head. Issue #33 pozostaje otwarte dla punktów 4, 5, 6, 14, 15.
 
-- PLP drużyna REST 6951: 12 sezonów (8 lig, 4 Superpuchary); ostatni mecz 17.10.2026 Juan Pablo 4:3 jest w snapshotcie. Brak kolejnego sezonu w tym odczycie.
-- 26 sitemap, 4559 URL, 1187 URL zawodników: 0 nowych profili. All-time: 1837 zawodników. Brakujące aktualne pełne kariery: ID 10321, 10604, 7266, 7270, 7271, 7278, 7282, 7285, 7286, 8655, 8916. Wszystkie REST 401, publiczne adresy z ID 404.
-- Internet Archive: CDX HTTP 200. Odczyt całego indeksu do 5000 URL przekroczył 35 s — to nie dowód braku kopii. Zawężone odczyty pełnych nazw zadziałały. Kopie postid 7270, 7271, 7278, 7285 zapisane jako źródła i fragmenty HTML. Oryginalne slugi 404.
-- Gorbacewicz, Kossakowski i Sołowiej: Superpuchar 2022 potwierdza łącznie 3 występy i 1 asystę, które były już w sumach Boscha. Korekta przypisuje je do sezonu, nie dodaje drugi raz. Stare kopie nie ustanawiają aktualnej pełnej kariery.
-- Gołąbeski: późniejsza kopia 14.04.2024 potwierdza 2+3 występy w istniejących sezonach halowych i zero Superpucharu 2023; nie wyjaśnia trzech pozostałych pól. Brak późniejszej kopii HTTP 200 w tym zapytaniu do 19.10.2026.
-- Zdjęcia: poprzedni pełny audyt WordPress obejmował 91 mediów i 53 zapytania nazw. Archive ujawnił 3 prawdziwe pola portretu (postid + element zdjęcia), obrazy obejrzano. Dla 27 pozostałych: 15 dokładnych adresów, sprawdzone kopie mają placeholdery w dwóch szablonach PLP; 12 bez wyniku dokładnej nazwy. Inne aliasy pozostają możliwością, brak wyniku nie oznacza nieistnienia.
-- Nierozstrzygnięte agregaty HTML/API: Piotr Kuźma 4577 (CEDC Polmos, nie Bosch) — Orlik 2024 występy 7/6 i Hala 2024/2025 11/10; Daniluk 2204 Lato 2021 2/1; Kakareko 1594 Lato 2021 występy 4/3 i gole 1/0. Zachowano pełną karierę HTML; różnic nie dodano do Boscha.
-- Kanały YouTube: dwa stare oraz oficjalny UCd0p73Dp5Eya7c4tQ8EoLZA. Oficjalne transmisje 8255, 9486, 9805, 10145, 10990, 11397, 11798 powiązano po dokładnej dacie, drużynach i sezonie. Superpuchar 06.11.2022 jest poza archiwum ligowym. Wywiady nie są transmisjami meczów.
-- Film Vesta hcfb9Ttmswo odrzucono jako mecz 7814: film ma boisko odkryte i datę 26.08.2023, protokół 26.02.2023 wskazuje halę VI LO, venue 109. Muzyczny 8SF7bbYDS30 również poza meczami. Nie odrzucać innych filmów na podstawie rekomendowanych miniaturek.
-- Zweryfikowane akcje: mecz 7851 — Mateusz Jurkowicz 3′/7 s i 23′/13 s; mecz 10145 — Mateusz Jurkowicz 2′/488 s, Karolczuk 16′/1265 s, Rafał Jurkowicz 17′/1318 s. Klatki i opisy w reports/evidence oraz video_goal_evidence.json. Są to obejrzane fazy akcji; nie deklarują dokładnej klatki przecięcia linii przez piłkę. Zwycięski gol 10145 pozostaje w kolejce: przy komentarzu około 47:03 kamera pokazuje drugi koniec boiska.
-
-## Następne zadania i zasady kontynuacji
-
-1. Dokończyć przegląd 162 goli, 9 nieprzypisanych materiałów i dalszych źródeł dla 59 meczów bez nagrania. Nie zgadywać sekund z minut meczu ani nazwisk z twarzy.
-2. Uzupełniać 11 karier, 27 portretów, 3 pola Gołąbeskiego i 4 porównania źródeł tylko po nowym dowodzie; nie powtarzać całego audytu źródeł z dzisiejszą datą.
-3. Nowa sesja zaczyna od aktualnego main i tego pliku. Nie odbudowywać działających importerów, galerii, provenance ani analityki.
-4. Brak wartości ≠ zero; minimum ≠ pełny bilans; Bosch ≠ cała PLP. Zachować 113 historycznych protokołów i ID/URL źródeł. Nie tworzyć fikcyjnych danych dla kompletności.
-
-Repozytorium ma dostęp przez git push gałęzi. gh nie jest zainstalowane. Użytkownik zalogował zwykłą sesję GitHub w przeglądarce Codex; PR-y tworzono i scalano po zielonym CI przez UI. Automatyczna kontrola wcześniej odrzuciła odczyt tokenu z menedżera Git do osobnych żądań API; nie ponawiać. Systemowy Python 3.14 nie ma openpyxl, używany runtime 3.12 ma istniejącą zależność. Nie dodano nowych zależności. Błędy sandboxa przy zapisie raportów rozwiązano zatwierdzonym wykonaniem narzędzia, bez zmiany uprawnień projektu.
-
-## Dalsze poprawki zgłoszone przez użytkownika — 19.10.2026
-
-Gałąź `codex/rosters-video-dates-and-clearer-profiles`, przed publikacją.
-- 46 osób: dodany Piotr Zalewski 12288, oficjalny profil ma 0 występów i sezon Orlik 2025.
-- Listy kadry wszystkich 8 sezonów w player_rosters.json; wybrana właściwa liga (122/123), nie same aktualne powiązania team. Historyczne członkostwo wymaga niezależnych danych sezonu. Zera nie są odfiltrowywane. Alias Rutkowskiego pozostaje scalony.
-- Usunięty eksport CSV. XLSX pozostaje. Jednorazowy odnośnik kariery; źródła meczowe tylko w tabeli protokołów. Nawigacja zawija etykiety, w tym Zdjęcia PLP.
-- Daty filmów YYYYMMDD i YYYY-MM-DD są porównywane po normalizacji. Brak daty publikacji → jawnie opisana data potwierdzonego meczu, bez udawania daty publikacji. Odświeżanie metadanych obejmuje znane filmy, archiwum nie kończy się po 120 w widoku ani 300 w importerze.
-- 7 protokołów ma ŻK=2, CK=0. CK nadal znaczy bezpośrednią czerwoną; osobne second_yellow oraz dismissals (jedno wykluczenie na osobę w meczu), widoczne w protokołach i podsumowaniu profilu. Nie wyliczać wykluczeń z sezonowej sumy ŻK.
-- 190 testów Python i 14 frontendowych przeszło, 10 generatorów i audytów offline OK, nadal 113/293/988, bez utraty historycznych aliasów. Pozostałe pięć obszarów danych nadal otwarte.
-- Auto-review odrzucił lokalną instalację istniejącego yt-dlp jako dodanie zależności. Nie ponawiano; daty może odświeżyć istniejący workflow Actions, gdzie yt-dlp jest już częścią projektu.
-
-## Kontynuacja po #62 — uzupełnienia źródłowe
-
-- PR #62 scalony: main 4731070; CI PR 39275094656 i main 39275575114 success; publikacja 39275575120 i Pages 39275328107 success.
-- Pełny sync 39275733253 success, bot c1cae88: odzyskane rzeczywiste daty 30 filmów z 2026, wszystkie 120 rekordów mają teraz datę publikacji. Lokalna instalacja yt-dlp nie była potrzebna.
-- Cztery wcześniejsze porównania HTML/API (5 pól sezonowych) wyjaśnione pełnymi protokołami: wydarzenia 10748, 11748, 3994, 3992 nie mają przypisanej ligi. Sumy z ligą równe REST, wszystkie wydarzenia równe HTML. Dane 24 występów innych klubów w career_competition_evidence.json; nie dodano ich do Boscha.
-- Gołąbeski 7270: protokół Superpucharu 2024 (10790) potwierdza 1 występ i bezpośrednią czerwoną w 24′. Przypisano istniejące sumy, nadal 13M/4ŻK/1CK. Pozostają tylko 1 występ i 1 żółta bez sezonu. Jego kariera nadal niepełna.
-- Zalewski 12288: Orlik 2025 0M, ale protokół 12363 potwierdza 1M Superpucharu 2025. Publiczne HTML i REST pomijają ten puchar. Portal ma 1M, surowy HTML 0 zachowany i widoczne odrębne uzupełnienie źródłowe. Nowy test chroni przed podwojeniem, jeśli HTML w przyszłości doda puchar pod inną kolejnością słów nazwy.
-- Raport ma teraz 34 różnice, wszystkie wyjaśnione (dodatkowa to udokumentowany przypadek Zalewskiego), 0 konfliktów sezonowych. 46 zawodników, 35 publicznych bilansów (jeden uzupełniony protokołem), 11 niepełnych karier, 18 portretów i 28 braków.
-- Odczyt 59 oficjalnych stron meczów bez nagrania: 59 HTTP200 i 59 zgodnych postid, 0 linków/osadzeń YouTube. Nie dowodzi to braku filmów w innych źródłach. Nowy zawodnik nie ma dostępnego portretu w featured media ani attachment parent.
-- Szósty obejrzany odnośnik: Markowski 7282, mecz 7851, PLP 29′, film jzGjEZBED6I, 9 s; klatka w reports/evidence. 161 goli nadal w kolejce.
-- Filmy „1” i „2” otrzymały daty publikacji 2/3.07.2023. Stroje pasują do możliwego meczu z Wiarą Piasta II, ale brak nazwy rywala w źródle; pytanie identyfikacyjne do użytkownika pozostaje otwarte. Bez automatycznego przypisania.
+Repo ma uwierzytelniony git push oraz sesję GitHub w przeglądarce. Brak gh. Nie odczytywać tokenów z credential helpera: wcześniej odrzucił to auto-review. Lokalna instalacja istniejącego yt-dlp też została odrzucona; nie ponawiano, metadane skutecznie odświeżył istniejący workflow. Python 3.12 z cache Codex ma openpyxl; systemowy 3.14 go nie ma. Nie dodano nowych zależności. Zapis sandboxa czasem wymaga zatwierdzonego wykonania narzędzia.

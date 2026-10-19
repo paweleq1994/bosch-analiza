@@ -1038,5 +1038,90 @@
       "portrait_candidates": 0
     },
     "note": "Public whole-career HTML for 12288 omits the lineup appearance in event 12363. Raw HTML is retained and the separate sourced supplement is explicit."
+  },
+  "direct_attachment_parent_review": {
+    "checked_at": "2026-10-19",
+    "method": "wp/v2/media?parent=OFFICIAL_PLAYER_ID&per_page=100, independently of the blocked player profile endpoint",
+    "results": [
+      {
+        "player_id": "10321",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "10604",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7266",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7270",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7271",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7278",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7282",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7285",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "7286",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "8655",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      },
+      {
+        "player_id": "8916",
+        "status": "ok",
+        "returned": 0,
+        "matching_parent": 0,
+        "media": []
+      }
+    ],
+    "total_matching_media": 0,
+    "conclusion": "No public attached portrait was returned; existing archived portraits remain valid. This does not prove that private or differently indexed media never existed."
   }
 }

@@ -2,8 +2,8 @@
 
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
-Potwierdzone linki: **6**.
-Niepotwierdzone gole w meczach z filmem: **161**.
+Potwierdzone linki: **7**.
+Niepotwierdzone gole w meczach z filmem: **160**.
 
 ## Obejrzane i potwierdzone akcje
 
@@ -17,6 +17,7 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) / ID 7276 / 16′ | [YouTube 1265 s](https://www.youtube.com/watch?v=jbsK8wBM8UM&t=1265s) | Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1265,07 s widoczna jest kończąca faza ataku z prawej strony pola karnego, przy 1270,69 s zawodnik rywala wraca do siatki po golu na 2:1. Komentarz wskazuje Patryka Karolczuka i 16. minutę zgodną z PLP. Link zaczyna się od obejrzanej fazy akcji. |
 | [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) / ID 7272 / 17′ | [YouTube 1318 s](https://www.youtube.com/watch?v=jbsK8wBM8UM&t=1318s) | Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1318,03 s piłka jest widoczna w bliskiej bramce, a zawodnik rywala w siatce; komentarz identyfikuje Rafała Jurkowicza i wynik 3:1. To jego pierwszy z dwóch goli w protokole (17′, drugi 39′). Link pokazuje potwierdzoną klatkę zakończenia akcji; nie deklaruje dokładnej klatki przecięcia linii przez piłkę. |
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) / ID 7282 / 29′ | [YouTube 9 s](https://www.youtube.com/watch?v=jzGjEZBED6I&t=9s) | Obejrzany krótki film pojedynczej akcji na 2:5 w tej samej hali meczu Wiara Piasta II–Bosch. Przy 8,23 s widać kończący atak Boscha w bieli przy lewym polu bramkowym; przy 9,22 s piłka jest w świetle bramki przy siatce, bramkarz na kolanach, a obrońca odwraca się w stronę siatki. Piąty gol Boscha w sekwencji wyniku filmu odpowiada Damianowi Markowskiemu i 29 minucie oficjalnego protokołu. Nazwisko wynika z protokołu i kolejności wyniku, bez rozpoznawania twarzy. Link do obejrzanego zakończenia akcji, bez deklaracji dokładnej klatki przecięcia linii. |
+| [PLP orlik26-1](https://podlaskaliga.pl/wydarzenie/ist-trade-vs-bosch-service-tech-car/) / ID 7276 / 23′ | [YouTube 145 s](https://www.youtube.com/watch?v=gqBY10ItvgA&t=145s) | Obejrzana opublikowana przez autorkę wersja ZOOM 200% drugiej połowy IST Trade–Bosch (19.04.2026, 1:1), zestawiona z wersją szeroką B6I1QigzHAk. Przy 140,19 s widoczny atak Boscha w czarnych koszulkach i jasnych spodenkach przed prawym polem karnym; przy 145,19 s zakończenie strzału: piłka przy siatce prawej bramki i bramkarz na ziemi. Przy 150,19 s zawodnicy wracają w stronę środka. To jedyny gol Boscha w tej połowie, strzelec i PLP 23′ potwierdzone protokołem. Powiązanie przez mecz i kolejność bramek, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanego odtwarzacza, nie z przeliczenia minuty PLP. |
 
 ## Gole oczekujące na weryfikację
 
@@ -128,7 +129,6 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 12041](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy-2/) | Jurkowicz Rafał | 5′ | [II połowa](https://www.youtube.com/watch?v=UvrBdNIANlM) · [I połowa](https://www.youtube.com/watch?v=Q7knb1DrXHo) |
 | [PLP 12041](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy-2/) | Nowicki Patryk | 13′ | [II połowa](https://www.youtube.com/watch?v=UvrBdNIANlM) · [I połowa](https://www.youtube.com/watch?v=Q7knb1DrXHo) |
 | [PLP 12041](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy-2/) | Klepacki Przemysław | 38′ | [II połowa](https://www.youtube.com/watch?v=UvrBdNIANlM) · [I połowa](https://www.youtube.com/watch?v=Q7knb1DrXHo) |
-| [PLP orlik26-1](https://podlaskaliga.pl/wydarzenie/ist-trade-vs-bosch-service-tech-car/) | Karolczuk Patryk | 23′ | [II połowa](https://www.youtube.com/watch?v=B6I1QigzHAk) · [I połowa](https://www.youtube.com/watch?v=F0UEB2twGew) · [I połowa](https://www.youtube.com/watch?v=HNJT5lafqE0) · [II połowa](https://www.youtube.com/watch?v=gqBY10ItvgA) |
 | [PLP orlik26-2](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zubry-bema/) | Dawid Daniluk | 3′ | [II połowa](https://www.youtube.com/watch?v=7tnvZi3iKRU) · [I połowa](https://www.youtube.com/watch?v=sa1ShBtkuzs) |
 | [PLP orlik26-2](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zubry-bema/) | Dawid Daniluk | 4′ | [II połowa](https://www.youtube.com/watch?v=7tnvZi3iKRU) · [I połowa](https://www.youtube.com/watch?v=sa1ShBtkuzs) |
 | [PLP orlik26-2](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zubry-bema/) | Dawid Daniluk | 16′ | [II połowa](https://www.youtube.com/watch?v=7tnvZi3iKRU) · [I połowa](https://www.youtube.com/watch?v=sa1ShBtkuzs) |
