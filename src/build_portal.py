@@ -14,6 +14,7 @@ from merge_player_identities import merge_player_identities
 from integrate_match_protocols import integrate_match_protocols
 from protocol_goals import enrich_from_protocols
 from backfill_match_player_stats import backfill_seasons
+from complete_verified_goal_zeros import complete_protocol_goal_fields
 from integrate_verified_match_players import attach_verified_identities, minimum_match_totals
 from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
@@ -547,6 +548,8 @@ def main() -> None:
         ]
         match["player_performance_source"] = record["source_url"]
 
+    derived_protocol_goals = complete_protocol_goal_fields(historic_players, matches)
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -676,6 +679,7 @@ def main() -> None:
             "match_protocol_audit": {**match_protocol_summary, **protocol_enrichment},
             "match_player_backfill": match_backfill,
             "verified_identity_audit": identity_audit,
+            "verified_zero_goal_completion": derived_protocol_goals,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {

@@ -31,7 +31,8 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
         self.assertEqual((season["goals"], season["assists"]), (1, 1))
         self.assertEqual(season["apps"], 6)
         self.assertEqual(season["origin"], "archived_peak")
-        self.assertIsNone(self.season("7270", "120")["goals"])
+        self.assertEqual(self.season("7270", "120")["goals"], 0)
+        self.assertTrue(self.players["7270"]["season_stats"]["120"]["goals_verified_by_protocol"])
         self.assertEqual(player["season_coverage"]["unassigned"]["apps"], 2)
         self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 0)
 
