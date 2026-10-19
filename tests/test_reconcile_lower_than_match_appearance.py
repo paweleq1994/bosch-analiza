@@ -56,7 +56,11 @@ class ReconciledMinimumSeasonCountsTests(unittest.TestCase):
             (ROOT / "docs/assets/data.json").read_text(encoding="utf-8")
         )
         keeper = next(player for player in result["players"] if player["id"] == "7223")
-        self.assertEqual(keeper["season_stats"]["126"]["apps"], 1)
+        self.assertEqual(keeper["season_stats"]["126"]["apps"], 1, msg={
+            "keeper": keeper,
+            "source_audit": [item for item in result["analysis"]["match_player_backfill"]["conflicts"] if item["player_id"]=="7223"],
+            "filled": [item for item in result["analysis"]["match_player_backfill"]["filled"] if item["player_id"]=="7223"],
+        })
         self.assertEqual(keeper["season_coverage"]["unassigned"]["apps"], 0)
         self.assertEqual(
             sum(row["unattributed_goals"] for row in result["analysis"]["player_goal_coverage"]),
