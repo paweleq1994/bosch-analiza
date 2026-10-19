@@ -35,11 +35,9 @@ on:
     - cron: "17 * * * *"
 permissions:
   contents: write
-  pages: write
-  id-token: write
 concurrency:
   group: bosch-data-sync
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -84,12 +82,6 @@ jobs:
         run: python src/validate_portal.py
       - name: Audit incomplete player careers, appearances, assists, cards, MVP and photos
         run: python src/audit_player_coverage.py
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-      - name: Upload verified site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
       - name: Commit verified data changes
         run: |
           if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
@@ -100,13 +92,3 @@ jobs:
             git push
           fi
 
-  deploy:
-    needs: sync
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy validated static site
-        id: deployment
-        uses: actions/deploy-pages@v4
