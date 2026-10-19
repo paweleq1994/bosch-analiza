@@ -36,8 +36,8 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | [Bosch Tech Car Service - Koledzy Z Boiska 8:0](https://www.youtube.com/watch?v=O3mBzeS-9VY) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [1](https://www.youtube.com/watch?v=6vsemMiGuPk) | Piotr Golabeski | Brak jednoznacznego dopasowania |
 | [2](https://www.youtube.com/watch?v=Kh4IuHMwcPQ) | Piotr Golabeski | Brak jednoznacznego dopasowania |
+| [1](https://www.youtube.com/watch?v=6vsemMiGuPk) | Piotr Golabeski | Brak jednoznacznego dopasowania |
 
 ## Zweryfikowane odrzucenia powiązań
 
