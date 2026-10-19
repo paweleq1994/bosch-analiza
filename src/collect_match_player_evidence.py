@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -44,7 +45,7 @@ def official_url(value: object) -> bool:
 def get_event(event_id: str) -> dict:
     url = f"https://podlaskaliga.pl/wp-json/sportspress/v2/events/{event_id}"
 
-    with urlopen(Request(url, headers={"User-Agent": "BoschArchiveAudit/1.0"}), timeout=25) as response:
+    with urlopen(Request(url, headers={"User-Agent": "BoschArchiveAudit/1.0"}), timeout=12) as response:
         return json.load(response)
 
 
@@ -108,31 +109,42 @@ def extract_match(match: dict, event: dict, canonical_aliases: dict[str, str]) -
     }
 
 
-def collect_matches(matches: list[dict], source_index: dict, fetch=get_event) -> tuple[dict, list[str]]:
+def collect_matches(
+    matches: list[dict], source_index: dict, fetch=get_event, workers: int = 4
+) -> tuple[dict, list[str]]:
+    """Refresh independent verified fixtures with bounded concurrency."""
     by_id = {str(row["id"]): row for row in source_index["matches"]}
     aliases = {"13060": "7284"}
-    output = []
-    errors = []
 
-    for match in sorted(matches, key=lambda row: (row["date"], str(row["id"]))):
+    def inspect(match: dict) -> tuple[dict | None, str | None]:
         match_id = str(match["id"])
         evidence = by_id.get(match_id)
 
         if not match.get("event_id") or not official_url(match.get("event_link")):
-            errors.append(f"{match_id}: missing verified fixture/event link")
-            continue
+            return None, f"{match_id}: missing verified fixture/event link"
 
         if evidence and str(evidence["event_url"]).rstrip("/") != str(match["event_link"]).rstrip("/"):
-            errors.append(f"{match_id}: source URL disagrees with verified archive")
-            continue
+            return None, f"{match_id}: source URL disagrees with verified archive"
 
         try:
-            output.append(extract_match(match, fetch(str(match["event_id"])), aliases))
-        except Exception as exc:
-            errors.append(f"{match_id}: {type(exc).__name__}: {exc}")
+            source_event = fetch(str(match["event_id"]))
+            return extract_match(match, source_event, aliases), None
+        except Exception as error:
+            return None, f"{match_id}: {type(error).__name__}: {error}"
+
+    sorted_matches = sorted(matches, key=lambda row: (row["date"], str(row["id"])))
+    output = []
+    errors = []
+
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        # map preserves the deterministic archive ordering even if requests finish out of order.
+        for record, error in executor.map(inspect, sorted_matches):
+            if record is not None:
+                output.append(record)
+            if error is not None:
+                errors.append(error)
 
     return {"matches": output}, errors
-
 
 def main() -> None:
     league = json.loads((DATA / "league_updates.json").read_text(encoding="utf-8"))
