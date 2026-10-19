@@ -14,7 +14,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PORTAL = ROOT / "docs/assets/data.json"
 OUTPUT = ROOT / "data/player_html_career_snapshot.json"
-HEADERS = {"apps": 2, "goals": 4, "assists": 5, "motm": 6, "yellow": 9, "red": 10}
+HEADERS = {"apps": 1, "goals": 3, "assists": 4, "motm": 5, "yellow": 8, "red": 9}
 FIELDS = tuple(HEADERS)
 
 class CareerTableParser(HTMLParser):
@@ -73,25 +73,9 @@ def capture(url: str) -> dict:
     for entry in parser.rows:
         grouped.setdefault(entry["table"], []).append(entry["cells"])
 
-    candidates = []
-    for table_rows in grouped.values():
-        for cells in table_rows:
-            if cells[0].strip().lower() != "suma" or len(cells) < 11:
-                continue
-            values = cells[-11:] if len(cells) >= 12 else cells
-            values = cells if len(cells) >= 13 else values
-            try:
-                result = {field: int(values[index]) for field, index in HEADERS.items()}
-            except (ValueError, IndexError):
-                continue
-            candidates.append({"totals": result, "cells": cells})
-
-    if not candidates:
-        raise ValueError("No official public career total row")
-
     # The final combined table has both a sum and all season rows; never sum
     # the per-league 'Suma' sections, which can overlap or omit supercups.
-    combined = max(grouped.values(), key=lambda rows: (sum(len(row) == 11 for row in rows), len(rows)))
+    combined = max(grouped.values(), key=lambda rows: (sum(len(row) == 12 for row in rows), len(rows)))
     final_totals = [row for row in combined if row and row[0].lower() == "suma" and len(row) >= 11]
     if not final_totals:
         raise ValueError("No combined career table")
@@ -100,7 +84,7 @@ def capture(url: str) -> dict:
 
     season_rows = []
     for row in combined:
-        if len(row) != 11 or row[0].strip().lower() in {"suma", "sezon"}:
+        if len(row) != 12 or row[0].strip().lower() in {"suma", "sezon"}:
             continue
         try:
             values = {field: int(row[index]) for field, index in HEADERS.items()}
