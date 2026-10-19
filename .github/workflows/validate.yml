@@ -48,6 +48,8 @@ jobs:
         run: node tests/frontend_csv_exports.cjs
       - name: Verify historical form, goal-minute and footage coverage analytics
         run: node tests/frontend_historical_form.cjs
+      - name: Verify source-canonical rivals and honest statistics rankings
+        run: node tests/frontend_rivals_quality.cjs
       - name: Verify player season filtering
         run: node tests/frontend_player_filter.cjs
       - name: Verify advanced sort and Bosch records

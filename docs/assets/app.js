@@ -125,7 +125,9 @@ function seasonPage(id){
 
             return secondPoints-firstPoints || Number(second.stats.goals||0)-Number(first.stats.goals||0) || first.player.name.localeCompare(second.player.name,"pl");
         });
-    const leadersTable=leaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],leaders.map(({player,stats})=>[
+    const completeLeaders=leaders.filter(({stats})=>Number.isInteger(stats.goals)&&Number.isInteger(stats.assists));
+    const partialLeaders=leaders.filter(({stats})=>!Number.isInteger(stats.goals)||!Number.isInteger(stats.assists));
+    const leadersTable=completeLeaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],completeLeaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
         e(stats.goals??"—"),
@@ -137,6 +139,11 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        (partialLeaders.length?section("Zawodnicy z niepełnymi statystykami — bez miejsca w rankingu",
+            table(["Zawodnik","M","G","A","Powód"],partialLeaders.map(({player,stats})=>[
+                playerLink(player),e(stats.apps??"—"),e(stats.goals??"—"),
+                e(stats.assists??"—"),"Brak pełnej liczby goli lub asyst w oficjalnym archiwum"
+            ]))):"")+
         section("Gole i protokoły wszystkich meczów",table(["Data","Mecz","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(matches)))+
         section("Porównanie z innymi sezonami",barChart(DB.seasons.map(row=>({...row,ppg:row.matches?row.points/row.matches:0})),"ppg",row=>fmt(row.ppg)))+
         (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Gole indywidualne zweryfikowano we wszystkich 15 oryginalnych protokołach tego sezonu.</div>':"");
@@ -396,13 +403,53 @@ function playerDetail(id){
         (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
         (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
 }
-function opponents(){const map=new Map();for(const m of DB.matches){const key=normalized(m.opponent);if(!map.has(key))map.set(key,{name:m.opponent,matches:[],key});map.get(key).matches.push(m);}DB.opponents=[...map.values()].sort((a,b)=>a.name.localeCompare(b.name,"pl"));return headline("Rywale","Bezpośrednie pojedynki z każdą drużyną.")+'<div class="filters"><input id="local-filter" placeholder="Znajdź rywala…"></div><div id="filtered-opponents"></div>';}
-function opponentDetail(id){
-    const games=DB.matches.filter(match=>normalized(match.opponent)===id);
-
-    if(!games.length){
-        return empty("Nie znaleziono rywala.");
+function groupOpponentHistory(matches){
+    const namesToIds=new Map();
+    for(const match of matches){
+        if(match.opponent_id==null)continue;
+        const name=normalized(match.opponent);
+        const ids=namesToIds.get(name)||new Set();
+        ids.add(String(match.opponent_id));
+        namesToIds.set(name,ids);
     }
+    const groups=new Map();
+    for(const match of matches){
+        const name=normalized(match.opponent);
+        const candidates=namesToIds.get(name)||new Set();
+        const id=match.opponent_id!=null?String(match.opponent_id):
+            candidates.size===1?[...candidates][0]:null;
+        const key=id?"plp-"+id:"name-"+name;
+        if(!groups.has(key)){
+            groups.set(key,{id,name:match.opponent,key,aliases:[],matches:[],recentDate:""});
+        }
+        const group=groups.get(key);
+        group.matches.push(match);
+        if(!group.aliases.includes(match.opponent))group.aliases.push(match.opponent);
+        if(match.date>=group.recentDate){
+            group.name=match.opponent;
+            group.recentDate=match.date;
+        }
+    }
+    return [...groups.values()].sort((a,b)=>a.name.localeCompare(b.name,"pl"));
+}
+function opponents(){
+    DB.opponents=groupOpponentHistory(DB.matches);
+    return headline("Rywale","Historia klubów według oficjalnego ID PLP — także po zmianach nazw.")+
+        '<div class="filters"><input id="local-filter" placeholder="Znajdź rywala…"></div>'+
+        '<div id="filtered-opponents"></div>';
+}
+function opponentDetail(id){
+    const groups=groupOpponentHistory(DB.matches);
+    const exact=groups.find(group=>group.key===id);
+    const legacy=groups.filter(group=>group.aliases.some(name=>normalized(name)===id));
+    const selected=exact||(legacy.length===1?legacy[0]:null);
+    if(!selected&&legacy.length>1){
+        return headline("Wybierz właściwego rywala","Ta sama nazwa występuje przy różnych ID PLP.")+
+            cards(legacy.map(group=>'<h3>'+href("opponent/"+encodeURIComponent(group.key),group.name)+
+                '</h3><p>ID PLP: '+e(group.id)+' · '+e(group.matches.length)+' meczów</p>'));
+    }
+    const games=selected?.matches||[];
+    if(!games.length)return empty("Nie znaleziono rywala.");
 
     const victories=games.filter(match=>match.gf>match.ga).length;
     const draws=games.filter(match=>match.gf===match.ga).length;
@@ -422,7 +469,8 @@ function opponentDetail(id){
         e(row.goals)
     ])):empty("Brak goli zawodników Boscha przeciwko temu rywalowi.");
 
-    return headline(games[0].opponent,"Historia spotkań z Bosch Service Tech-Car")+
+    return headline(selected.name,"Historia spotkań z Bosch Service Tech-Car")+
+        (selected.aliases.length>1?section("Historyczne nazwy rywala",'<div class="card">'+e(selected.aliases.join(" · "))+'</div>'):"")+
         metrics([["Mecze",games.length],["Wygrane",victories],["Remisy",draws],["Porażki",games.length-victories-draws],["Bramki Boscha",games.reduce((sum,match)=>sum+match.gf,0)]])+
         section("Najskuteczniejsi przeciw rywalowi",leaderTable)+
         section("Wszystkie pojedynki",'<div class="card">'+matchList(games)+'</div>');
@@ -471,14 +519,22 @@ function records(){
         ["MVP na mecz — minimum 5 występów","motm_per_match",player=>player.apps>=5&&player.motm!=null?player.motm/player.apps:null,2]
     ];
     const boards=measures.map(([heading,key,getValue,precision])=>{
-        const ranked=players.map(player=>({player,value:getValue(player)}))
+        const measured=players.map(player=>({player,value:getValue(player)}))
             .filter(row=>Number.isFinite(row.value)&&row.value>0)
-            .sort((a,b)=>b.value-a.value||a.player.name.localeCompare(b.player.name,"pl"))
+            .sort((a,b)=>b.value-a.value||a.player.name.localeCompare(b.player.name,"pl"));
+        const complete=measured.filter(row=>row.player.bosch_totals&&!row.player.stats_minimum)
             .slice(0,10);
-        return section(heading,ranked.length?table(["#","Zawodnik","Wynik","Źródło"],ranked.map((row,index)=>[
-            e(index+1),playerLink(row.player),fmt(row.value,precision),
-            e(row.player.stats_minimum?"Potwierdzone minimum — protokół PLP":row.player.bosch_totals?"Sezony PLP":"Archiwum niepełne")
-        ])):empty("Brak statystyk dostępnych dla tej kategorii."));
+        const partial=measured.filter(row=>!row.player.bosch_totals||row.player.stats_minimum)
+            .slice(0,10);
+        const completeTable=complete.length?table(["#","Zawodnik","Wynik","Źródło"],complete.map((row,index)=>[
+            e(index+1),playerLink(row.player),fmt(row.value,precision),"Suma zweryfikowanych sezonów PLP"
+        ])):empty("Brak w pełni porównywalnych statystyk tej kategorii.");
+        return section(heading,completeTable)+
+            (partial.length?section(heading+" — udokumentowane minimum (bez rankingu)",
+                table(["Zawodnik","Wartość minimum","Status"],partial.map(row=>[
+                    playerLink(row.player),fmt(row.value,precision),
+                    "Niepełna historia; wartość może być zaniżona"
+                ]))):"");
     }).join("");
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);
     const offensive=matches.slice().sort((a,b)=>b.gf-a.gf).slice(0,10);
@@ -717,5 +773,5 @@ function route(){if(!DB)return;const pieces=decodeURIComponent(location.hash.sli
     (match,selectedSeasonId)=>same(match.sid,selectedSeasonId)
 );
 if(name==="matches")setupList("filtered-matches",DB.matches,items=>'<div class="card">'+matchList(items)+'</div>',m=>[m.opponent,m.date,m.season,m.gf+":"+m.ga].join(" "),(match, selectedSeasonId)=>same(match.sid,selectedSeasonId));if(name==="players"){const repaint=setupList("filtered-players",DB.players,(items,selectedSeasonId)=>cards(sortPlayerItems(items,selectedSeasonId).map(player=>playerCard(player,selectedSeasonId))),player=>player.name,playerPlayedSeason);$("player-sort")?.addEventListener("change",repaint);$("player-stat-filter")?.addEventListener("change",repaint);}if(name==="opponents")setupList("filtered-opponents",DB.opponents,items=>cards(items.map(x=>'<h3>'+href("opponent/"+encodeURIComponent(x.key),x.name)+'</h3><p>'+x.matches.length+' spotkań</p>')),x=>x.name);if(name==="videos"){const repaint=setupList("filtered-videos",DB.videos,items=>cards(sortVideos(items,$("video-sort")?.value||"newest").slice(0,120).map(video=>'<div class="video-thumb">▶</div><h3>'+e(video.title)+'</h3><p>'+e(video.channel||"")+" • "+e(video.date||"")+'</p><p><a href="'+e(video.url)+'" target="_blank" rel="noopener noreferrer">Oglądaj ↗</a>'+(video.match_id?' • '+href("match/"+encodeURIComponent(video.match_id),"Mecz"):"")+'</p>')),video=>video.title+" "+video.channel);$("video-sort")?.addEventListener("change",repaint)};if(name==="compare"){const controls=[$("compare-player-a"),$("compare-player-b"),$("compare-player-season")];if(controls[1]&&DB.players.length>1)controls[1].value=DB.players[1].id;for(const control of controls)control?.addEventListener("change",updatePlayerComparison);updatePlayerComparison();}if(name==="analysis"){const selects=[$("compare-a"),$("compare-b")];if(selects[1])selects[1].value=DB.seasons.at(-1).id;for(const x of selects)x?.addEventListener("change",compare);compare();}window.scrollTo(0,0);}
-function initSearch(){const dialog=$("search-dialog"),input=$("global-search");function open(){dialog.showModal();input.focus();} $("search-open").addEventListener("click",open);document.addEventListener("keydown",event=>{if(event.key==="/"&&document.activeElement.tagName!=="INPUT"){event.preventDefault();open();}if((event.key==="Escape")&&dialog.open)dialog.close();});input.addEventListener("input",()=>{const q=normalized(input.value);const records=[...DB.players.map(p=>({name:p.name,kind:"Zawodnik",url:"player/"+p.id})),...DB.seasons.map(s=>({name:s.name,kind:"Sezon",url:"season/"+s.id})),...DB.matches.map(m=>({name:m.date+" • "+m.opponent,kind:"Mecz",url:"match/"+m.id})),...[...new Set(DB.matches.map(m=>m.opponent))].map(o=>({name:o,kind:"Rywal",url:"opponent/"+normalized(o)}))];$("search-results").innerHTML=!q?"":records.filter(item=>normalized(item.name).includes(q)).slice(0,22).map(item=>'<a class="list-row" href="#/'+e(item.url)+'"><span>'+e(item.name)+'</span><small>'+e(item.kind)+'</small></a>').join("")||empty("Brak wyników.");$("search-results").querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>dialog.close()));});}
+function initSearch(){const dialog=$("search-dialog"),input=$("global-search");function open(){dialog.showModal();input.focus();} $("search-open").addEventListener("click",open);document.addEventListener("keydown",event=>{if(event.key==="/"&&document.activeElement.tagName!=="INPUT"){event.preventDefault();open();}if((event.key==="Escape")&&dialog.open)dialog.close();});input.addEventListener("input",()=>{const q=normalized(input.value);const records=[...DB.players.map(p=>({name:p.name,kind:"Zawodnik",url:"player/"+p.id})),...DB.seasons.map(s=>({name:s.name,kind:"Sezon",url:"season/"+s.id})),...DB.matches.map(m=>({name:m.date+" • "+m.opponent,kind:"Mecz",url:"match/"+m.id})),...groupOpponentHistory(DB.matches).map(o=>({name:o.name+" "+o.aliases.join(" "),kind:"Rywal",url:"opponent/"+o.key}))];$("search-results").innerHTML=!q?"":records.filter(item=>normalized(item.name).includes(q)).slice(0,22).map(item=>'<a class="list-row" href="#/'+e(item.url)+'"><span>'+e(item.name)+'</span><small>'+e(item.kind)+'</small></a>').join("")||empty("Brak wyników.");$("search-results").querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>dialog.close()));});}
 (async function(){document.addEventListener("click",event=>{const button=event.target.closest("[data-export-csv]");if(button)exportVisibleTable(button);});const saved=localStorage.getItem("bosch-theme")||"dark";document.documentElement.dataset.theme=saved;$("theme-toggle").addEventListener("click",()=>{const theme=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=theme;localStorage.setItem("bosch-theme",theme);});try{const response=await fetch("assets/data.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);DB=await response.json();initSearch();window.addEventListener("hashchange",route);route();}catch(error){$("app").innerHTML=empty("Nie udało się wczytać danych kompendium: "+error.message);}})();
