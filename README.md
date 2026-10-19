@@ -12,7 +12,7 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 | Bramki | 293 bramki drużyny, 0 nierozliczonych, 6 samobójów Boscha |
 | Zawodnicy | 45 kanonicznych profili, 988 występów w protokołach |
 | Cała kariera PLP | 34 publiczne bilanse, 11 niepełnych archiwów |
-| Portrety | 15 potwierdzonych, 30 brakujących |
+| Portrety | 18 potwierdzonych, 27 brakujących |
 | Wideo | 120 rekordów; 54 mecze z nagraniem, 59 bez przypisanego filmu |
 | Weryfikacja materiałów | 9 do identyfikacji, 3 odrzucone powiązania / materiały poza archiwum ligowym |
 | Odnośniki czasowe | 5 obejrzanych akcji; 162 gole w kolejce po odnalezieniu dalszych transmisji |
@@ -80,7 +80,9 @@ Nowy sezon jest przyjmowany po uzgodnieniu meczów, bramek i punktów z oficjaln
 
 Nieznane wartości pozostają nieznane; zero wymaga dowodu. Zdjęcia drużynowe nie są portretami. Gabriel Kuźma i Piotr Kuźma są odrębnymi osobami. Zachowano alias Kakareki i scalone profile Rutkowskiego.
 
-Audyt 26 sitemap i 4559 adresów nie odnalazł nowych profili. Wszystkie 11 brakujących ID zwróciło REST 401 i publiczny adres WordPress 404; nie ma ich również na oficjalnej liście all-time. To ograniczenie dostępnych źródeł, a nie dowód braku dawnych występów. [Datowane dowody](data/source_access_audit.json). Nadal brakuje potwierdzonych portretów 30 osób.
+Audyt 26 sitemap i 4559 adresów nie odnalazł nowych profili. Wszystkie 11 brakujących ID zwróciło REST 401 i publiczny adres WordPress 404; nie ma ich również na oficjalnej liście all-time. To ograniczenie aktualnych źródeł, a nie dowód braku dawnych występów. [Datowane dowody](data/source_access_audit.json). Sam ten audyt nie odzyskał kolejnych portretów.
+
+Internet Archive udostępnił dawne profile o zgodnych ID. Odzyskano 3 portrety oraz wpisy Superpucharu 2022 Gorbacewicza, Kossakowskiego i Sołowieja, wyjaśniające 4 z 7 nieprzypisanych pól bez zwiększania sum zawodników. Pozostają 3 pola Gołąbeskiego bez potwierdzonego sezonu. Zdjęć nadal brakuje 27 osobom. Spośród 27 pozostałych profili 15 miało adres znaleziony po pełnym imieniu i nazwisku w CDX; sprawdzone kopie zawierają placeholdery w dwóch szablonach PLP. Pozostałe 12 nie miało takiego wyniku, co nie dowodzi braku kopii pod innym aliasem. Daty kopii, kolumny tabel, ID i źródła zapisano w audycie; historycznych kopii nie traktujemy jako pełnej kariery do dziś.
 
 Kanały są w `data/video_channels.json`: `@martawnuszynska9993`, `@piotrgoabeski3337` oraz oficjalna PLP `UCd0p73Dp5Eya7c4tQ8EoLZA`. Ostatni kanał jest odczytywany z zakładki transmisji i filtrowany do tytułów Boscha. Siedem odnalezionych transmisji z lat 2023–2025 przypisano po porównaniu dokładnej daty i drużyn z PLP; osobna transmisja Superpucharu nie zwiększa pokrycia 113 meczów ligowych. Workflow odczytuje metadane przez istniejący `yt-dlp`; synchronizacja nie pobiera plików filmów. Ręczne `manual_bindings` w `data/video_updates.json` mają pierwszeństwo. `match_id: null` odrzuca stare powiązanie również w meczu, z zachowaniem `review_reason` i `reviewed_at`.
 

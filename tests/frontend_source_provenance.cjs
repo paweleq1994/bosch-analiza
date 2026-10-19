@@ -31,5 +31,10 @@ assert.ok(privateProfile.includes("https://podlaskaliga.pl/wydarzenie/"));
 
 const review = vm.runInContext("dataQuality()", scope);
 assert.ok(review.includes("reports/player-source-reconciliation.md"));
+const archival = vm.runInContext('playerDetail("7271")', scope);
+assert.ok(archival.includes("Superpuchar 2022"));
+assert.ok(archival.includes("Archiwalny profil PLP (Internet Archive)"));
+assert.ok(archival.includes("https://web.archive.org/web/20230607185424id_/"));
+assert.ok(archival.includes("Brak pełnego publicznego bilansu"));
 
 console.log("Verified Bosch/whole-PLP per-field provenance, private player sources and quality report.");

@@ -268,6 +268,9 @@ function players(){
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
+    if(record?.origin==="plp_archived_public_season"){
+        return "Archiwalny profil PLP (Internet Archive)";
+    }
     if(record?.origin==="plp_archived_season"){
         return "Tabela PLP — archiwum";
     }
@@ -408,7 +411,7 @@ function playerDetail(id){
         e(record.motm??"—"),
         e(record.yellow??"—"),
         e(record.red??"—"),
-        e(seasonStatisticsSource(record))
+        record.source_url?'<a target="_blank" rel="noopener noreferrer" href="'+e(record.source_url)+'">'+e(seasonStatisticsSource(record))+' ↗</a>':e(seasonStatisticsSource(record))
     ]);
     const summaryRow=[
         '<strong>Łącznie Bosch</strong>',

@@ -77,8 +77,10 @@ class ExcelExportTests(unittest.TestCase):
     def test_zero_unassigned_totals_do_not_mark_a_complete_player_as_incomplete(self):
         gaps = list(self.workbook["Braki danych"].iter_rows(min_row=2))
         self.assertFalse(any(row[0].value == "1960" for row in gaps))
-        partial = next(row for row in gaps if row[0].value == "7271")
+        partial = next(row for row in gaps if row[0].value == "7270")
         self.assertEqual(partial[4].value, "TAK")
+        allocated = next(row for row in gaps if row[0].value == "7271")
+        self.assertEqual(allocated[4].value, "NIE")
 
     def test_windows_and_linux_line_endings_keep_the_same_workbook(self):
         with tempfile.TemporaryDirectory() as folder:

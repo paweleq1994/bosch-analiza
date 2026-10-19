@@ -309,7 +309,21 @@
     {
       "kind": "players",
       "id": "7285",
-      "photos": []
+      "photos": [
+        {
+          "id": "archive:7285:20221208191648",
+          "url": "https://podlaskaliga.pl/wp-content/uploads/1994/03/Solowiej-Tomasz-267x400.jpg",
+          "alt": "solowiej tomasz",
+          "published": "",
+          "featured": true,
+          "origin": "archived_official_player_portrait",
+          "evidence": "https://web.archive.org/web/20221208191648/https://podlaskaliga.pl/zawodnik/solowiej-tomasz/",
+          "source_player_id": "7285",
+          "captured_at": "20221208191648",
+          "verification": "Official player page postid matches PLP ID; image appears in player-info__photo, not a team photograph.",
+          "local": "media/0dc0efc11a577527d1deed08.jpg"
+        }
+      ]
     },
     {
       "kind": "players",
@@ -343,12 +357,40 @@
     {
       "kind": "players",
       "id": "7270",
-      "photos": []
+      "photos": [
+        {
+          "id": "archive:7270:20230603121147",
+          "url": "https://podlaskaliga.pl/wp-content/uploads/1994/04/Golabeski-Piotr-267x400.jpg",
+          "alt": "golabeski piotr",
+          "published": "",
+          "featured": true,
+          "origin": "archived_official_player_portrait",
+          "evidence": "https://web.archive.org/web/20230603121147/https://podlaskaliga.pl/zawodnik/golabeski-piotr/",
+          "source_player_id": "7270",
+          "captured_at": "20230603121147",
+          "verification": "Official player page postid matches PLP ID; image appears in player-info__photo, not a team photograph.",
+          "local": "media/28a6e198274da1b37e609aa6.jpg"
+        }
+      ]
     },
     {
       "kind": "players",
       "id": "7271",
-      "photos": []
+      "photos": [
+        {
+          "id": "archive:7271:20230607185424",
+          "url": "https://podlaskaliga.pl/wp-content/uploads/1994/09/Gorbacewicz-Emil-267x400.jpg",
+          "alt": "gorbacewicz emil",
+          "published": "",
+          "featured": true,
+          "origin": "archived_official_player_portrait",
+          "evidence": "https://web.archive.org/web/20230607185424/https://podlaskaliga.pl/zawodnik/gorbacewicz-emil/",
+          "source_player_id": "7271",
+          "captured_at": "20230607185424",
+          "verification": "Official player page postid matches PLP ID; image appears in player-info__photo, not a team photograph.",
+          "local": "media/4c916dfbafbe58f67a3d0831.jpg"
+        }
+      ]
     },
     {
       "kind": "players",

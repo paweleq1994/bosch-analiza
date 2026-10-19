@@ -69,6 +69,8 @@ def main() -> None:
     videos_extra = load("video_updates.json", {"videos": [], "manual_bindings": {}})
     league_extra = load("league_updates.json", {"matches": []})
     player_seasons_extra = load("player_season_updates.json", {})
+    # Partial archival corrections do not establish a complete player profile.
+    profile_stat_ids = set(player_seasons_extra)
     player_career_extra = load("player_career_updates.json", {})
     public_html_careers = load("player_html_career_snapshot.json", {"players": {}}).get("players", {})
     stat_corrections = load("player_stat_corrections.json", {})
@@ -137,7 +139,6 @@ def main() -> None:
     # Prefer the stable public ID and keep official scores and links.
     archived_season_counts = {str(row["id"]): row["matches"] for row in seasons}
     growing_season_ids = set()
-    profile_stat_ids = set(player_seasons_extra)
     for incoming_season in league_extra.get("season_rows", []):
         if str(incoming_season.get("plp_id") or incoming_season.get("id")) == "148":
             incoming_season = {**incoming_season, "id": SEASON_2026, "name": "Orlik 2026"}
@@ -396,9 +397,9 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season"}:
                 verified_stats["origin"] = stats["origin"]
-            for key in ("match_performance_verified", "match_performance_sources"):
+            for key in ("match_performance_verified", "match_performance_sources", "source_url", "captured_at"):
                 if key in stats:
                     verified_stats[key] = stats[key]
 
@@ -446,7 +447,7 @@ def main() -> None:
             # disjoint new seasons, leaving unknown source values unknown.
             for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
                 additions = [stats.get(field) for sid, stats in verified_seasons.items()
-                             if sid not in archived_season_counts]
+                             if sid in growing_season_ids and sid not in archived_season_counts]
                 extra = additional_match_totals.get(str(player["id"]), {}).get(field)
                 if additions and all(type(v) is int for v in additions):
                     extra = max(extra or 0, sum(additions))
@@ -629,7 +630,8 @@ def main() -> None:
                     "apps":stat.get("apps"),"goals":stat.get("goals"),
                     "assists":stat.get("assists"),"motm":stat.get("motm"),
                     "yellow":stat.get("yellow"),"red":stat.get("red"),
-                    "origin":stat.get("origin") or "plp_season"})
+                    "origin":stat.get("origin") or "plp_season",
+                    **{key: stat[key] for key in ("source_url", "captured_at") if key in stat}})
         for season in seasons:
             sid = str(season["id"])
             if season["name"] in season_names or sid in season_stats:
