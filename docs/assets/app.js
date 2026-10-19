@@ -328,6 +328,66 @@ function playerTrendSection(player){
         '<div class="notice">Brak danych nie oznacza 0. Nie sumujemy historycznych wartości minimalnych z pełnym bilansem PLP.</div>'
     );
 }
+function sourceEvidenceLinks(urls,category){
+    const unique=[...new Set((urls||[]).filter(url=>
+        /^https:\/\/podlaskaliga\.pl\//.test(String(url||""))))];
+    if(!unique.length)return '<span class="small">Brak publicznego linku źródłowego</span>';
+    const links=unique.map((url,index)=>
+        '<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">'+
+        e(category)+" "+(index+1)+" ↗</a>");
+    if(links.length<=3)return links.join(" · ");
+    return '<details><summary>'+e(links.length)+' oficjalnych źródeł PLP</summary>'+
+        '<div class="source-links">'+links.join(" · ")+'</div></details>';
+}
+function playerStatEvidence(player,field){
+    const sourceField=field==="apps"?"appearance":field;
+    const rows=DB.matches.filter(match=>(match.player_performance||[]).some(entry=>
+        same(entry.player_id,player.id)&&Number.isInteger(entry[sourceField])));
+    const officialGoalUrls=field==="goals"?(player.goal_matches||[])
+        .map(row=>row.source_url):[];
+    const matchUrls=rows.map(row=>row.player_performance_source||row.event_link);
+    const historicalUrls=(player.verified_identity_source?.evidence_urls||[]);
+    const mainProfile=player.profile_url?[player.profile_url]:[];
+    const urlList=[...mainProfile,...officialGoalUrls,...matchUrls,...historicalUrls];
+    let status;
+    if(player.bosch_totals&&!player.stats_minimum){
+        status="Suma udokumentowanych sezonów w Bosch";
+    }else if(player.stats_minimum){
+        status="Potwierdzone minimum; niepełny bilans historyczny";
+    }else{
+        status="Historyczne dane Bosch; zakres może być niepełny";
+    }
+    const count=rows.length;
+    return {urls:urlList,status,observedMatches:count};
+}
+function playerSourceProvenance(player){
+    const labels=[["apps","Mecze"],["goals","Gole"],["assists","Asysty"],
+        ["motm","MVP"],["yellow","Żółte kartki"],["red","Czerwone kartki"]];
+    const bosch=labels.map(([field,label])=>{
+        const proof=playerStatEvidence(player,field);
+        const value=player[field];
+        return ["Bosch",e(label),e(value??"—"),e(proof.status),
+            sourceEvidenceLinks(proof.urls,"Źródło")+
+            (proof.observedMatches?'<div class="small">'+e(proof.observedMatches)+
+             ' protokołów z odczytaną statystyką</div>':"")];
+    });
+    const career=labels.map(([field,label])=>{
+        const record=player.career_totals||{};
+        const officialUrl=record.source_url||player.profile_url||"";
+        const value=record[field];
+        const verified=Boolean(record.source_url)&&
+            Array.isArray(record.public_season_rows);
+        const status=verified?"Publiczna tabela całej kariery PLP — wszystkie kluby":
+            value==null?"Brak potwierdzonego pełnego bilansu":"PLP API / archiwum — zweryfikuj zakres";
+        return ["Kariera PLP",e(label),e(value??"—"),e(status),
+            sourceEvidenceLinks(officialUrl?[officialUrl]:[],"Profil")];
+    });
+    return section("Skąd dokładnie pochodzą statystyki?",
+        '<p>Wiersze Bosch dotyczą występów w naszej drużynie. PLP kariera obejmuje także inne kluby i Superpuchary. '+
+        'Oficjalne protokoły potwierdzają konkretne mecze, a nie automatycznie całą karierę.</p>'+
+        table(["Zakres","Statystyka","Wartość","Stopień potwierdzenia","Bezpośrednie źródła PLP"],
+            [...bosch,...career]));
+}
 function playerDetail(id){
     const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
 
@@ -435,6 +495,7 @@ function playerDetail(id){
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
         playerTrendSection(player)+
         publicCareerSection+
+        playerSourceProvenance(player)+
         playerMatchTimeline(player)+
         scoredMatchSection+
         ownGoalHistory+
