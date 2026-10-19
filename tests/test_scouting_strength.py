@@ -8,7 +8,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from scouting_strength import season_strength, team_strength
 from build_scouting import historical_players, head_to_head
-from sync_scouting_players import read_team_players, integer
+from sync_scouting_players import read_team_players, integer, parse_public_players
 
 
 class ScoutingStrengthTests(unittest.TestCase):
@@ -116,6 +116,43 @@ class ScoutingStrengthTests(unittest.TestCase):
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]["goals"], 0)
         self.assertEqual(result[0]["assists"], 3)
+
+    def test_public_table_reads_beyond_client_pagination_and_preserves_team_identity(self):
+        def row(i,team="correct",apps="2",goals="1",assists="0"):
+            return f'<tr><td class="data-name"><a href="https://podlaskaliga.pl/zawodnik/player-{i}/">Player {i}</a></td><td class="data-team"><a href="https://podlaskaliga.pl/druzyna/{team}/">Same Name</a></td><td class="data-appearances">{apps}</td><td class="data-goals">{goals}</td><td class="data-assists">{assists}</td></tr>'
+        html = '<table class="sp-player-list sp-paginated-table" data-sp-rows="25">'+''.join(row(i) for i in range(30))+row(40,team="other")+row(41,apps="0")+row(42,assists="—")+'</table>'
+        grouped = parse_public_players(html, "Orlik 2026", "https://podlaskaliga.pl/lista/example/", {"https://podlaskaliga.pl/druzyna/correct":"1"})
+        self.assertEqual(len(grouped["1"]),30)
+        self.assertEqual(grouped["1"][-1]["name"],"Player 29")
+        self.assertTrue(all(p["source_season"]=="Orlik 2026" and p["assists"]==0 for p in grouped["1"]))
+
+    def test_every_rival_has_current_named_scoring_leaders(self):
+        scouting=json.loads((ROOT / "docs/assets/scouting.json").read_text(encoding="utf-8"))
+        for team in scouting["teams"]:
+            with self.subTest(team=team["name"]):
+                self.assertGreaterEqual(len(team["players"]),3)
+                leaders=team["players"][:3]
+                self.assertTrue(all(p["source_season"]=="Orlik 2026" and p["goals"]+p["assists"]>0 for p in leaders))
+                self.assertTrue(all("/lista/" in p["source_url"] for p in leaders))
+                self.assertEqual(len({p["profile_url"] for p in team["players"]}),len(team["players"]))
+
+    def test_new_fixture_invalidates_weekly_player_cache(self):
+        from hashlib import sha256
+        from unittest.mock import patch
+        from sync_scouting_players import refresh
+        table={"tables":{"orlik_2026_h1":[{"team_id":"1","name":"Example","matches":1}]}}
+        previous={"_checked_on":"2026-10-19","_schema":2,
+                  "_standings_signature":sha256(json.dumps(table["tables"],sort_keys=True).encode()).hexdigest(),
+                  "1":[{"name":"Old Leader"}]}
+        with patch("sync_scouting_players.read_public_lists",return_value=({"1":[{"name":"New Leader"}]},[],[])) as read:
+            unchanged,_=refresh(table,previous,today="2026-10-19")
+            self.assertEqual(unchanged,previous)
+            read.assert_not_called()
+            table["tables"]["orlik_2026_h1"][0]["matches"]=2
+            updated,warnings=refresh(table,previous,today="2026-10-19")
+            read.assert_called_once()
+            self.assertEqual(updated["1"][0]["name"],"New Leader")
+            self.assertFalse(warnings)
 
 
 if __name__ == "__main__":

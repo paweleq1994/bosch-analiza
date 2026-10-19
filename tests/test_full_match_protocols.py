@@ -99,7 +99,7 @@ class FullPLPMatchProtocolTests(unittest.TestCase):
         self.assertEqual(kakareko[0]["id"], "1594")
         self.assertEqual(kakareko[0]["goals"], 1)
         self.assertEqual(kakareko[0]["apps"], 2)
-        self.assertTrue(kakareko[0]["stats_minimum"])
+        self.assertFalse(kakareko[0]["stats_minimum"])
         self.assertEqual(kakareko[0]["season_stats"]["144"]["goals"], 1)
         self.assertEqual(self.players["7282"]["season_stats"]["120"]["goals"], 1)
         self.assertEqual(self.players["7285"]["season_stats"]["139"]["goals"], 2)

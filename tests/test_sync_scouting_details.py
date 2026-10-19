@@ -12,6 +12,13 @@ class DetailTests(unittest.TestCase):
         matches,players,complete=mod.detail([event()],10)
         self.assertTrue(complete);self.assertEqual(matches[0]["gf"],2)
         self.assertEqual(players[0]["goals"],2)
+    def test_qualified_goal_counts_and_integer_zero_are_read_without_losing_players(self):
+        source=event(2)
+        source["performance"]["10"]["101"]["goals"]="2 (12', 25')"
+        matches,players,complete=mod.detail([source],10)
+        self.assertTrue(complete)
+        self.assertEqual(players[0]["goals"],2)
+        self.assertEqual(mod.number(0),0)
     def test_reject_mismatch(self):
         snap={"season_ids":{"hala_2025_26_h1":"146"},"tables":{"hala_2025_26_h1":[{"name":"Test","team_id":"10","matches":1,"gf":4,"ga":1}]}}
         result,warnings=mod.collect(snap,{"teams":{}},lambda sid,tid:[event()])

@@ -21,6 +21,7 @@ from goal_reconciliation import add_verified_players, administrative_goals_by_se
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 from sync_videos import iso_date, validate_fixture_dates
 from public_protocol_careers import review_public_protocols, reconstruct_confirmed_bosch_career
+from player_totals import confirm_bosch_totals
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -734,6 +735,7 @@ def main() -> None:
     career_scope = load("source-evidence/bosch-only-career-scope-20261019.json", {})
     for player in historic_players:
         reconstruct_confirmed_bosch_career(player, career_scope)
+        confirm_bosch_totals(player)
 
     goal_coverage = []
     verified_goal_match_ids = {str(item["id"]) for item in match_protocol_index.get("matches") or []}

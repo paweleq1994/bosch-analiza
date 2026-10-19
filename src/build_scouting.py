@@ -62,7 +62,7 @@ def historical_players(team_name, team_id, old_profile, details_rows, promotion_
         player_id = str(row.get("id") or row.get("player_id") or "")
         profile = profile_map.get(player_id) or {}
 
-        if name.startswith("Zawodnik #"):
+        if not name or name.startswith("Zawodnik #"):
             name = str(profile.get("resolved_name") or "").strip()
 
         if not name or name.startswith("Zawodnik #"):
@@ -84,6 +84,8 @@ def historical_players(team_name, team_id, old_profile, details_rows, promotion_
             "source_season": season,
             "source_label": row.get("source_label") or provenance,
             "source_url": row.get("source_url") or row.get("profile_url") or profile.get("profile_url") or "",
+            "profile_url": row.get("profile_url") or profile.get("profile_url") or (
+                row.get("source_url") if "/zawodnik/" in str(row.get("source_url")) else ""),
             "season_rank": seasons.get(season, 2020.0),
         })
 
@@ -121,12 +123,12 @@ def historical_players(team_name, team_id, old_profile, details_rows, promotion_
     identified = {}
 
     for row in candidates:
-        key = str(row.get("id") or "") or norm(row["name"])
+        key = str(row.get("profile_url") or "").rstrip("/") or str(row.get("id") or "") or norm(row["name"])
         previous = identified.get(key)
         if previous is None or (
-            row["season_rank"], row["goals"] + row["assists"]
+            row["season_rank"], row["source_label"] == "Oficjalna tabela indywidualna PLP", row["goals"] + row["assists"]
         ) > (
-            previous["season_rank"], previous["goals"] + previous["assists"]
+            previous["season_rank"], previous["source_label"] == "Oficjalna tabela indywidualna PLP", previous["goals"] + previous["assists"]
         ):
             identified[key] = row
 

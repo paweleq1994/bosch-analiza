@@ -29,7 +29,9 @@ const pietruczuk = database.players.find(player => player.name.toLowerCase().inc
 assert.ok(pietruczuk, "Pietruczuk must be visible as a Bosch scorer");
 const pietruczukPage = render('playerDetail("' + pietruczuk.id + '")');
 assert.ok(pietruczukPage.includes("Oficjalny protokół PLP — strzelcy i minuty"));
-assert.ok(pietruczukPage.includes("≥ 1"));
+assert.ok(!pietruczukPage.includes("≥ 1"));
+assert.equal(pietruczuk.stats_minimum,false);
+assert.equal(pietruczuk.bosch_totals.goals,1);
 assert.ok(pietruczukPage.includes("Łącznie Bosch"));
 
 const wojciuk = database.players.find(player => player.name.toLowerCase().includes("wojciuk"));
@@ -44,4 +46,4 @@ const season2025 = render('seasonPage("144")');
 assert.ok(season2026.includes("Wojciuk"));
 assert.ok(season2025.includes("Pietruczuk"));
 
-console.log("Verified official scorer additions, minimum-only stats, walkover evidence and full 113-match goal accounting.");
+console.log("Verified official scorers, independently confirmed Bosch totals, walkover evidence and full goal accounting.");

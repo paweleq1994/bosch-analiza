@@ -38,7 +38,8 @@ class GoalAttributionTests(unittest.TestCase):
             (5, 2, 2),
         )
         self.assertEqual(pietruczuk[0]["goals"], 1)
-        self.assertTrue(pietruczuk[0]["stats_minimum"])
+        self.assertFalse(pietruczuk[0]["stats_minimum"])
+        self.assertEqual(pietruczuk[0]["bosch_totals_verified"]["season_ids"],["144"])
 
     def test_official_player_and_match_evidence_stays_with_original_seasons(self):
         wojciuk = next(player for player in self.players if "wojciuk" in player["name"].lower())

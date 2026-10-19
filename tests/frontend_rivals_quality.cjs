@@ -24,10 +24,16 @@ assert.ok(evaluate('opponentDetail(normalized("Konceptbud"))').includes("Najskut
 
 const seasonPage = evaluate('seasonPage("139")');
 assert.ok(seasonPage.includes("Liderzy sezonu — kanadyjka"));
+assert.ok(!evaluate("records()").includes("Strzelcy — gole — statystyki częściowe"));
 vm.runInContext('DB.players.push({id:"missing-case",name:"Player Without Assists",season_stats:{"139":{apps:1,goals:1,assists:null}}})', context);
 assert.ok(evaluate('seasonPage("139")').includes("niepełnymi statystykami"));
+for (const id of ["1594", "12286"]) {
+    assert.equal(db.players.find(player => player.id === id).stats_minimum, false);
+}
+vm.runInContext('DB.players.push({id:"partial-case",name:"Player With Partial History",goals:1,apps:1,stats_minimum:true})', context);
 const recordsPage = evaluate("records()");
-assert.ok(recordsPage.includes("udokumentowane minimum (bez rankingu)"));
+assert.ok(recordsPage.includes("Strzelcy — gole — statystyki częściowe"));
+assert.ok(recordsPage.includes("Potwierdzono co najmniej"));
 assert.ok(recordsPage.includes("Suma zweryfikowanych sezonów PLP"));
 
 console.log("Verified canonical rival IDs, retained renames, disambiguated same-name teams and conservative leaderboards.");
