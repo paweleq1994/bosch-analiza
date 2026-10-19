@@ -13,9 +13,9 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 | Zawodnicy | 46 kanonicznych profili, 988 występów w protokołach |
 | Cała kariera PLP | 35 publicznych bilansów, 11 niepełnych archiwów |
 | Portrety | 18 potwierdzonych, 28 brakujących |
-| Wideo | 120 rekordów; 54 mecze z nagraniem, 59 bez przypisanego filmu |
+| Wideo | 120 rekordów; 55 meczów z nagraniem, 58 bez przypisanego filmu |
 | Weryfikacja materiałów | 9 do identyfikacji, 3 odrzucone powiązania / materiały poza archiwum ligowym |
-| Odnośniki czasowe | 8 obejrzanych akcji; 159 goli w kolejce po odnalezieniu dalszych transmisji |
+| Odnośniki czasowe | 8 obejrzanych akcji; 160 goli w kolejce po odnalezieniu dalszych transmisji |
 | Różnice źródeł | 34 porównania, wszystkie wyjaśnione protokołami lub zakresem rozgrywek; 0 sprzeczności sezonowych z protokołami |
 
 Aktualne liczby po kolejnych synchronizacjach są w [panelu jakości](https://paweleq1994.github.io/bosch-analiza/#/quality) i raportach. Pierwotne 113 meczów to chroniona baza historyczna; archiwum może rosnąć.
@@ -86,7 +86,7 @@ Internet Archive udostępnił dawne profile o zgodnych ID. Odzyskano 3 portrety 
 
 Kanały są w `data/video_channels.json`: `@martawnuszynska9993`, `@piotrgoabeski3337` oraz oficjalna PLP `UCd0p73Dp5Eya7c4tQ8EoLZA`. Ostatni kanał jest odczytywany z zakładki transmisji i filtrowany do tytułów Boscha. Siedem odnalezionych transmisji z lat 2023–2025 przypisano po porównaniu dokładnej daty i drużyn z PLP; osobna transmisja Superpucharu nie zwiększa pokrycia 113 meczów ligowych. Workflow odczytuje metadane przez istniejący `yt-dlp`; synchronizacja nie pobiera plików filmów. Ręczne `manual_bindings` w `data/video_updates.json` mają pierwszeństwo. `match_id: null` odrzuca stare powiązanie również w meczu, z zachowaniem `review_reason` i `reviewed_at`.
 
-Odnośnik czasowy wymaga wpisu w `data/video_goal_evidence.json`: meczu, zawodnika, minuty PLP, filmu, obejrzanej sekundy, metody, recenzenta i daty. Opis przeglądu wyjaśnia powiązanie; klatki są w `reports/evidence/`. Minuta 21 meczu nie oznacza 21:00 filmu. Dalsze 154 gole wymagają przeglądu i nie są oznaczone jako ukończone.
+Odnośnik czasowy wymaga wpisu w `data/video_goal_evidence.json`: meczu, zawodnika, minuty PLP, filmu, obejrzanej sekundy, metody, recenzenta i daty. Opis przeglądu wyjaśnia powiązanie; klatki są w `reports/evidence/`. Minuta 21 meczu nie oznacza 21:00 filmu. Dalsze 160 goli wymagają przeglądu i nie są oznaczone jako ukończone. Filmy „1” i „2” przypisano do Wiary Piasta II z 01.07.2023 po jednoznacznym potwierdzeniu użytkownika; nie ustala to jeszcze sekundy gola.
 
 ## Raporty i kod
 

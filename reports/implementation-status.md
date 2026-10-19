@@ -21,8 +21,8 @@ Ostatni potwierdzony main: `c1cae88` (PR #62 i pełna synchronizacja dat). PR #6
 | 11 | Wdrożone | 113 szczegółowych protokołów ligowych i kontrola przyszłego wzrostu. |
 | 12 | Wdrożone | 988 źródłowych występów, historia i linki do meczów. Dodatkowe protokoły Superpucharu nie powiększają archiwum ligowego. |
 | 13 | Wdrożone | Źródła pól, Bosch osobno od całej PLP. Jeden oficjalny link w całym profilu, odrębne źródła rzeczywistych uzupełnień i meczów. |
-| 14 | Częściowo | 120 filmów, 54/113 mecze z nagraniem, 59 bez, 9 materiałów do identyfikacji. Wszystkie filmy mają datę; odzyskane prawdziwe daty 30 filmów z 2026. Nowy odczyt 59 stron wydarzeń: 59 HTTP200 i zgodnych postid, 0 osadzonych YouTube. Brak osadzenia nie dowodzi braku filmu gdzie indziej. |
-| 15 | Częściowo — przegląd wideo | 8 potwierdzonych fragmentów akcji, kadry i notatki źródłowe; 159 goli nadal wymaga weryfikacji. Brak klatki lub nieczytelny przebieg nie upoważnia do zgadywania sekundy. |
+| 14 | Częściowo | 120 filmów, 55/113 meczów z nagraniem, 58 bez, 7 materiałów do identyfikacji. Dwa ogólne tytuły przypisane do 8295 po potwierdzeniu użytkownika. Wszystkie filmy mają datę; odzyskane prawdziwe daty 30 filmów z 2026. Nowy odczyt wcześniejszej listy 59 stron wydarzeń: 59 HTTP200 i zgodnych postid, 0 osadzonych YouTube. Brak osadzenia nie dowodzi braku filmu gdzie indziej. |
+| 15 | Częściowo — przegląd wideo | 8 potwierdzonych fragmentów akcji, kadry i notatki źródłowe; 160 goli nadal wymaga weryfikacji, w tym gol nowo powiązanego meczu 8295. Brak klatki lub nieczytelny przebieg nie upoważnia do zgadywania sekundy. |
 | 16 | Wdrożone | Sezonowe wykresy z prawidłowymi brakami danych. |
 | 17 | Wdrożone | Porównywarka sezonowa, oznaczenie minimów. |
 | 18 | Wdrożone | Serie, forma, czyste konta, minuty goli. 113 poprawnych HT: I połowa 130:94, II 163:135; brak/sprzeczność HT wyłącza obliczenie. |
@@ -48,6 +48,7 @@ Ostatni potwierdzony main: `c1cae88` (PR #62 i pełna synchronizacja dat). PR #6
 - Pełny sync po #62 `39275733253` — success; bot `c1cae88`. Prawdziwe daty 30 filmów z 2026, wszystkie 120 rekordów mają datę. Pages `39276461012` — success. Produkcyjny JSON 46/113/120 i 30 dat z 2026 potwierdzony także w przeglądarce.
 - #63: 24 źródłowe protokoły innych klubów, wyjaśnienia różnic, dwa Superpuchary, szósty fragment gola, pełna lista zgłoszonych bez występów na stronie sezonu i jeden link w całym profilu. 196 Python + 14 frontend OK lokalnie. CI oczekuje na runner; stare nieudane kontrole z formatem dat nie dotyczą poprawionego testu.
 - Siódmy i ósmy fragment gola są w tym samym PR z kadrami HD i przechodzą walidator istniejącego mechanizmu.
+- Użytkownik potwierdził 6vsemMiGuPk i Kh4IuHMwcPQ jako Bosch–Wiara Piasta II 01.07.2023 (8295, 1:0). Powiązania mają kategorię user_confirmed_fixture i jawną notatkę; neutralne etykiety Nagranie 1/2, bez niepotwierdzonej połowy. Pokrycie wzrosło do 55 meczów; zostało 7 nierozpoznanych filmów. Gol 29′ Sołowieja dopisany do kolejki przeglądu, bez odnośnika czasowego.
 
 ## Sprawdzone źródła — nie powtarzać całych odczytów bez nowej przesłanki
 
@@ -57,13 +58,14 @@ Ostatni potwierdzony main: `c1cae88` (PR #62 i pełna synchronizacja dat). PR #6
 - WordPress: wcześniejszy pełny audyt 91 mediów / 53 nazw; nowy bezpośredni parent dla 11 niedostępnych profili daje 0 mediów. Nowy 12288 również bez featured/parent portretu. Nie identyfikować osoby ze zdjęcia klubowego.
 - Kariery: pełne protokoły sezonów 139 (211 wydarzeń), 141 (197) i 104 (65). Zdarzenia 10748, 11748, 3994, 3992 mają pustą listę leagues; sumy z ligą zgadzają się z REST, wszystkie z HTML. Wyciąg 24 występów w career_competition_evidence.json, bez ingerencji w Bosch.
 - Superpuchary: pięć wydarzeń Boscha w sezonach 119/127/140/145; protokoły 10790 i 12363 zapisane jako JSON źródłowy. Dodatkowy odczyt całych sezonów 120/125/126 nie znalazł kolejnego wpisu Gołąbeskiego poza znanymi protokołami.
-- YouTube: dwa kanały prywatnych autorów i oficjalny PLP UCd0p73Dp5Eya7c4tQ8EoLZA. 59 oficjalnych stron wydarzeń bez filmu: zgodne ID, brak YouTube. Filmy „1”/„2”, daty 2/3.07.2023, mają tylko kandydackie powiązanie z Wiarą Piasta II; pytanie do użytkownika, bez przypisania na podstawie samej daty/strojów.
+- YouTube: dwa kanały prywatnych autorów i oficjalny PLP UCd0p73Dp5Eya7c4tQ8EoLZA. Odczyt pierwotnej listy 59 oficjalnych stron wydarzeń bez filmu: zgodne ID, brak YouTube. Użytkownik następnie potwierdził filmy „1”/„2”, daty 2/3.07.2023, jako Wiarę Piasta II 01.07.2023. Zmniejsza to bieżącą listę braków do 58 spotkań.
 - Akcje z klatkami: 7851 — Mateusz Jurkowicz 3′/7s i 23′/13s, Sołowiej 26′/8s, Markowski 29′/9s; 10145 — Mateusz Jurkowicz 2′/488s, Karolczuk 16′/1265s, Rafał Jurkowicz 17′/1318s; orlik26-1 — Karolczuk 23′/145s, opublikowana wersja ZOOM 200%, ponownie sprawdzona w HD. Są to obejrzane fazy akcji, nie deklaracje dokładnej klatki przecięcia linii.
 - Aptel 9805 i Vesta 11397 bez transkrypcji; fragment Aptelu 1490–1515s nie dał pewnego gola. W 10145 wygrywający gol 39′ przy komentarzu około 47:03 jest poza kadrem. Nie zamieniać komentarza w observed_video_frame.
+- Dalszy odczyt transmisji PWnZ2yifLNI: komentarz wskazuje 18:46, 47:11 i 49:07. Obejrzane klatki 1121/1124, 2828 i około 2950 nie dały wystarczająco pewnego obrazu piłki w bramce. 8mVCFD11ZGo: komentarz 41:18–41:22 wskazuje główkę Karpińskiego, klatka 2480,69 pokazuje daleką bramkę; brak dostatecznie czytelnego rozstrzygnięcia. Te cztery gole pozostają w kolejce, bez fikcyjnego potwierdzenia.
 
 ## Następne zadania
 
-1. Dokończyć przegląd 159 goli i identyfikację 9 materiałów; szukać nowych dowodów nagrań dla 59 spotkań.
+1. Dokończyć przegląd 160 goli i identyfikację 7 materiałów; szukać nowych dowodów nagrań dla 58 spotkań.
 2. Uzupełniać 11 karier, 28 portretów i dwa pola Gołąbeskiego tylko po nowym dowodzie. Brak danych nie jest zerem, minimum nie jest pełnym bilansem, Bosch nie jest całą PLP.
 3. Kończyć scalanie/publikację wyłącznie po zielonym CI dla faktycznego head. Issue #33 pozostaje otwarte dla punktów 4, 5, 6, 14, 15.
 

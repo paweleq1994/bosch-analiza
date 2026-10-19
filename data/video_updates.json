@@ -558,6 +558,28 @@
         "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
       ]
     },
+    "6vsemMiGuPk": {
+      "match_id": "8295",
+      "segment": "Nagranie 1",
+      "review_category": "user_confirmed_fixture",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Użytkownik 19.10.2026 jednoznacznie potwierdził, że filmy zatytułowane 1 i 2 pokazują Bosch–Wiara Piasta II z 01.07.2023 (1:0). Daty publikacji i obejrzane stroje są zgodne, ale sam tytuł nie ustalał rywala. Powiązanie pochodzi z potwierdzenia użytkownika; nie ustala połowy ani sekundy gola.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=6vsemMiGuPk",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/"
+      ]
+    },
+    "Kh4IuHMwcPQ": {
+      "match_id": "8295",
+      "segment": "Nagranie 2",
+      "review_category": "user_confirmed_fixture",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Użytkownik 19.10.2026 jednoznacznie potwierdził, że filmy zatytułowane 1 i 2 pokazują Bosch–Wiara Piasta II z 01.07.2023 (1:0). Daty publikacji i obejrzane stroje są zgodne, ale sam tytuł nie ustalał rywala. Powiązanie pochodzi z potwierdzenia użytkownika; nie ustala połowy ani sekundy gola.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=Kh4IuHMwcPQ",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/"
+      ]
+    },
     "Sglay1fT-00": {
       "match_id": null,
       "review_category": "outside_league_archive",

@@ -436,8 +436,11 @@ function playerDetail(id){
     const unassigned=player.season_coverage?.unassigned||{};
     const remainingTotals=[
         ["występy",unassigned.apps],
-        ["goli",unassigned.goals],
-        ["asyst",unassigned.assists]
+        ["gole",unassigned.goals],
+        ["asysty",unassigned.assists],
+        ["MVP",unassigned.motm],
+        ["żółte kartki",unassigned.yellow],
+        ["bezpośrednie czerwone kartki",unassigned.red]
     ].filter(([,value])=>Number.isInteger(value)&&value>0);
     const remainingNote=remainingTotals.length
         ? '<div class="notice">Niepełny podział na sezony: '+remainingTotals.map(([label,value])=>e(label)+": "+e(value)).join(", ")+'. Wiersz „Łącznie Bosch” pochodzi z historycznego bilansu zawodnika i nie jest sumą wyświetlonych sezonów. Nie przypisujemy brakujących statystyk do sezonów bez potwierdzenia.</div>'

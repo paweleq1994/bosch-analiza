@@ -33,6 +33,7 @@ const golabeski = evaluate('playerDetail("7270")');
 assert.ok(golabeski.includes("Orlik 2024"));
 assert.ok(golabeski.includes("<td>6</td><td>1</td><td>1</td><td>2</td>"));
 assert.ok(golabeski.includes("Niepełny podział na sezony: występy: 1"));
+assert.ok(golabeski.includes("żółte kartki: 1"));
 assert.ok(golabeski.includes("Archiwum Boscha — najlepszy sezon"));
 assert.ok(golabeski.includes("Łącznie Bosch"));
 

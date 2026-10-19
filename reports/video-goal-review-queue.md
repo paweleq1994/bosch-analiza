@@ -3,7 +3,7 @@
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
 Potwierdzone linki: **8**.
-Niepotwierdzone gole w meczach z filmem: **159**.
+Niepotwierdzone gole w meczach z filmem: **160**.
 
 ## Obejrzane i potwierdzone akcje
 
@@ -41,6 +41,7 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 8255](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) | Karolczuk Patryk | 37′ | [Transmisja meczu](https://www.youtube.com/watch?v=PWnZ2yifLNI) |
 | [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Jurkowicz Rafał | 1′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
 | [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Muczyński Karol | 16′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
+| [PLP 8295](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/) | Sołowiej Tomasz | 29′ | [Nagranie 1](https://www.youtube.com/watch?v=6vsemMiGuPk) · [Nagranie 2](https://www.youtube.com/watch?v=Kh4IuHMwcPQ) |
 | [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Sołowiej Tomasz | 3′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
 | [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 5′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
 | [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 21′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
