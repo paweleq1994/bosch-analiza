@@ -62,7 +62,7 @@ def match_video(video,matches):
 
     # Upload dates only disambiguate matches with the same verified score/club.
     raw_date = str(video.get("date") or "").replace("-", "")
-    if len(candidates) > 1 and re.fullmatch(r"20\\d{6}", raw_date):
+    if len(candidates) > 1 and len(raw_date) == 8 and raw_date.isdigit() and raw_date.startswith("20"):
         try:
             upload_date = date.fromisoformat(
                 raw_date[:4] + "-" + raw_date[4:6] + "-" + raw_date[6:]
