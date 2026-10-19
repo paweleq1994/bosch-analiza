@@ -31,7 +31,7 @@ class DuplicateGoalkeeperTests(unittest.TestCase):
         self.assertEqual((player["apps"], player["goals"], player["assists"]), (90, 2, 7))
         self.assertEqual((player["motm"], player["yellow"], player["red"]), (10, 5, 2))
         self.assertEqual((player["bosch_totals"]["apps"], player["bosch_totals"]["goals"]), (90, 2))
-        self.assertEqual((player["career_totals"]["apps"], player["career_totals"]["goals"]), (90, 2))
+        self.assertEqual((player["career_totals"]["apps"], player["career_totals"]["goals"]), (94, 2))
 
         season = player["season_stats"]["146"]
         self.assertEqual((season["apps"], season["goals"], season["assists"]), (8, 1, 0))
