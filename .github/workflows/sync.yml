@@ -13,6 +13,7 @@ on:
       - 'src/build_portal.py'
       - 'src/protocol_goals.py'
       - 'src/backfill_match_player_stats.py'
+      - 'src/collect_match_player_evidence.py'
       - 'data/match_player_evidence.json'
       - 'data/bosch_own_goal_evidence.json'
       - 'src/goal_reconciliation.py'
@@ -52,6 +53,8 @@ jobs:
         run: python -m pip install "yt-dlp>=2026.9.1"
       - name: Scan official PLP league data
         run: python src/sync_plp.py
+      - name: Refresh 113 historical and newly discovered official PLP box scores
+        run: python src/collect_match_player_evidence.py
       - name: Scan known public YouTube channels
         run: python src/sync_videos.py
       - name: Resolve public player profiles for current leaders
@@ -84,7 +87,7 @@ jobs:
         run: python src/audit_player_coverage.py
       - name: Commit verified data changes
         run: |
-          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
+          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/match_player_evidence.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json docs/assets/data.json docs/assets/scouting.json reports/player-data-coverage.md docs/media
