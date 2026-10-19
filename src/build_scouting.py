@@ -25,6 +25,26 @@ def score(hall, orlik, old=None):
     return team_strength(hall, orlik)
 
 
+def head_to_head(matches, team_name, team_id):
+    """Keep renamed opponents together without merging clubs that share a name."""
+    name_ids = {}
+    for match in matches:
+        if match.get("opponent_id") is not None:
+            name_ids.setdefault(norm(match["opponent"]), set()).add(str(match["opponent_id"]))
+    known_ids = name_ids.get(norm(team_name), set())
+    identifier = str(team_id) if team_id is not None else next(iter(known_ids)) if len(known_ids) == 1 else None
+    aliases = {norm(team_name)} | {
+        norm(match["opponent"]) for match in matches
+        if identifier is not None and str(match.get("opponent_id")) == identifier
+    }
+    selected = [match for match in matches if (
+        str(match["opponent_id"]) == identifier if match.get("opponent_id") is not None
+        else norm(match["opponent"]) in aliases
+        and name_ids.get(norm(match["opponent"]), set()).issubset({identifier})
+    )]
+    return sorted(selected, key=lambda match: (match["date"], str(match["id"])), reverse=True)
+
+
 def historical_players(team_name, team_id, old_profile, details_rows, promotion_rows, profile_map, overrides, refreshed):
     candidates = []
     seasons = {
@@ -187,7 +207,8 @@ def main():
         unique={norm(x):x for x in (candidates)}
         profile=old.get(norm(name)) or {}
         stars=profile.get("top_players") or []
-        h2h=[m for m in portal["matches"] if norm(m["opponent"])==norm(name)]
+        team_id=next((str(r.get("team_id")) for r in (hall+orlik+lower) if norm(r["name"])==norm(name) and r.get("team_id")),None)
+        h2h=head_to_head(portal["matches"],name,team_id)
         w=sum(m["gf"]>m["ga"] for m in h2h);d=sum(m["gf"]==m["ga"] for m in h2h)
         coverage=(.5 if indoor else 0)+(.3 if outdoor else 0)
         confidence="średnia" if coverage>=.8 else "niska"
@@ -204,7 +225,6 @@ def main():
                 video_rows.append({"id":video_id,"title":video.get("title") or "",
                     "url":video.get("url") or f"https://www.youtube.com/watch?v={video_id}",
                     "date":prior_match["date"],"match_id":prior_match["id"],"source":"Archiwum Boscha, niezweryfikowane taktycznie"})
-        team_id=next((str(r.get("team_id")) for r in (hall+orlik+lower) if norm(r["name"])==norm(name) and r.get("team_id")),None)
         detailed=[v for v in details.get("teams",{}).values() if team_id and str(v["team_id"])==team_id]
         preferred=next((v for v in detailed if v["division"]=="hala_2026_27_h1"),None) or next((v for v in detailed if v["division"]=="hala_2025_26_h1"),None) or (detailed[0] if detailed else None)
         player_rows=historical_players(name,team_id,profile,detailed,promotion_archive.get("player_rows",[]),player_map,overrides,refreshed)
@@ -218,7 +238,10 @@ def main():
             "plp_team_id":team_id,
             "season_match_details":preferred.get("matches",[]) if preferred else [],
             "player_stats_verified":bool(refreshed.get(str(team_id))) or any(snapshot.get("player_stats_complete") for snapshot in detailed),
-            "h2h":{"games":len(h2h),"wins":w,"draws":d,"losses":len(h2h)-w-d,"matches":[{"date":m["date"],"gf":m["gf"],"ga":m["ga"],"id":m["id"]} for m in h2h]},
+            "h2h":{"games":len(h2h),"wins":w,"draws":d,"losses":len(h2h)-w-d,
+                "gf":sum(m["gf"] for m in h2h),"ga":sum(m["ga"] for m in h2h),
+                "matches":[{key:m.get(key) for key in ("date","gf","ga","id","season","opponent","event_link")}
+                    | {"video_count":len(m.get("videos") or [])} for m in h2h]},
             "statistical_watchouts":threats,
             "plan_a":plan_a,
             "plan_b":plan_b,

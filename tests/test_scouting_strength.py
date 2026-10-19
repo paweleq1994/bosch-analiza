@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from scouting_strength import season_strength, team_strength
-from build_scouting import historical_players
+from build_scouting import historical_players, head_to_head
 from sync_scouting_players import read_team_players, integer
 
 
@@ -32,6 +32,30 @@ class ScoutingStrengthTests(unittest.TestCase):
         self.assertEqual(lower["position"], 1)
         self.assertGreater(team_strength(high_hall, high_orlik), team_strength(None, lower))
         self.assertGreater(team_strength(high_hall, high_orlik) - team_strength(None, lower), 10)
+
+    def test_match_archive_keeps_renames_and_rejects_same_name_different_club(self):
+        matches = [
+            {"id": "1", "date": "2025-01-01", "opponent": "Aptel", "opponent_id": 1574},
+            {"id": "2", "date": "2026-01-01", "opponent": "Soccer Auto Wygoda", "opponent_id": 1574},
+            {"id": "3", "date": "2026-02-01", "opponent": "Soccer Auto Wygoda", "opponent_id": 999},
+            {"id": "4", "date": "2024-01-01", "opponent": "Aptel", "opponent_id": None},
+            {"id": "5", "date": "2024-02-01", "opponent": "Soccer Auto Wygoda", "opponent_id": None},
+        ]
+        self.assertEqual([m["id"] for m in head_to_head(matches, "Soccer Auto Wygoda", "1574")], ["2", "1", "4"])
+        self.assertEqual(head_to_head(matches, "Soccer Auto Wygoda", None), [])
+
+    def test_scouting_archive_includes_all_official_opponent_ids_and_seasons(self):
+        portal = json.loads((ROOT / "docs/assets/data.json").read_text(encoding="utf-8"))
+        scouting = json.loads((ROOT / "docs/assets/scouting.json").read_text(encoding="utf-8"))
+        for team in scouting["teams"]:
+            with self.subTest(team=team["name"]):
+                expected = [m for m in portal["matches"] if str(m.get("opponent_id")) == team["plp_team_id"]]
+                history = team["h2h"]
+                self.assertEqual({m["id"] for m in history["matches"]}, {m["id"] for m in expected})
+                self.assertEqual(history["games"], len(expected))
+                self.assertEqual(history["wins"] + history["draws"] + history["losses"], len(expected))
+                self.assertEqual((history["gf"], history["ga"]), (sum(m["gf"] for m in expected), sum(m["ga"] for m in expected)))
+                self.assertTrue(all(m["season"] and m["opponent"] and m["event_link"] for m in history["matches"]))
 
     def test_league_tier_and_sample_size_are_material(self):
         first = self.team("orlik_2026_h1", "4Technology")

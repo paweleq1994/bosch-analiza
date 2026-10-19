@@ -214,12 +214,18 @@
         "wins": 0,
         "draws": 0,
         "losses": 1,
+        "gf": 0,
+        "ga": 4,
         "matches": [
           {
             "date": "2024-01-14",
             "gf": 0,
             "ga": 4,
-            "id": "9646"
+            "id": "9646",
+            "season": "Hala 2023/2024",
+            "opponent": "Adampol Glovis",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
+            "video_count": 0
           }
         ]
       },
@@ -464,12 +470,18 @@
         "wins": 0,
         "draws": 0,
         "losses": 1,
+        "gf": 0,
+        "ga": 5,
         "matches": [
           {
             "date": "2023-11-26",
             "gf": 0,
             "ga": 5,
-            "id": "9480"
+            "id": "9480",
+            "season": "Hala 2023/2024",
+            "opponent": "Hurtownia Krokus",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-hurtownia-krokus/",
+            "video_count": 0
           }
         ]
       },
@@ -692,12 +704,18 @@
         "wins": 0,
         "draws": 0,
         "losses": 1,
+        "gf": 0,
+        "ga": 2,
         "matches": [
           {
             "date": "2024-03-17",
             "gf": 0,
             "ga": 2,
-            "id": "9816"
+            "id": "9816",
+            "season": "Hala 2023/2024",
+            "opponent": "4Technology",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/4technology-vs-bosch-service-tech-car/",
+            "video_count": 0
           }
         ]
       },
@@ -984,12 +1002,18 @@
         "wins": 0,
         "draws": 1,
         "losses": 0,
+        "gf": 2,
+        "ga": 2,
         "matches": [
           {
             "date": "2025-12-14",
             "gf": 2,
             "ga": 2,
-            "id": "12581"
+            "id": "12581",
+            "season": "Hala 2025/2026",
+            "opponent": "Prostal",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-prostal/",
+            "video_count": 0
           }
         ]
       },
@@ -1217,11 +1241,24 @@
       ],
       "player_stats_verified": true,
       "h2h": {
-        "games": 0,
+        "games": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "matches": []
+        "losses": 1,
+        "gf": 1,
+        "ga": 2,
+        "matches": [
+          {
+            "date": "2024-03-09",
+            "gf": 1,
+            "ga": 2,
+            "id": "9805",
+            "season": "Hala 2023/2024",
+            "opponent": "Aptel",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/",
+            "video_count": 1
+          }
+        ]
       },
       "statistical_watchouts": [
         "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
@@ -1238,7 +1275,16 @@
       ],
       "scouting_status": "statistical_only",
       "observations": [],
-      "videos": [],
+      "videos": [
+        {
+          "id": "3A0-Z_98lKQ",
+          "title": "APTEL vs BOSCH SERVICE TECH-CAR | HALA 2023/24 - 14. KOLEJKA | WHITE BEAR COFFEE GAME",
+          "url": "https://www.youtube.com/watch?v=3A0-Z_98lKQ",
+          "date": "2024-03-09",
+          "match_id": "9805",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
@@ -1517,36 +1563,58 @@
         "wins": 2,
         "draws": 1,
         "losses": 2,
+        "gf": 8,
+        "ga": 8,
         "matches": [
           {
-            "date": "2023-02-26",
-            "gf": 2,
-            "ga": 1,
-            "id": "7814"
-          },
-          {
-            "date": "2023-09-17",
-            "gf": 3,
-            "ga": 1,
-            "id": "8437"
-          },
-          {
-            "date": "2024-02-18",
+            "date": "2025-03-01",
             "gf": 1,
-            "ga": 1,
-            "id": "9755"
+            "ga": 3,
+            "id": "11397",
+            "season": "Hala 2024/2025",
+            "opponent": "VESTA",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car-2/",
+            "video_count": 1
           },
           {
             "date": "2024-04-20",
             "gf": 1,
             "ga": 2,
-            "id": "10093"
+            "id": "10093",
+            "season": "Orlik 2024",
+            "opponent": "VESTA",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+            "video_count": 0
           },
           {
-            "date": "2025-03-01",
+            "date": "2024-02-18",
             "gf": 1,
-            "ga": 3,
-            "id": "11397"
+            "ga": 1,
+            "id": "9755",
+            "season": "Hala 2023/2024",
+            "opponent": "VESTA",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/",
+            "video_count": 0
+          },
+          {
+            "date": "2023-09-17",
+            "gf": 3,
+            "ga": 1,
+            "id": "8437",
+            "season": "Orlik 2023",
+            "opponent": "VESTA",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/",
+            "video_count": 2
+          },
+          {
+            "date": "2023-02-26",
+            "gf": 2,
+            "ga": 1,
+            "id": "7814",
+            "season": "Hala 2022",
+            "opponent": "VESTA",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+            "video_count": 0
           }
         ]
       },
@@ -1567,6 +1635,14 @@
       "observations": [],
       "videos": [
         {
+          "id": "RVOIr5BF1pw",
+          "title": "Vesta vs Bosch Service Tech-Car - Hala 2024/25 - White Bear Coffee Game",
+          "url": "https://www.youtube.com/watch?v=RVOIr5BF1pw",
+          "date": "2025-03-01",
+          "match_id": "11397",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
           "id": "66-xHXFSMto",
           "title": "Bosch Tech Car Service - Vesta - I połowa (1:0)",
           "url": "https://www.youtube.com/watch?v=66-xHXFSMto",
@@ -1580,14 +1656,6 @@
           "url": "https://www.youtube.com/watch?v=xZv7sWZzCKU",
           "date": "2023-09-17",
           "match_id": "8437",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "RVOIr5BF1pw",
-          "title": "Vesta vs Bosch Service Tech-Car - Hala 2024/25 - White Bear Coffee Game",
-          "url": "https://www.youtube.com/watch?v=RVOIr5BF1pw",
-          "date": "2025-03-01",
-          "match_id": "11397",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
@@ -1780,18 +1848,28 @@
         "wins": 2,
         "draws": 0,
         "losses": 0,
+        "gf": 9,
+        "ga": 4,
         "matches": [
-          {
-            "date": "2023-03-19",
-            "gf": 4,
-            "ga": 3,
-            "id": "7875"
-          },
           {
             "date": "2023-10-01",
             "gf": 5,
             "ga": 1,
-            "id": "8452"
+            "id": "8452",
+            "season": "Orlik 2023",
+            "opponent": "Fc Bajaga",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-bajaga/",
+            "video_count": 2
+          },
+          {
+            "date": "2023-03-19",
+            "gf": 4,
+            "ga": 3,
+            "id": "7875",
+            "season": "Hala 2022",
+            "opponent": "Fc Bajaga",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/",
+            "video_count": 2
           }
         ]
       },
@@ -1812,22 +1890,6 @@
       "observations": [],
       "videos": [
         {
-          "id": "gSjI9uOEdec",
-          "title": "Boschowcy vs Bajaga 4:3 - II potowa",
-          "url": "https://www.youtube.com/watch?v=gSjI9uOEdec",
-          "date": "2023-03-19",
-          "match_id": "7875",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "FETkIdBKLrE",
-          "title": "Boschowcy vs Bajaga 3:2 - I połowa",
-          "url": "https://www.youtube.com/watch?v=FETkIdBKLrE",
-          "date": "2023-03-19",
-          "match_id": "7875",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
           "id": "xWO9MLKJMXg",
           "title": "Bosch Service Tech Car - Bajaga - II połowa (5:1)",
           "url": "https://www.youtube.com/watch?v=xWO9MLKJMXg",
@@ -1841,6 +1903,22 @@
           "url": "https://www.youtube.com/watch?v=CxOVXkWO5po",
           "date": "2023-10-01",
           "match_id": "8452",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "gSjI9uOEdec",
+          "title": "Boschowcy vs Bajaga 4:3 - II potowa",
+          "url": "https://www.youtube.com/watch?v=gSjI9uOEdec",
+          "date": "2023-03-19",
+          "match_id": "7875",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "FETkIdBKLrE",
+          "title": "Boschowcy vs Bajaga 3:2 - I połowa",
+          "url": "https://www.youtube.com/watch?v=FETkIdBKLrE",
+          "date": "2023-03-19",
+          "match_id": "7875",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
@@ -2081,16 +2159,32 @@
       ],
       "player_stats_verified": false,
       "h2h": {
-        "games": 1,
+        "games": 2,
         "wins": 0,
         "draws": 0,
-        "losses": 1,
+        "losses": 2,
+        "gf": 3,
+        "ga": 7,
         "matches": [
           {
             "date": "2026-06-13",
             "gf": 1,
             "ga": 3,
-            "id": "orlik26-7"
+            "id": "orlik26-7",
+            "season": "Orlik 2026",
+            "opponent": "Biuro Serwis-Kopiarki",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/biuro-serwis-kopiarki-vs-bosch-service-tech-car/",
+            "video_count": 2
+          },
+          {
+            "date": "2026-03-07",
+            "gf": 2,
+            "ga": 4,
+            "id": "12660",
+            "season": "Hala 2025/2026",
+            "opponent": "Biuro Serwis-Kopiarki Białystok",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/",
+            "video_count": 0
           }
         ]
       },
@@ -2337,11 +2431,24 @@
       ],
       "player_stats_verified": true,
       "h2h": {
-        "games": 0,
+        "games": 1,
         "wins": 0,
         "draws": 0,
-        "losses": 0,
-        "matches": []
+        "losses": 1,
+        "gf": 0,
+        "ga": 3,
+        "matches": [
+          {
+            "date": "2024-01-13",
+            "gf": 0,
+            "ga": 3,
+            "id": "9486",
+            "season": "Hala 2023/2024",
+            "opponent": "PTH Maltrans Znienacka",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/",
+            "video_count": 1
+          }
+        ]
       },
       "statistical_watchouts": [
         "Statystyki nie wskazują jednoznacznej charakterystyki taktycznej; przed meczem zweryfikować nagrania i aktualny skład."
@@ -2358,7 +2465,16 @@
       ],
       "scouting_status": "statistical_only",
       "observations": [],
-      "videos": [],
+      "videos": [
+        {
+          "id": "YTZTrjLc5Nw",
+          "title": "PTH MALTRANS ZNIENACKA VS BOSCH S. TECH-CAR | HALA 2023/24 - 3. KOLEJKA | WHITE BEAR COFFEE GAME",
+          "url": "https://www.youtube.com/watch?v=YTZTrjLc5Nw",
+          "date": "2024-01-13",
+          "match_id": "9486",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        }
+      ],
       "warning": "Plan gry to hipotezy wyjściowe. Brak potwierdzonej współczesnej analizy wideo; nie przypisano stylu taktycznego na podstawie samych wyników."
     },
     {
@@ -2548,12 +2664,18 @@
         "wins": 0,
         "draws": 0,
         "losses": 1,
+        "gf": 0,
+        "ga": 2,
         "matches": [
           {
             "date": "2024-02-04",
             "gf": 0,
             "ga": 2,
-            "id": "9714"
+            "id": "9714",
+            "season": "Hala 2023/2024",
+            "opponent": "Top Auto",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-top-auto/",
+            "video_count": 0
           }
         ]
       },
@@ -2851,12 +2973,18 @@
         "wins": 0,
         "draws": 0,
         "losses": 1,
+        "gf": 0,
+        "ga": 2,
         "matches": [
           {
             "date": "2024-06-08",
             "gf": 0,
             "ga": 2,
-            "id": "10142"
+            "id": "10142",
+            "season": "Orlik 2024",
+            "opponent": "Hanbud",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car/",
+            "video_count": 0
           }
         ]
       },
@@ -3150,30 +3278,48 @@
         "wins": 0,
         "draws": 0,
         "losses": 4,
+        "gf": 4,
+        "ga": 13,
         "matches": [
           {
-            "date": "2025-02-16",
-            "gf": 1,
-            "ga": 3,
-            "id": "11389"
-          },
-          {
-            "date": "2025-09-14",
-            "gf": 2,
-            "ga": 4,
-            "id": "12132"
+            "date": "2026-05-30",
+            "gf": 0,
+            "ga": 1,
+            "id": "orlik26-6",
+            "season": "Orlik 2026",
+            "opponent": "Zimne Dranie",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-4/",
+            "video_count": 2
           },
           {
             "date": "2026-01-31",
             "gf": 1,
             "ga": 5,
-            "id": "12631"
+            "id": "12631",
+            "season": "Hala 2025/2026",
+            "opponent": "Zimne Dranie",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-3/",
+            "video_count": 0
           },
           {
-            "date": "2026-05-30",
-            "gf": 0,
-            "ga": 1,
-            "id": "orlik26-6"
+            "date": "2025-09-14",
+            "gf": 2,
+            "ga": 4,
+            "id": "12132",
+            "season": "Orlik 2025",
+            "opponent": "Zimne Dranie",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-2/",
+            "video_count": 0
+          },
+          {
+            "date": "2025-02-16",
+            "gf": 1,
+            "ga": 3,
+            "id": "11389",
+            "season": "Hala 2024/2025",
+            "opponent": "Zimne Dranie",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie/",
+            "video_count": 2
           }
         ]
       },
@@ -3195,22 +3341,6 @@
       "observations": [],
       "videos": [
         {
-          "id": "rUIfShSXf34",
-          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | II połowa",
-          "url": "https://www.youtube.com/watch?v=rUIfShSXf34",
-          "date": "2025-02-16",
-          "match_id": "11389",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "Dx9vHHy-P84",
-          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | I połowa",
-          "url": "https://www.youtube.com/watch?v=Dx9vHHy-P84",
-          "date": "2025-02-16",
-          "match_id": "11389",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
           "id": "J-ZpQOlLw54",
           "title": "BOSCH SERVICE TECH-CAR 0:1 ZIMNE DRANIE | I POŁOWA",
           "url": "https://www.youtube.com/watch?v=J-ZpQOlLw54",
@@ -3224,6 +3354,22 @@
           "url": "https://www.youtube.com/watch?v=kOiaVJJrVh0",
           "date": "2026-05-30",
           "match_id": "orlik26-6",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "rUIfShSXf34",
+          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | II połowa",
+          "url": "https://www.youtube.com/watch?v=rUIfShSXf34",
+          "date": "2025-02-16",
+          "match_id": "11389",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "Dx9vHHy-P84",
+          "title": "Bosch Service Tech-Car 1:3 Zimne Dranie | I połowa",
+          "url": "https://www.youtube.com/watch?v=Dx9vHHy-P84",
+          "date": "2025-02-16",
+          "match_id": "11389",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
@@ -3505,30 +3651,48 @@
         "wins": 2,
         "draws": 1,
         "losses": 1,
+        "gf": 11,
+        "ga": 10,
         "matches": [
           {
-            "date": "2023-05-28",
+            "date": "2025-06-14",
             "gf": 3,
-            "ga": 3,
-            "id": "8289"
-          },
-          {
-            "date": "2024-04-28",
-            "gf": 2,
-            "ga": 3,
-            "id": "10121"
+            "ga": 2,
+            "id": "12041",
+            "season": "Orlik 2025",
+            "opponent": "FC GRUBASSY",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy-2/",
+            "video_count": 2
           },
           {
             "date": "2024-12-01",
             "gf": 3,
             "ga": 2,
-            "id": "11017"
+            "id": "11017",
+            "season": "Hala 2024/2025",
+            "opponent": "FC GRUBASSY",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/",
+            "video_count": 2
           },
           {
-            "date": "2025-06-14",
+            "date": "2024-04-28",
+            "gf": 2,
+            "ga": 3,
+            "id": "10121",
+            "season": "Orlik 2024",
+            "opponent": "FC GRUBASSY",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+            "video_count": 0
+          },
+          {
+            "date": "2023-05-28",
             "gf": 3,
-            "ga": 2,
-            "id": "12041"
+            "ga": 3,
+            "id": "8289",
+            "season": "Orlik 2023",
+            "opponent": "FC GRUBASSY",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+            "video_count": 0
           }
         ]
       },
@@ -3549,22 +3713,6 @@
       "observations": [],
       "videos": [
         {
-          "id": "qLeCeCjWj4I",
-          "title": "Bosch Service Tech-Car 3:2 Grubassy | II Połowa",
-          "url": "https://www.youtube.com/watch?v=qLeCeCjWj4I",
-          "date": "2024-12-01",
-          "match_id": "11017",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "I1J9kAfjjKQ",
-          "title": "Bosch Service Tech-Car 3:2 Grubassy | I Połowa",
-          "url": "https://www.youtube.com/watch?v=I1J9kAfjjKQ",
-          "date": "2024-12-01",
-          "match_id": "11017",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
           "id": "UvrBdNIANlM",
           "title": "Bosch Service Tech-Car 3:2 FC Grubassy | II połowa",
           "url": "https://www.youtube.com/watch?v=UvrBdNIANlM",
@@ -3578,6 +3726,22 @@
           "url": "https://www.youtube.com/watch?v=Q7knb1DrXHo",
           "date": "2025-06-14",
           "match_id": "12041",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "qLeCeCjWj4I",
+          "title": "Bosch Service Tech-Car 3:2 Grubassy | II Połowa",
+          "url": "https://www.youtube.com/watch?v=qLeCeCjWj4I",
+          "date": "2024-12-01",
+          "match_id": "11017",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "I1J9kAfjjKQ",
+          "title": "Bosch Service Tech-Car 3:2 Grubassy | I Połowa",
+          "url": "https://www.youtube.com/watch?v=I1J9kAfjjKQ",
+          "date": "2024-12-01",
+          "match_id": "11017",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
@@ -3859,18 +4023,28 @@
         "wins": 0,
         "draws": 2,
         "losses": 0,
+        "gf": 4,
+        "ga": 4,
         "matches": [
-          {
-            "date": "2023-06-18",
-            "gf": 3,
-            "ga": 3,
-            "id": "8323"
-          },
           {
             "date": "2024-03-03",
             "gf": 1,
             "ga": 1,
-            "id": "9800"
+            "id": "9800",
+            "season": "Hala 2023/2024",
+            "opponent": "FC DrTusz",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-drtusz/",
+            "video_count": 0
+          },
+          {
+            "date": "2023-06-18",
+            "gf": 3,
+            "ga": 3,
+            "id": "8323",
+            "season": "Orlik 2023",
+            "opponent": "FC DrTusz",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/",
+            "video_count": 0
           }
         ]
       },
@@ -4156,42 +4330,68 @@
         "wins": 3,
         "draws": 1,
         "losses": 2,
+        "gf": 12,
+        "ga": 10,
         "matches": [
           {
-            "date": "2023-03-05",
-            "gf": 5,
-            "ga": 2,
-            "id": "7851"
-          },
-          {
-            "date": "2023-07-01",
-            "gf": 1,
-            "ga": 0,
-            "id": "8295"
-          },
-          {
-            "date": "2024-09-15",
-            "gf": 4,
-            "ga": 1,
-            "id": "10225"
-          },
-          {
-            "date": "2024-12-15",
+            "date": "2025-11-16",
             "gf": 0,
-            "ga": 0,
-            "id": "11093"
+            "ga": 4,
+            "id": "12562",
+            "season": "Hala 2025/2026",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-4/",
+            "video_count": 0
           },
           {
             "date": "2025-09-28",
             "gf": 2,
             "ga": 3,
-            "id": "12151"
+            "id": "12151",
+            "season": "Orlik 2025",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii-2/",
+            "video_count": 0
           },
           {
-            "date": "2025-11-16",
+            "date": "2024-12-15",
             "gf": 0,
-            "ga": 4,
-            "id": "12562"
+            "ga": 0,
+            "id": "11093",
+            "season": "Hala 2024/2025",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-3/",
+            "video_count": 2
+          },
+          {
+            "date": "2024-09-15",
+            "gf": 4,
+            "ga": 1,
+            "id": "10225",
+            "season": "Orlik 2024",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
+            "video_count": 0
+          },
+          {
+            "date": "2023-07-01",
+            "gf": 1,
+            "ga": 0,
+            "id": "8295",
+            "season": "Orlik 2023",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+            "video_count": 2
+          },
+          {
+            "date": "2023-03-05",
+            "gf": 5,
+            "ga": 2,
+            "id": "7851",
+            "season": "Hala 2022",
+            "opponent": "WIARA PIASTA II",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
+            "video_count": 7
           }
         ]
       },
@@ -4211,6 +4411,38 @@
       "scouting_status": "statistical_only",
       "observations": [],
       "videos": [
+        {
+          "id": "0EKQ__LQVwI",
+          "title": "Bosch Service Tech-Car 0:0 Wiara Piasta II | II Połowa",
+          "url": "https://www.youtube.com/watch?v=0EKQ__LQVwI",
+          "date": "2024-12-15",
+          "match_id": "11093",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "bMNv_L61KIU",
+          "title": "Bosch Service Tech-Car 0:0 Wiara Piasta II | I Połowa",
+          "url": "https://www.youtube.com/watch?v=bMNv_L61KIU",
+          "date": "2024-12-15",
+          "match_id": "11093",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "6vsemMiGuPk",
+          "title": "1",
+          "url": "https://www.youtube.com/watch?v=6vsemMiGuPk",
+          "date": "2023-07-01",
+          "match_id": "8295",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
+        {
+          "id": "Kh4IuHMwcPQ",
+          "title": "2",
+          "url": "https://www.youtube.com/watch?v=Kh4IuHMwcPQ",
+          "date": "2023-07-01",
+          "match_id": "8295",
+          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
+        },
         {
           "id": "T2oy8E5hBL8",
           "title": "WIARA PIASTA Il vs Bosch Service Tech-Car - I połowa",
@@ -4265,38 +4497,6 @@
           "url": "https://www.youtube.com/watch?v=izWNgjy1TN0",
           "date": "2023-03-05",
           "match_id": "7851",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "6vsemMiGuPk",
-          "title": "1",
-          "url": "https://www.youtube.com/watch?v=6vsemMiGuPk",
-          "date": "2023-07-01",
-          "match_id": "8295",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "Kh4IuHMwcPQ",
-          "title": "2",
-          "url": "https://www.youtube.com/watch?v=Kh4IuHMwcPQ",
-          "date": "2023-07-01",
-          "match_id": "8295",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "0EKQ__LQVwI",
-          "title": "Bosch Service Tech-Car 0:0 Wiara Piasta II | II Połowa",
-          "url": "https://www.youtube.com/watch?v=0EKQ__LQVwI",
-          "date": "2024-12-15",
-          "match_id": "11093",
-          "source": "Archiwum Boscha, niezweryfikowane taktycznie"
-        },
-        {
-          "id": "bMNv_L61KIU",
-          "title": "Bosch Service Tech-Car 0:0 Wiara Piasta II | I Połowa",
-          "url": "https://www.youtube.com/watch?v=bMNv_L61KIU",
-          "date": "2024-12-15",
-          "match_id": "11093",
           "source": "Archiwum Boscha, niezweryfikowane taktycznie"
         }
       ],
