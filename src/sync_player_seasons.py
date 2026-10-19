@@ -4,6 +4,7 @@
 The API returns statistics grouped by league and season; keep only rows whose
 team points to the verified Bosch team, avoid 'Suma' (-1) and column headers (0).
 """
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.request import Request,urlopen
 import json,re,sys
@@ -37,7 +38,7 @@ def parse_player(data):
 
 def request(pid):
     url=f"https://podlaskaliga.pl/wp-json/sportspress/v2/players/{pid}"
-    with urlopen(Request(url,headers={"User-Agent":"Bosch-Scouting/1.0"}),timeout=25) as r:
+    with urlopen(Request(url,headers={"User-Agent":"Bosch-Scouting/1.0"}),timeout=12) as r:
         return json.load(r)
 
 def refresh(ids,current,fetch=request):
@@ -62,6 +63,41 @@ def refresh_careers(ids, current, fetch=request):
             warnings.append(f"{pid}: {type(error).__name__}: {error}")
     return merged,warnings
 
+def refresh_both(ids, current_seasons, current_careers, fetch=request, workers=4):
+    """Fetch each PLP profile at most once with bounded concurrent requests."""
+    seasons = {str(key): value for key, value in current_seasons.items()}
+    careers = {str(key): value for key, value in current_careers.items()}
+    warnings = []
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(fetch, identifier): str(identifier) for identifier in ids}
+
+        for future in as_completed(futures):
+            player_id = futures[future]
+
+            try:
+                profile = future.result()
+            except Exception as error:
+                warnings.append(f"{player_id}: {type(error).__name__}: {error}")
+                continue
+
+            try:
+                current_stats = parse_player(profile)
+                if current_stats:
+                    seasons[player_id] = current_stats
+            except Exception as error:
+                warnings.append(f"{player_id}/seasons: {type(error).__name__}: {error}")
+
+            try:
+                career = career_from_profile(profile, number)
+                if career:
+                    careers[player_id] = career
+            except Exception as error:
+                warnings.append(f"{player_id}/career: {type(error).__name__}: {error}")
+
+    return seasons, careers, sorted(warnings)
+
+
 def main():
     old=json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     portal=json.loads(PORTAL.read_text(encoding="utf-8"))
@@ -79,10 +115,10 @@ def main():
         if (match:=match_public_profile(str(row.get("name") or ""),profiles)) is not None
     }
     ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids|verified_goal_ids,key=int)
-    results,warnings=refresh(ids,old)
     careers_file=ROOT/"data"/"player_career_updates.json"
     previous_careers=json.loads(careers_file.read_text(encoding="utf-8")) if careers_file.exists() else {}
-    careers,career_warnings=refresh_careers(ids,previous_careers)
+    results,careers,warnings=refresh_both(ids,old,previous_careers)
+    career_warnings=[]
     career_rendered=json.dumps(careers,ensure_ascii=False,indent=2)+"\n"
     if not careers_file.exists() or careers_file.read_text(encoding="utf-8")!=career_rendered:careers_file.write_text(career_rendered,encoding="utf-8")
     rendered=json.dumps(results,ensure_ascii=False,indent=2)+"\n"
