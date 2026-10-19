@@ -13,6 +13,7 @@ from player_identity import legacy_player_id, match_public_profile, person_key
 from merge_player_identities import merge_player_identities
 from integrate_match_protocols import integrate_match_protocols
 from protocol_goals import enrich_from_protocols
+from backfill_match_player_stats import backfill_seasons
 from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
@@ -482,6 +483,9 @@ def main() -> None:
         own_goal_evidence,
     )
 
+    match_performance = load("match_player_evidence.json", {"matches": []})
+    match_backfill = backfill_seasons(historic_players, matches, match_performance)
+
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.
     for player in historic_players:
@@ -600,6 +604,7 @@ def main() -> None:
             "promotion_summary": promotions.get("summary", {}),
             "player_goal_coverage": goal_coverage,
             "match_protocol_audit": {**match_protocol_summary, **protocol_enrichment},
+            "match_player_backfill": match_backfill,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
