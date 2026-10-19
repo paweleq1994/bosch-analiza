@@ -33,6 +33,7 @@ function goalMinutes(scorer){
 }
 
 function goalScorerLinks(match,maximum=0){
+    if(!match.goal_protocol?.verified)return "Oczekuje na weryfikację protokołu PLP";
     const scorers=match.goal_protocol?.scorers||[];
     const chosen=maximum?scorers.slice(0,maximum):scorers;
     const labels=chosen.map(scorer=>href("player/"+encodeURIComponent(scorer.player_id),scorer.name)+(scorer.goals>1?" ×"+e(scorer.goals):""));
@@ -91,7 +92,7 @@ function goalsArchive(){
     const coverage=DB.analysis?.player_goal_coverage||[];
     const sum=field=>coverage.reduce((total,record)=>total+(record[field]||0),0);
 
-    return headline("Gole i protokoły PLP","113 historycznych meczów ze strzelcami, minutami i oficjalnymi źródłami.")+
+    return headline("Gole i protokoły PLP","Zweryfikowane protokoły i spotkania oczekujące na źródłowy zapis strzelców.")+
         metrics([["Mecze",DB.matches.length],["Gole drużyny",sum("team_goals")],["Gole zawodników",sum("attributed_goals")],["Samobóje rywali",sum("opponent_own_goals")],["Samobóje Boscha",DB.analysis?.match_protocol_audit?.total_own_goals_conceded||0],["Administracyjne",sum("administrative_goals")]])+
         '<div class="notice">Każdy mecz posiada oryginalny link PLP. Jedna minuta gola w spotkaniu z VESTA jest nieczytelna w źródle.</div>'+
         filterInput("Data, rywal, zawodnik lub wynik…")+
@@ -487,12 +488,13 @@ function records(){
     const ownGoals=goalCoverage.reduce((sum,row)=>sum+(row.opponent_own_goals||0),0);
     const awardedGoals=goalCoverage.reduce((sum,row)=>sum+row.administrative_goals,0);
     const unexplained=goalCoverage.reduce((sum,row)=>sum+row.unattributed_goals,0);
+    const pendingGoals=goalCoverage.reduce((sum,row)=>sum+(row.pending_match_goals||0),0);
     const audit=section("Kontrola kompletności strzelców",
-        metrics([["Gole drużyny",totalGoals],["Gole zawodników",playerGoals],["Samobóje rywali",ownGoals],["Administracyjne",awardedGoals],["Do wyjaśnienia",unexplained]])+
-        '<div class="notice">Rozliczenie 113 meczów: <strong>'+e(totalGoals)+' = '+e(playerGoals)+' goli zawodników + '+e(ownGoals)+' samobóje rywali + '+e(awardedGoals)+' administracyjny</strong>. '+
+        metrics([["Gole drużyny",totalGoals],["Gole zawodników",playerGoals],["Samobóje rywali",ownGoals],["Administracyjne",awardedGoals],["Do wyjaśnienia",unexplained],["Oczekuje na protokół",pendingGoals]])+
+        '<div class="notice">Rozliczenie '+e(matches.filter(match=>match.goal_protocol?.verified).length)+' zweryfikowanych meczów: <strong>'+e(totalGoals)+' = '+e(playerGoals)+' goli zawodników + '+e(ownGoals)+' samobóje rywali + '+e(awardedGoals)+' administracyjny'+(pendingGoals?' + '+e(pendingGoals)+' oczekuje na protokół':'')+'</strong>. '+
         'Pozostała różnica: <strong>'+e(unexplained)+'</strong>. Gole z protokołów są potwierdzone, ale asysty i kartki mogą mieć nadal niepełne archiwa.</div>'+
-        table(["Sezon","Bramki drużyny","Gole zawodników","Samobóje rywali","Administracyjne","Do wyjaśnienia"],goalCoverage.map(row=>[
-            e(row.season),e(row.team_goals),e(row.attributed_goals),e(row.opponent_own_goals||0),e(row.administrative_goals),e(row.unattributed_goals)
+        table(["Sezon","Bramki drużyny","Gole zawodników","Samobóje rywali","Administracyjne","Czeka na protokół","Do wyjaśnienia"],goalCoverage.map(row=>[
+            e(row.season),e(row.team_goals),e(row.attributed_goals),e(row.opponent_own_goals||0),e(row.administrative_goals),e(row.pending_match_goals||0),e(row.unattributed_goals)
         ]))+
         '<p>'+href("goals","Zobacz wszystkie 113 meczów i oryginalne protokoły →")+'</p>'
     );
