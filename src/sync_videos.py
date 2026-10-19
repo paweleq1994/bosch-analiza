@@ -57,24 +57,26 @@ def match_video(video,matches):
             for name in aliases.get(str(match.get("opponent_id") or ""), {match["opponent"]})
         )
     ]
-    if len(candidates) == 1:
-        return str(candidates[0]["id"])
-
-    # Upload dates only disambiguate matches with the same verified score/club.
+    # A unique score/name is insufficient when the upload contradicts its
+    # season. Delayed archival uploads remain available for manual review.
     raw_date = str(video.get("date") or "").replace("-", "")
-    if len(candidates) > 1 and len(raw_date) == 8 and raw_date.isdigit() and raw_date.startswith("20"):
+    if len(raw_date) == 8 and raw_date.isdigit() and raw_date.startswith("20"):
         try:
             upload_date = date.fromisoformat(
                 raw_date[:4] + "-" + raw_date[4:6] + "-" + raw_date[6:]
             )
             nearby = [
                 match for match in candidates
-                if abs((upload_date - date.fromisoformat(match["date"])).days) <= 21
+                if not match.get("date") or -1 <= (upload_date - date.fromisoformat(match["date"])).days <= 21
             ]
             if len(nearby) == 1:
                 return str(nearby[0]["id"])
+            return None
         except ValueError:
             pass
+
+    if len(candidates) == 1:
+        return str(candidates[0]["id"])
 
     return None
 
@@ -116,6 +118,8 @@ def sync(sources,previous,site,archives):
             total_new+=1
     # Re-evaluate unassigned videos against every known official season safely.
     for v in existing.values():
+        if v["id"] in previous.get("manual_bindings", {}):
+            continue
         if v.get("status")=="needs_review":
             candidate=match_video(v,matches)
             if candidate:

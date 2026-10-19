@@ -1,3 +1,28 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "match_id": "7851",
+      "player_id": "7275",
+      "minute": "3",
+      "video_id": "izWNgjy1TN0",
+      "timestamp_seconds": 7,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzana pojedyncza akcja na 0:1; przy 7,34 s strzał i bramkarz są przy prawej bramce. Nagranie z 05.03.2023 pokazuje halę VI LO i tablicę VI LO. Powiązanie strzelca przez wynik 0:1 i pierwszego strzelca w oficjalnym protokole (Jurkowicz, 3 minuta), bez rozpoznawania twarzy. Link zaczyna się w obejrzanej sekundzie akcji, nie w czasie wyliczonym z minuty PLP.",
+      "review_frame": "reports/evidence/goal7851-minute3-frame7.png"
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7275",
+      "minute": "23",
+      "video_id": "MTwXQ9jcfTg",
+      "timestamp_seconds": 13,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzana pojedyncza akcja na 1:2 w tej samej hali i z datą publikacji 05.03.2023. Przy 13,08 s zawodnik w bieli kończy akcję przy lewym słupku i bramkarzu; przy 15,25 s piłka jest w bramce, a zawodnik odchodzi. Drugi gol Boscha w sekwencji wyniku odpowiada Jurkowiczowi i 23 minucie protokołu. Link zaczyna się od obejrzanej fazy kończącej akcję; nie uzyskano go przez przeliczenie minut meczu.",
+      "review_frame": "reports/evidence/goal7851-minute23-frame15.png"
+    }
+  ]
 }

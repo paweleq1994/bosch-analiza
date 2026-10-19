@@ -22,6 +22,8 @@ def build_report(database: dict) -> str:
     }
     gaps = [match for match in matches if str(match["id"]) not in mapped_matches]
     unmatched = [video for video in videos if not video.get("match_id")]
+    rejected = [video for video in unmatched if video.get("status") == "rejected"]
+    pending = [video for video in unmatched if video.get("status") != "rejected"]
 
     report = [
         "# Bosch — źródłowy audyt nagrań YouTube",
@@ -36,6 +38,7 @@ def build_report(database: dict) -> str:
         f"- Mecze bez materiału wideo: **{len(gaps)}**",
         f"- Znane filmy: **{len(videos)}**",
         f"- Filmy bez powiązanego meczu: **{len(unmatched)}**",
+        f"- Materiały oczekujące na identyfikację: **{len(pending)}**; odrzucone powiązania / materiały spoza meczów: **{len(rejected)}**",
         "",
         "## Pokrycie według sezonów",
         "",
@@ -58,7 +61,7 @@ def build_report(database: dict) -> str:
         "|---|---|---|",
     ]
 
-    for video in unmatched:
+    for video in pending:
         candidate_id = match_video(video, matches)
         candidate = next(
             (match for match in matches if str(match["id"]) == candidate_id),
@@ -74,6 +77,11 @@ def build_report(database: dict) -> str:
             f"| [{title}]({video['url']}) | {channel} | {candidate_label} |"
         )
 
+    report += ["", "## Zweryfikowane odrzucenia powiązań", "",
+               "| Film | Powód / dowód | Data przeglądu |", "|---|---|---|"]
+    for video in rejected:
+        reason = str(video.get("review_reason") or "Ręczna korekta źródła").replace("|", "¦")
+        report.append(f"| [{video['title'].replace('|', '¦')}]({video['url']}) | {reason} | {video.get('reviewed_at') or '—'} |")
     report += [
         "",
         "## Mecze bez powiązanego nagrania",

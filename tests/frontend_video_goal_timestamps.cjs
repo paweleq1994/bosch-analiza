@@ -29,5 +29,10 @@ const withReview = vm.runInContext('verifiedVideoMinuteLink("7285","7814","21")'
 assert.ok(withReview.includes("t=100s"));
 assert.ok(withReview.includes("YouTube"));
 assert.ok(vm.runInContext('dataQuality()', scope).includes("video-goal-review-queue.md"));
+scope.rejectedVideo={status:"rejected",review_reason:"Boisko odkryte zamiast hali <test>"};
+const rejectedLabel=vm.runInContext("videoReviewLabel(rejectedVideo)",scope);
+assert.ok(rejectedLabel.includes("Powiązanie odrzucone"));
+assert.ok(rejectedLabel.includes("&lt;test&gt;"));
+assert.ok(!rejectedLabel.includes("<test>"));
 
 console.log("Verified exact video link appears only after a source-confirmed timestamp record.");

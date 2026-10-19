@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+from unittest.mock import patch
+from copy import deepcopy
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
@@ -56,6 +59,32 @@ class VideoCoverageTests(unittest.TestCase):
         for fixture in unlinked:
             self.assertIn(str(fixture["event_link"]), rendered)
         self.assertIn("bez potwierdzonego przesunięcia", rendered)
+
+    def test_manual_rejection_removes_an_original_archive_link(self):
+        import build_portal
+        original_load = build_portal.load
+        settings = original_load("video_updates.json")
+        settings["manual_bindings"]["hcfb9Ttmswo"] = {
+            "match_id": None, "review_reason": "Reviewed venue contradicts the indoor fixture",
+            "reviewed_at": "2026-10-19",
+        }
+        def load(name, default=None):
+            return deepcopy(settings) if name == "video_updates.json" else original_load(name, default)
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "data.json"
+            with patch.object(build_portal, "load", side_effect=load), patch.object(build_portal, "OUTPUT", output):
+                build_portal.main()
+            db = json.loads(output.read_text(encoding="utf-8"))
+        video = next(v for v in db["videos"] if v["id"] == "hcfb9Ttmswo")
+        self.assertIsNone(video["match_id"])
+        self.assertEqual(video["status"], "rejected")
+        self.assertTrue(video["review_reason"])
+        self.assertFalse(any(v["video_id"] == video["id"] for m in db["matches"] for v in m["videos"]))
+
+    def test_upload_date_rejects_even_a_unique_wrong_season_score_match(self):
+        matches = [{"id": "1", "date": "2023-02-26", "gf": 2, "ga": 1, "opponent": "VESTA"}]
+        self.assertIsNone(match_video({"title": "Bosch - VESTA 2:1", "date": "2023-08-26"}, matches))
+        self.assertIsNone(match_video({"title": "Bosch - VESTA 2:1", "date": "2023-02-01"}, matches))
 
 
 if __name__ == "__main__":

@@ -72,6 +72,8 @@ def validate(database: dict, source: dict) -> list[dict]:
             "verified_at": reviewed_at,
             "source_url": protocol["source_url"],
             "url": f"https://www.youtube.com/watch?v={video_id}&t={timestamp}s",
+            "review_notes": str(row.get("review_notes") or ""),
+            "review_frame": str(row.get("review_frame") or ""),
         })
 
     return verified
@@ -107,6 +109,21 @@ def report(database: dict, verified: list[dict]) -> str:
         "start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.",
         f"Potwierdzone linki: **{len(proven)}**.",
         f"Niepotwierdzone gole w meczach z filmem: **{len(pending)}**.",
+        "",
+        "## Obejrzane i potwierdzone akcje",
+        "",
+        "Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie przeliczenie minuty meczu.",
+        "",
+        "| Mecz / zawodnik / minuta PLP | Sekunda filmu | Dowód przeglądu |",
+        "|---|---:|---|",
+        *[
+            f"| [PLP {r['match_id']}]({r['source_url']}) / ID {r['player_id']} / {r['minute']}′ | "
+            f"[YouTube {r['timestamp_seconds']} s]({r['url']}) | "
+            f"{r.get('review_notes', '').replace('|', '¦')} |"
+            for r in verified
+        ],
+        "",
+        "## Gole oczekujące na weryfikację",
         "",
         "| Mecz | Strzelec | Minuta PLP | Nagrania do weryfikacji |",
         "|---|---|---|---|",
