@@ -1,0 +1,209 @@
+{
+  "players": {
+    "1594": {
+      "name": "Kakareko Kamil",
+      "public_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-paka/"
+      ],
+      "verified": true
+    },
+    "2203": {
+      "name": "Bayer Emilian",
+      "public_url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly-3/"
+      ],
+      "verified": true
+    },
+    "7223": {
+      "name": "Grabowski Jakub (GK)",
+      "public_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "7266": {
+      "name": "Bazyluk Jakub",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "7270": {
+      "name": "Gołąbeski Piotr",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
+        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/"
+      ],
+      "verified": true
+    },
+    "7271": {
+      "name": "Gorbacewicz Emil",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "7275": {
+      "name": "Jurkowicz Mateusz",
+      "public_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-eskular/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/"
+      ],
+      "verified": true
+    },
+    "7278": {
+      "name": "Kossakowski Maciej",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/"
+      ],
+      "verified": true
+    },
+    "7282": {
+      "name": "Markowski Damian",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "7285": {
+      "name": "Sołowiej Tomasz",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/"
+      ],
+      "verified": true
+    },
+    "7286": {
+      "name": "Uściłowski Krzysztof",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+        "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "8655": {
+      "name": "Kuźma Gabriel",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "8916": {
+      "name": "Wądołowski Sebastian",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/"
+      ],
+      "verified": true
+    },
+    "10321": {
+      "name": "Ciborowski Julian",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/"
+      ],
+      "verified": true
+    },
+    "10603": {
+      "name": "Roszkowski Patryk",
+      "public_url": "https://podlaskaliga.pl/zawodnik/roszkowski-patryk/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa-2/"
+      ],
+      "verified": true
+    },
+    "10604": {
+      "name": "Śmiłowski Michał",
+      "public_url": "",
+      "source": "plp_official_match_page_linked_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
+      ],
+      "verified": true
+    },
+    "11895": {
+      "name": "Czudzinowicz Jakub (GK)",
+      "public_url": "https://podlaskaliga.pl/zawodnik/czudzinowicz-jakub/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-3/",
+        "https://podlaskaliga.pl/wydarzenie/auto-team-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "12285": {
+      "name": "Rollauer Patryk",
+      "public_url": "https://podlaskaliga.pl/zawodnik/rollauer-patryk/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "12286": {
+      "name": "Pietruczuk Paweł",
+      "public_url": "https://podlaskaliga.pl/zawodnik/pietruczuk-pawel/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/juan-pablo-bialystok-vs-bosch-service-tech-car/"
+      ],
+      "verified": true
+    },
+    "13194": {
+      "name": "Karpowicz Kamil",
+      "public_url": "https://podlaskaliga.pl/zawodnik/karpowicz-kamil/",
+      "source": "plp_sportspress_player_id",
+      "evidence_urls": [
+        "https://podlaskaliga.pl/wydarzenie/ist-trade-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly-3/",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-4/"
+      ],
+      "verified": true
+    }
+  },
+  "unresolved": {}
+}

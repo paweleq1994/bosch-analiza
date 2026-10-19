@@ -14,6 +14,7 @@ from merge_player_identities import merge_player_identities
 from integrate_match_protocols import integrate_match_protocols
 from protocol_goals import enrich_from_protocols
 from backfill_match_player_stats import backfill_seasons
+from integrate_verified_match_players import attach_verified_identities, minimum_match_totals
 from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
@@ -318,6 +319,9 @@ def main() -> None:
 
     validate_goal_evidence(goal_evidence, seasons, matches)
     add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
+    match_performance = load("match_player_evidence.json", {"matches": []})
+    verified_identities = load("match_player_identities.json", {"players": {}, "unresolved": {}})
+    identity_audit = attach_verified_identities(historic_players, verified_identities, match_performance)
 
     def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
         if not recap_stats:
@@ -521,8 +525,8 @@ def main() -> None:
             career = player["career_totals"]
             career["html_identity_delta"] = career["apps"] - sum(row["apps"] for row in public_rows)
 
-    match_performance = load("match_player_evidence.json", {"matches": []})
     match_backfill = backfill_seasons(historic_players, matches, match_performance)
+    minimum_match_totals(historic_players, match_performance)
     box_scores = {str(record["match_id"]): record for record in match_performance["matches"]}
     known_names = {str(player["id"]): player["name"] for player in historic_players}
     for match in matches:
@@ -662,6 +666,7 @@ def main() -> None:
             "player_goal_coverage": goal_coverage,
             "match_protocol_audit": {**match_protocol_summary, **protocol_enrichment},
             "match_player_backfill": match_backfill,
+            "verified_identity_audit": identity_audit,
             "promotions": list(deduped_promotions.values()),
             "scouting": [
                 {
