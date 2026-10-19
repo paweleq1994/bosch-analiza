@@ -1,8 +1,8 @@
 # Stan wdrożenia kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `f864f05` (merge PR #56, po pełnej synchronizacji PLP).
+Ostatni sprawdzony main: `363dc44` (eksport po merge PR #57 `01b4e20`). PR #56 scalono jako `29694db`; `f864f05` był późniejszym commitem publikatora, nie mergem.
 Repozytorium lokalne zaktualizowano przez fast-forward z `94402f0`; przed pracą było czyste.
-Gałąź kontynuacji: `codex/fix-publication-and-complete-audit`.
+Gałąź kontynuacji: `codex/publishing-idempotence-halves-and-status`.
 Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło brak otwartych PR-ów.
 
 ## Audyt przed implementacją
@@ -18,7 +18,7 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 7 | Wdrożone | PR #30, Pages z `docs/` | Zweryfikować rzeczywiste wdrożenie po zmianach |
 | 8 | Wdrożone | PR #37, `frontend_rivals_quality.cjs` | Brak wykazanego defektu |
 | 9 | Wdrożone | ID 1594 i alias w `test_verified_match_identities.py` | Zachować odrębność Gabriela i Piotra Kuźmy |
-| 10 | Wdrożone zasadniczo | `frontend_rivals_quality.cjs`, `frontend_records_sort.cjs` | Sprawdzić aktualnych liderów i brakujące wartości w porównywarce |
+| 10 | Wdrożone, dodatkowa poprawka w bieżącym PR | Rankingi sezonowe wykluczają minima nawet przy liczbach całkowitych; porównywarka pokazuje ≥ i nie liczy stopy z minimum | Testy lidera przyszłego sezonu i niepełnego Gorbacewicza OK |
 | 11 | Wdrożone | `frontend_match_boxscores.cjs`, `test_full_match_protocols.py` | Zachować 113 historycznych protokołów |
 | 12 | Wdrożone | `frontend_match_boxscores.cjs`: 988 występów | Brak wykazanego defektu |
 | 13 | Wdrożone | PR #51, `frontend_source_provenance.cjs` | Sprawdzić rzeczywiste wyjątki zakresu |
@@ -26,9 +26,9 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 15 | 2 obejrzane akcje z potwierdzonym czasem odtwarzacza | `video_goal_evidence.json`, klatki w `reports/evidence/`; mecz 7851, gole Jurkowicza 3′ i 23′ | 154 pozostałe gole wymagają dalszego oglądania i powiązania; bez zgadywania z minut PLP |
 | 16 | Wdrożone | PR #38, `frontend_player_trends.cjs` | Brak wykazanego defektu |
 | 17 | Wdrożone | PR #29, `frontend_match_boxscores.cjs` | Sprawdzić semantykę kompletności w nowych sezonach |
-| 18 | Częściowo | PR #34, `frontend_historical_form.cjs` | Analiza połów wyłącznie z oficjalnego HT |
+| 18 | Gotowe w bieżącym PR | 113 potwierdzonych HT: I połowa 130:94, II 163:135; stany do przerwy vs wynik końcowy | Brak lub sprzeczne HT wyłączane z obliczeń; test regresyjny |
 | 19 | Wdrożone dla przyszłego sezonu | PR #55; lider Orlik 2027; chronologia Hala 2027/2028 | Brak wykazanego defektu |
-| 20 | Publikacja naprawiona i wdrożona | PR #54; run 39257253261 = success | Dokumentacja i końcowy audyt |
+| 20 | Dalsza przyczyna wyścigu XLSX naprawiona w bieżącym PR | Hash normalizuje CRLF/LF i uwzględnia kod eksportera; ponowny eksport nie zmienia pliku | Wymagany pełny zielony sync po merge; README zaktualizowane |
 
 ## Ponownie przeliczone metryki
 
@@ -76,8 +76,10 @@ PR #55 wdrożony. Rozszerzony istniejący audyt rozlicza teraz 33 różnice wed�
 - GitHub Pages: **39257252401 success**.
 - **PR #55 — scalony**, commit `aaded26`, merge `d2b28ef`.
 - CI PR 39257687591 success; CI main 39258031399 success; publikacja 39258031372 success; Pages 39258030661 success.
-- Synchronizacja po #55: run 39258031384 trwa; wynik wymaga końcowego sprawdzenia.
-- **PR #56 — scalony**, zmiany `d688231` i `12d55c8`, merge `f864f05`. Pełny najnowszy odczyt PLP został zachowany, a błędnie obniżone bilanse przywrócone. Przed merge: **166 testów Python i 14 frontendowych OK**.
+- Synchronizacja po #55: run 39258031384 opublikował aktualne źródła jako `ea3c315`.
+- **PR #56 — scalony**, zmiany `d688231` i `12d55c8`, merge `29694db`. Pełny najnowszy odczyt PLP został zachowany, a błędnie obniżone bilanse przywrócone. Przed merge: **166 testów Python i 14 frontendowych OK**. CI main 39260004028, publikacja 39260003518 i Pages 39260036786: success.
+- **PR #57 — scalony**, commit `54323fc`, merge `01b4e20`. CI PR 39261382924, CI main 39261976656, publikacja 39261976694 i Pages 39262007112: success. Przed merge: **169 testów Python, 14 frontendowych OK**.
+- Synchronizacje 39260003626 i 39261976651 ujawniły konflikt binarnego XLSX podczas rebase z równoległym eksportem. Przyczyną zbędnej regeneracji był różny hash tekstu CRLF na Windows i LF w Actions. Bieżąca poprawka normalizuje tekst i sprawdza również wersję kodu eksportera; nie przebudowuje architektury publikacji.
 
 ## Multimedia — dowody i pozostałe ograniczenia
 
@@ -90,4 +92,12 @@ PR #55 wdrożony. Rozszerzony istniejący audyt rozlicza teraz 33 różnice wed�
 
 ## Weryfikacja po pełnej synchronizacji PLP
 
-Synchronizacja #55 opublikowała commit `ea3c315`, wypełniając historyczne agregaty meczowe. Pełne testy ujawniły zastępowanie bogatszych starych bilansów tymi agregatami (m.in. Gołąbeski 13→11 występów i utrata aliasu Kakareki). Poprawiono przyczynę: historyczne, nierosnące sezony nadal przechodzą istniejącą ścieżkę archiwum/profili/protokołów; dla graczy bez pełnego archiwum dodawane są tylko nowe, niezależne dane, z zachowaniem statusu minimum. Nowe testy obejmują częściowy bilans oraz dodanie meczu do istniejącego sezonu. Konflikt wygenerowanych raportów rozwiązano przez ponowne przeliczenie z najnowszych źródeł. Przed merge #56 wymagane ponowne pełne CI.
+Synchronizacja #55 opublikowała commit `ea3c315`, wypełniając historyczne agregaty meczowe. Pełne testy ujawniły zastępowanie bogatszych starych bilansów tymi agregatami (m.in. Gołąbeski 13→11 występów i utrata aliasu Kakareki). PR #56 poprawił przyczynę: historyczne, nierosnące sezony nadal przechodzą istniejącą ścieżkę archiwum/profili/protokołów; dla graczy bez pełnego archiwum dodawane są tylko nowe, niezależne dane, z zachowaniem statusu minimum. Testy obejmują częściowy bilans oraz dodanie meczu do istniejącego sezonu. Konflikt raportów rozwiązano przez przeliczenie z najnowszych źródeł.
+
+## Bieżący PR — eksport, połowy, minima i przyszły wzrost
+
+- **175 testów Python, 14 frontendowych OK**, wszystkie 10 generatorów/audytów offline, walidacje, compileall, składnia 3 skryptów JS, diff check OK.
+- Walidator dopuszcza wzrost historycznych bilansów i 16. mecz Orlika 2026, nadal odrzuca utratę bazowych rekordów oraz goli/występów Jurkowicza.
+- XLSX: kolejne wywołanie `XLSX export unchanged`; regresje LF→CRLF oraz zmiana kodu eksportera. Poprawiony fałszywy status nieprzypisanych zer w arkuszu braków.
+- Frontend: analiza połów i stanów HT/FT na 113 poprawnych źródłach, dynamiczne etykiety nowego sezonu, minima poza pełnymi rankingami G+A, porównywarka ≥/nieznane.
+- Następny krok: merge po CI, pełny sync bez konfliktu, sprawdzenie publicznych pobrań i aktualizacja issue #33. Trwa przegląd oficjalnego kanału YouTube PLP `UCd0p73Dp5Eya7c4tQ8EoLZA` pod kątem materiałów spoza dwóch dotychczasowych kanałów.

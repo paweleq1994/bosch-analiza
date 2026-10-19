@@ -120,6 +120,7 @@ def career_source(player: dict) -> str:
 
 def build_workbook(database: dict) -> Workbook:
     workbook = Workbook()
+    workbook.properties.identifier = exporter_signature()
     info = workbook.active
     info.title = "Informacje"
     info.sheet_view.showGridLines = False
@@ -233,7 +234,8 @@ def build_workbook(database: dict) -> Workbook:
     for player in sorted(players, key=lambda item: item["name"].casefold()):
         missing_career = not bool(player.get("career_totals"))
         missing_photo = str(player["id"]) not in photo_ids
-        incomplete = bool((player.get("season_coverage") or {}).get("unassigned"))
+        unassigned = (player.get("season_coverage") or {}).get("unassigned") or {}
+        incomplete = any(value is None or value > 0 for value in unassigned.values())
         if not (missing_career or missing_photo or incomplete):
             continue
         missing_rows.append([
@@ -253,12 +255,24 @@ def build_workbook(database: dict) -> Workbook:
     return workbook
 
 
+def exporter_signature() -> str:
+    return sha256(Path(__file__).read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+
+
 def main() -> None:
-    raw = SOURCE.read_bytes()
+    # Git normalizes text to LF; Windows checkouts may use CRLF. Both represent
+    # the same committed snapshot and must share one downloadable workbook.
+    raw = SOURCE.read_text(encoding="utf-8").encode("utf-8")
     digest = sha256(raw).hexdigest()
     if DESTINATION.exists() and CHECKSUM.exists() and CHECKSUM.read_text().strip() == digest:
-        print("XLSX export unchanged", flush=True)
-        return
+        cached = load_workbook(DESTINATION, read_only=True)
+        try:
+            current_exporter = cached.properties.identifier == exporter_signature()
+        finally:
+            cached.close()
+        if current_exporter:
+            print("XLSX export unchanged", flush=True)
+            return
 
     database = json.loads(raw)
     workbook = build_workbook(database)
@@ -266,8 +280,11 @@ def main() -> None:
     workbook.save(DESTINATION)
     CHECKSUM.write_text(digest + "\n", encoding="ascii")
     verify = load_workbook(DESTINATION, read_only=True, data_only=False)
-    assert verify["Zawodnicy"].max_row == len(database["players"]) + 1
-    assert verify["Mecze"].max_row == len(database["matches"]) + 1
+    try:
+        assert verify["Zawodnicy"].max_row == len(database["players"]) + 1
+        assert verify["Mecze"].max_row == len(database["matches"]) + 1
+    finally:
+        verify.close()
     print(
         f"XLSX exported: {len(database['players'])} players, "
         f"{len(database['matches'])} matches, sheets={len(verify.sheetnames)}",

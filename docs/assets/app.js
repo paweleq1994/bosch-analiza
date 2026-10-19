@@ -99,8 +99,11 @@ function goalsArchive(){
         '<div id="filtered-goals"></div>';
 }
 
-function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.map(player=>({player,stats:player.season_stats?.[latest.id]||null})).filter(row=>Number.isInteger(row.stats?.goals)&&Number.isInteger(row.stats?.assists)).sort((a,b)=>(b.stats.goals+b.stats.assists)-(a.stats.goals+a.stats.assists)||b.stats.goals-a.stats.goals||a.player.name.localeCompare(b.player.name,"pl")).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy "+latest.name,'<div class="card">'+leaders.map(({player,stats})=>'<div class="list-row">'+playerLink(player)+'<strong>'+e(stats.goals+stats.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz pełną analizę Orlika 2026"],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Gole i protokoły","goals","113 meczów, strzelcy, minuty oraz samobóje"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
+function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.map(player=>({player,stats:player.season_stats?.[latest.id]||null})).filter(row=>seasonPointsComplete(row.stats)).sort((a,b)=>(b.stats.goals+b.stats.assists)-(a.stats.goals+a.stats.assists)||b.stats.goals-a.stats.goals||a.player.name.localeCompare(b.player.name,"pl")).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy "+latest.name,'<div class="card">'+leaders.map(({player,stats})=>'<div class="list-row">'+playerLink(player)+'<strong>'+e(stats.goals+stats.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz analizę sezonu "+latest.name],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Gole i protokoły","goals",DB.matches.length+" meczów, strzelcy, minuty oraz samobóje"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
 function seasons(){return headline("Sezony","Wszystkie rozgrywki Boscha i porównanie ich wyników.")+metrics([["Sezonów",DB.seasons.length],["Łącznie spotkań",DB.seasons.reduce((n,s)=>n+s.matches,0)],["Najwięcej punktów",Math.max(...DB.seasons.map(s=>s.points))]])+section("Historia sezonów",cards(DB.seasons.slice().reverse().map(s=>'<span class="eyebrow">'+(normalized(s.name).includes("hala")?"HALA":"ORLIK")+'</span><h3>'+seasonLink(s)+'</h3><div class="row"><span>'+e(s.position)+'. miejsce</span><strong>'+e(s.points)+' pkt</strong></div><p>'+e(s.wins+"W "+s.draws+"R "+s.losses+"P • "+s.gf+":"+s.ga+" • "+ppg(s)+" PPG")+'</p>')))+section("Porównanie punktów",barChart(DB.seasons,"points",s=>String(s.points)));}
+function seasonPointsComplete(stats){
+    return Number.isInteger(stats?.goals)&&Number.isInteger(stats?.assists)&&!stats.stats_minimum&&stats.origin!=="plp_match_minimum";
+}
 function seasonPage(id){
     const selectedSeason=season(id);
 
@@ -125,8 +128,8 @@ function seasonPage(id){
 
             return secondPoints-firstPoints || Number(second.stats.goals||0)-Number(first.stats.goals||0) || first.player.name.localeCompare(second.player.name,"pl");
         });
-    const completeLeaders=leaders.filter(({stats})=>Number.isInteger(stats.goals)&&Number.isInteger(stats.assists));
-    const partialLeaders=leaders.filter(({stats})=>!Number.isInteger(stats.goals)||!Number.isInteger(stats.assists));
+    const completeLeaders=leaders.filter(({stats})=>seasonPointsComplete(stats));
+    const partialLeaders=leaders.filter(({stats})=>!seasonPointsComplete(stats));
     const leadersTable=completeLeaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],completeLeaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
@@ -157,10 +160,11 @@ function matchDetail(id){
     }
 
     const protocol=match.goal_protocol||{};
+    const halves=splitMatchHalves(match);
     const media=match.videos||[];
 
     return headline(match.opponent,match.date+" • "+match.season)+
-        metrics([["Wynik Boscha",match.gf+":"+match.ga],["Rezultat",result(match)],["Gole zawodników",protocol.player_goals??"—"],["Samobóje rywali",protocol.own_goals??"—"],["Samobóje Boscha",protocol.own_goals_conceded??"—"],["Administracyjne",protocol.administrative_goals??"—"],["Nagrania",media.length]])+
+        metrics([["Wynik Boscha",match.gf+":"+match.ga],["Rezultat",result(match)],["Gole zawodników",protocol.player_goals??"—"],["Samobóje rywali",protocol.own_goals??"—"],["Samobóje Boscha",protocol.own_goals_conceded??"—"],["Administracyjne",protocol.administrative_goals??"—"],["Nagrania",media.length],["Do przerwy",halves?halves.first.gf+":"+halves.first.ga:"—"],["II połowa",halves?halves.second.gf+":"+halves.second.ga:"—"]])+
         '<p>'+href("season/"+encodeURIComponent(match.sid),"← Powrót do sezonu")+' · '+href("goals","Wszystkie protokoły →")+'</p>'+
         section("Bramki, strzelcy i minuty",goalMatchTable(match))+
         section("Dane meczu",'<div class="card"><p>'+e(match.match||"Bosch Service Tech-Car — "+match.opponent)+'</p><p>Źródło: <a href="'+e(match.event_link)+'" target="_blank" rel="noopener noreferrer">Oficjalny protokół PLP ↗</a></p></div>')+
@@ -212,19 +216,26 @@ function updatePlayerComparison(){
     const sid=$("compare-player-season")?.value;
     if(!p1||!p2)return;
     const read=(player,field)=>sid?playerSeasonRecord(player,sid)?.[field]:player[field];
+    const minimum=player=>sid?
+        Boolean(playerSeasonRecord(player,sid)?.stats_minimum)||playerSeasonRecord(player,sid)?.origin==="plp_match_minimum":
+        Boolean(player.stats_minimum)||!player.bosch_totals;
+    const display=(player,field)=>{
+        const value=read(player,field);
+        return Number.isInteger(value)&&minimum(player)?"≥ "+value:value??"—";
+    };
     const stats=[["Występy","apps"],["Gole","goals"],["Asysty","assists"],
         ["MVP","motm"],["Żółte kartki","yellow"],["Czerwone kartki","red"]];
-    const rows=stats.map(([name,field])=>[e(name),e(read(p1,field)??"—"),e(read(p2,field)??"—")]);
+    const rows=stats.map(([name,field])=>[e(name),e(display(p1,field)),e(display(p2,field))]);
     const gpa=player=>{
         const appearances=read(player,"apps");
         const goals=read(player,"goals");
         const assists=read(player,"assists");
-        return Number.isInteger(appearances)&&appearances>0&&Number.isInteger(goals)&&Number.isInteger(assists)?
+        return !minimum(player)&&Number.isInteger(appearances)&&appearances>0&&Number.isInteger(goals)&&Number.isInteger(assists)?
             fmt((goals+assists)/appearances):"—";
     };
     rows.push(["G+A / mecz",gpa(p1),gpa(p2)]);
     $("compare-player-result").innerHTML=table(["Wskaźnik",p1.name,p2.name],rows)+
-        '<p class="small">Brak danych („—”) nie jest równy zeru. Źródła znajdziesz w profilach obu zawodników.</p>'+
+        '<p class="small">„—” oznacza brak danych, „≥” — udokumentowane minimum. Wskaźnik G+A / mecz wymaga pełnego bilansu. Źródła znajdziesz w profilach obu zawodników.</p>'+
         '<p>'+playerLink(p1)+' · '+playerLink(p2)+'</p>';
 }
 function dataQuality(){
@@ -777,9 +788,39 @@ function goalMinuteGroups(fixtures){
     }
     return {rows,unknown};
 }
+function splitMatchHalves(match){
+    const score=/^(\d+)\s*:\s*(\d+)$/.exec(String(match.halftime||""));
+    if(!score||!String(match.event_link||"").startsWith("https://podlaskaliga.pl/wydarzenie/"))return null;
+    const gf=Number(score[1]),ga=Number(score[2]);
+    if(!Number.isInteger(match.gf)||!Number.isInteger(match.ga)||gf>match.gf||ga>match.ga)return null;
+    return {first:{gf,ga},second:{gf:match.gf-gf,ga:match.ga-ga},source:match.event_link};
+}
+function halfTimeMetrics(fixtures){
+    const halves=[{name:"I połowa",gf:0,ga:0,wins:0,draws:0,losses:0},
+                  {name:"II połowa",gf:0,ga:0,wins:0,draws:0,losses:0}];
+    const states=[{name:"Prowadzenie do przerwy",matches:0,wins:0,draws:0,losses:0},
+                  {name:"Remis do przerwy",matches:0,wins:0,draws:0,losses:0},
+                  {name:"Strata do przerwy",matches:0,wins:0,draws:0,losses:0}];
+    let verified=0;
+    for(const match of fixtures){
+        const split=splitMatchHalves(match);
+        if(!split)continue;
+        verified++;
+        [split.first,split.second].forEach((period,index)=>{
+            const row=halves[index];
+            row.gf+=period.gf;row.ga+=period.ga;
+            row[period.gf>period.ga?"wins":period.gf===period.ga?"draws":"losses"]++;
+        });
+        const state=states[split.first.gf>split.first.ga?0:split.first.gf===split.first.ga?1:2];
+        state.matches++;
+        state[match.gf>match.ga?"wins":match.gf===match.ga?"draws":"losses"]++;
+    }
+    return {verified,unavailable:fixtures.length-verified,halves,states};
+}
 function enhancedHistoricalAnalysis(){
     const form=streakMetrics(DB.matches);
     const minutes=goalMinuteGroups(DB.matches);
+    const periods=halfTimeMetrics(DB.matches);
     const recordedHalftimes=DB.matches.filter(m=>/^\d+\s*:\s*\d+$/.test(String(m.halftime||"")));
     const latest=form.latest.map(match=>[
         e(match.date),href("match/"+encodeURIComponent(match.id),match.opponent),
@@ -795,6 +836,14 @@ function enhancedHistoricalAnalysis(){
         section("Kiedy padały nasze gole",
             barChart(minutes.rows,"count",row=>String(row.count))+
             (minutes.unknown?empty("Gole bez czytelnej minuty w protokole: "+minutes.unknown):""))+
+        section("Pierwsza i druga połowa — potwierdzone wyniki PLP",
+            metrics([["Mecze z poprawnym wynikiem do przerwy",periods.verified],
+                     ["Bez potwierdzonego podziału",periods.unavailable]])+
+            table(["Część meczu","Gole Boscha","Gole rywala","Wygrane połowy","Remisy","Przegrane połowy"],
+                periods.halves.map(row=>[e(row.name),e(row.gf),e(row.ga),e(row.wins),e(row.draws),e(row.losses)]))+
+            table(["Stan do przerwy","Mecze","Wygrane na koniec","Remisy na koniec","Porażki na koniec"],
+                periods.states.map(row=>[e(row.name),e(row.matches),e(row.wins),e(row.draws),e(row.losses)]))+
+            '<p class="small">Podział opiera się na wynikach do przerwy z protokołów PLP. Gole II połowy to wynik końcowy minus potwierdzony wynik do przerwy. Brakujący lub sprzeczny wynik jest wyłączany z obliczeń. Źródła znajdują się w szczegółach meczów.</p>')+
         section("Pokrycie archiwum nagraniami",
             metrics([["Mecze z nagraniem",withVideo],
                      ["Mecze bez nagrania",DB.matches.length-withVideo],
@@ -805,7 +854,7 @@ function enhancedHistoricalAnalysis(){
                 return [e(season.name),e(entries.length),e(covered),e(entries.length-covered)];
             })));
 }
-function analysis(){const seasons=DB.seasons.map(s=>({...s,ppg:s.points/s.matches,ga_pg:s.ga/s.matches,gf_pg:s.gf/s.matches}));const promo=DB.analysis?.promotions||[];return headline("Analityka","Głębsze spojrzenie na wyniki, skuteczność, defensywę i awans.")+enhancedHistoricalAnalysis()+section("Punkty na mecz",barChart(seasons,"ppg",s=>fmt(s.ppg)))+section("Stracone gole na mecz",barChart(seasons,"ga_pg",s=>fmt(s.ga_pg)))+section("Atak — gole na mecz",barChart(seasons,"gf_pg",s=>fmt(s.gf_pg)))+section("Gole zawodników w kolejnych sezonach",barChart(DB.analysis.player_goal_coverage.map(row=>({name:row.season,goals:row.attributed_goals})),"goals",row=>String(row.goals)))+section("Strzelcy — każde spotkanie",'<p>'+href("goals","Otwórz komplet 113 protokołów meczowych →")+"</p>")+ section("Porównywarka sezonów",'<div class="filters"><select id="compare-a">'+DB.seasons.map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select><select id="compare-b">'+DB.seasons.map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select></div><div id="compare-result"></div>')+section("Benchmark awansu",promo.length?table(["Sezon","Drużyna","Miejsce","PPG"],promo.slice(0,35).map((p,i)=>[e(i>0&&promo[i-1].sid===p.sid?"":p.season||p.season_name),e(p.team_name),e(p.rank),fmt(p.ppg)])):empty("Brak danych benchmarku."))+section("Scouting historyczny",cards((DB.analysis?.scouting||[]).slice(0,13).map(x=>'<h3>'+e(x.name)+'</h3><p><span class="pill">'+e(x.threat_level)+'</span></p><p>'+e(x.summary)+'</p>')))+'<div class="notice">Scouting Orlika 2026 jest archiwalną prognozą. Wszystkie 113 protokołów meczowych zostały sprawdzone, a gole i samobóje połączone z wynikami sezonów.</div><p><a href="archive.html#splits">Zobacz pełne archiwum analiz technicznych →</a></p>';}
+function analysis(){const seasons=DB.seasons.map(s=>({...s,ppg:s.points/s.matches,ga_pg:s.ga/s.matches,gf_pg:s.gf/s.matches}));const promo=DB.analysis?.promotions||[];return headline("Analityka","Głębsze spojrzenie na wyniki, skuteczność, defensywę i awans.")+enhancedHistoricalAnalysis()+section("Punkty na mecz",barChart(seasons,"ppg",s=>fmt(s.ppg)))+section("Stracone gole na mecz",barChart(seasons,"ga_pg",s=>fmt(s.ga_pg)))+section("Atak — gole na mecz",barChart(seasons,"gf_pg",s=>fmt(s.gf_pg)))+section("Gole zawodników w kolejnych sezonach",barChart(DB.analysis.player_goal_coverage.map(row=>({name:row.season,goals:row.attributed_goals})),"goals",row=>String(row.goals)))+section("Strzelcy — każde spotkanie",'<p>'+href("goals","Otwórz wszystkie protokoły meczowe →")+"</p>")+ section("Porównywarka sezonów",'<div class="filters"><select id="compare-a">'+DB.seasons.map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select><select id="compare-b">'+DB.seasons.map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select></div><div id="compare-result"></div>')+section("Benchmark awansu",promo.length?table(["Sezon","Drużyna","Miejsce","PPG"],promo.slice(0,35).map((p,i)=>[e(i>0&&promo[i-1].sid===p.sid?"":p.season||p.season_name),e(p.team_name),e(p.rank),fmt(p.ppg)])):empty("Brak danych benchmarku."))+section("Scouting historyczny",cards((DB.analysis?.scouting||[]).slice(0,13).map(x=>'<h3>'+e(x.name)+'</h3><p><span class="pill">'+e(x.threat_level)+'</span></p><p>'+e(x.summary)+'</p>')))+'<div class="notice">Scouting Orlika 2026 jest archiwalną prognozą. Historyczne protokoły meczowe zostały sprawdzone, a gole i samobóje połączone z wynikami sezonów.</div><p><a href="archive.html#splits">Zobacz pełne archiwum analiz technicznych →</a></p>';}
 function compare(){const a=season($("compare-a")?.value),b=season($("compare-b")?.value);if(!a||!b)return;$("compare-result").innerHTML=table(["Wskaźnik",a.name,b.name],[["Punkty",a.points,b.points],["Mecze",a.matches,b.matches],["PPG",ppg(a),ppg(b)],["Gole na mecz",fmt(a.gf/a.matches),fmt(b.gf/b.matches)],["Stracone na mecz",fmt(a.ga/a.matches),fmt(b.ga/b.matches)]].map(row=>row.map(e)));}
 function playerSeasonRecord(player, selectedSeasonId) {
     const officialSeason = player.season_stats?.[selectedSeasonId];

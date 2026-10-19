@@ -29,4 +29,12 @@ assert.ok(show('playerComparison()').includes("compare-player-a"));
 assert.ok(show('playerComparison()').includes("compare-player-b"));
 assert.ok(show('dataQuality()').includes("Niezidentyfikowane ID"));
 
+const controls={"compare-player-a":{value:"7271"},"compare-player-b":{value:"1960"},
+                "compare-player-season":{value:""},"compare-player-result":{innerHTML:""}};
+context.document={getElementById:id=>controls[id]};
+show("updatePlayerComparison()");
+assert.ok(controls["compare-player-result"].innerHTML.includes("≥ 10"));
+assert.ok(controls["compare-player-result"].innerHTML.includes("<td>G+A / mecz</td><td>—</td>"));
+assert.ok(controls["compare-player-result"].innerHTML.includes("wymaga pełnego bilansu"));
+
 console.log("Verified match box scores, 988 appearances, player timelines, comparison and data quality routes.");

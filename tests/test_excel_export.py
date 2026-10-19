@@ -2,9 +2,12 @@ import json
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
+import export_workbook
 
 from export_workbook import COLUMNS, build_workbook
 
@@ -70,6 +73,45 @@ class ExcelExportTests(unittest.TestCase):
                     row[-1].value.startswith("https://podlaskaliga.pl/"),
                     f"Missing official source at row {row[0].row}",
                 )
+
+    def test_zero_unassigned_totals_do_not_mark_a_complete_player_as_incomplete(self):
+        gaps = list(self.workbook["Braki danych"].iter_rows(min_row=2))
+        self.assertFalse(any(row[0].value == "1960" for row in gaps))
+        partial = next(row for row in gaps if row[0].value == "7271")
+        self.assertEqual(partial[4].value, "TAK")
+
+    def test_windows_and_linux_line_endings_keep_the_same_workbook(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "data.json"
+            destination = Path(folder) / "archive.xlsx"
+            checksum = Path(folder) / "source.sha256"
+            text = json.dumps(self.db, ensure_ascii=False) + "\n"
+            source.write_bytes(text.encode("utf-8"))
+            with patch.object(export_workbook, "SOURCE", source), patch.object(export_workbook, "DESTINATION", destination), patch.object(export_workbook, "CHECKSUM", checksum):
+                export_workbook.main()
+                expected_checksum = checksum.read_text()
+                expected_workbook = destination.read_bytes()
+                source.write_bytes(text.replace("\n", "\r\n").encode("utf-8"))
+                with patch.object(export_workbook, "build_workbook", side_effect=AssertionError("Equivalent snapshot rebuilt")):
+                    export_workbook.main()
+                self.assertEqual(checksum.read_text(), expected_checksum)
+                self.assertEqual(destination.read_bytes(), expected_workbook)
+
+    def test_changed_exporter_rebuilds_even_when_data_is_unchanged(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "data.json"
+            destination = Path(folder) / "archive.xlsx"
+            checksum = Path(folder) / "source.sha256"
+            source.write_text(json.dumps(self.db), encoding="utf-8")
+            with patch.object(export_workbook, "SOURCE", source), patch.object(export_workbook, "DESTINATION", destination), patch.object(export_workbook, "CHECKSUM", checksum):
+                export_workbook.main()
+                with patch.object(export_workbook, "exporter_signature", return_value="updated-exporter"):
+                    export_workbook.main()
+                check = export_workbook.load_workbook(destination, read_only=True)
+                try:
+                    self.assertEqual(check.properties.identifier, "updated-exporter")
+                finally:
+                    check.close()
 
 
 if __name__ == "__main__":
