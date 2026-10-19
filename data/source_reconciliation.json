@@ -946,7 +946,7 @@
       "difference": 8,
       "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "note": "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged.",
       "season_breakdown": [
         {
           "id": "4577",
@@ -983,8 +983,14 @@
           "rest_row_present": true,
           "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
           "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
-          "reason": "same_season_source_variance",
-          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+          "reason": "events_without_league_taxonomy",
+          "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-cedc-polmos-bialystok-5/"
+          ],
+          "protocol_total": 7,
+          "protocol_tagged_total": 6,
+          "protocol_untagged_total": 1
         },
         {
           "id": "4577",
@@ -1025,8 +1031,14 @@
           "rest_row_present": true,
           "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
           "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
-          "reason": "same_season_source_variance",
-          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+          "reason": "events_without_league_taxonomy",
+          "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/paka-vs-cedc-polmos-bialystok/"
+          ],
+          "protocol_total": 11,
+          "protocol_tagged_total": 10,
+          "protocol_untagged_total": 1
         },
         {
           "id": "4577",
@@ -1050,7 +1062,7 @@
           "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
         }
       ],
-      "status": "source_variance_requires_review"
+      "status": "explained_source_rows_and_match_evidence"
     },
     {
       "id": "4577",
@@ -1218,7 +1230,7 @@
       "difference": 3,
       "url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "note": "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged.",
       "season_breakdown": [
         {
           "id": "2204",
@@ -1238,8 +1250,14 @@
           "rest_row_present": true,
           "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
           "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
-          "reason": "same_season_source_variance",
-          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+          "reason": "events_without_league_taxonomy",
+          "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/mecz-o-7-miejsce/"
+          ],
+          "protocol_total": 2,
+          "protocol_tagged_total": 1,
+          "protocol_untagged_total": 1
         },
         {
           "id": "2204",
@@ -1284,7 +1302,7 @@
           "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
         }
       ],
-      "status": "source_variance_requires_review"
+      "status": "explained_source_rows_and_match_evidence"
     },
     {
       "id": "2204",
@@ -1330,7 +1348,7 @@
       "difference": 4,
       "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "note": "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged.",
       "season_breakdown": [
         {
           "id": "1594",
@@ -1350,8 +1368,14 @@
           "rest_row_present": true,
           "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
           "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
-          "reason": "same_season_source_variance",
-          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+          "reason": "events_without_league_taxonomy",
+          "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/"
+          ],
+          "protocol_total": 4,
+          "protocol_tagged_total": 3,
+          "protocol_untagged_total": 1
         },
         {
           "id": "1594",
@@ -1371,7 +1395,7 @@
           "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
         }
       ],
-      "status": "source_variance_requires_review"
+      "status": "explained_source_rows_and_match_evidence"
     },
     {
       "id": "1594",
@@ -1382,7 +1406,7 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "note": "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged.",
       "season_breakdown": [
         {
           "id": "1594",
@@ -1402,11 +1426,17 @@
           "rest_row_present": true,
           "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
           "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
-          "reason": "same_season_source_variance",
-          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+          "reason": "events_without_league_taxonomy",
+          "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/"
+          ],
+          "protocol_total": 1,
+          "protocol_tagged_total": 0,
+          "protocol_untagged_total": 1
         }
       ],
-      "status": "source_variance_requires_review"
+      "status": "explained_source_rows_and_match_evidence"
     },
     {
       "id": "2203",
@@ -1479,7 +1509,7 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "note": "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged.",
       "season_breakdown": [
         {
           "id": "7223",
@@ -1529,6 +1559,34 @@
         }
       ],
       "status": "explained_source_rows_and_match_evidence"
+    },
+    {
+      "id": "12288",
+      "name": "Zalewski Piotr",
+      "field": "apps",
+      "html": 0,
+      "rest": 1,
+      "difference": -1,
+      "url": "https://podlaskaliga.pl/zawodnik/zalewski-piotr/",
+      "type": "displayed_career_disagrees_with_html",
+      "note": "Public HTML omits an independently verified Supercup appearance; both raw source and corrected career are preserved.",
+      "status": "explained_independent_supercup_protocol",
+      "identity_contributions": [],
+      "protocol_additions": [
+        {
+          "sid": "145",
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0,
+          "apps": 1,
+          "name": "Superpuchar 2025",
+          "origin": "plp_match_minimum",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car-2/",
+          "captured_at": "2026-10-19"
+        }
+      ]
     }
   ],
   "career_season_differences": [
@@ -2215,8 +2273,14 @@
       "rest_row_present": true,
       "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
       "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
-      "reason": "same_season_source_variance",
-      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+      "reason": "events_without_league_taxonomy",
+      "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-cedc-polmos-bialystok-5/"
+      ],
+      "protocol_total": 7,
+      "protocol_tagged_total": 6,
+      "protocol_untagged_total": 1
     },
     {
       "id": "4577",
@@ -2278,8 +2342,14 @@
       "rest_row_present": true,
       "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
       "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
-      "reason": "same_season_source_variance",
-      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+      "reason": "events_without_league_taxonomy",
+      "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/paka-vs-cedc-polmos-bialystok/"
+      ],
+      "protocol_total": 11,
+      "protocol_tagged_total": 10,
+      "protocol_untagged_total": 1
     },
     {
       "id": "4577",
@@ -2383,8 +2453,14 @@
       "rest_row_present": true,
       "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
       "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
-      "reason": "same_season_source_variance",
-      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+      "reason": "events_without_league_taxonomy",
+      "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/mecz-o-7-miejsce/"
+      ],
+      "protocol_total": 2,
+      "protocol_tagged_total": 1,
+      "protocol_untagged_total": 1
     },
     {
       "id": "2204",
@@ -2467,8 +2543,14 @@
       "rest_row_present": true,
       "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
-      "reason": "same_season_source_variance",
-      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+      "reason": "events_without_league_taxonomy",
+      "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/"
+      ],
+      "protocol_total": 4,
+      "protocol_tagged_total": 3,
+      "protocol_untagged_total": 1
     },
     {
       "id": "1594",
@@ -2488,8 +2570,14 @@
       "rest_row_present": true,
       "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
-      "reason": "same_season_source_variance",
-      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+      "reason": "events_without_league_taxonomy",
+      "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/"
+      ],
+      "protocol_total": 1,
+      "protocol_tagged_total": 0,
+      "protocol_untagged_total": 1
     },
     {
       "id": "1594",
@@ -2590,10 +2678,10 @@
     }
   ],
   "career_difference_status_counts": {
-    "explained_source_rows_and_match_evidence": 1,
+    "explained_independent_supercup_protocol": 1,
+    "explained_source_rows_and_match_evidence": 5,
     "explained_supercup_scope": 26,
-    "explained_verified_identity_merge": 2,
-    "source_variance_requires_review": 4
+    "explained_verified_identity_merge": 2
   },
   "season_source_conflicts": [],
   "missing_full_careers": [

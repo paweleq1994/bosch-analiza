@@ -33,7 +33,7 @@ class ArchivedPlayerSeasonTests(unittest.TestCase):
         self.assertEqual(season["origin"], "archived_peak")
         self.assertEqual(self.season("7270", "120")["goals"], 0)
         self.assertTrue(self.players["7270"]["season_stats"]["120"]["goals_verified_by_protocol"])
-        self.assertEqual(player["season_coverage"]["unassigned"]["apps"], 2)
+        self.assertEqual(player["season_coverage"]["unassigned"]["apps"], 1)
         self.assertEqual(player["season_coverage"]["unassigned"]["goals"], 0)
 
     def test_recovers_four_full_archive_players_without_rest_access(self):

@@ -2536,6 +2536,29 @@
       ],
       "source_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
       "captured_at": "2026-10-19T09:48:56+00:00"
+    },
+    "12288": {
+      "totals": {
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      },
+      "season_rows": [
+        {
+          "name": "Orlik 2025",
+          "apps": 0,
+          "goals": 0,
+          "assists": 0,
+          "motm": 0,
+          "yellow": 0,
+          "red": 0
+        }
+      ],
+      "source_url": "https://podlaskaliga.pl/zawodnik/zalewski-piotr/",
+      "captured_at": "2026-10-19T15:17:55+00:00"
     }
   },
   "failures": {

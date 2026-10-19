@@ -6,7 +6,7 @@ nie automatyczny błąd w statystykach Boscha.
 
 - Zawodnicy: **46**
 - Pełne publiczne kariery PLP: **35**
-- Różnice HTML vs API / widok: **33**
+- Różnice HTML vs API / widok: **34**
 - Sprzeczne sezonowe minimum z protokołów: **0**
 - Zweryfikowane protokoły goli: **113**
 - Nierozliczone gole drużyny: **0**
@@ -36,23 +36,24 @@ nie automatyczny błąd w statystykach Boscha.
 | Karolczuk Patryk (ID 7276) | Gole | 29 | 27 | +2 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/karolczuk-patryk/) |
 | Karolczuk Patryk (ID 7276) | Asysty | 21 | 19 | +2 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/karolczuk-patryk/) |
 | Malinowski Piotr (ID 7280) | Mecze | 39 | 38 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/malinowski-piotr/) |
-| Kuźma Piotr (ID 4577) | Mecze | 67 | 59 | +8 | official_html_versus_sportspress_api | source_variance_requires_review | [profil PLP](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) |
+| Kuźma Piotr (ID 4577) | Mecze | 67 | 59 | +8 | official_html_versus_sportspress_api | explained_source_rows_and_match_evidence | [profil PLP](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) |
 | Kuźma Piotr (ID 4577) | Asysty | 18 | 16 | +2 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) |
 | Mironiuk Zbigniew (ID 12287) | Mecze | 9 | 8 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/) |
 | Bączek Szymon (ID 8654) | Mecze | 12 | 11 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/baczek-szymon/) |
 | Bączek Szymon (ID 8654) | CK | 1 | 0 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/baczek-szymon/) |
-| Dawid Daniluk (ID 2204) | Mecze | 69 | 66 | +3 | official_html_versus_sportspress_api | source_variance_requires_review | [profil PLP](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) |
+| Dawid Daniluk (ID 2204) | Mecze | 69 | 66 | +3 | official_html_versus_sportspress_api | explained_source_rows_and_match_evidence | [profil PLP](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) |
 | Dawid Daniluk (ID 2204) | Asysty | 19 | 18 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) |
-| Kakareko Kamil (ID 1594) | Mecze | 34 | 30 | +4 | official_html_versus_sportspress_api | source_variance_requires_review | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
-| Kakareko Kamil (ID 1594) | Gole | 11 | 10 | +1 | official_html_versus_sportspress_api | source_variance_requires_review | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
+| Kakareko Kamil (ID 1594) | Mecze | 34 | 30 | +4 | official_html_versus_sportspress_api | explained_source_rows_and_match_evidence | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
+| Kakareko Kamil (ID 1594) | Gole | 11 | 10 | +1 | official_html_versus_sportspress_api | explained_source_rows_and_match_evidence | [profil PLP](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) |
 | Bayer Emilian (ID 2203) | Mecze | 31 | 30 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/bayer-emilian/) |
 | Bayer Emilian (ID 2203) | Gole | 19 | 18 | +1 | official_html_versus_sportspress_api | explained_supercup_scope | [profil PLP](https://podlaskaliga.pl/zawodnik/bayer-emilian/) |
 | Grabowski Jakub (GK) (ID 7223) | Mecze | 19 | 17 | +2 | official_html_versus_sportspress_api | explained_source_rows_and_match_evidence | [profil PLP](https://podlaskaliga.pl/zawodnik/grabowski-jakub/) |
+| Zalewski Piotr (ID 12288) | Mecze | 0 | 1 | -1 | displayed_career_disagrees_with_html | explained_independent_supercup_protocol | [profil PLP](https://podlaskaliga.pl/zawodnik/zalewski-piotr/) |
 
 ## Rozliczenie różnic według sezonów i źródeł
 
 Brak wiersza oznacza brak składnika w agregacie API, nie potwierdzone zero zawodnika.
-Superpuchary wyjaśniają różnicę zakresu. Różnice w pozostałych sezonach pozostają niepewnością źródłową; nie zmieniają automatycznie bilansu Boscha.
+Superpuchary oraz wydarzenia bez przypisanej ligi wyjaśniają różnice zakresu. Status events_without_league_taxonomy wymaga zgodności pełnego zestawu protokołów z HTML i zestawu oznaczonego ligą z REST. Protokoły innych klubów nie zwiększają bilansu Boscha.
 
 | Zawodnik | Sezon / ID API | Pole | HTML | REST | Różnica | Przyczyna / niepewność | Źródła |
 |---|---|---|---:|---:|---:|---|---|
@@ -89,20 +90,20 @@ Superpuchary wyjaśniają różnicę zakresu. Różnice w pozostałych sezonach 
 | Malinowski Piotr (ID 7280) | Superpuchar 2024 / 140 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/malinowski-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/7280) |
 | Kuźma Piotr (ID 4577) | 2021 - Superpuchar / brak ID w API | Mecze | 2 | brak wiersza | +2 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
 | Kuźma Piotr (ID 4577) | 2021 - Superpuchar / brak ID w API | Asysty | 1 | brak wiersza | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
-| Kuźma Piotr (ID 4577) | Orlik 2024 / 139 | Mecze | 7 | 6 | +1 | same_season_source_variance | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
+| Kuźma Piotr (ID 4577) | Orlik 2024 / 139 | Mecze | 7 | 6 | +1 | events_without_league_taxonomy | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) · [protokół](https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-cedc-polmos-bialystok-5/) |
 | Kuźma Piotr (ID 4577) | Superpuchar 2024 / 140 | Mecze | 3 | 0 | +3 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
 | Kuźma Piotr (ID 4577) | Superpuchar 2024 / 140 | Asysty | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
-| Kuźma Piotr (ID 4577) | Hala 2024/2025 / 141 | Mecze | 11 | 10 | +1 | same_season_source_variance | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
+| Kuźma Piotr (ID 4577) | Hala 2024/2025 / 141 | Mecze | 11 | 10 | +1 | events_without_league_taxonomy | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) · [protokół](https://podlaskaliga.pl/wydarzenie/paka-vs-cedc-polmos-bialystok/) |
 | Kuźma Piotr (ID 4577) | Superpuchar 2025 / 145 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kuzma-piotr/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577) |
 | Mironiuk Zbigniew (ID 12287) | Superpuchar 2025 / 145 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/12287) |
 | Bączek Szymon (ID 8654) | Superpuchar 2024 / 140 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/baczek-szymon/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654) |
 | Bączek Szymon (ID 8654) | Superpuchar 2024 / 140 | CK | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/baczek-szymon/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654) |
-| Dawid Daniluk (ID 2204) | 2021 - Lato / 104 | Mecze | 2 | 1 | +1 | same_season_source_variance | [HTML](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204) |
+| Dawid Daniluk (ID 2204) | 2021 - Lato / 104 | Mecze | 2 | 1 | +1 | events_without_league_taxonomy | [HTML](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204) · [protokół](https://podlaskaliga.pl/wydarzenie/mecz-o-7-miejsce/) |
 | Dawid Daniluk (ID 2204) | 2021 - Superpuchar / 105 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204) |
 | Dawid Daniluk (ID 2204) | 2021 - Superpuchar / 105 | Asysty | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204) |
 | Dawid Daniluk (ID 2204) | Superpuchar 2023 / 127 | Mecze | 1 | 0 | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/daniluk-dawid/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204) |
-| Kakareko Kamil (ID 1594) | 2021 - Lato / 104 | Mecze | 4 | 3 | +1 | same_season_source_variance | [HTML](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594) |
-| Kakareko Kamil (ID 1594) | 2021 - Lato / 104 | Gole | 1 | 0 | +1 | same_season_source_variance | [HTML](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594) |
+| Kakareko Kamil (ID 1594) | 2021 - Lato / 104 | Mecze | 4 | 3 | +1 | events_without_league_taxonomy | [HTML](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594) · [protokół](https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/) |
+| Kakareko Kamil (ID 1594) | 2021 - Lato / 104 | Gole | 1 | 0 | +1 | events_without_league_taxonomy | [HTML](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594) · [protokół](https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/) |
 | Kakareko Kamil (ID 1594) | 2021 - Superpuchar / brak ID w API | Mecze | 3 | brak wiersza | +3 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/kamil-kakarenko/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594) |
 | Bayer Emilian (ID 2203) | 2021 - Superpuchar / brak ID w API | Mecze | 1 | brak wiersza | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/bayer-emilian/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203) |
 | Bayer Emilian (ID 2203) | 2021 - Superpuchar / brak ID w API | Gole | 1 | brak wiersza | +1 | supercup_source_scope | [HTML](https://podlaskaliga.pl/zawodnik/bayer-emilian/) · [REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203) |
@@ -113,6 +114,7 @@ Superpuchary wyjaśniają różnicę zakresu. Różnice w pozostałych sezonach 
 
 - Rutkowski Mateusz (GK) (ID 7284), Mecze: HTML 93 + ID 13060: 1 ([REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/13060)) = kanoniczne 94. Bez ponownego dodawania sezonu.
 - Rutkowski Mateusz (GK) (ID 7284), Gole: HTML 1 + ID 13060: 1 ([REST](https://podlaskaliga.pl/wp-json/sportspress/v2/players/13060)) = kanoniczne 2. Bez ponownego dodawania sezonu.
+- Zalewski Piotr (ID 12288), Mecze: publiczny HTML 0 + Superpuchar 2025: 1 ([protokół](https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car-2/)) = 1. Surowa tabela HTML pozostaje zachowana.
 
 ## Protokoły meczowe przekraczające zapisany wynik sezonu
 

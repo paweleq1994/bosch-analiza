@@ -1,0 +1,361 @@
+{
+  "id": 10790,
+  "title": {
+    "rendered": "CEDC Polmos Białystok vs Bosch Service Tech-Car"
+  },
+  "date": "2024-11-09T12:20:00",
+  "teams": [
+    4641,
+    6951
+  ],
+  "seasons": [
+    140
+  ],
+  "leagues": [],
+  "link": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car-2/",
+  "results": {
+    "4641": {
+      "goals": "3",
+      "firsthalf": "0",
+      "secondhalf": "3",
+      "fairplay": "-4",
+      "outcome": [
+        "win"
+      ]
+    },
+    "6951": {
+      "goals": "0",
+      "firsthalf": "0",
+      "secondhalf": "0",
+      "fairplay": "-10",
+      "outcome": [
+        "loss"
+      ]
+    },
+    "0": {
+      "goals": "Gole",
+      "firsthalf": "Pierwsza połowa",
+      "secondhalf": "Druga połowa",
+      "fairplay": "Fair Play",
+      "outcome": "Wynik"
+    }
+  },
+  "performance": {
+    "4641": {
+      "0": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "2",
+        "redcards": ""
+      },
+      "4571": {
+        "ocenabramkarza": "",
+        "goals": "1 (13')",
+        "assists": "1",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "1 (8')",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "6096": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "5374": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4577": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "10644": {
+        "ocenabramkarza": "",
+        "goals": "1 (20')",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4584": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "1 (19')",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4668": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4669": {
+        "ocenabramkarza": "5.5",
+        "goals": "",
+        "assists": "1",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 10
+      },
+      "4670": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "10645": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "9337": {
+        "ocenabramkarza": "",
+        "goals": "1 (24')",
+        "assists": "",
+        "pikarzmeczu": "1",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      }
+    },
+    "6951": {
+      "0": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "2"
+      },
+      "8654": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "1 (24')",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7270": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "1 (24')",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7275": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7272": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "8914": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7280": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "1960": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7284": {
+        "ocenabramkarza": "4",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 10
+      },
+      "1970": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "samobje": "",
+        "yellowcards": "",
+        "redcards": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      }
+    },
+    "0": {
+      "ocenabramkarza": "Ocena Bramkarza",
+      "goals": "Gole",
+      "assists": "Asysty",
+      "pikarzmeczu": "Piłkarz meczu",
+      "top": "Top6",
+      "samobje": "Samobóje",
+      "yellowcards": "Żółte kartki",
+      "redcards": "Czerwone kartki"
+    }
+  },
+  "source_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10790",
+  "captured_at": "2026-10-19"
+}

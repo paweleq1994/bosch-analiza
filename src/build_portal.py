@@ -82,7 +82,7 @@ def main() -> None:
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
 
-        if not url.startswith("https://podlaskaliga.pl/zawodnik/"):
+        if not url.startswith(("https://podlaskaliga.pl/zawodnik/", "https://podlaskaliga.pl/wydarzenie/")):
             raise ValueError(f"Unverified player correction source: {player_id}")
 
         player_seasons = player_seasons_extra.setdefault(str(player_id), {})
@@ -520,6 +520,18 @@ def main() -> None:
                 "public_season_rows": public_career["season_rows"],
                 "seasons": len(public_career["season_rows"]),
             }
+            # Some public profiles omit even a directly verified Supercup
+            # appearance. Keep their raw HTML rows and explain the supplement.
+            if correction and correction.get("scope") == "bosch_supercup_protocol" and career.get("teams") == 1:
+                names = {normalized(row.get("name")) for row in public_career["season_rows"]}
+                additions = [{"sid": sid, **row} for sid, row in correction["seasons"].items()
+                             if normalized(row.get("name")) not in names]
+                if additions:
+                    career["source_adjustments"] = additions
+                    for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                        career[field] += sum(row[field] for row in additions)
+                    career["source"] += " i niezależne protokoły Superpucharu"
+                    career["seasons"] += len(additions)
         player["career_totals"] = career
         player["stats_source"] = "PLP SportsPress i tabela całej kariery" if correction else (
             "PLP SportsPress i aktualny raport Orlik 2026"

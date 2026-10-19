@@ -38,7 +38,9 @@ class PublicCareerCompletenessTests(unittest.TestCase):
                     if player_id == "7284":
                         self.assertGreaterEqual(career[stat], source["totals"][stat])
                     else:
-                        self.assertEqual(career[stat], source["totals"][stat])
+                        additions=career.get("source_adjustments") or []
+                        self.assertTrue(all(r.get("source_url", "").startswith("https://podlaskaliga.pl/wydarzenie/") for r in additions))
+                        self.assertEqual(career[stat], source["totals"][stat]+sum(r[stat] for r in additions))
                     self.assertEqual(sum(r[stat] for r in career["public_season_rows"]), source["totals"][stat])
 
     def test_bosch_specific_stats_are_never_overwritten_by_whole_career(self):
@@ -46,6 +48,27 @@ class PublicCareerCompletenessTests(unittest.TestCase):
         self.assertEqual(player["apps"], 105)
         self.assertEqual(player["bosch_totals"]["apps"], 105)
         self.assertGreater(player["career_totals"]["apps"], player["apps"])
+
+    def test_zero_league_member_has_independently_proven_cup_appearance(self):
+        player=next(p for p in self.database["players"] if p["id"]=="12288")
+        self.assertEqual(player["season_stats"]["144"]["apps"],0)
+        self.assertEqual(player["season_stats"]["145"]["apps"],1)
+        self.assertEqual(player["apps"],1)
+        self.assertEqual(player["career_totals"]["apps"],1)
+        self.assertEqual(self.snapshot["players"]["12288"]["totals"]["apps"],0)
+        raw=json.loads((ROOT / "data/source-evidence/event-12363.json").read_text("utf-8"))
+        self.assertEqual(raw["performance"]["6951"]["12288"]["status"],"lineup")
+
+    def test_golab_eski_red_is_allocated_without_raising_legacy_totals(self):
+        player=next(p for p in self.database["players"] if p["id"]=="7270")
+        raw=json.loads((ROOT / "data/source-evidence/event-10790.json").read_text("utf-8"))
+        self.assertEqual(raw["performance"]["6951"]["7270"]["redcards"],"1 (24')")
+        self.assertEqual((player["apps"],player["yellow"],player["red"]),(13,4,1))
+        self.assertEqual(player["season_stats"]["140"]["red"],1)
+        self.assertEqual(player["season_coverage"]["unassigned"]["red"],0)
+        self.assertEqual(player["season_coverage"]["unassigned"]["apps"],1)
+        self.assertEqual(player["season_coverage"]["unassigned"]["yellow"],1)
+        self.assertIsNone(player["career_totals"])
 
 if __name__ == "__main__":
     unittest.main()

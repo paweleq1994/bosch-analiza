@@ -87,5 +87,46 @@
         "captured_at": "20221208191648"
       }
     }
+  },
+  "7270": {
+    "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car-2/",
+    "source_player_id": "7270",
+    "partial_archive": true,
+    "reason": "Official Bosch Supercup match protocol identifies this appearance and direct cards. Allocate the already known legacy totals to the season for 7270; do not claim his whole career is complete. For 12288 this cup appearance supplements his zero-appearance Orlik 2025 profile.",
+    "seasons": {
+      "140": {
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 1,
+        "apps": 1,
+        "name": "Superpuchar 2024",
+        "origin": "plp_match_minimum",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car-2/",
+        "captured_at": "2026-10-19"
+      }
+    }
+  },
+  "12288": {
+    "source_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car-2/",
+    "source_player_id": "12288",
+    "partial_archive": true,
+    "reason": "Official Bosch Supercup match protocol identifies this appearance and direct cards. Allocate the already known legacy totals to the season for 7270; do not claim his whole career is complete. For 12288 this cup appearance supplements his zero-appearance Orlik 2025 profile.",
+    "seasons": {
+      "145": {
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0,
+        "apps": 1,
+        "name": "Superpuchar 2025",
+        "origin": "plp_match_minimum",
+        "source_url": "https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car-2/",
+        "captured_at": "2026-10-19"
+      }
+    },
+    "scope": "bosch_supercup_protocol"
   }
 }

@@ -1,0 +1,837 @@
+{
+  "note": "Publiczne protokoły innych klubów służą wyłącznie wyjaśnieniu zakresu kariery HTML i API. Nie są dodawane do statystyk Boscha.",
+  "records": [
+    {
+      "player_id": "4577",
+      "team_id": "4641",
+      "team_name": "CEDC Polmos Białystok",
+      "season_id": "139",
+      "captured_at": "2026-10-19",
+      "source_query": "https://podlaskaliga.pl/wp-json/sportspress/v2/events?seasons=139&per_page=100",
+      "scanned_events": 211,
+      "last_page_size": 11,
+      "events": [
+        {
+          "id": "10119",
+          "title": "Unibep Bielsk Podlaski vs CEDC Polmos Białystok",
+          "date": "2024-04-28",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-cedc-polmos-bialystok-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10119",
+          "teams": [
+            8193,
+            4641
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "1 (25')",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10135",
+          "title": "OSMAR vs CEDC Polmos Białystok",
+          "date": "2024-05-19",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/osmar-vs-cedc-polmos-bialystok-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10135",
+          "teams": [
+            8196,
+            4641
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10144",
+          "title": "CEDC Polmos Białystok vs Hanbud",
+          "date": "2024-06-16",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-hanbud/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10144",
+          "teams": [
+            4641,
+            10056
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10218",
+          "title": "VESTA vs CEDC Polmos Białystok",
+          "date": "2024-09-07",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/vesta-vs-cedc-polmos-bialystok-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10218",
+          "teams": [
+            6988,
+            4641
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10234",
+          "title": "CEDC Polmos Białystok vs Waleczne Orły",
+          "date": "2024-09-21",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-waleczne-orly-3/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10234",
+          "teams": [
+            4641,
+            8195
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10265",
+          "title": "GTS Nowa Wygoda vs CEDC Polmos Białystok",
+          "date": "2024-10-19",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/gts-nowa-wygoda-vs-cedc-polmos-bialystok-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10265",
+          "teams": [
+            9218,
+            4641
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "10748",
+          "title": "Mają Rozmach vs CEDC Polmos Białystok",
+          "date": "2024-10-26",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-cedc-polmos-bialystok-5/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10748",
+          "teams": [
+            5920,
+            4641
+          ],
+          "seasons": [
+            139
+          ],
+          "leagues": [],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "player_id": "4577",
+      "team_id": "4641",
+      "team_name": "CEDC Polmos Białystok",
+      "season_id": "141",
+      "captured_at": "2026-10-19",
+      "source_query": "https://podlaskaliga.pl/wp-json/sportspress/v2/events?seasons=141&per_page=100",
+      "scanned_events": 197,
+      "last_page_size": 97,
+      "events": [
+        {
+          "id": "10974",
+          "title": "CEDC Polmos Białystok vs Eskular",
+          "date": "2024-11-17",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-eskular/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10974",
+          "teams": [
+            4641,
+            4387
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11090",
+          "title": "CEDC Polmos Białystok vs Auto Team",
+          "date": "2024-12-15",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-auto-team/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11090",
+          "teams": [
+            4641,
+            4382
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11095",
+          "title": "Bosch Service Tech-Car vs CEDC Polmos Białystok",
+          "date": "2024-12-21",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11095",
+          "teams": [
+            6951,
+            4641
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11316",
+          "title": "CEDC Polmos Białystok vs VESTA",
+          "date": "2025-01-19",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-vesta-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11316",
+          "teams": [
+            4641,
+            6988
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11375",
+          "title": "CEDC Polmos Białystok vs FC Progress Białystok",
+          "date": "2025-02-02",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-fc-progress-bialystok-3/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11375",
+          "teams": [
+            4641,
+            6984
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11378",
+          "title": "ZPS Biaform SA vs CEDC Polmos Białystok",
+          "date": "2025-02-08",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-cedc-polmos-bialystok-5/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11378",
+          "teams": [
+            4643,
+            4641
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11388",
+          "title": "CEDC Polmos Białystok vs OSMAR",
+          "date": "2025-02-16",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-osmar-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11388",
+          "teams": [
+            4641,
+            8196
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11393",
+          "title": "FC GRUBASSY vs CEDC Polmos Białystok",
+          "date": "2025-03-01",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-cedc-polmos-bialystok-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11393",
+          "teams": [
+            8194,
+            4641
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "1",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11404",
+          "title": "CEDC Polmos Białystok vs WIARA PIASTA II",
+          "date": "2025-03-09",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-wiara-piasta-ii-3/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11404",
+          "teams": [
+            4641,
+            6989
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11414",
+          "title": "Zimne Dranie vs CEDC Polmos Białystok",
+          "date": "2025-03-15",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/zimne-dranie-vs-cedc-polmos-bialystok/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11414",
+          "teams": [
+            10770,
+            4641
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [
+            123
+          ],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "11748",
+          "title": "Paka vs CEDC Polmos Białystok",
+          "date": "2025-03-22",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/paka-vs-cedc-polmos-bialystok/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/11748",
+          "teams": [
+            1566,
+            4641
+          ],
+          "seasons": [
+            141
+          ],
+          "leagues": [],
+          "performance": {
+            "4577": {
+              "ocenabramkarza": "",
+              "goals": "",
+              "assists": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "samobje": "",
+              "yellowcards": "",
+              "redcards": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "player_id": "2204",
+      "team_id": "1572",
+      "team_name": "Znienacka",
+      "season_id": "104",
+      "captured_at": "2026-10-19",
+      "source_query": "https://podlaskaliga.pl/wp-json/sportspress/v2/events?seasons=104&per_page=100",
+      "scanned_events": 65,
+      "last_page_size": 65,
+      "events": [
+        {
+          "id": "3537",
+          "title": "Hurtownia Krokus vs Znienacka",
+          "date": "2021-09-11",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/hurtownia-krokus-vs-znienacka-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3537",
+          "teams": [
+            1564,
+            1572
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [
+            102
+          ],
+          "performance": {
+            "2204": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "3994",
+          "title": "Mecz o 7. miejsce",
+          "date": "2021-09-18",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/mecz-o-7-miejsce/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3994",
+          "teams": [
+            1572,
+            1574
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [],
+          "performance": {
+            "2204": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "player_id": "1594",
+      "team_id": "1576",
+      "team_name": "4Technology",
+      "season_id": "104",
+      "captured_at": "2026-10-19",
+      "source_query": "https://podlaskaliga.pl/wp-json/sportspress/v2/events?seasons=104&per_page=100",
+      "scanned_events": 65,
+      "last_page_size": 65,
+      "events": [
+        {
+          "id": "3468",
+          "title": "4Technology vs M-Fire",
+          "date": "2021-08-29",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-m-fire/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3468",
+          "teams": [
+            1576,
+            1573
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [
+            101
+          ],
+          "performance": {
+            "1594": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "3529",
+          "title": "Kabareczi vs 4Technology",
+          "date": "2021-09-04",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3529",
+          "teams": [
+            1566,
+            1576
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [
+            101
+          ],
+          "performance": {
+            "1594": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "3545",
+          "title": "4Technology vs Top Auto",
+          "date": "2021-09-11",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/4technology-vs-top-auto/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3545",
+          "teams": [
+            1576,
+            1580
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [
+            101
+          ],
+          "performance": {
+            "1594": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        },
+        {
+          "id": "3992",
+          "title": "Mecz o 5. miejsce",
+          "date": "2021-09-18",
+          "source_url": "https://podlaskaliga.pl/wydarzenie/kabareczi-vs-4technology-2/",
+          "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/3992",
+          "teams": [
+            1566,
+            1576
+          ],
+          "seasons": [
+            104
+          ],
+          "leagues": [],
+          "performance": {
+            "1594": {
+              "ocenabramkarza": "",
+              "pikarzmeczu": "",
+              "top": "",
+              "goals": "1 (28')",
+              "assists": "",
+              "yellowcards": "",
+              "redcards": "",
+              "samobje": "",
+              "status": "lineup",
+              "sub": "0",
+              "number": "",
+              "position": 0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

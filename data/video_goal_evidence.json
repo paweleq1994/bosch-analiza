@@ -59,6 +59,18 @@
       "verified_at": "2026-10-19",
       "review_notes": "Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1318,03 s piłka jest widoczna w bliskiej bramce, a zawodnik rywala w siatce; komentarz identyfikuje Rafała Jurkowicza i wynik 3:1. To jego pierwszy z dwóch goli w protokole (17′, drugi 39′). Link pokazuje potwierdzoną klatkę zakończenia akcji; nie deklaruje dokładnej klatki przecięcia linii przez piłkę.",
       "review_frame": "reports/evidence/goal10145-minute17-frame1318.png"
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7282",
+      "minute": "29",
+      "video_id": "jzGjEZBED6I",
+      "timestamp_seconds": 9,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzany krótki film pojedynczej akcji na 2:5 w tej samej hali meczu Wiara Piasta II–Bosch. Przy 8,23 s widać kończący atak Boscha w bieli przy lewym polu bramkowym; przy 9,22 s piłka jest w świetle bramki przy siatce, bramkarz na kolanach, a obrońca odwraca się w stronę siatki. Piąty gol Boscha w sekwencji wyniku filmu odpowiada Damianowi Markowskiemu i 29 minucie oficjalnego protokołu. Nazwisko wynika z protokołu i kolejności wyniku, bez rozpoznawania twarzy. Link do obejrzanego zakończenia akcji, bez deklaracji dokładnej klatki przecięcia linii.",
+      "review_frame": "reports/evidence/goal7851-minute29-frame9.png"
     }
   ]
 }
