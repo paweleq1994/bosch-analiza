@@ -101,10 +101,35 @@ def capture(url: str) -> dict:
     return {"totals": totals, "season_rows": season_rows}
 
 
+def canonicalize_cached_careers(previous: dict, roster: list[dict]) -> dict:
+    """Remove historical synthetic aliases only after checking source identity."""
+    records = dict(previous)
+    for player in roster:
+        target_id = str(player["id"])
+        for alias in player.get("aliases") or []:
+            old_id = str(alias)
+            if old_id == target_id or old_id not in records:
+                continue
+
+            earlier = records[old_id]
+            current = records.get(target_id)
+            if current is not None and (
+                current.get("source_url") != earlier.get("source_url")
+                or current.get("totals") != earlier.get("totals")
+            ):
+                raise ValueError(
+                    f"Conflicting public career cache for {target_id}/{old_id}"
+                )
+            records.setdefault(target_id, earlier)
+            del records[old_id]
+
+    return records
+
+
 def main():
     db = json.loads(PORTAL.read_text(encoding="utf-8"))
     previous = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"players": {}}
-    players = previous.get("players", {})
+    players = canonicalize_cached_careers(previous.get("players", {}), db["players"])
     failures = {}
     for player in db["players"]:
         player_id = str(player["id"])
