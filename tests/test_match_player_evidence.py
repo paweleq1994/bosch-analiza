@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from backfill_match_player_stats import backfill_seasons
-from collect_match_player_evidence import event_stat, extract_match
+from collect_match_player_evidence import event_stat, extract_match, collect_matches
 
 
 class MatchPlayerEvidenceTests(unittest.TestCase):
@@ -43,6 +43,30 @@ class MatchPlayerEvidenceTests(unittest.TestCase):
         self.assertEqual(result["players"][0]["goals"], 2)
         self.assertEqual(result["players"][0]["yellow"], 1)
         self.assertEqual(result["players"][1]["player_id"], "7284")
+
+    def test_accepts_new_fixture_without_preexisting_historic_index(self):
+        fixture = {
+            "id": "2027-next",
+            "event_id": "16555",
+            "sid": "future",
+            "date": "2027-03-01",
+            "event_link": "https://podlaskaliga.pl/wydarzenie/bosch-next/",
+        }
+        payload = {
+            "id": 16555,
+            "date": "2027-03-01T12:00:00",
+            "link": fixture["event_link"],
+            "teams": [6951, 12],
+            "performance": {"6951": {"1960": {"status": "lineup", "assists": "1", "goals": ""}}},
+        }
+        records, errors = collect_matches(
+            [fixture],
+            {"matches": []},
+            fetch=lambda event_id: payload,
+        )
+        self.assertEqual(errors, [])
+        self.assertEqual(records["matches"][0]["match_id"], "2027-next")
+        self.assertEqual(records["matches"][0]["players"][0]["assists"], 1)
 
     def test_wrong_match_source_is_rejected(self):
         fixture = {"id": "1", "event_id": "1", "sid": "120", "date": "2022-01-01",
