@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from player_identity import person_key
+from player_identity import legacy_player_id, person_key
 
 FIELDS = ("apps", "goals", "assists", "motm", "yellow", "red")
 EVENT_FIELDS = {
@@ -94,6 +94,7 @@ def attach_verified_identities(players: list[dict], snapshot: dict, evidence: di
                     "stats_minimum": True,
                     "match_only_profile": True,
                 }
+                player["aliases"] = [legacy_player_id(name)]
                 players.append(player)
                 new_profiles.append(player_id)
 
