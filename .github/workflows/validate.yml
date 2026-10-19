@@ -52,6 +52,8 @@ jobs:
           node --check docs/assets/app.js
           node --check docs/assets/scouting.js
           node --check docs/assets/table-sort.js
+      - name: Verify source-proven YouTube goal jump links
+        run: node tests/frontend_video_goal_timestamps.cjs
       - name: Verify source-linked player fields and status
         run: node tests/frontend_source_provenance.cjs
       - name: Verify full PLP match box scores and player comparisons
