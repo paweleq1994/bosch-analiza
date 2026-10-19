@@ -94,6 +94,8 @@ def opponent_in(title, opponent):
 
 def match_video(video,matches):
     """Match uniquely using Bosch, result, opponent and official team aliases."""
+    if video.get("status") in {"ignored", "rejected"} or video.get("review_category") in {"outside_plp", "possible_plp_tournament"}:
+        return None
     title = video["title"]
     if "bosch" not in norm(title):
         return None

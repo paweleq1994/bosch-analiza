@@ -10,7 +10,8 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 - Mecze bez materiału wideo: **60**
 - Znane filmy: **120**
 - Filmy bez powiązanego meczu: **11**
-- Materiały oczekujące na identyfikację: **7**; odrzucone powiązania / materiały spoza meczów: **4**
+- Materiały oczekujące na identyfikację: **3**; odrzucone powiązania / materiały spoza meczów: **4**
+- Filmy pomijane poza PLP: **4**; widoczne w archiwum: **116**
 
 ## Pokrycie według sezonów
 
@@ -27,15 +28,20 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 
 ## Nieprzypisane materiały
 
-| Film YouTube | Kanał | Kandydat z potwierdzonym wynikiem |
+| Film YouTube | Kanał | Kandydat z potwierdzonym wynikiem | Informacja o rozgrywkach |
+|---|---|---|---|
+| [Bosch Tech Car Service - Rambo](https://www.youtube.com/watch?v=ip4f5qE7-Cs) | Piotr Gołabeski | Brak jednoznacznego dopasowania | Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi. |
+| [Bosch Tech Car Service - Krokus](https://www.youtube.com/watch?v=2TgTJHeWd4o) | Piotr Gołabeski | Brak jednoznacznego dopasowania | Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi. |
+| [Bosch Tech Car Service - Prestige](https://www.youtube.com/watch?v=o4tWJ0ngczs) | Piotr Gołabeski | Brak jednoznacznego dopasowania | Użytkownik wskazał 19.10.2026 prawdopodobny Superpuchar lub inny turniej PLP. Rozpoznanie nie jest pewne; brak potwierdzonej nazwy rozgrywek, daty meczu i protokołu. Materiał zachowany do identyfikacji poza meczami ligowymi. |
+
+## Filmy poza PLP — pomijane w archiwum i dopasowywaniu
+
+| Film | Źródło klasyfikacji | Data przeglądu |
 |---|---|---|
-| [Bosch Tech Car Service - Rambo](https://www.youtube.com/watch?v=ip4f5qE7-Cs) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Tech Car Service - Krokus](https://www.youtube.com/watch?v=2TgTJHeWd4o) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Tech Car Service - Prestige](https://www.youtube.com/watch?v=o4tWJ0ngczs) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Tech Car Service - Olimp 1:2](https://www.youtube.com/watch?v=mRNWenMq9DA) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Tech Car Service - Koledzy Z Boiska 8:0](https://www.youtube.com/watch?v=O3mBzeS-9VY) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
+| [Bosch Tech Car Service - Olimp 1:2](https://www.youtube.com/watch?v=mRNWenMq9DA) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
+| [Bosch Tech Car Service - Koledzy Z Boiska 8:0](https://www.youtube.com/watch?v=O3mBzeS-9VY) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
+| [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
+| [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
 
 ## Zweryfikowane odrzucenia powiązań
 
