@@ -68,6 +68,15 @@ class VerifiedVideoCueTests(unittest.TestCase):
         self.assertIn("https://podlaskaliga.pl/wydarzenie/", content)
         self.assertIn("https://www.youtube.com/watch?v=", content)
 
+    def test_saved_reviews_match_real_protocols_and_do_not_use_match_minutes(self):
+        source = json.loads((ROOT / "data/video_goal_evidence.json").read_text(encoding="utf-8"))
+        cues = validate(self.db, source)
+        self.assertGreaterEqual(len(cues), 2)
+        for cue in cues:
+            self.assertEqual(cue["verification_source"], "observed_video_frame")
+            self.assertNotEqual(cue["timestamp_seconds"], int(cue["minute"]) * 60)
+        self.assertTrue(all(row.get("review_notes") for row in source["entries"]))
+
 
 if __name__ == "__main__":
     unittest.main()

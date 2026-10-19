@@ -332,11 +332,19 @@ def main() -> None:
             video_by_id[video_id]["match_id"] = str(binding.get("match_id") or "") or None
             video_by_id[video_id]["segment"] = binding.get("segment") or ""
             video_by_id[video_id]["status"] = "matched_manual" if video_by_id[video_id]["match_id"] else "rejected"
+            for key in ("review_reason", "reviewed_at", "review_category", "verification_source"):
+                if key in binding:
+                    video_by_id[video_id][key] = binding[key]
+    original_video_details = {str(v.get("video_id")): v for match in matches for v in match["videos"]}
+    for match in matches:
+        match["videos"] = [v for v in match["videos"]
+                           if str((video_by_id.get(str(v.get("video_id"))) or {}).get("match_id") or "") == str(match["id"])]
     match_map = {match["id"]: match for match in matches}
     for video in video_by_id.values():
         match = match_map.get(str(video.get("match_id") or ""))
         if match and not any(existing.get("video_id") == video["id"] for existing in match["videos"]):
             match["videos"].append({
+                **original_video_details.get(video["id"], {}),
                 "video_id": video["id"], "title": video.get("title", ""),
                 "url": video.get("url", ""), "segment": video.get("segment", ""),
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),

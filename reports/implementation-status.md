@@ -1,6 +1,6 @@
 # Stan wdrożenia kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `d2b28ef9800d64f6b04c44198e719b348aa4f7dd` (merge PR #55).
+Ostatni sprawdzony main: `f864f05` (merge PR #56, po pełnej synchronizacji PLP).
 Repozytorium lokalne zaktualizowano przez fast-forward z `94402f0`; przed pracą było czyste.
 Gałąź kontynuacji: `codex/fix-publication-and-complete-audit`.
 Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło brak otwartych PR-ów.
@@ -22,8 +22,8 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 11 | Wdrożone | `frontend_match_boxscores.cjs`, `test_full_match_protocols.py` | Zachować 113 historycznych protokołów |
 | 12 | Wdrożone | `frontend_match_boxscores.cjs`: 988 występów | Brak wykazanego defektu |
 | 13 | Wdrożone | PR #51, `frontend_source_provenance.cjs` | Sprawdzić rzeczywiste wyjątki zakresu |
-| 14 | Częściowo | `video-coverage.md`: 112 filmów, 48/113 meczów | Zweryfikować 10 nieprzypisanych materiałów; 65 meczów bez nagrania |
-| 15 | Mechanizm wdrożony; brak zweryfikowanych sekund | PR #53, `video_goal_evidence.py`, `frontend_video_goal_timestamps.cjs` | 158 goli wymaga analizy materiału; nie wyznaczać sekund z minut PLP |
+| 14 | Częściowo, skorygowane błędne powiązanie | `video-coverage.md`: 112 rekordów, 47/113 meczów; Vesta i materiał muzyczny mają uzasadnienie odrzucenia | 9 materiałów oczekuje identyfikacji, 66 meczów bez przypisanego nagrania; samo podobieństwo tytułu nie wystarcza |
+| 15 | 2 obejrzane akcje z potwierdzonym czasem odtwarzacza | `video_goal_evidence.json`, klatki w `reports/evidence/`; mecz 7851, gole Jurkowicza 3′ i 23′ | 154 pozostałe gole wymagają dalszego oglądania i powiązania; bez zgadywania z minut PLP |
 | 16 | Wdrożone | PR #38, `frontend_player_trends.cjs` | Brak wykazanego defektu |
 | 17 | Wdrożone | PR #29, `frontend_match_boxscores.cjs` | Sprawdzić semantykę kompletności w nowych sezonach |
 | 18 | Częściowo | PR #34, `frontend_historical_form.cjs` | Analiza połów wyłącznie z oficjalnego HT |
@@ -38,8 +38,8 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 - 34 pełniejsze publiczne kariery PLP, 11 niepełnych; 33 różnice HTML/API/widok i 0 sezonowych sprzeczności.
 - 29 porównań źródeł wyjaśnionych (26 Superpuchary, 2 profile Rutkowskiego, 1 Grabowski/protokół 9486); 4 wymagają dalszej weryfikacji źródła.
 - 15 potwierdzonych zdjęć, 30 braków.
-- 112 filmów; 48 meczów z filmem, 65 bez; 10 materiałów nieprzypisanych.
-- 0 potwierdzonych znaczników goli; 158 goli w kolejce.
+- 112 rekordów wideo; **47** meczów z filmem, **66** bez; 9 materiałów do identyfikacji, 2 odrzucone powiązania / materiały spoza meczów (łącznie 11 bez meczu).
+- **2** potwierdzone odnośniki do obejrzanej sekundy akcji bramkowej; **154** gole w kolejce. Kolejka zmalała o 2 obejrzane akcje i 2 gole, których jedyny film nie przedstawia właściwego spotkania.
 
 ## Testy bazowe i odtworzenie błędu
 
@@ -77,6 +77,16 @@ PR #55 wdrożony. Rozszerzony istniejący audyt rozlicza teraz 33 różnice wed�
 - **PR #55 — scalony**, commit `aaded26`, merge `d2b28ef`.
 - CI PR 39257687591 success; CI main 39258031399 success; publikacja 39258031372 success; Pages 39258030661 success.
 - Synchronizacja po #55: run 39258031384 trwa; wynik wymaga końcowego sprawdzenia.
+- **PR #56 — scalony**, zmiany `d688231` i `12d55c8`, merge `f864f05`. Pełny najnowszy odczyt PLP został zachowany, a błędnie obniżone bilanse przywrócone. Przed merge: **166 testów Python i 14 frontendowych OK**.
+
+## Multimedia — dowody i pozostałe ograniczenia
+
+- Film `hcfb9Ttmswo` pokazuje odkryte boisko, podczas gdy oficjalny mecz 7814 ma venue 109 (hala VI LO). Cofnięto to powiązanie; źródłowego archiwum nie usunięto.
+- Wykryto i poprawiono błąd generatora: ręczne odrzucenie zmieniało indeks filmu, lecz pozostawiało oryginalny link w meczu. Regresja sprawdza obie reprezentacje i opis przeglądu. Dopasowanie pojedynczego kandydata uwzględnia teraz także sprzeczną datę publikacji.
+- Materiał `8SF7bbYDS30` ma tytuł występu muzycznego; jest jawnie oznaczony jako spoza meczów Boscha, z zachowaniem źródła.
+- Obejrzano klipy `izWNgjy1TN0` (0:1) i `MTwXQ9jcfTg` (1:2), porównując halę, datę publikacji, sekwencję wyniku i protokół 7851. Linki 7 s i 13 s zaczynają się w obejrzanej fazie kończącej akcję. Tożsamość strzelca wynika z kolejności goli i protokołu, bez rozpoznawania twarzy. Klatki dowodowe zachowane.
+- Dalsze klipy nie otrzymały timestampu przy niejednoznacznym lub zasłoniętym obrazie. Sama automatyczna transkrypcja (np. `QXRjrPldpi0`) nie identyfikuje jednoznacznie strzelca ani sekundy gola. Pozostałe 154 pozycje wymagają dalszego przeglądu, nie są ukończone.
+- Kontrolnie obejrzany `1nxZX2GWpIo` pokazuje prawidłowo halę VI LO; nie odrzucać innych materiałów tylko dlatego, że rekomendowany obok film pokazuje boisko.
 
 ## Weryfikacja po pełnej synchronizacji PLP
 

@@ -6,16 +6,17 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 
 ## Podsumowanie
 
-- Mecze z materiałem wideo: **48 / 113**
-- Mecze bez materiału wideo: **65**
+- Mecze z materiałem wideo: **47 / 113**
+- Mecze bez materiału wideo: **66**
 - Znane filmy: **112**
-- Filmy bez powiązanego meczu: **10**
+- Filmy bez powiązanego meczu: **11**
+- Materiały oczekujące na identyfikację: **9**; odrzucone powiązania / materiały spoza meczów: **2**
 
 ## Pokrycie według sezonów
 
 | Sezon | Mecze | Z nagraniem | Bez nagrania |
 |---|---:|---:|---:|
-| Hala 2022 | 13 | 5 | 8 |
+| Hala 2022 | 13 | 4 | 9 |
 | Orlik 2023 | 15 | 9 | 6 |
 | Hala 2023/2024 | 14 | 1 | 13 |
 | Orlik 2024 | 14 | 3 | 11 |
@@ -36,8 +37,14 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [1](https://www.youtube.com/watch?v=6vsemMiGuPk) | Piotr Golabeski | Brak jednoznacznego dopasowania |
-| [Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021](https://www.youtube.com/watch?v=8SF7bbYDS30) | Piotr Golabeski | Brak jednoznacznego dopasowania |
 | [2](https://www.youtube.com/watch?v=Kh4IuHMwcPQ) | Piotr Golabeski | Brak jednoznacznego dopasowania |
+
+## Zweryfikowane odrzucenia powiązań
+
+| Film | Powód / dowód | Data przeglądu |
+|---|---|---|
+| [Bosch Tech Car Service - Vesta 2:1](https://www.youtube.com/watch?v=hcfb9Ttmswo) | Obejrzany materiał pokazuje boisko odkryte. Mecz PLP 7814 (26.02.2023) rozegrano w hali VI LO: oficjalne wydarzenie wskazuje venue 109. Film opublikowano 26.08.2023; tytuł i wynik 2:1 nie dowodzą tego samego meczu. | 2026-10-19 |
+| [Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021](https://www.youtube.com/watch?v=8SF7bbYDS30) | Publiczny tytuł identyfikuje występ muzyczny Laikike1 w Almost Famous (Warszawa, 14.10.2021), bez związku z meczem Boscha. Zachowano rekord źródłowy. | 2026-10-19 |
 
 ## Mecze bez powiązanego nagrania
 
@@ -51,6 +58,7 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2023-02-04 | Hala 2022 | INTaF | 2:1 | [protokół](https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/) |
 | 2023-02-11 | Hala 2022 | Poltank | 2:6 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/) |
 | 2023-02-12 | Hala 2022 | Rainter | 0:0 | [protokół](https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/) |
+| 2023-02-26 | Hala 2022 | VESTA | 2:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/) |
 | 2023-05-14 | Orlik 2023 | ZPS Biaform SA | 3:1 | [protokół](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) |
 | 2023-05-28 | Orlik 2023 | FC GRUBASSY | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/) |
 | 2023-06-18 | Orlik 2023 | FC DrTusz | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/) |

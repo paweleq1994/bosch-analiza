@@ -2,20 +2,27 @@
 
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
-Potwierdzone linki: **0**.
-Niepotwierdzone gole w meczach z filmem: **158**.
+Potwierdzone linki: **2**.
+Niepotwierdzone gole w meczach z filmem: **154**.
+
+## Obejrzane i potwierdzone akcje
+
+Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie przeliczenie minuty meczu.
+
+| Mecz / zawodnik / minuta PLP | Sekunda filmu | Dowód przeglądu |
+|---|---:|---|
+| [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) / ID 7275 / 3′ | [YouTube 7 s](https://www.youtube.com/watch?v=izWNgjy1TN0&t=7s) | Obejrzana pojedyncza akcja na 0:1; przy 7,34 s strzał i bramkarz są przy prawej bramce. Nagranie z 05.03.2023 pokazuje halę VI LO i tablicę VI LO. Powiązanie strzelca przez wynik 0:1 i pierwszego strzelca w oficjalnym protokole (Jurkowicz, 3 minuta), bez rozpoznawania twarzy. Link zaczyna się w obejrzanej sekundzie akcji, nie w czasie wyliczonym z minuty PLP. |
+| [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) / ID 7275 / 23′ | [YouTube 13 s](https://www.youtube.com/watch?v=MTwXQ9jcfTg&t=13s) | Obejrzana pojedyncza akcja na 1:2 w tej samej hali i z datą publikacji 05.03.2023. Przy 13,08 s zawodnik w bieli kończy akcję przy lewym słupku i bramkarzu; przy 15,25 s piłka jest w bramce, a zawodnik odchodzi. Drugi gol Boscha w sekwencji wyniku odpowiada Jurkowiczowi i 23 minucie protokołu. Link zaczyna się od obejrzanej fazy kończącej akcję; nie uzyskano go przez przeliczenie minut meczu. |
+
+## Gole oczekujące na weryfikację
 
 | Mecz | Strzelec | Minuta PLP | Nagrania do weryfikacji |
 |---|---|---|---|
-| [PLP 7814](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/) | Sołowiej Tomasz | 21′ | [nieokreślony](https://www.youtube.com/watch?v=hcfb9Ttmswo) |
-| [PLP 7814](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/) | Jurkowicz Mateusz | 22′ | [nieokreślony](https://www.youtube.com/watch?v=hcfb9Ttmswo) |
 | [PLP 7839](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/) | Nowicki Patryk | 5′ | [II połowa](https://www.youtube.com/watch?v=1nxZX2GWpIo) · [I połowa](https://www.youtube.com/watch?v=7JG6ySzLbws) |
 | [PLP 7839](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/) | Sołowiej Tomasz | 10′ | [II połowa](https://www.youtube.com/watch?v=1nxZX2GWpIo) · [I połowa](https://www.youtube.com/watch?v=7JG6ySzLbws) |
 | [PLP 7839](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/) | Malinowski Piotr | 15′ | [II połowa](https://www.youtube.com/watch?v=1nxZX2GWpIo) · [I połowa](https://www.youtube.com/watch?v=7JG6ySzLbws) |
 | [PLP 7839](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/) | Malinowski Piotr | 20′ | [II połowa](https://www.youtube.com/watch?v=1nxZX2GWpIo) · [I połowa](https://www.youtube.com/watch?v=7JG6ySzLbws) |
 | [PLP 7839](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/) | Jurkowicz Mateusz | 18′ | [II połowa](https://www.youtube.com/watch?v=1nxZX2GWpIo) · [I połowa](https://www.youtube.com/watch?v=7JG6ySzLbws) |
-| [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) | Jurkowicz Mateusz | 3′ | [I połowa](https://www.youtube.com/watch?v=T2oy8E5hBL8) · [II połowa](https://www.youtube.com/watch?v=WqvEW_JABM8) · [nieokreślony](https://www.youtube.com/watch?v=jzGjEZBED6I) · [nieokreślony](https://www.youtube.com/watch?v=o660JNtPcUo) |
-| [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) | Jurkowicz Mateusz | 23′ | [I połowa](https://www.youtube.com/watch?v=T2oy8E5hBL8) · [II połowa](https://www.youtube.com/watch?v=WqvEW_JABM8) · [nieokreślony](https://www.youtube.com/watch?v=jzGjEZBED6I) · [nieokreślony](https://www.youtube.com/watch?v=o660JNtPcUo) |
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) | Sołowiej Tomasz | 24′ | [I połowa](https://www.youtube.com/watch?v=T2oy8E5hBL8) · [II połowa](https://www.youtube.com/watch?v=WqvEW_JABM8) · [nieokreślony](https://www.youtube.com/watch?v=jzGjEZBED6I) · [nieokreślony](https://www.youtube.com/watch?v=o660JNtPcUo) |
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) | Sołowiej Tomasz | 26′ | [I połowa](https://www.youtube.com/watch?v=T2oy8E5hBL8) · [II połowa](https://www.youtube.com/watch?v=WqvEW_JABM8) · [nieokreślony](https://www.youtube.com/watch?v=jzGjEZBED6I) · [nieokreślony](https://www.youtube.com/watch?v=o660JNtPcUo) |
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) | Markowski Damian | 29′ | [I połowa](https://www.youtube.com/watch?v=T2oy8E5hBL8) · [II połowa](https://www.youtube.com/watch?v=WqvEW_JABM8) · [nieokreślony](https://www.youtube.com/watch?v=jzGjEZBED6I) · [nieokreślony](https://www.youtube.com/watch?v=o660JNtPcUo) |
