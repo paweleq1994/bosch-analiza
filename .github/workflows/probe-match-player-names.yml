@@ -1,0 +1,19 @@
+name: Probe PLP archived player names
+on:
+  push:
+    branches:
+      - feat/resolve-official-match-player-names
+    paths:
+      - 'src/probe_match_player_names.py'
+      - '.github/workflows/probe-match-player-names.yml'
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python src/probe_match_player_names.py
