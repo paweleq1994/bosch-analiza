@@ -43,7 +43,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: bosch-data-sync
+  group: bosch-data-sync-v2
   cancel-in-progress: true
 jobs:
   sync:
