@@ -48,6 +48,36 @@ class CareerSourceReconciliationTests(unittest.TestCase):
         self.assertIn("https://podlaskaliga.pl/", content)
         self.assertIn("cała kariera plp", content.lower())
 
+    def test_moskal_difference_is_fully_located_in_supercups(self):
+        row = next(r for r in self.report["career_source_differences"]
+                   if r["id"] == "1960" and r["field"] == "apps")
+        self.assertEqual(row["status"], "explained_supercup_scope")
+        self.assertEqual(sum(r["difference"] for r in row["season_breakdown"]), 7)
+        self.assertTrue(all("superpuchar" in r["season"].lower() for r in row["season_breakdown"]))
+
+    def test_verified_goalkeeper_alias_explains_canonical_career_difference(self):
+        rows = [r for r in self.report["career_source_differences"]
+                if r["id"] == "7284" and r["type"] == "displayed_career_disagrees_with_html"]
+        self.assertEqual(len(rows), 2)
+        for row in rows:
+            self.assertEqual(row["status"], "explained_verified_identity_merge")
+            self.assertEqual(row["identity_contributions"][0]["id"], "13060")
+            self.assertEqual(row["html"] + row["identity_contributions"][0]["value"], row["rest"])
+
+    def test_non_supercup_source_variance_is_not_claimed_as_resolved(self):
+        row = next(r for r in self.report["career_source_differences"]
+                   if r["id"] == "1594" and r["field"] == "goals")
+        self.assertEqual(row["status"], "source_variance_requires_review")
+        self.assertTrue(any(r["reason"] == "same_season_source_variance" for r in row["season_breakdown"]))
+
+    def test_goalkeeper_rest_zero_is_explained_by_independent_appearance(self):
+        row = next(r for r in self.report["career_source_differences"]
+                   if r["id"] == "7223" and r["field"] == "apps")
+        self.assertEqual(row["status"], "explained_source_rows_and_match_evidence")
+        match = next(r for r in row["season_breakdown"] if r["season_ids"] == ["126"])
+        self.assertEqual((match["html"], match["rest"], match["match_minimum"]), (1, 0, 1))
+        self.assertTrue(match["match_source_urls"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -100,6 +100,28 @@ class FutureSeasonPipelineTests(unittest.TestCase):
         db = self.build({"league_updates.json": league})
         self.assertEqual(db["seasons"][-1]["id"], "171")
 
+    def test_new_season_preserves_older_partial_player_balance_and_aliases(self):
+        self.event["performance"]["6951"]["7271"] = self.event["performance"]["6951"].pop("1960")
+        league, fixture = self.import_new_season()
+        evidence = self.read("match_player_evidence.json")
+        added, _ = collect_matches([fixture], self.index, fetch=lambda _: self.event)
+        evidence["matches"].extend(added["matches"])
+        index, pending = extend(self.index, [fixture], self.profiles, fetch=lambda _: self.event)
+        # Private identity is already proven by the source-linked resolver.
+        if pending["pending"]:
+            profiles = {**self.profiles, "7271": {"resolved_name": "Gorbacewicz Emil"}}
+            index, pending = extend(self.index, [fixture], profiles, fetch=lambda _: self.event)
+        db = self.build({"league_updates.json": league, "match_player_evidence.json": evidence,
+                         "match_protocol_audit_index.json": index})
+        player = next(p for p in db["players"] if p["id"] == "7271")
+        old = next(p for p in self.database["players"] if p["id"] == "7271")
+        self.assertEqual(player["apps"], old["apps"] + 1)
+        self.assertEqual(player["goals"], old["goals"] + 2)
+        self.assertIsNone(player["bosch_totals"])
+        self.assertTrue(player["stats_minimum"])
+        kakareko = next(p for p in db["players"] if p["id"] == "1594")
+        self.assertIn("new-kakareko-kamil", kakareko["aliases"])
+
     def test_future_unknown_player_is_reported_and_goal_protocol_remains_pending(self):
         self.event["performance"]["6951"]["99999"] = self.event["performance"]["6951"].pop("1960")
         league, fixture = self.import_new_season()
@@ -115,6 +137,31 @@ class FutureSeasonPipelineTests(unittest.TestCase):
         self.assertFalse(next(m for m in db["matches"] if m["id"] == "20001").get("goal_protocol", {}).get("verified", False))
         coverage = next(r for r in db["analysis"]["player_goal_coverage"] if r["sid"] == "170")
         self.assertEqual(coverage["pending_match_goals"], 2)
+
+    def test_added_match_in_existing_season_keeps_partial_older_totals(self):
+        league, fixture = self.import_new_season()
+        league["season_rows"] = [s for s in league["season_rows"] if s["id"] != "170"]
+        season = next(s for s in league["season_rows"] if s["id"] == "125")
+        for field, value in (("matches", 1), ("wins", 1), ("points", 3), ("gf", 2), ("ga", 1)):
+            season[field] += value
+        fixture.update(sid="125", plp_season_id="125", season=season["name"], date="2023-10-28")
+        self.event["date"] = "2023-10-28T18:00:00"
+        self.event["performance"]["6951"]["7271"] = self.event["performance"]["6951"].pop("1960")
+        league["player_seasons"] = [r for r in league["player_seasons"] if r["sid"] != "170"]
+        stats = next(r for r in league["player_seasons"] if r["sid"] == "125" and r["id"] == "7271")
+        stats.update(apps=stats["apps"] + 1, goals=stats["goals"] + 2,
+                     motm=stats["motm"] + 1, yellow=stats["yellow"] + 1)
+        evidence = self.read("match_player_evidence.json")
+        added, _ = collect_matches([fixture], self.index, fetch=lambda _: self.event)
+        evidence["matches"].extend(added["matches"])
+        profiles = {**self.profiles, "7271": {"resolved_name": "Gorbacewicz Emil"}}
+        index, pending = extend(self.index, [fixture], profiles, fetch=lambda _: self.event)
+        self.assertFalse(pending["pending"])
+        db = self.build({"league_updates.json": league, "match_player_evidence.json": evidence,
+                         "match_protocol_audit_index.json": index})
+        player = next(p for p in db["players"] if p["id"] == "7271")
+        self.assertEqual((player["apps"], player["goals"]), (11, 2))
+        self.assertIsNone(player["bosch_totals"])
 
 
 if __name__ == "__main__":

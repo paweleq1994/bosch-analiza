@@ -1,0 +1,187 @@
+{
+  "captured_at": "2026-10-19T13:14:05.766300+00:00",
+  "scope": "Known missing public player profiles; no authentication or access-control bypass",
+  "profiles": [
+    {
+      "id": "10321",
+      "name": "Ciborowski Julian",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/10321",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=10321",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "10604",
+      "name": "Śmiłowski Michał",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/10604",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=10604",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7266",
+      "name": "Bazyluk Jakub",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7266",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7266",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7270",
+      "name": "Gołąbeski Piotr",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7270",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7270",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7271",
+      "name": "Gorbacewicz Emil",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7271",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7271",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7278",
+      "name": "Kossakowski Maciej",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7278",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7278",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7282",
+      "name": "Markowski Damian",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7282",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7282",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7285",
+      "name": "Sołowiej Tomasz",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7285",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7285",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "7286",
+      "name": "Uściłowski Krzysztof",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7286",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=7286",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "8655",
+      "name": "Kuźma Gabriel",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8655",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=8655",
+          "http_status": 404
+        }
+      ]
+    },
+    {
+      "id": "8916",
+      "name": "Wądołowski Sebastian",
+      "checks": [
+        {
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8916",
+          "http_status": 401
+        },
+        {
+          "url": "https://podlaskaliga.pl/?post_type=sp_player&p=8916",
+          "http_status": 404
+        }
+      ]
+    }
+  ],
+  "alltime_list": {
+    "url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+    "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/lists/1837",
+    "checked_missing_ids": [
+      "10321",
+      "10604",
+      "7266",
+      "7270",
+      "7271",
+      "7278",
+      "7282",
+      "7285",
+      "7286",
+      "8655",
+      "8916"
+    ],
+    "present_ids": []
+  },
+  "photo_discovery": {
+    "source": "data/media_discovery.json",
+    "last_scan_date": "2026-10-19",
+    "complete_media_archive_scan": true,
+    "scanned_media": 91,
+    "name_searches": 53,
+    "confirmed_portraits": 15,
+    "missing_portraits": 30
+  }
+}

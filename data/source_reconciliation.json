@@ -11,7 +11,73 @@
       "difference": 4,
       "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7272",
+          "name": "Jurkowicz Rafał",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7272",
+          "name": "Jurkowicz Rafał",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7272",
+          "name": "Jurkowicz Rafał",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7272",
@@ -22,7 +88,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7272",
+          "name": "Jurkowicz Rafał",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1960",
@@ -33,7 +123,90 @@
       "difference": 7,
       "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "apps",
+          "html": 3,
+          "rest": 0,
+          "difference": 3,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1960",
@@ -44,7 +217,48 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1960",
@@ -55,7 +269,27 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1960",
+          "name": "Moskal Paweł",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "assists",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7284",
@@ -66,7 +300,73 @@
       "difference": 4,
       "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7284",
+          "name": "Rutkowski Mateusz (GK)",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7284",
+          "name": "Rutkowski Mateusz (GK)",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7284",
+          "name": "Rutkowski Mateusz (GK)",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7284",
@@ -77,7 +377,15 @@
       "difference": -1,
       "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
       "type": "displayed_career_disagrees_with_html",
-      "note": "This source difference requires investigation"
+      "note": "Canonical career includes the separately documented duplicate profile",
+      "status": "explained_verified_identity_merge",
+      "identity_contributions": [
+        {
+          "id": "13060",
+          "value": 1,
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/13060"
+        }
+      ]
     },
     {
       "id": "7284",
@@ -88,7 +396,15 @@
       "difference": -1,
       "url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
       "type": "displayed_career_disagrees_with_html",
-      "note": "This source difference requires investigation"
+      "note": "Canonical career includes the separately documented duplicate profile",
+      "status": "explained_verified_identity_merge",
+      "identity_contributions": [
+        {
+          "id": "13060",
+          "value": 1,
+          "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/13060"
+        }
+      ]
     },
     {
       "id": "7277",
@@ -99,7 +415,52 @@
       "difference": 3,
       "url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7277",
+          "name": "Klepacki Przemysław",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7277",
+          "name": "Klepacki Przemysław",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7277",
@@ -110,7 +471,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7277",
+          "name": "Klepacki Przemysław",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7275",
@@ -121,7 +506,52 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7275",
+          "name": "Jurkowicz Mateusz",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "7275",
+          "name": "Jurkowicz Mateusz",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7275",
@@ -132,7 +562,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7275",
+          "name": "Jurkowicz Mateusz",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7283",
@@ -143,7 +597,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7283",
+          "name": "Nowicki Patryk",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7283",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7283",
@@ -154,7 +632,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7283",
+          "name": "Nowicki Patryk",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7283",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1970",
@@ -165,7 +667,69 @@
       "difference": 6,
       "url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1970",
+          "name": "Wnuszyński Karol",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "apps",
+          "html": 3,
+          "rest": 0,
+          "difference": 3,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1970",
+          "name": "Wnuszyński Karol",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1970",
+          "name": "Wnuszyński Karol",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1970",
@@ -176,7 +740,27 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1970",
+          "name": "Wnuszyński Karol",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "8914",
@@ -187,7 +771,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "8914",
+          "name": "Kadłubowski Krzysztof",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8914",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7276",
@@ -198,7 +806,31 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7276",
+          "name": "Karolczuk Patryk",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7276",
@@ -209,7 +841,31 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7276",
+          "name": "Karolczuk Patryk",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "goals",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7276",
@@ -220,7 +876,31 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7276",
+          "name": "Karolczuk Patryk",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "assists",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "7280",
@@ -231,7 +911,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7280",
+          "name": "Malinowski Piotr",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7280",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "4577",
@@ -242,7 +946,111 @@
       "difference": 8,
       "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "apps",
+          "html": 2,
+          "rest": 0,
+          "difference": 2,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "Orlik 2024",
+          "season_ids": [
+            "139"
+          ],
+          "rest_teams": [
+            "CEDC Polmos Białystok"
+          ],
+          "field": "apps",
+          "html": 7,
+          "rest": 6,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "same_season_source_variance",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "CEDC Polmos Białystok"
+          ],
+          "field": "apps",
+          "html": 3,
+          "rest": 0,
+          "difference": 3,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "Hala 2024/2025",
+          "season_ids": [
+            "141"
+          ],
+          "rest_teams": [
+            "CEDC Polmos Białystok"
+          ],
+          "field": "apps",
+          "html": 11,
+          "rest": 10,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "same_season_source_variance",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "source_variance_requires_review"
     },
     {
       "id": "4577",
@@ -253,7 +1061,48 @@
       "difference": 2,
       "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "4577",
+          "name": "Kuźma Piotr",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "CEDC Polmos Białystok"
+          ],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "12287",
@@ -264,7 +1113,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "12287",
+          "name": "Mironiuk Zbigniew",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/12287",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "8654",
@@ -275,7 +1148,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "8654",
+          "name": "Bączek Szymon",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "8654",
@@ -286,7 +1183,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "8654",
+          "name": "Bączek Szymon",
+          "season": "Superpuchar 2024",
+          "season_ids": [
+            "140"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "red",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "2204",
@@ -297,7 +1218,73 @@
       "difference": 3,
       "url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "2204",
+          "name": "Dawid Daniluk",
+          "season": "2021 - Lato",
+          "season_ids": [
+            "104"
+          ],
+          "rest_teams": [
+            "Znienacka"
+          ],
+          "field": "apps",
+          "html": 2,
+          "rest": 1,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+          "reason": "same_season_source_variance",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "2204",
+          "name": "Dawid Daniluk",
+          "season": "2021 - Superpuchar",
+          "season_ids": [
+            "105"
+          ],
+          "rest_teams": [
+            "Znienacka"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "2204",
+          "name": "Dawid Daniluk",
+          "season": "Superpuchar 2023",
+          "season_ids": [
+            "127"
+          ],
+          "rest_teams": [
+            "PTH Maltrans"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "source_variance_requires_review"
     },
     {
       "id": "2204",
@@ -308,18 +1295,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
-    },
-    {
-      "id": "7223",
-      "name": "Grabowski Jakub (GK)",
-      "field": "apps",
-      "html": 19,
-      "rest": 17,
-      "difference": 2,
-      "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
-      "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "2204",
+          "name": "Dawid Daniluk",
+          "season": "2021 - Superpuchar",
+          "season_ids": [
+            "105"
+          ],
+          "rest_teams": [
+            "Znienacka"
+          ],
+          "field": "assists",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "1594",
@@ -330,7 +1330,48 @@
       "difference": 4,
       "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1594",
+          "name": "Kakareko Kamil",
+          "season": "2021 - Lato",
+          "season_ids": [
+            "104"
+          ],
+          "rest_teams": [
+            "4Technology"
+          ],
+          "field": "apps",
+          "html": 4,
+          "rest": 3,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+          "reason": "same_season_source_variance",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        },
+        {
+          "id": "1594",
+          "name": "Kakareko Kamil",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "apps",
+          "html": 3,
+          "rest": 0,
+          "difference": 3,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "source_variance_requires_review"
     },
     {
       "id": "1594",
@@ -341,7 +1382,31 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "1594",
+          "name": "Kakareko Kamil",
+          "season": "2021 - Lato",
+          "season_ids": [
+            "104"
+          ],
+          "rest_teams": [
+            "4Technology"
+          ],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+          "reason": "same_season_source_variance",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "source_variance_requires_review"
     },
     {
       "id": "2203",
@@ -352,7 +1417,27 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "2203",
+          "name": "Bayer Emilian",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
     },
     {
       "id": "2203",
@@ -363,9 +1448,1153 @@
       "difference": 1,
       "url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
       "type": "official_html_versus_sportspress_api",
-      "note": "Compare source competitions including Supercup before reconciling"
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "2203",
+          "name": "Bayer Emilian",
+          "season": "2021 - Superpuchar",
+          "season_ids": [],
+          "rest_teams": [],
+          "field": "goals",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": false,
+          "html_url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_supercup_scope"
+    },
+    {
+      "id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "field": "apps",
+      "html": 19,
+      "rest": 17,
+      "difference": 2,
+      "url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "type": "official_html_versus_sportspress_api",
+      "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
+      "season_breakdown": [
+        {
+          "id": "7223",
+          "name": "Grabowski Jakub (GK)",
+          "season": "Hala 2023/2024",
+          "season_ids": [
+            "126"
+          ],
+          "rest_teams": [
+            "Bosch Service Tech-Car"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7223",
+          "reason": "rest_below_official_match_minimum",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch",
+          "match_minimum": 1,
+          "match_source_urls": [
+            "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/"
+          ]
+        },
+        {
+          "id": "7223",
+          "name": "Grabowski Jakub (GK)",
+          "season": "Superpuchar 2025",
+          "season_ids": [
+            "145"
+          ],
+          "rest_teams": [
+            "ZPS Biaform SA"
+          ],
+          "field": "apps",
+          "html": 1,
+          "rest": 0,
+          "difference": 1,
+          "html_row_present": true,
+          "rest_row_present": true,
+          "html_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+          "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7223",
+          "reason": "supercup_source_scope",
+          "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+        }
+      ],
+      "status": "explained_source_rows_and_match_evidence"
     }
   ],
+  "career_season_differences": [
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7272",
+      "name": "Jurkowicz Rafał",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-rafal/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7272",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "apps",
+      "html": 3,
+      "rest": 0,
+      "difference": 3,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "assists",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1960",
+      "name": "Moskal Paweł",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/moskal-pawel/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1960",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7284",
+      "name": "Rutkowski Mateusz (GK)",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/rutkowski-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7284",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7277",
+      "name": "Klepacki Przemysław",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7277",
+      "name": "Klepacki Przemysław",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7277",
+      "name": "Klepacki Przemysław",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/klepacki-przemyslaw/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7277",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7275",
+      "name": "Jurkowicz Mateusz",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7275",
+      "name": "Jurkowicz Mateusz",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7275",
+      "name": "Jurkowicz Mateusz",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/jurkowicz-mateusz/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7275",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7283",
+      "name": "Nowicki Patryk",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7283",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7283",
+      "name": "Nowicki Patryk",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/nowicki-patryk/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7283",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "apps",
+      "html": 3,
+      "rest": 0,
+      "difference": 3,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1970",
+      "name": "Wnuszyński Karol",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/wnuszynski-karol/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1970",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "8914",
+      "name": "Kadłubowski Krzysztof",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kadlubowski-krzysztof/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8914",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "goals",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7276",
+      "name": "Karolczuk Patryk",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "assists",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/karolczuk-patryk/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7276",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7280",
+      "name": "Malinowski Piotr",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/malinowski-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7280",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "apps",
+      "html": 2,
+      "rest": 0,
+      "difference": 2,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "Orlik 2024",
+      "season_ids": [
+        "139"
+      ],
+      "rest_teams": [
+        "CEDC Polmos Białystok"
+      ],
+      "field": "apps",
+      "html": 7,
+      "rest": 6,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "same_season_source_variance",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "CEDC Polmos Białystok"
+      ],
+      "field": "apps",
+      "html": 3,
+      "rest": 0,
+      "difference": 3,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "CEDC Polmos Białystok"
+      ],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "Hala 2024/2025",
+      "season_ids": [
+        "141"
+      ],
+      "rest_teams": [
+        "CEDC Polmos Białystok"
+      ],
+      "field": "apps",
+      "html": 11,
+      "rest": 10,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "same_season_source_variance",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "4577",
+      "name": "Kuźma Piotr",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/4577",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "12287",
+      "name": "Mironiuk Zbigniew",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/mironiuk-zbigniew/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/12287",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "8654",
+      "name": "Bączek Szymon",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "8654",
+      "name": "Bączek Szymon",
+      "season": "Superpuchar 2024",
+      "season_ids": [
+        "140"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "red",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/baczek-szymon/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/8654",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "season": "2021 - Lato",
+      "season_ids": [
+        "104"
+      ],
+      "rest_teams": [
+        "Znienacka"
+      ],
+      "field": "apps",
+      "html": 2,
+      "rest": 1,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+      "reason": "same_season_source_variance",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "season": "2021 - Superpuchar",
+      "season_ids": [
+        "105"
+      ],
+      "rest_teams": [
+        "Znienacka"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "season": "2021 - Superpuchar",
+      "season_ids": [
+        "105"
+      ],
+      "rest_teams": [
+        "Znienacka"
+      ],
+      "field": "assists",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2204",
+      "name": "Dawid Daniluk",
+      "season": "Superpuchar 2023",
+      "season_ids": [
+        "127"
+      ],
+      "rest_teams": [
+        "PTH Maltrans"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/daniluk-dawid/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2204",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1594",
+      "name": "Kakareko Kamil",
+      "season": "2021 - Lato",
+      "season_ids": [
+        "104"
+      ],
+      "rest_teams": [
+        "4Technology"
+      ],
+      "field": "apps",
+      "html": 4,
+      "rest": 3,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+      "reason": "same_season_source_variance",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1594",
+      "name": "Kakareko Kamil",
+      "season": "2021 - Lato",
+      "season_ids": [
+        "104"
+      ],
+      "rest_teams": [
+        "4Technology"
+      ],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+      "reason": "same_season_source_variance",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "1594",
+      "name": "Kakareko Kamil",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "apps",
+      "html": 3,
+      "rest": 0,
+      "difference": 3,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/kamil-kakarenko/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/1594",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2203",
+      "name": "Bayer Emilian",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "2203",
+      "name": "Bayer Emilian",
+      "season": "2021 - Superpuchar",
+      "season_ids": [],
+      "rest_teams": [],
+      "field": "goals",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": false,
+      "html_url": "https://podlaskaliga.pl/zawodnik/bayer-emilian/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/2203",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    },
+    {
+      "id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "season": "Hala 2023/2024",
+      "season_ids": [
+        "126"
+      ],
+      "rest_teams": [
+        "Bosch Service Tech-Car"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7223",
+      "reason": "rest_below_official_match_minimum",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch",
+      "match_minimum": 1,
+      "match_source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "season": "Superpuchar 2025",
+      "season_ids": [
+        "145"
+      ],
+      "rest_teams": [
+        "ZPS Biaform SA"
+      ],
+      "field": "apps",
+      "html": 1,
+      "rest": 0,
+      "difference": 1,
+      "html_row_present": true,
+      "rest_row_present": true,
+      "html_url": "https://podlaskaliga.pl/zawodnik/grabowski-jakub/",
+      "rest_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/players/7223",
+      "reason": "supercup_source_scope",
+      "resolution": "Retain official HTML whole-career value; do not add this difference to Bosch"
+    }
+  ],
+  "career_difference_status_counts": {
+    "explained_source_rows_and_match_evidence": 1,
+    "explained_supercup_scope": 26,
+    "explained_verified_identity_merge": 2,
+    "source_variance_requires_review": 4
+  },
   "season_source_conflicts": [],
   "missing_full_careers": [
     {
@@ -449,6 +2678,25 @@
       ]
     },
     {
+      "id": "10321",
+      "name": "Ciborowski Julian",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
+      ]
+    },
+    {
+      "id": "10604",
+      "name": "Śmiłowski Michał",
+      "reason": "No public fully enumerated PLP career table",
+      "source_urls": [
+        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
+      ]
+    },
+    {
       "id": "7266",
       "name": "Bazyluk Jakub",
       "reason": "No public fully enumerated PLP career table",
@@ -473,25 +2721,6 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
         "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
         "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "10321",
-      "name": "Ciborowski Julian",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
-        "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
-        "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/"
-      ]
-    },
-    {
-      "id": "10604",
-      "name": "Śmiłowski Michał",
-      "reason": "No public fully enumerated PLP career table",
-      "source_urls": [
-        "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
       ]
     },
     {

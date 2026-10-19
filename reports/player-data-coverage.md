@@ -18,12 +18,12 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 0 | 0 | 0 |
+| Występy | 0 | 4 | 0 |
 | Bramki | 0 | 0 | 0 |
-| Asysty | 0 | 0 | 0 |
+| Asysty | 0 | 1 | 0 |
 | MVP | 0 | 0 | 0 |
-| Żółte kartki | 0 | 0 | 0 |
-| Czerwone kartki | 0 | 0 | 0 |
+| Żółte kartki | 0 | 1 | 0 |
+| Czerwone kartki | 0 | 1 | 0 |
 
 ## Bez potwierdzonego zdjęcia indywidualnego
 
@@ -88,7 +88,13 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
-Brak.
+- Gorbacewicz Emil (PLP ID 7271): Występy — 1
+- Gorbacewicz Emil (PLP ID 7271): Asysty — 1
+- Gołąbeski Piotr (PLP ID 7270): Występy — 2
+- Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
+- Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
+- Kossakowski Maciej (PLP ID 7278): Występy — 1
+- Sołowiej Tomasz (PLP ID 7285): Występy — 1
 
 ## Nieznane dane sezonowe
 

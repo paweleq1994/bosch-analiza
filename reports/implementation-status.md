@@ -1,6 +1,6 @@
 # Stan wdrożenia kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `06d525ae8fd9e71a55bd43d9c09f1a0089d3d02d` (merge PR #54).
+Ostatni sprawdzony main: `d2b28ef9800d64f6b04c44198e719b348aa4f7dd` (merge PR #55).
 Repozytorium lokalne zaktualizowano przez fast-forward z `94402f0`; przed pracą było czyste.
 Gałąź kontynuacji: `codex/fix-publication-and-complete-audit`.
 Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło brak otwartych PR-ów.
@@ -9,11 +9,11 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 
 | Punkt | Stan na sprawdzonym main | Dowód | Pozostały zakres |
 |---|---|---|---|
-| 1 | Poprawka gotowa | `test_future_season_pipeline.py`: 9/10 sezonów, 114/115 meczów, test liderów Node | Usunięty pozostały limit protokołów; nowe sumy, kartki, ID tabeli/ligi i chronologia; oczekuje na PR/CI |
+| 1 | Wdrożone i przetestowane | PR #55, `test_future_season_pipeline.py`: 9/10 sezonów, 114/115 meczów, test liderów Node | Bieżący oficjalny endpoint nie ogłasza nowszego sezonu |
 | 2 | Wdrożony importer | `sync_new_goal_protocols.py`, `test_new_goal_protocols.py` | Sprawdzić razem z nowym sezonem, zachować pending zamiast zer |
 | 3 | Wdrożone + regresja przyszłych ID | `test_future_season_pipeline.py` | Nieznany ID 99999 trafia do audytu, protokół pending; brak fikcyjnego profilu |
-| 4 | Audyt działa; interpretacja częściowa | `source-reconciliation.md`: 33 różnice, 0 sprzeczności; `player-source-reconciliation.md` | Sprawdzić 7 nieprzypisanych pól u 4 zawodników; wyjaśnić różnice zakresów bez dopisywania statystyk |
-| 5 | 34 pełne kariery, 11 niepełnych | `player-data-coverage.md`, `sync_public_player_careers.py` | Dodatkowe publiczne źródła; brak pełnej kariery zachować jako minimum |
+| 4 | Rozliczone 29/33 porównań źródeł | `source-reconciliation.md`: 26 zakresów Superpucharu, 2 scalone ID, 1 występ potwierdzony protokołem | 4 różnice agregatów (5 pól sezonowych) bez dowodu przyczyny; 7 nieprzypisanych pól u 4 osób pozostaje bez publicznej tabeli |
+| 5 | Ograniczenie źródłowe: 34 pełne, 11 niepełnych | `source_access_audit.json`: wszystkie 11 ID REST 401, publiczny post 404; brak w 1187 URL zawodników i all-time 1837 | Bez potwierdzonego archiwum dawnych klubów nie można uznać minimum za całą karierę |
 | 6 | 15 zdjęć, 30 braków | `media_discovery.json`, `test_historic_team_photo_leads.py` | Sprawdzić dostępne metadane WordPress; zdjęcia klubowe pozostają kandydatami |
 | 7 | Wdrożone | PR #30, Pages z `docs/` | Zweryfikować rzeczywiste wdrożenie po zmianach |
 | 8 | Wdrożone | PR #37, `frontend_rivals_quality.cjs` | Brak wykazanego defektu |
@@ -27,7 +27,7 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 16 | Wdrożone | PR #38, `frontend_player_trends.cjs` | Brak wykazanego defektu |
 | 17 | Wdrożone | PR #29, `frontend_match_boxscores.cjs` | Sprawdzić semantykę kompletności w nowych sezonach |
 | 18 | Częściowo | PR #34, `frontend_historical_form.cjs` | Analiza połów wyłącznie z oficjalnego HT |
-| 19 | Zweryfikowane dla przyszłego sezonu | `frontend_all_tables_sort.cjs`: lider Orlik 2027; test chronologii Hala 2027/2028 | Oczekuje na PR/CI poprawki wzrostu |
+| 19 | Wdrożone dla przyszłego sezonu | PR #55; lider Orlik 2027; chronologia Hala 2027/2028 | Brak wykazanego defektu |
 | 20 | Publikacja naprawiona i wdrożona | PR #54; run 39257253261 = success | Dokumentacja i końcowy audyt |
 
 ## Ponownie przeliczone metryki
@@ -36,6 +36,7 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 - 293 bramki drużyny, 0 nierozliczonych; 6 samobójów Boscha.
 - 988 występów w protokołach; 0 nierozpoznanych ID w bieżącym backfillu.
 - 34 pełniejsze publiczne kariery PLP, 11 niepełnych; 33 różnice HTML/API/widok i 0 sezonowych sprzeczności.
+- 29 porównań źródeł wyjaśnionych (26 Superpuchary, 2 profile Rutkowskiego, 1 Grabowski/protokół 9486); 4 wymagają dalszej weryfikacji źródła.
 - 15 potwierdzonych zdjęć, 30 braków.
 - 112 filmów; 48 meczów z filmem, 65 bez; 10 materiałów nieprzypisanych.
 - 0 potwierdzonych znaczników goli; 158 goli w kolejce.
@@ -56,13 +57,16 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 - PLP homepage i zespół REST 6951 dostępne; ostatni mecz 17.10 (Juan Pablo 4:3) jest już w snapshotcie. Lista 12 sezonów drużyny obejmuje 8 ligowych i 4 Superpuchary; brak nowszego sezonu na tym endpointcie.
 - Powtórny audyt istniejącym crawlerem: 26 sitemap, 4559 URL, 0 nowych profili, 11 nadal niepotwierdzonych. Sitemapy WordPress dostępne HTTP 200; alternatywne `sitemap_index.xml` i `player-sitemap.xml` zwracają 404.
 - Użytkownik zalogował zwykłą sesję GitHub; tworzenie i scalanie PR przez UI jest dostępne.
+- Każde z 11 brakujących ID: REST **401**, publiczny adres WordPress z ID **404**. Żadnego z tych ID nie ma w oficjalnej liście all-time 1837. Wyniki z datą i URL zapisane w `data/source_access_audit.json`.
+- 4 pozostałe różnice agregatów: Kuźma Piotr 4577 — występy Orlik 2024 7/6 i Hala 2024/2025 11/10 (CEDC Polmos, nie Bosch); Daniluk 2204 — Lato 2021 2/1; Kakareko 1594 — Lato 2021 mecze 4/3 i gole 1/0. Zachowano HTML jako całą karierę, bez dodawania różnic do Boscha.
+- 7 nieprzypisanych pól historycznych (Gorbacewicz, Gołąbeski, Kossakowski, Sołowiej) nie ma nowych publicznych dowodów sezonu; nie dopasowywać ich przez odejmowanie minimów od agregatu.
 - Automatyczna kontrola odrzuciła odczyt tokenu z menedżera Git do osobnych żądań API; nie ponawiać tego mechanizmu.
 
 ## Następne działanie
 
 Poprawka P0 gotowa: osobna kontrola każdego raportu, zapis kolejki timestampów w commicie i brakujące triggery publikacji. Dwie nowe regresje wykonują Bash oraz rzeczywiste `git add` w tymczasowym repozytorium. **157 testów Python, 14 testów frontendowych, wszystkie generatory i audyty offline, walidacje portalu/scoutingu, compileall i składnia JS OK**. Archiwum bez zmian. Pełny przebieg poza sandboxem zakończony poprawnie.
 
-Nowa poprawka wzrostu archiwum: odtworzono awarię 114. protokołu oraz sum sezonowych ponad stary bilans. Poprawiono te przyczyny, odczyt oznaczeń minut przy golach, zachowanie kartek i źródeł agregatu, identyfikatory tabel/lig, kolejność sezonów i audyt przyszłych nieznanych ID. **160 testów Python i 14 frontendowych OK**, bieżący snapshot bez zmiany. Otworzyć PR i wdrożyć. Następnie rozliczenie źródeł, multimedia, HT i README. Nie powtarzać wdrożonych importerów ani mechanizmu timestampów.
+PR #55 wdrożony. Rozszerzony istniejący audyt rozlicza teraz 33 różnice według sezonu, źródła, zakresu i potwierdzonych aliasów; nie modyfikuje statystyk zawodników. Po wdrożeniu tego audytu naprawić potwierdzone błędne przypisanie filmu Vesta `hcfb9Ttmswo` do hali (oficjalne wydarzenie 7814, hala VI LO; oglądana klatka pokazuje boisko odkryte), sprawdzić odrzucanie ręcznych przypisań, dokończyć HT i README.
 
 ## Nowe PR-y i wdrożenia
 
@@ -70,3 +74,10 @@ Nowa poprawka wzrostu archiwum: odtworzono awarię 114. protokołu oraz sum sezo
 - CI PR: run 39256972857 success; CI main 39257253186 success.
 - Naprawiona publikacja XLSX/raportów: **39257253261 success**.
 - GitHub Pages: **39257252401 success**.
+- **PR #55 — scalony**, commit `aaded26`, merge `d2b28ef`.
+- CI PR 39257687591 success; CI main 39258031399 success; publikacja 39258031372 success; Pages 39258030661 success.
+- Synchronizacja po #55: run 39258031384 trwa; wynik wymaga końcowego sprawdzenia.
+
+## Weryfikacja po pełnej synchronizacji PLP
+
+Synchronizacja #55 opublikowała commit `ea3c315`, wypełniając historyczne agregaty meczowe. Pełne testy ujawniły zastępowanie bogatszych starych bilansów tymi agregatami (m.in. Gołąbeski 13→11 występów i utrata aliasu Kakareki). Poprawiono przyczynę: historyczne, nierosnące sezony nadal przechodzą istniejącą ścieżkę archiwum/profili/protokołów; dla graczy bez pełnego archiwum dodawane są tylko nowe, niezależne dane, z zachowaniem statusu minimum. Nowe testy obejmują częściowy bilans oraz dodanie meczu do istniejącego sezonu. Konflikt wygenerowanych raportów rozwiązano przez ponowne przeliczenie z najnowszych źródeł. Przed merge #56 wymagane ponowne pełne CI.
