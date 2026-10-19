@@ -95,6 +95,120 @@
       "verified_at": "2026-10-19",
       "review_notes": "Obejrzany krótki film pojedynczej akcji opisany wynikiem 2:4, opublikowany 05.03.2023 w tej samej hali VI LO. Przy 6,21 s zawodnik Boscha w bieli kończy strzał przed lewą bramką. Przy 8,19 s piłka jest przy siatce wewnątrz prawego słupka tej bramki, a bramkarz w niebieskim odwraca się do bramki. Czwarty gol Boscha w sekwencji wyniku odpowiada drugiemu trafieniu Tomasza Sołowieja i 26 minucie oficjalnego protokołu (pierwsze 24′). Powiązanie przez mecz i kolejność wyniku, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanej klatki zakończenia akcji, nie z przeliczenia minuty meczu.",
       "review_frame": "reports/evidence/goal7851-minute26-frame8.png"
+    },
+    {
+      "match_id": "10990",
+      "player_id": "7276",
+      "minute": "27",
+      "video_id": "s3iMR88rCKE",
+      "timestamp_seconds": 1826,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza i komentarza PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzana faza strzału Boscha przy prawej bramce: 1824,33 s rozegranie przy lewym boku, 1826,19 s atakujący w bieli przed interweniującym bramkarzem w niebieskim, 1829,07 s powrót graczy i piłka wybijana od bramki. Komentarz opisuje jedyny kontaktowy gol Boscha. Strzelec Karolczuk i PLP 27′ wynikają z protokołu; czas 1826 pochodzi z obejrzanej fazy akcji, nie z przeliczenia minuty. Bez deklaracji klatki przecięcia linii.",
+      "review_frame": "reports/evidence/goal10990-minute27-frame1826.png"
+    },
+    {
+      "match_id": "8255",
+      "player_id": "7285",
+      "minute": "11",
+      "video_id": "PWnZ2yifLNI",
+      "timestamp_seconds": 1126,
+      "verification_source": "broadcast_commentary_captions",
+      "verified_by": "Codex — odczyt napisów oficjalnej transmisji PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Wyrównanie na 1:1; pierwszy gol Boscha, Sołowiej 11′. Link prowadzi do komentarza gola w napisach automatycznych oficjalnej transmisji. Nie jest oznaczeniem czytelnej klatki piłki w siatce; sekunda została odczytana z napisów, nie wyliczona z minuty meczu.",
+      "subtitle_evidence": {
+        "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+        "at_seconds": 1126,
+        "captions": "auto-generated",
+        "language": "pl",
+        "text": "i Tomasz sołowiej wyrównuje w 11 minucie"
+      }
+    },
+    {
+      "match_id": "8255",
+      "player_id": "7285",
+      "minute": "35",
+      "video_id": "PWnZ2yifLNI",
+      "timestamp_seconds": 2831,
+      "verification_source": "broadcast_commentary_captions",
+      "verified_by": "Codex — odczyt napisów oficjalnej transmisji PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Komentarz dubletu Sołowieja i objęcia prowadzenia 2:1; drugi gol Boscha, PLP 35′. Link prowadzi do komentarza gola w napisach automatycznych oficjalnej transmisji. Nie jest oznaczeniem czytelnej klatki piłki w siatce; sekunda została odczytana z napisów, nie wyliczona z minuty meczu.",
+      "subtitle_evidence": {
+        "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+        "at_seconds": 2831,
+        "captions": "auto-generated",
+        "language": "pl",
+        "text": "Tomasz sołowiej dublet tego gracza i na"
+      }
+    },
+    {
+      "match_id": "8255",
+      "player_id": "7276",
+      "minute": "37",
+      "video_id": "PWnZ2yifLNI",
+      "timestamp_seconds": 2949,
+      "verification_source": "broadcast_commentary_captions",
+      "verified_by": "Codex — odczyt napisów oficjalnej transmisji PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Komentarz wyniku 3:1 po kontrze; jedyny pozostały gol Boscha w protokole należy do Karolczuka, PLP 37′. Link prowadzi do komentarza gola w napisach automatycznych oficjalnej transmisji. Nie jest oznaczeniem czytelnej klatki piłki w siatce; sekunda została odczytana z napisów, nie wyliczona z minuty meczu.",
+      "subtitle_evidence": {
+        "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+        "at_seconds": 2949,
+        "captions": "auto-generated",
+        "language": "pl",
+        "text": "3:1 i wydaje się że wszystko w tym meczu"
+      }
+    },
+    {
+      "match_id": "11798",
+      "player_id": "10836",
+      "minute": "32",
+      "video_id": "8mVCFD11ZGo",
+      "timestamp_seconds": 2482,
+      "verification_source": "broadcast_commentary_captions",
+      "verified_by": "Codex — odczyt napisów oficjalnej transmisji PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Komentarz wskazuje główkę Huberta Karpińskiego i wyrównanie na 1:1, zgodne z jedynym golem Boscha i PLP 32′. Link prowadzi do komentarza gola w napisach automatycznych oficjalnej transmisji. Nie jest oznaczeniem czytelnej klatki piłki w siatce; sekunda została odczytana z napisów, nie wyliczona z minuty meczu.",
+      "subtitle_evidence": {
+        "video_url": "https://www.youtube.com/watch?v=8mVCFD11ZGo",
+        "at_seconds": 2482,
+        "captions": "auto-generated",
+        "language": "pl",
+        "text": "głową Hubert Karpiński. 1:1. 32 minuta."
+      }
+    },
+    {
+      "match_id": "10145",
+      "player_id": "7272",
+      "minute": "39",
+      "video_id": "jbsK8wBM8UM",
+      "timestamp_seconds": 2823,
+      "verification_source": "broadcast_commentary_captions",
+      "verified_by": "Codex — odczyt napisów oficjalnej transmisji PLP",
+      "verified_at": "2026-10-19",
+      "review_notes": "Komentarz wskazuje gola Rafała Jurkowicza na 4:3, drugi jego gol w protokole, PLP 39′. Akcja w tym momencie jest poza kadrem. Link prowadzi do komentarza gola w napisach automatycznych oficjalnej transmisji. Nie jest oznaczeniem czytelnej klatki piłki w siatce; sekunda została odczytana z napisów, nie wyliczona z minuty meczu.",
+      "subtitle_evidence": {
+        "video_url": "https://www.youtube.com/watch?v=jbsK8wBM8UM",
+        "at_seconds": 2823,
+        "captions": "auto-generated",
+        "language": "pl",
+        "text": "strzelenie jest gol Rafał"
+      }
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7285",
+      "minute": "24",
+      "video_id": "QXRjrPldpi0",
+      "timestamp_seconds": 14,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzany krótki film opisany wynikiem 1:3, w tej samej hali VI LO. Przy 12,19 s widać końcowe dogranie przy lewym polu bramkowym; przy 14,16 s piłka jest przy dolnej siatce bramki, bramkarz w niebieskim odwraca się do niej, a zawodnicy Boscha wracają od bramki. Trzeci gol Boscha odpowiada pierwszemu trafieniu Sołowieja i PLP 24′. Powiązanie przez tytuł, mecz i kolejność wyniku, bez rozpoznawania twarzy. Link wskazuje obejrzaną fazę zakończenia akcji, bez deklaracji klatki przecięcia linii.",
+      "review_frame": "reports/evidence/goal7851-minute24-frame14.png"
     }
   ]
 }

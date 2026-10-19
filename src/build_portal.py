@@ -20,6 +20,7 @@ from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 from sync_videos import iso_date
+from public_protocol_careers import review_public_protocols
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -420,7 +421,7 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols", "plp_untagged_protocol"}:
                 verified_stats["origin"] = stats["origin"]
             for key in ("match_performance_verified", "match_performance_sources", "source_url", "captured_at"):
                 if key in stats:
@@ -579,6 +580,15 @@ def main() -> None:
         ):
             player["stats_source"] = "Historyczne zestawienia PLP i Bosch, niepełny podział sezonów"
 
+    public_protocol_reviews = review_public_protocols(load("source-evidence/public-career-protocol-review-20261019.json", {}))
+    for player in historic_players:
+        review = public_protocol_reviews.get(str(player["id"]))
+        if review:
+            player["public_protocol_review"] = review
+            for field, value in review["bosch_totals"].items():
+                if type(player.get(field)) is int:
+                    player[field] = max(player[field], value)
+
     match_protocol_summary = integrate_match_protocols(
         historic_players,
         matches,
@@ -692,7 +702,7 @@ def main() -> None:
             season_stats[SEASON_2026] = player["orlik2026"]
         history = []
         for sid, stat in details.items():
-            if str(sid) in ("119","127","140","145") and (stat.get("apps") or 0)>0:
+            if (str(sid) in ("119","127","140","145") or stat.get("origin") == "plp_untagged_protocol") and (stat.get("apps") or 0)>0:
                 history.append({"sid":str(sid),"name":stat.get("name") or ("Superpuchar "+str(sid)),
                     "apps":stat.get("apps"),"goals":stat.get("goals"),
                     "assists":stat.get("assists"),"motm":stat.get("motm"),

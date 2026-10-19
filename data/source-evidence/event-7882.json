@@ -1,0 +1,459 @@
+{
+  "id": 7882,
+  "date": "2023-03-26T14:00:49",
+  "date_gmt": "2023-03-26T12:00:49",
+  "guid": {
+    "rendered": "https://podlaskaliga.pl/?post_type=sp_event&#038;p=7882"
+  },
+  "modified": "2023-03-26T14:55:23",
+  "modified_gmt": "2023-03-26T12:55:23",
+  "slug": "mecz-barazowy",
+  "status": "publish",
+  "type": "sp_event",
+  "link": "https://podlaskaliga.pl/wydarzenie/mecz-barazowy/",
+  "title": {
+    "rendered": "MECZ BARAŻOWY"
+  },
+  "content": {
+    "rendered": "",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "",
+    "protected": false
+  },
+  "author": 5,
+  "featured_media": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "leagues": [],
+  "seasons": [],
+  "venues": [
+    109
+  ],
+  "class_list": [
+    "post-7882",
+    "sp_event",
+    "type-sp_event",
+    "status-publish",
+    "hentry",
+    "sp_venue-hala-vi-liceum-ogolnoksztalcacego-w-bialymstoku"
+  ],
+  "teams": [
+    4383,
+    6951
+  ],
+  "main_results": [
+    "2",
+    "1"
+  ],
+  "outcome": {
+    "4383": "win",
+    "6951": "loss"
+  },
+  "winner": 4383,
+  "day": "",
+  "minutes": "40",
+  "players": [
+    0,
+    6020,
+    4446,
+    4447,
+    4448,
+    4452,
+    6767,
+    4454,
+    4455,
+    4470,
+    4701,
+    0,
+    7269,
+    7275,
+    7272,
+    1960,
+    7283,
+    7284,
+    7285,
+    1970
+  ],
+  "offense": [],
+  "defense": [],
+  "staff": [
+    0,
+    0
+  ],
+  "results": {
+    "4383": {
+      "goals": "2",
+      "firsthalf": "1",
+      "secondhalf": "1",
+      "fairplay": "-4",
+      "outcome": [
+        "win"
+      ]
+    },
+    "6951": {
+      "goals": "1",
+      "firsthalf": "0",
+      "secondhalf": "1",
+      "fairplay": "-2",
+      "outcome": [
+        "loss"
+      ]
+    },
+    "0": {
+      "goals": "Gole",
+      "firsthalf": "Pierwsza połowa",
+      "secondhalf": "Druga połowa",
+      "fairplay": "Fair Play",
+      "outcome": "Wynik"
+    }
+  },
+  "performance": {
+    "4383": {
+      "0": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "2",
+        "redcards": "",
+        "samobje": ""
+      },
+      "6020": {
+        "ocenabramkarza": "",
+        "goals": "1 (6')",
+        "assists": "",
+        "pikarzmeczu": "1",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4446": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4447": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4448": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4452": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "6767": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "1 (12')",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4454": {
+        "ocenabramkarza": "5",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4455": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4470": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "1 (30')",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "4701": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      }
+    },
+    "6951": {
+      "0": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "1",
+        "redcards": "",
+        "samobje": ""
+      },
+      "7269": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7275": {
+        "ocenabramkarza": "",
+        "goals": "1 (30')",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7272": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "1960": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "1",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "1 (25')",
+        "redcards": "",
+        "samobje": "1 (29')",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7283": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "7284": {
+        "ocenabramkarza": "4.5",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 10
+      },
+      "7285": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      },
+      "1970": {
+        "ocenabramkarza": "",
+        "goals": "",
+        "assists": "",
+        "pikarzmeczu": "",
+        "top": "",
+        "yellowcards": "",
+        "redcards": "",
+        "samobje": "",
+        "status": "lineup",
+        "sub": "0",
+        "number": "",
+        "position": 0
+      }
+    },
+    "0": {
+      "ocenabramkarza": "Ocena Bramkarza",
+      "goals": "Gole",
+      "assists": "Asysty",
+      "pikarzmeczu": "Piłkarz meczu",
+      "top": "Top6",
+      "samobje": "Samobóje",
+      "yellowcards": "Żółte kartki",
+      "redcards": "Czerwone kartki"
+    }
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/events/7882"
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/events"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/types/sp_event"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/users/5"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/comments?post=7882"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/media?parent=7882"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "sp_league",
+        "embeddable": true,
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/leagues?post=7882"
+      },
+      {
+        "taxonomy": "sp_season",
+        "embeddable": true,
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/seasons?post=7882"
+      },
+      {
+        "taxonomy": "sp_venue",
+        "embeddable": true,
+        "href": "https://podlaskaliga.pl/wp-json/wp/v2/venues?post=7882"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

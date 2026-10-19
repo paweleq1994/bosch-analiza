@@ -18,11 +18,11 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 0 | 1 | 0 |
+| Występy | 0 | 0 | 0 |
 | Bramki | 0 | 0 | 0 |
 | Asysty | 0 | 0 | 0 |
 | MVP | 0 | 0 | 0 |
-| Żółte kartki | 0 | 1 | 0 |
+| Żółte kartki | 0 | 0 | 0 |
 | Czerwone kartki | 0 | 0 | 0 |
 
 ## Bez potwierdzonego zdjęcia indywidualnego
@@ -86,8 +86,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
-- Gołąbeski Piotr (PLP ID 7270): Występy — 1
-- Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
+Brak.
 
 ## Nieznane dane sezonowe
 
@@ -104,3 +103,29 @@ Brak.
 - Rozbicie na sezony bez potwierdzenia jest zabronione.
 - Zdjęcia: wyłącznie oficjalne załączniki lub jednoznaczne dopasowanie do nazwiska; zdjęcia drużynowe nie potwierdzają tożsamości osoby.
 - PLP może blokować niektóre archiwalne profile (HTTP 401); zachowujemy wtedy wcześniejsze wartości i pokazujemy luki.
+
+
+## Minima kariery odtworzone z publicznych protokołów
+
+Pełne kariery pozostają niepotwierdzone. Przegląd całego publicznego API nie obejmuje usuniętych/prywatnych wydarzeń ani nieznanych innych identyfikatorów.
+
+| Zawodnik | M | G | A | MVP | ŻK | CK bezp. | Publiczne wydarzenia sprawdzone |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Sołowiej Tomasz | ≥33 | ≥22 | ≥13 | ≥3 | ≥1 | ≥0 | 2415 |
+| Gołąbeski Piotr | ≥13 | ≥1 | ≥1 | ≥1 | ≥4 | ≥1 | 2415 |
+| Gorbacewicz Emil | ≥10 | ≥0 | ≥3 | ≥0 | ≥2 | ≥0 | 2415 |
+| Markowski Damian | ≥6 | ≥2 | ≥1 | ≥0 | ≥0 | ≥0 | 2415 |
+| Kossakowski Maciej | ≥5 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+| Ciborowski Julian | ≥4 | ≥0 | ≥1 | ≥0 | ≥0 | ≥0 | 2415 |
+| Śmiłowski Michał | ≥1 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+| Bazyluk Jakub | ≥1 | ≥0 | ≥0 | ≥0 | ≥1 | ≥0 | 2415 |
+| Uściłowski Krzysztof | ≥2 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+| Kuźma Gabriel | ≥3 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+| Wądołowski Sebastian | ≥1 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+
+## Źródłowe protokoły bez oznaczenia sezonu
+
+Znane wartości przypisano do odrębnych protokołów. Nie nadano im fikcyjnego identyfikatora sezonu; nie rozszerzają 113 meczów ligowych.
+
+- Sołowiej Tomasz: 2023-03-26, MECZ BARAŻOWY — [protokół 7882](https://podlaskaliga.pl/wydarzenie/mecz-barazowy/).
+- Gołąbeski Piotr: 2024-03-23, Bosch Service Tech-Car vs Mają Rozmach — [protokół 10050](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach-2/).

@@ -1,0 +1,66 @@
+{
+  "reviewed_on": "2026-10-19",
+  "method": "Dated auto-caption excerpts from official PLP broadcasts; commentary cues remain visibly distinct from observed action frames.",
+  "entries": [
+    {
+      "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+      "at_seconds": 1126,
+      "captions": "auto-generated",
+      "language": "pl",
+      "text": "i Tomasz sołowiej wyrównuje w 11 minucie",
+      "video_id": "PWnZ2yifLNI",
+      "export_sha256": "2dfacd30f648cdc1f0e357f6581a2f06c93dce927cb0b0d29ec80f210ae9786d",
+      "match_id": "8255",
+      "player_id": "7285",
+      "minute": "11"
+    },
+    {
+      "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+      "at_seconds": 2831,
+      "captions": "auto-generated",
+      "language": "pl",
+      "text": "Tomasz sołowiej dublet tego gracza i na",
+      "video_id": "PWnZ2yifLNI",
+      "export_sha256": "2dfacd30f648cdc1f0e357f6581a2f06c93dce927cb0b0d29ec80f210ae9786d",
+      "match_id": "8255",
+      "player_id": "7285",
+      "minute": "35"
+    },
+    {
+      "video_url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+      "at_seconds": 2949,
+      "captions": "auto-generated",
+      "language": "pl",
+      "text": "3:1 i wydaje się że wszystko w tym meczu",
+      "video_id": "PWnZ2yifLNI",
+      "export_sha256": "2dfacd30f648cdc1f0e357f6581a2f06c93dce927cb0b0d29ec80f210ae9786d",
+      "match_id": "8255",
+      "player_id": "7276",
+      "minute": "37"
+    },
+    {
+      "video_url": "https://www.youtube.com/watch?v=8mVCFD11ZGo",
+      "at_seconds": 2482,
+      "captions": "auto-generated",
+      "language": "pl",
+      "text": "głową Hubert Karpiński. 1:1. 32 minuta.",
+      "video_id": "8mVCFD11ZGo",
+      "export_sha256": "7d7b0cfe2071ab0e3858cdae85bcb1dfbc7d7b5d79894dabe0c8d819a27edcb5",
+      "match_id": "11798",
+      "player_id": "10836",
+      "minute": "32"
+    },
+    {
+      "video_url": "https://www.youtube.com/watch?v=jbsK8wBM8UM",
+      "at_seconds": 2823,
+      "captions": "auto-generated",
+      "language": "pl",
+      "text": "strzelenie jest gol Rafał",
+      "video_id": "jbsK8wBM8UM",
+      "export_sha256": "5a8f0784aadd9f78a599bc0155e9dfd4ba0ba7578fef71aee1b09748385f7554",
+      "match_id": "10145",
+      "player_id": "7272",
+      "minute": "39"
+    }
+  ]
+}

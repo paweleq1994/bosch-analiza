@@ -29,7 +29,7 @@ def validate(database: dict, source: dict) -> list[dict]:
 
         if not VID.fullmatch(video_id) or type(timestamp) is not int or timestamp < 0:
             raise ValueError("Invalid video ID or playback timestamp")
-        if review_method not in {"observed_video_frame", "official_youtube_chapter"}:
+        if review_method not in {"observed_video_frame", "official_youtube_chapter", "broadcast_commentary_captions"}:
             raise ValueError("Goal timestamp has no verifiable review method")
         if len(verified_by) < 2 or not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", reviewed_at):
             raise ValueError("Goal timestamp requires an identified reviewer and date")
@@ -38,6 +38,14 @@ def validate(database: dict, source: dict) -> list[dict]:
         video = videos.get(video_id)
         if not match or not video or str(video.get("match_id")) != match_id:
             raise ValueError("Unlinked goal video and official fixture")
+        if review_method == "broadcast_commentary_captions":
+            caption = row.get("subtitle_evidence") or {}
+            if (video.get("review_category") != "official_match_broadcast"
+                    or caption.get("video_url") != f"https://www.youtube.com/watch?v={video_id}"
+                    or caption.get("at_seconds") != timestamp
+                    or len(str(caption.get("text") or "").strip()) < 5
+                    or caption.get("captions") != "auto-generated"):
+                raise ValueError("Commentary cue requires dated official broadcast caption evidence")
         protocol = match.get("goal_protocol") or {}
         if not protocol.get("verified"):
             raise ValueError("Cannot timestamp an unverified goal protocol")
@@ -74,6 +82,7 @@ def validate(database: dict, source: dict) -> list[dict]:
             "url": f"https://www.youtube.com/watch?v={video_id}&t={timestamp}s",
             "review_notes": str(row.get("review_notes") or ""),
             "review_frame": str(row.get("review_frame") or ""),
+            **({"subtitle_evidence": row["subtitle_evidence"]} if review_method == "broadcast_commentary_captions" else {}),
         })
 
     return verified
@@ -95,7 +104,7 @@ def report(database: dict, verified: list[dict]) -> str:
                     continue
                 links = " · ".join(
                     f"[{v.get('segment') or 'Nagranie'}](https://www.youtube.com/watch?v={v['video_id']})"
-                    for v in clips[:4]
+                    for v in clips
                 )
                 pending.append(
                     f"| [PLP {match['id']}]({match['goal_protocol']['source_url']}) | "
@@ -110,9 +119,9 @@ def report(database: dict, verified: list[dict]) -> str:
         f"Potwierdzone linki: **{len(proven)}**.",
         f"Niepotwierdzone gole w meczach z filmem: **{len(pending)}**.",
         "",
-        "## Obejrzane i potwierdzone akcje",
+        "## Zweryfikowane odnośniki do akcji lub komentarza gola",
         "",
-        "Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie przeliczenie minuty meczu.",
+        "Znacznik wskazuje obejrzaną fazę akcji albo jawnie oznaczony komentarz gola w oficjalnej transmisji. To czas odtwarzacza lub napisu, nie przeliczenie minuty meczu.",
         "",
         "| Mecz / zawodnik / minuta PLP | Sekunda filmu | Dowód przeglądu |",
         "|---|---:|---|",
@@ -132,8 +141,9 @@ def report(database: dict, verified: list[dict]) -> str:
         "Aby dodać bezpośredni link, zapisz w pliku data/video_goal_evidence.json",
         "identyfikatory meczu, zawodnika, filmu, minutę PLP, prawdziwy czas wideo",
         "w sekundach, metodę weryfikacji, osobę sprawdzającą i datę.",
-        "Dopuszczalne dowody: obejrzana klatka z golem lub jednoznaczny oficjalny",
-        "rozdział filmu YouTube. Samodzielne przeliczenie minut jest zabronione.",
+        "Dopuszczalne dowody: obejrzana akcja, jednoznaczny oficjalny rozdział lub",
+        "jawnie oznaczony komentarz gola w napisach oficjalnej transmisji. Komentarz",
+        "nie oznacza, że piłka lub strzał są czytelne w kadrze. Samodzielne przeliczenie minut jest zabronione.",
         "",
     ]
     return "\n".join(lines)

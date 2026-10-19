@@ -148,6 +148,23 @@ def build_workbook(database: dict) -> Workbook:
     for key, value in notes:
         info.append([key, cell_value(value)])
 
+    for player in database["players"]:
+        review = player.get("public_protocol_review")
+        if not review:
+            continue
+        totals = review["totals"]
+        info.append(["Minimum PLP — " + player["name"],
+                     ", ".join(f"{field}: ≥{totals[field]}" for field in ("apps", "goals", "assists", "motm", "yellow", "red"))
+                     + ". Pełna kariera niepotwierdzona; odczyt publicznych protokołów."])
+        for match in review["matches"]:
+            if any(str(league["id"]) == match["event_id"] for league in database["matches"]):
+                continue
+            info.append([f"{player['name']} — PLP {match['event_id']}", match["source_url"]])
+            info.cell(info.max_row, 2).hyperlink = match["source_url"]
+            info.cell(info.max_row, 2).font = SOURCE_FONT
+    for cell in info["B"][1:]:
+        cell.alignment = Alignment(vertical="center", wrap_text=True)
+
     for cell in info["A"][1:]:
         cell.fill = SECTION_FILL
         cell.font = Font(name="Aptos", size=11, bold=True, color="17324D")

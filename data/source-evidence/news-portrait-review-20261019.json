@@ -1,0 +1,323 @@
+{
+  "reviewed_on": "2026-10-19",
+  "scope": "New public article search for the 28 missing portraits; candidate images require independent visual and caption review.",
+  "players": [
+    {
+      "player_id": "8656",
+      "name": "Muczyński Karol",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Muczy%C5%84ski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "9267",
+      "name": "Kowalczuk Karol",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Kowalczuk&per_page=100",
+      "posts_returned": 2,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7269",
+      "name": "Dołżyk Michał",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Do%C5%82%C5%BCyk&per_page=100",
+      "posts_returned": 1,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "10836",
+      "name": "Karpiński Hubert",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Karpi%C5%84ski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "12425",
+      "name": "Karolczuk Jakub",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Karolczuk&per_page=100",
+      "posts_returned": 4,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7282",
+      "name": "Markowski Damian",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Markowski&per_page=100",
+      "posts_returned": 49,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "8654",
+      "name": "Bączek Szymon",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=B%C4%85czek&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7278",
+      "name": "Kossakowski Maciej",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Kossakowski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "12290",
+      "name": "Płochocki Maciej",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=P%C5%82ochocki&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "13010",
+      "name": "Żak Paweł (GK)",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=%C5%BBak&per_page=100",
+      "posts_returned": 100,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed.",
+      "search_limited_to_first_page": true
+    },
+    {
+      "player_id": "2204",
+      "name": "Dawid Daniluk",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Daniluk&per_page=100",
+      "posts_returned": 5,
+      "matching_posts": [
+        {
+          "id": 9173,
+          "url": "https://podlaskaliga.pl/top-6-liga-i-13-kolejka/",
+          "title": "TOP 6, liga I, 13. kolejka",
+          "date": "2023-10-10T18:38:52",
+          "featured_media": 9064,
+          "images": [
+            "<img decoding=\"async\" class=\"alignnone size-full wp-image-9172\" src=\"https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n.jpg\" alt=\"\" width=\"700\" height=\"875\" srcset=\"https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n.jpg 700w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-240x300.jpg 240w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-102x128.jpg 102w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-26x32.jpg 26w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-320x400.jpg 320w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-464x580.jpg 464w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-56x70.jpg 56w, https://podlaskaliga.pl/wp-content/uploads/2023/10/380002644_727639819378811_705120525861642251_n-80x100.jpg 80w\" sizes=\"(max-width: 700px) 100vw, 700px\" />"
+          ],
+          "captions": [],
+          "text_sha256": "080652779f6bb9bb483bd3dda728c8d66d8a8682ff83be83a3bf7784c8e28729",
+          "name_match": "Adjacent full name in source prose; not proof of portrait identity."
+        },
+        {
+          "id": 8855,
+          "url": "https://podlaskaliga.pl/top6-kolejka-nr-6-1-liga/",
+          "title": "TOP6 &#8211; kolejka nr. 6 ( 1 LIGA)",
+          "date": "2023-06-19T15:08:24",
+          "featured_media": 8782,
+          "images": [
+            "<img decoding=\"async\" class=\"alignnone size-full wp-image-8856\" src=\"https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n.jpg\" alt=\"\" width=\"700\" height=\"875\" srcset=\"https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n.jpg 700w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-240x300.jpg 240w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-102x128.jpg 102w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-26x32.jpg 26w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-320x400.jpg 320w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-464x580.jpg 464w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-56x70.jpg 56w, https://podlaskaliga.pl/wp-content/uploads/2023/06/354567629_10221643588671461_2934333604723872204_n-80x100.jpg 80w\" sizes=\"(max-width: 700px) 100vw, 700px\" />"
+          ],
+          "captions": [],
+          "text_sha256": "18459497ce38c0d570fa32d273389a87b59c8cbd0a712cb5587cb4b87e41d12f",
+          "name_match": "Adjacent full name in source prose; not proof of portrait identity."
+        },
+        {
+          "id": 5434,
+          "url": "https://podlaskaliga.pl/podsumowanie-dgw-w-i-lidze/",
+          "title": "Podsumowanie DGW w I lidze",
+          "date": "2022-01-26T17:58:00",
+          "featured_media": 5437,
+          "images": [],
+          "captions": [],
+          "text_sha256": "3c659b7874d608fa4ec149511b3e10bc0deb3bc4cf2b24f5fc74f8f65ae223a7",
+          "name_match": "Adjacent full name in source prose; not proof of portrait identity."
+        },
+        {
+          "id": 5429,
+          "url": "https://podlaskaliga.pl/top-5-10-kolejki/",
+          "title": "&#8220;TOP 5&#8221; 10. kolejki",
+          "date": "2022-01-25T17:57:00",
+          "featured_media": 5296,
+          "images": [
+            "<img loading=\"lazy\" decoding=\"async\" width=\"700\" height=\"875\" src=\"https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1.jpg\" alt=\"\" class=\"wp-image-5430\" srcset=\"https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1.jpg 700w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-240x300.jpg 240w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-102x128.jpg 102w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-26x32.jpg 26w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-320x400.jpg 320w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-464x580.jpg 464w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-56x70.jpg 56w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_I-1-80x100.jpg 80w\" sizes=\"(max-width: 700px) 100vw, 700px\" />",
+            "<img loading=\"lazy\" decoding=\"async\" width=\"700\" height=\"875\" src=\"https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2.jpg\" alt=\"\" class=\"wp-image-5432\" srcset=\"https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2.jpg 700w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-240x300.jpg 240w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-102x128.jpg 102w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-26x32.jpg 26w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-320x400.jpg 320w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-464x580.jpg 464w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-56x70.jpg 56w, https://podlaskaliga.pl/wp-content/uploads/2022/01/druzyna_10_kolejki_II2-80x100.jpg 80w\" sizes=\"(max-width: 700px) 100vw, 700px\" />"
+          ],
+          "captions": [],
+          "text_sha256": "dd8a2572c6c11a1d9feed6ee5eb3af4f02a85f4c2f11925ad0ff5f4801c92263",
+          "name_match": "Adjacent full name in source prose; not proof of portrait identity."
+        }
+      ],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "13197",
+      "name": "Filip Szparło",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Szpar%C5%82o&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "6764",
+      "name": "Adam Malesiński",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Malesi%C5%84ski&per_page=100",
+      "posts_returned": 1,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "13196",
+      "name": "Damian Rogon",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Rogon&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "13198",
+      "name": "Wojciuk Piotr",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Wojciuk&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "12286",
+      "name": "Pietruczuk Paweł",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Pietruczuk&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "10321",
+      "name": "Ciborowski Julian",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Ciborowski&per_page=100",
+      "posts_returned": 1,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "10603",
+      "name": "Roszkowski Patryk",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Roszkowski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "10604",
+      "name": "Śmiłowski Michał",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=%C5%9Ami%C5%82owski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "11895",
+      "name": "Czudzinowicz Jakub (GK)",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Czudzinowicz&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "12285",
+      "name": "Rollauer Patryk",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Rollauer&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "13194",
+      "name": "Karpowicz Kamil",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Karpowicz&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7223",
+      "name": "Grabowski Jakub (GK)",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Grabowski&per_page=100",
+      "posts_returned": 1,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7266",
+      "name": "Bazyluk Jakub",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Bazyluk&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "7286",
+      "name": "Uściłowski Krzysztof",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=U%C5%9Bci%C5%82owski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "8655",
+      "name": "Kuźma Gabriel",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Ku%C5%BAma&per_page=100",
+      "posts_returned": 7,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "8916",
+      "name": "Wądołowski Sebastian",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=W%C4%85do%C5%82owski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    },
+    {
+      "player_id": "12288",
+      "name": "Zalewski Piotr",
+      "query": "https://podlaskaliga.pl/wp-json/wp/v2/posts?search=Zalewski&per_page=100",
+      "posts_returned": 0,
+      "matching_posts": [],
+      "status": "ok",
+      "name_filter": "Adjacent full name, either order; individual identity in any image remains unconfirmed."
+    }
+  ],
+  "visual_reviews": [
+    {
+      "article_id": 8026,
+      "media_id": 8027,
+      "conclusion": "Observed graphic contains labelled jerseys, no individual portraits."
+    },
+    {
+      "article_id": 8855,
+      "media_id": 8856,
+      "conclusion": "Observed graphic contains labelled jerseys, no individual portraits; the image does not depict a labelled Daniluk."
+    }
+  ]
+}

@@ -275,6 +275,9 @@ function players(){
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
+    if(record?.origin==="plp_untagged_protocol"){
+        return "Protokół PLP bez oznaczenia sezonu";
+    }
     if(record?.origin==="plp_cup_protocols"){
         return "Oficjalne protokoły Superpucharu PLP";
     }
@@ -399,7 +402,8 @@ function verifiedVideoMinuteLink(playerId,matchId,minute){
     const found=cues.find(row=>same(row.match_id,matchId)&&
         same(row.player_id,playerId)&&String(row.minute)===String(minute));
     if(!found)return e(minute)+"′";
-    return '<a target="_blank" rel="noopener noreferrer" href="'+e(found.url)+'" title="Potwierdzony moment gola wideo">'+e(minute)+"′ ▶ YouTube</a>";
+    const commentary=found.verification_source==="broadcast_commentary_captions";
+    return '<a target="_blank" rel="noopener noreferrer" href="'+e(found.url)+'" title="'+(commentary?"Komentarz gola w oficjalnej transmisji — napisy automatyczne":"Potwierdzony moment akcji bramkowej")+'">'+e(minute)+"′ ▶ YouTube"+(commentary?" — komentarz":"")+"</a>";
 }
 function playerDetail(id){
     const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
@@ -407,6 +411,7 @@ function playerDetail(id){
     if(!player){
         return empty("Nie znaleziono zawodnika.");
     }
+    const extraPublicProtocols=(player.public_protocol_review?.matches||[]).filter(row=>!DB.matches.some(match=>same(match.id,row.event_id)));
 
     const seasonRows=(player.season_history||[]).map(record=>[
         e(record.name),
@@ -529,6 +534,14 @@ function playerDetail(id){
         profileMergeNote+
         (careerRows.length?section("Historia kariery wg zapisów API — może pomijać Superpuchary",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
+        (player.public_protocol_review?section("Kariera PLP — minimum z publicznych protokołów",
+            '<p>Sprawdzono '+e(player.public_protocol_review.archive_events_reviewed)+' publicznych wydarzeń PLP. '+e(player.public_protocol_review.limitation)+'</p>'+
+            table(["M","G","A","MVP","ŻK","CK bezp."],[['apps','goals','assists','motm','yellow','red'].map(key=>"≥"+e(player.public_protocol_review.totals[key]))])+
+            (extraPublicProtocols.length?'<p>Protokoły spoza archiwum ligowego:</p>'+
+            table(["Data","Wydarzenie","M","G","A","ŻK","CK bezp.","Źródło"],extraPublicProtocols.map(row=>[
+                e(row.date),e(row.title),e(row.apps),e(row.goals),e(row.assists),e(row.yellow),e(row.red),
+                '<a target="_blank" rel="noopener noreferrer" href="'+e(row.source_url)+'">PLP ↗</a>'
+            ])):"")):"")+
         gallery+
         historicTeamGallery+
         (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"");

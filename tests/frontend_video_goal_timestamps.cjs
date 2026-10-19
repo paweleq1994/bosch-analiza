@@ -28,6 +28,8 @@ vm.runInContext("DB.analysis.verified_goal_video_cues=[verifiedCue]", scope);
 const withReview = vm.runInContext('verifiedVideoMinuteLink("7285","7814","21")', scope);
 assert.ok(withReview.includes("t=100s"));
 assert.ok(withReview.includes("YouTube"));
+vm.runInContext('verifiedCue.verification_source="broadcast_commentary_captions"',scope);
+assert.ok(vm.runInContext('verifiedVideoMinuteLink("7285","7814","21")',scope).includes("YouTube — komentarz"));
 assert.ok(vm.runInContext('dataQuality()', scope).includes("video-goal-review-queue.md"));
 scope.rejectedVideo={status:"rejected",review_reason:"Boisko odkryte zamiast hali <test>"};
 const rejectedLabel=vm.runInContext("videoReviewLabel(rejectedVideo)",scope);

@@ -1,0 +1,2244 @@
+{
+  "captured_at": "2026-10-19T16:25:21.145940+00:00",
+  "source_query": "https://podlaskaliga.pl/wp-json/sportspress/v2/events?per_page=100&page=",
+  "public_events_total": 2415,
+  "pages": 25,
+  "page_counts": {
+    "1": 100,
+    "2": 100,
+    "3": 100,
+    "4": 100,
+    "5": 100,
+    "6": 100,
+    "7": 100,
+    "8": 100,
+    "9": 100,
+    "10": 100,
+    "11": 100,
+    "12": 100,
+    "13": 100,
+    "14": 100,
+    "15": 100,
+    "16": 100,
+    "17": 100,
+    "18": 100,
+    "19": 100,
+    "20": 100,
+    "21": 100,
+    "22": 100,
+    "23": 100,
+    "24": 100,
+    "25": 15
+  },
+  "unique_event_ids": 2415,
+  "events_without_performance": 3,
+  "event_ids_sha256": "e3bee2ecbbc03aff452a2d9dd0445e3b4ac7e5ba3bb58592b29b001973a32855",
+  "target_player_ids": [
+    "7266",
+    "7270",
+    "7271",
+    "7278",
+    "7282",
+    "7285",
+    "7286",
+    "8655",
+    "8916",
+    "10321",
+    "10604"
+  ],
+  "records": [
+    {
+      "id": 10790,
+      "date": "2024-11-09T12:20:00",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "CEDC Polmos Białystok vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        140
+      ],
+      "leagues": [],
+      "teams": [
+        4641,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "1 (24')",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10790"
+    },
+    {
+      "id": 10262,
+      "date": "2024-10-19T13:40:22",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "FC Progress Białystok vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6984,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "2",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10262"
+    },
+    {
+      "id": 10254,
+      "date": "2024-10-13T12:50:13",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Konceptbud"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        1567
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (30')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10254"
+    },
+    {
+      "id": 10242,
+      "date": "2024-09-29T14:30:43",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs GTS Nowa Wygoda"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        9218
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "1 (16')",
+            "assists": "1",
+            "pikarzmeczu": "1",
+            "top": "1",
+            "samobje": "",
+            "yellowcards": "1 (40')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10242"
+    },
+    {
+      "id": 10238,
+      "date": "2024-09-21T17:00:18",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs ZPS Biaform SA"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        4643
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10238"
+    },
+    {
+      "id": 10225,
+      "date": "2024-09-15T12:00:38",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "WIARA PIASTA II vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6989,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "10604": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10225"
+    },
+    {
+      "id": 10157,
+      "date": "2024-06-30T13:30:14",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Unibep Bielsk Podlaski"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        8193
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1 (12')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (17')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10157"
+    },
+    {
+      "id": 10154,
+      "date": "2024-06-22T16:50:50",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "CEDC Polmos Białystok vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        4641,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "10321": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10154"
+    },
+    {
+      "id": 10145,
+      "date": "2024-06-16T10:40:59",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs OSMAR"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        8196
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1 (18')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "8916": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10145"
+    },
+    {
+      "id": 10132,
+      "date": "2024-05-19T16:00:38",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "Ramis vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        1570,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "10321": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10132"
+    },
+    {
+      "id": 10121,
+      "date": "2024-04-28T18:30:43",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "FC GRUBASSY vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        8194,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "10321": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10121"
+    },
+    {
+      "id": 10093,
+      "date": "2024-04-20T13:30:13",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "VESTA vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        139
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6988,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "10321": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10093"
+    },
+    {
+      "id": 10050,
+      "date": "2024-03-23T19:10:59",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach-2/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Mają Rozmach"
+      },
+      "seasons": [],
+      "leagues": [],
+      "teams": [
+        6951,
+        5920
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/10050"
+    },
+    {
+      "id": 9755,
+      "date": "2024-02-18T10:40:15",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs VESTA"
+      },
+      "seasons": [
+        126
+      ],
+      "leagues": [
+        122
+      ],
+      "teams": [
+        6951,
+        6988
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/9755"
+    },
+    {
+      "id": 9728,
+      "date": "2024-02-11T16:40:34",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/poltank-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Poltank vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        126
+      ],
+      "leagues": [
+        122
+      ],
+      "teams": [
+        1575,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/9728"
+    },
+    {
+      "id": 9646,
+      "date": "2024-01-14T19:20:06",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Adampol Glovis vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        126
+      ],
+      "leagues": [
+        122
+      ],
+      "teams": [
+        1565,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/9646"
+    },
+    {
+      "id": 8472,
+      "date": "2023-10-21T12:20:51",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Unibep Bielsk Podlaski vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        8193,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7266": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1 (38')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8472"
+    },
+    {
+      "id": 8452,
+      "date": "2023-10-01T16:10:37",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-bajaga/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Fc Bajaga"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6959
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (25')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8452"
+    },
+    {
+      "id": 8438,
+      "date": "2023-09-23T11:10:21",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ramis/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Ramis"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        1570
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8438"
+    },
+    {
+      "id": 8437,
+      "date": "2023-09-17T15:20:00",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs VESTA"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6988
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1 (16')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (18')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8437"
+    },
+    {
+      "id": 8373,
+      "date": "2023-09-09T12:50:44",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs CEDC Polmos Białystok"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        4641
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "1 (4')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "1 (26')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (3')",
+            "assists": "2",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8373"
+    },
+    {
+      "id": 8366,
+      "date": "2023-09-03T17:00:55",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Konceptbud vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        1567,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7286": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8366"
+    },
+    {
+      "id": 8295,
+      "date": "2023-07-01T14:50:47",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs WIARA PIASTA II"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6989
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (29')",
+            "assists": "",
+            "pikarzmeczu": "1",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7286": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8295"
+    },
+    {
+      "id": 8325,
+      "date": "2023-06-24T13:10:50",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Mają Rozmach vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        5920,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8325"
+    },
+    {
+      "id": 8323,
+      "date": "2023-06-18T18:10:42",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "FC DrTusz vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        1568,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "8655": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "3 (22', 35', 36')",
+            "assists": "",
+            "pikarzmeczu": "1",
+            "top": "1",
+            "samobje": "",
+            "yellowcards": "1 (4')",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8323"
+    },
+    {
+      "id": 8289,
+      "date": "2023-05-28T16:30:41",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "FC GRUBASSY vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        8194,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7278": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "8655": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8289"
+    },
+    {
+      "id": 8276,
+      "date": "2023-05-27T13:10:45",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs OSMAR"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        8196
+      ],
+      "performance": {
+        "6951": {
+          "7278": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "8655": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8276"
+    },
+    {
+      "id": 8255,
+      "date": "2023-05-14T14:50:17",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/",
+      "title": {
+        "rendered": "ZPS Biaform SA vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        4643,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "2 (11', 35')",
+            "assists": "1",
+            "pikarzmeczu": "1",
+            "top": "1",
+            "samobje": "",
+            "yellowcards": "",
+            "redcards": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8255"
+    },
+    {
+      "id": 8232,
+      "date": "2023-05-06T14:00:06",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-intaf/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs INTaF"
+      },
+      "seasons": [
+        125
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6981
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (37')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/8232"
+    },
+    {
+      "id": 7882,
+      "date": "2023-03-26T14:00:49",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/mecz-barazowy/",
+      "title": {
+        "rendered": "MECZ BARAŻOWY"
+      },
+      "seasons": [],
+      "leagues": [],
+      "teams": [
+        4383,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7882"
+    },
+    {
+      "id": 7875,
+      "date": "2023-03-19T15:20:12",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Fc Bajaga vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6959,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7875"
+    },
+    {
+      "id": 7860,
+      "date": "2023-03-12T14:40:05",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Ramis vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        1570,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (27')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7860"
+    },
+    {
+      "id": 7851,
+      "date": "2023-03-05T18:00:25",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "WIARA PIASTA II vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6989,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "1 (29')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "2 (24', 26')",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7851"
+    },
+    {
+      "id": 7839,
+      "date": "2023-03-04T20:35:43",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs CEDC Polmos Białystok"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        4641
+      ],
+      "performance": {
+        "6951": {
+          "7278": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (10')",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7839"
+    },
+    {
+      "id": 7814,
+      "date": "2023-02-26T12:00:49",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs VESTA"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6988
+      ],
+      "performance": {
+        "6951": {
+          "7282": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "ck": "",
+            "off": "",
+            "f": "",
+            "s": "",
+            "drb": "",
+            "kp": "",
+            "ps": "",
+            "pa": "",
+            "pkg": "",
+            "pka": "",
+            "sog": "",
+            "sh": "",
+            "min": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "1 (21')",
+            "assists": "1",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "ck": "",
+            "off": "",
+            "f": "",
+            "s": "",
+            "drb": "",
+            "kp": "",
+            "ps": "",
+            "pa": "",
+            "pkg": "",
+            "pka": "",
+            "sog": "",
+            "sh": "",
+            "min": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7814"
+    },
+    {
+      "id": 7801,
+      "date": "2023-02-12T17:20:55",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Rainter vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        4387,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "goals": "",
+            "assists": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "ck": "",
+            "off": "",
+            "f": "",
+            "s": "",
+            "drb": "",
+            "kp": "",
+            "ps": "",
+            "pa": "",
+            "pkg": "",
+            "pka": "",
+            "sog": "",
+            "sh": "",
+            "min": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7801"
+    },
+    {
+      "id": 7788,
+      "date": "2023-02-11T19:25:07",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Poltank"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        1575
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "1",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7788"
+    },
+    {
+      "id": 7767,
+      "date": "2023-02-04T13:35:56",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/intaf-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "INTaF vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6981,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "1",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7767"
+    },
+    {
+      "id": 7758,
+      "date": "2023-01-29T17:20:53",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs Mają Rozmach"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        5920
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "1 (5')",
+            "assists": "1",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7758"
+    },
+    {
+      "id": 7734,
+      "date": "2023-01-22T10:40:21",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/poler-art-team-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Poler-Art Team vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        5921,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7278": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "2 (5', 13')",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7734"
+    },
+    {
+      "id": 7443,
+      "date": "2023-01-15T18:00:32",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs CF Bojary"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        4644
+      ],
+      "performance": {
+        "6951": {
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7443"
+    },
+    {
+      "id": 7420,
+      "date": "2022-11-27T12:00:33",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "ZPS Biaform SA vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        4643,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7271": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "1 (4')",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7420"
+    },
+    {
+      "id": 7416,
+      "date": "2022-11-20T18:40:13",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
+      "title": {
+        "rendered": "Bosch Service Tech-Car vs FC Progress Białystok"
+      },
+      "seasons": [
+        120
+      ],
+      "leagues": [
+        123
+      ],
+      "teams": [
+        6951,
+        6984
+      ],
+      "performance": {
+        "6951": {
+          "7270": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7271": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "top": "",
+            "pikarzmeczu": "",
+            "goals": "1 (18')",
+            "assists": "1",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7416"
+    },
+    {
+      "id": 7005,
+      "date": "2022-11-06T11:00:00",
+      "status": "publish",
+      "link": "https://podlaskaliga.pl/wydarzenie/top-auto-vs-bosch-service-tech-car/",
+      "title": {
+        "rendered": "Top Auto vs Bosch Service Tech-Car"
+      },
+      "seasons": [
+        119
+      ],
+      "leagues": [
+        122,
+        123
+      ],
+      "teams": [
+        1580,
+        6951
+      ],
+      "performance": {
+        "6951": {
+          "7271": {
+            "ocenabramkarza": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "goals": "",
+            "assists": "1",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7278": {
+            "ocenabramkarza": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          },
+          "7285": {
+            "ocenabramkarza": "",
+            "pikarzmeczu": "",
+            "top": "",
+            "goals": "",
+            "assists": "",
+            "yellowcards": "",
+            "redcards": "",
+            "samobje": "",
+            "status": "lineup",
+            "sub": "0",
+            "number": "",
+            "position": 0
+          }
+        }
+      },
+      "api_url": "https://podlaskaliga.pl/wp-json/sportspress/v2/events/7005"
+    }
+  ],
+  "scope": "All published SportsPress events returned by the public API; deleted/private events and unknown duplicate player identities are not covered."
+}
