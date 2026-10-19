@@ -125,7 +125,9 @@ function seasonPage(id){
 
             return secondPoints-firstPoints || Number(second.stats.goals||0)-Number(first.stats.goals||0) || first.player.name.localeCompare(second.player.name,"pl");
         });
-    const leadersTable=leaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],leaders.map(({player,stats})=>[
+    const completeLeaders=leaders.filter(({stats})=>Number.isInteger(stats.goals)&&Number.isInteger(stats.assists));
+    const partialLeaders=leaders.filter(({stats})=>!Number.isInteger(stats.goals)||!Number.isInteger(stats.assists));
+    const leadersTable=completeLeaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],completeLeaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
         e(stats.goals??"—"),
@@ -137,6 +139,11 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        (partialLeaders.length?section("Zawodnicy z niepełnymi statystykami — bez miejsca w rankingu",
+            table(["Zawodnik","M","G","A","Powód"],partialLeaders.map(({player,stats})=>[
+                playerLink(player),e(stats.apps??"—"),e(stats.goals??"—"),
+                e(stats.assists??"—"),"Brak pełnej liczby goli lub asyst w oficjalnym archiwum"
+            ]))):"")+
         section("Gole i protokoły wszystkich meczów",table(["Data","Mecz","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(matches)))+
         section("Porównanie z innymi sezonami",barChart(DB.seasons.map(row=>({...row,ppg:row.matches?row.points/row.matches:0})),"ppg",row=>fmt(row.ppg)))+
         (selectedSeason.id==="orlik-2026"?'<div class="notice">Orlik 2026: drugie miejsce, 35 punktów, seria 8 zwycięstw na zakończenie. Gole indywidualne zweryfikowano we wszystkich 15 oryginalnych protokołach tego sezonu.</div>':"");
@@ -512,14 +519,22 @@ function records(){
         ["MVP na mecz — minimum 5 występów","motm_per_match",player=>player.apps>=5&&player.motm!=null?player.motm/player.apps:null,2]
     ];
     const boards=measures.map(([heading,key,getValue,precision])=>{
-        const ranked=players.map(player=>({player,value:getValue(player)}))
+        const measured=players.map(player=>({player,value:getValue(player)}))
             .filter(row=>Number.isFinite(row.value)&&row.value>0)
-            .sort((a,b)=>b.value-a.value||a.player.name.localeCompare(b.player.name,"pl"))
+            .sort((a,b)=>b.value-a.value||a.player.name.localeCompare(b.player.name,"pl"));
+        const complete=measured.filter(row=>row.player.bosch_totals&&!row.player.stats_minimum)
             .slice(0,10);
-        return section(heading,ranked.length?table(["#","Zawodnik","Wynik","Źródło"],ranked.map((row,index)=>[
-            e(index+1),playerLink(row.player),fmt(row.value,precision),
-            e(row.player.stats_minimum?"Potwierdzone minimum — protokół PLP":row.player.bosch_totals?"Sezony PLP":"Archiwum niepełne")
-        ])):empty("Brak statystyk dostępnych dla tej kategorii."));
+        const partial=measured.filter(row=>!row.player.bosch_totals||row.player.stats_minimum)
+            .slice(0,10);
+        const completeTable=complete.length?table(["#","Zawodnik","Wynik","Źródło"],complete.map((row,index)=>[
+            e(index+1),playerLink(row.player),fmt(row.value,precision),"Suma zweryfikowanych sezonów PLP"
+        ])):empty("Brak w pełni porównywalnych statystyk tej kategorii.");
+        return section(heading,completeTable)+
+            (partial.length?section(heading+" — udokumentowane minimum (bez rankingu)",
+                table(["Zawodnik","Wartość minimum","Status"],partial.map(row=>[
+                    playerLink(row.player),fmt(row.value,precision),
+                    "Niepełna historia; wartość może być zaniżona"
+                ]))):"");
     }).join("");
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);
     const offensive=matches.slice().sort((a,b)=>b.gf-a.gf).slice(0,10);
