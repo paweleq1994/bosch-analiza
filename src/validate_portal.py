@@ -2,6 +2,7 @@
 """Validate consolidated public portal data before publishing."""
 from pathlib import Path
 import json
+from sync_videos import validate_fixture_dates
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="utf-8"))
@@ -87,6 +88,7 @@ assert sum(row["attributed_goals"] for row in attribution) >= 289, "Verified his
 assert DATA["analysis"]["match_protocol_audit"]["total_own_goals_conceded"] >= 6, "Verified historical own goals regressed"
 assert len({(row["id"], row["sid"]) for row in matches}) == len(matches), "Duplicate match identity"
 assert len({row["id"] for row in DATA["videos"]}) == len(DATA["videos"]), "Duplicate video ID"
+validate_fixture_dates(DATA["videos"], matches)
 for season in seasons:
     entries = [row for row in matches if str(row["sid"]) == str(season["id"])]
     if len(entries) != season["matches"]:

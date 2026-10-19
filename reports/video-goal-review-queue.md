@@ -3,7 +3,7 @@
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
 Potwierdzone linki: **15**.
-Niepotwierdzone gole w meczach z filmem: **153**.
+Niepotwierdzone gole w meczach z filmem: **149**.
 
 ## Zweryfikowane odnośniki do akcji lub komentarza gola
 
@@ -42,14 +42,12 @@ Znacznik wskazuje obejrzaną fazę akcji albo jawnie oznaczony komentarz gola w 
 | [PLP 7875](https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/) | Nowicki Patryk | 30′ | [nieokreślony](https://www.youtube.com/watch?v=gSjI9uOEdec) · [I połowa](https://www.youtube.com/watch?v=FETkIdBKLrE) |
 | [PLP 7875](https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/) | Moskal Paweł | 15′ | [nieokreślony](https://www.youtube.com/watch?v=gSjI9uOEdec) · [I połowa](https://www.youtube.com/watch?v=FETkIdBKLrE) |
 | [PLP 8232](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-intaf/) | Sołowiej Tomasz | 37′ | [II połowa](https://www.youtube.com/watch?v=FfIMpOFMfpk) · [I połowa](https://www.youtube.com/watch?v=JIRYvF-bBvM) |
-| [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Jurkowicz Rafał | 1′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
-| [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Muczyński Karol | 16′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
 | [PLP 8295](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/) | Sołowiej Tomasz | 29′ | [Nagranie 1](https://www.youtube.com/watch?v=6vsemMiGuPk) · [Nagranie 2](https://www.youtube.com/watch?v=Kh4IuHMwcPQ) |
-| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Sołowiej Tomasz | 3′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
-| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 5′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
-| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 21′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
-| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Markowski Damian | 26′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
-| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Nowicki Patryk | 33′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
+| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Sołowiej Tomasz | 3′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
+| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 5′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
+| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Malinowski Piotr | 21′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
+| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Markowski Damian | 26′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
+| [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Nowicki Patryk | 33′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
 | [PLP 8437](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/) | Moskal Paweł | 9′ | [I połowa](https://www.youtube.com/watch?v=66-xHXFSMto) · [II połowa](https://www.youtube.com/watch?v=xZv7sWZzCKU) |
 | [PLP 8437](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/) | Sołowiej Tomasz | 18′ | [I połowa](https://www.youtube.com/watch?v=66-xHXFSMto) · [II połowa](https://www.youtube.com/watch?v=xZv7sWZzCKU) |
 | [PLP 8437](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-2/) | Wnuszyński Karol | 30′ | [I połowa](https://www.youtube.com/watch?v=66-xHXFSMto) · [II połowa](https://www.youtube.com/watch?v=xZv7sWZzCKU) |
@@ -69,8 +67,6 @@ Znacznik wskazuje obejrzaną fazę akcji albo jawnie oznaczony komentarz gola w 
 | [PLP 8472](https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/) | Kadłubowski Krzysztof | 32′ | [I połowa](https://www.youtube.com/watch?v=1AObhyvfoq8) · [II połowa](https://www.youtube.com/watch?v=XMZANMMtBgs) |
 | [PLP 8472](https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/) | Karolczuk Patryk | 37′ | [I połowa](https://www.youtube.com/watch?v=1AObhyvfoq8) · [II połowa](https://www.youtube.com/watch?v=XMZANMMtBgs) |
 | [PLP 8467](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly/) | Kadłubowski Krzysztof | 33′ | [I połowa](https://www.youtube.com/watch?v=4jC6z9ZjOWc) · [II połowa](https://www.youtube.com/watch?v=L9f3bBLjZsI) |
-| [PLP 9721](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/) | Klepacki Przemysław | 14′ | [nieokreślony](https://www.youtube.com/watch?v=Qc0s7ZjnInM) |
-| [PLP 9721](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/) | Kadłubowski Krzysztof | 30′ | [nieokreślony](https://www.youtube.com/watch?v=Qc0s7ZjnInM) |
 | [PLP 9805](https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/) | Kowalczuk Karol | 23′ | [Transmisja meczu](https://www.youtube.com/watch?v=3A0-Z_98lKQ) |
 | [PLP 10254](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/) | Jurkowicz Mateusz | 2′ | [II połowa](https://www.youtube.com/watch?v=A6YnEC0HRFE) · [I połowa](https://www.youtube.com/watch?v=0XI7lrFPfSg) |
 | [PLP 10254](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/) | Nowicki Patryk | 10′ | [II połowa](https://www.youtube.com/watch?v=A6YnEC0HRFE) · [I połowa](https://www.youtube.com/watch?v=0XI7lrFPfSg) |
@@ -86,8 +82,8 @@ Znacznik wskazuje obejrzaną fazę akcji albo jawnie oznaczony komentarz gola w 
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Klepacki Przemysław | 1′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Jurkowicz Mateusz | 7′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Moskal Paweł | 10′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
-| [PLP 11095](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/) | Klepacki Przemysław | 9′ | [I połowa](https://www.youtube.com/watch?v=hdQAqA6SgLM) · [II połowa](https://www.youtube.com/watch?v=4VEALfjBMKI) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
-| [PLP 11095](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/) | Kadłubowski Krzysztof | 13′ | [I połowa](https://www.youtube.com/watch?v=hdQAqA6SgLM) · [II połowa](https://www.youtube.com/watch?v=4VEALfjBMKI) · [I połowa](https://www.youtube.com/watch?v=bQ3De8L7mnA) |
+| [PLP 11095](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/) | Klepacki Przemysław | 9′ | [I połowa](https://www.youtube.com/watch?v=hdQAqA6SgLM) · [II połowa](https://www.youtube.com/watch?v=4VEALfjBMKI) |
+| [PLP 11095](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-3/) | Kadłubowski Krzysztof | 13′ | [I połowa](https://www.youtube.com/watch?v=hdQAqA6SgLM) · [II połowa](https://www.youtube.com/watch?v=4VEALfjBMKI) |
 | [PLP 11317](https://podlaskaliga.pl/wydarzenie/eskular-vs-bosch-service-tech-car/) | Karpiński Hubert | 5′ | [II połowa](https://www.youtube.com/watch?v=drnmeHc5s1M) · [I połowa](https://www.youtube.com/watch?v=KO1lDrY5QJE) |
 | [PLP 11317](https://podlaskaliga.pl/wydarzenie/eskular-vs-bosch-service-tech-car/) | Klepacki Przemysław | 8′ | [II połowa](https://www.youtube.com/watch?v=drnmeHc5s1M) · [I połowa](https://www.youtube.com/watch?v=KO1lDrY5QJE) |
 | [PLP 11363](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-ost-sport/) | Klepacki Przemysław | 2′ | [I połowa](https://www.youtube.com/watch?v=-KQp-0n6kFE) · [II połowa](https://www.youtube.com/watch?v=qMyBGUMJxXo) |

@@ -28,6 +28,16 @@ def iso_date(value):
     try:return date.fromisoformat(f"{text[:4]}-{text[4:6]}-{text[6:]}").isoformat()
     except ValueError:return ""
 
+def validate_fixture_dates(videos, matches):
+    """A recording cannot predate its fixture; allow one day for time zones."""
+    fixtures = {str(match["id"]): match for match in matches}
+    for video in videos:
+        match = fixtures.get(str(video.get("match_id") or ""))
+        uploaded = iso_date(video.get("date"))
+        played = iso_date(match.get("date")) if match else ""
+        if uploaded and played and (date.fromisoformat(played) - date.fromisoformat(uploaded)).days > 1:
+            raise ValueError(f"Video {video.get('id')} was published before fixture {match['id']}")
+
 def video_metadata(video):
     """Use the existing Actions dependency for exact dates missing in flat lists."""
     if not VIDEO_ID.fullmatch(video["id"]):raise ValueError("Invalid video ID")
