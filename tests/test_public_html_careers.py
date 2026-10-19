@@ -69,8 +69,8 @@ class PublicCareerCompletenessTests(unittest.TestCase):
         self.assertEqual((player["apps"],player["yellow"],player["red"]),(13,4,1))
         self.assertEqual(player["season_stats"]["140"]["red"],1)
         self.assertEqual(player["season_coverage"]["unassigned"]["red"],0)
-        self.assertEqual(player["season_coverage"]["unassigned"]["apps"],1)
-        self.assertEqual(player["season_coverage"]["unassigned"]["yellow"],1)
+        self.assertEqual(player["season_coverage"]["unassigned"]["apps"],0)
+        self.assertEqual(player["season_coverage"]["unassigned"]["yellow"],0)
         self.assertIsNone(player["career_totals"])
 
     def test_future_html_cup_update_does_not_double_count_protocol_supplement(self):

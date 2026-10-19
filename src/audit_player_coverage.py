@@ -138,6 +138,21 @@ def build_report(database: dict) -> str:
         "- PLP może blokować niektóre archiwalne profile (HTTP 401); zachowujemy wtedy wcześniejsze wartości i pokazujemy luki.",
         "",
     ])
+    recovered = [p for p in players if p.get("public_protocol_review")]
+    if recovered:
+        report.extend(["", "## Minima kariery odtworzone z publicznych protokołów", "",
+                       "Pełne kariery pozostają niepotwierdzone. Przegląd całego publicznego API nie obejmuje usuniętych/prywatnych wydarzeń ani nieznanych innych identyfikatorów.", "",
+                       "| Zawodnik | M | G | A | MVP | ŻK | CK bezp. | Publiczne wydarzenia sprawdzone |",
+                       "|---|---:|---:|---:|---:|---:|---:|---:|"])
+        for p in recovered:
+            r = p["public_protocol_review"]
+            report.append("| " + p["name"] + " | " + " | ".join("≥" + str(r["totals"][f]) for f in FIELDS) + " | " + str(r["archive_events_reviewed"]) + " |")
+        report.extend(["", "## Źródłowe protokoły bez oznaczenia sezonu", "",
+                       "Znane wartości przypisano do odrębnych protokołów. Nie nadano im fikcyjnego identyfikatora sezonu; nie rozszerzają 113 meczów ligowych.", ""])
+        for p in recovered:
+            for row in p["public_protocol_review"]["matches"]:
+                if not row["season_ids"]:
+                    report.append(f"- {p['name']}: {row['date']}, {row['title']} — [protokół {row['event_id']}]({row['source_url']}).")
     return "\n".join(report)
 
 
