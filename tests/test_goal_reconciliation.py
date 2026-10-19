@@ -48,8 +48,8 @@ class GoalAttributionTests(unittest.TestCase):
 
         self.assertEqual((official["apps"], official["goals"], official["assists"]), (5, 2, 2))
         self.assertEqual(minimum["goals"], 1)
-        self.assertIsNone(minimum["apps"])
-        self.assertIsNone(minimum["assists"])
+        self.assertEqual(minimum["apps"], 1)
+        self.assertEqual(minimum["assists"], 0)
         self.assertEqual(minimum["origin"], "plp_match_minimum")
 
     def test_final_reconciliation_separates_awarded_goals_from_scorers(self):
