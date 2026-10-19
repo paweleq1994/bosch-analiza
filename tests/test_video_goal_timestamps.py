@@ -45,7 +45,7 @@ class VerifiedVideoCueTests(unittest.TestCase):
         matches = validate(self.db, {"entries": [cue]})
         self.assertEqual(len(matches), 1)
         self.assertIn("&t=1s", matches[0]["url"])
-        self.assertEqual(matches[0]["source_url"][:26], "https://podlaskaliga.pl/wy")
+        self.assertTrue(matches[0]["source_url"].startswith("https://podlaskaliga.pl/wydarzenie/"))
 
     def test_refuse_to_infer_minute_as_video_second(self):
         cue = self.example()
