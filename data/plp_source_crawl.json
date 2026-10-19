@@ -2,26 +2,158 @@
   "sitemaps": [
     {
       "url": "https://podlaskaliga.pl/wp-sitemap.xml",
-      "http_status": 0
+      "http_status": 200,
+      "listed": 0,
+      "children": 22
     },
     {
       "url": "https://podlaskaliga.pl/sitemap_index.xml",
-      "http_status": 0
+      "http_status": 404
     },
     {
       "url": "https://podlaskaliga.pl/sitemap.xml",
-      "http_status": 0
+      "http_status": 200,
+      "listed": 0,
+      "children": 22
     },
     {
       "url": "https://podlaskaliga.pl/player-sitemap.xml",
-      "http_status": 0
+      "http_status": 404
     },
     {
       "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_player-1.xml",
-      "http_status": 0
+      "http_status": 200,
+      "listed": 1187,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-post-1.xml",
+      "http_status": 200,
+      "listed": 500,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-page-1.xml",
+      "http_status": 200,
+      "listed": 42,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_event-1.xml",
+      "http_status": 200,
+      "listed": 2000,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_event-2.xml",
+      "http_status": 200,
+      "listed": 415,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml",
+      "http_status": 200,
+      "listed": 56,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_staff-1.xml",
+      "http_status": 200,
+      "listed": 1,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_official-1.xml",
+      "http_status": 200,
+      "listed": 4,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-albums-1.xml",
+      "http_status": 200,
+      "listed": 9,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_calendar-1.xml",
+      "http_status": 200,
+      "listed": 43,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_table-1.xml",
+      "http_status": 200,
+      "listed": 50,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_list-1.xml",
+      "http_status": 200,
+      "listed": 168,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml",
+      "http_status": 200,
+      "listed": 7,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-posts-elementor-hf-1.xml",
+      "http_status": 200,
+      "listed": 1,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-category-1.xml",
+      "http_status": 200,
+      "listed": 12,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-post_tag-1.xml",
+      "http_status": 200,
+      "listed": 21,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-sp_league-1.xml",
+      "http_status": 200,
+      "listed": 14,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-sp_season-1.xml",
+      "http_status": 200,
+      "listed": 21,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-sp_venue-1.xml",
+      "http_status": 200,
+      "listed": 2,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-sp_position-1.xml",
+      "http_status": 200,
+      "listed": 1,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-taxonomies-sp_role-1.xml",
+      "http_status": 200,
+      "listed": 1,
+      "children": 0
+    },
+    {
+      "url": "https://podlaskaliga.pl/wp-sitemap-users-1.xml",
+      "http_status": 200,
+      "listed": 4,
+      "children": 0
     }
   ],
-  "listed_url_count": 0,
+  "listed_url_count": 4559,
   "truncated": false,
   "verified": {},
   "missing": {
@@ -34,7 +166,7 @@
         "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/",
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7270": {
       "name": "Gołąbeski Piotr",
@@ -45,7 +177,7 @@
         "https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/",
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7271": {
       "name": "Gorbacewicz Emil",
@@ -56,7 +188,7 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-progress-bialystok/",
         "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7282": {
       "name": "Markowski Damian",
@@ -67,7 +199,7 @@
         "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/",
         "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7278": {
       "name": "Kossakowski Maciej",
@@ -78,7 +210,7 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok/",
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "10321": {
       "name": "Ciborowski Julian",
@@ -89,7 +221,7 @@
         "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/",
         "https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "10604": {
       "name": "Śmiłowski Michał",
@@ -98,7 +230,7 @@
       "evidence_urls": [
         "https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7266": {
       "name": "Bazyluk Jakub",
@@ -107,7 +239,7 @@
       "evidence_urls": [
         "https://podlaskaliga.pl/wydarzenie/unibep-bielsk-podlaski-vs-bosch-service-tech-car/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "7286": {
       "name": "Uściłowski Krzysztof",
@@ -117,7 +249,7 @@
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/",
         "https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "8655": {
       "name": "Kuźma Gabriel",
@@ -128,7 +260,7 @@
         "https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/",
         "https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     },
     "8916": {
       "name": "Wądołowski Sebastian",
@@ -137,7 +269,7 @@
       "evidence_urls": [
         "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/"
       ],
-      "reason": "No public sitemap could be downloaded; player existence cannot be ruled out"
+      "reason": "No matching player URL in the accessible sitemap index"
     }
   }
 }
