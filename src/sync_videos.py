@@ -36,7 +36,7 @@ def opponent_in(title, opponent):
     variants.add(re.sub(r"\b(bialystok|s a|sp z o o)\b","",o).strip())
     if o=="biuro serwis kopiarki":variants.add("biuro serwis kopiarki")
     if o=="unibep s a":variants.add("unibep")
-    return any(len(v)>=5 and re.search(r"(?<!\w)"+re.escape(v)+r"(?!\w)",t) for v in variants)
+    return any(len(v)>=4 and re.search(r"(?<!\w)"+re.escape(v)+r"(?!\w)",t) for v in variants)
 
 def match_video(video,matches):
     """Match uniquely using Bosch, result, opponent and official team aliases."""
