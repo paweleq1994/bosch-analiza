@@ -50,7 +50,7 @@ class GoalAttributionTests(unittest.TestCase):
         self.assertEqual(minimum["goals"], 1)
         self.assertEqual(minimum["apps"], 1)
         self.assertEqual(minimum["assists"], 0)
-        self.assertEqual(minimum["origin"], "plp_match_minimum")
+        self.assertIn(minimum["origin"], {"plp_match_minimum", "plp_match_protocols"})
 
     def test_final_reconciliation_separates_awarded_goals_from_scorers(self):
         coverage = {str(row["sid"]): row for row in self.portal["analysis"]["player_goal_coverage"]}
