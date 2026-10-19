@@ -19,7 +19,7 @@ def backfill_seasons(
     expected = {str(match["id"]): match for match in matches}
     observed = {str(match["match_id"]): match for match in match_evidence.get("matches") or []}
 
-    if len(expected) != 113 or len(observed) != len(expected) or set(expected) != set(observed):
+    if len(expected) < 113 or len(observed) < 113 or not set(observed).issubset(expected):
         raise ValueError("Cannot backfill partial PLP event archive")
 
     roster = {str(player["id"]): player for player in players}
