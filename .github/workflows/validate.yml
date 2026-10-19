@@ -30,6 +30,8 @@ jobs:
         run: python src/audit_video_coverage.py
       - name: Validate generated snapshot
         run: python src/validate_portal.py
+      - name: Compare every player and season against official match sources
+        run: python src/audit_stat_sources.py
       - name: Audit incomplete player coverage
         run: python src/audit_player_coverage.py
       - name: Validate audit report
@@ -48,6 +50,8 @@ jobs:
           node --check docs/assets/app.js
           node --check docs/assets/scouting.js
           node --check docs/assets/table-sort.js
+      - name: Verify source-linked player fields and status
+        run: node tests/frontend_source_provenance.cjs
       - name: Verify full PLP match box scores and player comparisons
         run: node tests/frontend_match_boxscores.cjs
       - name: Verify export for every sortable table
