@@ -24,7 +24,8 @@ assert.ok(evaluate('opponentDetail(normalized("Konceptbud"))').includes("Najskut
 
 const seasonPage = evaluate('seasonPage("139")');
 assert.ok(seasonPage.includes("Liderzy sezonu — kanadyjka"));
-assert.ok(seasonPage.includes("niepełnymi statystykami"));
+vm.runInContext('DB.players.push({id:"missing-case",name:"Player Without Assists",season_stats:{"139":{apps:1,goals:1,assists:null}}})', context);
+assert.ok(evaluate('seasonPage("139")').includes("niepełnymi statystykami"));
 const recordsPage = evaluate("records()");
 assert.ok(recordsPage.includes("udokumentowane minimum (bez rankingu)"));
 assert.ok(recordsPage.includes("Suma zweryfikowanych sezonów PLP"));
