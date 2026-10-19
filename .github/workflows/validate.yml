@@ -44,6 +44,8 @@ jobs:
           node --check docs/assets/table-sort.js
       - name: Verify full PLP match box scores and player comparisons
         run: node tests/frontend_match_boxscores.cjs
+      - name: Verify export for every sortable table
+        run: node tests/frontend_csv_exports.cjs
       - name: Verify player season filtering
         run: node tests/frontend_player_filter.cjs
       - name: Verify advanced sort and Bosch records
