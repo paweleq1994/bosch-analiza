@@ -245,6 +245,7 @@ function dataQuality(){
         section("Nierozpoznane identyfikatory z meczów",
             table(["ID PLP","Zapisane protokoły"],unknown.map(id=>[e(id),e(DB.matches.filter(m=>
             (m.player_performance||[]).some(row=>same(row.player_id,id))).length)])))+
+        '<p><a download href="downloads/bosch-kompendium.xlsx">Pobierz pełne kompendium XLSX — zawodnicy, mecze, gole, źródła i braki ↧</a></p>'+
         '<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/player-data-coverage.md">Pełny audyt źródeł w GitHub ↗</a></p>';
 }
 function players(){
@@ -287,6 +288,43 @@ function seasonStatisticsSource(record){
     return "PLP — statystyki sezonowe";
 }
 
+function playerTrendRows(player){
+    return (player.season_history||[]).filter(record=>[
+        "apps","goals","assists","motm"
+    ].some(field=>Number.isInteger(record[field]))).map(record=>({
+        name:record.name,
+        apps:record.apps,
+        goals:record.goals,
+        assists:record.assists,
+        motm:record.motm,
+        rate:Number.isInteger(record.apps)&&record.apps>0&&
+            Number.isInteger(record.goals)&&Number.isInteger(record.assists)
+            ?(record.goals+record.assists)/record.apps:null,
+        source:seasonStatisticsSource(record)
+    }));
+}
+function playerTrendSection(player){
+    const data=playerTrendRows(player);
+    if(!data.length)return section("Rozwój zawodnika sezon po sezonie",
+        empty("Brak wystarczających źródłowych statystyk do przedstawienia trendu."));
+    const exact=data.filter(record=>Number.isFinite(record.rate));
+    const best=exact.slice().sort((a,b)=>b.rate-a.rate)[0];
+    const trendTable=table(["Sezon","M","G","A","G+A / mecz","Źródło"],data.map(row=>[
+        e(row.name),e(row.apps??"—"),e(row.goals??"—"),e(row.assists??"—"),
+        row.rate===null?"—":fmt(row.rate,2),e(row.source)
+    ]));
+    return section("Rozwój zawodnika sezon po sezonie",
+        (best?metrics([["Najwydajniejszy sezon G+A / mecz",best.name],
+            ["Średnia G+A / mecz w tym sezonie",fmt(best.rate,2)]])
+            :'<div class="notice">Brak sezonu z pełnym bilansem G+A i meczów.</div>')+
+        section("Bramki (tylko potwierdzone sezony)",
+            barChart(data.filter(row=>Number.isInteger(row.goals)),"goals",row=>String(row.goals)))+
+        section("Asysty (tylko potwierdzone sezony)",
+            barChart(data.filter(row=>Number.isInteger(row.assists)),"assists",row=>String(row.assists)))+
+        trendTable+
+        '<div class="notice">Brak danych nie oznacza 0. Nie sumujemy historycznych wartości minimalnych z pełnym bilansem PLP.</div>'
+    );
+}
 function playerDetail(id){
     const player=DB.players.find(candidate=>same(candidate.id,id)||(candidate.aliases||[]).some(alias=>same(alias,id)));
 
@@ -392,6 +430,7 @@ function playerDetail(id){
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
         (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
+        playerTrendSection(player)+
         publicCareerSection+
         playerMatchTimeline(player)+
         scoredMatchSection+
