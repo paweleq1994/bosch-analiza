@@ -86,6 +86,22 @@ class VideoCoverageTests(unittest.TestCase):
         self.assertIsNone(match_video({"title": "Bosch - VESTA 2:1", "date": "2023-08-26"}, matches))
         self.assertIsNone(match_video({"title": "Bosch - VESTA 2:1", "date": "2023-02-01"}, matches))
 
+    def test_official_broadcasts_have_exact_dated_source_bindings_and_keep_format(self):
+        expected={"PWnZ2yifLNI":"8255", "YTZTrjLc5Nw":"9486", "3A0-Z_98lKQ":"9805",
+                  "jbsK8wBM8UM":"10145", "s3iMR88rCKE":"10990", "RVOIr5BF1pw":"11397",
+                  "8mVCFD11ZGo":"11798"}
+        for video_id, match_id in expected.items():
+            video=next(v for v in self.database["videos"] if v["id"]==video_id)
+            match=next(m for m in self.database["matches"] if m["id"]==match_id)
+            self.assertEqual(video["date"],match["date"].replace("-", ""))
+            self.assertEqual(video["match_id"],match_id)
+            self.assertEqual(video["segment"],"Transmisja meczu")
+            self.assertIn(match["event_link"],video["verification_source"])
+            self.assertTrue(any(v["video_id"]==video_id for v in match["videos"]))
+        cup=next(v for v in self.database["videos"] if v["id"]=="Sglay1fT-00")
+        self.assertIsNone(cup["match_id"])
+        self.assertEqual(cup["review_category"],"outside_league_archive")
+
 
 if __name__ == "__main__":
     unittest.main()

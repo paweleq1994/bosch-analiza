@@ -94,14 +94,26 @@ def verified_protocol(match: dict, event: dict, profiles: dict) -> dict:
     scorers = []
     own_goals = 0
     own_goals_conceded = 0
+    own_scorers = []
 
     for player_id, entry in bosch_players.items():
         if not str(player_id).isdigit() or str(player_id) == "0" or not isinstance(entry, dict):
             continue
 
         amount, minutes = parse_goals(entry.get("goals"))
-        conceded, _ = parse_goals(entry.get("samobje"))
+        conceded, own_minutes = parse_goals(entry.get("samobje"))
         own_goals_conceded += conceded
+        if conceded:
+            profile = profiles.get(str(player_id)) or {}
+            name = str(profile.get("resolved_name") or "")
+            if len(name.split()) < 2:
+                raise ValueError(f"Unknown official own-goal scorer ID {player_id}")
+            if len(own_minutes) != conceded:
+                raise ValueError(f"Missing official own-goal minutes for {player_id}")
+            own_scorers.append({
+                "player_id": str(player_id), "name": name,
+                "goals": conceded, "minutes": own_minutes, "source_url": source,
+            })
         if amount == 0:
             continue
 
@@ -129,8 +141,13 @@ def verified_protocol(match: dict, event: dict, profiles: dict) -> dict:
         own_goals += amount
 
     if own_goals_conceded:
-        # A Bosch own goal needs a separate confirmed player attribution.
-        raise ValueError("Bosch own goals require direct individual evidence")
+        opponent_goals = sum(
+            parse_goals(entry.get("goals"))[0]
+            for player_id, entry in opposing_players.items()
+            if str(player_id).isdigit() and str(player_id) != "0" and isinstance(entry, dict)
+        )
+        if opponent_goals + own_goals_conceded != int(match["ga"]):
+            raise ValueError("Conceded goals do not reconcile with individual own-goal evidence")
 
     if goals + own_goals != int(match["gf"]):
         raise ValueError(
@@ -150,7 +167,8 @@ def verified_protocol(match: dict, event: dict, profiles: dict) -> dict:
         "protocol_player_goals": goals,
         "protocol_on_field_goals": goals,
         "opponent_own_goals": own_goals,
-        "bosch_own_goals": 0,
+        "bosch_own_goals": own_goals_conceded,
+        "bosch_own_goal_scorers": own_scorers,
         "unreadable_goal_markers": 0,
         "unreadable_goal_marker_players": [],
         "scorers": scorers,
@@ -215,11 +233,32 @@ def save_json(path: Path, payload: dict) -> None:
         path.write_text(content, encoding="utf-8")
 
 
+def extend_own_goal_evidence(previous: dict, protocols: dict) -> dict:
+    """Publish verified new attributions through the existing own-goal archive."""
+    events = list(previous.get("events") or [])
+    indexed = {(str(row["match_id"]), str(row["player_id"])): row for row in events}
+    for match in protocols.get("matches") or []:
+        for scorer in match.get("bosch_own_goal_scorers") or []:
+            row = {"match_id": str(match["id"]), **scorer}
+            key = (row["match_id"], row["player_id"])
+            if key in indexed:
+                if indexed[key]["goals"] != row["goals"]:
+                    raise ValueError(f"Own-goal evidence conflicts with archive: {key}")
+                continue
+            indexed[key] = row
+            events.append(row)
+    return {**previous, "events": events}
+
+
 def main() -> None:
     league = json.loads((DATA / "league_updates.json").read_text(encoding="utf-8"))
     profiles = json.loads((DATA / "player_profile_map.json").read_text(encoding="utf-8"))
     archive = json.loads(INDEX.read_text(encoding="utf-8"))
     merged, audit = extend(archive, league.get("matches") or [], profiles)
+    own_path = DATA / "bosch_own_goal_evidence.json"
+    own_evidence = json.loads(own_path.read_text(encoding="utf-8"))
+    updated_own_evidence = extend_own_goal_evidence(own_evidence, merged)
+    save_json(own_path, updated_own_evidence)
     save_json(INDEX, merged)
     save_json(PENDING, audit)
     print(

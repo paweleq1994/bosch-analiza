@@ -330,7 +330,7 @@ def main() -> None:
     for video_id, binding in manual.items():
         if video_id in video_by_id:
             video_by_id[video_id]["match_id"] = str(binding.get("match_id") or "") or None
-            video_by_id[video_id]["segment"] = binding.get("segment") or ""
+            video_by_id[video_id]["segment"] = binding.get("segment", video_by_id[video_id].get("segment") or "")
             video_by_id[video_id]["status"] = "matched_manual" if video_by_id[video_id]["match_id"] else "rejected"
             for key in ("review_reason", "reviewed_at", "review_category", "verification_source"):
                 if key in binding:
@@ -348,6 +348,7 @@ def main() -> None:
                 "video_id": video["id"], "title": video.get("title", ""),
                 "url": video.get("url", ""), "segment": video.get("segment", ""),
                 "channel_name": video.get("channel", ""), "publish_date": video.get("date", ""),
+                **({"length_seconds": video["length_seconds"]} if type(video.get("length_seconds")) is int else {}),
             })
 
     validate_goal_evidence(goal_evidence, seasons, matches)

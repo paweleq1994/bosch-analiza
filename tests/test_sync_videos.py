@@ -1,6 +1,9 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import json
+from types import SimpleNamespace
+from unittest.mock import patch
 
 spec=importlib.util.spec_from_file_location("vid",Path(__file__).resolve().parents[1]/"src/sync_videos.py")
 mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
@@ -38,4 +41,15 @@ class Videos(unittest.TestCase):
         self.assertEqual(new,prev)
         self.assertEqual(added,0)
         self.assertEqual(len(warnings),1)
+    def test_official_channel_reads_live_archive_by_verified_id_and_filters_other_teams(self):
+        source={"name":"Podlaska Liga Piłkarska","channel_id":"UCd0p73Dp5Eya7c4tQ8EoLZA",
+                "tab":"streams","title_contains":"Bosch"}
+        payload={"entries":[{"id":"3A0-Z_98lKQ","title":"APTEL vs BOSCH SERVICE TECH-CAR"},
+                            {"id":"35diG4RKe0M","title":"Turbo Podlasiak"}]}
+        with patch.object(mod.subprocess,"run",return_value=SimpleNamespace(returncode=0,stdout=json.dumps(payload))) as run:
+            videos=mod.list_channel(source)
+        self.assertEqual([v["id"] for v in videos],["3A0-Z_98lKQ"])
+        self.assertEqual(run.call_args.args[0][-1],"https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA/streams")
+        self.assertIsNone(videos[0]["match_id"])
+        self.assertEqual(videos[0]["status"],"needs_review")
 if __name__=="__main__":unittest.main()

@@ -128,18 +128,24 @@ def enrich_from_protocols(
         match_id = str(event.get("match_id") or "")
         player_id = canonical_player_id(event.get("player_id"), aliases)
 
-        if match_id in claimed_own_events or player_id not in known_own_scorers:
+        key = (match_id, player_id)
+        if key in claimed_own_events or player_id not in known_own_scorers:
             raise ValueError(f"Invalid or duplicated Bosch own-goal attribution: {match_id}")
 
         if type(event.get("goals")) is not int or event["goals"] <= 0:
             raise ValueError(f"Invalid own-goal count in {match_id}")
 
-        claimed_own_events.add(match_id)
-        own_goal_events[match_id].append({
+        claimed_own_events.add(key)
+        item = {
             "player_id": player_id,
             "name": known_own_scorers[player_id]["name"],
             "goals": event["goals"],
-        })
+        }
+        if "minutes" in event:
+            if len(event["minutes"]) != event["goals"]:
+                raise ValueError(f"Own-goal minutes disagree with count: {match_id}")
+            item.update(minutes=event["minutes"], source_url=event["source_url"])
+        own_goal_events[match_id].append(item)
 
     for record in protocol_rows:
         match_id = str(record.get("id") or "")

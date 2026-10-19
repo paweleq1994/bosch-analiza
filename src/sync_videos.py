@@ -81,9 +81,16 @@ def match_video(video,matches):
     return None
 
 def list_channel(source):
-    handle=source["handle"].lstrip("@")
-    if not re.fullmatch(r"[A-Za-z0-9_.-]+",handle):raise ValueError("invalid handle")
-    url=f"https://www.youtube.com/@{handle}/videos"
+    channel_id=source.get("channel_id")
+    tab=source.get("tab", "videos")
+    if tab not in ("videos", "streams"):raise ValueError("invalid channel tab")
+    if channel_id:
+        if not re.fullmatch(r"UC[A-Za-z0-9_-]{22}",channel_id):raise ValueError("invalid channel ID")
+        url=f"https://www.youtube.com/channel/{channel_id}/{tab}"
+    else:
+        handle=source["handle"].lstrip("@")
+        if not re.fullmatch(r"[A-Za-z0-9_.-]+",handle):raise ValueError("invalid handle")
+        url=f"https://www.youtube.com/@{handle}/{tab}"
     command=["yt-dlp","--flat-playlist","--playlist-end","300","--dump-single-json",
              "--no-warnings","--socket-timeout","12",url]
     run=subprocess.run(command,capture_output=True,text=True,timeout=120)
@@ -92,7 +99,9 @@ def list_channel(source):
     return [{"id":str(v.get("id") or ""),"title":v.get("title") or "",
              "url":"https://www.youtube.com/watch?v="+str(v.get("id") or ""),
              "date":v.get("upload_date") or "","channel":source["name"],"segment":("II połowa" if re.search(r"\b(ii|2)\s+po",norm(v.get("title"))) else "I połowa" if re.search(r"\b(i|1)\s+po",norm(v.get("title"))) else ""),
-             "match_id":None,"status":"needs_review"} for v in entries if VIDEO_ID.fullmatch(str(v.get("id") or ""))]
+             "match_id":None,"status":"needs_review"} for v in entries
+            if VIDEO_ID.fullmatch(str(v.get("id") or ""))
+            and (not source.get("title_contains") or norm(source["title_contains"]) in norm(v.get("title")))]
 
 def sync(sources,previous,site,archives):
     existing={v["id"]:v for v in previous.get("videos",[]) if v.get("id")}

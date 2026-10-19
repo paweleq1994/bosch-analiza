@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from sync_new_goal_protocols import verified_protocol, extend
+from sync_new_goal_protocols import verified_protocol, extend, extend_own_goal_evidence
 
 
 class FuturePLPGoalProtocolTests(unittest.TestCase):
@@ -88,6 +88,40 @@ class FuturePLPGoalProtocolTests(unittest.TestCase):
     def test_score_mismatch_is_never_recorded_as_a_goal(self):
         self.source["results"]["6951"]["goals"] = 3
         with self.assertRaisesRegex(ValueError, "Official score"):
+            verified_protocol(self.fixture, self.source, self.roster)
+
+    def own_goal(self):
+        self.source["performance"]["6951"]["1594"]["samobje"] = "1 (28')"
+        self.source["performance"]["3"]["15000"]["goals"] = "0"
+
+    def test_known_own_goal_with_minutes_is_verified_and_published_idempotently(self):
+        self.own_goal()
+        protocol = verified_protocol(self.fixture, self.source, self.roster)
+        self.assertEqual(protocol["bosch_own_goals"], 1)
+        self.assertEqual(protocol["protocol_player_goals"], 2)
+        previous = {"events": [{"match_id": "7839", "player_id": "1960", "goals": 1}]}
+        updated = extend_own_goal_evidence(previous, {"matches": [protocol]})
+        self.assertEqual(updated["events"][:1], previous["events"])
+        self.assertEqual(updated["events"][-1]["minutes"], ["28"])
+        self.assertEqual(updated["events"][-1]["source_url"], self.fixture["event_link"])
+        self.assertEqual(extend_own_goal_evidence(updated, {"matches": [protocol]}), updated)
+
+    def test_unknown_own_goal_scorer_remains_pending(self):
+        self.own_goal()
+        self.source["performance"]["6951"]["99999"] = {"samobje": "1 (29')"}
+        _, audit = extend(self.official_history, [self.fixture], self.roster, lambda _: self.source)
+        self.assertIn("Unknown official own-goal scorer ID 99999", audit["pending"][0]["reason"])
+
+    def test_own_goal_without_minutes_remains_pending(self):
+        self.own_goal()
+        self.source["performance"]["6951"]["1594"]["samobje"] = "1"
+        with self.assertRaisesRegex(ValueError, "Missing official own-goal minutes"):
+            verified_protocol(self.fixture, self.source, self.roster)
+
+    def test_inconsistent_conceded_score_does_not_validate_own_goal(self):
+        self.own_goal()
+        self.source["performance"]["3"]["15000"]["goals"] = "1 (28')"
+        with self.assertRaisesRegex(ValueError, "Conceded goals do not reconcile"):
             verified_protocol(self.fixture, self.source, self.roster)
 
 

@@ -23,6 +23,42 @@
       "verified_at": "2026-10-19",
       "review_notes": "Obejrzana pojedyncza akcja na 1:2 w tej samej hali i z datą publikacji 05.03.2023. Przy 13,08 s zawodnik w bieli kończy akcję przy lewym słupku i bramkarzu; przy 15,25 s piłka jest w bramce, a zawodnik odchodzi. Drugi gol Boscha w sekwencji wyniku odpowiada Jurkowiczowi i 23 minucie protokołu. Link zaczyna się od obejrzanej fazy kończącej akcję; nie uzyskano go przez przeliczenie minut meczu.",
       "review_frame": "reports/evidence/goal7851-minute23-frame15.png"
+    },
+    {
+      "match_id": "10145",
+      "player_id": "7275",
+      "minute": "2",
+      "video_id": "jbsK8wBM8UM",
+      "timestamp_seconds": 488,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Klatki 488,60 s i 491,73 s pokazują zakończenie akcji przy bliskiej bramce oraz powrót graczy po golu na 1:0. Komentarz identyfikuje Mateusza Jurkowicza. Protokół podaje 2′, komentarz mówi o trzeciej minucie; zachowano oficjalne 2′, bez przenoszenia tego czasu na oś filmu.",
+      "review_frame": "reports/evidence/goal10145-minute2-frame488.png"
+    },
+    {
+      "match_id": "10145",
+      "player_id": "7276",
+      "minute": "16",
+      "video_id": "jbsK8wBM8UM",
+      "timestamp_seconds": 1265,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1265,07 s widoczna jest kończąca faza ataku z prawej strony pola karnego, przy 1270,69 s zawodnik rywala wraca do siatki po golu na 2:1. Komentarz wskazuje Patryka Karolczuka i 16. minutę zgodną z PLP. Link zaczyna się od obejrzanej fazy akcji.",
+      "review_frame": "reports/evidence/goal10145-minute16-frame1265.png"
+    },
+    {
+      "match_id": "10145",
+      "player_id": "7272",
+      "minute": "17",
+      "video_id": "jbsK8wBM8UM",
+      "timestamp_seconds": 1318,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1318,03 s piłka jest widoczna w bliskiej bramce, a zawodnik rywala w siatce; komentarz identyfikuje Rafała Jurkowicza i wynik 3:1. To jego pierwszy z dwóch goli w protokole (17′, drugi 39′). Link pokazuje potwierdzoną klatkę zakończenia akcji; nie deklaruje dokładnej klatki przecięcia linii przez piłkę.",
+      "review_frame": "reports/evidence/goal10145-minute17-frame1318.png"
     }
   ]
 }
