@@ -697,6 +697,19 @@ def main() -> None:
             "github": "https://github.com/paweleq1994/bosch-analiza",
         },
     }
+    historical_team_media = load("media_discovery.json", {"candidates": []})
+    output["analysis"]["historical_team_media_candidates"] = [
+        {
+            "player_id": str(item["player_id"]),
+            "media_id": str(item["media_id"]),
+            "url": item["url"],
+            "team": item["team"],
+            "evidence": "historical_team_archive_unverified_person",
+        }
+        for item in historical_team_media.get("candidates") or []
+        if item.get("evidence") == "historical_team_archive"
+        and str(item.get("url") or "").startswith("https://podlaskaliga.pl/wp-content/uploads/")
+    ]
     output["media"] = canonicalize_player_media(
         load("media_manifest.json", {"subjects": []}),
         goalkeeper_aliases,
