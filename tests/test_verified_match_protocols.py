@@ -26,14 +26,14 @@ class VerifiedHistoricalProtocolTests(unittest.TestCase):
     def test_exact_missing_goals_are_confirmed(self):
         markowski = self.players["7282"]
         solowiej = self.players["7285"]
-        kakareko = self.players["new-kakareko-kamil"]
+        kakareko = self.players["1594"]
 
         self.assertEqual(markowski["season_stats"]["120"]["goals"], 1)
         self.assertEqual(solowiej["season_stats"]["139"]["goals"], 2)
         self.assertEqual(solowiej["goals"], 22)
         self.assertEqual(kakareko["season_stats"]["144"]["goals"], 1)
         self.assertTrue(kakareko["stats_minimum"])
-        self.assertIsNone(kakareko["apps"])
+        self.assertEqual(kakareko["apps"], 2)
         self.assertEqual(len(kakareko["protocol_goals"]), 1)
 
     def test_three_own_goals_and_one_walkover(self):
