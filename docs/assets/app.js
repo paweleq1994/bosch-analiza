@@ -130,6 +130,8 @@ function seasonPage(id){
         });
     const completeLeaders=leaders.filter(({stats})=>seasonPointsComplete(stats));
     const partialLeaders=leaders.filter(({stats})=>!seasonPointsComplete(stats));
+    const registeredWithoutApps=DB.players.filter(player=>playerSeasonRecord(player,selectedSeason.id)?.apps===0)
+        .sort((a,b)=>a.name.localeCompare(b.name,"pl"));
     const leadersTable=completeLeaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],completeLeaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
@@ -142,6 +144,11 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        (registeredWithoutApps.length?section("Zgłoszeni zawodnicy bez występów",
+            table(["Zawodnik","Występy w sezonie","Źródło zgłoszenia"],registeredWithoutApps.map(player=>{
+                const rosterUrl=player.roster_seasons?.[selectedSeason.id]?.source_urls?.[0]||player.profile_url;
+                return [playerLink(player),"0",rosterUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(rosterUrl)+'">PLP ↗</a>':e(seasonStatisticsSource(playerSeasonRecord(player,selectedSeason.id)))];
+            }))):"")+
         (partialLeaders.length?section("Zawodnicy z niepełnymi statystykami — bez miejsca w rankingu",
             table(["Zawodnik","M","G","A","Powód"],partialLeaders.map(({player,stats})=>[
                 playerLink(player),e(stats.apps??"—"),e(stats.goals??"—"),
