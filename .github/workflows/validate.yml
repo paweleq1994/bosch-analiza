@@ -58,7 +58,7 @@ jobs:
         run: node tests/frontend_source_provenance.cjs
       - name: Verify full PLP match box scores and player comparisons
         run: node tests/frontend_match_boxscores.cjs
-      - name: Verify export for every sortable table
+      - name: Verify sortable tables without CSV controls
         run: node tests/frontend_csv_exports.cjs
       - name: Verify historical team photo evidence cannot be confused with portraits
         run: node tests/frontend_historic_team_photos.cjs

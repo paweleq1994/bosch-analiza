@@ -325,8 +325,10 @@ def main() -> None:
             }
     for item in videos_extra.get("videos", []):
         video_id = item.get("id")
-        if video_id and video_id not in video_by_id:
-            video_by_id[video_id] = item
+        if video_id:
+            previous = video_by_id.get(video_id, {})
+            # Metadata refreshes also apply to films already in the archive.
+            video_by_id[video_id] = {**previous, **{k: v for k, v in item.items() if v not in (None, "")}}
     manual = videos_extra.get("manual_bindings", {})
     for video_id, binding in manual.items():
         if video_id in video_by_id:
@@ -356,6 +358,20 @@ def main() -> None:
     add_verified_players(historic_players, profiles, goal_evidence, player_seasons_extra)
     verified_identities = load("match_player_identities.json", {"players": {}, "unresolved": {}})
     identity_audit = attach_verified_identities(historic_players, verified_identities, match_performance)
+
+    # A registered squad member need not have appeared in any protocol.
+    rosters = load("player_rosters.json", {})
+    for roster in rosters.values():
+        for pid, member in roster.get("members", {}).items():
+            if any(p["id"] == pid for p in historic_players):
+                continue
+            profile = profiles.get(pid) or {}
+            historic_players.append({"id": pid, "name": profile.get("resolved_name") or member["name"],
+                "profile_url": profile.get("profile_url") if profile.get("public") else "",
+                "status": "Zgłoszony do kadry PLP", "apps": None, "goals": None,
+                "assists": None, "motm": None, "yellow": None, "red": None,
+                "peak": "", "seasons_label": "", "orlik2026": None, "hala2526": None,
+                "verified_identity_source": {"evidence_urls": member["source_urls"]}})
 
     def latest_orlik(recap_stats: dict | None, official_stats: dict | None) -> dict:
         if not recap_stats:
@@ -612,6 +628,38 @@ def main() -> None:
         match["player_performance_source"] = record["source_url"]
 
     derived_protocol_goals = complete_protocol_goal_fields(historic_players, matches)
+
+    aliases = {str(alias): p["id"] for p in historic_players for alias in p.get("aliases", [])}
+    for sid, roster in rosters.items():
+        for source_pid, member in roster.get("members", {}).items():
+            pid = aliases.get(source_pid, source_pid)
+            player = next((p for p in historic_players if p["id"] == pid), None)
+            if player is None:
+                continue
+            stats = player.setdefault("season_stats", {})
+            # Historical list team fields can refer to the current club.
+            # A past season requires independent player-season evidence.
+            if sid not in stats and sid != seasons[-1]["id"]:
+                continue
+            player.setdefault("roster_seasons", {})[sid] = member
+            if sid not in stats:
+                # A zero in an official squad list is valid for this season,
+                # never evidence that the player's entire career is zero.
+                has_appearance = any(str(m["sid"]) == sid and any(str(p["player_id"]) == pid for p in m.get("player_performance", [])) for m in matches)
+                zero = member.get("listed_apps") == 0 and not has_appearance
+                stats[sid] = {field: 0 if zero else None for field in ("apps", "goals", "assists", "motm", "yellow", "red")}
+                stats[sid].update({"origin": "plp_roster", "source_urls": member["source_urls"]})
+
+    # Keep direct reds identical to PLP. A second yellow is a separate,
+    # match-derived dismissal and cannot be inferred from season yellow totals.
+    for match in matches:
+        for entry in match.get("player_performance", []):
+            entry["second_yellow"] = int(type(entry.get("yellow")) is int and entry["yellow"] >= 2)
+            entry["dismissals"] = int(entry["red"] > 0 or entry["second_yellow"] > 0) if type(entry.get("red")) is int else None
+    for player in historic_players:
+        entries = [entry for match in matches for entry in match.get("player_performance", []) if str(entry["player_id"]) == player["id"]]
+        player["second_yellow"] = sum(entry["second_yellow"] for entry in entries)
+        player["discipline_source"] = "Zachowane ligowe protokoły PLP"
 
     # Explicitly expose historical participation even when detailed PLP totals
     # were not captured in the original archive.

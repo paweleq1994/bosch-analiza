@@ -9,8 +9,8 @@ const context = vm.createContext({});
 vm.runInContext(script.slice(0, script.indexOf("function route(){")), context);
 const markup = vm.runInContext('table(["Zawodnik","Gole"],[["Moskal", "3"]])', context);
 
-assert.ok(markup.includes("data-export-csv"));
+assert.ok(!markup.includes("data-export-csv"));
 assert.ok(markup.includes("Zawodnik"));
-assert.ok(script.includes("function exportVisibleTable(button)"));
-assert.ok(script.includes('link.download="bosch-tabela-"'));
-console.log("Confirmed CSV export control exists for all shared table renders.");
+assert.ok(!script.includes("function exportVisibleTable(button)"));
+assert.ok(!script.includes("text/csv"));
+console.log("Tables retain their data without CSV export controls.");

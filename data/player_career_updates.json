@@ -2950,5 +2950,29 @@
         "red": 0
       }
     ]
+  },
+  "12288": {
+    "apps": 0,
+    "goals": 0,
+    "assists": 0,
+    "motm": 0,
+    "yellow": 0,
+    "red": 0,
+    "source": "PLP SportsPress",
+    "seasons": 1,
+    "teams": 1,
+    "season_rows": [
+      {
+        "sid": "144",
+        "name": "Orlik 2025",
+        "team": "Bosch Service Tech-Car",
+        "apps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0,
+        "yellow": 0,
+        "red": 0
+      }
+    ]
   }
 }

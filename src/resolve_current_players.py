@@ -15,6 +15,7 @@ from player_identity import has_bosch_season, match_public_profile, person_key
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILES = ROOT / "data" / "player_profile_map.json"
+ROSTERS = ROOT / "data" / "player_rosters.json"
 RECAP = ROOT / "data" / "orlik_2026_recap.json"
 SPORTSPRESS = "https://podlaskaliga.pl/wp-json/sportspress/v2"
 USER_AGENT = "Bosch-Scouting/1.0"
@@ -153,6 +154,70 @@ def resolve(profiles: dict, leaders: list[dict], find=find_profile) -> tuple[dic
     return output, warnings
 
 
+def roster_season(season, lists):
+    """Read membership, including zeros, only in the team's actual competition.
+
+    SportsPress also lists team members with zeroes in the other division.
+    Those rows must never establish participation in that competition.
+    """
+    sid = str(season.get("plp_id") or season["id"])
+    leagues = set(map(str, season.get("league_ids") or []))
+    if not leagues:
+        raise ValueError("Season has no verified league ID")
+    members = {}
+    for source in lists:
+        if list(map(str, source.get("seasons") or [])) != [sid]:
+            continue
+        if not leagues.intersection(map(str, source.get("leagues") or [])):
+            continue
+        data = source.get("data")
+        if not isinstance(data, dict):
+            continue
+        for pid, stat in data.items():
+            if not str(pid).isdigit() or str(pid) == "0" or not isinstance(stat, dict):
+                continue
+            if str(stat.get("team")) != "6951" or not stat.get("name"):
+                continue
+            entry = members.setdefault(str(pid), {"name": clean_roster_name(stat["name"]),
+                "listed_apps": None, "source_urls": []})
+            if person_key(entry["name"]) != person_key(stat["name"]):
+                raise ValueError(f"Roster identity collision: {pid}")
+            apps = str(stat.get("appearances", ""))
+            if apps.isdigit():
+                entry["listed_apps"] = max(entry["listed_apps"] or 0, int(apps))
+            url = source.get("link") or ""
+            if url.startswith("https://podlaskaliga.pl/lista/") and url not in entry["source_urls"]:
+                entry["source_urls"].append(url)
+    if not members:
+        raise ValueError("No source-linked Bosch roster")
+    return {"plp_id": sid, "league_ids": sorted(leagues), "members": members}
+
+
+def clean_roster_name(value):
+    return unescape(re.sub(r"<[^>]*>", " ", str(value))).strip()
+
+
+def refresh_rosters(seasons, previous, fetch=fetch_json):
+    result = dict(previous)
+    warnings = []
+    for season in seasons:
+        try:
+            rows, page = [], 1
+            while True:
+                url = SPORTSPRESS + "/lists?" + urlencode({"seasons": season.get("plp_id") or season["id"], "per_page": 100, "page": page})
+                batch = fetch(url)
+                if not isinstance(batch, list):
+                    raise ValueError("Invalid list response")
+                rows.extend(batch)
+                if len(batch) < 100:
+                    break
+                page += 1
+            result[str(season["id"])] = roster_season(season, rows)
+        except Exception as error:
+            warnings.append(f"roster {season['id']}: {type(error).__name__}: {error}")
+    return result, warnings
+
+
 def main() -> None:
     existing = json.loads(PROFILES.read_text(encoding="utf-8"))
     recap = json.loads(RECAP.read_text(encoding="utf-8"))
@@ -163,6 +228,21 @@ def main() -> None:
         if not entry.get("player_id")
     ]
     profiles, warnings = resolve(existing, recap.get("player_leaders", []) + extra_scorers)
+    seasons = json.loads((ROOT / "data/league_updates.json").read_text(encoding="utf-8"))["season_rows"]
+    old_rosters = json.loads(ROSTERS.read_text(encoding="utf-8")) if ROSTERS.exists() else {}
+    rosters, roster_warnings = refresh_rosters(seasons, old_rosters)
+    warnings.extend(roster_warnings)
+    ROSTERS.write_text(json.dumps(rosters, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for record in rosters.values():
+        for pid, member in record["members"].items():
+            if pid not in profiles:
+                try:
+                    public_profile = verified_profile(pid, member["name"])
+                except Exception:
+                    public_profile = None
+                profiles[pid] = public_profile or {"player_id": int(pid), "resolved_name": member["name"],
+                    "profile_url": "", "public": False, "source": "verified_official_roster",
+                    "evidence_urls": member["source_urls"]}
     rendered = json.dumps(profiles, ensure_ascii=False, indent=2) + "\n"
 
     if PROFILES.read_text(encoding="utf-8") != rendered:

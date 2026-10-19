@@ -9,6 +9,23 @@ spec=importlib.util.spec_from_file_location("vid",Path(__file__).resolve().paren
 mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
 
 class Videos(unittest.TestCase):
+    def test_existing_archive_metadata_is_refreshed_without_changing_binding(self):
+        old={"videos":[{"id":"tllBiVSXg4o","title":"Known","date":"","match_id":"orlik26-14","status":"matched_manual"}],"manual_bindings":{"tllBiVSXg4o":{"match_id":"orlik26-14"}}}
+        result, added, warnings=mod.sync([{"name":"Marta"}],old,{"videos":old["videos"],"matches":[]},lambda _: [{"id":"tllBiVSXg4o","date":"20261011"}])
+        self.assertEqual(result["videos"][0]["date"],"2026-10-11")
+        self.assertEqual(result["videos"][0]["match_id"],"orlik26-14")
+        self.assertEqual(added,0)
+        self.assertFalse(warnings)
+
+    def test_detail_metadata_failure_preserves_archive(self):
+        previous={"videos":[{"id":"tllBiVSXg4o","date":"","match_id":"orlik26-14"}],"manual_bindings":{}}
+        result,warnings=mod.refresh_metadata(previous,{},lambda _: (_ for _ in ()).throw(ValueError("No date")))
+        self.assertEqual(result,previous)
+        self.assertEqual(len(warnings),1)
+        result,warnings=mod.refresh_metadata(previous,{},lambda _: {"date":"20261011","length_seconds":1190})
+        self.assertEqual(result["videos"][0]["date"],"2026-10-11")
+        self.assertEqual(result["videos"][0]["length_seconds"],1190)
+        self.assertFalse(warnings)
     def setUp(self):
         self.matches=[
           {"id":"orlik26-1","sid":"orlik-2026","opponent":"IST Trade","gf":1,"ga":1},

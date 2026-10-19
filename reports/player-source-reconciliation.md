@@ -4,7 +4,7 @@ Porównania bazują na oficjalnych protokołach meczów i osobnych tabelach
 kariery PLP. Nie utożsamiamy całej kariery zawodnika z grą w Boschu.
 Nieznana liczba i potwierdzone zero nie są tym samym.
 
-- Zawodnicy: **45**
+- Zawodnicy: **46**
 - Mecze: **113**
 - Niespójności wymagające wyjaśnienia: **0**
 - Wartości minimalne bez pola sezonowego: **0**

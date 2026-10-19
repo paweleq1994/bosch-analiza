@@ -1,0 +1,1096 @@
+{
+  "120": {
+    "plp_id": "120",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-gk-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "7269": {
+        "name": "Dołżyk Michał",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala22-strzelcy-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala22-kanadyjczyk-ii-liga/"
+        ]
+      }
+    }
+  },
+  "126": {
+    "plp_id": "126",
+    "league_ids": [
+      "122"
+    ],
+    "members": {
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "9267": {
+        "name": "Kowalczuk Karol",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-gk-i-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/",
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-kartki-i-liga/"
+        ]
+      },
+      "2204": {
+        "name": "Daniluk Dawid",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      },
+      "6764": {
+        "name": "Malesiński Adam",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala23-24-indywidualne-i-liga/"
+        ]
+      }
+    }
+  },
+  "141": {
+    "plp_id": "141",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "10836": {
+        "name": "Karpiński Hubert",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "9267": {
+        "name": "Kowalczuk Karol",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "9400": {
+        "name": "Hyżyk Szymon",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "4577": {
+        "name": "Kuźma Piotr",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-gk-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "6764": {
+        "name": "Malesiński Adam",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala24-25-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala24-25-indywidualne-ii-liga/"
+        ]
+      }
+    }
+  },
+  "146": {
+    "plp_id": "146",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "9267": {
+        "name": "Kowalczuk Karol",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "4577": {
+        "name": "Kuźma Piotr",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "9400": {
+        "name": "Hyżyk Szymon",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "13010": {
+        "name": "Żak Paweł (GK)",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      },
+      "13060": {
+        "name": "Rutkowski Mateusz",
+        "listed_apps": 1,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+        ]
+      }
+    }
+  },
+  "125": {
+    "plp_id": "125",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik23-gk-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      },
+      "8654": {
+        "name": "Bączek Szymon",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik23-indywidualne-ii-liga/"
+        ]
+      }
+    }
+  },
+  "139": {
+    "plp_id": "139",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "4577": {
+        "name": "Kuźma Piotr",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "9267": {
+        "name": "Kowalczuk Karol",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "8654": {
+        "name": "Bączek Szymon",
+        "listed_apps": 1,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "9400": {
+        "name": "Hyżyk Szymon",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "1594": {
+        "name": "Kakareko Kamil",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "2204": {
+        "name": "Daniluk Dawid",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "2203": {
+        "name": "Bayer Emilian",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7269": {
+        "name": "Dołżyk Michał",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-gk-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      },
+      "6764": {
+        "name": "Malesiński Adam",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik24-kartki-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik24-indywidualne-ii-liga/"
+        ]
+      }
+    }
+  },
+  "144": {
+    "plp_id": "144",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "4577": {
+        "name": "Kuźma Piotr",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "2204": {
+        "name": "Daniluk Dawid",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 8,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 13,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "10836": {
+        "name": "Karpiński Hubert",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "12287": {
+        "name": "Mironiuk Zbigniew",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "1594": {
+        "name": "Kakareko Kamil",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-gk-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "11895": {
+        "name": "Czudzinowicz Jakub (GK)",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-gk-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "12290": {
+        "name": "Płochocki Maciej",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "12288": {
+        "name": "Zalewski Piotr",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "6764": {
+        "name": "Malesiński Adam",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "7269": {
+        "name": "Dołżyk Michał",
+        "listed_apps": 1,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "9400": {
+        "name": "Hyżyk Szymon",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 1,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+        ]
+      }
+    }
+  },
+  "orlik-2026": {
+    "plp_id": "148",
+    "league_ids": [
+      "123"
+    ],
+    "members": {
+      "2204": {
+        "name": "Daniluk Dawid",
+        "listed_apps": 12,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7277": {
+        "name": "Klepacki Przemysław",
+        "listed_apps": 11,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7276": {
+        "name": "Karolczuk Patryk",
+        "listed_apps": 9,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13197": {
+        "name": "Szparło Filip",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "6764": {
+        "name": "Malesiński Adam",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13196": {
+        "name": "Rogon Damian",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7284": {
+        "name": "Rutkowski Mateusz (GK)",
+        "listed_apps": 14,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-gk-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "1960": {
+        "name": "Moskal Paweł",
+        "listed_apps": 15,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "4577": {
+        "name": "Kuźma Piotr",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13198": {
+        "name": "Wojciuk Piotr",
+        "listed_apps": 5,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7272": {
+        "name": "Jurkowicz Rafał",
+        "listed_apps": 10,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "8654": {
+        "name": "Bączek Szymon",
+        "listed_apps": 6,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "9400": {
+        "name": "Hyżyk Szymon",
+        "listed_apps": 7,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7283": {
+        "name": "Nowicki Patryk",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "8656": {
+        "name": "Muczyński Karol",
+        "listed_apps": 4,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "9267": {
+        "name": "Kowalczuk Karol",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13194": {
+        "name": "Karpowicz Kamil",
+        "listed_apps": 3,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/",
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "10836": {
+        "name": "Karpiński Hubert",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "12425": {
+        "name": "Karolczuk Jakub",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13060": {
+        "name": "Rutkowski Mateusz",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "13010": {
+        "name": "Żak Paweł (GK)",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "1970": {
+        "name": "Wnuszyński Karol",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "2203": {
+        "name": "Bayer Emilian",
+        "listed_apps": 1,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "8914": {
+        "name": "Kadłubowski Krzysztof",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7269": {
+        "name": "Dołżyk Michał",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7275": {
+        "name": "Jurkowicz Mateusz",
+        "listed_apps": 0,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      },
+      "7280": {
+        "name": "Malinowski Piotr",
+        "listed_apps": 2,
+        "source_urls": [
+          "https://podlaskaliga.pl/lista/orlik26-kartki-ii-liga/"
+        ]
+      }
+    }
+  }
+}
