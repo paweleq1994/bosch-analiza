@@ -1,4 +1,5 @@
 import json
+import copy
 import sys
 import unittest
 from pathlib import Path
@@ -77,6 +78,30 @@ class CareerSourceReconciliationTests(unittest.TestCase):
         match = next(r for r in row["season_breakdown"] if r["season_ids"] == ["126"])
         self.assertEqual((match["html"], match["rest"], match["match_minimum"]), (1, 0, 1))
         self.assertTrue(match["match_source_urls"])
+
+    def test_all_remaining_variances_are_explained_by_complete_protocol_sets(self):
+        extra=json.loads((ROOT / "data/career_competition_evidence.json").read_text(encoding="utf-8"))
+        before=copy.deepcopy(self.db)
+        report=audit(self.db,self.rest,self.html,self.evidence,extra)
+        self.assertFalse(any(r["status"].endswith("requires_review") for r in report["career_source_differences"]))
+        rows=[r for r in report["career_season_differences"] if r["reason"]=="events_without_league_taxonomy"]
+        self.assertEqual(len(rows),5)
+        self.assertEqual({r["id"] for r in rows},{"4577","2204","1594"})
+        for row in rows:
+            self.assertEqual(row["protocol_total"],row["html"])
+            self.assertEqual(row["protocol_tagged_total"],row["rest"])
+            self.assertTrue(row["match_source_urls"])
+        self.assertEqual(self.db,before)  # The other clubs' games never enter Bosch totals.
+
+    def test_missing_or_changed_competition_evidence_cannot_explain_the_delta(self):
+        extra=json.loads((ROOT / "data/career_competition_evidence.json").read_text(encoding="utf-8"))
+        row=next(r for r in extra["records"] if r["player_id"]=="1594")
+        for event in row["events"]:
+            if not event["leagues"]:
+                event["leagues"]=[101]
+        report=audit(self.db,self.rest,self.html,self.evidence,extra)
+        goal=next(r for r in report["career_source_differences"] if r["id"]=="1594" and r["field"]=="goals")
+        self.assertEqual(goal["status"],"source_variance_requires_review")
 
 
 if __name__ == "__main__":

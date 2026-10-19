@@ -130,6 +130,8 @@ function seasonPage(id){
         });
     const completeLeaders=leaders.filter(({stats})=>seasonPointsComplete(stats));
     const partialLeaders=leaders.filter(({stats})=>!seasonPointsComplete(stats));
+    const registeredWithoutApps=DB.players.filter(player=>playerSeasonRecord(player,selectedSeason.id)?.apps===0)
+        .sort((a,b)=>a.name.localeCompare(b.name,"pl"));
     const leadersTable=completeLeaders.length?table(["Zawodnik","M","G","A","G+A","Źródło"],completeLeaders.map(({player,stats})=>[
         playerLink(player),
         e(stats.apps??"—"),
@@ -142,6 +144,11 @@ function seasonPage(id){
         metrics([["Pozycja",selectedSeason.position+"."],["Punkty",selectedSeason.points],["Bilans",selectedSeason.wins+"-"+selectedSeason.draws+"-"+selectedSeason.losses],["Bramki",selectedSeason.gf+":"+selectedSeason.ga],["PPG",ppg(selectedSeason)],["Czyste konta",selectedSeason.clean_sheets??"—"]])+
         section("Przebieg sezonu",'<div class="card">'+matchList(matches)+'</div>')+
         section("Liderzy sezonu — kanadyjka (G+A)",leadersTable)+
+        (registeredWithoutApps.length?section("Zgłoszeni zawodnicy bez występów",
+            table(["Zawodnik","Występy w sezonie","Źródło zgłoszenia"],registeredWithoutApps.map(player=>{
+                const rosterUrl=player.roster_seasons?.[selectedSeason.id]?.source_urls?.[0]||player.profile_url;
+                return [playerLink(player),"0",rosterUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(rosterUrl)+'">PLP ↗</a>':e(seasonStatisticsSource(playerSeasonRecord(player,selectedSeason.id)))];
+            }))):"")+
         (partialLeaders.length?section("Zawodnicy z niepełnymi statystykami — bez miejsca w rankingu",
             table(["Zawodnik","M","G","A","Powód"],partialLeaders.map(({player,stats})=>[
                 playerLink(player),e(stats.apps??"—"),e(stats.goals??"—"),
@@ -268,6 +275,9 @@ function players(){
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
+    if(record?.origin==="plp_cup_protocols"){
+        return "Oficjalne protokoły Superpucharu PLP";
+    }
     if(record?.origin==="plp_archived_public_season"){
         return "Archiwalny profil PLP (Internet Archive)";
     }
@@ -367,7 +377,7 @@ function playerProvenanceSection(player){
             ?(fullHistory?"Bilans sezonów PLP":"Źródłowo potwierdzone minimum / archiwum")
             :"Brak potwierdzonej wartości";
         const careerStatus=Number.isInteger(careerValue)
-            ?(career?.public_season_rows?.length?"Oficjalny HTML wszystkich rozgrywek":"PLP API")
+            ?(career?.source_adjustments?.length?"HTML PLP i odrębny protokół":career?.public_season_rows?.length?"Oficjalny HTML wszystkich rozgrywek":"PLP API")
             :"Brak pełnego publicznego bilansu";
         return [
             e(name),Number.isInteger(boschValue)?e(boschValue):"—",
@@ -380,6 +390,7 @@ function playerProvenanceSection(player){
         '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
         '<p>'+ (careerUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(careerUrl)+'">Oficjalny profil i kariera PLP ↗</a>':e("Brak pełnego publicznego bilansu"))+
         '. Źródła pojedynczych występów znajdują się poniżej, w historii protokołów.</p>'+
+        (career?.source_adjustments?.length?'<p>Uzupełnienia pominięte przez publiczną tabelę kariery: '+career.source_adjustments.map(row=>'<a target="_blank" rel="noopener noreferrer" href="'+e(row.source_url)+'">'+e(row.name)+' — '+e(row.apps)+' występ ↗</a>').join(" · ")+'.</p>':"")+
         table(["Miara","Bosch","Pewność danych","PLP cała kariera","Źródło kariery"],rows)+
         '<p class="small">ŻK to liczba żółtych kartek. Bezpośrednie czerwone zachowują zapis PLP. Wykluczenia po dwóch żółtych są wykazywane oddzielnie w protokołach: '+e(player.second_yellow||0)+' w zachowanym archiwum ligowym.</p>');
 }
@@ -424,12 +435,15 @@ function playerDetail(id){
         : empty("Brak szczegółowych danych sezonowych.");
     const unassigned=player.season_coverage?.unassigned||{};
     const remainingTotals=[
-        ["meczów",unassigned.apps],
-        ["goli",unassigned.goals],
-        ["asyst",unassigned.assists]
+        ["występy",unassigned.apps],
+        ["gole",unassigned.goals],
+        ["asysty",unassigned.assists],
+        ["MVP",unassigned.motm],
+        ["żółte kartki",unassigned.yellow],
+        ["bezpośrednie czerwone kartki",unassigned.red]
     ].filter(([,value])=>Number.isInteger(value)&&value>0);
     const remainingNote=remainingTotals.length
-        ? '<div class="notice">Niepełny podział na sezony: '+remainingTotals.map(([label,value])=>e(value)+" "+e(label)).join(", ")+'. Wiersz „Łącznie Bosch” pochodzi z historycznego bilansu zawodnika i nie jest sumą wyświetlonych sezonów. Nie przypisujemy brakujących statystyk do sezonów bez potwierdzenia.</div>'
+        ? '<div class="notice">Niepełny podział na sezony: '+remainingTotals.map(([label,value])=>e(label)+": "+e(value)).join(", ")+'. Wiersz „Łącznie Bosch” pochodzi z historycznego bilansu zawodnika i nie jest sumą wyświetlonych sezonów. Nie przypisujemy brakujących statystyk do sezonów bez potwierdzenia.</div>'
         : "";
     const careerRows=(player.career_totals?.season_rows||[]).map(record=>[
         e(record.name),
@@ -448,8 +462,8 @@ function playerDetail(id){
         e(record.red)
     ]);
     const publicCareerSection=publicCareerRows.length
-        ? section("Oficjalna tabela całej kariery PLP — komplet rozgrywek",
-            '<p>Źródło: <a target="_blank" rel="noopener noreferrer" href="'+e(player.career_totals.source_url)+'">Profil PLP ↗</a>. Obejmuje wszystkie sezony oraz Superpuchary — niezależnie od klubów.</p>'+
+        ? section("Oficjalna tabela kariery PLP",
+            '<p>Tabela opublikowana w profilu PLP może obejmować także inne kluby. Źródło oraz udokumentowane uzupełnienia znajdują się wyżej.</p>'+
             table(["Rozgrywki","M","G","A","MVP","ŻK","CK bezp."],publicCareerRows))
         : "";
     const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
@@ -476,7 +490,7 @@ function playerDetail(id){
             '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">PLP ↗</a>'
         ]))
     ):"";
-    const combinedProfileLinks=(player.alternate_profile_urls||[]).map(url=>
+    const combinedProfileLinks=(player.alternate_profile_urls||[]).filter(url=>url!==(player.career_totals?.source_url||player.profile_url)).map(url=>
         '<a target="_blank" rel="noopener noreferrer" href="'+e(url)+'">'+e(url)+'</a>'
     );
     const profileMergeNote=combinedProfileLinks.length
@@ -517,8 +531,7 @@ function playerDetail(id){
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
         gallery+
         historicTeamGallery+
-        (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"")+
-        (player.profile_url?'<p><a href="'+e(player.profile_url)+'" target="_blank" rel="noopener noreferrer">Profil w PLP ↗</a></p>':"");
+        (player.peak?section("Najlepszy historyczny sezon",'<div class="card">'+e(player.peak)+'</div>'):"");
 }
 function groupOpponentHistory(matches){
     const namesToIds=new Map();

@@ -55,3 +55,6 @@ assert.ok(inOrlik2026.includes("Jurkowicz Mateusz"));
 assert.ok(inOrlik2026.includes("Kadłubowski Krzysztof"));
 assert.ok(evaluate('playerCard(DB.players.find(p=>p.id==="7275"),"orlik-2026")').includes("0 występów"));
 assert.ok(evaluate('DB.players.filter(p=>playerPlayedSeason(p,"144")).some(p=>p.id==="12288")'));
+assert.ok(evaluate('seasonPage("orlik-2026")').includes("Zgłoszeni zawodnicy bez występów"));
+assert.ok(evaluate('seasonPage("orlik-2026")').includes("Jurkowicz Mateusz"));
+assert.ok(evaluate('seasonPage("144")').includes("Zalewski Piotr"));

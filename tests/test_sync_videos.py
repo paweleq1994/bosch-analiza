@@ -9,6 +9,12 @@ spec=importlib.util.spec_from_file_location("vid",Path(__file__).resolve().paren
 mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod)
 
 class Videos(unittest.TestCase):
+    def test_public_archive_dates_are_normalized_and_newer_2026_films_are_present(self):
+        site=json.loads((Path(__file__).resolve().parents[1]/"docs/assets/data.json").read_text("utf-8"))
+        for video in site["videos"]:
+            if video.get("date"):
+                self.assertEqual(video["date"],mod.iso_date(video["date"]))
+        self.assertGreaterEqual(sum(v.get("date", "").startswith("2026-") for v in site["videos"]),30)
     def test_existing_archive_metadata_is_refreshed_without_changing_binding(self):
         old={"videos":[{"id":"tllBiVSXg4o","title":"Known","date":"","match_id":"orlik26-14","status":"matched_manual"}],"manual_bindings":{"tllBiVSXg4o":{"match_id":"orlik26-14"}}}
         result, added, warnings=mod.sync([{"name":"Marta"}],old,{"videos":old["videos"],"matches":[]},lambda _: [{"id":"tllBiVSXg4o","date":"20261011"}])

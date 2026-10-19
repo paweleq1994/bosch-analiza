@@ -19,6 +19,7 @@ from integrate_verified_match_players import attach_verified_identities, minimum
 from media_identity import canonicalize_player_media
 from goal_reconciliation import add_verified_players, administrative_goals_by_season, validate_goal_evidence
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
+from sync_videos import iso_date
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -40,6 +41,10 @@ def normalized(value: str) -> str:
     value = unicodedata.normalize("NFD", value)
     value = "".join(char for char in value if unicodedata.category(char) != "Mn")
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+
+def competition_name_key(value):
+    return tuple(sorted(re.sub(r"(?<=[a-z])(?=\d)", " ", normalized(value)).split()))
 
 
 def match_row(row: dict) -> dict:
@@ -82,7 +87,7 @@ def main() -> None:
     for player_id, correction in stat_corrections.items():
         url = str(correction.get("source_url") or "")
 
-        if not url.startswith("https://podlaskaliga.pl/zawodnik/"):
+        if not url.startswith(("https://podlaskaliga.pl/zawodnik/", "https://podlaskaliga.pl/wydarzenie/")):
             raise ValueError(f"Unverified player correction source: {player_id}")
 
         player_seasons = player_seasons_extra.setdefault(str(player_id), {})
@@ -339,6 +344,8 @@ def main() -> None:
                 if key in binding:
                     video_by_id[video_id][key] = binding[key]
     original_video_details = {str(v.get("video_id")): v for match in matches for v in match["videos"]}
+    for video in video_by_id.values():
+        video["date"] = iso_date(video.get("date"))
     for match in matches:
         match["videos"] = [v for v in match["videos"]
                            if str((video_by_id.get(str(v.get("video_id"))) or {}).get("match_id") or "") == str(match["id"])]
@@ -413,7 +420,7 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols"}:
                 verified_stats["origin"] = stats["origin"]
             for key in ("match_performance_verified", "match_performance_sources", "source_url", "captured_at"):
                 if key in stats:
@@ -520,6 +527,18 @@ def main() -> None:
                 "public_season_rows": public_career["season_rows"],
                 "seasons": len(public_career["season_rows"]),
             }
+            # Some public profiles omit even a directly verified Supercup
+            # appearance. Keep their raw HTML rows and explain the supplement.
+            if correction and correction.get("scope") == "bosch_supercup_protocol" and career.get("teams") == 1:
+                names = {competition_name_key(row.get("name")) for row in public_career["season_rows"]}
+                additions = [{"sid": sid, **row} for sid, row in correction["seasons"].items()
+                             if competition_name_key(row.get("name")) not in names]
+                if additions:
+                    career["source_adjustments"] = additions
+                    for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
+                        career[field] += sum(row[field] for row in additions)
+                    career["source"] += " i niezależne protokoły Superpucharu"
+                    career["seasons"] += len(additions)
         player["career_totals"] = career
         player["stats_source"] = "PLP SportsPress i tabela całej kariery" if correction else (
             "PLP SportsPress i aktualny raport Orlik 2026"

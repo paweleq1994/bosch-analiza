@@ -59,6 +59,42 @@
       "verified_at": "2026-10-19",
       "review_notes": "Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1318,03 s piłka jest widoczna w bliskiej bramce, a zawodnik rywala w siatce; komentarz identyfikuje Rafała Jurkowicza i wynik 3:1. To jego pierwszy z dwóch goli w protokole (17′, drugi 39′). Link pokazuje potwierdzoną klatkę zakończenia akcji; nie deklaruje dokładnej klatki przecięcia linii przez piłkę.",
       "review_frame": "reports/evidence/goal10145-minute17-frame1318.png"
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7282",
+      "minute": "29",
+      "video_id": "jzGjEZBED6I",
+      "timestamp_seconds": 9,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzany krótki film pojedynczej akcji na 2:5 w tej samej hali meczu Wiara Piasta II–Bosch. Przy 8,23 s widać kończący atak Boscha w bieli przy lewym polu bramkowym; przy 9,22 s piłka jest w świetle bramki przy siatce, bramkarz na kolanach, a obrońca odwraca się w stronę siatki. Piąty gol Boscha w sekwencji wyniku filmu odpowiada Damianowi Markowskiemu i 29 minucie oficjalnego protokołu. Nazwisko wynika z protokołu i kolejności wyniku, bez rozpoznawania twarzy. Link do obejrzanego zakończenia akcji, bez deklaracji dokładnej klatki przecięcia linii.",
+      "review_frame": "reports/evidence/goal7851-minute29-frame9.png"
+    },
+    {
+      "match_id": "orlik26-1",
+      "player_id": "7276",
+      "minute": "23",
+      "video_id": "gqBY10ItvgA",
+      "timestamp_seconds": 145,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzana opublikowana przez autorkę wersja ZOOM 200% drugiej połowy IST Trade–Bosch (19.04.2026, 1:1), zestawiona z wersją szeroką B6I1QigzHAk. Przy 140,19 s widoczny atak Boscha w czarnych koszulkach i jasnych spodenkach przed prawym polem karnym; przy 145,19 s zakończenie strzału: piłka przy siatce prawej bramki i bramkarz na ziemi. Przy 150,19 s zawodnicy wracają w stronę środka. To jedyny gol Boscha w tej połowie, strzelec i PLP 23′ potwierdzone protokołem. Powiązanie przez mecz i kolejność bramek, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanego odtwarzacza, nie z przeliczenia minuty PLP.",
+      "review_frame": "reports/evidence/goal-orlik26-1-minute23-frame145.png"
+    },
+    {
+      "match_id": "7851",
+      "player_id": "7285",
+      "minute": "26",
+      "video_id": "o660JNtPcUo",
+      "timestamp_seconds": 8,
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-19",
+      "review_notes": "Obejrzany krótki film pojedynczej akcji opisany wynikiem 2:4, opublikowany 05.03.2023 w tej samej hali VI LO. Przy 6,21 s zawodnik Boscha w bieli kończy strzał przed lewą bramką. Przy 8,19 s piłka jest przy siatce wewnątrz prawego słupka tej bramki, a bramkarz w niebieskim odwraca się do bramki. Czwarty gol Boscha w sekwencji wyniku odpowiada drugiemu trafieniu Tomasza Sołowieja i 26 minucie oficjalnego protokołu (pierwsze 24′). Powiązanie przez mecz i kolejność wyniku, bez rozpoznawania twarzy. Sekunda pochodzi z obejrzanej klatki zakończenia akcji, nie z przeliczenia minuty meczu.",
+      "review_frame": "reports/evidence/goal7851-minute26-frame8.png"
     }
   ]
 }

@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 
 from sync_plp import norm, season_key
+from collect_match_player_evidence import event_stat, official_url
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -82,7 +83,45 @@ def official_source_urls(player, snapshot, match_sources):
     return urls
 
 
-def audit(database, rest_snapshots, html_snapshot, evidence):
+def explain_untagged_competitions(delta, competition_evidence):
+    """Reconcile scope only if both aggregates exactly match archived protocols."""
+    for record in (competition_evidence or {}).get("records", []):
+        if str(record.get("player_id")) != delta["id"] or [str(record.get("season_id"))] != delta["season_ids"]:
+            continue
+        if delta["rest_teams"] != [record.get("team_name")]:
+            continue
+        events = record.get("events") or []
+        if len({str(e.get("id")) for e in events}) != len(events):
+            continue
+        tagged, untagged, urls = [], [], []
+        valid = True
+        for event in events:
+            stat = (event.get("performance") or {}).get(delta["id"]) or {}
+            if (not official_url(event.get("source_url")) or
+                    not isinstance(event.get("leagues"), list) or
+                    event.get("api_url") != f"https://podlaskaliga.pl/wp-json/sportspress/v2/events/{event.get('id')}" or
+                    str(record["team_id"]) not in map(str, event.get("teams") or []) or
+                    str(record["season_id"]) not in map(str, event.get("seasons") or []) or
+                    stat.get("status") not in ("lineup", "sub", "substitute")):
+                valid = False
+                break
+            value = 1 if delta["field"] == "apps" else event_stat(stat.get({"goals":"goals", "assists":"assists", "motm":"pikarzmeczu", "yellow":"yellowcards", "red":"redcards"}[delta["field"]]))
+            if value is None:
+                valid = False
+                break
+            if event.get("leagues"):
+                tagged.append(value)
+            else:
+                untagged.append(value)
+                urls.append(event["source_url"])
+        if valid and urls and sum(tagged) == delta["rest"] and sum(tagged + untagged) == delta["html"] and sum(untagged) == delta["difference"]:
+            delta.update({"reason": "events_without_league_taxonomy", "match_source_urls": urls,
+                "resolution": "HTML includes official events without a league term; REST league aggregates omit them. Retain HTML career, leave Bosch totals unchanged.",
+                "protocol_total": sum(tagged + untagged), "protocol_tagged_total": sum(tagged),
+                "protocol_untagged_total": sum(untagged)})
+
+
+def audit(database, rest_snapshots, html_snapshot, evidence, competition_evidence=None):
     stats_by_player_season = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
     match_source_by_player = defaultdict(list)
 
@@ -118,6 +157,7 @@ def audit(database, rest_snapshots, html_snapshot, evidence):
         browser_career = html.get("totals") or {}
         season_deltas = career_season_differences(player, rest, html) if html else []
         for delta in season_deltas:
+            explain_untagged_competitions(delta, competition_evidence)
             # Whole-career rows may describe other clubs. Compare Bosch match
             # evidence only when the REST season explicitly belongs to Bosch.
             if delta["reason"] != "same_season_source_variance" or delta["rest_teams"] != ["Bosch Service Tech-Car"]:
@@ -151,8 +191,9 @@ def audit(database, rest_snapshots, html_snapshot, evidence):
                     "status": "explained_supercup_scope" if accounted and details and all(r["reason"] == "supercup_source_scope" for r in details) else "source_variance_requires_review",
                     "note": "Difference located in official season rows; the cause of non-Supercup source variance remains unconfirmed",
                 })
-                if accounted and details and all(r["reason"] in {"supercup_source_scope", "rest_below_official_match_minimum"} for r in details) and any(r["reason"] == "rest_below_official_match_minimum" for r in details):
+                if accounted and details and all(r["reason"] in {"supercup_source_scope", "rest_below_official_match_minimum", "events_without_league_taxonomy"} for r in details) and any(r["reason"] in {"rest_below_official_match_minimum", "events_without_league_taxonomy"} for r in details):
                     differences[-1]["status"] = "explained_source_rows_and_match_evidence"
+                    differences[-1]["note"] = "Official event protocols reconcile the season totals; events without a league term are omitted by REST league aggregates. Bosch totals unchanged."
             if official is not None and displayed is not None and official != displayed:
                 differences.append({
                     "id": pid,
@@ -178,6 +219,11 @@ def audit(database, rest_snapshots, html_snapshot, evidence):
                     "identity_contributions": contributors,
                     "note": "Canonical career includes the separately documented duplicate profile" if explained else "This source difference requires investigation",
                 })
+                additions = (player.get("career_totals") or {}).get("source_adjustments") or []
+                if additions and all(official_url(r.get("source_url")) and one(r, field) is not None for r in additions) and official + sum(r[field] for r in additions) == displayed:
+                    differences[-1].update({"status": "explained_independent_supercup_protocol",
+                        "protocol_additions": additions,
+                        "note": "Public HTML omits an independently verified Supercup appearance; both raw source and corrected career are preserved."})
 
         for season, fields in stats_by_player_season.get(pid, {}).items():
             public = (player.get("season_stats") or {}).get(season) or {}
@@ -264,7 +310,7 @@ def markdown(audit_data: dict) -> str:
 
     report += ["", "## Rozliczenie różnic według sezonów i źródeł", "",
                "Brak wiersza oznacza brak składnika w agregacie API, nie potwierdzone zero zawodnika.",
-               "Superpuchary wyjaśniają różnicę zakresu. Różnice w pozostałych sezonach pozostają niepewnością źródłową; nie zmieniają automatycznie bilansu Boscha.", "",
+               "Superpuchary oraz wydarzenia bez przypisanej ligi wyjaśniają różnice zakresu. Status events_without_league_taxonomy wymaga zgodności pełnego zestawu protokołów z HTML i zestawu oznaczonego ligą z REST. Protokoły innych klubów nie zwiększają bilansu Boscha.", "",
                "| Zawodnik | Sezon / ID API | Pole | HTML | REST | Różnica | Przyczyna / niepewność | Źródła |",
                "|---|---|---|---:|---:|---:|---|---|"]
     for row in audit_data["career_season_differences"]:
@@ -280,6 +326,9 @@ def markdown(audit_data: dict) -> str:
         if row["status"] == "explained_verified_identity_merge":
             additions = ", ".join(f"ID {r['id']}: {r['value']} ([REST]({r['url']}))" for r in row["identity_contributions"])
             report.append(f"- {row['name']} (ID {row['id']}), {LABEL[row['field']]}: HTML {row['html']} + {additions} = kanoniczne {row['rest']}. Bez ponownego dodawania sezonu.")
+        if row["status"] == "explained_independent_supercup_protocol":
+            links = ", ".join(f"{r['name']}: {r[row['field']]} ([protokół]({r['source_url']}))" for r in row["protocol_additions"])
+            report.append(f"- {row['name']} (ID {row['id']}), {LABEL[row['field']]}: publiczny HTML {row['html']} + {links} = {row['rest']}. Surowa tabela HTML pozostaje zachowana.")
 
     report += [
         "",
@@ -327,7 +376,9 @@ def main():
     careers = json.loads((DATA / "player_career_updates.json").read_text(encoding="utf-8"))
     html = json.loads((DATA / "player_html_career_snapshot.json").read_text(encoding="utf-8"))
     matches = json.loads((DATA / "match_player_evidence.json").read_text(encoding="utf-8"))
-    summary = audit(portal, careers, html, matches)
+    extra_path = DATA / "career_competition_evidence.json"
+    competition_evidence = json.loads(extra_path.read_text(encoding="utf-8")) if extra_path.exists() else {}
+    summary = audit(portal, careers, html, matches, competition_evidence)
 
     for location, content in (
         (OUTPUT, json.dumps(summary, ensure_ascii=False, indent=2) + "\n"),

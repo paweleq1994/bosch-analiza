@@ -23,7 +23,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 | Asysty | 0 | 0 | 0 |
 | MVP | 0 | 0 | 0 |
 | Żółte kartki | 0 | 1 | 0 |
-| Czerwone kartki | 0 | 1 | 0 |
+| Czerwone kartki | 0 | 0 | 0 |
 
 ## Bez potwierdzonego zdjęcia indywidualnego
 
@@ -86,9 +86,8 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
-- Gołąbeski Piotr (PLP ID 7270): Występy — 2
+- Gołąbeski Piotr (PLP ID 7270): Występy — 1
 - Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
-- Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
 
 ## Nieznane dane sezonowe
 

@@ -6,18 +6,18 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 
 ## Podsumowanie
 
-- Mecze z materiałem wideo: **54 / 113**
-- Mecze bez materiału wideo: **59**
+- Mecze z materiałem wideo: **55 / 113**
+- Mecze bez materiału wideo: **58**
 - Znane filmy: **120**
-- Filmy bez powiązanego meczu: **12**
-- Materiały oczekujące na identyfikację: **9**; odrzucone powiązania / materiały spoza meczów: **3**
+- Filmy bez powiązanego meczu: **10**
+- Materiały oczekujące na identyfikację: **7**; odrzucone powiązania / materiały spoza meczów: **3**
 
 ## Pokrycie według sezonów
 
 | Sezon | Mecze | Z nagraniem | Bez nagrania |
 |---|---:|---:|---:|
 | Hala 2022 | 13 | 4 | 9 |
-| Orlik 2023 | 15 | 10 | 5 |
+| Orlik 2023 | 15 | 11 | 4 |
 | Hala 2023/2024 | 14 | 3 | 11 |
 | Orlik 2024 | 14 | 4 | 10 |
 | Hala 2024/2025 | 13 | 12 | 1 |
@@ -36,8 +36,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | [Bosch Tech Car Service - Koledzy Z Boiska 8:0](https://www.youtube.com/watch?v=O3mBzeS-9VY) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
 | [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Piotr Gołabeski | Brak jednoznacznego dopasowania |
-| [2](https://www.youtube.com/watch?v=Kh4IuHMwcPQ) | Piotr Golabeski | Brak jednoznacznego dopasowania |
-| [1](https://www.youtube.com/watch?v=6vsemMiGuPk) | Piotr Golabeski | Brak jednoznacznego dopasowania |
 
 ## Zweryfikowane odrzucenia powiązań
 
@@ -63,7 +61,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2023-05-28 | Orlik 2023 | FC GRUBASSY | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/) |
 | 2023-06-18 | Orlik 2023 | FC DrTusz | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/) |
 | 2023-06-24 | Orlik 2023 | Mają Rozmach | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car/) |
-| 2023-07-01 | Orlik 2023 | WIARA PIASTA II | 1:0 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-wiara-piasta-ii/) |
 | 2023-09-03 | Orlik 2023 | Konceptbud | 1:0 | [protokół](https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/) |
 | 2023-11-18 | Hala 2023/2024 | Multicco Group | 3:1 | [protokół](https://podlaskaliga.pl/wydarzenie/multicco-group-vs-bosch-service-tech-car/) |
 | 2023-11-26 | Hala 2023/2024 | Hurtownia Krokus | 0:5 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-hurtownia-krokus/) |
