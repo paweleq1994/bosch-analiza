@@ -35,5 +35,7 @@ jobs:
           git add data/plp_source_crawl.json reports/plp-source-crawl.md data/player_profile_map.json
           if ! git diff --cached --quiet; then
             git commit -m 'data: archive public PLP sitemap evidence'
+            git fetch origin "$GITHUB_REF_NAME"
+            git rebase "origin/$GITHUB_REF_NAME"
             git push
           fi
