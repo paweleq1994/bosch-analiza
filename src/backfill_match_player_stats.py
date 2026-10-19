@@ -78,14 +78,15 @@ def backfill_seasons(
             recovered = reconstructed[field]
             previous = current.get(field)
 
-            if type(previous) is int:
-                if previous != recovered:
+            if type(previous) is int and previous >= recovered:
+                if previous > recovered:
                     conflicts.append({
                         "player_id": player_id,
                         "season_id": season_id,
                         "field": field,
                         "stored": previous,
                         "match_evidence": recovered,
+                        "reason": "season_total_exceeds_known_match_performance",
                     })
                 continue
 
@@ -110,6 +111,8 @@ def backfill_seasons(
                     continue
 
             current[field] = recovered
+            if type(previous) is int and previous < recovered:
+                current.setdefault("corrected_from_lower_season_values", {})[field] = previous
             written.append({
                 "player_id": player_id,
                 "season_id": season_id,
