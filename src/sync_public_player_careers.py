@@ -2,12 +2,12 @@
 """Capture official public PLP player career tables without SportsPress REST endpoints."""
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
-import time
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
@@ -64,7 +64,7 @@ def capture(url: str) -> dict:
         raise ValueError("Not a verified public PLP player URL")
 
     request = Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; BoschArchiveAudit/1.0)"})
-    with urlopen(request, timeout=35) as response:
+    with urlopen(request, timeout=15) as response:
         html = response.read().decode("utf-8", "replace")
 
     parser = CareerTableParser()
@@ -126,35 +126,59 @@ def canonicalize_cached_careers(previous: dict, roster: list[dict]) -> dict:
     return records
 
 
-def main():
-    db = json.loads(PORTAL.read_text(encoding="utf-8"))
-    previous = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"players": {}}
-    players = canonicalize_cached_careers(previous.get("players", {}), db["players"])
+def refresh_public_careers(
+    roster: list[dict], previous: dict, get=capture, workers: int = 4
+) -> tuple[dict, dict]:
+    """Download each published profile once, preserve cached snapshots on outage."""
+    players = canonicalize_cached_careers(previous, roster)
     failures = {}
-    for player in db["players"]:
+    requests = []
+
+    for player in roster:
         player_id = str(player["id"])
         url = str(player.get("profile_url") or "")
         if not url or not urlsplit(url).path.startswith("/zawodnik/"):
             failures[player_id] = "No public /zawodnik/ profile URL"
             continue
-        try:
-            record = capture(url)
-            prior_record = players.get(player_id) or {}
-            signature = {**record, "source_url": url}
-            if {k: v for k, v in prior_record.items() if k != "captured_at"} != signature:
-                players[player_id] = {**signature, "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
-            print(f"OK {player_id} {player['name']}: {record['totals']}", flush=True)
-        except Exception as error:
-            failures[player_id] = str(error)
-            print(f"WARN {player_id} {player['name']}: {error}", flush=True)
-        time.sleep(0.35)
 
+        requests.append((player_id, url, player["name"]))
+
+    def inspect(item: tuple[str, str, str]):
+        player_id, url, name = item
+
+        try:
+            return player_id, url, name, get(url), None
+        except Exception as error:
+            return player_id, url, name, None, f"{type(error).__name__}: {error}"
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for player_id, url, name, record, error in pool.map(inspect, requests):
+            if error:
+                failures[player_id] = error
+                print(f"WARN {player_id} {name}: {error}", flush=True)
+                continue
+
+            signature = {**record, "source_url": url}
+            prior = players.get(player_id) or {}
+            if {key: val for key, val in prior.items() if key != "captured_at"} != signature:
+                players[player_id] = {
+                    **signature,
+                    "captured_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                }
+            print(f"OK {player_id} {name}: {record['totals']}", flush=True)
+
+    return players, failures
+
+
+def main():
+    db = json.loads(PORTAL.read_text(encoding="utf-8"))
+    previous = json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"players": {}}
+    players, failures = refresh_public_careers(db["players"], previous.get("players", {}))
     snapshot = {"players": players, "failures": failures}
     rendered = json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n"
     if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != rendered:
         OUTPUT.write_text(rendered, encoding="utf-8")
     print(f"HTML career audit: {len(players)}/{len(db['players'])} profiles, {len(failures)} failures", flush=True)
-
 
 if __name__ == "__main__":
     main()
