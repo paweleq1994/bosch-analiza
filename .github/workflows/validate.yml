@@ -28,6 +28,8 @@ jobs:
         run: python src/export_workbook.py
       - name: Verify complete public video coverage report
         run: python src/audit_video_coverage.py
+      - name: Audit every career HTML versus REST and match source discrepancy
+        run: python src/audit_source_reconciliation.py
       - name: Validate generated snapshot
         run: python src/validate_portal.py
       - name: Audit incomplete player coverage

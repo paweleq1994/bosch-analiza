@@ -246,6 +246,8 @@ function dataQuality(){
             table(["ID PLP","Zapisane protokoły"],unknown.map(id=>[e(id),e(DB.matches.filter(m=>
             (m.player_performance||[]).some(row=>same(row.player_id,id))).length)])))+
         '<p><a download href="downloads/bosch-kompendium.xlsx">Pobierz pełne kompendium XLSX — zawodnicy, mecze, gole, źródła i braki ↧</a></p>'+
+        '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/source-reconciliation.md" target="_blank" rel="noopener noreferrer">Różnice oficjalnych źródeł PLP — zawodnik po zawodniku ↗</a></p>'+
+
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-coverage.md" target="_blank" rel="noopener noreferrer">Audyt znanych nagrań i meczów bez filmu ↗</a></p>'+
         '<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/player-data-coverage.md">Pełny audyt źródeł w GitHub ↗</a></p>';
 }
