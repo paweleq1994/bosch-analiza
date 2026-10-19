@@ -28,7 +28,7 @@ assert.ok(recordsPage.includes("293 = 289 goli zawodników + 3 samobóje rywali 
 const pietruczuk = database.players.find(player => player.name.toLowerCase().includes("pietruczuk"));
 assert.ok(pietruczuk, "Pietruczuk must be visible as a Bosch scorer");
 const pietruczukPage = render('playerDetail("' + pietruczuk.id + '")');
-assert.ok(pietruczukPage.includes("Oficjalny protokół PLP — potwierdzone minimum"));
+assert.ok(pietruczukPage.includes("Oficjalny protokół PLP — strzelcy i minuty"));
 assert.ok(pietruczukPage.includes("≥ 1"));
 assert.ok(pietruczukPage.includes("Łącznie Bosch"));
 
