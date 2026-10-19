@@ -1,6 +1,6 @@
 # Stan wdrożenia kompendium Bosch — 19.10.2026
 
-Ostatni sprawdzony main: `d54a9b35ed1dd04ed9ef79082c6cf953b59bb044`.
+Ostatni sprawdzony main: `06d525ae8fd9e71a55bd43d9c09f1a0089d3d02d` (merge PR #54).
 Repozytorium lokalne zaktualizowano przez fast-forward z `94402f0`; przed pracą było czyste.
 Gałąź kontynuacji: `codex/fix-publication-and-complete-audit`.
 Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło brak otwartych PR-ów.
@@ -9,9 +9,9 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 
 | Punkt | Stan na sprawdzonym main | Dowód | Pozostały zakres |
 |---|---|---|---|
-| 1 | Częściowo | `sync_plp.synchronize`, `test_sync_plp.py`, `test_archive_growth.py` | Test pełnego przejścia nowego sezonu; sprawdzić identyfikatory rozgrywek i kolejność sezonów |
+| 1 | Poprawka gotowa | `test_future_season_pipeline.py`: 9/10 sezonów, 114/115 meczów, test liderów Node | Usunięty pozostały limit protokołów; nowe sumy, kartki, ID tabeli/ligi i chronologia; oczekuje na PR/CI |
 | 2 | Wdrożony importer | `sync_new_goal_protocols.py`, `test_new_goal_protocols.py` | Sprawdzić razem z nowym sezonem, zachować pending zamiast zer |
-| 3 | 13 ID odzyskanych | `match_player_identities.json`, `test_verified_match_identities.py` | Regresja wykrycia przyszłego nieznanego ID |
+| 3 | Wdrożone + regresja przyszłych ID | `test_future_season_pipeline.py` | Nieznany ID 99999 trafia do audytu, protokół pending; brak fikcyjnego profilu |
 | 4 | Audyt działa; interpretacja częściowa | `source-reconciliation.md`: 33 różnice, 0 sprzeczności; `player-source-reconciliation.md` | Sprawdzić 7 nieprzypisanych pól u 4 zawodników; wyjaśnić różnice zakresów bez dopisywania statystyk |
 | 5 | 34 pełne kariery, 11 niepełnych | `player-data-coverage.md`, `sync_public_player_careers.py` | Dodatkowe publiczne źródła; brak pełnej kariery zachować jako minimum |
 | 6 | 15 zdjęć, 30 braków | `media_discovery.json`, `test_historic_team_photo_leads.py` | Sprawdzić dostępne metadane WordPress; zdjęcia klubowe pozostają kandydatami |
@@ -27,8 +27,8 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 | 16 | Wdrożone | PR #38, `frontend_player_trends.cjs` | Brak wykazanego defektu |
 | 17 | Wdrożone | PR #29, `frontend_match_boxscores.cjs` | Sprawdzić semantykę kompletności w nowych sezonach |
 | 18 | Częściowo | PR #34, `frontend_historical_form.cjs` | Analiza połów wyłącznie z oficjalnego HT |
-| 19 | Wdrożone zasadniczo | PR #30, `home()` i `frontend_all_tables_sort.cjs` | Regresja sezonu po 2026 |
-| 20 | Defekt publikacji potwierdzony | `publish-downloads.yml`; run 39252079054 = failure | `test -s` z dwoma plikami; brak `git add` kolejki goli; dokumentacja i CI |
+| 19 | Zweryfikowane dla przyszłego sezonu | `frontend_all_tables_sort.cjs`: lider Orlik 2027; test chronologii Hala 2027/2028 | Oczekuje na PR/CI poprawki wzrostu |
+| 20 | Publikacja naprawiona i wdrożona | PR #54; run 39257253261 = success | Dokumentacja i końcowy audyt |
 
 ## Ponownie przeliczone metryki
 
@@ -53,17 +53,20 @@ Issue #33 jest otwarte i ma nieaktualne checkboxy; publiczne API potwierdziło b
 ## Źródła sprawdzone i blokery
 
 - Publiczne API GitHub: issue #33 otwarte, 0 otwartych PR-ów; workflow 39252079054 zakończony błędem.
-- PLP homepage dostępna przez narzędzie WWW; obecny oficjalny sezon Orlik 2026. Trzeba sprawdzić nowo opublikowane wyniki z 17.10 względem snapshotu.
-- Stary audyt sitemap ma 5 błędów połączenia HTTP 0. Nie dowodzi nieistnienia profili.
-- Przeglądarka Codex jest wylogowana z GitHub; poproszono użytkownika o zwykłe logowanie, bez przekazywania tokenu.
+- PLP homepage i zespół REST 6951 dostępne; ostatni mecz 17.10 (Juan Pablo 4:3) jest już w snapshotcie. Lista 12 sezonów drużyny obejmuje 8 ligowych i 4 Superpuchary; brak nowszego sezonu na tym endpointcie.
+- Powtórny audyt istniejącym crawlerem: 26 sitemap, 4559 URL, 0 nowych profili, 11 nadal niepotwierdzonych. Sitemapy WordPress dostępne HTTP 200; alternatywne `sitemap_index.xml` i `player-sitemap.xml` zwracają 404.
+- Użytkownik zalogował zwykłą sesję GitHub; tworzenie i scalanie PR przez UI jest dostępne.
 - Automatyczna kontrola odrzuciła odczyt tokenu z menedżera Git do osobnych żądań API; nie ponawiać tego mechanizmu.
 
 ## Następne działanie
 
 Poprawka P0 gotowa: osobna kontrola każdego raportu, zapis kolejki timestampów w commicie i brakujące triggery publikacji. Dwie nowe regresje wykonują Bash oraz rzeczywiste `git add` w tymczasowym repozytorium. **157 testów Python, 14 testów frontendowych, wszystkie generatory i audyty offline, walidacje portalu/scoutingu, compileall i składnia JS OK**. Archiwum bez zmian. Pełny przebieg poza sandboxem zakończony poprawnie.
 
-Po opublikowaniu gałęzi: otworzyć PR, sprawdzić CI i realny przebieg publikacji po merge. Równolegle dostępne lokalnie: test integracji nowego sezonu, rozliczenie pozostałych danych i ograniczone próby źródłowe. Nie powtarzać wdrożonych importerów ani mechanizmu timestampów.
+Nowa poprawka wzrostu archiwum: odtworzono awarię 114. protokołu oraz sum sezonowych ponad stary bilans. Poprawiono te przyczyny, odczyt oznaczeń minut przy golach, zachowanie kartek i źródeł agregatu, identyfikatory tabel/lig, kolejność sezonów i audyt przyszłych nieznanych ID. **160 testów Python i 14 frontendowych OK**, bieżący snapshot bez zmiany. Otworzyć PR i wdrożyć. Następnie rozliczenie źródeł, multimedia, HT i README. Nie powtarzać wdrożonych importerów ani mechanizmu timestampów.
 
 ## Nowe PR-y i wdrożenia
 
-Poprawka P0 lokalnie gotowa i przetestowana; brak PR/merge/deploymentu do czasu dostępu do zalogowanej sesji GitHub.
+- **PR #54 — scalony**, commit `07bfa56`, merge `06d525a`.
+- CI PR: run 39256972857 success; CI main 39257253186 success.
+- Naprawiona publikacja XLSX/raportów: **39257253261 success**.
+- GitHub Pages: **39257252401 success**.

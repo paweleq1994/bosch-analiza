@@ -18,6 +18,8 @@ import unicodedata
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from collect_match_player_evidence import event_stat
+
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "league_updates.json"
 PORTAL = ROOT / "docs" / "assets" / "data.json"
@@ -98,7 +100,7 @@ def league_table(payload, season_id: int):
         if any(value is None for value in fields.values()):
             continue
         tier = 1 if re.search(r"\b(ii|2)\s+liga\b", norm(title)) or slug.startswith(("ii-liga", "2-liga")) else 0
-        possible.append((tier, title, fields))
+        possible.append((tier, title, fields, table))
     possible.sort(key=lambda item: (-item[0], item[1]))
     return possible[0][1:] if possible else None
 
@@ -117,8 +119,8 @@ def player_stats_from_event(event, profiles):
         )
         if not played:
             continue
-        stats = {key: number(entry.get(key)) for key in FIELDS}
-        if any(value is None and str(entry.get(key) or "").strip() for key, value in stats.items()):
+        stats = {key: event_stat(entry.get(key)) for key in FIELDS}
+        if any(value is None for value in stats.values()):
             # Do not turn unparseable values (e.g. time annotations) into invented goals.
             return [], False
         profile = profiles.get(str(player_id)) or {}
@@ -196,10 +198,13 @@ def aggregate_players(rows, sid):
         for stat in match.get("player_stats", []):
             pid = stat["id"]
             if pid not in people:
-                people[pid] = {**stat, "sid": sid}
+                people[pid] = {**stat, "sid": sid, "origin": "plp_match_performance",
+                               "match_performance_verified": True, "match_performance_sources": []}
             else:
                 for field in ("apps", "goals", "assists", "motm", "top", "yellow", "red"):
                     people[pid][field] += stat[field]
+            if match.get("event_link") and match["event_link"] not in people[pid]["match_performance_sources"]:
+                people[pid]["match_performance_sources"].append(match["event_link"])
     return sorted(people.values(), key=lambda row: row["id"])
 
 
@@ -228,12 +233,15 @@ def synchronize(team, fetch_tables, fetch_events, existing, known_seasons, legac
             table = league_table(candidates, sid)
             if table is None:
                 continue
-            title, counts = table
+            title, counts, source_table = table
             local_sid = season_id_for(sid, title, known_seasons)
             local_name = next((s["name"] for s in known_seasons if str(s["id"]) == local_sid), None) or (" ".join(season_key(title)) if season_key(title) else title).strip()
             standing = {
                 "id": local_sid, "plp_id": str(sid), "name": local_name,
                 **counts, "clean_sheets": None, "table": title, "origin": "plp_sync",
+                "table_id": str(source_table["id"]) if source_table.get("id") else None,
+                "league_ids": sorted({str(value) for value in source_table.get("leagues") or []}),
+                "source_url": source_table.get("link") or "",
             }
             if standing["matches"] == 0 and not any(str(s["id"]) == local_sid for s in known_seasons):
                 continue  # Keep homepage focused on last played season.

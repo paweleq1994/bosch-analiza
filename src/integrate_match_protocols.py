@@ -22,7 +22,7 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
     by_match = {match_id(match["id"]): match for match in matches}
     protocol_rows = audit.get("matches") or []
 
-    if len(by_match) < 113 or len(protocol_rows) != 113:
+    if len(by_match) < 113 or len(protocol_rows) < 113:
         raise ValueError("Historical PLP protocol audit requires all 113 fixtures")
 
     seen = set()

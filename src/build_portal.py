@@ -178,6 +178,8 @@ def main() -> None:
             videos = matches[index].get("videos") or clean["videos"]
             matches[index] = {**matches[index], **clean, "videos": videos}
     matches.sort(key=lambda row: (row["date"], row["id"]))
+    last_played = {str(row["sid"]): row["date"] for row in matches}
+    seasons.sort(key=lambda row: (last_played.get(str(row["id"]), ""), str(row["id"])))
 
     historic_players = []
     player_by_name = {}
@@ -258,6 +260,10 @@ def main() -> None:
             continue
         item = next((p for p in historic_players if p["id"] == player_id), None)
         if item is None:
+            if not (profiles.get(player_id) or {}).get("resolved_name"):
+                # Preserve the ID in source evidence and the unmatched-ID audit
+                # until the existing identity resolver provides a real name.
+                continue
             item = {
                 "id": player_id, "name": stat.get("name") or f"Zawodnik #{player_id}",
                 "profile_url": (profiles.get(player_id) or {}).get("profile_url") or "",
@@ -266,7 +272,13 @@ def main() -> None:
                 "seasons_label": "", "orlik2026": None, "hala2526": None,
             }
             historic_players.append(item)
-        detail = {key: stat.get(key) for key in ("apps", "goals", "assists", "motm")}
+        detail = {key: stat.get(key) for key in ("apps", "goals", "assists", "motm", "yellow", "red")}
+        detail.update({key: stat[key] for key in ("origin", "match_performance_verified", "match_performance_sources") if key in stat})
+        # A newly discovered season can precede the profile API refresh. Keep
+        # its verified match aggregates in the same totals/history pipeline.
+        existing_details = player_seasons_extra.setdefault(player_id, {})
+        if season_id not in existing_details and not (season_id == SEASON_2026 and "148" in existing_details):
+            existing_details[season_id] = dict(detail)
         item.setdefault("season_stats", {})[season_id] = detail
         if season_id in (SEASON_2026, "148"):
             item["orlik2026"] = detail
@@ -364,8 +376,11 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance"}:
                 verified_stats["origin"] = stats["origin"]
+            for key in ("match_performance_verified", "match_performance_sources"):
+                if key in stats:
+                    verified_stats[key] = stats[key]
 
             if canonical_id == SEASON_2026:
                 verified_stats = latest_orlik(player.get("recap2026"), verified_stats)
