@@ -54,6 +54,13 @@ class PublicSourceSitemapTests(unittest.TestCase):
         )
         self.assertEqual(recovered["missing"], {})
 
+    def test_unreachable_sitemaps_are_not_misreported_as_absent_public_profiles(self):
+        result = discover_players(
+            {"pages": {}, "sitemaps": [{"http_status": 0}]},
+            [{"id": "10321", "name": "Ciborowski Julian", "profile_url": ""}],
+        )
+        self.assertIn("cannot be ruled out", result["missing"]["10321"]["reason"])
+
     def test_similar_name_cannot_prove_another_player_id(self):
         index = {"pages": {
             "https://podlaskaliga.pl/zawodnik/ciborowski-julian/": [],
