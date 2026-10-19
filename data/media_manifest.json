@@ -581,6 +581,11 @@
       "kind": "players",
       "id": "8916",
       "photos": []
+    },
+    {
+      "kind": "players",
+      "id": "12288",
+      "photos": []
     }
   ],
   "notes": "Public PLP media attached to team/player profiles and uniquely matched detached WordPress media. Caption-only mentions are not treated as confirmed portraits."
