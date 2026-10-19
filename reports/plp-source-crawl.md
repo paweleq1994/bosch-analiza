@@ -3,6 +3,7 @@
 Wyszukiwanie objęło wskazane niżej mapy XML i ich dostępne podrzędne strony.
 Przypisanie profilu wymaga zgodności oficjalnego WordPress post ID z ID PLP.
 Podobieństwo nazwiska lub miniatury nie potwierdza tożsamości.
+Kod HTTP 0 oznacza problem połączenia, a nie dowód nieistnienia strony.
 
 - Sitemapy sprawdzone: **5**
 - Publiczne adresy z sitemap: **0**
@@ -26,17 +27,17 @@ Brak nowych, w pełni potwierdzonych źródeł.
 
 ## Profile bez dostępnego, potwierdzonego publicznego adresu
 
-- **Sołowiej Tomasz (ID 7285)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Gołąbeski Piotr (ID 7270)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Gorbacewicz Emil (ID 7271)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Markowski Damian (ID 7282)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Kossakowski Maciej (ID 7278)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Ciborowski Julian (ID 10321)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Śmiłowski Michał (ID 10604)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 1
-- **Bazyluk Jakub (ID 7266)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 1
-- **Uściłowski Krzysztof (ID 7286)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 2
-- **Kuźma Gabriel (ID 8655)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 3
-- **Wądołowski Sebastian (ID 8916)** — No matching published player in accessible sitemap index. Kandydackie adresy: 0; źródła meczowe: 1
+- **Sołowiej Tomasz (ID 7285)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Gołąbeski Piotr (ID 7270)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Gorbacewicz Emil (ID 7271)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Markowski Damian (ID 7282)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Kossakowski Maciej (ID 7278)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Ciborowski Julian (ID 10321)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Śmiłowski Michał (ID 10604)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 1
+- **Bazyluk Jakub (ID 7266)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 1
+- **Uściłowski Krzysztof (ID 7286)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 2
+- **Kuźma Gabriel (ID 8655)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 3
+- **Wądołowski Sebastian (ID 8916)** — No public sitemap could be downloaded; player existence cannot be ruled out. Kandydackie adresy: 0; źródła meczowe: 1
 
 ## Ograniczenia
 
