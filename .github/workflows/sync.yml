@@ -48,6 +48,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 28
     steps:
       - uses: actions/checkout@v4
         with:
@@ -101,13 +102,16 @@ jobs:
         run: python src/validate_portal.py
       - name: Audit incomplete player careers, appearances, assists, cards, MVP and photos
         run: python src/audit_player_coverage.py
-      - name: Commit verified data changes
+      - name: Publish every verified generated asset atomically
         run: |
-          if ! git diff --quiet -- data/video_updates.json data/league_updates.json data/match_player_evidence.json data/match_protocol_audit_index.json data/pending_goal_protocols.json data/scouting_updates.json docs/assets/data.json docs/assets/scouting.json data/scouting_details.json data/player_profile_map.json data/match_player_identities.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json reports/player-data-coverage.md; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/video_updates.json data/league_updates.json data/scouting_updates.json data/scouting_details.json data/player_profile_map.json data/player_season_updates.json data/player_career_updates.json data/player_html_career_snapshot.json data/media_manifest.json data/media_discovery.json data/scouting_player_updates.json docs/assets/data.json docs/assets/scouting.json reports/player-data-coverage.md reports/video-coverage.md docs/media docs/downloads/bosch-kompendium.xlsx docs/downloads/bosch-kompendium.source.sha256
-            git commit -m "chore: sync Bosch video and portal data"
-            git push
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- data docs/assets docs/downloads docs/media reports
+          if git diff --cached --quiet; then
+            echo "Source snapshots, XLSX and audit reports are unchanged."
+          else
+            git commit -m "data: sync verified Bosch source archive and published exports"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
-
