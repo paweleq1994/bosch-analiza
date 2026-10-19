@@ -6,22 +6,22 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 
 ## Podsumowanie
 
-- Mecze z materiałem wideo: **47 / 113**
-- Mecze bez materiału wideo: **66**
-- Znane filmy: **112**
-- Filmy bez powiązanego meczu: **11**
-- Materiały oczekujące na identyfikację: **9**; odrzucone powiązania / materiały spoza meczów: **2**
+- Mecze z materiałem wideo: **54 / 113**
+- Mecze bez materiału wideo: **59**
+- Znane filmy: **120**
+- Filmy bez powiązanego meczu: **12**
+- Materiały oczekujące na identyfikację: **9**; odrzucone powiązania / materiały spoza meczów: **3**
 
 ## Pokrycie według sezonów
 
 | Sezon | Mecze | Z nagraniem | Bez nagrania |
 |---|---:|---:|---:|
 | Hala 2022 | 13 | 4 | 9 |
-| Orlik 2023 | 15 | 9 | 6 |
-| Hala 2023/2024 | 14 | 1 | 13 |
-| Orlik 2024 | 14 | 3 | 11 |
-| Hala 2024/2025 | 13 | 10 | 3 |
-| Orlik 2025 | 14 | 6 | 8 |
+| Orlik 2023 | 15 | 10 | 5 |
+| Hala 2023/2024 | 14 | 3 | 11 |
+| Orlik 2024 | 14 | 4 | 10 |
+| Hala 2024/2025 | 13 | 12 | 1 |
+| Orlik 2025 | 14 | 7 | 7 |
 | Hala 2025/2026 | 15 | 0 | 15 |
 | Orlik 2026 | 15 | 14 | 1 |
 
@@ -44,6 +44,7 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | Film | Powód / dowód | Data przeglądu |
 |---|---|---|
 | [Bosch Tech Car Service - Vesta 2:1](https://www.youtube.com/watch?v=hcfb9Ttmswo) | Obejrzany materiał pokazuje boisko odkryte. Mecz PLP 7814 (26.02.2023) rozegrano w hali VI LO: oficjalne wydarzenie wskazuje venue 109. Film opublikowano 26.08.2023; tytuł i wynik 2:1 nie dowodzą tego samego meczu. | 2026-10-19 |
+| [Top Auto vs Bosch Service Tech-Car - 1 RUNDA ¦ Superpuchar PLP 2022](https://www.youtube.com/watch?v=Sglay1fT-00) | Oficjalna transmisja Superpucharu PLP z 06.11.2022 (42:40). Zachowana jako materiał Boscha poza archiwum 113 meczów ligowych; nie zwiększa pokrycia ligowego ani nie jest przypisywana do innego meczu z Top Auto. | 2026-10-19 |
 | [Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021](https://www.youtube.com/watch?v=8SF7bbYDS30) | Publiczny tytuł identyfikuje występ muzyczny Laikike1 w Almost Famous (Warszawa, 14.10.2021), bez związku z meczem Boscha. Zachowano rekord źródłowy. | 2026-10-19 |
 
 ## Mecze bez powiązanego nagrania
@@ -59,7 +60,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2023-02-11 | Hala 2022 | Poltank | 2:6 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-poltank/) |
 | 2023-02-12 | Hala 2022 | Rainter | 0:0 | [protokół](https://podlaskaliga.pl/wydarzenie/rainter-vs-bosch-service-tech-car/) |
 | 2023-02-26 | Hala 2022 | VESTA | 2:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta/) |
-| 2023-05-14 | Orlik 2023 | ZPS Biaform SA | 3:1 | [protokół](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) |
 | 2023-05-28 | Orlik 2023 | FC GRUBASSY | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car/) |
 | 2023-06-18 | Orlik 2023 | FC DrTusz | 3:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-drtusz-vs-bosch-service-tech-car/) |
 | 2023-06-24 | Orlik 2023 | Mają Rozmach | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/maja-rozmach-vs-bosch-service-tech-car/) |
@@ -67,7 +67,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2023-09-03 | Orlik 2023 | Konceptbud | 1:0 | [protokół](https://podlaskaliga.pl/wydarzenie/konceptbud-vs-bosch-service-tech-car/) |
 | 2023-11-18 | Hala 2023/2024 | Multicco Group | 3:1 | [protokół](https://podlaskaliga.pl/wydarzenie/multicco-group-vs-bosch-service-tech-car/) |
 | 2023-11-26 | Hala 2023/2024 | Hurtownia Krokus | 0:5 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-hurtownia-krokus/) |
-| 2024-01-13 | Hala 2023/2024 | PTH Maltrans Znienacka | 0:3 | [protokół](https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/) |
 | 2024-01-14 | Hala 2023/2024 | Adampol Glovis | 0:4 | [protokół](https://podlaskaliga.pl/wydarzenie/adampol-glovis-vs-bosch-service-tech-car/) |
 | 2024-01-21 | Hala 2023/2024 | M-Fire | 0:3 | [protokół](https://podlaskaliga.pl/wydarzenie/m-fire-vs-bosch-service-tech-car/) |
 | 2024-01-27 | Hala 2023/2024 | TiM | 1:2 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-tim/) |
@@ -76,23 +75,18 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2024-02-18 | Hala 2023/2024 | VESTA | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-vesta-3/) |
 | 2024-02-24 | Hala 2023/2024 | Santos | 4:2 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-santos/) |
 | 2024-03-03 | Hala 2023/2024 | FC DrTusz | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-drtusz/) |
-| 2024-03-09 | Hala 2023/2024 | Aptel | 1:2 | [protokół](https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/) |
 | 2024-03-17 | Hala 2023/2024 | 4Technology | 0:2 | [protokół](https://podlaskaliga.pl/wydarzenie/4technology-vs-bosch-service-tech-car/) |
 | 2024-04-20 | Orlik 2024 | VESTA | 1:2 | [protokół](https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car/) |
 | 2024-04-28 | Orlik 2024 | FC GRUBASSY | 2:3 | [protokół](https://podlaskaliga.pl/wydarzenie/fc-grubassy-vs-bosch-service-tech-car-2/) |
 | 2024-05-11 | Orlik 2024 | Eskular | 6:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-eskular/) |
 | 2024-05-19 | Orlik 2024 | Ramis | 3:1 | [protokół](https://podlaskaliga.pl/wydarzenie/ramis-vs-bosch-service-tech-car-2/) |
 | 2024-06-08 | Orlik 2024 | Hanbud | 0:2 | [protokół](https://podlaskaliga.pl/wydarzenie/hanbud-vs-bosch-service-tech-car/) |
-| 2024-06-16 | Orlik 2024 | OSMAR | 4:3 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) |
 | 2024-06-22 | Orlik 2024 | CEDC Polmos Białystok | 1:2 | [protokół](https://podlaskaliga.pl/wydarzenie/cedc-polmos-bialystok-vs-bosch-service-tech-car/) |
 | 2024-06-30 | Orlik 2024 | Unibep Bielsk Podlaski | 6:1 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-2/) |
 | 2024-09-15 | Orlik 2024 | WIARA PIASTA II | 4:1 | [protokół](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car-2/) |
 | 2024-09-21 | Orlik 2024 | ZPS Biaform SA | 0:4 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa/) |
 | 2024-09-29 | Orlik 2024 | GTS Nowa Wygoda | 4:3 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-gts-nowa-wygoda/) |
-| 2024-11-23 | Hala 2024/2025 | OSMAR | 1:2 | [protokół](https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/) |
 | 2025-02-02 | Hala 2024/2025 | Zachodnia Kingdom | 9:1 | [protokół](https://podlaskaliga.pl/wydarzenie/zachodnia-kingdom-vs-bosch-service-tech-car/) |
-| 2025-03-01 | Hala 2024/2025 | VESTA | 1:3 | [protokół](https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car-2/) |
-| 2025-04-12 | Orlik 2025 | Żubry Bema | 1:4 | [protokół](https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-bosch-service-tech-car/) |
 | 2025-09-06 | Orlik 2025 | Waleczne Orły | 2:3 | [protokół](https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car/) |
 | 2025-09-14 | Orlik 2025 | Zimne Dranie | 2:4 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-2/) |
 | 2025-09-20 | Orlik 2025 | OST Sport | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/ost-sport-vs-bosch-service-tech-car/) |

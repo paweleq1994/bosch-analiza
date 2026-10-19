@@ -61,7 +61,7 @@ function goalMatchTable(match){
     const own=protocol.own_goals?'<div class="notice">Gole samobójcze rywali: <strong>'+e(protocol.own_goals)+'</strong>.</div>':"";
     const ownConceded=protocol.own_goals_conceded_scorers?.length
         ? '<div class="notice">Samobóje zawodników Boscha na korzyść rywali: '+
-            protocol.own_goals_conceded_scorers.map(item=>href("player/"+encodeURIComponent(item.player_id),item.name)).join(", ")+
+            protocol.own_goals_conceded_scorers.map(item=>href("player/"+encodeURIComponent(item.player_id),item.name)+(item.minutes?.length?" ("+item.minutes.map(minute=>e(minute)+"′").join(", ")+")":"")).join(", ")+
             '</div>'
         : "";
     const administrative=protocol.administrative_goals?'<div class="notice">Gole przyznane administracyjnie: <strong>'+e(protocol.administrative_goals)+'</strong>. Nie są dopisywane zawodnikom.</div>':"";

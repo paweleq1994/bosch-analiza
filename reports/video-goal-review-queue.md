@@ -2,8 +2,8 @@
 
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
-Potwierdzone linki: **2**.
-Niepotwierdzone gole w meczach z filmem: **154**.
+Potwierdzone linki: **5**.
+Niepotwierdzone gole w meczach z filmem: **162**.
 
 ## Obejrzane i potwierdzone akcje
 
@@ -13,6 +13,9 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 |---|---:|---|
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) / ID 7275 / 3′ | [YouTube 7 s](https://www.youtube.com/watch?v=izWNgjy1TN0&t=7s) | Obejrzana pojedyncza akcja na 0:1; przy 7,34 s strzał i bramkarz są przy prawej bramce. Nagranie z 05.03.2023 pokazuje halę VI LO i tablicę VI LO. Powiązanie strzelca przez wynik 0:1 i pierwszego strzelca w oficjalnym protokole (Jurkowicz, 3 minuta), bez rozpoznawania twarzy. Link zaczyna się w obejrzanej sekundzie akcji, nie w czasie wyliczonym z minuty PLP. |
 | [PLP 7851](https://podlaskaliga.pl/wydarzenie/wiara-piasta-ii-vs-bosch-service-tech-car/) / ID 7275 / 23′ | [YouTube 13 s](https://www.youtube.com/watch?v=MTwXQ9jcfTg&t=13s) | Obejrzana pojedyncza akcja na 1:2 w tej samej hali i z datą publikacji 05.03.2023. Przy 13,08 s zawodnik w bieli kończy akcję przy lewym słupku i bramkarzu; przy 15,25 s piłka jest w bramce, a zawodnik odchodzi. Drugi gol Boscha w sekwencji wyniku odpowiada Jurkowiczowi i 23 minucie protokołu. Link zaczyna się od obejrzanej fazy kończącej akcję; nie uzyskano go przez przeliczenie minut meczu. |
+| [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) / ID 7275 / 2′ | [YouTube 488 s](https://www.youtube.com/watch?v=jbsK8wBM8UM&t=488s) | Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Klatki 488,60 s i 491,73 s pokazują zakończenie akcji przy bliskiej bramce oraz powrót graczy po golu na 1:0. Komentarz identyfikuje Mateusza Jurkowicza. Protokół podaje 2′, komentarz mówi o trzeciej minucie; zachowano oficjalne 2′, bez przenoszenia tego czasu na oś filmu. |
+| [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) / ID 7276 / 16′ | [YouTube 1265 s](https://www.youtube.com/watch?v=jbsK8wBM8UM&t=1265s) | Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1265,07 s widoczna jest kończąca faza ataku z prawej strony pola karnego, przy 1270,69 s zawodnik rywala wraca do siatki po golu na 2:1. Komentarz wskazuje Patryka Karolczuka i 16. minutę zgodną z PLP. Link zaczyna się od obejrzanej fazy akcji. |
+| [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) / ID 7272 / 17′ | [YouTube 1318 s](https://www.youtube.com/watch?v=jbsK8wBM8UM&t=1318s) | Oficjalna transmisja PLP Bosch–Osmar z 16.06.2024, przypisana po dokładnej dacie, drużynach i sezonie do wydarzenia 10145. Obejrzany fragment i komentarz transmisji zestawiono z kolejnością wyniku i oficjalnym strzelcem; bez rozpoznawania twarzy. Przy 1318,03 s piłka jest widoczna w bliskiej bramce, a zawodnik rywala w siatce; komentarz identyfikuje Rafała Jurkowicza i wynik 3:1. To jego pierwszy z dwóch goli w protokole (17′, drugi 39′). Link pokazuje potwierdzoną klatkę zakończenia akcji; nie deklaruje dokładnej klatki przecięcia linii przez piłkę. |
 
 ## Gole oczekujące na weryfikację
 
@@ -32,6 +35,9 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 7875](https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/) | Nowicki Patryk | 30′ | [nieokreślony](https://www.youtube.com/watch?v=gSjI9uOEdec) · [I połowa](https://www.youtube.com/watch?v=FETkIdBKLrE) |
 | [PLP 7875](https://podlaskaliga.pl/wydarzenie/fc-bajaga-vs-bosch-service-tech-car/) | Moskal Paweł | 15′ | [nieokreślony](https://www.youtube.com/watch?v=gSjI9uOEdec) · [I połowa](https://www.youtube.com/watch?v=FETkIdBKLrE) |
 | [PLP 8232](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-intaf/) | Sołowiej Tomasz | 37′ | [II połowa](https://www.youtube.com/watch?v=FfIMpOFMfpk) · [I połowa](https://www.youtube.com/watch?v=JIRYvF-bBvM) |
+| [PLP 8255](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) | Sołowiej Tomasz | 11′ | [Transmisja meczu](https://www.youtube.com/watch?v=PWnZ2yifLNI) |
+| [PLP 8255](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) | Sołowiej Tomasz | 35′ | [Transmisja meczu](https://www.youtube.com/watch?v=PWnZ2yifLNI) |
+| [PLP 8255](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/) | Karolczuk Patryk | 37′ | [Transmisja meczu](https://www.youtube.com/watch?v=PWnZ2yifLNI) |
 | [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Jurkowicz Rafał | 1′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
 | [PLP 8276](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar/) | Muczyński Karol | 16′ | [II połowa](https://www.youtube.com/watch?v=RkV8q7Vfy4g) · [I połowa](https://www.youtube.com/watch?v=uby5J-1mtDs) |
 | [PLP 8373](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cedc-polmos-bialystok-2/) | Sołowiej Tomasz | 3′ | [II połowa](https://www.youtube.com/watch?v=2gEuhNJXcgE) |
@@ -60,6 +66,8 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 8467](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly/) | Kadłubowski Krzysztof | 33′ | [I połowa](https://www.youtube.com/watch?v=4jC6z9ZjOWc) · [II połowa](https://www.youtube.com/watch?v=L9f3bBLjZsI) |
 | [PLP 9721](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/) | Klepacki Przemysław | 14′ | [nieokreślony](https://www.youtube.com/watch?v=Qc0s7ZjnInM) |
 | [PLP 9721](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-cf-bojary-2/) | Kadłubowski Krzysztof | 30′ | [nieokreślony](https://www.youtube.com/watch?v=Qc0s7ZjnInM) |
+| [PLP 9805](https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/) | Kowalczuk Karol | 23′ | [Transmisja meczu](https://www.youtube.com/watch?v=3A0-Z_98lKQ) |
+| [PLP 10145](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/) | Jurkowicz Rafał | 39′ | [Transmisja meczu](https://www.youtube.com/watch?v=jbsK8wBM8UM) |
 | [PLP 10254](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/) | Jurkowicz Mateusz | 2′ | [II połowa](https://www.youtube.com/watch?v=A6YnEC0HRFE) · [I połowa](https://www.youtube.com/watch?v=0XI7lrFPfSg) |
 | [PLP 10254](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/) | Nowicki Patryk | 10′ | [II połowa](https://www.youtube.com/watch?v=A6YnEC0HRFE) · [I połowa](https://www.youtube.com/watch?v=0XI7lrFPfSg) |
 | [PLP 10254](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-konceptbud/) | Sołowiej Tomasz | 30′ | [II połowa](https://www.youtube.com/watch?v=A6YnEC0HRFE) · [I połowa](https://www.youtube.com/watch?v=0XI7lrFPfSg) |
@@ -71,6 +79,7 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 10973](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa-2/) | Moskal Paweł | 2′ | [II połowa](https://www.youtube.com/watch?v=RNCMtKItPww) · [I połowa](https://www.youtube.com/watch?v=AvntRCw5Asw) |
 | [PLP 10973](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa-2/) | Karpiński Hubert | 3′ | [II połowa](https://www.youtube.com/watch?v=RNCMtKItPww) · [I połowa](https://www.youtube.com/watch?v=AvntRCw5Asw) |
 | [PLP 10973](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zps-biaform-sa-2/) | Wnuszyński Karol | 25′ | [II połowa](https://www.youtube.com/watch?v=RNCMtKItPww) · [I połowa](https://www.youtube.com/watch?v=AvntRCw5Asw) |
+| [PLP 10990](https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/) | Karolczuk Patryk | 27′ | [Transmisja meczu](https://www.youtube.com/watch?v=s3iMR88rCKE) |
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Klepacki Przemysław | 1′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Jurkowicz Mateusz | 7′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
 | [PLP 11017](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-fc-grubassy/) | Moskal Paweł | 10′ | [II połowa](https://www.youtube.com/watch?v=qLeCeCjWj4I) · [I połowa](https://www.youtube.com/watch?v=I1J9kAfjjKQ) |
@@ -84,6 +93,7 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 11383](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-auto-team/) | Moskal Paweł | 20′ | [II połowa](https://www.youtube.com/watch?v=8nRQHw-sImM) · [I połowa](https://www.youtube.com/watch?v=u_hlpwkf2go) |
 | [PLP 11383](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-auto-team/) | Jurkowicz Mateusz | 24′ | [II połowa](https://www.youtube.com/watch?v=8nRQHw-sImM) · [I połowa](https://www.youtube.com/watch?v=u_hlpwkf2go) |
 | [PLP 11389](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie/) | Moskal Paweł | 13′ | [II połowa](https://www.youtube.com/watch?v=rUIfShSXf34) · [I połowa](https://www.youtube.com/watch?v=Dx9vHHy-P84) |
+| [PLP 11397](https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car-2/) | Nowicki Patryk | 23′ | [Transmisja meczu](https://www.youtube.com/watch?v=RVOIr5BF1pw) |
 | [PLP 11401](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-3/) | Nowicki Patryk | 10′ | [II połowa](https://www.youtube.com/watch?v=p7yeMyYPXUE) · [I połowa](https://www.youtube.com/watch?v=VhU8xtxITG4) |
 | [PLP 11401](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-3/) | Klepacki Przemysław | 13′ | [II połowa](https://www.youtube.com/watch?v=p7yeMyYPXUE) · [I połowa](https://www.youtube.com/watch?v=VhU8xtxITG4) |
 | [PLP 11401](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-3/) | Kadłubowski Krzysztof | 24′ | [II połowa](https://www.youtube.com/watch?v=p7yeMyYPXUE) · [I połowa](https://www.youtube.com/watch?v=VhU8xtxITG4) |
@@ -95,6 +105,7 @@ Znacznik wskazuje obejrzaną sekundę akcji bramkowej. To czas odtwarzacza, nie 
 | [PLP 11412](https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-3/) | Jurkowicz Mateusz | 29′ | [II połowa](https://www.youtube.com/watch?v=-NNA0NCEl0M) · [I połowa](https://www.youtube.com/watch?v=k6Qu6iedTLY) |
 | [PLP 11793](https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-4/) | Jurkowicz Mateusz | 26′ | [II połowa](https://www.youtube.com/watch?v=aI_JfmRSBo8) · [I połowa](https://www.youtube.com/watch?v=TuLCFA_j728) |
 | [PLP 11793](https://podlaskaliga.pl/wydarzenie/fc-progress-bialystok-vs-bosch-service-tech-car-4/) | Kadłubowski Krzysztof | 40′ | [II połowa](https://www.youtube.com/watch?v=aI_JfmRSBo8) · [I połowa](https://www.youtube.com/watch?v=TuLCFA_j728) |
+| [PLP 11798](https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-bosch-service-tech-car/) | Karpiński Hubert | 32′ | [Transmisja meczu](https://www.youtube.com/watch?v=8mVCFD11ZGo) |
 | [PLP 12011](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-3/) | Malinowski Piotr | 20′ | [I połowa](https://www.youtube.com/watch?v=FTGjfKhNh0g) · [II połowa](https://www.youtube.com/watch?v=Ld3QDLy_t0A) |
 | [PLP 12011](https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-3/) | Malinowski Piotr | 27′ | [I połowa](https://www.youtube.com/watch?v=FTGjfKhNh0g) · [II połowa](https://www.youtube.com/watch?v=Ld3QDLy_t0A) |
 | [PLP 12026](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zachodnia-kingdom/) | Nowicki Patryk | 3′ | [II połowa](https://www.youtube.com/watch?v=P8Ig8P8Hpn4) · [I połowa](https://www.youtube.com/watch?v=ZQI13IyU8Hs) |

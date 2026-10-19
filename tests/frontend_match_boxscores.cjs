@@ -37,4 +37,7 @@ assert.ok(controls["compare-player-result"].innerHTML.includes("≥ 10"));
 assert.ok(controls["compare-player-result"].innerHTML.includes("<td>G+A / mecz</td><td>—</td>"));
 assert.ok(controls["compare-player-result"].innerHTML.includes("wymaga pełnego bilansu"));
 
+fixture.goal_protocol.own_goals_conceded_scorers=[{player_id:"1960",name:"Moskal Paweł",goals:1,minutes:["18"]}];
+assert.ok(show('matchDetail("7416")').includes("18′"));
+
 console.log("Verified match box scores, 988 appearances, player timelines, comparison and data quality routes.");

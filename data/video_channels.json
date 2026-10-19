@@ -7,6 +7,15 @@
     {
       "name": "Piotr Golabeski",
       "handle": "piotrgoabeski3337"
+    },
+    {
+      "name": "Podlaska Liga Piłkarska",
+      "channel_id": "UCd0p73Dp5Eya7c4tQ8EoLZA",
+      "handle": "podlaskaligapikarska766",
+      "tab": "streams",
+      "title_contains": "Bosch",
+      "verified_source": "https://podlaskaliga.pl/",
+      "verified_at": "2026-10-19"
     }
   ],
   "note": "Prefer stable channel_id values once verified. Handles are resolved at sync time; any failed source retains previous data."

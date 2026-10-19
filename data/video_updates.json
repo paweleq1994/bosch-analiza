@@ -329,6 +329,94 @@
       "segment": "I połowa",
       "match_id": "orlik26-8",
       "status": "matched_manual"
+    },
+    {
+      "id": "PWnZ2yifLNI",
+      "title": "ZPS BIAFORM SA VS BOSCH SERVICE TECH-CAR | ORLIK 2023 - 2. KOLEJKA | WHITE BEAR COFFEE GAME",
+      "url": "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+      "date": "20230514",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "8255",
+      "status": "matched_manual",
+      "length_seconds": 3330
+    },
+    {
+      "id": "YTZTrjLc5Nw",
+      "title": "PTH MALTRANS ZNIENACKA VS BOSCH S. TECH-CAR | HALA 2023/24 - 3. KOLEJKA | WHITE BEAR COFFEE GAME",
+      "url": "https://www.youtube.com/watch?v=YTZTrjLc5Nw",
+      "date": "20240113",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "9486",
+      "status": "matched_manual",
+      "length_seconds": 2605
+    },
+    {
+      "id": "3A0-Z_98lKQ",
+      "title": "APTEL vs BOSCH SERVICE TECH-CAR | HALA 2023/24 - 14. KOLEJKA | WHITE BEAR COFFEE GAME",
+      "url": "https://www.youtube.com/watch?v=3A0-Z_98lKQ",
+      "date": "20240309",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "9805",
+      "status": "matched_manual",
+      "length_seconds": 2680
+    },
+    {
+      "id": "jbsK8wBM8UM",
+      "title": "Bosch Service Tech-Car vs Osmar - Orlik 2024 - 6. KOLEJKA | WHITE BEAR COFFEE GAME",
+      "url": "https://www.youtube.com/watch?v=jbsK8wBM8UM",
+      "date": "20240616",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "10145",
+      "status": "matched_manual",
+      "length_seconds": 2990
+    },
+    {
+      "id": "s3iMR88rCKE",
+      "title": "Osmar vs Bosch Service Tech-Car - Hala 2024/25 - White Bear Coffee Game",
+      "url": "https://www.youtube.com/watch?v=s3iMR88rCKE",
+      "date": "20241123",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "10990",
+      "status": "matched_manual",
+      "length_seconds": 2480
+    },
+    {
+      "id": "RVOIr5BF1pw",
+      "title": "Vesta vs Bosch Service Tech-Car - Hala 2024/25 - White Bear Coffee Game",
+      "url": "https://www.youtube.com/watch?v=RVOIr5BF1pw",
+      "date": "20250301",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "11397",
+      "status": "matched_manual",
+      "length_seconds": 2590
+    },
+    {
+      "id": "8mVCFD11ZGo",
+      "title": "Żubry Bema vs Bosch Service Tech-Car - Orlik 2025 - White Bear Coffee Game",
+      "url": "https://www.youtube.com/watch?v=8mVCFD11ZGo",
+      "date": "20250412",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja meczu",
+      "match_id": "11798",
+      "status": "matched_manual",
+      "length_seconds": 3020
+    },
+    {
+      "id": "Sglay1fT-00",
+      "title": "Top Auto vs Bosch Service Tech-Car - 1 RUNDA | Superpuchar PLP 2022",
+      "url": "https://www.youtube.com/watch?v=Sglay1fT-00",
+      "date": "20221106",
+      "channel": "Podlaska Liga Piłkarska",
+      "segment": "Transmisja Superpucharu",
+      "match_id": null,
+      "status": "rejected",
+      "length_seconds": 2560
     }
   ],
   "manual_bindings": {
@@ -350,6 +438,92 @@
       "reviewed_at": "2026-10-19",
       "verification_source": [
         "https://www.youtube.com/watch?v=8SF7bbYDS30"
+      ]
+    },
+    "PWnZ2yifLNI": {
+      "match_id": "8255",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2023-05-14 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 8255; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=PWnZ2yifLNI",
+        "https://podlaskaliga.pl/wydarzenie/zps-biaform-sa-vs-bosch-service-tech-car-2/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "YTZTrjLc5Nw": {
+      "match_id": "9486",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2024-01-13 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 9486; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=YTZTrjLc5Nw",
+        "https://podlaskaliga.pl/wydarzenie/pth-maltrans-znienacka-vs-bosch-service-tech-car/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "3A0-Z_98lKQ": {
+      "match_id": "9805",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2024-03-09 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 9805; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=3A0-Z_98lKQ",
+        "https://podlaskaliga.pl/wydarzenie/aptel-vs-bosch-service-tech-car/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "jbsK8wBM8UM": {
+      "match_id": "10145",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2024-06-16 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 10145; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=jbsK8wBM8UM",
+        "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-2/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "s3iMR88rCKE": {
+      "match_id": "10990",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2024-11-23 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 10990; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=s3iMR88rCKE",
+        "https://podlaskaliga.pl/wydarzenie/osmar-vs-bosch-service-tech-car/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "RVOIr5BF1pw": {
+      "match_id": "11397",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2025-03-01 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 11397; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=RVOIr5BF1pw",
+        "https://podlaskaliga.pl/wydarzenie/vesta-vs-bosch-service-tech-car-2/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "8mVCFD11ZGo": {
+      "match_id": "11798",
+      "review_category": "official_match_broadcast",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalny kanał PLP powiązany z podlaskaliga.pl. Odczytano pełny tytuł, sezon/kolejkę, datę transmisji 2025-04-12 i długość w odtwarzaczu. Para drużyn i dokładna data odpowiadają unikalnemu protokołowi PLP 11798; nie oparto przypisania wyłącznie na podobieństwie tytułu. Format: transmisja meczu, nie klip gola ani wywiad. Nie zweryfikowano jeszcze sekund poszczególnych goli.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=8mVCFD11ZGo",
+        "https://podlaskaliga.pl/wydarzenie/zubry-bema-vs-bosch-service-tech-car/",
+        "https://www.youtube.com/channel/UCd0p73Dp5Eya7c4tQ8EoLZA"
+      ]
+    },
+    "Sglay1fT-00": {
+      "match_id": null,
+      "review_category": "outside_league_archive",
+      "reviewed_at": "2026-10-19",
+      "review_reason": "Oficjalna transmisja Superpucharu PLP z 06.11.2022 (42:40). Zachowana jako materiał Boscha poza archiwum 113 meczów ligowych; nie zwiększa pokrycia ligowego ani nie jest przypisywana do innego meczu z Top Auto.",
+      "verification_source": [
+        "https://www.youtube.com/watch?v=Sglay1fT-00"
       ]
     }
   }

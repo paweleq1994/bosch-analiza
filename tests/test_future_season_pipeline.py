@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import build_portal
 import sync_plp
 from collect_match_player_evidence import collect_matches
-from sync_new_goal_protocols import extend
+from sync_new_goal_protocols import extend, extend_own_goal_evidence
 
 
 class FutureSeasonPipelineTests(unittest.TestCase):
@@ -104,6 +104,28 @@ class FutureSeasonPipelineTests(unittest.TestCase):
                                   "date": "2027-11-01", "season": indoor["name"], "gf": 0, "ga": 0})
         db = self.build({"league_updates.json": league})
         self.assertEqual(db["seasons"][-1]["id"], "171")
+
+    def test_two_own_scorers_in_new_match_reach_portal_without_counting_as_bosch_goals(self):
+        self.event["results"]["3"]["goals"] = "2"
+        self.event["performance"]["3"]["15000"]["goals"] = "0"
+        self.event["performance"]["6951"]["1960"]["samobje"] = "1 (18')"
+        self.event["performance"]["6951"]["1970"] = {"status": "lineup", "goals": "0", "samobje": "1 (28')"}
+        self.tables[0]["data"]["6951"].update(pkt="1", w="0", r="1", s="2")
+        league, fixture = self.import_new_season()
+        index, pending = extend(self.index, [fixture], self.profiles, fetch=lambda _: self.event)
+        self.assertFalse(pending["pending"])
+        self.assertEqual(index["matches"][:113], self.index["matches"])
+        own = extend_own_goal_evidence(self.read("bosch_own_goal_evidence.json"), index)
+        evidence = self.read("match_player_evidence.json")
+        added, _ = collect_matches([fixture], self.index, fetch=lambda _: self.event)
+        evidence["matches"].extend(added["matches"])
+        db = self.build({"league_updates.json": league, "match_player_evidence.json": evidence,
+                         "match_protocol_audit_index.json": index, "bosch_own_goal_evidence.json": own})
+        match = next(m for m in db["matches"] if m["id"] == "20001")
+        self.assertEqual(match["goal_protocol"]["player_goals"], 2)
+        self.assertEqual(match["goal_protocol"]["own_goals_conceded"], 2)
+        self.assertEqual([p["minutes"] for p in match["goal_protocol"]["own_goals_conceded_scorers"]], [["18"], ["28"]])
+        self.assertEqual(extend_own_goal_evidence(own, index), own)
 
     def test_new_season_preserves_older_partial_player_balance_and_aliases(self):
         self.event["performance"]["6951"]["7271"] = self.event["performance"]["6951"].pop("1960")
