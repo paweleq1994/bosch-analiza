@@ -268,7 +268,7 @@ def enrich_from_protocols(
                 "minute_uncertain": scorer["minute_uncertain"],
             })
 
-    if len(verified_ids) != minimum_matches:
+    if len(verified_ids) < minimum_matches:
         raise ValueError(f"Expected {minimum_matches} verified Bosch match protocols, found {len(verified_ids)}")
 
     for player in players:
