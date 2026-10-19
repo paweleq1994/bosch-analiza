@@ -2,6 +2,7 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from sync_public_player_careers import canonicalize_cached_careers
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
@@ -27,7 +28,9 @@ class PublicCareerCompletenessTests(unittest.TestCase):
 
     def test_all_public_profile_sums_reconcile_to_season_rows(self):
         current = {str(p["id"]): p for p in self.database["players"]}
-        for player_id, source in self.snapshot["players"].items():
+        canonical_snapshot = canonicalize_cached_careers(self.snapshot["players"], self.database["players"])
+        self.assertNotIn("new-kakareko-kamil", canonical_snapshot)
+        for player_id, source in canonical_snapshot.items():
             with self.subTest(player_id=player_id):
                 career = current[player_id]["career_totals"]
                 self.assertEqual(career["source_url"], source["source_url"])
