@@ -240,12 +240,13 @@ function dataQuality(){
     return headline("Jakość i źródła danych","Przejrzysty stan archiwum i wymagające weryfikacji elementy.")+
         metrics([["Mecze",DB.matches.length],["Protokoły",DB.matches.filter(m=>m.goal_protocol?.verified).length],
         ["Zawodnicy",players.length],["Niezidentyfikowane ID",unknown.length],
-        ["Brak zdjęcia",noPhoto.size],["Brak pełnej kariery",players.filter(p=>!p.career_totals).length]])+
+        ["Brak zdjęcia",noPhoto.size],["Brak pełnej kariery",players.filter(p=>!p.career_totals).length],["Mecze bez nagrania",DB.matches.filter(m=>(m.videos||[]).length===0).length],["Filmy bez przypisania",DB.videos.filter(v=>!v.match_id).length]])+
         section("Kwestie do uzupełnienia",table(["Zawodnik","Sezony","Kariera","Zdjęcia"],rows))+
         section("Nierozpoznane identyfikatory z meczów",
             table(["ID PLP","Zapisane protokoły"],unknown.map(id=>[e(id),e(DB.matches.filter(m=>
             (m.player_performance||[]).some(row=>same(row.player_id,id))).length)])))+
         '<p><a download href="downloads/bosch-kompendium.xlsx">Pobierz pełne kompendium XLSX — zawodnicy, mecze, gole, źródła i braki ↧</a></p>'+
+        '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-coverage.md" target="_blank" rel="noopener noreferrer">Audyt znanych nagrań i meczów bez filmu ↗</a></p>'+
         '<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/player-data-coverage.md">Pełny audyt źródeł w GitHub ↗</a></p>';
 }
 function players(){

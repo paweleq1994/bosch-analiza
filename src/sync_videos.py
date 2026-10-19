@@ -5,6 +5,7 @@ Uses yt-dlp's metadata-only flat playlist, no video downloads or paid API.
 Keeps prior verified links when YouTube fails.
 """
 from __future__ import annotations
+from datetime import date
 from html import unescape
 from pathlib import Path
 import json
@@ -35,13 +36,47 @@ def opponent_in(title, opponent):
     variants.add(re.sub(r"\b(bialystok|s a|sp z o o)\b","",o).strip())
     if o=="biuro serwis kopiarki":variants.add("biuro serwis kopiarki")
     if o=="unibep s a":variants.add("unibep")
-    return any(len(v)>=5 and re.search(r"(?<!\w)"+re.escape(v)+r"(?!\w)",t) for v in variants)
+    return any(len(v)>=4 and re.search(r"(?<!\w)"+re.escape(v)+r"(?!\w)",t) for v in variants)
 
 def match_video(video,matches):
-    title=video["title"]
-    if "bosch" not in norm(title):return None
-    candidates=[m for m in matches if score_in(title,m) and opponent_in(title,m["opponent"])]
-    return str(candidates[0]["id"]) if len(candidates)==1 else None
+    """Match uniquely using Bosch, result, opponent and official team aliases."""
+    title = video["title"]
+    if "bosch" not in norm(title):
+        return None
+
+    aliases = {}
+    for match in matches:
+        team_id = str(match.get("opponent_id") or "")
+        if team_id:
+            aliases.setdefault(team_id, set()).add(match["opponent"])
+
+    candidates = [
+        match for match in matches
+        if score_in(title, match) and any(
+            opponent_in(title, name)
+            for name in aliases.get(str(match.get("opponent_id") or ""), {match["opponent"]})
+        )
+    ]
+    if len(candidates) == 1:
+        return str(candidates[0]["id"])
+
+    # Upload dates only disambiguate matches with the same verified score/club.
+    raw_date = str(video.get("date") or "").replace("-", "")
+    if len(candidates) > 1 and len(raw_date) == 8 and raw_date.isdigit() and raw_date.startswith("20"):
+        try:
+            upload_date = date.fromisoformat(
+                raw_date[:4] + "-" + raw_date[4:6] + "-" + raw_date[6:]
+            )
+            nearby = [
+                match for match in candidates
+                if abs((upload_date - date.fromisoformat(match["date"])).days) <= 21
+            ]
+            if len(nearby) == 1:
+                return str(nearby[0]["id"])
+        except ValueError:
+            pass
+
+    return None
 
 def list_channel(source):
     handle=source["handle"].lstrip("@")
@@ -61,7 +96,7 @@ def sync(sources,previous,site,archives):
     existing={v["id"]:v for v in previous.get("videos",[]) if v.get("id")}
     archived={v["id"] for v in site.get("videos",[]) if v.get("id")}
     matches=site.get("matches") or []
-    orlik=[m for m in matches if m["sid"]=="orlik-2026"]
+    # Reconcile all archived years, not just the latest Orlik season.
     total_new=0; warnings=[]
     for source in sources:
         try:videos=archives(source)
@@ -74,15 +109,15 @@ def sync(sources,previous,site,archives):
         for index,v in enumerate(videos):
             if v["id"] in archived:continue
             if v["id"] in existing:continue
-            target=match_video(v,orlik) if source.get("handle")=="martawnuszynska9993" and index<boundary else None
+            target=match_video(v,matches) if source.get("handle")=="martawnuszynska9993" and index<boundary else None
             if target:
                 v["match_id"]=target;v["status"]="matched_auto"
             existing[v["id"]]=v
             total_new+=1
-    # Re-evaluate previously unmatched video entries against Orlik 2026 safely.
+    # Re-evaluate unassigned videos against every known official season safely.
     for v in existing.values():
-        if v["status"]=="needs_review" and v.get("channel")=="Marta Wnuszynska":
-            candidate=match_video(v,orlik)
+        if v.get("status")=="needs_review":
+            candidate=match_video(v,matches)
             if candidate:
                 v["match_id"]=candidate;v["status"]="matched_auto"
     return {"videos":sorted(existing.values(),key=lambda v:(v.get("date") or "",v["id"])),
