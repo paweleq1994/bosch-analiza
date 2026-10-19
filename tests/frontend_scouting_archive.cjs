@@ -13,6 +13,23 @@ context.database = db;
 vm.runInContext("data=database", context);
 const evaluate = expression => vm.runInContext(expression, context);
 
+for (const team of db.teams) {
+    context.selectedTeam = team;
+    const card = evaluate("teamCard(selectedTeam)");
+    assert.ok(!card.includes("Utrzymanie (prognoza)"));
+    assert.ok(!card.includes("Dane:"));
+    assert.ok(card.includes(team.hall && team.orlik ? "Wyniki z 2 sezonów" : "Wyniki z 1 sezonu"));
+    const players = evaluate("keyPlayers(selectedTeam,3)");
+    for (const player of team.players.slice(0,3)) assert.ok(players.includes(player.name));
+    assert.ok(players.includes("liderzy goli i asyst"));
+    const source = team.players[0].source_url;
+    assert.equal(players.split(`href="${source}"`).length-1,1);
+}
+nodes["bosch-data"]={};
+evaluate("bosch()");
+assert.ok(nodes["bosch-data"].innerHTML.includes("ustalcie pozycje i zadania"));
+assert.ok(!nodes["bosch-data"].innerHTML.includes("Brak zweryfikowanych ról"));
+
 const team = db.teams.find(t => t.name === "Biuro Serwis-Kopiarki");
 nodes["card-team"] = {value: team.id};
 nodes["pre-match"] = {};

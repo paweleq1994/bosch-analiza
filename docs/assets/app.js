@@ -694,10 +694,10 @@ function records(){
             e(index+1),playerLink(row.player),fmt(row.value,precision),"Suma zweryfikowanych sezonów PLP"
         ])):empty("Brak w pełni porównywalnych statystyk tej kategorii.");
         return section(heading,completeTable)+
-            (partial.length?section(heading+" — udokumentowane minimum (bez rankingu)",
-                table(["Zawodnik","Wartość minimum","Status"],partial.map(row=>[
+            (partial.length?section(heading+" — statystyki częściowe",
+                table(["Zawodnik","Potwierdzono co najmniej","Zakres danych"],partial.map(row=>[
                     playerLink(row.player),fmt(row.value,precision),
-                    "Niepełna historia; wartość może być zaniżona"
+                    "Bilans z dostępnych protokołów; pełna suma niepotwierdzona"
                 ]))):"");
     }).join("");
     const scoreWins=matches.slice().sort((a,b)=>(b.gf-b.ga)-(a.gf-a.ga)).slice(0,10);

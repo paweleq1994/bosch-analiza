@@ -9,6 +9,7 @@ import re
 import sys
 from urllib.parse import urlencode
 from urllib.request import Request,urlopen
+from collect_match_player_evidence import event_stat
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"scouting_details.json"
@@ -20,7 +21,7 @@ def get(path,params=None):
     url=BASE+"/"+path+("?" + urlencode(params) if params else "")
     with urlopen(Request(url,headers={"User-Agent":"BoschScout/1.0"}),timeout=30) as response:return json.load(response)
 def number(x):
-    return int(str(x)) if re.fullmatch(r"\d+",str(x or "").strip()) else None
+    return int(str(x)) if x is not None and re.fullmatch(r"\d+",str(x).strip()) else None
 def clean(x):
     if isinstance(x,dict):x=x.get("rendered","")
     return unescape(re.sub(r"<[^>]*>","",str(x or ""))).strip()
@@ -53,7 +54,7 @@ def detail(events,team):
             if not str(pid).isdigit() or int(pid)==0 or not isinstance(record,dict):continue
             appeared=bool(str(record.get("status") or "").strip()) or any(str(record.get(k) or "").strip() for k in COLUMNS.values())
             if not appeared:continue
-            values={k:number(record.get(v)) if record.get(v) not in (None,"") else 0 for k,v in COLUMNS.items()}
+            values={k:event_stat(record.get(v)) for k,v in COLUMNS.items()}
             if any(v is None for v in values.values()):complete=False;continue
             used+=1
             entry=people[str(pid)]

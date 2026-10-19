@@ -112,3 +112,34 @@ def bosch_totals(seasons):
             raise ValueError(f"Conflicting PLP Bosch season alias: {canonical_id}")
         ids[canonical_id] = values
     return total_fields(ids.values())
+
+
+def confirm_bosch_totals(player):
+    """Retire an old minimum flag only when club rows and public HTML agree."""
+    if not player.get("stats_minimum"):
+        return False
+    career = player.get("career_totals") or {}
+    rows = career.get("season_rows") or []
+    public = career.get("public_season_rows") or []
+    club_rows = [row for row in rows if row.get("team") == "Bosch Service Tech-Car"]
+    if not club_rows or not public or not str(career.get("source_url") or "").startswith("https://podlaskaliga.pl/zawodnik/"):
+        return False
+    for row in club_rows:
+        # A combined public season cannot independently verify a club split
+        # when the player represented several teams in the same competition.
+        if sum(other.get("sid") == row.get("sid") for other in rows) != 1:
+            return False
+        matching = [other for other in public if other.get("name") == row.get("name")]
+        if len(matching) != 1 or any(type(row.get(field)) is not int or row[field] != matching[0].get(field) for field in STAT_FIELDS):
+            return False
+        season = (player.get("season_stats") or {}).get(season_id(row["sid"])) or {}
+        if any(season.get(field) != row[field] for field in STAT_FIELDS):
+            return False
+    totals = total_fields(club_rows)
+    if any(player.get(field) != totals[field] or (player.get("bosch_totals") or {}).get(field) != totals[field]
+           or (player.get("season_coverage", {}).get("unassigned") or {}).get(field) != 0 for field in STAT_FIELDS):
+        return False
+    player["stats_minimum"] = False
+    player["stats_source"] = "PLP — sezony Boscha potwierdzone publiczną tabelą kariery"
+    player["bosch_totals_verified"] = {"source_url": career["source_url"], "season_ids": [row["sid"] for row in club_rows]}
+    return True

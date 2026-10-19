@@ -3,6 +3,8 @@
 from pathlib import Path
 import json
 from sync_videos import validate_fixture_dates
+from copy import deepcopy
+from player_totals import confirm_bosch_totals
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "docs" / "assets" / "data.json").read_text(encoding="utf-8"))
@@ -31,7 +33,10 @@ known_scorers = {
 assert all(known_scorers.values()), "Official PLP scorers are missing from the Bosch roster"
 assert known_scorers["wojciuk"]["goals"] >= 2, "Missing Wojciuk official goals"
 assert known_scorers["pietruczuk"]["goals"] >= 1, "Missing Pietruczuk match goal"
-assert known_scorers["pietruczuk"].get("stats_minimum") is True, "Partial match evidence is not a full season total"
+if not known_scorers["pietruczuk"].get("stats_minimum"):
+    verified = deepcopy(known_scorers["pietruczuk"])
+    verified["stats_minimum"] = True
+    assert confirm_bosch_totals(verified), "A full balance needs independently confirmed public Bosch season rows"
 
 attribution = DATA["analysis"]["player_goal_coverage"]
 for record in attribution:

@@ -32,7 +32,8 @@ class VerifiedHistoricalProtocolTests(unittest.TestCase):
         self.assertEqual(solowiej["season_stats"]["139"]["goals"], 2)
         self.assertEqual(solowiej["goals"], 22)
         self.assertEqual(kakareko["season_stats"]["144"]["goals"], 1)
-        self.assertTrue(kakareko["stats_minimum"])
+        self.assertFalse(kakareko["stats_minimum"])
+        self.assertTrue(kakareko["bosch_totals_verified"])
         self.assertEqual(kakareko["apps"], 2)
         self.assertEqual(len(kakareko["protocol_goals"]), 1)
 
