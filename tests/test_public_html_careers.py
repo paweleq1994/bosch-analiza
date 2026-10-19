@@ -2,12 +2,12 @@ import json
 import sys
 import unittest
 from pathlib import Path
-from sync_public_player_careers import canonicalize_cached_careers
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 import build_portal
+from sync_public_player_careers import canonicalize_cached_careers
 
 class PublicCareerCompletenessTests(unittest.TestCase):
     @classmethod
