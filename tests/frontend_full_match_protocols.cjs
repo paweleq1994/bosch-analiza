@@ -21,7 +21,8 @@ const indexHtml = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
 assert.ok(indexHtml.includes('href="#/goals"'));
 
 const archive = render("goalsArchive()");
-assert.ok(archive.includes("113 historycznych meczów"));
+assert.ok(archive.includes("Zweryfikowane protokoły"));
+assert.ok(archive.includes("113"));
 assert.ok(archive.includes("293"));
 assert.ok(archive.includes("289"));
 assert.ok(archive.includes("Samobóje rywali"));
