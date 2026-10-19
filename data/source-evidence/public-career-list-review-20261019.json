@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-10-19T17:57:21+00:00",
+  "public_lists": 168,
+  "unique_list_ids": 168,
+  "pages": [
+    {
+      "page": 1,
+      "records": 100,
+      "sha256": "b49b41725fcaeb8bbebd1a59bc00fe3951312ca04acfe0ce6ca2e4502487a755",
+      "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/lists?per_page=100&page=1"
+    },
+    {
+      "page": 2,
+      "records": 68,
+      "sha256": "8b896c3fd7ad473d948e42497a1607f7438c099b48f0d05400b8e2115fb58b6b",
+      "url": "https://podlaskaliga.pl/wp-json/sportspress/v2/lists?per_page=100&page=2"
+    }
+  ],
+  "target_player_ids": [
+    "10321",
+    "10604",
+    "7266",
+    "7270",
+    "7271",
+    "7278",
+    "7282",
+    "7285",
+    "7286",
+    "8655",
+    "8916"
+  ],
+  "target_id_hits": [],
+  "limitation": "Rows are keyed by PLP ID, not player names. ID absence does not exclude unknown former IDs.",
+  "alltime_html": {
+    "url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+    "profile_links": 1187,
+    "exact_target_names": [],
+    "different_people_excluded": [
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/kuzma-piotr/",
+        "name": "Kuźma Piotr"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/solowiej-arkadiusz/",
+        "name": "Sołowiej Arkadiusz"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/kamil-markowski/",
+        "name": "Markowski Kamil (GK)"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/markowski-patryk/",
+        "name": "Markowski Patryk"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/kuzma-dzianis/",
+        "name": "Kuzma Dzianis"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/markowski-hubert/",
+        "name": "Markowski Hubert"
+      },
+      {
+        "url": "https://podlaskaliga.pl/zawodnik/markowski-wiktor/",
+        "name": "Markowski Wiktor"
+      }
+    ]
+  }
+}

@@ -11,7 +11,8 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
 - Zawodnicy ze zdjęciem: **18**, bez zdjęcia: **28**
-- Zawodnicy bez pełnego archiwum kariery PLP: **11**
+- Zawodnicy bez pełnego archiwum kariery PLP: **0**
+- Kariery zrekonstruowane z protokołów i potwierdzenia zakresu klubowego: **11**
 - Zawodnicy bez linku do publicznego profilu PLP: **11**
 
 ## Zakresy brakujących statystyk
@@ -58,17 +59,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bez pełnej historii kariery PLP
 
-- Bazyluk Jakub (PLP ID 7266)
-- Ciborowski Julian (PLP ID 10321)
-- Gorbacewicz Emil (PLP ID 7271)
-- Gołąbeski Piotr (PLP ID 7270)
-- Kossakowski Maciej (PLP ID 7278)
-- Kuźma Gabriel (PLP ID 8655)
-- Markowski Damian (PLP ID 7282)
-- Sołowiej Tomasz (PLP ID 7285)
-- Uściłowski Krzysztof (PLP ID 7286)
-- Wądołowski Sebastian (PLP ID 8916)
-- Śmiłowski Michał (PLP ID 10604)
+Brak.
 
 ## Bez publicznego linku profilu PLP
 
@@ -105,23 +96,23 @@ Brak.
 - PLP może blokować niektóre archiwalne profile (HTTP 401); zachowujemy wtedy wcześniejsze wartości i pokazujemy luki.
 
 
-## Minima kariery odtworzone z publicznych protokołów
+## Kariery odtworzone z publicznych protokołów
 
-Pełne kariery pozostają niepotwierdzone. Przegląd całego publicznego API nie obejmuje usuniętych/prywatnych wydarzeń ani nieznanych innych identyfikatorów.
+Dla 11 wskazanych osób użytkownik potwierdził 19.10.2026 grę w PLP wyłącznie w Boschu. Liczby pochodzą z protokołów PLP i zgadzają się z pełnym rozliczeniem historii Boscha. Rekonstrukcja opiera się na potwierdzeniu zakresu klubowego; nie oznacza odzyskania aktualnego publicznego profilu. Bez tego potwierdzenia wartości pozostają minimami. Przegląd publicznego API nie obejmuje usuniętych/prywatnych wydarzeń ani nieznanych innych identyfikatorów.
 
 | Zawodnik | M | G | A | MVP | ŻK | CK bezp. | Publiczne wydarzenia sprawdzone |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Sołowiej Tomasz | ≥33 | ≥22 | ≥13 | ≥3 | ≥1 | ≥0 | 2415 |
-| Gołąbeski Piotr | ≥13 | ≥1 | ≥1 | ≥1 | ≥4 | ≥1 | 2415 |
-| Gorbacewicz Emil | ≥10 | ≥0 | ≥3 | ≥0 | ≥2 | ≥0 | 2415 |
-| Markowski Damian | ≥6 | ≥2 | ≥1 | ≥0 | ≥0 | ≥0 | 2415 |
-| Kossakowski Maciej | ≥5 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
-| Ciborowski Julian | ≥4 | ≥0 | ≥1 | ≥0 | ≥0 | ≥0 | 2415 |
-| Śmiłowski Michał | ≥1 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
-| Bazyluk Jakub | ≥1 | ≥0 | ≥0 | ≥0 | ≥1 | ≥0 | 2415 |
-| Uściłowski Krzysztof | ≥2 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
-| Kuźma Gabriel | ≥3 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
-| Wądołowski Sebastian | ≥1 | ≥0 | ≥0 | ≥0 | ≥0 | ≥0 | 2415 |
+| Sołowiej Tomasz | 33 | 22 | 13 | 3 | 1 | 0 | 2415 |
+| Gołąbeski Piotr | 13 | 1 | 1 | 1 | 4 | 1 | 2415 |
+| Gorbacewicz Emil | 10 | 0 | 3 | 0 | 2 | 0 | 2415 |
+| Markowski Damian | 6 | 2 | 1 | 0 | 0 | 0 | 2415 |
+| Kossakowski Maciej | 5 | 0 | 0 | 0 | 0 | 0 | 2415 |
+| Ciborowski Julian | 4 | 0 | 1 | 0 | 0 | 0 | 2415 |
+| Śmiłowski Michał | 1 | 0 | 0 | 0 | 0 | 0 | 2415 |
+| Bazyluk Jakub | 1 | 0 | 0 | 0 | 1 | 0 | 2415 |
+| Uściłowski Krzysztof | 2 | 0 | 0 | 0 | 0 | 0 | 2415 |
+| Kuźma Gabriel | 3 | 0 | 0 | 0 | 0 | 0 | 2415 |
+| Wądołowski Sebastian | 1 | 0 | 0 | 0 | 0 | 0 | 2415 |
 
 ## Źródłowe protokoły bez oznaczenia sezonu
 

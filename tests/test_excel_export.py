@@ -77,13 +77,20 @@ class ExcelExportTests(unittest.TestCase):
     def test_zero_unassigned_totals_do_not_mark_a_complete_player_as_incomplete(self):
         gaps = list(self.workbook["Braki danych"].iter_rows(min_row=2))
         self.assertFalse(any(row[0].value == "1960" for row in gaps))
-        partial = next(row for row in gaps if row[0].value == "7270")
-        self.assertEqual(partial[4].value, "NIE")
-        allocated = next(row for row in gaps if row[0].value == "7271")
-        self.assertEqual(allocated[4].value, "NIE")
+        self.assertFalse(any(row[0].value == "7270" for row in gaps))
+        self.assertFalse(any(row[0].value == "7271" for row in gaps))
         sources = [cell.value for row in self.workbook["Informacje"] for cell in row if cell.hyperlink]
         self.assertIn("https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-maja-rozmach-2/", sources)
         self.assertIn("https://podlaskaliga.pl/wydarzenie/mecz-barazowy/", sources)
+
+    def test_reconstructed_careers_explain_user_scope_and_official_numbers(self):
+        player = next(row for row in self.workbook["Zawodnicy"].iter_rows(min_row=2) if row[0].value == "7270")
+        self.assertEqual(player[9].value, 13)
+        self.assertEqual(player[12].value, "Rekonstrukcja z protokołów")
+        notes = [row[1].value for row in self.workbook["Informacje"].iter_rows() if row[0].value == "Rekonstrukcja PLP — Gołąbeski Piotr"]
+        self.assertEqual(len(notes), 1)
+        self.assertIn("zakres klubowy z tego potwierdzenia", notes[0])
+        self.assertNotIn("≥", notes[0])
 
     def test_windows_and_linux_line_endings_keep_the_same_workbook(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -33,6 +33,9 @@ const controls={"compare-player-a":{value:"7271"},"compare-player-b":{value:"196
                 "compare-player-season":{value:""},"compare-player-result":{innerHTML:""}};
 context.document={getElementById:id=>controls[id]};
 show("updatePlayerComparison()");
+assert.ok(!controls["compare-player-result"].innerHTML.includes("≥ 10"));
+show('DB.players.find(p=>p.id==="7271").stats_minimum=true');
+show("updatePlayerComparison()");
 assert.ok(controls["compare-player-result"].innerHTML.includes("≥ 10"));
 assert.ok(controls["compare-player-result"].innerHTML.includes("<td>G+A / mecz</td><td>—</td>"));
 assert.ok(controls["compare-player-result"].innerHTML.includes("wymaga pełnego bilansu"));

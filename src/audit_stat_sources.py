@@ -91,7 +91,8 @@ def audit(database: dict) -> dict:
         coverage.append({
             "id": player_id, "name": player["name"],
             "has_career": bool(career),
-            "career_source": career.get("source_url") or player.get("profile_url") or "",
+            "reconstructed_career": bool(career.get("reconstructed")),
+            "career_source": career.get("source_url") or (career.get("source_urls") or [""])[0] or player.get("profile_url") or "",
             "incomplete_bosch": bool(player.get("stats_minimum")),
             "unassigned": {
                 key: value for key, value in (
@@ -122,6 +123,7 @@ def render(report: dict) -> str:
         f"- Niespójności wymagające wyjaśnienia: **{len(report['contradictions'])}**",
         f"- Wartości minimalne bez pola sezonowego: **{len(report['known_minimums_without_season_field'])}**",
         f"- Bez pełnego potwierdzonego bilansu kariery PLP: **{sum(not r['has_career'] for r in report['coverage'])}**",
+        f"- W tym rekonstrukcje z protokołów i potwierdzenia zakresu klubowego: **{sum(r['reconstructed_career'] for r in report['coverage'])}**",
         "",
         "## Sprzeczności z oficjalnymi protokołami",
         "",

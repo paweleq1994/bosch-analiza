@@ -1,8 +1,8 @@
 # Stan kompendium Bosch — 19.10.2026
 
-PR #65 scalony jako `b111613eee8409ab227e52d82dcdbbae6ef20766` po zielonym rzeczywistym checku `118189994184` (38/38 kroków CI `39290618114`). CI main `39290839692`, publikacja XLSX `39290839719` i Pages `39290839116` zakończone sukcesem. Produkcja potwierdziła 53 mecze z nagraniem, skorygowane OSMAR/CEDC, odpięty CF Bojary i nową wersję skryptu. Wcześniejsze 15 odnośników, 11 minimów, rozliczenie Gołąbeskiego i Sołowiej 33M zachowane; pobrany XLSX ma 7 arkuszy. Bieżąca rewizja klasyfikuje siedem filmów po nowej wypowiedzi użytkownika. Publikację konkretnego commita potwierdzamy osobno w issue #33 po CI i kontroli portalu oraz XLSX.
+PR #65 scalony jako `b111613eee8409ab227e52d82dcdbbae6ef20766` po zielonym rzeczywistym checku `118189994184` (38/38 kroków CI `39290618114`). CI main `39290839692`, publikacja XLSX `39290839719` i Pages `39290839116` zakończone sukcesem. Produkcja potwierdziła 53 mecze z nagraniem, skorygowane OSMAR/CEDC, odpięty CF Bojary i nową wersję skryptu. Wcześniejsze 15 odnośników, 11 minimów, rozliczenie Gołąbeskiego i Sołowiej 33M zachowane; pobrany XLSX ma 7 arkuszy. PR #66 scalił klasyfikację siedmiu filmów zgodnie z wypowiedzią użytkownika. Bieżąca rewizja uzupełnia 11 karier po nowym potwierdzeniu zakresu klubowego oraz poszerzonym przeglądzie PLP i Web Archive. Publikację konkretnego commita potwierdzamy osobno w issue #33 po CI i kontroli portalu oraz XLSX.
 
-202 testy Python i 14 testów frontendowych przeszły lokalnie. Wszystkie 10 generatorów/audytów offline, walidacje, składnia JS, compileall i diff check OK. Nie nazywać projektu ukończonym: 16 punktów wykonanych, 4 częściowe. Status odnosi się do danych i funkcji tej rewizji; nie jest deklaracją odzyskania brakujących źródeł.
+207 testów Python i 14 testów frontendowych przeszły lokalnie. Generatory portalu, XLSX i raportów, audyty offline, walidacje, składnia JS, compileall i diff check OK. Nie nazywać projektu ukończonym: 17 punktów wykonanych, 3 częściowe. Status odnosi się do danych i funkcji tej rewizji; nie jest deklaracją odzyskania brakujących źródeł.
 
 ## Wszystkie 20 punktów
 
@@ -12,7 +12,7 @@ PR #65 scalony jako `b111613eee8409ab227e52d82dcdbbae6ef20766` po zielonym rzecz
 | 2 | Wdrożone | Nowe gole, minuty, samobóje, asysty, MVP i kartki; nieznane ID/minuty/sprzeczności trafiają do pending. #62: bezpośrednie czerwone oraz wykluczenia po 2 ŻK są rozdzielone. |
 | 3 | Wdrożone | 13 starych ID odzyskanych; regresja nowego nieznanego ID bez fikcyjnego profilu; bieżący backfill bez nierozpoznanych ID. |
 | 4 | Wykonane — jawne ograniczenie źródła | 34 porównania HTML/API/widoku wyjaśnione. Pozostałe 1M i 1ŻK Gołąbeskiego znaleziono w protokole 10050; PLP nie oznaczyła sezonu. Osobny wiersz z datą i źródłem rozlicza znane sumy bez wymyślania sezonu ani zwiększania 13M/4ŻK/1CK. |
-| 5 | Częściowo — ograniczenie źródeł | 35 publicznych bilansów, 11 całych karier niepotwierdzonych. Dla wszystkich 11 odtworzono minimum z przeglądu 2415 publicznych wydarzeń: 44 protokoły, 79 występów. Portal i XLSX pokazują zakres i źródła. Nieznane inne ID oraz usunięte wydarzenia wykluczają deklarację pełnej kariery. |
+| 5 | Wykonane — jawna rekonstrukcja | 35 publicznych bilansów HTML i 11 rekonstrukcji. Nowe potwierdzenie użytkownika z 19.10.2026 ustala grę całej jedenastki w PLP wyłącznie w Boschu; liczby wynikają z 44 protokołów (79 występów) odnalezionych w przeglądzie 2415 wydarzeń. Wszystkie sześć pól zgadza się z historią Boscha. Publiczne profile pozostają niedostępne, źródło zakresu klubowego i ograniczenia są jawne w portalu oraz XLSX. Nowe kopie Web Archive potwierdzają bilanse, bez łączenia innych ID. |
 | 6 | Częściowo — ograniczenie źródeł | 18 potwierdzonych portretów, 28 braków przy 46 osobach. #60 odzyskał 3 prawdziwe portrety; dalsze kopie mają placeholdery. Dodatkowe wyszukiwanie artykułów po nazwiskach: pełne imię i nazwisko Daniluka w 4 artykułach, sprawdzone grafiki przedstawiają koszulki bez twarzy. Brak nowego potwierdzonego portretu; zapytanie Żak ograniczone do pierwszych 100 wyników. |
 | 7 | Wdrożone | Pages z docs, rzeczywista kontrola produkcji i publikacji. |
 | 8 | Wdrożone | Oficjalne team ID, aliasy nazw, odrębne kluby o tej samej nazwie. |
@@ -33,10 +33,10 @@ PR #65 scalony jako `b111613eee8409ab227e52d82dcdbbae6ef20766` po zielonym rzecz
 
 - 46 kanonicznych osób, 8 sezonów, 113 meczów i protokołów ligowych; 988 występów, 0 nierozpoznanych ID.
 - 293 bramki = 289 zawodników + 3 samobóje rywali + 1 administracyjna; 0 nierozliczonych. 6 samobójów Boscha na korzyść rywali.
-- 35 publicznych bilansów kariery, 11 niepełnych; 18 portretów, 28 braków.
+- 35 publicznych bilansów kariery HTML, 11 rekonstrukcji z potwierdzeniem zakresu klubowego; 18 portretów, 28 braków.
 - 34 porównania źródeł: 26 zakresów Superpucharu, 5 wyjaśnień protokołami i wierszami, 2 scalone ID, 1 niezależny protokół Zalewskiego. 0 sprzeczności sezonowych. Dane innych klubów nie zwiększają Boscha.
-- Gołąbeski 7270: nadal 13M/4ŻK/1CK. Protokół 10790 przypisuje znany występ i czerwoną w 24′ do Superpucharu 2024. Protokół 10050, Bosch–Mają Rozmach 23.03.2024, wyjaśnia pozostałe 1M i 1ŻK. Brak sezonu w źródle jest widoczny w osobnym wierszu. Wszystkie znane pola rozliczone, cała kariera nadal niepełna.
-- Sołowiej 7285: publiczny baraż 7882 z 26.03.2023 podnosi potwierdzone minimum Boscha z 32 do 33 występów. Pozostałe liczby bez zmian, brak sezonu oznaczony w historii. Surowy dawny bilans zachowany, nie dopisano meczu do 113 ligowych.
+- Gołąbeski 7270: nadal 13M/4ŻK/1CK. Protokół 10790 przypisuje znany występ i czerwoną w 24′ do Superpucharu 2024. Protokół 10050, Bosch–Mają Rozmach 23.03.2024, wyjaśnia pozostałe 1M i 1ŻK. Brak sezonu w źródle jest widoczny w osobnym wierszu. Wszystkie znane pola rozliczone; po potwierdzeniu gry wyłącznie w Boschu kariera jest oznaczona jako rekonstrukcja z protokołów.
+- Sołowiej 7285: publiczny baraż 7882 z 26.03.2023 podnosi odtworzony bilans Boscha z 32 do 33 występów. Pozostałe liczby bez zmian, brak sezonu oznaczony w historii. Surowy dawny bilans zachowany, nie dopisano meczu do 113 ligowych.
 - Zalewski 12288: Orlik 2025 0M, Superpuchar 2025 1M (protokół 12363). Publiczne HTML i REST mają 0, pomijając puchar. Surowe źródło zachowane, portal pokazuje 1 z jawnym uzupełnieniem. Regresja chroni przed podwojeniem, gdy PLP doda puchar pod inną nazwą.
 - Orlik 2026: pięciu znanych zgłoszonych bez występów — Dołżyk, Mateusz Jurkowicz, Kadłubowski, Karpiński i Żak. Widoczni w filtrze graczy i na stronie sezonu. Nie są dopisywani do protokołów jako grający.
 - Czerwone w PLP to bezpośrednie kartki. W 113 protokołach są 4 takie czerwone i 7 odrębnych wykluczeń po 2 ŻK. Dwie żółte z różnych meczów nie tworzą wykluczenia. Widoki i XLSX rozdzielają te pola.
@@ -76,7 +76,11 @@ PR #65 scalony jako `b111613eee8409ab227e52d82dcdbbae6ef20766` po zielonym rzecz
 ## Następne zadania
 
 1. Dokończyć przegląd 149 goli w meczach z filmem i ustalić konkretne wydarzenie dla Rambo, Krokusa i Prestige. Cztery nagrania turnieju poza PLP są wykluczone zgodnie z potwierdzeniem użytkownika; nie czekamy na kolejne rozpoznanie tych czterech filmów. Szukać nagrań 60 spotkań. Odpięty CF Bojary pozostaje bez rzeczywistego meczu, z jednoznacznie odrzuconym dawnym przypisaniem.
-2. Uzupełniać 11 całych karier i 28 portretów wyłącznie po nowym dowodzie. Minima z 2415 protokołów już odtworzono. Brak danych nie jest zerem, minimum nie jest pełnym bilansem, Bosch nie jest całą PLP.
-3. Kończyć scalanie/publikację wyłącznie po zielonym CI dla faktycznego head. Issue #33 pozostaje otwarte dla punktów 5, 6, 14, 15; protokoły bez oznaczenia sezonu mają jawne ograniczenie źródła.
+2. Szukać 28 brakujących portretów. 11 karier zrekonstruowano z protokołów po nowym potwierdzeniu użytkownika o grze wyłącznie w Boschu; nie odzyskano ich aktualnych profili. Dalsze zmiany źródeł wymagają ponownego uzgodnienia; brak potwierdzenia lub niezgodne sumy zachowują minimum.
+3. Kończyć scalanie/publikację wyłącznie po zielonym CI dla faktycznego head. Issue #33 pozostaje otwarte dla punktów 6, 14, 15; protokoły bez oznaczenia sezonu mają jawne ograniczenie źródła.
 
 Repo ma uwierzytelniony git push oraz sesję GitHub w przeglądarce. Brak gh. Nie odczytywać tokenów z credential helpera: wcześniej odrzucił to auto-review. Lokalna instalacja istniejącego yt-dlp też została odrzucona; nie ponawiano, metadane skutecznie odświeżył istniejący workflow. Python 3.12 z cache Codex ma openpyxl; systemowy 3.14 go nie ma. Nie dodano nowych zależności. Zapis sandboxa czasem wymaga zatwierdzonego wykonania narzędzia.
+
+## Bieżąca rekonstrukcja karier
+
+Nowe potwierdzenie użytkownika o grze wyłącznie w Boschu pozwoliło uzgodnić 11 karier na podstawie 120 publicznych wydarzeń drużyny (1045 występów, 0 nieznanych ID). Crawl odczytał 7456 różnych adresów HTML i wszystkie 4559 adresów z map; kolekcja 168 list SportsPress i sześć dodatkowych kopii Web Archive sprawdzone. [Szczegółowy raport](career-reconstruction-20261019.md). Aktualne publiczne profile pozostają niedostępne, a potwierdzenie zakresu pochodzi od użytkownika.

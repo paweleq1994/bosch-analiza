@@ -8,7 +8,8 @@ Nieznana liczba i potwierdzone zero nie są tym samym.
 - Mecze: **113**
 - Niespójności wymagające wyjaśnienia: **0**
 - Wartości minimalne bez pola sezonowego: **0**
-- Bez pełnego potwierdzonego bilansu kariery PLP: **11**
+- Bez pełnego potwierdzonego bilansu kariery PLP: **0**
+- W tym rekonstrukcje z protokołów i potwierdzenia zakresu klubowego: **11**
 
 ## Sprzeczności z oficjalnymi protokołami
 

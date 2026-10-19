@@ -1,0 +1,21 @@
+{
+  "source_type": "user_confirmation",
+  "scope": "entire_plp_career_only_bosch",
+  "team_id": "6951",
+  "confirmed_at": "2026-10-19",
+  "statement": "oni grali tylko w boschu",
+  "context": "Odpowiedź na pytanie o inne kluby PLP wskazanej jedenastki. Potwierdza zakres klubowy; nie jest źródłem liczb ani dowodem dostępności profilu PLP.",
+  "players": {
+    "7285": {"name": "Sołowiej Tomasz"},
+    "7270": {"name": "Gołąbeski Piotr"},
+    "7271": {"name": "Gorbacewicz Emil"},
+    "7282": {"name": "Markowski Damian"},
+    "7278": {"name": "Kossakowski Maciej"},
+    "10321": {"name": "Ciborowski Julian"},
+    "10604": {"name": "Śmiłowski Michał"},
+    "7266": {"name": "Bazyluk Jakub"},
+    "7286": {"name": "Uściłowski Krzysztof"},
+    "8655": {"name": "Kuźma Gabriel"},
+    "8916": {"name": "Wądołowski Sebastian"}
+  }
+}

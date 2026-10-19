@@ -257,7 +257,8 @@ def audit(database, rest_snapshots, html_snapshot, evidence, competition_evidenc
 
     return {
         "all_players": len(database["players"]),
-        "players_with_public_career": len(database["players"]) - len(missing),
+        "players_with_public_career": sum(bool((p.get("career_totals") or {}).get("public_season_rows")) for p in database["players"]),
+        "players_with_reconstructed_career": sum(bool((p.get("career_totals") or {}).get("reconstructed")) for p in database["players"]),
         "career_source_differences": differences,
         "career_season_differences": career_seasons,
         "career_difference_status_counts": {
@@ -287,6 +288,7 @@ def markdown(audit_data: dict) -> str:
         "",
         f"- Zawodnicy: **{audit_data['all_players']}**",
         f"- Pełne publiczne kariery PLP: **{audit_data['players_with_public_career']}**",
+        f"- Rekonstrukcje z protokołów i potwierdzenia zakresu klubowego: **{audit_data['players_with_reconstructed_career']}**",
         f"- Różnice HTML vs API / widok: **{len(audit_data['career_source_differences'])}**",
         f"- Sprzeczne sezonowe minimum z protokołów: **{len(audit_data['season_source_conflicts'])}**",
         f"- Zweryfikowane protokoły goli: **{audit_data['verified_goal_matches']}**",

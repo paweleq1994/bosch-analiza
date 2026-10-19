@@ -38,6 +38,8 @@ class ArchivedPlayerProfilesTests(unittest.TestCase):
     def test_archival_allocation_does_not_increase_totals_or_create_full_careers(self):
         original_load = build_portal.load
         def load(name, default=None):
+            if name == "source-evidence/bosch-only-career-scope-20261019.json":
+                return {}
             if name == "player_stat_corrections.json":
                 return {k: v for k, v in self.corrections.items() if k not in ("7271", "7278", "7285")}
             return original_load(name, default)
@@ -46,9 +48,14 @@ class ArchivedPlayerProfilesTests(unittest.TestCase):
             with patch.object(build_portal, "load", side_effect=load), patch.object(build_portal, "OUTPUT", target):
                 build_portal.main()
             before = json.loads(target.read_text(encoding="utf-8"))
+            def without_club_confirmation(name, default=None):
+                return {} if name == "source-evidence/bosch-only-career-scope-20261019.json" else original_load(name, default)
+            with patch.object(build_portal, "load", side_effect=without_club_confirmation), patch.object(build_portal, "OUTPUT", target):
+                build_portal.main()
+            after = json.loads(target.read_text(encoding="utf-8"))
         for pid in ("7271", "7278", "7285"):
             old = next(p for p in before["players"] if p["id"] == pid)
-            new = next(p for p in self.db["players"] if p["id"] == pid)
+            new = next(p for p in after["players"] if p["id"] == pid)
             for field in ("apps", "goals", "assists", "motm", "yellow", "red"):
                 self.assertEqual(new[field], old[field])
             self.assertTrue(any(old["season_coverage"]["unassigned"].values()))

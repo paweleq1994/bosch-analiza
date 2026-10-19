@@ -253,18 +253,20 @@ function dataQuality(){
     const unresolved=players.filter(player=>(player.season_coverage?.partial||false)||!player.career_totals||noPhoto.has(player.id));
     const rows=unresolved.map(player=>[
         playerLink(player),e(player.season_coverage?.partial?"Niepełny podział":"—"),
-        e(player.career_totals?"OK":"Brak"),e(noPhoto.has(player.id)?"Brak":"OK")
+        e(player.career_totals?.reconstructed?"Rekonstrukcja":player.career_totals?"OK":"Brak"),e(noPhoto.has(player.id)?"Brak":"OK")
     ]);
     return headline("Jakość i źródła danych","Przejrzysty stan archiwum i wymagające weryfikacji elementy.")+
         metrics([["Mecze",DB.matches.length],["Protokoły",DB.matches.filter(m=>m.goal_protocol?.verified).length],
         ["Zawodnicy",players.length],["Niezidentyfikowane ID",unknown.length],
         ["Brak zdjęcia",noPhoto.size],["Brak pełnej kariery",players.filter(p=>!p.career_totals).length],["Mecze bez nagrania",DB.matches.filter(m=>(m.videos||[]).length===0).length],["Filmy do identyfikacji",visibleVideos().filter(v=>!v.match_id&&v.status!=="rejected").length]])+
+        '<div class="notice">Kariery PLP: '+e(players.filter(p=>p.career_totals&&!p.career_totals.reconstructed).length)+' publicznych bilansów oraz '+e(players.filter(p=>p.career_totals?.reconstructed).length)+' rekonstrukcji z protokołów. W rekonstrukcjach zakres gry wyłącznie w Boschu potwierdził użytkownik; liczby pochodzą z PLP. Niedostępny profil nadal jest oznaczony w karcie zawodnika.</div>'+
         section("Kwestie do uzupełnienia",table(["Zawodnik","Sezony","Kariera","Zdjęcia"],rows))+
         section("Nierozpoznane identyfikatory z meczów",
             table(["ID PLP","Zapisane protokoły"],unknown.map(id=>[e(id),e(DB.matches.filter(m=>
             (m.player_performance||[]).some(row=>same(row.player_id,id))).length)])))+
         '<p><a download href="downloads/bosch-kompendium.xlsx">Pobierz pełne kompendium XLSX — zawodnicy, mecze, gole, źródła i braki ↧</a></p>'+
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/source-reconciliation.md" target="_blank" rel="noopener noreferrer">Różnice oficjalnych źródeł PLP — zawodnik po zawodniku ↗</a></p>'+
+        '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/career-reconstruction-20261019.md" target="_blank" rel="noopener noreferrer">Rekonstrukcja 11 karier — protokoły, Web Archive i zakres crawlu PLP ↗</a></p>'+
 
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-coverage.md" target="_blank" rel="noopener noreferrer">Audyt znanych nagrań i meczów bez filmu ↗</a></p>'+
         '<p><a href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/video-goal-review-queue.md" target="_blank" rel="noopener noreferrer">Gole wymagające potwierdzenia czasu YouTube ↗</a></p>'+
@@ -377,10 +379,10 @@ function playerProvenanceSection(player){
         const boschValue=player[field];
         const careerValue=career?.[field];
         const boschStatus=Number.isInteger(boschValue)
-            ?(fullHistory?"Bilans sezonów PLP":"Źródłowo potwierdzone minimum / archiwum")
+            ?(career?.reconstructed?"Bilans protokołów PLP":fullHistory?"Bilans sezonów PLP":"Źródłowo potwierdzone minimum / archiwum")
             :"Brak potwierdzonej wartości";
         const careerStatus=Number.isInteger(careerValue)
-            ?(career?.source_adjustments?.length?"HTML PLP i odrębny protokół":career?.public_season_rows?.length?"Oficjalny HTML wszystkich rozgrywek":"PLP API")
+            ?(career?.reconstructed?"Rekonstrukcja z protokołów PLP":career?.source_adjustments?.length?"HTML PLP i odrębny protokół":career?.public_season_rows?.length?"Oficjalny HTML wszystkich rozgrywek":"PLP API")
             :"Brak pełnego publicznego bilansu";
         return [
             e(name),Number.isInteger(boschValue)?e(boschValue):"—",
@@ -391,7 +393,7 @@ function playerProvenanceSection(player){
     });
     return section("Pochodzenie każdej statystyki",
         '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
-        '<p>'+ (careerUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(careerUrl)+'">Oficjalny profil i kariera PLP ↗</a>':e("Brak pełnego publicznego bilansu"))+
+        '<p>'+ (career?.reconstructed?e("Kariera odtworzona; publiczny profil niedostępny"):careerUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(careerUrl)+'">Oficjalny profil i kariera PLP ↗</a>':e("Brak pełnego publicznego bilansu"))+
         '. Źródła pojedynczych występów znajdują się poniżej, w historii protokołów.</p>'+
         (career?.source_adjustments?.length?'<p>Uzupełnienia pominięte przez publiczną tabelę kariery: '+career.source_adjustments.map(row=>'<a target="_blank" rel="noopener noreferrer" href="'+e(row.source_url)+'">'+e(row.name)+' — '+e(row.apps)+' występ ↗</a>').join(" · ")+'.</p>':"")+
         table(["Miara","Bosch","Pewność danych","PLP cała kariera","Źródło kariery"],rows)+
@@ -433,7 +435,7 @@ function playerDetail(id){
         e(player.motm??"—"),
         e(player.yellow??"—"),
         e(player.red??"—"),
-        e(player.bosch_totals?"PLP — pełny bilans":"Archiwalny bilans Bosch")
+        e(player.career_totals?.reconstructed?"Rekonstrukcja z protokołów PLP":player.bosch_totals?"PLP — pełny bilans":"Archiwalny bilans Bosch")
     ];
     const seasonTable=seasonRows.length
         ? table(["Sezon","M","G","A","G+A","MVP","ŻK","CK bezp.","Źródło"],seasonRows,summaryRow)
@@ -523,7 +525,7 @@ function playerDetail(id){
         :"";
     return headline(player.name,player.status||"Zawodnik Bosch Service Tech-Car")+
         metrics([["Mecze Boscha",player.apps??(player.orlik2026?.apps!=null?"≥ "+player.orlik2026.apps:"—")],["Gole Boscha",player.stats_minimum&&Number.isInteger(player.goals)?"≥ "+player.goals:player.goals??(player.orlik2026?.goals!=null?"≥ "+player.orlik2026.goals:"—")],["Asysty Boscha",player.assists??(player.orlik2026?.assists!=null?"≥ "+player.orlik2026.assists:"—")],["Samobóje",player.own_goals_conceded??0],["MVP Boscha",player.motm??"—"]])+
-        (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])):"")+
+        (player.career_totals?section("Cała kariera w PLP",metrics([["Mecze",player.career_totals.apps??"—"],["Gole",player.career_totals.goals??"—"],["Asysty",player.career_totals.assists??"—"],["MVP",player.career_totals.motm??"—"]])+(player.career_totals.reconstructed?'<div class="notice">'+e(player.career_totals.note)+'</div>':"")):"")+
         section("Sezony w Bosch Service Tech-Car",seasonTable+remainingNote)+
         playerProvenanceSection(player)+
         playerTrendSection(player)+
@@ -534,9 +536,9 @@ function playerDetail(id){
         profileMergeNote+
         (careerRows.length?section("Historia kariery wg zapisów API — może pomijać Superpuchary",table(["Sezon","Klub","M","G","A"],careerRows)):"")+
         '<div class="notice">„—” oznacza brak szczegółowych statystyk w archiwum, a nie zero. „≥” oznacza potwierdzone minimum z dostępnego sezonu. Sumy całej kariery PLP mogą obejmować także inne kluby.</div>'+
-        (player.public_protocol_review?section("Kariera PLP — minimum z publicznych protokołów",
+        (player.public_protocol_review?section(player.career_totals?.reconstructed?"Rekonstrukcja kariery — źródłowe protokoły PLP":"Kariera PLP — minimum z publicznych protokołów",
             '<p>Sprawdzono '+e(player.public_protocol_review.archive_events_reviewed)+' publicznych wydarzeń PLP. '+e(player.public_protocol_review.limitation)+'</p>'+
-            table(["M","G","A","MVP","ŻK","CK bezp."],[['apps','goals','assists','motm','yellow','red'].map(key=>"≥"+e(player.public_protocol_review.totals[key]))])+
+            table(["M","G","A","MVP","ŻK","CK bezp."],[['apps','goals','assists','motm','yellow','red'].map(key=>(player.career_totals?.reconstructed?"":"≥")+e(player.public_protocol_review.totals[key]))])+
             (extraPublicProtocols.length?'<p>Protokoły spoza archiwum ligowego:</p>'+
             table(["Data","Wydarzenie","M","G","A","ŻK","CK bezp.","Źródło"],extraPublicProtocols.map(row=>[
                 e(row.date),e(row.title),e(row.apps),e(row.goals),e(row.assists),e(row.yellow),e(row.red),

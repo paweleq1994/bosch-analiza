@@ -112,8 +112,10 @@ def add_rows(workbook: Workbook, name: str, rows: list[list], source_column: int
 
 
 def career_source(player: dict) -> str:
+    career = player.get("career_totals") or {}
     return (
-        str((player.get("career_totals") or {}).get("source_url") or "")
+        str(career.get("source_url") or "")
+        or str((career.get("source_urls") or [""])[0])
         or str(player.get("profile_url") or "")
         or str(((player.get("verified_identity_source") or {}).get("evidence_urls") or [""])[0])
     )
@@ -153,9 +155,12 @@ def build_workbook(database: dict) -> Workbook:
         if not review:
             continue
         totals = review["totals"]
-        info.append(["Minimum PLP — " + player["name"],
-                     ", ".join(f"{field}: ≥{totals[field]}" for field in ("apps", "goals", "assists", "motm", "yellow", "red"))
-                     + ". Pełna kariera niepotwierdzona; odczyt publicznych protokołów."])
+        career = player.get("career_totals") or {}
+        reconstructed = career.get("reconstructed")
+        prefix = "" if reconstructed else "≥"
+        info.append([("Rekonstrukcja PLP — " if reconstructed else "Minimum PLP — ") + player["name"],
+                     ", ".join(f"{field}: {prefix}{totals[field]}" for field in ("apps", "goals", "assists", "motm", "yellow", "red"))
+                     + ". " + (career["note"] if reconstructed else "Pełna kariera niepotwierdzona; odczyt publicznych protokołów.")])
         for match in review["matches"]:
             if any(str(league["id"]) == match["event_id"] for league in database["matches"]):
                 continue
@@ -186,7 +191,7 @@ def build_workbook(database: dict) -> Workbook:
             player.get("assists"), None, player.get("motm"),
             player.get("yellow"), player.get("red"),
             career.get("apps"), career.get("goals"), career.get("assists"),
-            "Potwierdzone minimum" if player.get("stats_minimum") or not player.get("bosch_totals") else "Zweryfikowane sezony",
+            "Rekonstrukcja z protokołów" if career.get("reconstructed") else "Potwierdzone minimum" if player.get("stats_minimum") or not player.get("bosch_totals") else "Zweryfikowane sezony",
             career_source(player),
             player.get("second_yellow"),
         ])
