@@ -50,3 +50,8 @@ const allPlayers = evaluate('DB.players.filter(player => !"" || playerPlayedSeas
 assert.equal(allPlayers, database.players.length);
 
 console.log("Verified season filter: Hala 2022 = 15 known Bosch players, accurate season-specific cards.");
+
+assert.ok(inOrlik2026.includes("Jurkowicz Mateusz"));
+assert.ok(inOrlik2026.includes("Kadłubowski Krzysztof"));
+assert.ok(evaluate('playerCard(DB.players.find(p=>p.id==="7275"),"orlik-2026")').includes("0 występów"));
+assert.ok(evaluate('DB.players.filter(p=>playerPlayedSeason(p,"144")).some(p=>p.id==="12288")'));

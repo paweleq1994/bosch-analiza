@@ -10,9 +10,9 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 |---|---|
 | Liga | 8 sezonów, 113 meczów i 113 protokołów |
 | Bramki | 293 bramki drużyny, 0 nierozliczonych, 6 samobójów Boscha |
-| Zawodnicy | 45 kanonicznych profili, 988 występów w protokołach |
-| Cała kariera PLP | 34 publiczne bilanse, 11 niepełnych archiwów |
-| Portrety | 18 potwierdzonych, 27 brakujących |
+| Zawodnicy | 46 kanonicznych profili, 988 występów w protokołach |
+| Cała kariera PLP | 35 publicznych bilansów, 11 niepełnych archiwów |
+| Portrety | 18 potwierdzonych, 28 brakujących |
 | Wideo | 120 rekordów; 54 mecze z nagraniem, 59 bez przypisanego filmu |
 | Weryfikacja materiałów | 9 do identyfikacji, 3 odrzucone powiązania / materiały poza archiwum ligowym |
 | Odnośniki czasowe | 5 obejrzanych akcji; 162 gole w kolejce po odnalezieniu dalszych transmisji |
@@ -27,7 +27,7 @@ Aktualne liczby po kolejnych synchronizacjach są w [panelu jakości](https://pa
 - Osobne statystyki Boscha i całej kariery PLP, źródła oraz oznaczenia kompletności.
 - Porównywarka zawodników, wykresy sezonowe i rankingi oddzielające wyniki niepełne.
 - Serie, forma, czyste konta, minuty goli oraz obie połowy z oficjalnych wyników HT.
-- Sortowanie i CSV tabel; XLSX z 7 arkuszami i linkami źródłowymi.
+- Sortowanie tabel; XLSX z 7 arkuszami i linkami źródłowymi. Eksport CSV usunięty.
 - YouTube, jawne powody odrzucenia powiązań i odnośniki do obejrzanych akcji.
 
 [Dawna strona](docs/archive.html), [Orlik 2026](docs/orlik-2026.html) i [scouting](docs/scouting.html) pozostają dostępne.

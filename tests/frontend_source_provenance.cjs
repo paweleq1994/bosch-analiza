@@ -38,3 +38,9 @@ assert.ok(archival.includes("https://web.archive.org/web/20230607185424id_/"));
 assert.ok(archival.includes("Brak pełnego publicznego bilansu"));
 
 console.log("Verified Bosch/whole-PLP per-field provenance, private player sources and quality report.");
+
+const provenance = vm.runInContext('playerProvenanceSection(DB.players.find(p=>p.id==="1960"))', scope);
+assert.equal((provenance.match(/href="https:\/\/podlaskaliga.pl\/zawodnik\/moskal-pawel\//g)||[]).length,1);
+assert.ok(!provenance.includes("Protokoły lub profil Bosch"));
+assert.ok(!provenance.includes("Oficjalny link"));
+assert.ok(provenance.includes("Wykluczenia po dwóch żółtych"));

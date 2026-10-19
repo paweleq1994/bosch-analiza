@@ -7,3 +7,5 @@ th[aria-sort="ascending"] .table-sort-indicator,th[aria-sort="descending"] .tabl
 
 .table tfoot td{background:var(--panel2);font-weight:700;border-top:2px solid var(--border)}
 .table tfoot td:last-child{font-weight:500;font-size:.84rem;color:var(--muted)}
+.nav{flex-wrap:wrap;overflow:visible}
+.nav a{flex:0 0 auto}

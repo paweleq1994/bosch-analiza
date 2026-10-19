@@ -4,8 +4,8 @@ Dane karier HTML oraz SportsPress REST nie są nadpisywane wzajemnie.
 Różnica źródłowa oznacza potrzebę sprawdzenia zakresu rozgrywek,
 nie automatyczny błąd w statystykach Boscha.
 
-- Zawodnicy: **45**
-- Pełne publiczne kariery PLP: **34**
+- Zawodnicy: **46**
+- Pełne publiczne kariery PLP: **35**
 - Różnice HTML vs API / widok: **33**
 - Sprzeczne sezonowe minimum z protokołów: **0**
 - Zweryfikowane protokoły goli: **113**

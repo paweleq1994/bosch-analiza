@@ -114,7 +114,8 @@ def main():
         for row in goal_evidence.get("players",[])
         if (match:=match_public_profile(str(row.get("name") or ""),profiles)) is not None
     }
-    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids|verified_goal_ids,key=int)
+    roster_ids={pid for pid, profile in profiles.items() if profile.get("source")=="verified_official_roster"}
+    ids=sorted({str(p["id"]) for p in portal.get("players",[]) if str(p["id"]).isdigit()}|current_ids|verified_goal_ids|roster_ids,key=int)
     careers_file=ROOT/"data"/"player_career_updates.json"
     previous_careers=json.loads(careers_file.read_text(encoding="utf-8")) if careers_file.exists() else {}
     results,careers,warnings=refresh_both(ids,old,previous_careers)

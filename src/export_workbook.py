@@ -19,9 +19,9 @@ CHECKSUM = ROOT / "docs/downloads/bosch-kompendium.source.sha256"
 COLUMNS = {
     "Zawodnicy": [
         "PLP ID", "Zawodnik", "M Bosch", "G Bosch", "A Bosch",
-        "G+A Bosch", "MVP Bosch", "ŻK Bosch", "CK Bosch",
+        "G+A Bosch", "MVP Bosch", "ŻK Bosch", "CK bezpośrednie Bosch",
         "M PLP kariera", "G PLP kariera", "A PLP kariera",
-        "Kompletność Bosch", "Źródło profilu",
+        "Kompletność Bosch", "Źródło profilu", "Wykluczenia 2ŻK — protokoły ligowe",
     ],
     "Sezony": [
         "ID", "Sezon", "M", "W", "R", "P", "Punkty",
@@ -34,7 +34,8 @@ COLUMNS = {
     ],
     "Występy": [
         "ID meczu", "Data", "ID zawodnika", "Zawodnik",
-        "Występ", "Gole", "Asysty", "MVP", "ŻK", "CK", "Protokół PLP",
+        "Występ", "Gole", "Asysty", "MVP", "ŻK", "CK bezpośrednie",
+        "Wykluczenie 2ŻK", "Wykluczenia łącznie w meczu", "Protokół PLP",
     ],
     "Bramki": [
         "ID meczu", "Sezon", "Data", "Zawodnik", "ID zawodnika",
@@ -170,6 +171,7 @@ def build_workbook(database: dict) -> Workbook:
             career.get("apps"), career.get("goals"), career.get("assists"),
             "Potwierdzone minimum" if player.get("stats_minimum") or not player.get("bosch_totals") else "Zweryfikowane sezony",
             career_source(player),
+            player.get("second_yellow"),
         ])
     add_rows(workbook, "Zawodnicy", player_rows, source_column=14)
     for row_number in range(2, workbook["Zawodnicy"].max_row + 1):
@@ -211,6 +213,7 @@ def build_workbook(database: dict) -> Workbook:
                 match_id, match["date"], pid, official_name,
                 item.get("appearance"), item.get("goals"), item.get("assists"),
                 item.get("motm"), item.get("yellow"), item.get("red"),
+                item.get("second_yellow"), item.get("dismissals"),
                 match.get("player_performance_source") or source,
             ])
         for scorer in protocol.get("scorers") or []:
@@ -227,7 +230,7 @@ def build_workbook(database: dict) -> Workbook:
         cell = workbook["Mecze"][f"H{index}"]
         cell.value = f'=IF(AND(ISNUMBER(F{index}),ISNUMBER(G{index})),F{index}-G{index},"")'
         cell.font = FORMULA_FONT
-    add_rows(workbook, "Występy", event_rows, source_column=11)
+    add_rows(workbook, "Występy", event_rows, source_column=13)
     add_rows(workbook, "Bramki", scorer_rows, source_column=9)
 
     missing_rows = []

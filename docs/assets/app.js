@@ -14,7 +14,7 @@ const normalized=value=>String(value??"").normalize("NFD").replace(/[\u0300-\u03
 const headline=(name,description)=>'<div class="hero"><span class="eyebrow">Bosch Service Tech-Car</span><h1>'+e(name)+'</h1><p class="lead">'+e(description)+'</p></div>';
 const metrics=items=>'<div class="metric-grid">'+items.map(([label,value])=>'<div class="metric"><small>'+e(label)+'</small><b>'+e(value)+'</b></div>').join("")+'</div>';
 const section=(title,content)=>'<section><h2>'+e(title)+'</h2>'+content+'</section>';
-const table=(heads,rows,footer=null)=>'<div class="table-card"><div class="table-tools"><button class="table-export" type="button" data-export-csv aria-label="Eksportuj tabelę CSV">Eksport CSV</button></div><table class="table"><thead><tr>'+heads.map(heading=>'<th>'+e(heading)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(columns=>'<tr>'+columns.map(cell=>'<td>'+cell+'</td>').join("")+'</tr>').join("")+'</tbody>'+(footer?'<tfoot><tr>'+footer.map(cell=>'<td>'+cell+'</td>').join("")+'</tr></tfoot>':"")+'</table></div>';
+const table=(heads,rows,footer=null)=>'<div class="table-card"><table class="table"><thead><tr>'+heads.map(heading=>'<th>'+e(heading)+'</th>').join("")+'</tr></thead><tbody>'+rows.map(columns=>'<tr>'+columns.map(cell=>'<td>'+cell+'</td>').join("")+'</tr>').join("")+'</tbody>'+(footer?'<tfoot><tr>'+footer.map(cell=>'<td>'+cell+'</td>').join("")+'</tr></tfoot>':"")+'</table></div>';
 const cards=rows=>'<div class="grid">'+rows.map(row=>'<div class="card">'+row+'</div>').join("")+'</div>';
 const empty=message=>'<div class="notice">'+e(message)+'</div>';
 const filterInput=(placeholder="Szukaj…")=>'<div class="filters"><input id="local-filter" placeholder="'+e(placeholder)+'" aria-label="Filtruj wyniki"><select id="season-filter"><option value="">Wszystkie sezony</option>'+DB.seasons.slice().reverse().map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select></div>';
@@ -180,12 +180,12 @@ function matchBoxScore(match){
     if(!entries.length)return section("Skład i statystyki zawodników",empty("Brak kompletnego protokołu zawodników."));
     const rows=entries.slice().sort((a,b)=>a.name.localeCompare(b.name,"pl")).map(entry=>[
         verifiedPlayerName(entry),e(entry.appearance),e(entry.goals??"—"),e(entry.assists??"—"),
-        e(entry.motm??"—"),e(entry.yellow??"—"),e(entry.red??"—")
+        e(entry.motm??"—"),e(entry.yellow??"—"),e(entry.red??"—"),e(entry.second_yellow??"—")
     ]);
     const source=match.player_performance_source||match.event_link;
     return section("Oficjalny skład i statystyki meczu",
         '<p>Każdy wiersz pochodzi z tabeli PLP. Brak przypisanego profilu nie oznacza braku występu. <a target="_blank" rel="noopener noreferrer" href="'+e(source)+'">Zweryfikuj protokół ↗</a></p>'+
-        table(["Zawodnik","M","G","A","MVP","ŻK","CK"],rows));
+        table(["Zawodnik","M","G","A","MVP","ŻK","CK bezp.","Wykl. 2ŻK"],rows));
 }
 function playerMatchTimeline(player){
     const rows=DB.matches.flatMap(match=>(match.player_performance||[])
@@ -193,11 +193,11 @@ function playerMatchTimeline(player){
         .map(entry=>[e(match.date),href("season/"+encodeURIComponent(match.sid),match.season),
             href("match/"+encodeURIComponent(match.id),match.opponent),
             e(match.gf+":"+match.ga),e(entry.goals??"—"),e(entry.assists??"—"),
-            e(entry.motm??"—"),e(entry.yellow??"—"),e(entry.red??"—"),
+            e(entry.motm??"—"),e(entry.yellow??"—"),e(entry.red??"—"),e(entry.second_yellow??"—"),
             '<a target="_blank" rel="noopener noreferrer" href="'+e(match.player_performance_source||match.event_link)+'">PLP ↗</a>']));
     rows.reverse();
     return section("Występy mecz po meczu — protokoły PLP",
-        rows.length?table(["Data","Sezon","Rywal","Wynik","G","A","MVP","ŻK","CK","Źródło"],rows)
+        rows.length?table(["Data","Sezon","Rywal","Wynik","G","A","MVP","ŻK","CK bezp.","Wykl. 2ŻK","Źródło"],rows)
           :empty("Brak zidentyfikowanych występów w zachowanym archiwum meczowym."));
 }
 function playerComparison(){
@@ -224,7 +224,7 @@ function updatePlayerComparison(){
         return Number.isInteger(value)&&minimum(player)?"≥ "+value:value??"—";
     };
     const stats=[["Występy","apps"],["Gole","goals"],["Asysty","assists"],
-        ["MVP","motm"],["Żółte kartki","yellow"],["Czerwone kartki","red"]];
+        ["MVP","motm"],["Żółte kartki","yellow"],["Bezpośrednie czerwone","red"]];
     const rows=stats.map(([name,field])=>[e(name),e(display(p1,field)),e(display(p2,field))]);
     const gpa=player=>{
         const appearances=read(player,"apps");
@@ -264,7 +264,7 @@ function dataQuality(){
         '<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/paweleq1994/bosch-analiza/blob/main/reports/player-source-reconciliation.md">Porównanie statystyk z oficjalnymi protokołami ↗</a></p>';
 }
 function players(){
-    const sorting = '<div class="filters"><label>Sortowanie <select id="player-sort" aria-label="Sortuj zawodników"><option value="name">Alfabetycznie A–Z</option><option value="name-desc">Alfabetycznie Z–A</option><option value="apps">Najwięcej występów</option><option value="goals">Najwięcej goli</option><option value="assists">Najwięcej asyst</option><option value="points">Kanadyjka G+A</option><option value="motm">Najwięcej MVP</option><option value="yellow">Żółte kartki</option><option value="red">Czerwone kartki</option></select></label><label>Pokaż <select id="player-stat-filter" aria-label="Filtruj osiągnięcia"><option value="all">Wszyscy z sezonu</option><option value="scored">Z golem</option><option value="assisted">Z asystą</option><option value="motm">Z MVP</option><option value="yellow">Z żółtą kartką</option><option value="red">Z czerwoną kartką</option><option value="verified">Potwierdzone występy</option></select></label></div>';
+    const sorting = '<div class="filters"><label>Sortowanie <select id="player-sort" aria-label="Sortuj zawodników"><option value="name">Alfabetycznie A–Z</option><option value="name-desc">Alfabetycznie Z–A</option><option value="apps">Najwięcej występów</option><option value="goals">Najwięcej goli</option><option value="assists">Najwięcej asyst</option><option value="points">Kanadyjka G+A</option><option value="motm">Najwięcej MVP</option><option value="yellow">Żółte kartki</option><option value="red">Bezpośrednie czerwone</option></select></label><label>Pokaż <select id="player-stat-filter" aria-label="Filtruj osiągnięcia"><option value="all">Wszyscy z sezonu</option><option value="scored">Z golem</option><option value="assisted">Z asystą</option><option value="motm">Z MVP</option><option value="yellow">Z żółtą kartką</option><option value="red">Z bezpośrednią czerwoną</option><option value="verified">Potwierdzone występy</option></select></label></div>';
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
@@ -353,24 +353,16 @@ function officialSourceLinks(urls,label){
     return refs.join(" · ");
 }
 function playerProvenanceSection(player){
-    const matchEvidence=DB.matches
-        .filter(match=>(match.player_performance||[]).some(entry=>same(entry.player_id,player.id)))
-        .map(match=>match.player_performance_source||match.event_link);
-    const goalEvidence=(player.goal_matches||[]).map(item=>item.source_url);
     const career=player.career_totals||null;
     const careerUrl=career?.source_url||player.profile_url||"";
-    const identity=player.verified_identity_source?.evidence_urls||[];
-    const boschSource=player.profile_url?[player.profile_url,...matchEvidence]:
-        [...matchEvidence,...identity];
     const fullHistory=Boolean(player.bosch_totals)&&!player.stats_minimum;
     const metrics=[
         ["Występy","apps"],["Gole","goals"],["Asysty","assists"],
-        ["MVP","motm"],["Żółte kartki","yellow"],["Czerwone kartki","red"]
+        ["MVP","motm"],["Żółte kartki","yellow"],["Bezpośrednie czerwone","red"]
     ];
     const rows=metrics.map(([name,field])=>{
         const boschValue=player[field];
         const careerValue=career?.[field];
-        const matchUrls=field==="goals"?[...goalEvidence,...matchEvidence]:boschSource;
         const boschStatus=Number.isInteger(boschValue)
             ?(fullHistory?"Bilans sezonów PLP":"Źródłowo potwierdzone minimum / archiwum")
             :"Brak potwierdzonej wartości";
@@ -379,14 +371,17 @@ function playerProvenanceSection(player){
             :"Brak pełnego publicznego bilansu";
         return [
             e(name),Number.isInteger(boschValue)?e(boschValue):"—",
-            e(boschStatus),officialSourceLinks(matchUrls,"PLP"),
+            e(boschStatus),
             Number.isInteger(careerValue)?e(careerValue):"—",
-            e(careerStatus),officialSourceLinks(careerUrl?[careerUrl]:[],"Kariera")
+            e(careerStatus)
         ];
     });
     return section("Pochodzenie każdej statystyki",
         '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
-        table(["Miara","Bosch","Pewność danych","Protokoły lub profil Bosch","PLP cała kariera","Źródło kariery","Oficjalny link"],rows));
+        '<p>'+ (careerUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(careerUrl)+'">Oficjalny profil i kariera PLP ↗</a>':e("Brak pełnego publicznego bilansu"))+
+        '. Źródła pojedynczych występów znajdują się poniżej, w historii protokołów.</p>'+
+        table(["Miara","Bosch","Pewność danych","PLP cała kariera","Źródło kariery"],rows)+
+        '<p class="small">ŻK to liczba żółtych kartek. Bezpośrednie czerwone zachowują zapis PLP. Wykluczenia po dwóch żółtych są wykazywane oddzielnie w protokołach: '+e(player.second_yellow||0)+' w zachowanym archiwum ligowym.</p>');
 }
 function verifiedVideoMinuteLink(playerId,matchId,minute){
     const cues=DB.analysis?.verified_goal_video_cues||[];
@@ -425,7 +420,7 @@ function playerDetail(id){
         e(player.bosch_totals?"PLP — pełny bilans":"Archiwalny bilans Bosch")
     ];
     const seasonTable=seasonRows.length
-        ? table(["Sezon","M","G","A","G+A","MVP","ŻK","CK","Źródło"],seasonRows,summaryRow)
+        ? table(["Sezon","M","G","A","G+A","MVP","ŻK","CK bezp.","Źródło"],seasonRows,summaryRow)
         : empty("Brak szczegółowych danych sezonowych.");
     const unassigned=player.season_coverage?.unassigned||{};
     const remainingTotals=[
@@ -455,7 +450,7 @@ function playerDetail(id){
     const publicCareerSection=publicCareerRows.length
         ? section("Oficjalna tabela całej kariery PLP — komplet rozgrywek",
             '<p>Źródło: <a target="_blank" rel="noopener noreferrer" href="'+e(player.career_totals.source_url)+'">Profil PLP ↗</a>. Obejmuje wszystkie sezony oraz Superpuchary — niezależnie od klubów.</p>'+
-            table(["Rozgrywki","M","G","A","MVP","ŻK","CK"],publicCareerRows))
+            table(["Rozgrywki","M","G","A","MVP","ŻK","CK bezp."],publicCareerRows))
         : "";
     const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
         e(entry.date),
@@ -601,7 +596,20 @@ function videos(){
     return headline("Wideo","Archiwum filmów i nagrań przypisanych do meczów.")+
         metrics([["Materiały",DB.videos.length],["Powiązane z meczami",DB.videos.filter(video=>video.match_id).length]])+
         '<div class="filters"><input id="local-filter" placeholder="Tytuł, kanał…" aria-label="Szukaj nagrań"><label>Sortuj <select id="video-sort" aria-label="Sortuj filmy"><option value="newest">Najnowsze</option><option value="oldest">Najstarsze</option><option value="title">Tytuł A–Z</option><option value="title-desc">Tytuł Z–A</option><option value="matched">Najpierw powiązane z meczami</option></select></label></div><div id="filtered-videos"></div>'+
-        '<div class="notice">Filmy są odtwarzane z YouTube. Daty pochodzą z dostępnych metadanych publikacji, a brak daty trafia na koniec listy.</div>';
+        '<div class="notice">Sortowanie uwzględnia datę publikacji YouTube. Jeśli jej brakuje, używa daty potwierdzonego meczu, opisanej jako „Mecz”. Materiały bez obu dat trafiają na koniec.</div>';
+}
+function normalizedVideoDate(value){
+    const text=String(value||"");
+    const match=/^(\d{4})-?(\d{2})-?(\d{2})(?:T.*)?$/.exec(text);
+    if(!match)return "";
+    const iso=match.slice(1).join("-");
+    return !Number.isNaN(Date.parse(iso))?iso:"";
+}
+function videoDate(video){
+    return normalizedVideoDate(video.date)||normalizedVideoDate(DB?.matches?.find(match=>same(match.id,video.match_id))?.date);
+}
+function videoDateLabel(video){
+    return normalizedVideoDate(video.date)|| (videoDate(video)?"Mecz: "+videoDate(video)+" (brak daty publikacji)":"Data publikacji nieznana");
 }
 function videoReviewLabel(video){
     return video.status==="rejected"?'<p class="notice">Powiązanie odrzucone: '+e(video.review_reason||"Materiał wymaga ponownej identyfikacji")+'</p>':
@@ -610,11 +618,11 @@ function videoReviewLabel(video){
 
 function sortVideos(items,selectedSort){
     const sorted=items.slice();
-    const newest=(first,second)=>String(second.date||"").localeCompare(String(first.date||""))||String(first.title||"").localeCompare(String(second.title||""),"pl");
+    const newest=(first,second)=>videoDate(second).localeCompare(videoDate(first))||String(first.title||"").localeCompare(String(second.title||""),"pl");
     const oldest=(first,second)=>{
-        if (!first.date) return second.date?1:0;
-        if (!second.date) return -1;
-        return String(first.date).localeCompare(String(second.date));
+        if (!videoDate(first)) return videoDate(second)?1:0;
+        if (!videoDate(second)) return -1;
+        return videoDate(first).localeCompare(videoDate(second));
     };
     sorted.sort((first,second)=>{
         if(selectedSort==="oldest")return oldest(first,second);
@@ -638,7 +646,7 @@ function records(){
         ["Najwięcej występów","apps",player=>player.apps,0],
         ["MVP / piłkarz meczu","motm",player=>player.motm,0],
         ["Żółte kartki","yellow",player=>player.yellow,0],
-        ["Czerwone kartki","red",player=>player.red,0],
+        ["Bezpośrednie czerwone","red",player=>player.red,0],
         ["Gole na mecz — minimum 5 występów","goals_per_match",player=>player.apps>=5&&player.goals!=null?player.goals/player.apps:null,2],
         ["Asysty na mecz — minimum 5 występów","assists_per_match",player=>player.apps>=5&&player.assists!=null?player.assists/player.apps:null,2],
         ["Kanadyjka na mecz — minimum 5 występów","points_per_match",player=>player.apps>=5&&player.goals!=null&&player.assists!=null?(player.goals+player.assists)/player.apps:null,2],
@@ -872,7 +880,7 @@ function playerSeasonRecord(player, selectedSeasonId) {
 function playerPlayedSeason(player, selectedSeasonId) {
     const seasonRecord = playerSeasonRecord(player, selectedSeasonId);
 
-    return seasonRecord !== null && (seasonRecord.apps == null || Number(seasonRecord.apps) > 0);
+    return seasonRecord !== null || Boolean(player.roster_seasons?.[selectedSeasonId]);
 }
 
 function playerCard(player, selectedSeasonId) {
@@ -884,7 +892,7 @@ function playerCard(player, selectedSeasonId) {
             ? "Orlik 2026: " + e(player.orlik2026.goals ?? "—") + " G / " + e(player.orlik2026.assists ?? "—") + " A"
             : "Archiwum: " + e(player.goals ?? "—") + " G / " + e(player.assists ?? "—") + " A";
 
-    return '<h3>' + playerLink(player) + '</h3><p>' + e(selectedSeason?.name || player.status) + '</p><div class="small">' + summary + '</div>';
+    return (seasonRecord?.apps===0?'<span class="pill">Zgłoszony — 0 występów</span>':'') + '<h3>' + playerLink(player) + '</h3><p>' + e(selectedSeason?.name || player.status) + '</p><div class="small">' + summary + '</div>';
 }
 
 function setupList(id, items, renderer, searcher = JSON.stringify, seasonMatcher = null) {
@@ -909,26 +917,6 @@ function setupList(id, items, renderer, searcher = JSON.stringify, seasonMatcher
     paint();
     return paint;
 }
-function exportVisibleTable(button){
-    const tableElement=button.closest(".table-card")?.querySelector("table");
-    if(!tableElement)return;
-    const rows=[...tableElement.querySelectorAll("tr")].map(row=>
-        [...row.querySelectorAll("th,td")].map(cell=>{
-            let value=(cell.innerText||cell.textContent||"").trim().replace(/\s+/g," ");
-            if(/^[=+@-]/.test(value))value="\u0027"+value;
-            return String.fromCharCode(34)+value.replace(/"/g,'""')+String.fromCharCode(34);
-        }).join(";")
-    );
-    const blob=new Blob(["\uFEFF"+rows.join("\r\n")],{type:"text/csv;charset=utf-8"});
-    const url=URL.createObjectURL(blob);
-    const link=document.createElement("a");
-    link.href=url;
-    link.download="bosch-tabela-"+new Date().toISOString().slice(0,10)+".csv";
-    document.body.append(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-}
 function route(){if(!DB)return;const pieces=decodeURIComponent(location.hash.slice(2)||"").split("/");const name=pieces[0]||"",id=pieces.slice(1).join("/");const routes={"":home,seasons,matches:matchesPage,goals:goalsArchive,players,opponents,analysis,videos,records,compare:playerComparison,quality:dataQuality};const pages={season:()=>seasonPage(id),match:()=>matchDetail(id),player:()=>playerDetail(id),opponent:()=>opponentDetail(id)};$("app").innerHTML=pages[name]?pages[name]():routes[name]?routes[name]():empty("Nie znaleziono strony.");document.querySelectorAll(".nav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#/"+name||name==="season"&&a.getAttribute("href")==="#/seasons"||name==="player"&&a.getAttribute("href")==="#/players"||name==="match"&&a.getAttribute("href")==="#/matches"||name==="opponent"&&a.getAttribute("href")==="#/opponents"));if(name==="goals")setupList(
     "filtered-goals",
     DB.matches,
@@ -936,6 +924,6 @@ function route(){if(!DB)return;const pieces=decodeURIComponent(location.hash.sli
     match=>[match.opponent,match.date,match.season,match.gf+":"+match.ga,...(match.goal_protocol?.scorers||[]).map(scorer=>scorer.name)].join(" "),
     (match,selectedSeasonId)=>same(match.sid,selectedSeasonId)
 );
-if(name==="matches")setupList("filtered-matches",DB.matches,items=>'<div class="card">'+matchList(items)+'</div>',m=>[m.opponent,m.date,m.season,m.gf+":"+m.ga].join(" "),(match, selectedSeasonId)=>same(match.sid,selectedSeasonId));if(name==="players"){const repaint=setupList("filtered-players",DB.players,(items,selectedSeasonId)=>cards(sortPlayerItems(items,selectedSeasonId).map(player=>playerCard(player,selectedSeasonId))),player=>player.name,playerPlayedSeason);$("player-sort")?.addEventListener("change",repaint);$("player-stat-filter")?.addEventListener("change",repaint);}if(name==="opponents")setupList("filtered-opponents",DB.opponents,items=>cards(items.map(x=>'<h3>'+href("opponent/"+encodeURIComponent(x.key),x.name)+'</h3><p>'+x.matches.length+' spotkań</p>')),x=>x.name);if(name==="videos"){const repaint=setupList("filtered-videos",DB.videos,items=>cards(sortVideos(items,$("video-sort")?.value||"newest").slice(0,120).map(video=>'<div class="video-thumb">▶</div><h3>'+e(video.title)+'</h3><p>'+e(video.channel||"")+" • "+e(video.date||"")+'</p>'+videoReviewLabel(video)+'<p><a href="'+e(video.url)+'" target="_blank" rel="noopener noreferrer">Oglądaj ↗</a>'+(video.match_id?' • '+href("match/"+encodeURIComponent(video.match_id),"Mecz"):"")+'</p>')),video=>video.title+" "+video.channel);$("video-sort")?.addEventListener("change",repaint)};if(name==="compare"){const controls=[$("compare-player-a"),$("compare-player-b"),$("compare-player-season")];if(controls[1]&&DB.players.length>1)controls[1].value=DB.players[1].id;for(const control of controls)control?.addEventListener("change",updatePlayerComparison);updatePlayerComparison();}if(name==="analysis"){const selects=[$("compare-a"),$("compare-b")];if(selects[1])selects[1].value=DB.seasons.at(-1).id;for(const x of selects)x?.addEventListener("change",compare);compare();}window.scrollTo(0,0);}
+if(name==="matches")setupList("filtered-matches",DB.matches,items=>'<div class="card">'+matchList(items)+'</div>',m=>[m.opponent,m.date,m.season,m.gf+":"+m.ga].join(" "),(match, selectedSeasonId)=>same(match.sid,selectedSeasonId));if(name==="players"){const repaint=setupList("filtered-players",DB.players,(items,selectedSeasonId)=>cards(sortPlayerItems(items,selectedSeasonId).map(player=>playerCard(player,selectedSeasonId))),player=>player.name,playerPlayedSeason);$("player-sort")?.addEventListener("change",repaint);$("player-stat-filter")?.addEventListener("change",repaint);}if(name==="opponents")setupList("filtered-opponents",DB.opponents,items=>cards(items.map(x=>'<h3>'+href("opponent/"+encodeURIComponent(x.key),x.name)+'</h3><p>'+x.matches.length+' spotkań</p>')),x=>x.name);if(name==="videos"){const repaint=setupList("filtered-videos",DB.videos,items=>cards(sortVideos(items,$("video-sort")?.value||"newest").map(video=>'<div class="video-thumb">▶</div><h3>'+e(video.title)+'</h3><p>'+e(video.channel||"")+" • "+e(videoDateLabel(video))+'</p>'+videoReviewLabel(video)+'<p><a href="'+e(video.url)+'" target="_blank" rel="noopener noreferrer">Oglądaj ↗</a>'+(video.match_id?' • '+href("match/"+encodeURIComponent(video.match_id),"Mecz"):"")+'</p>')),video=>video.title+" "+video.channel);$("video-sort")?.addEventListener("change",repaint)};if(name==="compare"){const controls=[$("compare-player-a"),$("compare-player-b"),$("compare-player-season")];if(controls[1]&&DB.players.length>1)controls[1].value=DB.players[1].id;for(const control of controls)control?.addEventListener("change",updatePlayerComparison);updatePlayerComparison();}if(name==="analysis"){const selects=[$("compare-a"),$("compare-b")];if(selects[1])selects[1].value=DB.seasons.at(-1).id;for(const x of selects)x?.addEventListener("change",compare);compare();}window.scrollTo(0,0);}
 function initSearch(){const dialog=$("search-dialog"),input=$("global-search");function open(){dialog.showModal();input.focus();} $("search-open").addEventListener("click",open);document.addEventListener("keydown",event=>{if(event.key==="/"&&document.activeElement.tagName!=="INPUT"){event.preventDefault();open();}if((event.key==="Escape")&&dialog.open)dialog.close();});input.addEventListener("input",()=>{const q=normalized(input.value);const records=[...DB.players.map(p=>({name:p.name,kind:"Zawodnik",url:"player/"+p.id})),...DB.seasons.map(s=>({name:s.name,kind:"Sezon",url:"season/"+s.id})),...DB.matches.map(m=>({name:m.date+" • "+m.opponent,kind:"Mecz",url:"match/"+m.id})),...groupOpponentHistory(DB.matches).map(o=>({name:o.name+" "+o.aliases.join(" "),kind:"Rywal",url:"opponent/"+o.key}))];$("search-results").innerHTML=!q?"":records.filter(item=>normalized(item.name).includes(q)).slice(0,22).map(item=>'<a class="list-row" href="#/'+e(item.url)+'"><span>'+e(item.name)+'</span><small>'+e(item.kind)+'</small></a>').join("")||empty("Brak wyników.");$("search-results").querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>dialog.close()));});}
-(async function(){document.addEventListener("click",event=>{const button=event.target.closest("[data-export-csv]");if(button)exportVisibleTable(button);});const saved=localStorage.getItem("bosch-theme")||"dark";document.documentElement.dataset.theme=saved;$("theme-toggle").addEventListener("click",()=>{const theme=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=theme;localStorage.setItem("bosch-theme",theme);});try{const response=await fetch("assets/data.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);DB=await response.json();initSearch();window.addEventListener("hashchange",route);route();}catch(error){$("app").innerHTML=empty("Nie udało się wczytać danych kompendium: "+error.message);}})();
+(async function(){const saved=localStorage.getItem("bosch-theme")||"dark";document.documentElement.dataset.theme=saved;$("theme-toggle").addEventListener("click",()=>{const theme=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=theme;localStorage.setItem("bosch-theme",theme);});try{const response=await fetch("assets/data.json",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);DB=await response.json();initSearch();window.addEventListener("hashchange",route);route();}catch(error){$("app").innerHTML=empty("Nie udało się wczytać danych kompendium: "+error.message);}})();

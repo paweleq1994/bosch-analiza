@@ -89,3 +89,14 @@ Issue #33: **otwarte i zaktualizowane**, 15 wykonanych i 5 częściowych punktó
 4. Brak wartości ≠ zero; minimum ≠ pełny bilans; Bosch ≠ cała PLP. Zachować 113 historycznych protokołów i ID/URL źródeł. Nie tworzyć fikcyjnych danych dla kompletności.
 
 Repozytorium ma dostęp przez git push gałęzi. gh nie jest zainstalowane. Użytkownik zalogował zwykłą sesję GitHub w przeglądarce Codex; PR-y tworzono i scalano po zielonym CI przez UI. Automatyczna kontrola wcześniej odrzuciła odczyt tokenu z menedżera Git do osobnych żądań API; nie ponawiać. Systemowy Python 3.14 nie ma openpyxl, używany runtime 3.12 ma istniejącą zależność. Nie dodano nowych zależności. Błędy sandboxa przy zapisie raportów rozwiązano zatwierdzonym wykonaniem narzędzia, bez zmiany uprawnień projektu.
+
+## Dalsze poprawki zgłoszone przez użytkownika — 19.10.2026
+
+Gałąź `codex/rosters-video-dates-and-clearer-profiles`, przed publikacją.
+- 46 osób: dodany Piotr Zalewski 12288, oficjalny profil ma 0 występów i sezon Orlik 2025.
+- Listy kadry wszystkich 8 sezonów w player_rosters.json; wybrana właściwa liga (122/123), nie same aktualne powiązania team. Historyczne członkostwo wymaga niezależnych danych sezonu. Zera nie są odfiltrowywane. Alias Rutkowskiego pozostaje scalony.
+- Usunięty eksport CSV. XLSX pozostaje. Jednorazowy odnośnik kariery; źródła meczowe tylko w tabeli protokołów. Nawigacja zawija etykiety, w tym Zdjęcia PLP.
+- Daty filmów YYYYMMDD i YYYY-MM-DD są porównywane po normalizacji. Brak daty publikacji → jawnie opisana data potwierdzonego meczu, bez udawania daty publikacji. Odświeżanie metadanych obejmuje znane filmy, archiwum nie kończy się po 120 w widoku ani 300 w importerze.
+- 7 protokołów ma ŻK=2, CK=0. CK nadal znaczy bezpośrednią czerwoną; osobne second_yellow oraz dismissals (jedno wykluczenie na osobę w meczu), widoczne w protokołach i podsumowaniu profilu. Nie wyliczać wykluczeń z sezonowej sumy ŻK.
+- 190 testów Python i 14 frontendowych przeszło, 10 generatorów i audytów offline OK, nadal 113/293/988, bez utraty historycznych aliasów. Pozostałe pięć obszarów danych nadal otwarte.
+- Auto-review odrzucił lokalną instalację istniejącego yt-dlp jako dodanie zależności. Nie ponawiano; daty może odświeżyć istniejący workflow Actions, gdzie yt-dlp jest już częścią projektu.

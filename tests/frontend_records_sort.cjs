@@ -55,7 +55,7 @@ for (const phrase of [
     "Kanadyjka",
     "Asysty",
     "Żółte kartki",
-    "Czerwone kartki",
+    "Bezpośrednie czerwone",
     "MVP",
     "Rekordy sezonowe",
     "Kontrola kompletności strzelców",
@@ -66,3 +66,7 @@ assert.ok(recordPage.includes("Jurkowicz Mateusz"));
 assert.ok(recordPage.includes("Moskal Paweł"));
 
 console.log("Verified alphabetical player sorting, season filters, video chronology and expanded Bosch records.");
+
+const mixed=evaluate('sortVideos([{title:"May",date:"20250501"},{title:"June",date:"2025-06-17"},{title:"2026",date:"",match_id:"orlik26-14"}],"newest").map(v=>v.title)');
+assert.deepEqual(Array.from(mixed),["2026","June","May"]);
+assert.ok(evaluate('videoDateLabel({date:"",match_id:"orlik26-14"})').includes("Mecz:"));

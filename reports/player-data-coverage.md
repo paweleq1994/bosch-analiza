@@ -4,13 +4,13 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Podsumowanie
 
-- Zawodnicy: **45**
+- Zawodnicy: **46**
 - Sezony: **8**
 - Mecze: **113**
 - Oficjalne protokoły bramkowe: **113**
 - Bramki drużyny: **293**, nierozliczone: **0**
 - Samobóje Boscha: **6**
-- Zawodnicy ze zdjęciem: **18**, bez zdjęcia: **27**
+- Zawodnicy ze zdjęciem: **18**, bez zdjęcia: **28**
 - Zawodnicy bez pełnego archiwum kariery PLP: **11**
 - Zawodnicy bez linku do publicznego profilu PLP: **11**
 
@@ -52,6 +52,7 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 - Uściłowski Krzysztof (PLP ID 7286)
 - Wojciuk Piotr (PLP ID 13198)
 - Wądołowski Sebastian (PLP ID 8916)
+- Zalewski Piotr (PLP ID 12288)
 - Śmiłowski Michał (PLP ID 10604)
 - Żak Paweł (GK) (PLP ID 13010)
 

@@ -1955,5 +1955,15 @@
       "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-waleczne-orly-3/",
       "https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-zimne-dranie-4/"
     ]
+  },
+  "12288": {
+    "player_id": 12288,
+    "resolved_name": "Zalewski Piotr",
+    "profile_url": "https://podlaskaliga.pl/zawodnik/zalewski-piotr/",
+    "public": true,
+    "source": "verified_official_roster",
+    "evidence_urls": [
+      "https://podlaskaliga.pl/lista/orlik25-kartki-ii-liga/"
+    ]
   }
 }
