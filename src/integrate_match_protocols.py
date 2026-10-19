@@ -185,9 +185,9 @@ def integrate_match_protocols(players: list[dict], matches: list[dict], audit: d
 
     return {
         "audited_matches": len(seen),
-        "opponent_own_goals": sum(match["protocol"]["opponent_own_goals"] for match in matches),
-        "administrative_goals": sum(match["protocol"]["administrative_goals"] for match in matches),
+        "opponent_own_goals": sum(match["protocol"]["opponent_own_goals"] for match in matches if match_id(match["id"]) in seen),
+        "administrative_goals": sum(match["protocol"]["administrative_goals"] for match in matches if match_id(match["id"]) in seen),
         "matches_with_unreadable_markers": [
-            match["id"] for match in matches if not match["protocol"]["complete"]
+            match["id"] for match in matches if match_id(match["id"]) in seen and not match["protocol"]["complete"]
         ],
     }
