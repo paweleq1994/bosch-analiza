@@ -18,12 +18,12 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 | Statystyka | Nieznana suma zawodnika | Znany bilans nieprzypisany do sezonów | Puste dane sezonowe |
 |---|---:|---:|---:|
-| Występy | 1 | 5 | 10 |
+| Występy | 1 | 4 | 1 |
 | Bramki | 0 | 0 | 5 |
-| Asysty | 1 | 2 | 8 |
-| MVP | 1 | 1 | 10 |
-| Żółte kartki | 1 | 1 | 10 |
-| Czerwone kartki | 1 | 1 | 10 |
+| Asysty | 1 | 1 | 1 |
+| MVP | 1 | 0 | 1 |
+| Żółte kartki | 1 | 1 | 1 |
+| Czerwone kartki | 1 | 1 | 1 |
 
 ## Bez potwierdzonego zdjęcia indywidualnego
 
@@ -69,72 +69,26 @@ Raport generowany z aktualnego JSON portalu. Brak oznacza brak potwierdzonych da
 
 ## Bilans znany, ale nieprzypisany do sezonów
 
-- Gorbacewicz Emil (PLP ID 7271): Występy — 4
+- Gorbacewicz Emil (PLP ID 7271): Występy — 1
 - Gorbacewicz Emil (PLP ID 7271): Asysty — 1
-- Gołąbeski Piotr (PLP ID 7270): Występy — 13
-- Gołąbeski Piotr (PLP ID 7270): MVP — 1
-- Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 4
+- Gołąbeski Piotr (PLP ID 7270): Występy — 2
+- Gołąbeski Piotr (PLP ID 7270): Żółte kartki — 1
 - Gołąbeski Piotr (PLP ID 7270): Czerwone kartki — 1
-- Kossakowski Maciej (PLP ID 7278): Występy — 3
-- Markowski Damian (PLP ID 7282): Występy — 3
-- Sołowiej Tomasz (PLP ID 7285): Występy — 21
-- Sołowiej Tomasz (PLP ID 7285): Asysty — 3
+- Kossakowski Maciej (PLP ID 7278): Występy — 1
+- Sołowiej Tomasz (PLP ID 7285): Występy — 1
 
 ## Nieznane dane sezonowe
 
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Występy
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Występy
 - Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Bramki
 - Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Bramki
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Asysty
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Asysty
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: MVP
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: MVP
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Żółte kartki
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Żółte kartki
-- Gorbacewicz Emil (PLP ID 7271) — Hala 2022: Czerwone kartki
-- Gorbacewicz Emil (PLP ID 7271) — Orlik 2024: Czerwone kartki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Występy
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Występy
-- Gołąbeski Piotr (PLP ID 7270) — Orlik 2024: Występy
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Bramki
 - Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Bramki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Asysty
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Asysty
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: MVP
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: MVP
-- Gołąbeski Piotr (PLP ID 7270) — Orlik 2024: MVP
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Żółte kartki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Żółte kartki
-- Gołąbeski Piotr (PLP ID 7270) — Orlik 2024: Żółte kartki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2022: Czerwone kartki
-- Gołąbeski Piotr (PLP ID 7270) — Hala 2023/2024: Czerwone kartki
-- Gołąbeski Piotr (PLP ID 7270) — Orlik 2024: Czerwone kartki
 - Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Występy
 - Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Asysty
 - Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: MVP
 - Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Żółte kartki
 - Kakareko Kamil (PLP ID new-kakareko-kamil) — Orlik 2025: Czerwone kartki
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: Występy
 - Kossakowski Maciej (PLP ID 7278) — Hala 2022: Bramki
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: Asysty
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: MVP
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: Żółte kartki
-- Kossakowski Maciej (PLP ID 7278) — Hala 2022: Czerwone kartki
-- Markowski Damian (PLP ID 7282) — Hala 2022: Występy
-- Markowski Damian (PLP ID 7282) — Hala 2022: Asysty
-- Markowski Damian (PLP ID 7282) — Hala 2022: MVP
-- Markowski Damian (PLP ID 7282) — Hala 2022: Żółte kartki
-- Markowski Damian (PLP ID 7282) — Hala 2022: Czerwone kartki
-- Sołowiej Tomasz (PLP ID 7285) — Hala 2022: Występy
-- Sołowiej Tomasz (PLP ID 7285) — Orlik 2024: Występy
-- Sołowiej Tomasz (PLP ID 7285) — Orlik 2024: Asysty
-- Sołowiej Tomasz (PLP ID 7285) — Hala 2022: MVP
-- Sołowiej Tomasz (PLP ID 7285) — Orlik 2024: MVP
-- Sołowiej Tomasz (PLP ID 7285) — Hala 2022: Żółte kartki
-- Sołowiej Tomasz (PLP ID 7285) — Orlik 2024: Żółte kartki
-- Sołowiej Tomasz (PLP ID 7285) — Hala 2022: Czerwone kartki
-- Sołowiej Tomasz (PLP ID 7285) — Orlik 2024: Czerwone kartki
 
 ## Nieznane sumy zawodników
 
