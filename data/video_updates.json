@@ -5,12 +5,12 @@
       "title": "Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021",
       "url": "https://www.youtube.com/watch?v=8SF7bbYDS30",
       "channel": "Piotr Golabeski",
-      "status": "needs_review",
+      "status": "ignored",
       "match_id": null,
       "segment": "",
-      "review_reason": "Publiczny tytuł identyfikuje występ muzyczny Laikike1 w Almost Famous (Warszawa, 14.10.2021), bez związku z meczem Boscha. Zachowano rekord źródłowy.",
-      "reviewed_at": "2026-10-19",
-      "review_category": "not_bosch_match",
+      "review_reason": "Użytkownik polecił 20.10.2026 usunąć ten materiał muzyczny z kompendium. Film nie dotyczy Boscha ani PLP; jest pomijany w archiwum i automatycznym dopasowywaniu.",
+      "reviewed_at": "2026-10-20",
+      "review_category": "outside_plp",
       "verification_source": [
         "https://www.youtube.com/watch?v=8SF7bbYDS30"
       ],
@@ -474,9 +474,10 @@
     },
     "8SF7bbYDS30": {
       "match_id": null,
-      "review_category": "not_bosch_match",
-      "review_reason": "Publiczny tytuł identyfikuje występ muzyczny Laikike1 w Almost Famous (Warszawa, 14.10.2021), bez związku z meczem Boscha. Zachowano rekord źródłowy.",
-      "reviewed_at": "2026-10-19",
+      "status": "ignored",
+      "review_category": "outside_plp",
+      "review_reason": "Użytkownik polecił 20.10.2026 usunąć ten materiał muzyczny z kompendium. Film nie dotyczy Boscha ani PLP; jest pomijany w archiwum i automatycznym dopasowywaniu.",
+      "reviewed_at": "2026-10-20",
       "verification_source": [
         "https://www.youtube.com/watch?v=8SF7bbYDS30"
       ]

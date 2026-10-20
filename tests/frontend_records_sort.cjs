@@ -72,7 +72,7 @@ assert.deepEqual(Array.from(mixed),["2026","June","May"]);
 assert.ok(evaluate('videoDateLabel({date:"",match_id:"orlik26-14"})').includes("Mecz:"));
 
 const visibleIds=Array.from(evaluate('visibleVideos().map(v=>v.id)'));
-for(const ignored of ["mRNWenMq9DA","jYIcEGA7gns","O3mBzeS-9VY","PDHzxceI8wU"])assert.ok(!visibleIds.includes(ignored));
+for(const ignored of ["mRNWenMq9DA","jYIcEGA7gns","O3mBzeS-9VY","PDHzxceI8wU","8SF7bbYDS30"])assert.ok(!visibleIds.includes(ignored));
 for(const pending of ["ip4f5qE7-Cs","2TgTJHeWd4o","o4tWJ0ngczs"]){
     assert.ok(visibleIds.includes(pending));
     assert.ok(evaluate(`videoReviewLabel(DB.videos.find(v=>v.id==="${pending}"))`).includes("rozgrywki do potwierdzenia"));

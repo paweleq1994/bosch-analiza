@@ -10,8 +10,8 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 - Mecze bez materiału wideo: **60**
 - Znane filmy: **120**
 - Filmy bez powiązanego meczu: **11**
-- Materiały oczekujące na identyfikację: **3**; odrzucone powiązania / materiały spoza meczów: **4**
-- Filmy pomijane poza PLP: **4**; widoczne w archiwum: **116**
+- Materiały oczekujące na identyfikację: **3**; odrzucone powiązania / materiały spoza meczów: **3**
+- Filmy pomijane poza PLP: **5**; widoczne w archiwum: **115**
 
 ## Pokrycie według sezonów
 
@@ -42,6 +42,7 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | [Bosch Tech Car Service - Koledzy Z Boiska 8:0](https://www.youtube.com/watch?v=O3mBzeS-9VY) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
 | [Bosch Tech Car Service - Olimp 1:1 (1 połowa)](https://www.youtube.com/watch?v=jYIcEGA7gns) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
 | [Bosch Service Tech Car - Medgal 3:0](https://www.youtube.com/watch?v=PDHzxceI8wU) | Użytkownik potwierdził 19.10.2026: Olimp, Koledzy z Boiska i Medgal to turniej poza PLP; nagrania mają być ignorowane. Pomijane w archiwum i automatycznym dopasowywaniu do meczów ligowych. | 2026-10-19 |
+| [Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021](https://www.youtube.com/watch?v=8SF7bbYDS30) | Użytkownik polecił 20.10.2026 usunąć ten materiał muzyczny z kompendium. Film nie dotyczy Boscha ani PLP; jest pomijany w archiwum i automatycznym dopasowywaniu. | 2026-10-20 |
 
 ## Zweryfikowane odrzucenia powiązań
 
@@ -50,7 +51,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | [Bosch Tech Car Service - Vesta 2:1](https://www.youtube.com/watch?v=hcfb9Ttmswo) | Obejrzany materiał pokazuje boisko odkryte. Mecz PLP 7814 (26.02.2023) rozegrano w hali VI LO: oficjalne wydarzenie wskazuje venue 109. Film opublikowano 26.08.2023; tytuł i wynik 2:1 nie dowodzą tego samego meczu. | 2026-10-19 |
 | [Bosch Tech Car Service - CF Bojary 1:1](https://www.youtube.com/watch?v=Qc0s7ZjnInM) | Film opublikowano 26.08.2023 i obejrzany kadr przedstawia odkryte boisko. Nie może pokazywać meczu 9721 rozegranego później, 10.02.2024 w hali VI LO (venue 109). Wynik 1:1 w tytule nie dowodzi tożsamości z wynikiem do przerwy tego meczu. Usunięto błędne powiązanie; rzeczywisty mecz pozostaje nierozpoznany. | 2026-10-19 |
 | [Top Auto vs Bosch Service Tech-Car - 1 RUNDA ¦ Superpuchar PLP 2022](https://www.youtube.com/watch?v=Sglay1fT-00) | Oficjalna transmisja Superpucharu PLP z 06.11.2022 (42:40). Zachowana jako materiał Boscha poza archiwum 113 meczów ligowych; nie zwiększa pokrycia ligowego ani nie jest przypisywana do innego meczu z Top Auto. | 2026-10-19 |
-| [Laikike1 - Level up 1 live - Almost Famous, Warszawa 14.10.2021](https://www.youtube.com/watch?v=8SF7bbYDS30) | Publiczny tytuł identyfikuje występ muzyczny Laikike1 w Almost Famous (Warszawa, 14.10.2021), bez związku z meczem Boscha. Zachowano rekord źródłowy. | 2026-10-19 |
 
 ## Mecze bez powiązanego nagrania
 
