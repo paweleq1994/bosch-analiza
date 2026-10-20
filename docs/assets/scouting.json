@@ -6018,7 +6018,7 @@
     "strength": 51.6,
     "strength_details": {
       "orlik": 60.1,
-      "hala": 36,
+      "hala": 36.0,
       "model": "division_adjusted_2026_v2",
       "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
     },
