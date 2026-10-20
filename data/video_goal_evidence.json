@@ -377,6 +377,78 @@
       "verification_source": "observed_video_frame",
       "verified_by": "Codex — przegląd odtwarzacza YouTube",
       "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-14",
+      "player_id": "13197",
+      "minute": "22",
+      "video_id": "tllBiVSXg4o",
+      "timestamp_seconds": 52,
+      "review_notes": "Druga połowa: przy 0:56 zawodnik Boscha w czerni uderza na lewą bramkę, przy 0:59 piłka jest przy wewnętrznej stronie lewego słupka obok leżącego bramkarza. Po akcji Bosch wraca w stronę własnej połowy, gracze gratulują sobie w środku (1:16), rywal w bieli ustawia się przy punkcie wznowienia. Pierwszy gol Boscha w tej połowie i trzeci w meczu odpowiada Szparle 22′ z oficjalnej kolejności PLP; nie rozpoznawano twarzy. Link 0:52 pokazuje podejście do strzału; zachowano minutę protokołu mimo różnicy względem czasu nagrania.",
+      "review_frame": "reports/evidence/goal-progress-20261011-szparlo-22-59s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-14",
+      "player_id": "2204",
+      "minute": "27",
+      "video_id": "tllBiVSXg4o",
+      "timestamp_seconds": 338,
+      "review_notes": "Obejrzano podanie i atak Boscha w czerni 5:40–5:44 na lewą bramkę. Przy 5:44 strzał z bliska mija interweniującego bramkarza, przy 5:45 bramkarz siedzi na ziemi i obrońca w bieli wraca do siatki po piłkę. Bosch odchodzi od bramki; potem Progress wraca z piłką w okolice środka. Drugie trafienie Boscha w połowie odpowiada Danilukowi 27′ w PLP (pierwsze: Szparło 22′). Link obejmuje podanie i strzał, bez przeliczenia minuty meczu.",
+      "review_frame": "reports/evidence/goal-progress-20261011-daniluk-27-345s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-9",
+      "player_id": "13196",
+      "minute": "4",
+      "video_id": "mEuiov0ip8Q",
+      "timestamp_seconds": 222,
+      "review_notes": "Obejrzano rozwinięcie ataku 3:35–3:49. Po podaniu w pole karne strzał mija bramkarza; w 3:49 piłka jest w lewej części siatki, bramkarz leży przed bramką. Pierwszy gol Boscha, zgodny z protokołem PLP: Rogon, 4. minuta.",
+      "review_frame": "reports/evidence/goal-ludki-2026-rogon-4-229s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-9",
+      "player_id": "13197",
+      "minute": "9",
+      "video_id": "mEuiov0ip8Q",
+      "timestamp_seconds": 468,
+      "review_notes": "Obejrzano akcję 7:52–7:56 oraz późniejsze wznowienie Ludków ze środka w 8:09. Piłka po strzale jest w prawej części siatki lewej bramki, bramkarz kończy interwencję na ziemi. Drugi gol Boscha przypisany według kolejności protokołu PLP do Szparły, 9. minuta; minuta PLP nie jest czasem odtwarzacza.",
+      "review_frame": "reports/evidence/goal-ludki-2026-szparlo-9-476s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-9",
+      "player_id": "13197",
+      "minute": "11",
+      "video_id": "mEuiov0ip8Q",
+      "timestamp_seconds": 605,
+      "review_notes": "Obejrzano odbiór przy polu karnym i strzał 10:10–10:13. W 10:13 piłka odbija się w lewej części siatki za bramkarzem. Następnie rywal wyjmuje ją spod lewego słupka, a zawodnicy Boscha wracają i gratulują sobie. Trzeci gol Boscha zgodny z protokołem PLP: Szparło, 11. minuta.",
+      "review_frame": "reports/evidence/goal-ludki-2026-szparlo-11-613s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
+    },
+    {
+      "match_id": "orlik26-7",
+      "player_id": "2204",
+      "minute": "1",
+      "video_id": "y3zlu5H0HE0",
+      "timestamp_seconds": 5,
+      "review_notes": "Obejrzano pierwszą akcję 0:08–0:14: Bosch w czarnych strojach wyprowadza piłkę z własnej połowy i strzela na prawą bramkę. W 0:14 piłka jest w siatce przy prawym słupku, bramkarz w żółtym stroju leży po interwencji. Jedyny gol Boscha w tym meczu, PLP: Daniluk 1. minuta.",
+      "review_frame": "reports/evidence/goal-biuro-2026-daniluk-1-14s.png",
+      "verification_source": "observed_video_frame",
+      "verified_by": "Codex — przegląd odtwarzacza YouTube",
+      "verified_at": "2026-10-20"
     }
   ]
 }

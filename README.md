@@ -15,7 +15,7 @@ Statyczne archiwum drużyny: oficjalne protokoły PLP, historia zawodników, ana
 | Portrety | 18 potwierdzonych, 28 brakujących |
 | Wideo | 120 rekordów źródłowych, 116 widocznych; 53 mecze z nagraniem, 60 bez przypisanego filmu |
 | Weryfikacja materiałów | 3 prawdopodobne nagrania turnieju PLP do identyfikacji, 4 odrzucone powiązania, 4 filmy turnieju poza PLP pomijane |
-| Odnośniki czasowe | 24 obejrzane akcje i 5 oznaczonych komentarzy gola z oficjalnych napisów; 135 goli w kolejce |
+| Odnośniki czasowe | 30 obejrzanych akcji i 5 oznaczonych komentarzy gola z oficjalnych napisów; 129 goli w kolejce |
 | Różnice źródeł | 34 porównania, wszystkie wyjaśnione protokołami lub zakresem rozgrywek; 0 sprzeczności sezonowych z protokołami |
 
 Aktualne liczby po kolejnych synchronizacjach są w [panelu jakości](https://paweleq1994.github.io/bosch-analiza/#/quality) i raportach. Pierwotne 113 meczów to chroniona baza historyczna; archiwum może rosnąć.
@@ -90,7 +90,7 @@ Kanały są w `data/video_channels.json`: `@martawnuszynska9993`, `@piotrgoabesk
 
 Użytkownik potwierdził, że dwa filmy z Olimpem oraz nagrania z Kolegami z Boiska i Medgalem pokazują turniej poza PLP. Są pomijane w widoku, kolejce identyfikacji i automatycznym dopasowywaniu, a surowe rekordy pozostają w źródłach. Rambo, Krokus i Prestige zachowano jako prawdopodobny turniej PLP / Superpuchar, z jawną niepewnością i bez przypisania do ligi. Wypowiedź nie ustala konkretnej edycji, daty meczu ani protokołu. Dowód klasyfikacji: `data/source-evidence/user-video-classification-20261019.json`.
 
-Odnośnik czasowy wymaga wpisu w `data/video_goal_evidence.json`: meczu, zawodnika, minuty PLP, filmu, zweryfikowanej sekundy, metody, recenzenta i daty. Opis przeglądu wyjaśnia powiązanie; klatki są w `reports/evidence/`. Dwadzieścia cztery odnośniki wskazują obejrzaną akcję, a pięć jest wyraźnie oznaczonych jako komentarz gola z automatycznych napisów oficjalnej transmisji. Komentarz nie potwierdza czytelnego obrazu piłki w bramce. Minuta 21 meczu nie oznacza 21:00 filmu. Dalsze 135 goli w meczach z nagraniem wymaga przeglądu. Cztery inne gole utraciły błędnie przypisany film i wróciły do braków nagrań; nie oznacza to ich weryfikacji. Filmy „1” i „2” przypisano do Wiary Piasta II z 01.07.2023 po jednoznacznym potwierdzeniu użytkownika; nie ustala to jeszcze sekundy gola.
+Odnośnik czasowy wymaga wpisu w `data/video_goal_evidence.json`: meczu, zawodnika, minuty PLP, filmu, zweryfikowanej sekundy, metody, recenzenta i daty. Opis przeglądu wyjaśnia powiązanie; klatki są w `reports/evidence/`. Trzydzieści odnośników wskazuje obejrzaną akcję, a pięć jest wyraźnie oznaczonych jako komentarz gola z automatycznych napisów oficjalnej transmisji. Komentarz nie potwierdza czytelnego obrazu piłki w bramce. Minuta 21 meczu nie oznacza 21:00 filmu. Dalsze 129 goli w meczach z nagraniem wymaga przeglądu. Cztery inne gole utraciły błędnie przypisany film i wróciły do braków nagrań; nie oznacza to ich weryfikacji. Filmy „1” i „2” przypisano do Wiary Piasta II z 01.07.2023 po jednoznacznym potwierdzeniu użytkownika; nie ustala to jeszcze sekundy gola.
 
 Przegląd dat i obejrzanych boisk poprawił stare powiązania: dwie połowy OSMAR z 23.11.2024 należą do hali 10990, pierwsza połowa CEDC Polmos z 10.09.2023 do 8373 (HT 2:0), a CF Bojary z 26.08.2023 nie może pokazywać hali z lutego 2024. Dowody są w `data/source-evidence/video-fixture-review-20261019.json`. Generator i walidator odrzucają film opublikowany przed meczem, z jednodniową tolerancją stref czasowych.
 
