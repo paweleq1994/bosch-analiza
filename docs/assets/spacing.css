@@ -1,0 +1,41 @@
+:root{
+    --content-gap:20px;
+    --section-gap:32px;
+    --heading-gap:12px;
+}
+
+/* Space content blocks without adding margins to individual grid/table items. */
+:is(main,main section,.detail-box,#bosch-data,#comparison,#pre-match,#method,#photos,#compare-result,.section>.body)>*+*{
+    margin-block-start:var(--content-gap);
+}
+
+:is(main,main section,.detail-box,#bosch-data,#comparison,#pre-match,#method,#photos,#compare-result,.section>.body)>:is(h2,h3,h4){
+    margin-block-start:var(--section-gap);
+    margin-block-end:var(--heading-gap);
+}
+
+:is(main,main section,.detail-box,#bosch-data,#comparison,#pre-match,#method,#photos,#compare-result,.section>.body)>:is(h1,h2,h3,h4):first-child{
+    margin-block-start:0;
+}
+
+:is(main,main section,.detail-box,#bosch-data,#comparison,#pre-match,#method,#photos,#compare-result,.section>.body)>:is(h1,h2,h3,h4)+*{
+    margin-block-start:0;
+}
+
+main>section+section,#app>section,#photos>section+section{
+    margin-block-start:var(--section-gap);
+}
+main>.tab{margin-block-start:var(--content-gap)}
+
+.detail-box>.row>h2{margin:0}
+.filters,.seg,.tabs,.source-links{gap:12px}
+.filters>label,main>label{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.video-thumb+h3{margin-block-start:var(--heading-gap)}
+
+@media(max-width:760px){
+    :root{--content-gap:16px;--section-gap:28px}
+}
+
+@media print{
+    :root{--content-gap:12px;--section-gap:20px;--heading-gap:8px}
+}
