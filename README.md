@@ -32,6 +32,8 @@ Aktualne liczby po kolejnych synchronizacjach są w [panelu jakości](https://pa
 
 [Dawna strona](docs/archive.html), [Orlik 2026](docs/orlik-2026.html) i [scouting](docs/scouting.html) pozostają dostępne.
 
+Raporty rywali i karty przedmeczowe uwzględniają także oficjalne klasyfikacje [goli i asyst all time](https://podlaskaliga.pl/lista/alltime-strzelec/) oraz [bramkarzy all time](https://podlaskaliga.pl/lista/bramkarze-alltime/). Dorobek całej kariery PLP jest opisany osobno od sezonu i nie zmienia oceny siły drużyny. Zawodników przypisujemy po oficjalnym adresie profilu do najnowszej dostępnej listy sezonowej; nowszy klub wyklucza dawne przypisanie, a niejednoznacznego transferu nie rozstrzygamy po nazwisku. Dane odświeża istniejący importer scoutingu, zachowując ostatnią poprawną klasyfikację przy awarii PLP.
+
 ## Generowanie i testy offline
 
 Python 3.12, Node.js oraz istniejąca zależność eksportera:
