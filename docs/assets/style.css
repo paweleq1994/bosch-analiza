@@ -19,3 +19,7 @@ th[aria-sort="ascending"] .table-sort-indicator,th[aria-sort="descending"] .tabl
 .match-actions .match-details{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:var(--panel2);white-space:nowrap}
 .match-details:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .match-actions .match-details:hover{border-color:var(--accent)}
+
+a.video-thumb{color:var(--text);border:1px solid transparent}
+a.video-thumb:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+a.video-thumb:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
