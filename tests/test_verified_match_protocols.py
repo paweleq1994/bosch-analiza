@@ -63,7 +63,7 @@ class VerifiedHistoricalProtocolTests(unittest.TestCase):
         goalkeeper = self.players["7284"]
         self.assertNotIn("13060", self.players)
         self.assertIn("13060", goalkeeper["aliases"])
-        self.assertEqual((goalkeeper["apps"], goalkeeper["goals"]), (90, 2))
+        self.assertEqual((goalkeeper["apps"], goalkeeper["goals"]), (94, 2))
 
 
 if __name__ == "__main__":

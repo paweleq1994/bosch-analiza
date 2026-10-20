@@ -277,6 +277,9 @@ function players(){
     return headline("Zawodnicy","Profile, gole, asysty, osiągnięcia i dostępne dane sezonowe.")+filterInput("Szukaj zawodnika")+sorting+'<div id="filtered-players"></div>';
 }
 function seasonStatisticsSource(record){
+    if(record?.origin==="plp_public_supercup"){
+        return "Publiczna tabela kariery PLP — Superpuchar";
+    }
     if(record?.origin==="plp_untagged_protocol"){
         return "Protokół PLP bez oznaczenia sezonu";
     }
@@ -392,7 +395,7 @@ function playerProvenanceSection(player){
         ];
     });
     return section("Pochodzenie każdej statystyki",
-        '<div class="notice">Bosch to mecze naszej drużyny, a pełna kariera PLP może obejmować inne kluby i Superpuchary. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
+        '<div class="notice">Statystyki Boscha obejmują ligę i Superpuchary rozegrane dla naszej drużyny. Pełna kariera PLP może obejmować także inne kluby. Te kolumny nie muszą być równe. Znak „—” oznacza brak źródła, nie zero.</div>'+
         '<p>'+ (career?.reconstructed?e("Kariera odtworzona; publiczny profil niedostępny"):careerUrl?'<a target="_blank" rel="noopener noreferrer" href="'+e(careerUrl)+'">Oficjalny profil i kariera PLP ↗</a>':e("Brak pełnego publicznego bilansu"))+
         '. Źródła pojedynczych występów znajdują się poniżej, w historii protokołów.</p>'+
         (career?.source_adjustments?.length?'<p>Uzupełnienia pominięte przez publiczną tabelę kariery: '+career.source_adjustments.map(row=>'<a target="_blank" rel="noopener noreferrer" href="'+e(row.source_url)+'">'+e(row.name)+' — '+e(row.apps)+' występ ↗</a>').join(" · ")+'.</p>':"")+
@@ -424,7 +427,7 @@ function playerDetail(id){
         e(record.motm??"—"),
         e(record.yellow??"—"),
         e(record.red??"—"),
-        record.source_url?'<a target="_blank" rel="noopener noreferrer" href="'+e(record.source_url)+'">'+e(seasonStatisticsSource(record))+' ↗</a>':e(seasonStatisticsSource(record))
+        record.source_url&&record.source_url!==player.career_totals?.source_url?'<a target="_blank" rel="noopener noreferrer" href="'+e(record.source_url)+'">'+e(seasonStatisticsSource(record))+' ↗</a>':e(seasonStatisticsSource(record))
     ]);
     const summaryRow=[
         '<strong>Łącznie Bosch</strong>',

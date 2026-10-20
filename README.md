@@ -76,7 +76,7 @@ Nowy sezon jest przyjmowany po uzgodnieniu meczów, bramek i punktów z oficjaln
 
 ## Zasady i ograniczenia źródeł
 
-**Bosch, cała kariera PLP i minimum z protokołów to różne zakresy.** Moskal ma w tym snapshotcie 105 występów Boscha i 139 całej kariery PLP. Różnicy obejmującej inne kluby i rozgrywki nie dopisujemy do Boscha.
+**Bosch, cała kariera PLP i minimum z protokołów to różne zakresy.** Moskal ma w tym snapshotcie 109 występów Boscha, razem z potwierdzonymi Superpucharami, i 139 całej kariery PLP. Superpuchary są uzgadniane z publicznym HTML oraz jednoznacznym przypisaniem klubu w tym samym sezonie; występów innych drużyn nie dopisujemy do Boscha.
 
 Nieznane wartości pozostają nieznane; zero wymaga dowodu. Zdjęcia drużynowe nie są portretami. Gabriel Kuźma i Piotr Kuźma są odrębnymi osobami. Zachowano alias Kakareki i scalone profile Rutkowskiego.
 
