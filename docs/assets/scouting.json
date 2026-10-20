@@ -5990,6 +5990,7 @@
   "bosch": {
     "name": "Bosch Service Tech-Car",
     "orlik_2026": {
+      "team_id": "6951",
       "name": "Bosch Service Tech-Car",
       "position": 2,
       "matches": 15,
@@ -6002,10 +6003,24 @@
       "tier": 2
     },
     "hala_2025_26": {
-      "points": 21,
+      "team_id": "6951",
+      "name": "Bosch Service Tech-Car",
+      "position": 8,
       "matches": 15,
+      "wins": 6,
+      "draws": 3,
+      "losses": 6,
       "gf": 33,
-      "ga": 39
+      "ga": 39,
+      "points": 21,
+      "tier": 2
+    },
+    "strength": 51.6,
+    "strength_details": {
+      "orlik": 60.1,
+      "hala": 36,
+      "model": "division_adjusted_2026_v2",
+      "benchmark": "Points, goal difference, attack, defense, league position, tier, sample size"
     },
     "strength_weights": {
       "hala_2025_26": 0.35,
