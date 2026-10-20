@@ -43,6 +43,21 @@ def audit(database: dict) -> dict:
     contradictions = []
     gaps = []
     coverage = []
+    supercups = database.get("analysis", {}).get("supercup_reconciliation") or []
+    for row in supercups:
+        if row["status"] not in {"already_included", "restored_from_public_html"}:
+            continue
+        player = players.get(row["player_id"])
+        if not player:
+            continue
+        season = (player.get("season_stats") or {}).get(row["season_id"]) or {}
+        for field in FIELDS:
+            stored = season.get(field)
+            if type(stored) is not int or stored < row["public"][field]:
+                contradictions.append({"name": player["name"], "id": player["id"],
+                    "season": row["season"], "stat": field, "recorded": stored,
+                    "minimum": row["public"][field], "reason": "Bosch Supercup omitted from public source season",
+                    "urls": [row["source_url"]]})
 
     for player in sorted(players.values(), key=lambda row: row["name"].casefold()):
         player_id = str(player["id"])
@@ -107,6 +122,7 @@ def audit(database: dict) -> dict:
         "contradictions": contradictions,
         "known_minimums_without_season_field": gaps,
         "coverage": coverage,
+        "supercups": supercups,
     }
 
 
@@ -178,6 +194,15 @@ def render(report: dict) -> str:
     for person, field, count in unresolved:
         text.append(f"| {person['name']} (ID {person['id']}) | {field} | {count} |")
 
+    names = {person["id"]: person["name"] for person in report["coverage"]}
+    statuses = {"restored_from_public_html": "Uwzględniono pełny HTML PLP", "already_included": "Już uwzględnione",
+                "other_club_excluded": "Inny klub — poza Boschem", "club_scope_unverified": "Brak potwierdzenia klubu",
+                "existing_source_exceeds_html": "Zachowano wyższy bilans protokołów", "season_identity_unverified": "Niepotwierdzone ID sezonu"}
+    text += ["", "## Superpuchary — kontrola całej kadry", "",
+             f"Sprawdzono zakres danych wszystkich **{report['total_players']} zawodników**. Publiczne sezony Superpucharów są zaliczane do Boscha wyłącznie przy jednoznacznym przypisaniu klubu w tym samym sezonie. Kariery odtworzone z protokołów zachowują swój osobny zakres źródeł.", "",
+             "| Zawodnik | Sezon | M | G | A | Status | Źródło |", "|---|---|---:|---:|---:|---|---|"]
+    for row in report.get("supercups") or []:
+        text.append(f"| {names.get(row['player_id'], row['player_id'])} (ID {row['player_id']}) | {row['season']} | {row['public']['apps']} | {row['public']['goals']} | {row['public']['assists']} | {statuses.get(row['status'], row['status'])} | [PLP]({row['source_url']}) |")
     text += [
         "", "## Zasady weryfikacji",
         "",

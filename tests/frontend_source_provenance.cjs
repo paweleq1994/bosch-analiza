@@ -47,3 +47,13 @@ assert.equal((provenance.match(/href="https:\/\/podlaskaliga.pl\/zawodnik\/moska
 assert.ok(!provenance.includes("Protokoły lub profil Bosch"));
 assert.ok(!provenance.includes("Oficjalny link"));
 assert.ok(provenance.includes("Wykluczenia po dwóch żółtych"));
+
+for(const id of ["7276","7272","1960","7284"]){
+    const player=database.players.find(p=>p.id===id);
+    const profile=vm.runInContext(`playerDetail("${id}")`,scope);
+    assert.ok(profile.includes("Superpuchary rozegrane dla naszej drużyny"));
+    assert.ok(profile.includes("Publiczna tabela kariery PLP — Superpuchar"));
+    const cupRows=player.season_history.filter(row=>row.origin==="plp_public_supercup");
+    assert.ok(cupRows.length>0);
+    for(const row of cupRows)assert.ok(profile.includes(row.name));
+}

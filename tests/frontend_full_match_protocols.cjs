@@ -40,7 +40,7 @@ assert.ok(rutkowski);
 assert.equal(database.players.filter(player => player.name.toLowerCase().includes("rutkowski")).length, 1);
 assert.deepEqual(
     [rutkowski.apps, rutkowski.goals, rutkowski.assists],
-    [90, 2, 7]
+    [94, 2, 7]
 );
 
 const oldProfile = render('playerDetail("13060")');

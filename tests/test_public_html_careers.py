@@ -48,8 +48,8 @@ class PublicCareerCompletenessTests(unittest.TestCase):
 
     def test_bosch_specific_stats_are_never_overwritten_by_whole_career(self):
         player = next(p for p in self.database["players"] if str(p["id"]) == "1960")
-        self.assertEqual(player["apps"], 105)
-        self.assertEqual(player["bosch_totals"]["apps"], 105)
+        self.assertEqual(player["apps"], 109)
+        self.assertEqual(player["bosch_totals"]["apps"], 109)
         self.assertGreater(player["career_totals"]["apps"], player["apps"])
 
     def test_zero_league_member_has_independently_proven_cup_appearance(self):

@@ -114,6 +114,58 @@ def bosch_totals(seasons):
     return total_fields(ids.values())
 
 
+def reconcile_public_supercups(seasons, careers, snapshots):
+    """Use public cup totals only with an unambiguous same-season club record.
+
+    REST league aggregates can return zero for cups without league taxonomy.
+    Replace that season once; never add an all-club career total to Bosch.
+    """
+    records = []
+    for identifier, snapshot in snapshots.items():
+        source = str(snapshot.get("source_url") or "")
+        if not source.startswith("https://podlaskaliga.pl/zawodnik/"):
+            continue
+        api_rows = (careers.get(identifier) or {}).get("season_rows") or []
+        for public in snapshot.get("season_rows") or []:
+            name = str(public.get("name") or "")
+            if "superpuchar" not in name.lower() or not public.get("apps"):
+                continue
+            if any(type(public.get(field)) is not int or public[field] < 0 for field in STAT_FIELDS):
+                continue
+            key = re.sub(r"[^a-z0-9]", "", name.lower())
+            matching = [row for row in api_rows if re.sub(r"[^a-z0-9]", "", str(row.get("name") or "").lower()) == key]
+            record = {"player_id": identifier, "season": name, "source_url": source,
+                      "public": {field: public[field] for field in STAT_FIELDS}}
+            if len(matching) != 1:
+                records.append({**record, "status": "club_scope_unverified"})
+                continue
+            club = matching[0].get("team")
+            sid = str(matching[0].get("sid") or "")
+            record.update({"season_id": sid, "club": club})
+            if club != "Bosch Service Tech-Car":
+                records.append({**record, "status": "other_club_excluded"})
+                continue
+            if not sid.isdigit() or sid == "0":
+                records.append({**record, "status": "season_identity_unverified"})
+                continue
+            current = (seasons.get(identifier) or {}).get(sid) or {}
+            before = {field: current.get(field) for field in STAT_FIELDS}
+            record["before"] = before
+            if any(type(before[field]) is int and before[field] > public[field] for field in STAT_FIELDS):
+                records.append({**record, "status": "existing_source_exceeds_html"})
+                continue
+            if all(before[field] == public[field] for field in STAT_FIELDS):
+                records.append({**record, "status": "already_included"})
+                continue
+            seasons.setdefault(identifier, {})[sid] = {
+                **current, **record["public"], "name": name,
+                "origin": "plp_public_supercup", "source_url": source,
+                "captured_at": snapshot.get("captured_at"),
+            }
+            records.append({**record, "status": "restored_from_public_html"})
+    return records
+
+
 def confirm_bosch_totals(player):
     """Retire an old minimum flag only when club rows and public HTML agree."""
     if not player.get("stats_minimum"):

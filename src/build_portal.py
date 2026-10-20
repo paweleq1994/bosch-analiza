@@ -21,7 +21,7 @@ from goal_reconciliation import add_verified_players, administrative_goals_by_se
 from reconcile_player_history import apply_archived_seasons, archived_bosch_seasons, breakdown_coverage
 from sync_videos import iso_date, validate_fixture_dates
 from public_protocol_careers import review_public_protocols, reconstruct_confirmed_bosch_career
-from player_totals import confirm_bosch_totals
+from player_totals import confirm_bosch_totals, reconcile_public_supercups
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -106,6 +106,8 @@ def main() -> None:
 
             player_seasons[str(season_id)] = {**previous, **correction_stats}
 
+
+    supercup_review = reconcile_public_supercups(player_seasons_extra, player_career_extra, public_html_careers)
 
     seasons = [
         {
@@ -426,7 +428,7 @@ def main() -> None:
                 for key in ("apps", "goals", "assists", "motm", "yellow", "red")
             }
 
-            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols", "plp_untagged_protocol"}:
+            if stats.get("origin") in {"plp_public_season", "plp_match_minimum", "plp_match_performance", "plp_archived_public_season", "plp_cup_protocols", "plp_untagged_protocol", "plp_public_supercup"}:
                 verified_stats["origin"] = stats["origin"]
             for key in ("match_performance_verified", "match_performance_sources", "source_url", "captured_at"):
                 if key in stats:
@@ -848,6 +850,7 @@ def main() -> None:
             "github": "https://github.com/paweleq1994/bosch-analiza",
         },
     }
+    output["analysis"]["supercup_reconciliation"] = supercup_review
     historical_team_media = load("media_discovery.json", {"candidates": []})
     output["analysis"]["historical_team_media_candidates"] = [
         {

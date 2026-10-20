@@ -143,6 +143,8 @@ class PlayerIdentityTests(unittest.TestCase):
                 for season_id, stats in (corrections.get(str(player["id"])) or {}).get("seasons", {}).items()
                 if str(season_id) in {"119", "127", "140", "145"} and (stats.get("apps") or 0) > 0
             )
+            expected.update(row["season_id"] for row in data["analysis"]["supercup_reconciliation"]
+                            if row["player_id"] == player["id"] and row["status"] in {"restored_from_public_html", "already_included"})
             observed = {
                 str(record["sid"])
                 for record in player.get("season_history", [])
