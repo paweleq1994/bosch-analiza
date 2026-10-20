@@ -32,12 +32,12 @@ function matchList(matches,limit=0){
     ).join("")||empty("Brak spotkań w wybranym zakresie.");
 }
 function barChart(rows,key,label){const max=Math.max(1,...rows.map(x=>Number(x[key])||0));return '<div class="card bar-chart">'+rows.map(s=>'<div class="bar-row"><span>'+e(s.name)+'</span><div class="bar-track"><span style="width:'+Math.max(0,Math.min(100,(Number(s[key])||0)/max*100))+'%"></span></div><b>'+e(label?label(s):fmt(s[key]))+'</b></div>').join("")+'</div>';}
-function goalMinutes(scorer){
+function goalMinutes(scorer,matchId){
     if(scorer.minute_uncertain){
         return "Minuta nieczytelna w PLP";
     }
 
-    return scorer.minutes.length?scorer.minutes.map(minute=>e(minute)+"′").join(", "):"—";
+    return scorer.minutes.length?scorer.minutes.map(minute=>matchId==null?e(minute)+"′":verifiedVideoMinuteLink(scorer.player_id,matchId,minute)).join(", "):"—";
 }
 
 function goalScorerLinks(match,maximum=0){
@@ -63,7 +63,7 @@ function goalMatchTable(match){
     const rows=protocol.scorers.map(scorer=>[
         href("player/"+encodeURIComponent(scorer.player_id),scorer.name),
         e(scorer.goals),
-        goalMinutes(scorer),
+        goalMinutes(scorer,match.id),
         '<a target="_blank" rel="noopener noreferrer" href="'+e(protocol.source_url)+'">Protokół PLP ↗</a>'
     ]);
     const own=protocol.own_goals?'<div class="notice">Gole samobójcze rywali: <strong>'+e(protocol.own_goals)+'</strong>.</div>':"";
@@ -75,7 +75,9 @@ function goalMatchTable(match){
     const administrative=protocol.administrative_goals?'<div class="notice">Gole przyznane administracyjnie: <strong>'+e(protocol.administrative_goals)+'</strong>. Nie są dopisywane zawodnikom.</div>':"";
     const minutes=protocol.minute_uncertainties?'<div class="notice">Jedno oznaczenie gola PLP nie ma czytelnej minuty. Nazwisko strzelca pozostaje potwierdzone.</div>':"";
 
-    return (rows.length?table(["Zawodnik","Gole","Minuty","Źródło"],rows):empty("Brak indywidualnych goli Boscha."))+own+ownConceded+administrative+minutes;
+    const videoHelp=(DB.analysis?.verified_goal_video_cues||[]).some(cue=>same(cue.match_id,match.id))
+        ? '<p class="small">Minuty pochodzą z protokołu PLP. Link ▶ YouTube otwiera sprawdzony fragment nagrania; czas filmu może różnić się od minuty meczu.</p>' : "";
+    return (rows.length?videoHelp+table(["Zawodnik","Gole","Minuta meczu / nagranie","Źródło"],rows):empty("Brak indywidualnych goli Boscha."))+own+ownConceded+administrative+minutes;
 }
 
 function goalMatchRows(matches){
@@ -105,6 +107,26 @@ function goalsArchive(){
         '<div class="notice">Każdy mecz posiada oryginalny link PLP. Jedna minuta gola w spotkaniu z VESTA jest nieczytelna w źródle.</div>'+
         filterInput("Data, rywal, zawodnik lub wynik…")+
         '<div id="filtered-goals"></div>';
+}
+
+function verifiedGoalVideos(matches){
+    const selected=new Map(matches.map(match=>[String(match.id),match]));
+    const cues=(DB.analysis?.verified_goal_video_cues||[]).filter(cue=>selected.has(String(cue.match_id)))
+        .slice().sort((a,b)=>selected.get(String(b.match_id)).date.localeCompare(selected.get(String(a.match_id)).date)||Number(a.minute)-Number(b.minute));
+    if(!cues.length)return "";
+    const commentary=cues.filter(cue=>cue.verification_source==="broadcast_commentary_captions").length;
+    const rows=cues.map(cue=>{
+        const match=selected.get(String(cue.match_id));
+        const player=DB.players.find(player=>same(player.id,cue.player_id));
+        const seconds=cue.timestamp_seconds;
+        const playback=Math.floor(seconds/60)+":"+String(seconds%60).padStart(2,"0");
+        return [e(match.date),player?playerLink(player):e(cue.player_id),matchLink(match),
+            verifiedVideoMinuteLink(cue.player_id,cue.match_id,cue.minute),e(playback),
+            cue.verification_source==="broadcast_commentary_captions"?"Komentarz gola — napisy automatyczne":"Obejrzana akcja"];
+    });
+    return section("Bramki do obejrzenia",'<details class="card"><summary>Obejrzane akcje: '+e(cues.length-commentary)+(commentary?' · Komentarze gola: '+e(commentary):'')+' — otwórz listę</summary>'+
+        '<p>Minuta meczu pochodzi z PLP. Czas filmu wskazuje początek sprawdzonego fragmentu, zwykle kilka sekund przed strzałem.</p>'+
+        table(["Data","Strzelec","Mecz","Minuta meczu / YouTube","Czas filmu","Potwierdzenie"],rows)+'</details>');
 }
 
 function home(){const latest=DB.seasons.at(-1),recent=DB.matches.filter(m=>same(m.sid,latest.id));const leaders=DB.players.map(player=>({player,stats:player.season_stats?.[latest.id]||null})).filter(row=>seasonPointsComplete(row.stats)).sort((a,b)=>(b.stats.goals+b.stats.assists)-(a.stats.goals+a.stats.assists)||b.stats.goals-a.stats.goals||a.player.name.localeCompare(b.player.name,"pl")).slice(0,4);return headline("Wszystko o Bosch w jednym miejscu","Wyniki, historia sezonów, statystyki zawodników, mecze i nagrania. Bez przewijania gigantycznego raportu.")+metrics([["Ostatni sezon",latest.name],["Miejsce",latest.position+"."],["Punkty",latest.points],["Bramki",latest.gf+":"+latest.ga]])+'<div class="columns">'+section("Ostatnie wyniki",'<div class="card">'+matchList(recent,5)+'</div><p>'+href("season/"+latest.id,"Otwórz pełny sezon →")+'</p>')+section("Liderzy "+latest.name,'<div class="card">'+leaders.map(({player,stats})=>'<div class="list-row">'+playerLink(player)+'<strong>'+e(stats.goals+stats.assists)+' G+A</strong></div>').join("")+'</div><p>'+href("players","Wszyscy zawodnicy →")+'</p>')+'</div>'+section("Odkrywaj kompendium",cards([["Sezony","season/"+latest.id,"Zobacz analizę sezonu "+latest.name],["Wszystkie mecze","matches","Znajdź wybrane spotkanie i nagrania"],["Gole i protokoły","goals",DB.matches.length+" meczów, strzelcy, minuty oraz samobóje"],["Rekordy","records","Najlepsze wyniki drużyny"],["Analityka","analysis","Zaawansowane porównania i benchmarking"]].map(([title,route,desc])=>'<h3>'+href(route,title+" →")+'</h3><p>'+e(desc)+'</p>')));}
@@ -639,6 +661,7 @@ function visibleVideos(){return DB.videos.filter(video=>video.status!=="ignored"
 function videos(){
     return headline("Wideo","Archiwum filmów i nagrań przypisanych do meczów.")+
         metrics([["Materiały",visibleVideos().length],["Powiązane z meczami",visibleVideos().filter(video=>video.match_id).length]])+
+        '<p>'+href("goals","Obejrzyj bramki — linki do sprawdzonych momentów →")+'</p>'+
         '<div class="filters"><input id="local-filter" placeholder="Tytuł, kanał…" aria-label="Szukaj nagrań"><label>Sortuj <select id="video-sort" aria-label="Sortuj filmy"><option value="newest">Najnowsze</option><option value="oldest">Najstarsze</option><option value="title">Tytuł A–Z</option><option value="title-desc">Tytuł Z–A</option><option value="matched">Najpierw powiązane z meczami</option></select></label></div><div id="filtered-videos"></div>'+
         '<div class="notice">Sortowanie uwzględnia datę publikacji YouTube. Jeśli jej brakuje, używa daty potwierdzonego meczu, opisanej jako „Mecz”. Materiały bez obu dat trafiają na koniec.</div>';
 }
@@ -737,7 +760,7 @@ function records(){
     const biggestPerformances=allScorerGames.slice().sort((a,b)=>b.goals-a.goals||a.match.date.localeCompare(b.match.date)).slice(0,15);
     const matchRecords=section("Najwięcej goli jednego zawodnika w meczu",
         table(["Strzelec","Gole","Rywal","Data","Minuty"],biggestPerformances.map(row=>[
-            href("player/"+encodeURIComponent(row.player_id),row.name),e(row.goals),matchLink(row.match),e(row.match.date),goalMinutes(row)
+            href("player/"+encodeURIComponent(row.player_id),row.name),e(row.goals),matchLink(row.match),e(row.match.date),goalMinutes(row,row.match.id)
         ]))
     );
     const fastestGoalRows=allScorerGames.flatMap(row=>row.minutes.map(minute=>({
@@ -965,7 +988,7 @@ function setupList(id, items, renderer, searcher = JSON.stringify, seasonMatcher
 function route(){if(!DB)return;const pieces=decodeURIComponent(location.hash.slice(2)||"").split("/");const name=pieces[0]||"",id=pieces.slice(1).join("/");const routes={"":home,seasons,matches:matchesPage,goals:goalsArchive,players,opponents,analysis,videos,records,compare:playerComparison,quality:dataQuality};const pages={season:()=>seasonPage(id),match:()=>matchDetail(id),player:()=>playerDetail(id),opponent:()=>opponentDetail(id)};$("app").innerHTML=pages[name]?pages[name]():routes[name]?routes[name]():empty("Nie znaleziono strony.");document.querySelectorAll(".nav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#/"+name||name==="season"&&a.getAttribute("href")==="#/seasons"||name==="player"&&a.getAttribute("href")==="#/players"||name==="match"&&a.getAttribute("href")==="#/matches"||name==="opponent"&&a.getAttribute("href")==="#/opponents"));if(name==="goals")setupList(
     "filtered-goals",
     DB.matches,
-    items=>table(["Data","Rywal","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(items.slice().sort((a,b)=>b.date.localeCompare(a.date)))),
+    items=>verifiedGoalVideos(items)+section("Wszystkie protokoły",table(["Data","Rywal","Wynik","Sezon","Strzelcy","Samobóje rywali","Samobóje Boscha","Administracyjne","PLP"],goalMatchRows(items.slice().sort((a,b)=>b.date.localeCompare(a.date))))),
     match=>[match.opponent,match.date,match.season,match.gf+":"+match.ga,...(match.goal_protocol?.scorers||[]).map(scorer=>scorer.name)].join(" "),
     (match,selectedSeasonId)=>same(match.sid,selectedSeasonId)
 );
