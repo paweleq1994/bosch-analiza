@@ -22,6 +22,14 @@
       {
         "label": "PLP — Hala 2025/26 II liga",
         "url": "https://podlaskaliga.pl/tabela/ii-liga-hala25-26/"
+      },
+      {
+        "label": "All time — gole i asysty",
+        "url": "https://podlaskaliga.pl/lista/alltime-strzelec/"
+      },
+      {
+        "label": "All time — bramkarze",
+        "url": "https://podlaskaliga.pl/lista/bramkarze-alltime/"
       }
     ],
     "snapshot_type": "projected_from_orlik"
@@ -167,6 +175,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/kuzel-kacper/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Fabiszewski Patryk",
+            "apps": 63,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/fabiszewski-patryk/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 92,
+            "assists": 27,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Krysztopik Robert",
+            "apps": 85,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/krysztopik-robert/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 69,
+            "assists": 61,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Niemyjski Dominik",
+            "apps": 79,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/niemyjski-dominik/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 69,
+            "assists": 30,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Sapieha Damian (GK)",
+            "apps": 143,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/sapieha-damian/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.38,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Gimier Arkadiusz (GK)",
+            "apps": 24,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/gimier-arkadiusz-2/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.25,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "1565",
       "season_match_details": [
         {
@@ -486,6 +548,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/kupiec-kamil/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Zaręba Przemysław",
+            "apps": 126,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/przemyslaw-zareba/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 141,
+            "assists": 76,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Gryszkiewicz Edward",
+            "apps": 114,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/gryszkiewicz-edward/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 72,
+            "assists": 66,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Gromko Mariusz",
+            "apps": 148,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/gromko-mariusz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 66,
+            "assists": 36,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Klikowski Dawid (GK)",
+            "apps": 157,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/klikowski-dawid/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 5.0,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Wyszyński Wojciech (GK)",
+            "apps": 14,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/wyszynski-wojciech/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.86,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-gk-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "1564",
       "season_match_details": [
         {
@@ -805,6 +921,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/kardynski-karol/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Dudko Jakub",
+            "apps": 57,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/dudko-jakub/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 87,
+            "assists": 42,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Sakowski Damian",
+            "apps": 48,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/sakowski-damian/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 64,
+            "assists": 27,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Olchowik Hubert",
+            "apps": 68,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/olchowik-hubert/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 58,
+            "assists": 30,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Trusiewicz Rafał (GK)",
+            "apps": 90,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/rafal-trusiewicz/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.3,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Kołpak Kamil (GK)",
+            "apps": 32,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kolpak-kamil/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.48,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "1576",
       "season_match_details": [
         {
@@ -1111,6 +1281,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/krysiewicz-daniel/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Mackiewicz Karol",
+            "apps": 32,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/mackiewicz-karol/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 57,
+            "assists": 16,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Trusiewicz Marcin",
+            "apps": 69,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/trusiewicz-marcin/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 40,
+            "assists": 17,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Urynowicz Franciszek",
+            "apps": 31,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/urynowicz-franciszek/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 35,
+            "assists": 10,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Poskrobko Tomasz (GK)",
+            "apps": 28,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/poskrobko-tomasz/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.18,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"
+          },
+          {
+            "name": "Pawłowski Karol (GK)",
+            "apps": 18,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/pawlowski-karol/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.61,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "12343",
       "season_match_details": [
         {
@@ -1428,6 +1652,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/michajlow-mariusz/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Woźniel Jędrzej",
+            "apps": 56,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/wozniel-jedrzej/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 46,
+            "assists": 23,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Łukasiewicz Mateusz",
+            "apps": 124,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/lukasiewicz-mateusz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 42,
+            "assists": 48,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Korolewski Marek",
+            "apps": 74,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/korolewski-marek-2/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 34,
+            "assists": 22,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Timoszuk Mateusz (GK)",
+            "apps": 123,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/mateusz-timoszuk/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.74,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Mordasewicz Sebastian (GK)",
+            "apps": 114,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/mordasewicz-sebastian/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.61,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "1574",
       "season_match_details": [
         {
@@ -1754,6 +2032,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/gulc-dawid/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Vovchyk Maksym",
+            "apps": 120,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/vovchyk-maksym/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 66,
+            "assists": 46,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Kazimirov Dmytro",
+            "apps": 106,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kazimirov-dmytro/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 61,
+            "assists": 30,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Gulc Dawid",
+            "apps": 116,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/gulc-dawid/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 27,
+            "assists": 18,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Jodkowski Marek (GK)",
+            "apps": 65,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/jodkowski-marek/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.41,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Pasternak Ivan (GK)",
+            "apps": 38,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/pasternak-ivan/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.87,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "6988",
       "season_match_details": [
         {
@@ -2136,6 +2468,51 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/kostyk-kacper/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Puchajda Adam",
+            "apps": 111,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/puchajda-adam/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 81,
+            "assists": 23,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Pomichter Patryk",
+            "apps": 64,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/pomichter-patryk/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 50,
+            "assists": 27,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Michałowski Euzebiusz",
+            "apps": 69,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/michalowski-euzebiusz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 50,
+            "assists": 26,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Lupa Adrian (GK)",
+            "apps": 86,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/lupa-adrian/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.0,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "6959",
       "season_match_details": [
         {
@@ -2492,6 +2869,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/kosinski-tomasz/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Mosiej Łukasz",
+            "apps": 55,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/mosiej-lukasz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 63,
+            "assists": 26,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/"
+          },
+          {
+            "name": "Kacprowski Jan",
+            "apps": 11,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kacprowski-jan/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 11,
+            "assists": 5,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Żukowski Łukasz",
+            "apps": 11,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/zukowski-lukasz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 10,
+            "assists": 4,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Nurzyński Jakub (GK)",
+            "apps": 18,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/nurzynski-jakub/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.64,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-gk-ii-liga/"
+          },
+          {
+            "name": "Tworek Łukasz (GK)",
+            "apps": 15,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/tworek-lukasz/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.8,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"
+          }
+        ]
+      },
       "plp_team_id": "12342",
       "season_match_details": [
         {
@@ -2838,6 +3269,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/sliwinski-marcin/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Bruliński Damian",
+            "apps": 135,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/damian-brulinski/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 105,
+            "assists": 78,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Cichoński Arkadiusz",
+            "apps": 123,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/cichonski-arkadiusz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 81,
+            "assists": 24,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Brak Damian",
+            "apps": 115,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/brak-damian/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 36,
+            "assists": 22,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Kamieński Norbert (GK)",
+            "apps": 46,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kamienski-norbert/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.38,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Turowski Daniel (GK)",
+            "apps": 37,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/turowski-daniel/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.45,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "4389",
       "season_match_details": [
         {
@@ -3164,6 +3649,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/olichwier-arkadiusz/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Skrzypek Łukasz",
+            "apps": 143,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/skrzypek-lukasz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 122,
+            "assists": 48,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Sipko Maciej",
+            "apps": 86,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/sipko-maciej/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 36,
+            "assists": 27,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Boguszewski Jacek",
+            "apps": 132,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/boguszewski-jacek/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 35,
+            "assists": 41,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Łukaszewicz Grzegorz (GK)",
+            "apps": 91,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/lukaszewicz-grzegorz/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.99,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Pilipiuk Kamil (GK)",
+            "apps": 46,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/pilipiuk-kamil/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.25,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "1580",
       "season_match_details": [
         {
@@ -3481,6 +4020,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/tyminski-kamil/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Monicz Andrzej",
+            "apps": 56,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/monicz-andrzej/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 39,
+            "assists": 50,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Dryko Pavel",
+            "apps": 17,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/dryko-pavel/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 19,
+            "assists": 7,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Kovalov Oleksii",
+            "apps": 42,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kovalov-oleksii/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 17,
+            "assists": 16,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Romanowski Rafał (GK)",
+            "apps": 20,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/romanowski-rafal/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.38,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Janucik Marek (GK)",
+            "apps": 16,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/janucik-marek/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.31,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "10056",
       "season_match_details": [
         {
@@ -3794,6 +4387,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/konopko-bartlomiej/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Stachurski Łukasz",
+            "apps": 57,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/stachurski-lukasz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 40,
+            "assists": 33,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/"
+          },
+          {
+            "name": "Pawluczuk Przemysław",
+            "apps": 57,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/pawluczuk-przemyslaw/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 31,
+            "assists": 21,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/"
+          },
+          {
+            "name": "Konopko Bartłomiej",
+            "apps": 48,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/konopko-bartlomiej/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 25,
+            "assists": 10,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-ii-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Markowski Kamil (GK)",
+            "apps": 116,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kamil-markowski/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.44,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-gk-ii-liga/"
+          },
+          {
+            "name": "Kulesza Hubert (GK)",
+            "apps": 35,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kulesza-hubert/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.67,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-gk-ii-liga/"
+          }
+        ]
+      },
       "plp_team_id": "10770",
       "season_match_details": [
         {
@@ -4175,6 +4822,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/tynkiewicz-jakub/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Zolnik Stanisław",
+            "apps": 61,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/zolnik-stanislaw/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 54,
+            "assists": 13,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Margużewicz Mariusz",
+            "apps": 114,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/marguzewicz-mariusz/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 30,
+            "assists": 19,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Wszeborowski Konrad",
+            "apps": 39,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/wszeborowski-konrad/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 22,
+            "assists": 15,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Masłowski Michał (GK)",
+            "apps": 70,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/maslowski-michal/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.19,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          },
+          {
+            "name": "Kazberuk Daniel (GK)",
+            "apps": 47,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/kazberuk-daniel/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.05,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-gk-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "8194",
       "season_match_details": [
         {
@@ -4555,6 +5256,51 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/pogorzelski-olaf/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Szczepanik Marcin",
+            "apps": 147,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/marcin-szczepanik/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 100,
+            "assists": 48,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Sokólski Piotr",
+            "apps": 48,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/sokolski-piotr/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 34,
+            "assists": 19,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Dzieduszow Krzysztof",
+            "apps": 73,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/dzieduszow-krzysztof/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 30,
+            "assists": 11,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Gil Sebastian Krzysztof (GK)",
+            "apps": 86,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/gil-sebastian-krzysztof/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.33,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          }
+        ]
+      },
       "plp_team_id": "1568",
       "season_match_details": [
         {
@@ -4870,6 +5616,60 @@
           "profile_url": "https://podlaskaliga.pl/zawodnik/tworkowski-filip/"
         }
       ],
+      "all_time_players": {
+        "scorers": [
+          {
+            "name": "Twardowski Marcin",
+            "apps": 49,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/twardowski-marcin/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 42,
+            "assists": 16,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Olizarowicz Karol",
+            "apps": 70,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/olizarowicz-karol/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 29,
+            "assists": 32,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik26-indywidualne-i-liga/"
+          },
+          {
+            "name": "Grzybowski Stanisław",
+            "apps": 63,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/grzybowski-stanislaw/",
+            "source_url": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+            "goals": 23,
+            "assists": 20,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"
+          }
+        ],
+        "goalkeepers": [
+          {
+            "name": "Grabarczyk Kacper (GK)",
+            "apps": 49,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/grabarczyk-kacper/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 3.04,
+            "club_season": "Hala 2025/26",
+            "club_source_url": "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"
+          },
+          {
+            "name": "Klepacki Maciej (GK)",
+            "apps": 22,
+            "profile_url": "https://podlaskaliga.pl/zawodnik/klepacki-maciej/",
+            "source_url": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+            "rating": 4.43,
+            "club_season": "Orlik 2026",
+            "club_source_url": "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"
+          }
+        ]
+      },
       "plp_team_id": "6989",
       "season_match_details": [
         {

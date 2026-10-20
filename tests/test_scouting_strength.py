@@ -141,10 +141,11 @@ class ScoutingStrengthTests(unittest.TestCase):
         from unittest.mock import patch
         from sync_scouting_players import refresh
         table={"tables":{"orlik_2026_h1":[{"team_id":"1","name":"Example","matches":1}]}}
-        previous={"_checked_on":"2026-10-19","_schema":2,
+        previous={"_checked_on":"2026-10-19","_schema":3,
                   "_standings_signature":sha256(json.dumps(table["tables"],sort_keys=True).encode()).hexdigest(),
                   "1":[{"name":"Old Leader"}]}
-        with patch("sync_scouting_players.read_public_lists",return_value=({"1":[{"name":"New Leader"}]},[],[])) as read:
+        with patch("sync_scouting_players.read_public_lists",return_value=({"1":[{"name":"New Leader"}]},[],[])) as read, \
+                patch("sync_scouting_players.read_all_time_players",return_value=({},[],[])):
             unchanged,_=refresh(table,previous,today="2026-10-19")
             self.assertEqual(unchanged,previous)
             read.assert_not_called()

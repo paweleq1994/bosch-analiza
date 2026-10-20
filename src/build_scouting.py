@@ -141,6 +141,44 @@ def historical_players(team_name, team_id, old_profile, details_rows, promotion_
     return [{key: value for key, value in row.items() if key != "season_rank"} for row in top[:8]]
 
 
+def all_time_players(team_id, refreshed):
+    """Join career totals by official profile URL, using the latest known club."""
+    associations = {}
+    editions = {"Orlik 2026": 2, "Hala 2025/26": 1, "Hala 2025/2026": 1}
+    for identifier, rows in refreshed.items():
+        if not str(identifier).isdigit():
+            continue
+        for row in rows:
+            uri = str(row.get("profile_url") or row.get("source_url") or "").rstrip("/") + "/"
+            priority = editions.get(row.get("source_season"), 0)
+            if priority == 0 or not uri.startswith("https://podlaskaliga.pl/zawodnik/"):
+                continue
+            previous = associations.get(uri)
+            if previous is None or priority > previous["priority"]:
+                associations[uri] = {"priority": priority, "clubs": {str(identifier)}, "row": row}
+            elif priority == previous["priority"]:
+                previous["clubs"].add(str(identifier))
+
+    result = {"scorers": [], "goalkeepers": []}
+    for category in result:
+        for uri, career in (refreshed.get("_all_time", {}).get(category) or {}).items():
+            association = associations.get(uri)
+            if association is None or association["clubs"] != {str(team_id)}:
+                continue
+            club = association["row"]
+            result[category].append({**career, "club_season": club["source_season"],
+                                     "club_source_url": club["source_url"]})
+    # Goals and goalkeeper ratings describe different contributions. Never add
+    # them to a season tally or treat a goalkeeper's assists as a scorer threat.
+    keeper_urls = {row["profile_url"] for row in result["goalkeepers"]}
+    result["scorers"] = sorted(
+        [row for row in result["scorers"] if row["goals"] > 0 and row["profile_url"] not in keeper_urls],
+        key=lambda row: (-row["goals"], -row["assists"], row["name"]),
+    )[:3]
+    result["goalkeepers"] = sorted(result["goalkeepers"], key=lambda row: (-row["apps"], -row["rating"], row["name"]))[:2]
+    return result
+
+
 def benchmark(row):
     if not row: return []
     notes=[]
@@ -237,6 +275,7 @@ def main():
             "hall":indoor,"orlik":outdoor,"historic_hall":old_data,
             "strength":rating,"strength_details":score_evidence(indoor,outdoor),"data_coverage":round(coverage,2),"confidence":confidence,
             "players":player_rows,
+            "all_time_players":all_time_players(team_id,refreshed),
             "plp_team_id":team_id,
             "season_match_details":preferred.get("matches",[]) if preferred else [],
             "player_stats_verified":bool(refreshed.get(str(team_id))) or any(snapshot.get("player_stats_complete") for snapshot in detailed),
@@ -254,6 +293,12 @@ def main():
         })
     teams.sort(key=lambda row: (-(row["strength"] or 0),row["name"]))
     metadata={**seed["meta"],"forecast_not_confirmed":not bool(current_hall),"snapshot_type":"live_hala_table" if current_hall else "projected_from_orlik"}
+    metadata["source_links"] = metadata.get("source_links", []) + [
+        {"label": label, "url": url} for label, url in (
+            ("All time — gole i asysty", "https://podlaskaliga.pl/lista/alltime-strzelec/"),
+            ("All time — bramkarze", "https://podlaskaliga.pl/lista/bramkarze-alltime/"),
+        ) if not any(source["url"] == url for source in metadata.get("source_links", []))
+    ]
     result={"meta":metadata,"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.35,"orlik_2026":.65,"older_hall":0},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"65% Orlik 2026, 35% Hala 2025/26; explicit I/II league calibration, sample adjustment, and neutral prior when missing","new_season_weight":"0.65 verified Orlik 2026","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+"\n"

@@ -26,6 +26,17 @@ PUBLIC_LISTS = [
     ("Hala 2025/26", "https://podlaskaliga.pl/lista/hala25-26-indywidualne-i-liga/"),
     ("Hala 2025/26", "https://podlaskaliga.pl/lista/hala25-26-indywidualne-ii-liga/"),
 ]
+GOALKEEPER_LISTS = [
+    # The official Orlik'26 navigation uses this older slug for I liga.
+    ("Orlik 2026", "https://podlaskaliga.pl/lista/orlik25-gk-i-liga-2/"),
+    ("Orlik 2026", "https://podlaskaliga.pl/lista/orlik26-gk-ii-liga/"),
+    ("Hala 2025/26", "https://podlaskaliga.pl/lista/hala25-26-gk-i-liga/"),
+    ("Hala 2025/26", "https://podlaskaliga.pl/lista/hala25-26-gk-ii-liga/"),
+]
+ALL_TIME_LISTS = {
+    "scorers": "https://podlaskaliga.pl/lista/alltime-strzelec/",
+    "goalkeepers": "https://podlaskaliga.pl/lista/bramkarze-alltime/",
+}
 
 
 def clean(value: object) -> str:
@@ -55,26 +66,36 @@ def request_html(url: str) -> str:
         return response.read().decode("utf-8", "replace")
 
 
-def parse_public_players(html: str, season: str, source_url: str, team_urls: dict) -> dict:
-    """Read the whole public table, including rows hidden by client pagination."""
+def public_table_rows(html: str):
+    """Read semantic columns from every row, including client-side pagination."""
     tables = re.findall(r'<table\b[^>]*class="[^"]*\bsp-player-list\b[^"]*"[^>]*>(.*?)</table>', html, re.S)
     if len(tables) != 1:
         raise ValueError("Expected one official player list")
-    grouped = {}
     for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", tables[0], re.S):
         cells = {}
         for classes, content in re.findall(r'<td\b[^>]*class="([^"]*)"[^>]*>(.*?)</td>', row, re.S):
             for column in classes.split():
                 cells[column] = content
-        def link(column):
-            found = re.search(r'href="([^"]+)"', cells.get(column, ""))
-            return unescape(found.group(1)).rstrip("/") if found else ""
-        team_id = team_urls.get(link("data-team"))
+        if cells:
+            yield cells
+
+
+def cell_url(value):
+    found = re.search(r'href="([^"]+)"', value or "")
+    return unescape(found.group(1)).rstrip("/") if found else ""
+
+
+def parse_public_players(html: str, season: str, source_url: str, team_urls: dict, goalkeeper=False) -> dict:
+    grouped = {}
+    for cells in public_table_rows(html):
+        team_id = team_urls.get(cell_url(cells.get("data-team")))
         name = clean(cells.get("data-name"))
         apps, goals, assists = [integer(clean(cells.get(column))) for column in ("data-appearances", "data-goals", "data-assists")]
-        if team_id is None or len(name.split()) < 2 or apps is None or apps <= 0 or goals is None or assists is None:
+        if team_id is None or len(name.split()) < 2 or apps is None or apps <= 0:
             continue
-        profile_url = link("data-name")
+        if not goalkeeper and (goals is None or assists is None):
+            continue
+        profile_url = cell_url(cells.get("data-name"))
         if not profile_url.startswith("https://podlaskaliga.pl/zawodnik/"):
             continue
         grouped.setdefault(str(team_id), []).append({
@@ -82,10 +103,54 @@ def parse_public_players(html: str, season: str, source_url: str, team_urls: dic
             "motm": integer(clean(cells.get("data-pikarzmeczu"))),
             "source_season": season, "source_label": "Oficjalna tabela indywidualna PLP",
             "source_url": source_url, "profile_url": profile_url + "/",
+            **({"role": "goalkeeper"} if goalkeeper else {}),
         })
     if not grouped:
         raise ValueError("No identified teams in public player list")
     return grouped
+
+
+def parse_all_time(html, category, source_url):
+    records = {}
+    for cells in public_table_rows(html):
+        uri = cell_url(cells.get("data-name"))
+        name = clean(cells.get("data-name"))
+        apps = integer(clean(cells.get("data-appearances")))
+        if not uri.startswith("https://podlaskaliga.pl/zawodnik/") or len(name.split()) < 2 or apps is None or apps <= 0:
+            continue
+        record = {"name": name, "apps": apps, "profile_url": uri + "/", "source_url": source_url}
+        if category == "scorers":
+            record.update({field: integer(clean(cells.get(column))) for field, column in
+                           (("goals", "data-goals"), ("assists", "data-assists"))})
+            if any(record[field] is None for field in ("goals", "assists")):
+                continue
+        elif category == "goalkeepers":
+            value = clean(cells.get("data-threethreethreesix")).replace(",", ".")
+            if not re.fullmatch(r"\d+(?:\.\d+)?", value) or not 0 <= float(value) <= 5:
+                continue
+            record["rating"] = float(value)
+        else:
+            raise ValueError("Unknown all-time classification")
+        records[uri + "/"] = record
+    if not records:
+        raise ValueError("Empty all-time player classification")
+    return records
+
+
+def read_all_time_players(rosters, previous, fetch_html=request_html):
+    identities = {str(row.get("profile_url") or row.get("source_url") or "").rstrip("/") + "/"
+                  for key, rows in rosters.items() if str(key).isdigit() for row in rows}
+    result, sources, warnings = dict(previous), [], []
+    for category, url in ALL_TIME_LISTS.items():
+        try:
+            html = fetch_html(url)
+            parsed = parse_all_time(html, category, url)
+            result[category] = {uri: row for uri, row in parsed.items() if uri in identities}
+            sources.append({"url": url, "sha256": sha256(html.encode()).hexdigest(),
+                            "rows": len(parsed), "matched_players": len(result[category])})
+        except Exception as error:
+            warnings.append(f"{url}: {type(error).__name__}: {error}")
+    return result, sources, warnings
 
 
 def read_public_lists(teams: dict, fetch=request, fetch_html=request_html):
@@ -107,10 +172,10 @@ def read_public_lists(teams: dict, fetch=request, fetch_html=request_html):
             except Exception as error:
                 warnings.append(f"team {futures[future]}: {type(error).__name__}: {error}")
     grouped, sources = {}, []
-    for season, url in PUBLIC_LISTS:
+    for season, url in PUBLIC_LISTS + GOALKEEPER_LISTS:
         try:
             html = fetch_html(url)
-            parsed = parse_public_players(html, season, url, team_urls)
+            parsed = parse_public_players(html, season, url, team_urls, (season, url) in GOALKEEPER_LISTS)
             for identifier, rows in parsed.items():
                 grouped.setdefault(identifier, []).extend(rows)
             sources.append({"url": url, "season": season, "sha256": sha256(html.encode()).hexdigest(),
@@ -119,8 +184,7 @@ def read_public_lists(teams: dict, fetch=request, fetch_html=request_html):
             warnings.append(f"{url}: {type(error).__name__}: {error}")
     # Retain both editions; selection happens after all candidates are available.
     for identifier, rows in grouped.items():
-        rows.sort(key=lambda row: (row["source_season"] == "Orlik 2026", row["goals"] + row["assists"], row["goals"]), reverse=True)
-        grouped[identifier] = rows[:24]
+        rows.sort(key=lambda row: (row["source_season"] == "Orlik 2026", (row["goals"] or 0) + (row["assists"] or 0), row["goals"] or 0), reverse=True)
     return grouped, sources, warnings
 
 
@@ -208,7 +272,7 @@ def refresh(table_data: dict, previous: dict, fetch=request, today: str | None =
     old_date = str(previous.get("_checked_on") or "")
     signature = sha256(json.dumps(table_data.get("tables") or {}, sort_keys=True).encode()).hexdigest()
 
-    if old_date and previous.get("_schema") == 2 and previous.get("_standings_signature") == signature:
+    if old_date and previous.get("_schema") == 3 and previous.get("_standings_signature") == signature:
         days_passed = (date.fromisoformat(today) - date.fromisoformat(old_date)).days
         if 0 <= days_passed < 7:
             return previous, []
@@ -223,7 +287,7 @@ def refresh(table_data: dict, previous: dict, fetch=request, today: str | None =
     updated = {key: value for key, value in previous.items() if key not in ("_checked_on", "_schema")}
     updated.update(public)
     updated["_sources"] = sources
-    updated["_schema"] = 2
+    updated["_schema"] = 3
     updated["_standings_signature"] = signature
 
     with ThreadPoolExecutor(max_workers=8) as executor:
@@ -244,6 +308,13 @@ def refresh(table_data: dict, previous: dict, fetch=request, today: str | None =
             except Exception as error:
                 warnings.append(f"{team_id}: {type(error).__name__}: {error}")
 
+    all_time, all_time_sources, all_time_warnings = read_all_time_players(updated, previous.get("_all_time") or {}, fetch_html)
+    updated["_all_time"] = all_time
+    # Preserve the provenance of a cached classification when its refresh fails.
+    old_sources = previous.get("_all_time_sources") or []
+    fresh_urls = {row["url"] for row in all_time_sources}
+    updated["_all_time_sources"] = all_time_sources + [row for row in old_sources if row["url"] not in fresh_urls]
+    warnings.extend(all_time_warnings)
     if not warnings:
         updated["_checked_on"] = today
 
@@ -261,9 +332,9 @@ def main():
 
     print(
         "PLP named scouting players:",
-        sum(len(players) for players in updated.values() if isinstance(players, list)),
+        sum(len(players) for key, players in updated.items() if str(key).isdigit()),
         "players in",
-        len([value for value in updated.values() if isinstance(value, list)]),
+        len([key for key in updated if str(key).isdigit()]),
         "clubs",
     )
 

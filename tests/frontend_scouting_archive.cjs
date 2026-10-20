@@ -24,6 +24,16 @@ for (const team of db.teams) {
     assert.ok(players.includes("liderzy goli i asyst"));
     const source = team.players[0].source_url;
     assert.equal(players.split(`href="${source}"`).length-1,1);
+    const career = evaluate("allTimeThreats(selectedTeam)");
+    assert.ok(career.includes("Dorobek z całej kariery w PLP, także z innych klubów"));
+    assert.ok(career.includes("Bramkarze z klasyfikacji all time"));
+    for (const player of [...team.all_time_players.scorers,...team.all_time_players.goalkeepers]) {
+        assert.ok(career.includes(player.name));
+        assert.equal(career.split(`href="${player.profile_url}"`).length-1,1);
+        assert.ok(career.includes(player.club_season));
+    }
+    assert.equal(career.split('href="https://podlaskaliga.pl/lista/alltime-strzelec/"').length-1,1);
+    assert.equal(career.split('href="https://podlaskaliga.pl/lista/bramkarze-alltime/"').length-1,1);
 }
 nodes["bosch-data"]={};
 evaluate("bosch()");
@@ -40,6 +50,9 @@ evaluate(`detailed(${JSON.stringify(team.id)})`);
 for (const html of [nodes["pre-match"].innerHTML, nodes.detail.innerHTML]) {
     assert.ok(html.includes("Archiwum meczów Bosch — Biuro Serwis-Kopiarki"));
     assert.ok(html.includes("Bramki Bosch : rywal"));
+    assert.ok(html.includes("Zagrożenia — cała kariera PLP (all time)"));
+    assert.ok(html.includes("Mosiej Łukasz"));
+    assert.ok(html.includes("Nurzyński Jakub (GK)"));
     for (const match of team.h2h.matches) {
         assert.ok(html.includes(match.season));
         assert.ok(html.includes(match.opponent));
@@ -55,6 +68,10 @@ evaluate("matchCard()");
 assert.ok(nodes["pre-match"].innerHTML.includes("Archiwum meczów Bosch — Soccer Auto Wygoda"));
 assert.ok(nodes["pre-match"].innerHTML.includes("Aptel"));
 assert.ok(!nodes["pre-match"].innerHTML.includes("Biuro Serwis-Kopiarki"));
+assert.ok(nodes["pre-match"].innerHTML.includes("Timoszuk Mateusz (GK)"));
+assert.ok(!nodes["pre-match"].innerHTML.includes("Nurzyński Jakub (GK)"));
+
+assert.equal(evaluate("allTimeThreats({})"),"");
 
 context.team = {name: '<script>test</script>', h2h: {games: 0, matches: []}};
 assert.ok(evaluate("matchArchive(team)").includes("Brak bezpośrednich meczów w archiwum Boscha."));
