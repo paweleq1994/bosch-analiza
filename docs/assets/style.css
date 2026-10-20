@@ -9,3 +9,13 @@ th[aria-sort="ascending"] .table-sort-indicator,th[aria-sort="descending"] .tabl
 .table tfoot td:last-child{font-weight:500;font-size:.84rem;color:var(--muted)}
 .nav{flex-wrap:wrap;overflow:visible}
 .nav a{flex:0 0 auto}
+
+.match-row{flex-wrap:wrap}
+.match-summary{flex:1 1 180px;min-width:0}
+.match-opponent{font-weight:600;overflow-wrap:anywhere}
+.match-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.match-actions>strong{font-size:1.15rem;white-space:nowrap}
+.match-details{display:inline-block;padding:4px 0;font-size:.85rem}
+.match-actions .match-details{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:var(--panel2);white-space:nowrap}
+.match-details:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.match-actions .match-details:hover{border-color:var(--accent)}

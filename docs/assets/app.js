@@ -20,9 +20,16 @@ const empty=message=>'<div class="notice">'+e(message)+'</div>';
 const filterInput=(placeholder="Szukaj…")=>'<div class="filters"><input id="local-filter" placeholder="'+e(placeholder)+'" aria-label="Filtruj wyniki"><select id="season-filter"><option value="">Wszystkie sezony</option>'+DB.seasons.slice().reverse().map(s=>'<option value="'+e(s.id)+'">'+e(s.name)+'</option>').join("")+'</select></div>';
 const seasonLink=s=>href("season/"+encodeURIComponent(s.id),s.name);
 const playerLink=p=>href("player/"+encodeURIComponent(p.id),p.name);
-const matchLink=m=>href("match/"+encodeURIComponent(m.id),m.opponent);
+const matchDetailsLink=m=>'<a class="match-details" href="#/match/'+encodeURIComponent(m.id)+'" aria-label="'+e('Szczegóły meczu Bosch — '+m.opponent+(m.date?', '+m.date:''))+'">Szczegóły meczu →</a>';
+const matchLink=m=>'<span class="match-opponent">'+e(m.opponent)+'</span><br>'+matchDetailsLink(m);
 const winner=m=>'<strong class="'+resultClass(m)+'">'+e(m.gf+":"+m.ga)+'</strong>';
-function matchList(matches,limit=0){const list=matches.slice().sort((a,b)=>b.date.localeCompare(a.date));return list.slice(0,limit||list.length).map(m=>'<div class="list-row"><div><div class="small">'+e(m.date)+' • '+href("season/"+encodeURIComponent(m.sid),m.season)+'</div>'+matchLink(m)+'</div>'+winner(m)+'</div>').join("")||empty("Brak spotkań w wybranym zakresie.")}
+function matchList(matches,limit=0){
+    const list=matches.slice().sort((a,b)=>b.date.localeCompare(a.date));
+    return list.slice(0,limit||list.length).map(m=>
+        '<div class="list-row match-row"><div class="match-summary"><div class="small">'+e(m.date)+' • '+seasonLink({id:m.sid,name:m.season})+
+        '</div><span class="match-opponent">'+e(m.opponent)+'</span></div><div class="match-actions">'+winner(m)+matchDetailsLink(m)+'</div></div>'
+    ).join("")||empty("Brak spotkań w wybranym zakresie.");
+}
 function barChart(rows,key,label){const max=Math.max(1,...rows.map(x=>Number(x[key])||0));return '<div class="card bar-chart">'+rows.map(s=>'<div class="bar-row"><span>'+e(s.name)+'</span><div class="bar-track"><span style="width:'+Math.max(0,Math.min(100,(Number(s[key])||0)/max*100))+'%"></span></div><b>'+e(label?label(s):fmt(s[key]))+'</b></div>').join("")+'</div>';}
 function goalMinutes(scorer){
     if(scorer.minute_uncertain){
@@ -202,7 +209,7 @@ function playerMatchTimeline(player){
     const rows=DB.matches.flatMap(match=>(match.player_performance||[])
         .filter(entry=>same(entry.player_id,player.id))
         .map(entry=>[e(match.date),href("season/"+encodeURIComponent(match.sid),match.season),
-            href("match/"+encodeURIComponent(match.id),match.opponent),
+            matchLink(match),
             e(match.gf+":"+match.ga),e(entry.goals??"—"),e(entry.assists??"—"),
             e(entry.motm??"—"),e(entry.yellow??"—"),e(entry.red??"—"),e(entry.second_yellow??"—"),
             '<a target="_blank" rel="noopener noreferrer" href="'+e(match.player_performance_source||match.event_link)+'">PLP ↗</a>']));
@@ -482,7 +489,7 @@ function playerDetail(id){
         : "";
     const matchesWithGoals=(player.goal_matches||[]).map(entry=>[
         e(entry.date),
-        href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+        matchLink({id:entry.match_id,opponent:entry.opponent,date:entry.date}),
         e(entry.score),
         e(entry.goals),
         entry.minute_uncertain?"Minuta nieczytelna w PLP":entry.minutes.map(minute=>verifiedVideoMinuteLink(player.id,entry.match_id,minute)).join(", "),
@@ -499,7 +506,7 @@ function playerDetail(id){
         '<div class="notice">Gole samobójcze liczą się rywalowi, nie zawodnikowi Boscha.</div>'+
         table(["Data","Przeciwnik","Samobóje","Protokół"],ownGoals.map(entry=>[
             e(entry.date),
-            href("match/"+encodeURIComponent(entry.match_id),entry.opponent),
+            matchLink({id:entry.match_id,opponent:entry.opponent,date:entry.date}),
             e(entry.goals),
             '<a target="_blank" rel="noopener noreferrer" href="'+e(entry.source_url)+'">PLP ↗</a>'
         ]))
@@ -752,7 +759,7 @@ function records(){
         table(["Zawodnik","Samobóje","Potwierdzone protokoły"],ownGoalPlayers.map(player=>[
             playerLink(player),
             e(player.own_goals_conceded),
-            (player.own_goal_matches||[]).map(entry=>href("match/"+encodeURIComponent(entry.match_id),entry.opponent)).join(", ")
+            (player.own_goal_matches||[]).map(entry=>matchLink({id:entry.match_id,opponent:entry.opponent,date:entry.date})).join("<br>")
         ]))
     );
     const administrativeRecords=section("Korekty administracyjne wyników",
@@ -871,7 +878,7 @@ function enhancedHistoricalAnalysis(){
     const periods=halfTimeMetrics(DB.matches);
     const recordedHalftimes=DB.matches.filter(m=>/^\d+\s*:\s*\d+$/.test(String(m.halftime||"")));
     const latest=form.latest.map(match=>[
-        e(match.date),href("match/"+encodeURIComponent(match.id),match.opponent),
+        e(match.date),matchLink(match),
         e(match.gf+":"+match.ga),e(result(match))
     ]);
     const withVideo=DB.matches.filter(m=>(m.videos||[]).length>0).length;
