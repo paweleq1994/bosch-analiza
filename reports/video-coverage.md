@@ -6,12 +6,12 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 
 ## Podsumowanie
 
-- Mecze z materiałem wideo: **53 / 113**
-- Mecze bez materiału wideo: **60**
-- Znane filmy: **120**
+- Mecze z materiałem wideo: **54 / 113**
+- Mecze bez materiału wideo: **59**
+- Znane filmy: **122**
 - Filmy bez powiązanego meczu: **11**
 - Materiały oczekujące na identyfikację: **3**; odrzucone powiązania / materiały spoza meczów: **3**
-- Filmy pomijane poza PLP: **5**; widoczne w archiwum: **115**
+- Filmy pomijane poza PLP: **5**; widoczne w archiwum: **117**
 
 ## Pokrycie według sezonów
 
@@ -24,7 +24,7 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | Hala 2024/2025 | 13 | 12 | 1 |
 | Orlik 2025 | 14 | 7 | 7 |
 | Hala 2025/2026 | 15 | 0 | 15 |
-| Orlik 2026 | 15 | 14 | 1 |
+| Orlik 2026 | 15 | 15 | 0 |
 
 ## Nieprzypisane materiały
 
@@ -115,7 +115,6 @@ gdy wiele meczów pasuje, materiał pozostaje nieprzypisany.
 | 2026-03-07 | Hala 2025/2026 | Biuro Serwis-Kopiarki Białystok | 2:4 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-biuro-serwis-kopiarki-bialystok/) |
 | 2026-03-15 | Hala 2025/2026 | Waleczne Orły | 1:1 | [protokół](https://podlaskaliga.pl/wydarzenie/waleczne-orly-vs-bosch-service-tech-car-2/) |
 | 2026-03-21 | Hala 2025/2026 | Unibep Bielsk Podlaski | 1:0 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-unibep-bielsk-podlaski-4/) |
-| 2026-10-17 | Orlik 2026 | Juan Pablo Białystok | 4:3 | [protokół](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/) |
 
 ## Zasada dokładności
 

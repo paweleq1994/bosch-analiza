@@ -458,6 +458,28 @@
       "status": "matched_manual",
       "date": "2026-10-11",
       "date_source": "youtube_upload_date"
+    },
+    {
+      "id": "Shz8gokQDX4",
+      "title": "BOSCH SERVICE TECH-CAR 4:3 JUAN PABLO BIAŁYSTOK | I POŁOWA",
+      "url": "https://www.youtube.com/watch?v=Shz8gokQDX4",
+      "date": "2026-10-20",
+      "channel": "Marta Wnuszynska",
+      "segment": "I połowa",
+      "match_id": "orlik26-15",
+      "status": "matched_auto",
+      "date_source": "youtube_upload_date"
+    },
+    {
+      "id": "s6b3nODwBC0",
+      "title": "BOSCH SERVICE TECH-CAR 4:3 JUAN PABLO BIAŁYSTOK | II POŁOWA",
+      "url": "https://www.youtube.com/watch?v=s6b3nODwBC0",
+      "date": "2026-10-20",
+      "channel": "Marta Wnuszynska",
+      "segment": "II połowa",
+      "match_id": "orlik26-15",
+      "status": "matched_auto",
+      "date_source": "youtube_upload_date"
     }
   ],
   "manual_bindings": {

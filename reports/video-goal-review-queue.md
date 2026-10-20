@@ -3,7 +3,7 @@
 Minuta meczu i czas nagrania nie są równoważne. Montaż, opóźniony
 start nagrania, dogrywka i różne połowy wymagają obejrzenia materiału.
 Potwierdzone linki: **35**.
-Niepotwierdzone gole w meczach z filmem: **129**.
+Niepotwierdzone gole w meczach z filmem: **133**.
 
 ## Zweryfikowane odnośniki do akcji lub komentarza gola
 
@@ -180,6 +180,10 @@ Znacznik wskazuje obejrzaną fazę akcji albo jawnie oznaczony komentarz gola w 
 | [PLP orlik26-12](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-osmar-3/) | Hyżyk Szymon | 30′ | [I połowa](https://www.youtube.com/watch?v=4Mngm8vsRu8) · [II połowa](https://www.youtube.com/watch?v=g_ooIeqQFJE) |
 | [PLP orlik26-13](https://podlaskaliga.pl/wydarzenie/unibep-s-a-vs-bosch-service-tech-car/) | Adam Malesiński | 36′ | [I połowa](https://www.youtube.com/watch?v=9ONkYcP-kcs) · [II połowa](https://www.youtube.com/watch?v=rJg795Aer3A) |
 | [PLP orlik26-13](https://podlaskaliga.pl/wydarzenie/unibep-s-a-vs-bosch-service-tech-car/) | Hyżyk Szymon | 38′ | [I połowa](https://www.youtube.com/watch?v=9ONkYcP-kcs) · [II połowa](https://www.youtube.com/watch?v=rJg795Aer3A) |
+| [PLP orlik26-15](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/) | Adam Malesiński | 7′ | [I połowa](https://www.youtube.com/watch?v=Shz8gokQDX4) · [II połowa](https://www.youtube.com/watch?v=s6b3nODwBC0) |
+| [PLP orlik26-15](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/) | Bączek Szymon | 9′ | [I połowa](https://www.youtube.com/watch?v=Shz8gokQDX4) · [II połowa](https://www.youtube.com/watch?v=s6b3nODwBC0) |
+| [PLP orlik26-15](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/) | Bączek Szymon | 38′ | [I połowa](https://www.youtube.com/watch?v=Shz8gokQDX4) · [II połowa](https://www.youtube.com/watch?v=s6b3nODwBC0) |
+| [PLP orlik26-15](https://podlaskaliga.pl/wydarzenie/bosch-service-tech-car-vs-juan-pablo-bialystok-2/) | Nowicki Patryk | 16′ | [I połowa](https://www.youtube.com/watch?v=Shz8gokQDX4) · [II połowa](https://www.youtube.com/watch?v=s6b3nODwBC0) |
 
 Aby dodać bezpośredni link, zapisz w pliku data/video_goal_evidence.json
 identyfikatory meczu, zawodnika, filmu, minutę PLP, prawdziwy czas wideo
