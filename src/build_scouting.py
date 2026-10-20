@@ -217,6 +217,11 @@ def main():
     hall=verified.get("hala_2025_26_h1") or hall
     orlik=verified.get("orlik_2026_h1") or orlik
     lower=verified.get("orlik_2026_h2") or lower
+    bosch_name="Bosch Service Tech-Car"
+    bosch_orlik=match_row(lower,bosch_name) or seed["tables"]["bos_ch"]
+    bosch_hall=match_row(verified.get("hala_2025_26_h2") or [],bosch_name) or {
+        "name":bosch_name,"matches":15,"points":21,"gf":33,"ga":39,"tier":2
+    }
     old={norm(t["team_name"]):t for t in historical["opponents"]}
     # Three bottom teams are excluded by the user's promotion/relegation assumption;
     # a future official participant list overrides these projections.
@@ -299,7 +304,7 @@ def main():
             ("All time — bramkarze", "https://podlaskaliga.pl/lista/bramkarze-alltime/"),
         ) if not any(source["url"] == url for source in metadata.get("source_links", []))
     ]
-    result={"meta":metadata,"teams":teams,"bosch":{"name":"Bosch Service Tech-Car","orlik_2026":seed["tables"]["bos_ch"],"hala_2025_26":{"points":21,"matches":15,"gf":33,"ga":39},"strength_weights":{"hala_2025_26":.35,"orlik_2026":.65,"older_hall":0},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"65% Orlik 2026, 35% Hala 2025/26; explicit I/II league calibration, sample adjustment, and neutral prior when missing","new_season_weight":"0.65 verified Orlik 2026","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
+    result={"meta":metadata,"teams":teams,"bosch":{"name":bosch_name,"orlik_2026":bosch_orlik,"hala_2025_26":bosch_hall,"strength":score(bosch_hall,bosch_orlik),"strength_details":score_evidence(bosch_hall,bosch_orlik),"strength_weights":{"hala_2025_26":.35,"orlik_2026":.65,"older_hall":0},"note":"Dane Boscha i oceny historyczne; bieżące role zawodników wymagają potwierdzenia."},"editorial":seed["editorial"],"videos":seed["videos"],"reviews":seed["match_reviews"],"rules":{"weights":"65% Orlik 2026, 35% Hala 2025/26; explicit I/II league calibration, sample adjustment, and neutral prior when missing","new_season_weight":"0.65 verified Orlik 2026","tactical_evidence":"A timestamped source is required for any assertion about playing style"}}
     OUT.parent.mkdir(parents=True,exist_ok=True)
     rendered=json.dumps(result,ensure_ascii=False,indent=2)+"\n"
     if not OUT.exists() or OUT.read_text(encoding="utf-8")!=rendered:OUT.write_text(rendered,encoding="utf-8")

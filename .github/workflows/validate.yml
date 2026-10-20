@@ -70,6 +70,8 @@ jobs:
         run: node tests/frontend_rivals_quality.cjs
       - name: Verify scouting match archives and opponent selection
         run: node tests/frontend_scouting_archive.cjs
+      - name: Verify Bosch team comparison
+        run: node tests/frontend_scouting_compare.cjs
       - name: Verify player season filtering
         run: node tests/frontend_player_filter.cjs
       - name: Verify advanced sort and Bosch records

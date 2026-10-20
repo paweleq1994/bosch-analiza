@@ -33,6 +33,16 @@ class ScoutingStrengthTests(unittest.TestCase):
         self.assertGreater(team_strength(high_hall, high_orlik), team_strength(None, lower))
         self.assertGreater(team_strength(high_hall, high_orlik) - team_strength(None, lower), 10)
 
+    def test_bosch_strength_uses_verified_second_league_results(self):
+        scouting = json.loads((ROOT / "docs/assets/scouting.json").read_text(encoding="utf-8"))
+        bosch = scouting["bosch"]
+        hall = self.team("hala_2025_26_h2", bosch["name"])
+        orlik = self.team("orlik_2026_h2", bosch["name"])
+        self.assertEqual(bosch["hala_2025_26"], hall)
+        self.assertEqual(bosch["orlik_2026"], orlik)
+        self.assertEqual(bosch["strength"], team_strength(hall, orlik))
+        self.assertNotIn(bosch["name"], {team["name"] for team in scouting["teams"]})
+
     def test_match_archive_keeps_renames_and_rejects_same_name_different_club(self):
         matches = [
             {"id": "1", "date": "2025-01-01", "opponent": "Aptel", "opponent_id": 1574},
