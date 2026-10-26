@@ -53,7 +53,7 @@
     {
       "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml",
       "http_status": 200,
-      "listed": 56,
+      "listed": 58,
       "children": 0
     },
     {
@@ -95,7 +95,7 @@
     {
       "url": "https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml",
       "http_status": 200,
-      "listed": 7,
+      "listed": 8,
       "children": 0
     },
     {
@@ -153,7 +153,7 @@
       "children": 0
     }
   ],
-  "listed_url_count": 4559,
+  "listed_url_count": 4562,
   "truncated": false,
   "verified": {},
   "missing": {

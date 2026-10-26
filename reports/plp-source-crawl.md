@@ -6,7 +6,7 @@ Podobieństwo nazwiska lub miniatury nie potwierdza tożsamości.
 Kod HTTP 0 oznacza problem połączenia, a nie dowód nieistnienia strony.
 
 - Sitemapy sprawdzone: **26**
-- Publiczne adresy z sitemap: **4559**
+- Publiczne adresy z sitemap: **4562**
 - Dopasowania potwierdzone numerem postu: **0**
 - Profile nadal bez publicznego źródła: **11**
 - Przegląd ograniczony limitem: **NIE**
@@ -24,14 +24,14 @@ Kod HTTP 0 oznacza problem połączenia, a nie dowód nieistnienia strony.
 | [https://podlaskaliga.pl/wp-sitemap-posts-page-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-page-1.xml) | 200 | 42 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_event-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_event-1.xml) | 200 | 2000 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_event-2.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_event-2.xml) | 200 | 415 |
-| [https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml) | 200 | 56 |
+| [https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_team-1.xml) | 200 | 58 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_staff-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_staff-1.xml) | 200 | 1 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_official-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_official-1.xml) | 200 | 4 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-albums-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-albums-1.xml) | 200 | 9 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_calendar-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_calendar-1.xml) | 200 | 43 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_table-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_table-1.xml) | 200 | 50 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-sp_list-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_list-1.xml) | 200 | 168 |
-| [https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml) | 200 | 7 |
+| [https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-sp_tournament-1.xml) | 200 | 8 |
 | [https://podlaskaliga.pl/wp-sitemap-posts-elementor-hf-1.xml](https://podlaskaliga.pl/wp-sitemap-posts-elementor-hf-1.xml) | 200 | 1 |
 | [https://podlaskaliga.pl/wp-sitemap-taxonomies-category-1.xml](https://podlaskaliga.pl/wp-sitemap-taxonomies-category-1.xml) | 200 | 12 |
 | [https://podlaskaliga.pl/wp-sitemap-taxonomies-post_tag-1.xml](https://podlaskaliga.pl/wp-sitemap-taxonomies-post_tag-1.xml) | 200 | 21 |
